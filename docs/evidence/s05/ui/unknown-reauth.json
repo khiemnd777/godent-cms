@@ -1,0 +1,60 @@
+{
+  "getLoading": {
+    "privateDetailPresent": false,
+    "refreshDisabled": true,
+    "text": "Danh sách yêu cầuLàm mớiTất cả trạng tháiMớiĐã phân côngĐã liên hệĐã đóngÁp dụngBộ lọc thêmNgười phụ tráchTất cả người phụ tráchTôiChưa phân côngS02 A1S02 A2Từ ngày tiếp nhậnĐến ngày tiếp nhậnSố yêu cầu trên trang2050Ngày tiếp nhận theo giờ Việt Nam (Asia/Ho_Chi_Minh). Tìm tên có chứa từ khóa, giữ dấu; mã yêu cầu phải khớp chính xác.Xóa bộ lọcĐang tải yêu cầuĐang kiểm tra quyền truy cập hiện tại."
+  },
+  "settingsUnknown": {
+    "buttons": [
+      {
+        "disabled": false,
+        "text": "Làm mới cấu hình"
+      },
+      {
+        "disabled": true,
+        "text": "Bỏ chọn"
+      },
+      {
+        "disabled": true,
+        "text": "Bỏ chọn"
+      },
+      {
+        "disabled": true,
+        "text": "Tìm người nhận"
+      },
+      {
+        "disabled": false,
+        "text": "Thử lại cùng thao tác"
+      }
+    ],
+    "error": "Chưa xác định cấu hình đã được lưu hay chưa. Lựa chọn của bạn được giữ lại. Thử lại cùng thao tác để kiểm tra kết quả.",
+    "modeDisabled": true,
+    "selected": [
+      "S02 A1a1@s02.example.test",
+      "S02 A2a2@s02.example.test"
+    ],
+    "selectedControlsDisabled": true
+  },
+  "afterExpiredReauthRetry": {
+    "error": "Xác thực lại để kiểm tra kết quả của cùng thao tác. Lựa chọn và mã thao tác ban đầu được giữ nguyên.",
+    "modeDisabled": true,
+    "reauthVisible": true,
+    "recipientsDisabled": true,
+    "selected": [
+      "S02 A1a1@s02.example.test",
+      "S02 A2a2@s02.example.test"
+    ]
+  },
+  "resolved": {
+    "saveDisabled": true,
+    "selected": [
+      "S02 A1a1@s02.example.test",
+      "S02 A2a2@s02.example.test"
+    ],
+    "status": [
+      "Đã lưu người nhận thông báo · Phiên bản 3."
+    ],
+    "version": "Phiên bản 3. Cần xác thực lại trong 5 phút khi lưu. Cấu hình mới áp dụng cho thông báo còn chờ, không gửi lại người đã thành công."
+  },
+  "boundary": "Unknown request did not commit as of root PG read; this verifies unknown -> REAUTH_REQUIRED -> existing reauth -> retry state, not post-commit loss"
+}

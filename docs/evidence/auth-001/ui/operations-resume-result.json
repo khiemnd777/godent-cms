@@ -1,0 +1,35 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "FAIL",
+  "startedAt": "2026-10-16T05:12:07.976Z",
+  "steps": [],
+  "scope": "After canonical user-ID repair/runtime readiness, existing three-lead GET correlation then ONLY assignment to existing Peer and selected Owner-only notification configuration. No public intake/new account/source.",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "existingProfileOrCookies": false
+  },
+  "browserVersion": "155.0.8059.80",
+  "assignmentResponse": {
+    "status": 400,
+    "code": "INVALID_INPUT"
+  },
+  "failure": {
+    "phase": "new-no-factor-Peer-assignment",
+    "name": "Error",
+    "assertion": "ASSIGN_STATUS",
+    "strict": false,
+    "detached": false,
+    "timeout": false,
+    "rawDetailsRedacted": true
+  },
+  "finishedAt": "2026-10-16T05:12:08.956Z"
+}

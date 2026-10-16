@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-16T02:21:47.522904+00:00",
+  "processes": [
+    {
+      "name": "api",
+      "port": 5890,
+      "listenerPid": 71544,
+      "actualBunExecutable": true,
+      "noBootstrapOrMigrationEnvironment": true,
+      "webNoServerCredentials": null,
+      "apiFourRestrictedRoleCredentialsAndKey": true
+    },
+    {
+      "name": "admin",
+      "port": 5891,
+      "listenerPid": 71548,
+      "actualBunExecutable": true,
+      "noBootstrapOrMigrationEnvironment": true,
+      "webNoServerCredentials": true,
+      "apiFourRestrictedRoleCredentialsAndKey": null
+    },
+    {
+      "name": "website",
+      "port": 5892,
+      "listenerPid": 71547,
+      "actualBunExecutable": true,
+      "noBootstrapOrMigrationEnvironment": true,
+      "webNoServerCredentials": true,
+      "apiFourRestrictedRoleCredentialsAndKey": null
+    }
+  ],
+  "http": [
+    {
+      "url": "http://127.0.0.1:5890/health",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5890/ready",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5891/login",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:5892/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5892/",
+      "status": 421
+    },
+    {
+      "url": "http://localhost:5891/login",
+      "status": 421
+    }
+  ],
+  "scope": "Retained S04 three-process snapshot before S05 rebuild/restart; process env/executable inspected in memory only, no secret values recorded.",
+  "limit": "Host rejection happens after cookie header arrival; ports do not isolate cookies. Runtime snapshot is not permanent availability or production proof."
+}

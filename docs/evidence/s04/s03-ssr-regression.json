@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-16T01:26:05.468101+00:00",
+  "url": "http://localhost:5892/s03-synthetic-a/dich-vu/cham-soc-rang-dinh-ky-ui-s03",
+  "httpStatus": 200,
+  "actualVi": true,
+  "canonicalRetained": true,
+  "consultationBlockAdded": true,
+  "noStore": true,
+  "noSetCookie": true,
+  "limit": "Read-only HTTP SSR regression of original S03 accepted page; publication mutation suite not rerun against retained fixture."
+}

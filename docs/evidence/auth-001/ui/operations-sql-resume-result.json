@@ -1,0 +1,57 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "PASS",
+  "startedAt": "2026-10-16T05:17:36.163Z",
+  "steps": [
+    {
+      "step": "new-no-factor-Peer-assigned",
+      "at": "2026-10-16T05:17:37.052Z"
+    },
+    {
+      "step": "new-user-ID-assignee-filter-real-GET-PASS",
+      "at": "2026-10-16T05:17:37.178Z"
+    },
+    {
+      "step": "selected-OwnerONLY-ready-for-bounded-worker",
+      "at": "2026-10-16T05:17:37.362Z"
+    }
+  ],
+  "scope": "After forward0014 SQL/user-ID repair/runtime readiness, existing three-lead GET correlation then ONLY assignment to existing Peer and selected Owner-only notification configuration. No public intake/new account/source.",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "existingProfileOrCookies": false
+  },
+  "browserVersion": "155.0.8059.80",
+  "assignmentResponse": {
+    "status": 200,
+    "code": null
+  },
+  "assigneeFilter": {
+    "status": 200,
+    "code": null
+  },
+  "settingsResponse": {
+    "status": 200,
+    "code": null
+  },
+  "newLeadSubmissions": 0,
+  "newAccounts": 0,
+  "selectedRecipientLabels": [
+    "browserOwner"
+  ],
+  "eligibleOptionLabels": [
+    "browserOwner",
+    "browserPeer"
+  ],
+  "workerDispatchStarted": false,
+  "finishedAt": "2026-10-16T05:17:37.454Z"
+}

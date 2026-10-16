@@ -1,0 +1,59 @@
+{
+  "recordedAtUtc": "2026-10-16T04:43:46.116711Z",
+  "status": "PASS",
+  "runtimeEffort": {
+    "required": "xhigh",
+    "requested": "xhigh",
+    "observed": "xhigh",
+    "role": "kit-implementer",
+    "model": "gpt-6.1-sol",
+    "threadId": "01a142fd-b53b-72a0-9dd1-bb7fdc66f45c",
+    "parentThreadId": "01a1402c-3c81-7933-9927-d974f70c9fbc",
+    "evidenceKind": "runtime_written_turn_context"
+  },
+  "red": {
+    "command": "node_modules/.bin/bun test apps/api/test/domain-input.test.ts",
+    "exitCode": 1,
+    "reason": "Old reauthInput accepted an obsolete code field.",
+    "tests": {
+      "pass": 3,
+      "fail": 1,
+      "assertions": 21
+    }
+  },
+  "green": {
+    "command": "node_modules/.bin/bun test apps/api/test/domain-input.test.ts apps/api/test/auth-data-policy.test.ts",
+    "exitCode": 0,
+    "tests": {
+      "pass": 10,
+      "fail": 0,
+      "assertions": 49
+    }
+  },
+  "apiLocalTests": {
+    "command": "node_modules/.bin/bun test apps/api/test",
+    "exitCode": 0,
+    "tests": {
+      "pass": 49,
+      "skip": 103,
+      "fail": 0,
+      "assertions": 257
+    },
+    "limit": "Integration environment flags were disabled. This does not prove PostgreSQL or HTTP behavior. Local capture unit tests use synthetic temporary directories."
+  },
+  "typecheck": {
+    "commands": [
+      "node_modules/.bin/bun run --cwd apps/api typecheck",
+      "node_modules/.bin/bun --bun tsc --noEmit --project tsconfig.json"
+    ],
+    "exitCodes": [
+      0,
+      0
+    ]
+  },
+  "lint": {
+    "scope": "API source/tests and owned AUTH/fixture TypeScript scripts",
+    "exitCode": 0
+  },
+  "limits": "Source checks only. Database cutover, real HTTP/browser and bounded integration evidence are separately coordinator-owned or separately recorded. No production or human acceptance claim."
+}

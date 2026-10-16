@@ -1,0 +1,46 @@
+{
+  "status": "PASS_UNKNOWN_REAUTH_RETRY_WITH_PROOF_BOUNDARY",
+  "observedAtUtc": "2026-10-16T02:49:14.619391+00:00",
+  "fault": {
+    "type": "SIGSTOP",
+    "scope": "verifiedcurrentlauncherAPIlisteneronly",
+    "seconds": 45,
+    "automaticFinallyResume": "SIGCONT samePID exit0",
+    "adminWebsiteDockerPreserved": true
+  },
+  "browserObservedBy": "/root/s05_frontend",
+  "browserObservations": [
+    "GETrefreshLoading/disabledrefresh/previousprivatecontactdetailcleared",
+    "PUT15stimeout\u2192UNKNOWN/twochoicesretainedandfrozen/sameoperationretryenabled"
+  ],
+  "readAfterResume": {
+    "recipientSettingsVersion": 2,
+    "recipientCount": 1,
+    "recipientLabel": "A2",
+    "settingsReceiptCount": 1,
+    "unknownPutCommitted": false
+  },
+  "pending": "None within chosenboundedfaultproof; missing browsercases explicitly recordedbelow.",
+  "limits": "This browser PUT timed out before any observed commit. Actual postcommit HTTP response-loss + API restart + one durable receipt is independently proven by S05 API race suite; do not conflate the two.",
+  "afterBrowserRetry": {
+    "actualReauthRequiredAfterSeconds": 409,
+    "existingPasswordAndMfaReauth": true,
+    "sameFrozenOperationRetryReportedByFe": true,
+    "recipientSettingsVersion": 3,
+    "recipientCount": 2,
+    "recipientLabels": [
+      "A1",
+      "A2"
+    ],
+    "settingsReceiptCount": 2,
+    "exactlyOneNewReceipt": true
+  },
+  "finalGetOutage": {
+    "status": "PASS_SESSION_GUARD_FAIL_CLOSED_AND_AUTOMATIC_RECOVERY",
+    "scope": "Owned3app launcher stopped forCSSbuild; periodiccurrent-sessionvalidation clearedprivatecontent beforelistRefreshcouldrun. Retrykeyboardfocusobserved. Onrestartperiodicpoll restoredauthorizedcontent beforeEnter, soEnteractionNOT_RUN.",
+    "listSpecificFailedGet": "NOT_RUN inthisoutage",
+    "enterTriggeredRecovery": "NOT_RUN",
+    "privateRegionsCleared": true,
+    "automaticAuthorizedRecovery": true
+  }
+}

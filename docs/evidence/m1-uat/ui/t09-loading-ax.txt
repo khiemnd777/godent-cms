@@ -1,0 +1,13 @@
+Browser tab: 334097798, Title: "Bản nháp dịch vụ · Godent", URL: "http://127.0.0.1:5891/cms/services/3f8db691-8254-4841-826f-8fb5d8d4e2bf?tenant=4e206516-529a-4799-b146-05f950214a00".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 141, 143-154
+~1 AXWebArea Bản nháp dịch vụ · Godent, URL: 127.0.0.1:5891/cms/services/3f8db691-8254-4841-826f-8fb5d8d4e2bf?tenant=4e206516-529a-4799-b146-05f950214a00
++		157 text Bản nháp dịch vụ · Godent
+~		3 link Description: Đến nội dung chính, Value: 127.0.0.1:5891/cms/services/3f8db691-8254-4841-826f-8fb5d8d4e2bf?tenant=4e206516-529a-4799-b146-05f950214a00#main-content
+~				130 link Description: Yêu cầu tư vấn 56 yêu cầu mới trong nha khoa, Value: 127.0.0.1:5891/cms/leads?tenant=4e206516-529a-4799-b146-05f950214a00
++		158 button (disabled) Description: Xem website, Help: Mở một dịch vụ đã xuất bản để xem trang công khai
++			159 container
++				160 heading Đang tải dịch vụ, Value: 2
++					161 text Đang tải dịch vụ
++				162 text Đang kiểm tra quyền truy cập hiện tại.
+The focused UI element is 1 AXWebArea Bản nháp dịch vụ · Godent, URL: 127.0.0.1:5891/cms/services/3f8db691-8254-4841-826f-8fb5d8d4e2bf?tenant=4e206516-529a-4799-b146-05f950214a00

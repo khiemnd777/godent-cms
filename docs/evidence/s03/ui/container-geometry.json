@@ -1,0 +1,321 @@
+{
+  "targetTab": "7",
+  "build": "Final admin production build after two-selector badge repair",
+  "rows": [
+    {
+      "actions": [
+        {
+          "bottom": 834,
+          "label": "Lưu bản nháp",
+          "left": 8,
+          "right": 93.25,
+          "top": 792,
+          "withinViewport": true
+        },
+        {
+          "bottom": 834,
+          "label": "Xem trước",
+          "left": 98.25,
+          "right": 167.3125,
+          "top": 792,
+          "withinViewport": true
+        },
+        {
+          "bottom": 834,
+          "label": "Cập nhật website",
+          "left": 172.3125,
+          "right": 312,
+          "top": 792,
+          "withinViewport": true
+        }
+      ],
+      "badges": {
+        "bottom": 196.875,
+        "position": "static",
+        "text": "Đã xuất bản",
+        "top": 175.875
+      },
+      "containers": [
+        {
+          "className": "panel",
+          "clientWidth": 294,
+          "overflow": false,
+          "scrollWidth": 294
+        },
+        {
+          "className": "tabs-line",
+          "clientWidth": 294,
+          "overflow": false,
+          "scrollWidth": 294
+        },
+        {
+          "className": "text-editor",
+          "clientWidth": 256,
+          "overflow": false,
+          "scrollWidth": 256
+        },
+        {
+          "className": "panel",
+          "clientWidth": 294,
+          "overflow": false,
+          "scrollWidth": 294
+        }
+      ],
+      "documentWidth": 320,
+      "height": 844,
+      "width": 320
+    },
+    {
+      "actions": [
+        {
+          "bottom": 834,
+          "label": "Lưu bản nháp",
+          "left": 12,
+          "right": 132.203125,
+          "top": 792,
+          "withinViewport": true
+        },
+        {
+          "bottom": 834,
+          "label": "Xem trước",
+          "left": 138.203125,
+          "right": 240.78125,
+          "top": 792,
+          "withinViewport": true
+        },
+        {
+          "bottom": 834,
+          "label": "Cập nhật website",
+          "left": 246.78125,
+          "right": 378,
+          "top": 792,
+          "withinViewport": true
+        }
+      ],
+      "badges": {
+        "bottom": 169.6875,
+        "position": "static",
+        "text": "Đã xuất bản",
+        "top": 148.6875
+      },
+      "containers": [
+        {
+          "className": "panel",
+          "clientWidth": 354,
+          "overflow": false,
+          "scrollWidth": 354
+        },
+        {
+          "className": "tabs-line",
+          "clientWidth": 354,
+          "overflow": false,
+          "scrollWidth": 354
+        },
+        {
+          "className": "text-editor",
+          "clientWidth": 316,
+          "overflow": false,
+          "scrollWidth": 316
+        },
+        {
+          "className": "panel",
+          "clientWidth": 354,
+          "overflow": false,
+          "scrollWidth": 354
+        }
+      ],
+      "documentWidth": 390,
+      "height": 844,
+      "width": 390
+    },
+    {
+      "actions": [
+        {
+          "bottom": 142,
+          "label": "Lưu bản nháp",
+          "left": 494.984375,
+          "right": 625,
+          "top": 102,
+          "withinViewport": true
+        },
+        {
+          "bottom": 142,
+          "label": "Xem trước",
+          "left": 633,
+          "right": 744,
+          "top": 102,
+          "withinViewport": true
+        },
+        {
+          "bottom": 190,
+          "label": "Cập nhật website",
+          "left": 591.8125,
+          "right": 744,
+          "top": 150,
+          "withinViewport": true
+        }
+      ],
+      "badges": {
+        "bottom": 220.5,
+        "position": "static",
+        "text": "Đã xuất bản",
+        "top": 199.5
+      },
+      "containers": [
+        {
+          "className": "panel",
+          "clientWidth": 416,
+          "overflow": false,
+          "scrollWidth": 416
+        },
+        {
+          "className": "tabs-line",
+          "clientWidth": 416,
+          "overflow": false,
+          "scrollWidth": 416
+        },
+        {
+          "className": "text-editor",
+          "clientWidth": 370,
+          "overflow": false,
+          "scrollWidth": 370
+        },
+        {
+          "className": "panel",
+          "clientWidth": 278,
+          "overflow": false,
+          "scrollWidth": 278
+        }
+      ],
+      "documentWidth": 768,
+      "height": 1024,
+      "width": 768
+    },
+    {
+      "actions": [
+        {
+          "bottom": 142,
+          "label": "Lưu bản nháp",
+          "left": 586.796875,
+          "right": 716.8125,
+          "top": 102,
+          "withinViewport": true
+        },
+        {
+          "bottom": 142,
+          "label": "Xem trước",
+          "left": 724.8125,
+          "right": 835.8125,
+          "top": 102,
+          "withinViewport": true
+        },
+        {
+          "bottom": 142,
+          "label": "Cập nhật website",
+          "left": 843.8125,
+          "right": 996,
+          "top": 102,
+          "withinViewport": true
+        }
+      ],
+      "badges": {
+        "bottom": 188,
+        "position": "static",
+        "text": "Đã xuất bản",
+        "top": 167
+      },
+      "containers": [
+        {
+          "className": "panel",
+          "clientWidth": 454,
+          "overflow": false,
+          "scrollWidth": 454
+        },
+        {
+          "className": "tabs-line",
+          "clientWidth": 454,
+          "overflow": false,
+          "scrollWidth": 454
+        },
+        {
+          "className": "text-editor",
+          "clientWidth": 408,
+          "overflow": false,
+          "scrollWidth": 408
+        },
+        {
+          "className": "panel",
+          "clientWidth": 278,
+          "overflow": false,
+          "scrollWidth": 278
+        }
+      ],
+      "documentWidth": 1024,
+      "height": 1080,
+      "width": 1024
+    },
+    {
+      "actions": [
+        {
+          "bottom": 148,
+          "label": "Lưu bản nháp",
+          "left": 994.796875,
+          "right": 1124.8125,
+          "top": 108,
+          "withinViewport": true
+        },
+        {
+          "bottom": 148,
+          "label": "Xem trước",
+          "left": 1132.8125,
+          "right": 1243.8125,
+          "top": 108,
+          "withinViewport": true
+        },
+        {
+          "bottom": 148,
+          "label": "Cập nhật website",
+          "left": 1251.8125,
+          "right": 1404,
+          "top": 108,
+          "withinViewport": true
+        }
+      ],
+      "badges": {
+        "bottom": 194,
+        "position": "static",
+        "text": "Đã xuất bản",
+        "top": 173
+      },
+      "containers": [
+        {
+          "className": "panel",
+          "clientWidth": 832,
+          "overflow": false,
+          "scrollWidth": 832
+        },
+        {
+          "className": "tabs-line",
+          "clientWidth": 832,
+          "overflow": false,
+          "scrollWidth": 832
+        },
+        {
+          "className": "text-editor",
+          "clientWidth": 786,
+          "overflow": false,
+          "scrollWidth": 786
+        },
+        {
+          "className": "panel",
+          "clientWidth": 278,
+          "overflow": false,
+          "scrollWidth": 278
+        }
+      ],
+      "documentWidth": 1440,
+      "height": 1080,
+      "width": 1440
+    }
+  ]
+}

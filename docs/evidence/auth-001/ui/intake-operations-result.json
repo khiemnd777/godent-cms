@@ -1,0 +1,42 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "FAIL",
+  "startedAt": "2026-10-16T05:06:16.866Z",
+  "steps": [
+    {
+      "step": "exact-three-lead-inputs-prepared-no-submission",
+      "at": "2026-10-16T05:06:16.867Z"
+    }
+  ],
+  "scope": "Exactly3newBpublic leads; third local arithmetic challenge required/invalid/valid through actual form. Authenticated CMS count2afterinvalid/count3aftervalid, Peer assignment, both new factor-free eligible options and selectedOwnerONLY recipient config. No retained source/counter changes or worker dispatch.",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "headless": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "existingProfileOrCookies": false,
+    "CDP": false,
+    "downloads": false
+  },
+  "browserVersion": "155.0.8059.80",
+  "before": {
+    "count": 0
+  },
+  "failure": {
+    "phase": "L1:initial-submit",
+    "name": "Error",
+    "assertion": "PUBLIC_TRUST_BOUNDARY",
+    "strict": false,
+    "detached": false,
+    "timeout": false,
+    "rawDetailsRedacted": true
+  },
+  "finishedAt": "2026-10-16T05:06:18.188Z"
+}

@@ -1,0 +1,20 @@
+{
+  "recordedAtUtc": "2026-10-16T05:38:29.135Z",
+  "status": "PASS",
+  "suites": [
+    {
+      "file": "auth-001-boundaries.test.ts",
+      "exitCode": 0
+    },
+    {
+      "file": "auth-data-lifecycle.test.ts",
+      "exitCode": 0
+    },
+    {
+      "file": "auth-data-recovery.test.ts",
+      "exitCode": 0
+    }
+  ],
+  "intendedSuites": 3,
+  "limits": "Actual restricted PostgreSQL/auth/domain/setting checks on AUTH-owned resources. Existing historical broad integration suites and browser/worker checks are separate."
+}

@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-16T05:12:01.878730+00:00",
+  "repair": "Canonical bounded opaque user-ID validation in assign/filter/recipients; resource UUID validation retained",
+  "fullTypecheckExitCode": 0,
+  "fullLintExitCode": 0,
+  "apiBuildExitCode": 0,
+  "http": [
+    {
+      "url": "http://127.0.0.1:5890/health",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5890/ready",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5891/login",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:5892/",
+      "status": 200
+    }
+  ],
+  "migrationRepeated": false,
+  "sessionRevocationRepeated": false,
+  "migration0013Sha256": "89fc0ba78b1fe80c921506fc6c0e57f409da0b7ccc4645f22d713b04b836a2a5",
+  "processes": {
+    "launcher": 31362,
+    "runtime": "1.4.3",
+    "processes": [
+      {
+        "name": "api",
+        "port": 5890,
+        "pid": 31363
+      },
+      {
+        "name": "admin",
+        "port": 5891,
+        "pid": 31364
+      },
+      {
+        "name": "website",
+        "port": 5892,
+        "pid": 31365
+      }
+    ]
+  }
+}

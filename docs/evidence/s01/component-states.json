@@ -1,0 +1,22 @@
+{
+  "scope": "actual shell component fixture only; not auth or business network proof",
+  "result": {
+    "busy": "status",
+    "errorRole": "Không thể tải nội dungVui lòng thử tải lại trang.Thử lại",
+    "headings": [
+      "Đang tải nội dung",
+      "Nội dung chưa khả dụng",
+      "Không thể tải nội dung",
+      "Bạn chưa có quyền truy cập"
+    ],
+    "retry": "Retry count: 1"
+  },
+  "viewportDesktop": {
+    "width": 1440,
+    "height": 1050
+  },
+  "viewportMobile": {
+    "width": 390,
+    "height": 844
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "PASS",
+  "startedAt": "2026-10-16T05:07:38.196Z",
+  "scope": "Ordinary Owner password login and GET-only CMS lead correlation after preserved failed first intake. No intake/lead/configuration mutation, no registration or new resource.",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "existingProfileOrCookies": false
+  },
+  "browserVersion": "155.0.8059.80",
+  "currentCount": 1,
+  "exactL1Matched": true,
+  "sourcePublicationMatched": true,
+  "L2L3Absent": true,
+  "businessPostRequests": 0,
+  "priorHeaderProof": "UNKNOWN: original request object no longer available; next requests use complete allHeaders API",
+  "finishedAt": "2026-10-16T05:07:39.200Z"
+}

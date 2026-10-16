@@ -1,0 +1,68 @@
+{
+  "status": "PASS_CORRECTED_FUTURE_CAPTURE_AND_LOGIN",
+  "observedAtUtc": "2026-10-16T02:42:31.475103+00:00",
+  "command": "bun run start:s05-worker --tenant <newS05UItenant> --once",
+  "attempts": [
+    {
+      "exitCode": 0,
+      "runtime": "bun",
+      "version": "1.4.3",
+      "transport": "local_capture",
+      "claimed": 0,
+      "captured": 0,
+      "failed": 0,
+      "skipped": 0,
+      "budgetOverruns": 0,
+      "stopping": false
+    },
+    {
+      "exitCode": 0,
+      "runtime": "bun",
+      "version": "1.4.3",
+      "transport": "local_capture",
+      "claimed": 1,
+      "captured": 1,
+      "failed": 0,
+      "skipped": 0,
+      "budgetOverruns": 0,
+      "stopping": false
+    },
+    {
+      "exitCode": 0,
+      "runtime": "bun",
+      "version": "1.4.3",
+      "transport": "local_capture",
+      "claimed": 10,
+      "captured": 10,
+      "failed": 0,
+      "skipped": 0,
+      "budgetOverruns": 0,
+      "stopping": false
+    }
+  ],
+  "technicalStateAfterFirstPoll": {
+    "intent": "pending",
+    "blockedReason": null,
+    "delivery": "pending",
+    "attempts": 0,
+    "scopeEnabled": true
+  },
+  "limits": "Actual bounded Bun worker and private local capture only; no external email delivery. Original wrong-link receipt retained byte-identical and not resent. No S04 backlog selected; remaining new synthetic intents are intentionally not drained.",
+  "linkVerification": {
+    "status": "CLOSED_NEW_CAPTURE_LOGIN_HTTP200",
+    "path": "/sign-in",
+    "actualHttp": 404,
+    "requiredRepair": "Use actual existing /login allowlist; retain original private capture, do not rewrite/resend successfuldelivery. Prove corrected futurecapture on newlyownedtechnicalintent.",
+    "historicalFailurePreserved": true
+  },
+  "privateCaptureProof": {
+    "originalCaptureByteUnchanged": true,
+    "originalWrongLinkRetainedAsHistoryNoResend": true,
+    "newCorrectCaptures": 10,
+    "directoryMode": "0700",
+    "fileMode": "0600",
+    "exactGenericFieldSet": true,
+    "noCustomerContactMessageOrLoginTokenFields": true,
+    "actualLoginGet": 200
+  }
+}

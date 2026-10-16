@@ -1,0 +1,32 @@
+{
+  "recordedAtUtc": "2026-10-16T01:24:11.326Z",
+  "status": "PASS",
+  "suites": [
+    {
+      "file": "s04-input.test.ts",
+      "exitCode": 0,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 46
+    },
+    {
+      "file": "s04-security.test.ts",
+      "exitCode": 0,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 22
+    },
+    {
+      "file": "s04-intake-integration.test.ts",
+      "exitCode": 0,
+      "passed": 15,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 245
+    }
+  ],
+  "intendedSuites": 3,
+  "limits": "Owned synthetic unit and actual local HTTP/PostgreSQL checks, including the suite-owned restart scenario; rendered browser and CAPTCHA human interaction remain separate proof. Human acceptance is pending."
+}

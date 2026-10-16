@@ -1,0 +1,44 @@
+{
+  "recordedAtUtc": "2026-10-16T01:14:39.186716+00:00",
+  "status": "SOURCE_REPAIRED_RUNTIME_REGRESSIONS_PENDING",
+  "checks": [
+    {
+      "check": "Early SQL CAPTCHA shape review",
+      "result": "SOURCE_P1",
+      "cause": "NULL answer hash could produce SQL UNKNOWN in challenge comparison rather than rejection",
+      "repairPlan": "Require exact string/64hex challenge hashes and null-safe comparison; add actual execute-only role null/wrong-type regression before final closure",
+      "state": "Fixed with string64hex/pair and null-safe checks before0005 applied; actual restricted-role regression pending"
+    },
+    {
+      "check": "Schema creator privilege preflight",
+      "result": "SOURCE_PRIVILEGE_GAP",
+      "cause": "Retained schema owner lacks database CREATE privilege, confirmed read-only false",
+      "repair": "Create and owner-check only new gcms_s04/gcms_s04_crypto schemas in scoped admin bootstrap, no broad grant to retained roles",
+      "state": "Bootstrap and0005 appliedPASS after early review"
+    },
+    {
+      "check": "Anonymous intake audit contract",
+      "result": "SOURCE_CONTRACT_GAP",
+      "cause": "Existing authenticated S02 audit actor_id is NOT NULL; anonymous acceptance cannot use fake/missing actor",
+      "repair": "Forward-only0006 adds private redacted anonymous S04 audit and changes new acceptance target; applied0005 checksum preserved",
+      "state": "0006 appliedPASS after independent source review; first acceptance runtime pending"
+    },
+    {
+      "check": "First real public submit to CMS list",
+      "result": "RUNTIME_403",
+      "cause": "Actual PostgreSQL42501: SELECT FOR SHARE on retained tenant SELECT-only table needs UPDATE privilege",
+      "repairPlan": "Remove unnecessary tenant row locking read under existing tenant advisory transaction lock; do not grant tenant UPDATE or weaken MFA/RLS",
+      "state": "Reproduced via same restricted role; API owner will repair/rebuild, UI paused after first accepted lead"
+    }
+  ],
+  "limit": "Independent actual-source finding; direct SQL regression pending, not an observed public exploit or applied database failure.",
+  "stalledIntegrationRun": {
+    "status": "FAIL",
+    "ownedChildExitCode": 143,
+    "observedTestFailures": [
+      "expiry fixture violates accepted_request_check SQL23514",
+      "restricted-role test timeout120000ms; teardown remained pending"
+    ],
+    "action": "Stopped exact owned suite child after identity and parent checks; shared apps untouched. Runner now streams output; actual cause repair and full rerun pending."
+  }
+}

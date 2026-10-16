@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-16T03:08:46.876089+00:00",
+  "command": "python3 -B scripts/verify_agent_setup.py",
+  "exitCode": 0,
+  "maintainedHashes": 81,
+  "declaredAdaptations": 9,
+  "mirrorPairs": 28,
+  "skillsPerRoot": 17,
+  "nativeRolesPerClient": 3,
+  "originalCanonicalFiles": 20,
+  "adaptedCanonicalFiles": 6,
+  "markdownFiles": 120,
+  "localLinks": 1171,
+  "limit": "Finalpost-document-release static/integrity source consistency only; application/runtime/humanacceptance remain separate. No further documentation writes."
+}

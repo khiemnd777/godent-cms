@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-16T01:30:15.044771+00:00",
+  "tables": {
+    "service_draft": {
+      "retainedOriginalRows": 29,
+      "currentRows": 70,
+      "originalFullRowHashesUnchanged": true
+    },
+    "site_draft": {
+      "retainedOriginalRows": 2,
+      "currentRows": 37,
+      "originalFullRowHashesUnchanged": true
+    },
+    "publication_snapshot": {
+      "retainedOriginalRows": 15,
+      "currentRows": 50,
+      "originalFullRowHashesUnchanged": true
+    },
+    "publication_pointer": {
+      "retainedOriginalRows": 10,
+      "currentRows": 43,
+      "originalFullRowHashesUnchanged": true
+    },
+    "publication_intent": {
+      "retainedOriginalRows": 15,
+      "currentRows": 50,
+      "originalFullRowHashesUnchanged": true
+    },
+    "schema_migration": {
+      "retainedOriginalRows": 4,
+      "currentRows": 7,
+      "originalFullRowHashesUnchanged": true
+    }
+  },
+  "limit": "All pre-S04 original rows in these six tables retained byte-equivalent JSON fingerprints; new synthetic rows allowed. Does not promise all auth/session rows unchanged."
+}

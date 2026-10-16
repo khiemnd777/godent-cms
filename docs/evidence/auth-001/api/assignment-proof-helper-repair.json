@@ -1,0 +1,39 @@
+{
+  "recordedAtUtc": "2026-10-16T05:19:42.929679+00:00",
+  "scope": "Verification helper only; no application or migration changes",
+  "originalAttempt": {
+    "status": "FAIL",
+    "observedBy": "Project Coordinator",
+    "details": "Exact replay helper returned generic failure before a PASS artifact; preserve this as a genuine failed verification attempt."
+  },
+  "readOnlyDiagnosis": {
+    "status": "PASS",
+    "executedBy": "Project Coordinator",
+    "databaseWritesAttempted": false,
+    "leadVersion": 2,
+    "assigneeMatches": true,
+    "historyCount": 1,
+    "receiptCount": 1,
+    "actorMatches": true,
+    "directJsonParameter": {
+      "type": "string",
+      "equal": false
+    },
+    "explicitTextJsonParameter": {
+      "type": "object",
+      "equal": true
+    },
+    "childLimit": "The coordinator supplied these actual read-only observations; this child did not execute database commands."
+  },
+  "repair": {
+    "path": "scripts/auth-001-assignment-proof.ts",
+    "change": "Use ::text::jsonb for the single snapshot receipt-body comparison, matching the existing application transport contract.",
+    "appOrMigrationChanged": false
+  },
+  "sourceChecks": {
+    "rootScriptsTypecheck": "PASS",
+    "scopedEslint": "PASS"
+  },
+  "repairedRuntimeReplay": "NOT_RUN_BY_THIS_CHILD",
+  "secretsPrinted": false
+}

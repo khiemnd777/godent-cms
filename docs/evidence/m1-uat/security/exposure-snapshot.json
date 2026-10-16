@@ -1,0 +1,51 @@
+{
+  "observedAtUtc": "2026-10-16T03:36:52.808162+00:00",
+  "lockSha256": "a930f219e8e876e9645f9f7fea32a05992bdb0c2c04fb6585e4d30bfba35dcdc",
+  "installedPackages": [
+    {
+      "name": "eslint-config-next",
+      "version": "16.4.1",
+      "dependencyEdges": {
+        "@next/eslint-plugin-next": "16.4.1"
+      },
+      "manifestSha256": "9a67e46c3fae6f527923398533c51c1b1bbbf6762611fb87399fee4244d97d25"
+    },
+    {
+      "name": "@next/eslint-plugin-next",
+      "version": "16.4.1",
+      "dependencyEdges": {
+        "fast-glob": "3.3.1"
+      },
+      "manifestSha256": "d38a5613dd90d02fc147cf4e043e35634bd5e944e0ae51756ae1190b0dac2194"
+    },
+    {
+      "name": "fast-glob",
+      "version": "3.3.1",
+      "dependencyEdges": {
+        "micromatch": "^4.0.4"
+      },
+      "manifestSha256": "8ad595ebee47ca89a32323be8dd2a21e6074e91db95e8add8b628af4ff025981"
+    },
+    {
+      "name": "micromatch",
+      "version": "4.0.8",
+      "dependencyEdges": {
+        "braces": "^3.0.3"
+      },
+      "manifestSha256": "94dbc881c0329813f2481f35fcfa725a2285d45926d33e9b9b8b80b28487752b"
+    },
+    {
+      "name": "braces",
+      "version": "3.0.3",
+      "dependencyEdges": {},
+      "manifestSha256": "56f08b888a4f30dc7cf8a7dbb36ffe92b737912ba36abe9d069d32167c957ac7"
+    }
+  ],
+  "traceCounts": {
+    "admin": 26,
+    "website": 7
+  },
+  "traceTotal": 33,
+  "advisoryChainReferences": [],
+  "appScriptsSourceMatches": []
+}

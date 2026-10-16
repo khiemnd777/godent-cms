@@ -1,0 +1,67 @@
+[
+  {
+    "action": "clear-filter-cancel",
+    "result": {
+      "dialogOpen": false,
+      "draft": "Bản ghi chưa lưu S05: giữ nguyên khi hủy điều hướng.",
+      "q": "YC-000001"
+    }
+  },
+  {
+    "action": "link-cancel",
+    "url": "http://127.0.0.1:5891/cms/leads?tenant=4e206516-529a-4799-b146-05f950214a00",
+    "draft": "activity-text"
+  },
+  {
+    "action": "tenant-cancel",
+    "result": {
+      "draft": "Bản ghi chưa lưu S05: giữ nguyên khi hủy điều hướng.",
+      "q": "YC-000001",
+      "tenant": "4e206516-529a-4799-b146-05f950214a00",
+      "url": "http://127.0.0.1:5891/cms/leads?tenant=4e206516-529a-4799-b146-05f950214a00"
+    }
+  },
+  {
+    "action": "refresh-cancel",
+    "result": {
+      "draft": "Bản ghi chưa lưu S05: giữ nguyên khi hủy điều hướng.",
+      "focused": "Làm mới",
+      "q": "YC-000001"
+    }
+  },
+  {
+    "action": "page-cancel",
+    "result": {
+      "draft": "S05 chưa lưu để kiểm tra đổi trang và đổi dòng.",
+      "firstCode": "YC-000050"
+    }
+  },
+  {
+    "action": "row-cancel",
+    "result": {
+      "draft": "S05 chưa lưu để kiểm tra đổi trang và đổi dòng.",
+      "selected": "S05 Minh họa phân trang 49"
+    }
+  },
+  {
+    "action": "filter-cancel",
+    "result": {
+      "draft": "S05 chưa lưu để kiểm tra đổi trang và đổi dòng.",
+      "footer": "56 yêu cầu phù hợp · 20 trên trang nàyTrang tiếp"
+    }
+  },
+  {
+    "action": "mobile-back-cancel",
+    "result": {
+      "detailVisible": true,
+      "draft": "S05 mobile chưa lưu; hủy quay lại phải giữ nguyên."
+    }
+  },
+  {
+    "action": "mobile-back-discard",
+    "result": {
+      "detailVisible": false,
+      "focused": "Mở yêu cầu Khách thử S05 01"
+    }
+  }
+]

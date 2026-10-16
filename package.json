@@ -1,0 +1,53 @@
+{
+  "name": "godent-cms",
+  "private": true,
+  "packageManager": "bun@1.4.3",
+  "workspaces": [
+    "apps/*"
+  ],
+  "trustedDependencies": [
+    "bun"
+  ],
+  "scripts": {
+    "typecheck": "bun run --cwd apps/admin typecheck && bun run --cwd apps/website typecheck && bun run --cwd apps/api typecheck && bun --bun tsc --noEmit --project tsconfig.json",
+    "lint": "bun --bun eslint apps/admin apps/website apps/api/src apps/api/test scripts/*.ts --max-warnings 0",
+    "build": "bun run --cwd apps/admin build && bun run --cwd apps/website build && bun run --cwd apps/api build",
+    "test": "bun test apps/api/test",
+    "setup:local": "bun scripts/local-setup.ts",
+    "infra:up": "docker compose up -d --wait --wait-timeout 90",
+    "check:services": "bun scripts/check-services.ts",
+    "check:api": "bun scripts/check-api.ts",
+    "start:admin": "bun scripts/start-service.ts admin",
+    "start:website": "bun scripts/start-service.ts website",
+    "start:api": "bun scripts/start-service.ts api",
+    "start:local": "bun scripts/start-local.ts",
+    "s02:bootstrap": "bun scripts/s02-bootstrap.ts --local-s02",
+    "s02:migrate": "bun --env-file=.local/s02.env scripts/s02-migrate.ts --local-s02",
+    "s02:fixtures": "bun --env-file=.env --env-file=.local/s02.env scripts/s02-fixtures.ts --local-s02 --synthetic-fixtures",
+    "test:s02": "bun scripts/check-s02.ts",
+    "s03:migrate": "bun --env-file=.local/s02.env scripts/s02-migrate.ts --local-s02",
+    "s03:fixtures": "bun --env-file=.local/s02.env scripts/s03-fixtures.ts --local-s03 --synthetic-fixtures",
+    "test:s03": "bun scripts/check-s03.ts",
+    "s04:bootstrap": "bun --env-file=.env scripts/s04-bootstrap.ts --local-s04",
+    "s04:migrate": "bun --env-file=.local/s02.env --env-file=.local/s04.env scripts/s04-migrate.ts --local-s04",
+    "s04:fixtures": "bun --env-file=.env --env-file=.local/s02.env --env-file=.local/s04.env scripts/s04-fixtures.ts --local-s04 --synthetic-fixtures",
+    "test:s04": "bun scripts/check-s04.ts",
+    "s05:bootstrap": "bun --env-file=.env scripts/s05-bootstrap.ts --local-s05",
+    "s05:migrate": "bun --env-file=.local/s02.env scripts/s05-migrate.ts --local-s05",
+    "s05:migrate:worker": "bun --env-file=.local/s02.env scripts/s05-migrate.ts --local-s05 --include-worker",
+    "s05:fixtures": "bun --env-file=.env --env-file=.local/s02.env --env-file=.local/s04.env --env-file=.local/s05.env scripts/s05-fixtures.ts --local-s05 --synthetic-fixtures",
+    "start:s05-worker": "bun scripts/start-s05-worker.ts",
+    "test:s05": "bun scripts/check-s05.ts",
+    "check:api:s05": "bun scripts/check-api.ts --s05"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@types/bun": "1.3.1",
+    "@types/node": "22.18.6",
+    "bun": "1.4.3",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.71.2"
+  }
+}

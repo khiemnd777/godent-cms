@@ -1,0 +1,52 @@
+{
+  "status": "FAIL",
+  "events": [
+    {
+      "step": "owned_source_and_quota_verified",
+      "at": "2026-10-16T03:46:58.001Z",
+      "leads": 56,
+      "intents": 56,
+      "active_new_window": 0,
+      "active_request_window": 0
+    }
+  ],
+  "sourceTenantId": "4e206516-529a-4799-b146-05f950214a00",
+  "website": "http://localhost:5892/s05-ui-ef95e0e2/dich-vu/tu-van",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "headless": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "customProfile": false,
+    "existingCookiesImported": false,
+    "attachCDP": false,
+    "downloads": false
+  },
+  "expectedNormalUpdates": [
+    "One new lead/accepted_request/notification_intent/anonymous audit row",
+    "S05 source lead_sequence.last_number advances by exactly one",
+    "Source abuse-window records advance or expire through normal intake only"
+  ],
+  "limit": "One actual public intake with committed DB barrier before first browser response discard; unchanged same-form retry only. No CAPTCHA solving, auth, counter reset, backlog dispatch or app changes.",
+  "before": {
+    "leads": 56,
+    "intents": 56,
+    "active_new_window": 0,
+    "active_request_window": 0
+  },
+  "browserVersion": "155.0.8059.80",
+  "failure": {
+    "phase": "launch-real-public-ui",
+    "code": "DETAILS_REDACTED",
+    "rawMessageOrStackSaved": false,
+    "captchaSolved": false
+  },
+  "completedAt": "2026-10-16T03:47:11.051Z"
+}

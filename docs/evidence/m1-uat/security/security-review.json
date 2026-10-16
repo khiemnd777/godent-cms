@@ -1,0 +1,758 @@
+{
+  "package": "GCMS-M1-UAT-001 v0.1",
+  "tasks": [
+    "T10",
+    "T00 supporting evidence-reuse review"
+  ],
+  "reviewStatus": "COMPLETE_SCOPED",
+  "recordedAtUtc": "2026-10-16T03:39:44.526204+00:00",
+  "auditStatus": "FAIL",
+  "actualAuditExitCode": 1,
+  "auditEvidence": "audit-network.json",
+  "failedAttemptEvidence": "audit-attempt-sandbox.json",
+  "pinnedBunVersion": "1.4.3",
+  "auditAdvisories": {
+    "braces": [
+      {
+        "id": 1240992,
+        "url": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+        "severity": "high",
+        "vulnerable_versions": "<=3.0.3",
+        "cwe": [
+          "CWE-674"
+        ],
+        "cvss": {
+          "score": 7.5,
+          "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      }
+    ]
+  },
+  "lockUnchanged": true,
+  "runtime": {
+    "role": "kit-reviewer",
+    "parent": "01a1402c-3c81-7933-9927-d974f70c9fbc",
+    "thread": "01a14283-7099-7a61-a627-171a8bbdbe8f",
+    "turn": "01a142c6-f227-7b01-aebf-4f69cdbea96e",
+    "observedAtUtc": "2026-10-16T03:34:56.846Z",
+    "model": "gpt-6.1-sol",
+    "requiredRequestedObservedEffort": [
+      "xhigh",
+      "xhigh",
+      "xhigh"
+    ],
+    "checkStatus": "PASS",
+    "sessionLog": "/Users/khiemnguyen/.codex/sessions/2026/10/16/rollout-2026-10-16T09-21-12-01a14283-7099-7a61-a627-171a8bbdbe8f.jsonl"
+  },
+  "exposure": {
+    "snapshot": "exposure-snapshot.json",
+    "installedChain": "root dev eslint-config-next16.4.1 -> @next/eslint-plugin-next16.4.1 -> fast-glob3.3.1 -> micromatch4.0.8 -> braces3.0.3",
+    "consumer": "node_modules/@next/eslint-plugin-next/dist/utils/get-root-dirs.js:11-28",
+    "input": "eslint.config.mjs:10 fixed repo rootDir apps/admin/ and apps/website/",
+    "traceCounts": {
+      "admin": 26,
+      "website": 7
+    },
+    "traceTotal": 33,
+    "chainReferences": 0,
+    "appScriptsSourceMatches": 0,
+    "workerImports": "Bun.SQL/Node filesystem, crypto and local contracts; no advisory-chain imports observed",
+    "limit": "Source/manifest/trace inspection supports this local exposure classification. It is not exhaustive dynamic reachability or production safety proof."
+  },
+  "disposition": {
+    "status": "BOUNDED_LOCAL_DEFERRAL_SUPPORTED",
+    "freshAssessment": true,
+    "scope": "Existing approved local M1-UAT; no dependency upgrade authorized",
+    "auditRemains": "FAIL/open",
+    "owner": "Desktop Coordinator",
+    "reassessBy": "2026-10-22",
+    "earlierTriggers": [
+      "patch available",
+      "dependency change",
+      "exposure change",
+      "before production"
+    ],
+    "productionWaiver": false,
+    "automationCreated": false
+  },
+  "reuseReview": {
+    "s03ConflictDirty": {
+      "disposition": "REUSE_SUPPORTED_WITH_SCOPE",
+      "evidence": [
+        "docs/evidence/s03/ui/actual-flow.json",
+        "docs/evidence/s03/ui/handoff.md"
+      ],
+      "tenant": "c3000000-0000-4000-8000-000000000001",
+      "service": "2db0e1f4-05bf-45c0-bd4f-07b236c46757",
+      "state": {
+        "draftVersion": 4,
+        "publicationVersion": 2,
+        "siteVersion": 7
+      },
+      "covered": [
+        "same-tenant A1 two-editor stale save rejection and retained input/comparison",
+        "stale publication confirmation rejection",
+        "dirty Cancel retains input",
+        "explicit Discard navigation"
+      ],
+      "currentSourceCompatibility": [
+        "DraftEditor47-58 uses expectedDraftVersion and preserves fields on409",
+        "PublicationDialog20-24 sends exact draft/site/publication versions and rejects stale confirmation",
+        "UnsavedChanges14-24 retains Cancel and explicit Discard behavior"
+      ],
+      "notCovered": [
+        "S02 multiAB cross-tenant tab/session isolation",
+        "fresh PlatformOnly login/read",
+        "fresh loading image"
+      ]
+    },
+    "s05Cursor": {
+      "disposition": "REUSE_SUPPORTED_FOR_PAGING_STEPS",
+      "evidence": [
+        "docs/evidence/s05/ui/cursor-sequence.json",
+        "docs/evidence/s05/ui/implementation.md",
+        "docs/evidence/s05/ui/final-state.json"
+      ],
+      "tenantFromSupportingBundle": "4e206516-529a-4799-b146-05f950214a00",
+      "datasetDescription": "One real public intake plus55 technical pagination rows. Technical rows do not prove intake.",
+      "artifactComparison": {
+        "pageCounts20": [
+          20,
+          20,
+          16
+        ],
+        "pageCounts50": [
+          50,
+          6
+        ],
+        "unique20": 56,
+        "unique50": 56,
+        "sameOrderedCodesAcrossSizes": true,
+        "back20SecondMatches": true,
+        "back20FirstMatches": true,
+        "back50FirstMatches": true,
+        "codeSetExactly1Through56": true
+      },
+      "currentSourceCompatibility": [
+        "LeadWorkspace75-77 applies query reset and Next/Back history",
+        "LeadFilters16 restricts20/50; applying size resets cursor",
+        "LeadsService44-54 binds tenant/purpose/query and optional me actor, applies tenant/RLS before keyset created_at,id DESC",
+        "WorkspaceGate18 remounts per tenant; LeadWorkspace53-61 aborts previous detail,78 checks selected id"
+      ],
+      "limits": [
+        "cursor JSON has no own tenant/raw row IDs/timestamp",
+        "root/FE must correlate current dataset ID roster and preservation baseline before closing stable-ID/tenant/detail boundary criterion",
+        "denied JSON alone does not prove a fresh multiAB/detail isolation sequence",
+        "reuse is artifact review, not new independent browser execution"
+      ],
+      "currentCorrelation": {
+        "artifact": "docs/evidence/m1-uat/ui/t08-correlation.json",
+        "status": "PASS",
+        "observedAt": "2026-10-16T03:44:10.887Z",
+        "tenantId": "4e206516-529a-4799-b146-05f950214a00",
+        "currentRowsAtObservation": 56,
+        "checks": {
+          "rows56": true,
+          "exactCurrentIdRoster": true,
+          "allTenantScoped": true,
+          "allPublishedSourceMatches": true,
+          "allRetainedBaselineKeys": true,
+          "artifactSameOrdered56": true,
+          "artifactMatchesCurrentCodes": true,
+          "backArraysMatch": true
+        },
+        "rosterHash": "f3dd71c515f85e11835cbd08684d04499aad79f2596b66efe7c32e4b20896a6a",
+        "reviewScope": "Reviewed root readonly correlation artifact; no independent DB query.",
+        "laterChange": "T07 added exactly one intake afterward, total now57. Historical56-row paging proof remains a snapshot and must not be described as current unfiltered56.",
+        "remaining": "Fresh current tenant/detail browser correlation and multiAB cross-tenant tabs remain separate.",
+        "currentCallback": "Fresh T08 current-detail plus T02 private denial now reviewed for stated current tenant/detail boundaries. Historical56-row paging reuse remains separate; current total57."
+      }
+    },
+    "s02MultiAB": {
+      "status": "NOT_CLOSED_BY_S03_REUSE",
+      "reason": "Same-tenant version conflict does not establish cross-tenant multiAB tab/session isolation. S02 source-handoff explicitly retains browser NOT_RUN.",
+      "currentCallback": "Fresh T02 multiAB artifact now supports scoped tab/context boundary PASS; the historical statement that S03 same-tenant reuse alone did not close this remains true."
+    }
+  },
+  "selectedOrdinaryFileIntegrity": [
+    {
+      "path": "package.json",
+      "sha256": "650b12cd05bbe46f2a09b4a4dfdb5c35408571fdfb6b72d0f7f0add63d75169f",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "bun.lock",
+      "sha256": "a930f219e8e876e9645f9f7fea32a05992bdb0c2c04fb6585e4d30bfba35dcdc",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "eslint.config.mjs",
+      "sha256": "a2a3296be2a6c1b895da2e051240114e0c519ac0bd3720a444a2d2fd6e755613",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "apps/admin/components/draft-editor.tsx",
+      "sha256": "4096dae805c5b8029effa77b9ebfd60a5418e597d9a7c36674a9ae42ae11755d",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "apps/admin/components/publication-dialog.tsx",
+      "sha256": "88e292b0c09d645965d18ede09edcda3cfed19eac0bdffa28d59e2b525168699",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "apps/admin/components/unsaved-changes.tsx",
+      "sha256": "c834b2d1ef8ca7801d2929552ac63e0f79ce0bd94338283b7acf9eff336583a9",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "apps/admin/components/workspace.tsx",
+      "sha256": "2dbbf5dea0cd6d63fea583ec3064e539fc8009afd00f42248e257ba7a82db88b",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "apps/admin/components/lead-workspace.tsx",
+      "sha256": "b3d6c5b896cd866be6076cfebbd032238011d095337cd9e378926b56d71c24fc",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "apps/admin/components/lead-filters.tsx",
+      "sha256": "071104614c3c95fea6910f885302cb7728a6e4ccd54487e7f1e8d3c66d6662f8",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "apps/admin/lib/lead-input.ts",
+      "sha256": "6e93cf3f8a6438c656ad5f6c0194a4c97469008faf82ae4570aa8d5d4a4fdae7",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "apps/api/src/modules/leads.service.ts",
+      "sha256": "067145cf706969a64ff5cdb7e26165058c6159c9db4cf990ad6bf4fe0dae7aeb",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "apps/api/src/contracts/lead-operations.ts",
+      "sha256": "1d520005673a8e48fe81728907ca0ce26b24ec3ff4331d9f57c5edd127f84aac",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "apps/api/src/contracts/s05.ts",
+      "sha256": "c059149c4a988104144911863cdb59e12347437af3d145934c4eeb92a8bbcf28",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "apps/api/src/worker/lead-worker.ts",
+      "sha256": "4964c302a2e837e18c6925557007727e13896f4c6c95a1dc6781f2092f7a6832",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "apps/api/src/worker/local-capture.ts",
+      "sha256": "97b2d10f21afdf04ded1b44dbc7e84121ccbbc73ec008805624f27169f9544cb",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "docs/evidence/s03/ui/actual-flow.json",
+      "sha256": "30182eb395d1cbc4aa3cfeebff9a7634c13acd5bffd9b6f5d51ad8559a806ff8",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "docs/evidence/s03/ui/handoff.md",
+      "sha256": "f9605b7f63a975170cb7d3d8d767bb07a6ba81fd4673ca5c617450ac17a56a09",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "docs/evidence/s05/ui/cursor-sequence.json",
+      "sha256": "52dc4132281083453f4dc9b8a5a311368137aaceb13b37039b6a74548eca7c6e",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "docs/evidence/s05/ui/final-state.json",
+      "sha256": "a57b26e95255d4a91a280eb51b7c6703195aba6bbc525c1f77f6b2c1d5786511",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "docs/evidence/s05/ui/implementation.md",
+      "sha256": "a5ea26013a853fb64c789e32d2567dc1d5d7d03f152400d390f96586513c40c6",
+      "matchesPackageBeforeBaseline": true
+    },
+    {
+      "path": "docs/evidence/s05/ui/denied.json",
+      "sha256": "77cd25adb9de1372d65fef64794143afa922a125e95f73c9c9da0df7b92c3aae",
+      "matchesPackageBeforeBaseline": true
+    }
+  ],
+  "allSelectedOrdinaryFilesMatchPackageBaseline": true,
+  "traceFileIntegrity": [
+    {
+      "path": "apps/admin/.next/next-minimal-server.js.nft.json",
+      "sha256": "554468d19cd58853361a108ff270c10625ca4eec6d92a280a917b4fc37e1f333"
+    },
+    {
+      "path": "apps/admin/.next/next-server.js.nft.json",
+      "sha256": "7e1c2895212be5a2e82ff386e9236e7146b1dd0d8c6f205dee000639c307f284"
+    },
+    {
+      "path": "apps/admin/.next/server/app/_global-error/page.js.nft.json",
+      "sha256": "c73a4af71ac6893afb7d422657f7634bb106080f11ccb068eba8299db7f6b1dd"
+    },
+    {
+      "path": "apps/admin/.next/server/app/_not-found/page.js.nft.json",
+      "sha256": "796d86dc0285bd20bc14085cd6688ebe7d7b251beea914f98b09b14c042a809b"
+    },
+    {
+      "path": "apps/admin/.next/server/app/account/page.js.nft.json",
+      "sha256": "a441cc89f2525310d7168b47b5013671124145a6910d1b026f808124cbd3d84b"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/[...path]/page.js.nft.json",
+      "sha256": "1319aae63a0038f05462e775031442999e058ea09e6db7a179025a1abf6e8023"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/leads/page.js.nft.json",
+      "sha256": "7d6f7e826ad90b867cb40af0c036eed62f5953f72fe320f3dbff4367ac10fbea"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/page.js.nft.json",
+      "sha256": "bd8509262cb30e78b78656db0cde7f0782193c11bbfd546b7ec2e2a8759b03e4"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/services/[id]/page.js.nft.json",
+      "sha256": "a52cc6e2f32d18f697165531ebbf7d1005c63c79153bfadb9ef65057d933ea5f"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/services/[id]/preview/page.js.nft.json",
+      "sha256": "a3d4a2647aae7f708ab347c3ac0e82765f85ef14ba3b269cc7dc1dd7fe2886b9"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/services/new/page.js.nft.json",
+      "sha256": "7c8b390e41cbd2ab8cf3694105dc1ebe99598fe0a831c3e3dfeaad68a1513bd8"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/services/page.js.nft.json",
+      "sha256": "d4530682b0d4d5d06c1b390b461a9faa8420a991a2c8686a1cd1a69ea5c4ed7d"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/settings/members/page.js.nft.json",
+      "sha256": "4cac64f241d8fc2b4ffb482d6af9d72509c2f52ea782210867963e8760b0bf7e"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/settings/notifications/page.js.nft.json",
+      "sha256": "10eca9688f1acbde0fe160107677c907544eda5a32d5355c514a0d75f67f8ecd"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/settings/page.js.nft.json",
+      "sha256": "908f47dabc43b3afb38e17a26bd041a685fa5d1107ec012322384de679f8a75d"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/settings/site/page.js.nft.json",
+      "sha256": "8d113c9efee2399c92053de33a37a2df44bf72adc0660ef6c54e95bf3f26224f"
+    },
+    {
+      "path": "apps/admin/.next/server/app/forgot-password/page.js.nft.json",
+      "sha256": "6b2075f23d4aa63978d6e4220eae12bce0318b9d41aa60102618dd6c5d9eb193"
+    },
+    {
+      "path": "apps/admin/.next/server/app/invitations/page.js.nft.json",
+      "sha256": "45253265aa13c1a98a8d1d9a2f836e2b2ea67c8198018fd3f0662f72914f6837"
+    },
+    {
+      "path": "apps/admin/.next/server/app/login/page.js.nft.json",
+      "sha256": "1d0ccb18d70311b59c8e04ef1f7c6e74027e16607e235f55957696d727fc3ebf"
+    },
+    {
+      "path": "apps/admin/.next/server/app/page.js.nft.json",
+      "sha256": "d978db6753fd7a2dd2e3ac17d1f648aabf904a5af3cf2bc8bb8ab5455e12db50"
+    },
+    {
+      "path": "apps/admin/.next/server/app/platform/[...path]/page.js.nft.json",
+      "sha256": "1e64cdd2bd689b8f1e9cdaa40e24bb247c346821efa5f5aa455cc6e5118b3866"
+    },
+    {
+      "path": "apps/admin/.next/server/app/platform/accounts/page.js.nft.json",
+      "sha256": "7e7a40b8b3b0c046398af6a57cd96fea1398add7f064b777510f1aa77cd3e4ed"
+    },
+    {
+      "path": "apps/admin/.next/server/app/platform/page.js.nft.json",
+      "sha256": "cf6cc7be62c680169deb43b1806d9ca004edfe4146bc6d60676fcb166bf7aa19"
+    },
+    {
+      "path": "apps/admin/.next/server/app/reset-password/page.js.nft.json",
+      "sha256": "6594b084c214f3dd63bb480a87b8d967a45182199f0293c07512d0b410f8e2fb"
+    },
+    {
+      "path": "apps/admin/.next/server/app/verify-email/page.js.nft.json",
+      "sha256": "c5ba19f1e8b3fd51532524e9a4b83b090405e6ef06c4ae34e79c8878a01d422f"
+    },
+    {
+      "path": "apps/admin/.next/server/middleware.js.nft.json",
+      "sha256": "2983414cfe98cd2701d97e7c4ab942a6607adce1a35176499dd9521fc04ad54f"
+    },
+    {
+      "path": "apps/website/.next/next-minimal-server.js.nft.json",
+      "sha256": "554468d19cd58853361a108ff270c10625ca4eec6d92a280a917b4fc37e1f333"
+    },
+    {
+      "path": "apps/website/.next/next-server.js.nft.json",
+      "sha256": "7e1c2895212be5a2e82ff386e9236e7146b1dd0d8c6f205dee000639c307f284"
+    },
+    {
+      "path": "apps/website/.next/server/app/[tenant]/dich-vu/[slug]/page.js.nft.json",
+      "sha256": "d6dab8893188bcb9b0345ffcd9e73077459e58f1fc98d02011488426ef8c8700"
+    },
+    {
+      "path": "apps/website/.next/server/app/_global-error/page.js.nft.json",
+      "sha256": "d729a607df07134525f9bb09d610c3c6de83596c6127cf09cf622dcc4b96aeec"
+    },
+    {
+      "path": "apps/website/.next/server/app/_not-found/page.js.nft.json",
+      "sha256": "7d7dfeb085485f76ce88d4672f0608ab8f98d7584baf3661be974b467c7e667a"
+    },
+    {
+      "path": "apps/website/.next/server/app/page.js.nft.json",
+      "sha256": "e0b3258d0dec1d604744de249e2fd212505f5730a47c46302e3a85d973f4dfc8"
+    },
+    {
+      "path": "apps/website/.next/server/middleware.js.nft.json",
+      "sha256": "d452d35f1ad004cbf2c2e9909eecf1265df9829d91fc26479739e6fd2e9f7e10"
+    }
+  ],
+  "newApplicationSourceFindings": [],
+  "notRun": [
+    "independent browser execution",
+    "DB/account/session/fixture mutations",
+    "application or dependency changes",
+    "exploit/DoS execution",
+    "production reachability",
+    "registry latest-version confirmation",
+    "package-wide UAT closure/human acceptance"
+  ],
+  "ownership": "Only docs/evidence/m1-uat/security/** written; no child delegation/Git/global/private/app/DB writes.",
+  "supplementalT07Authorization": {
+    "source": "Direct human async message verified and supplied by desktop /root in parent thread01a1402c-3c81-7933-9927-d974f70c9fbc on2026-10-16",
+    "exactQuote": "Cho ph\u00e9p d\u00f9ng Playwright bi\u1ec7t l\u1eadp cho T07",
+    "approvedScope": "New isolated installed browser; real form/API200 then discard response and retry; prove exactly one lead+intent. No retained profile/cookies/downloads/application edits/security disable.",
+    "executionOwner": "FE with root fault/DB coordination",
+    "reviewerExecution": "NOT_RUN; this reviewer did not use a browser or mutate accounts/DB.",
+    "result": "Actual FE/root attempt2 PASS; scoped source/artifact consistency review recorded in t07EvidenceReview. Authorization itself is not runtime proof.",
+    "classification": "Scoped UAT verification-tool authorization; no product design change is asserted."
+  },
+  "t07EvidenceReview": {
+    "reviewStatus": "SCOPED_PASS_REVIEWED",
+    "recordedAtUtc": "2026-10-16T03:54:29.151841+00:00",
+    "executionEvidenceStatus": "PASS",
+    "reviewerExecutedBrowserOrDb": false,
+    "helper": {
+      "path": ".local/m1-uat-t07-run-attempt2.ts",
+      "sha256": "b0582a04fe253e52ae9a492da2909a79cd62ae5513432dde0646652413eb6be6",
+      "readOnlyDbSource": "Bun.SQL default_transaction_read_only:on, current_setting verified on at66-67; SQL statements inspected are SELECT only",
+      "controlledFault": "Actual route.fetch114 forwards first public request to real API, requires accepted200 and readonly committed join49-62, then aborts original browser response128. Second request103 requires byte-identical body and same key and continues normally.",
+      "safeBrowserSource": "Installed Chrome launch25 with chromiumSandbox:true and safe environment keys; newContext86 and empty initial cookies87; no profile/CDP/cookie import/download helper or security-disable options observed.",
+      "scopeGuards": "Existing owned source identity/publication15,68-78 and source quota/56-row roster established before request; no challenge permitted101; no backlog dispatch or auth calls."
+    },
+    "eventOrder": [
+      {
+        "step": "owned_source_and_quota_verified",
+        "at": "2026-10-16T03:52:13.019Z",
+        "leads": 56,
+        "intents": 56,
+        "active_new_window": 0,
+        "active_request_window": 0
+      },
+      {
+        "step": "real_api_200_accepted",
+        "at": "2026-10-16T03:52:14.190Z"
+      },
+      {
+        "step": "initial_commit_db_barrier_before_response_discard",
+        "at": "2026-10-16T03:52:14.192Z",
+        "accepted": 1,
+        "leads": 1,
+        "intents": 1
+      },
+      {
+        "step": "first_browser_response_discarded_after_commit",
+        "at": "2026-10-16T03:52:14.193Z"
+      },
+      {
+        "step": "actual_unknown_ui_inputs_retained_and_frozen",
+        "at": "2026-10-16T03:52:14.283Z"
+      },
+      {
+        "step": "same_frozen_body_and_key_retry",
+        "at": "2026-10-16T03:52:14.307Z",
+        "bodyHash": "86193da8afd51fc482d6656bbb9eb4a66c2b620edea1634ac0c2cf60bd792d9a",
+        "requestKeyHash": "32cb6aa06fc1ceb9af281185412d79dbc3f9749a1c4f7959d1f675096eee11d3"
+      },
+      {
+        "step": "browser_ack_and_exactly_one_lead_intent_after_retry",
+        "at": "2026-10-16T03:52:14.412Z",
+        "accepted": 1,
+        "leads": 1,
+        "intents": 1
+      }
+    ],
+    "pureArtifactConsistencyChecks": {
+      "eventsStrictlyOrdered": true,
+      "statusPass": true,
+      "twoBrowserPosts": true,
+      "oneDiscardedResponse": true,
+      "unknownUiAllTrue": true,
+      "afterRetryExactlyOne": true,
+      "oneNewLeadAndIntent": true,
+      "before56After57": true,
+      "retryHashesMatchFinal": true,
+      "diagnosticZeroPostsSelector0To1": true
+    },
+    "screenshotsInspected": [
+      "docs/evidence/m1-uat/ui/t07-unknown-attempt2.jpg",
+      "docs/evidence/m1-uat/ui/t07-accepted-attempt2.jpg"
+    ],
+    "currentSource": [
+      {
+        "path": "apps/website/components/consultation-form.tsx",
+        "sha256": "170f7de6fab9e69cd677cf59bb5d4d44444a6adea9ad3f18150227d3787523d4",
+        "matchesPackageBeforeBaseline": true
+      },
+      {
+        "path": "apps/website/lib/consultation.ts",
+        "sha256": "60155a29c21c1b891a87b5ce3d908c26308efe6fdcc7aeb5be9dc49bb8261d25",
+        "matchesPackageBeforeBaseline": true
+      }
+    ],
+    "sourceCompatibility": "Consultation createAttempt freezes normalized input/key6-7; form28-40 retains attempt until accepted, fieldset52 disabled when attempt exists; unknown transport error retains attempt; exact body retry recorded by helper.",
+    "history": "Initial t07-result.json remains FAIL, no intake observed; diagnostic posts0 and exact-label0/role-combobox1 support selector-only helper correction. No old artifact was rewritten.",
+    "coverage": "One actual anonymous public form intake, committed before controlled browser response discard, frozen retained inputs and same-form same-key/body retry, browser ACK, accepted_request/lead/intent each1 and total lead/intent56 to57.",
+    "limits": [
+      "Artifact/source review by this reviewer; execution and readonly DB observations belong to FE/root",
+      "Controlled Playwright route response failure, not a claim about external network packet loss",
+      "Same mounted form only; no reload/process restart/arbitrary retry window proved here",
+      "No CAPTCHA challenge solving or T06 closure",
+      "No authentication/session/invitation/reset/MFA/revocation proof",
+      "Expected audit-row and sequence changes are listed as expected by helper, not independently asserted by this callback",
+      "Package-wide preservation/other criteria/human acceptance remain separate"
+    ],
+    "artifactIntegrity": [
+      {
+        "path": "docs/evidence/m1-uat/ui/t07-result.json",
+        "sha256": "6c49f498f56e504faec45a5fbc2d543d181e7af50ce3142d6cdaa34ad2f45bf0"
+      },
+      {
+        "path": "docs/evidence/m1-uat/ui/t07-diagnostic.json",
+        "sha256": "88e18df44528dff80254bf392dc61c62b860ab3ae13ae8661866da58e77b8bbd"
+      },
+      {
+        "path": "docs/evidence/m1-uat/ui/t07-result-attempt2.json",
+        "sha256": "f87094857378027e0019a204b394bec5314f23ca28ace1f5fc2f945c0c38f2ff"
+      },
+      {
+        "path": "docs/evidence/m1-uat/ui/t07-unknown-attempt2.jpg",
+        "sha256": "57e42b06241143686128118b07ecd8b4713c4830868459b047e12ed6366a6f78"
+      },
+      {
+        "path": "docs/evidence/m1-uat/ui/t07-accepted-attempt2.jpg",
+        "sha256": "63f15628e1dcd6ba3b1cf2cec2c9292760c8612f25c3ef71ca8b9073f9c8835e"
+      },
+      {
+        "path": "docs/evidence/m1-uat/ui/t08-correlation.json",
+        "sha256": "753a759364a5ba39e84cd234cc7b31dad229e84f3ecde738bd3d4469d68f9d39"
+      }
+    ],
+    "newActionableSourceFindings": [],
+    "runtime": {
+      "status": "PASS",
+      "role": "kit-reviewer",
+      "thread": "01a14283-7099-7a61-a627-171a8bbdbe8f",
+      "parent": "01a1402c-3c81-7933-9927-d974f70c9fbc",
+      "model": "gpt-6.1-sol",
+      "requiredRequestedObservedEffort": [
+        "xhigh",
+        "xhigh",
+        "xhigh"
+      ],
+      "turn": "01a142d7-457c-7582-a58b-e03bf191628b",
+      "observedAtUtc": "2026-10-16T03:52:46.750Z"
+    },
+    "authenticationHoldReportedByRoot": {
+      "status": "OPEN_NOT_CLOSED",
+      "source": "Desktop /root callback",
+      "reason": "Automatic approval review rejected attempted existing reauthentication because the human did not know/provide the credentials; direct human credential/new-grant permission was requested and remains pending."
+    }
+  },
+  "finalArtifactReview": {
+    "reviewStatus": "COMPLETE_SCOPED_NO_NEW_FINDING",
+    "recordedAtUtc": "2026-10-16T04:18:18.200418+00:00",
+    "runtime": {
+      "status": "PASS",
+      "role": "kit-reviewer",
+      "thread": "01a14283-7099-7a61-a627-171a8bbdbe8f",
+      "parent": "01a1402c-3c81-7933-9927-d974f70c9fbc",
+      "model": "gpt-6.1-sol",
+      "requiredRequestedObservedEffort": [
+        "xhigh",
+        "xhigh",
+        "xhigh"
+      ],
+      "turn": "01a142ec-c4e6-7980-a1bb-df33b00d2214",
+      "observedAtUtc": "2026-10-16T04:16:15.664Z"
+    },
+    "checks": {
+      "multiABOwnContexts": true,
+      "crossContextDeniedNoEditorOrSave": true,
+      "platformPrivateDenials": true,
+      "bothActorsSameNewAndRetainedLead": true,
+      "tenantSwitchClearsDetails": true,
+      "current57NotFreshPaging": true,
+      "realEquivalentLoadingAndRecovery": true,
+      "originalS03NotEntered": true,
+      "sameProcessWatchdogReported": true,
+      "chronologicalFilesAndFault": true,
+      "recovery5Http200": true
+    },
+    "criteria": {
+      "T02MultiAB": {
+        "review": "SCOPED_PASS",
+        "covered": "Fresh ordinary multiAB browser read in separate A/B tenant tabs; A remains A after B navigation; A service ID under B denies without editor/save; correct own contexts restored/reloaded. No application writes.",
+        "limit": "Initial editable:false is a transition observation, not an editing or mutation test. Existing S03 same-tenant conflict/dirty reuse remains separate."
+      },
+      "T02PlatformOnlyPrivateDenial": {
+        "review": "SCOPED_PASS",
+        "covered": "Existing PlatformOnly ordinary login/MFA and actual private lead/service denied shells with no private detail/input/save controls.",
+        "limit": "This artifact does not replace platform metadata homepage-read evidence; no new-grant/account-lifecycle/reset/MFA-change proof."
+      },
+      "T08CurrentDetail": {
+        "review": "SCOPED_PASS_WITH_PRIOR_PAGING_REUSE",
+        "covered": "Current57total; A1/A2 read newYC57v1/New and retainedYC1v10/Contacted/A2 with matching source; switching authorized tenant clears detail/source and restored tenant stays clean.",
+        "limit": "Historical56-ID paging snapshot before T07 remains the reused paging proof. No fresh57-row Next/Back run asserted. OriginalS02tenantA unavailable from100options remains a separate limitation."
+      },
+      "T09LoadingEquivalentComponent": {
+        "review": "PASS_EQUIVALENT_CURRENT_COMPONENT",
+        "covered": "Current unchanged S03 DraftEditor route/site+service GET contract on accessible S05 service3f8db691-8254-4841-826f-8fb5d8d4e2bf; actual loading image+AX/status busy and noeditor, then same savedv1 content/eightinputs/recovered notbusy/disabledSave.",
+        "originalS03Record": "c3000000-0000-4000-8000-000000000001 original record NOT_RUN; currentmembership/options route did not enter editor. This does not prove actual membership revocation.",
+        "sourceEquivalence": "services/[id]/page.tsx invokes DraftEditor keyed byid; DraftEditor32-36 reads S03site/service GETs and54 renders ShellState loading; ShellState2 sets role=status and aria-busy forloading.",
+        "limit": "No originalc300-record loading/recovery execution; no fake UI, new app implementation, save or publication proof."
+      }
+    },
+    "timing": {
+      "rootPausedAtUtc": "2026-10-16T04:13:26.001260+00:00",
+      "imageFileModifiedAtUtc": {
+        "t09-loading.jpg": "2026-10-16T04:13:42.031926+00:00",
+        "t09-loading-ax.txt": "2026-10-16T04:13:42.032579+00:00",
+        "t09-recovery.jpg": "2026-10-16T04:14:13.658584+00:00",
+        "t09-recovery-ax.txt": "2026-10-16T04:14:13.659096+00:00"
+      },
+      "rootResumedAtUtc": "2026-10-16T04:13:56.077375+00:00",
+      "pauseSecondsExactFromRecordedTimestamps": 30.076115,
+      "pauseSecondsRounded": 30.076,
+      "configuredWatchdogSeconds": 30,
+      "resumeReason": "30_second_watchdog",
+      "recoveryObservedAtUtc": "2026-10-16T04:16:09.159613+00:00",
+      "limit": "Actual observed pause30.076115s, rounded30.076; do not claim strict<=30s. Image timestamps are filesystem metadata, consistent with owner runtime artifacts, not independent browser execution."
+    },
+    "httpRecovery": [
+      {
+        "url": "http://127.0.0.1:5890/health",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:5890/ready",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:5891/login",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:5892/",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:5892/s05-ui-ef95e0e2/dich-vu/tu-van",
+        "status": 200
+      }
+    ],
+    "httpHostLimit": "An initial public root probe used127.0.0.1 instead of configured localhost and returned421. Correct configured host and published page returned200; no app change.",
+    "sourceIntegrity": [
+      {
+        "path": "apps/admin/app/cms/services/[id]/page.tsx",
+        "sha256": "2f7943000c1a726b071a9434531b3432e18c6ad5034f22feb11856602bd13724",
+        "matchesPackageBeforeBaseline": true
+      },
+      {
+        "path": "apps/admin/components/draft-editor.tsx",
+        "sha256": "4096dae805c5b8029effa77b9ebfd60a5418e597d9a7c36674a9ae42ae11755d",
+        "matchesPackageBeforeBaseline": true
+      },
+      {
+        "path": "apps/admin/components/shell-state.tsx",
+        "sha256": "bfa6b2ebcb3a8902504b25fb68f6a684ff4c9119e2923ce0580438fd7d2d0418",
+        "matchesPackageBeforeBaseline": true
+      },
+      {
+        "path": "apps/admin/components/workspace.tsx",
+        "sha256": "2dbbf5dea0cd6d63fea583ec3064e539fc8009afd00f42248e257ba7a82db88b",
+        "matchesPackageBeforeBaseline": true
+      },
+      {
+        "path": "apps/admin/components/lead-workspace.tsx",
+        "sha256": "b3d6c5b896cd866be6076cfebbd032238011d095337cd9e378926b56d71c24fc",
+        "matchesPackageBeforeBaseline": true
+      }
+    ],
+    "artifactIntegrity": [
+      {
+        "path": "docs/evidence/m1-uat/ui/t02-multiAB.json",
+        "sha256": "ba2424c1402733a7d14e58a6c0700aa977d45993e3fb85fd190ad5fbe7e69b67"
+      },
+      {
+        "path": "docs/evidence/m1-uat/ui/t02-platform-private-denial.json",
+        "sha256": "e3c1e8cb1fbe123626eef3c7094372825da3359495f5712a62658865877a8436"
+      },
+      {
+        "path": "docs/evidence/m1-uat/ui/t08-current-detail.json",
+        "sha256": "5260372ae2afc15e9b5c4204ae17a1df11e673aae169e4c7d59543df5b144664"
+      },
+      {
+        "path": "docs/evidence/m1-uat/ui/t09-loading.json",
+        "sha256": "17f36e709ab4e2c63ed0d9a0f13c5be874b73fb6dfb233216cce176495640732"
+      },
+      {
+        "path": "docs/evidence/m1-uat/ui/t09-loading.jpg",
+        "sha256": "0500cda9c06bb93250db6e4e92a854827f9e5a3a31edc3116c235db4c03db256"
+      },
+      {
+        "path": "docs/evidence/m1-uat/ui/t09-loading-ax.txt",
+        "sha256": "a759c63f459e8dbd05659f66d02474fd8db313372ade883778afc6745d1ac6be"
+      },
+      {
+        "path": "docs/evidence/m1-uat/ui/t09-recovery.jpg",
+        "sha256": "60162bf9be11521512453c029452b51bde9310052869d881d16bbad5305c53c3"
+      },
+      {
+        "path": "docs/evidence/m1-uat/ui/t09-recovery-ax.txt",
+        "sha256": "c51f09a10009198ac1a6421d8870f1b3976d3df67ca7951c652b163409df9fc0"
+      },
+      {
+        "path": "docs/evidence/m1-uat/t09-runtime-fault.json",
+        "sha256": "dbbabd4a8474e970613dcf95b4cbf26b6d890b82ac00f4f095d21fdd1b781c3f"
+      },
+      {
+        "path": "docs/evidence/m1-uat/runtime-recovery.json",
+        "sha256": "8341598d98a0aae75f6d04ebcd50b013a8b23089d77f8e0d7876e5df533c7e9c"
+      }
+    ],
+    "imagesInspected": [
+      "docs/evidence/m1-uat/ui/t09-loading.jpg",
+      "docs/evidence/m1-uat/ui/t09-recovery.jpg"
+    ],
+    "notRunByReviewer": [
+      "new audit",
+      "browser execution",
+      "runtime/process mutation",
+      "database/account/fixture writes",
+      "package-wide acceptance"
+    ],
+    "preserved": "Prior auditFAIL/local deferral, all historical UI/failure evidence, and source remain unchanged. Only security/review.md and security-review.json updated.",
+    "newActionableSourceFindings": []
+  }
+}

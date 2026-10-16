@@ -1,0 +1,51 @@
+{
+  "recordedAtUtc": "2026-10-16T02:25:18.433620+00:00",
+  "findings": [
+    {
+      "scope": "0008 pre-apply SQL source",
+      "status": "CLOSED_SOURCE_AND_ACTUAL_0008_APPLY_PASS",
+      "issue": "New lead_notification helper referenced blocked_reason before ALTER added the column",
+      "actualDatabaseFailure": false,
+      "repair": "Helper creation moved after ALTER before application; independent source recheck and actual0008 transaction PASS."
+    }
+  ],
+  "limit": "Historical source-first finding, not a failed actual migration or current runtime conclusion.",
+  "t03FirstRenderedFailure": {
+    "observedAtUtc": "2026-10-16T02:30:18.073470+00:00",
+    "status": "CLOSED_ACTUAL_BROWSER_RECHECK_PASS",
+    "firstPublicIntake": "ACCEPTED",
+    "list": "HTTP400_INVALID_INPUT",
+    "cause": "Express query has null prototype; strict parser accepted Object.prototype only.",
+    "repair": "Allow plain or null prototype while retaining exact field/type validation. API owner regression RED then GREEN7tests32assertions; typecheck/focusedlint PASS; root actual API build exit0 and owned3app restart READY. Existing lead preserved; no resubmission.",
+    "historicalProcessAttempts": [
+      {
+        "action": "guarded stop restricted ps",
+        "exitCode": 1,
+        "cause": "sandbox ps denied; no stop occurred"
+      },
+      {
+        "action": "guarded stop approved escalated",
+        "exitCode": 0
+      },
+      {
+        "action": "start restricted listener probe",
+        "exitCode": 1,
+        "cause": "sandbox listener unavailable; launcher aborted before spawning"
+      },
+      {
+        "action": "start approved escalated",
+        "result": "3 apps READY",
+        "session": 26575
+      }
+    ],
+    "browserRecheck": "Same first accepted lead assigned A1\u2192A2; both identities reload sameversion2/history/deadline; settled1440desktop390mobile inspected byroot; checkpointreleaseddependentUI."
+  },
+  "workerPreapplyAttempt": {
+    "status": "NOT_APPLIED",
+    "restrictedAttemptExitCode": 1,
+    "output": "S05 migration failed; transaction rolled back, details redacted.",
+    "actualLedgerRead": "PASS:0001\u20130008only,0009absent",
+    "sourceStatus": "Held for review-driven durable-start backoff repair before explicit actualretry",
+    "limit": "Restricted attempt did not prove an actual SQL runtime failure; no0009ledgerentry."
+  }
+}

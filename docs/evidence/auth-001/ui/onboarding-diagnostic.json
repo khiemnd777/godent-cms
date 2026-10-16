@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "at": "2026-10-16T04:46:49.391Z",
+  "scope": "GET-only fresh-context inspection of the same owned invitation after one confirmed registration. No fill/POST/registration/retry/token output.",
+  "dom": {
+    "headings": [
+      "Tham gia quản trị nha khoa",
+      "Đăng nhập"
+    ],
+    "labels": [
+      "Email",
+      "Mật khẩu"
+    ],
+    "inputNames": [
+      {
+        "name": "email",
+        "type": "email",
+        "autocomplete": "username"
+      },
+      {
+        "name": "password",
+        "type": "password",
+        "autocomplete": "current-password"
+      }
+    ],
+    "buttons": [
+      "Đăng nhập",
+      "Chưa có tài khoản? Tạo từ lời mời"
+    ],
+    "alerts": [],
+    "visibleText": "Lời mời GodentTham gia quản trị nha khoaLời mời gắn với một email, một nha khoa và quyền quản trị nha khoa. Chỉ tiếp tục nếu bạn là người nhận được mời.Giữ tab này mở trong khi xác minh email hoặc thiết lập bảo mật. Nếu tải lại trang, hãy mở lại liên kết mời trong email.Godent AdminĐăng nhậpTruy cập không gian quản trị nha khoa của bạn.EmailMật khẩuĐăng nhậpQuên mật khẩu?Gửi lại email xác minhChưa có tài khoản? Tạo từ lời mờiTrở về đăng nhập"
+  },
+  "selectors": {
+    "emailTextbox": 1,
+    "passwordLabel": 1,
+    "loginButton": 1,
+    "alerts": 1
+  },
+  "httpStatus": 200,
+  "path": "/invitations",
+  "tokenCleared": true,
+  "posts": 0
+}

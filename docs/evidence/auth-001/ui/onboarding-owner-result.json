@@ -1,0 +1,35 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "FAIL",
+  "startedAt": "2026-10-16T04:44:35.100Z",
+  "steps": [
+    {
+      "step": "registered-one-new-owner",
+      "at": "2026-10-16T04:44:35.867Z"
+    }
+  ],
+  "scope": "One actual UI invitation registration, local captured verification, verified password login, password-only reauth and explicit acceptance in the existing M1 tenantA. No second tenant or other account is created in this phase.",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "headless": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "existingProfileOrCookies": false,
+    "CDP": false,
+    "downloads": false
+  },
+  "browserVersion": "155.0.8059.80",
+  "failure": {
+    "phase": "unverified-password-login-denied",
+    "errorName": "Error",
+    "detailsRedacted": true
+  },
+  "finishedAt": "2026-10-16T04:44:36.094Z"
+}

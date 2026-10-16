@@ -1,0 +1,51 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "PASS",
+  "startedAt": "2026-10-16T04:59:09.742Z",
+  "steps": [
+    {
+      "step": "new-page-accept-ready-before-submit",
+      "at": "2026-10-16T04:59:10.640Z"
+    },
+    {
+      "step": "peer-acceptedB-new-mail-tab",
+      "at": "2026-10-16T04:59:10.851Z"
+    },
+    {
+      "step": "owner-peer-liveAB-before-last-admin-tests",
+      "at": "2026-10-16T04:59:11.486Z"
+    }
+  ],
+  "scope": "Complete only the existing verified Peer tenantB invitation in a NEW mail-link tab of the same isolated authenticated Peer context. No tenant/invitation/registration/password creation or retry.",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "headless": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "existingProfileOrCookies": false,
+    "CDP": false,
+    "downloads": false
+  },
+  "browserVersion": "155.0.8059.80",
+  "readyDOM": {
+    "newPageSameAuthenticatedContext": true,
+    "acceptButtons": 1,
+    "passwordInputs": 1,
+    "mainAlerts": 0,
+    "priorAcceptedNotice": 0
+  },
+  "newRegistrations": 0,
+  "newTenants": 0,
+  "newInvitations": 0,
+  "acceptanceStatus": 200,
+  "totalUIAccounts": 2,
+  "totalOwnedUATTenants": 2,
+  "finishedAt": "2026-10-16T04:59:11.592Z"
+}

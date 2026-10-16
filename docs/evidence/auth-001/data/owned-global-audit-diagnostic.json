@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "readOnly": true,
+  "checks": [
+    {
+      "label": "browserPeer",
+      "count": 1,
+      "allNew": true,
+      "allExactActor": true,
+      "allTenantNull": true
+    },
+    {
+      "label": "apiDisable",
+      "count": 1,
+      "allNew": true,
+      "allExactActor": true,
+      "allTenantNull": true
+    }
+  ],
+  "rawIdentifiersOrSecretsPrinted": false
+}

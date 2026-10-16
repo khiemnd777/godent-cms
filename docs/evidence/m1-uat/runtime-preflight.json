@@ -1,0 +1,57 @@
+{
+  "observedAtUtc": "2026-10-16T03:37:11.661787+00:00",
+  "http": [
+    {
+      "url": "http://127.0.0.1:5890/health",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5890/ready",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5891/login",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:5892/",
+      "status": 200
+    }
+  ],
+  "scope": "Read-only local M1 UAT preflight; no process/container restart or DB mutation",
+  "initialSandboxAttempts": {
+    "docker": "permission denied",
+    "http": "Operation not permitted",
+    "resolvedBy": "authorized require_escalated read-only checks"
+  },
+  "containers": [
+    {
+      "ID": "02fbedfe942e",
+      "Service": "postgres",
+      "State": "running",
+      "Health": "healthy",
+      "Ports": "127.0.0.1:5888->5432/tcp"
+    },
+    {
+      "ID": "669a60ecf6bd",
+      "Service": "redis",
+      "State": "running",
+      "Health": "healthy",
+      "Ports": "127.0.0.1:5889->6379/tcp"
+    },
+    {
+      "ID": "e33baccab765",
+      "Service": "s3",
+      "State": "running",
+      "Health": "healthy",
+      "Ports": "127.0.0.1:5887->8333/tcp"
+    }
+  ],
+  "listeners": [
+    "COMMAND   PID        USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME",
+    "bun.exe 89699 khiemnguyen    5u  IPv4 0xd79700064d0fc09d      0t0  TCP 127.0.0.1:5890 (LISTEN)",
+    "bun.exe 89702 khiemnguyen    6u  IPv4 0x24f0f4039e964766      0t0  TCP 127.0.0.1:5891 (LISTEN)",
+    "bun.exe 89703 khiemnguyen    6u  IPv4 0x4352f4ad2b2fd7da      0t0  TCP 127.0.0.1:5892 (LISTEN)"
+  ],
+  "status": "PASS"
+}

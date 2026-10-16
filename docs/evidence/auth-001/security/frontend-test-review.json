@@ -1,0 +1,211 @@
+{
+  "package": "GCMS-AUTH-001 v0.1",
+  "stage": "FROZEN_FRONTEND_AND_BOUNDED_REGRESSION_SOURCE_REVIEW",
+  "status": "SOURCE_REVIEW_CLOSED_RUNTIME_IN_PROGRESS",
+  "recordedAtUtc": "2026-10-16T04:51:58.221949+00:00",
+  "runtimeConfiguration": {
+    "status": "PASS",
+    "role": "kit-reviewer",
+    "thread": "01a14283-7099-7a61-a627-171a8bbdbe8f",
+    "parent": "01a1402c-3c81-7933-9927-d974f70c9fbc",
+    "model": "gpt-6.1-sol",
+    "requiredRequestedObservedEffort": [
+      "xhigh",
+      "xhigh",
+      "xhigh"
+    ],
+    "turn": "01a14308-a191-7fb2-abb1-7df23256b574",
+    "observedAtUtc": "2026-10-16T04:46:41.620Z"
+  },
+  "newBlockingSourceFindings": [],
+  "frontendScope": [
+    {
+      "path": "apps/admin/lib/access.ts",
+      "sha256": "02b4175e932ce57ad0024eb964bb3e27591103a90f9a7c47fdbb370b4a56e866"
+    },
+    {
+      "path": "apps/admin/components/privileged-gate.tsx",
+      "sha256": "530097ee26acbf9534cd17fbffa52486437681aa427aff4aeabe242b76aa2e72"
+    },
+    {
+      "path": "apps/admin/components/reauth-form.tsx",
+      "sha256": "e0dffaae1d11ad73d8c337b7ddff85f0d34165093c2defa4d15b8e4d9b324a9a"
+    },
+    {
+      "path": "apps/admin/components/login-form.tsx",
+      "sha256": "f68534ee3f3be4001ac4340a6bd32cdf9075e21ff6e77615784c2c9db3c9e10f"
+    },
+    {
+      "path": "apps/admin/components/account-security.tsx",
+      "sha256": "3d258e73d77a042fb0e51d01b8c895bb2be9a4c60836a2718b71768b7b48a7fe"
+    },
+    {
+      "path": "apps/admin/components/invitation-onboarding.tsx",
+      "sha256": "07e7382e35d34ec55def5d1d920ae20eb4c78a8301e48146509483e380590a6a"
+    },
+    {
+      "path": "apps/admin/components/recovery-form.tsx",
+      "sha256": "b06a0c801d333c9f1858cb021ed8452a05d9d45f5906dadd137b9706215f4947"
+    },
+    {
+      "path": "apps/admin/components/lead-notification-settings.tsx",
+      "sha256": "b75946792e24b9abf5b42afd3c3d709d8143f899fa718564781f27eb5f6bc9b0"
+    },
+    {
+      "path": "apps/admin/components/platform-administration.tsx",
+      "sha256": "d25d70e249503037c1be77bbcb6b0fb3d88f639ebf746fbb12d76c456cb8b105"
+    },
+    {
+      "path": "apps/admin/components/member-administration.tsx",
+      "sha256": "ff266a53e0a53bb3db52df4e6250ce50f4b4495f987e59973a5b7d9e3f50105a"
+    },
+    {
+      "path": "apps/admin/components/authentication.test.tsx",
+      "sha256": "a8828554ea50fb588066b1ee04ea5e086cd51cfff5b7fe0978014208bfadc9d9"
+    },
+    {
+      "path": "apps/admin/app/cms/settings/page.tsx",
+      "sha256": "47e8d7828248a7487e9912a4cf5f2c914b90c71cd0777a9833f3e7e29d30cf4b"
+    },
+    {
+      "path": "apps/admin/app/globals.css",
+      "sha256": "6f4eb170cb3c330f5f846cae22819070e383fd11b083457a31b7a4c3daa2b2a6"
+    }
+  ],
+  "boundedTestAndHelperScope": [
+    {
+      "path": "apps/api/test/auth-001-boundaries.test.ts",
+      "sha256": "12e6a9e2483d8412a4866406281828d1e9ff33eff7496815e2cde25a83ddacc8"
+    },
+    {
+      "path": "apps/api/test/auth-data-lifecycle.test.ts",
+      "sha256": "810869e29264a317964294cae46f26f7808372fb846bfaf74824f06dd4da4b57"
+    },
+    {
+      "path": "apps/api/test/auth-data-recovery.test.ts",
+      "sha256": "5e53e70bc2b96eedd5a223647fe3dbb308f2f6b414955ea196558e50df8e095a"
+    },
+    {
+      "path": "apps/api/test/auth-001-support.ts",
+      "sha256": "6cc160b82cbbc1acabe4cfd4003fb198e3a3c4c37acd60af50e488445e0b10fa"
+    },
+    {
+      "path": "scripts/auth-001-check.ts",
+      "sha256": "f3a4a736835b4618b800ea40b5b252625e62d6b8dea3d1aa183363cf8c7e2071"
+    },
+    {
+      "path": "scripts/auth-001-fixtures.ts",
+      "sha256": "6a7ae3358cbd557d975729abeca048f4ab41f76465989befd05f7ca6d13fdd3c"
+    },
+    {
+      "path": "scripts/s02-fixtures.ts",
+      "sha256": "72c9ca477d0f5ca1f4cfc0e38e44238bb96085d2baf914b5d6b97e5135ab7e67"
+    }
+  ],
+  "sourceConclusions": {
+    "contracts": "CurrentSession factor fields removed in FE and matching API. Login refreshes actual session before role navigation; no factor challenge state/requests.",
+    "gates": "No-session private children denied; platform flag remains required independently. Tenant access remains WorkspaceGate/backend current membership and role boundary.",
+    "reauth": "Password only, existing current-session CSRF, five-minute copy, submit disabled without session; no factor input even if stale extras exist.",
+    "onboarding": "Invitation token remains in memory after address-bar removal; verified email and explicit password reauth/acceptance retained. No MFA prerequisite.",
+    "accountRecovery": "Account keeps identity/verification, real expiry, logout, password reauth and reset. Reset success clears local session; generic request response and token URL cleanup remain.",
+    "s05Consumers": "Recipient eligibility copy now active same-tenant verified-email admins; existing version/unknown retry/current-reauth behavior unchanged. Member/platform confirmations and CSRF retained.",
+    "copyDelta": "After root build, invitation-onboarding hint changed only from email-or-security-setup to email verification. No auth behavior change; final admin rebuild belongs to root.",
+    "factorStringScan": "No active non-test frontend matches for two-factor/twoFactor/mfaVerified/TOTP/backupCodes/FactorChallenge/old setup wording. Test stale-flag regression is intentional."
+  },
+  "testReview": {
+    "frontendActualSource": "authentication.test.tsx renders real gate/reauth/account with only session hook mocked. Five cases/17 assertions cover factor-free tenant access, platform denial/allow, absent-session private clearing, stale factor extras ignored and account identity/expiry/reset/logout. This is SSR evidence, not browser/network proof.",
+    "boundedRunner": "Explicit local scope; selects only3AUTH suites, sets AUTH_001_INTEGRATION=1 and old integration flags0, checks each exit and stops failure. It avoids historical broad fixture wrappers/evidence writes.",
+    "plannedActiveTestCounts": {
+      "boundaries": 3,
+      "lifecycle": 2,
+      "recovery": 4
+    },
+    "negativeCoverage": [
+      "obsolete factor endpoints404 for retained enrolled and new unenrolled users",
+      "platform/cross-tenant denial and wrong-CSRF mutation",
+      "restricted tenant role cannot SELECT password",
+      "old reauth code/backup fields rejected",
+      "recipient settings through actual tenant role; replay denied during suspension while authorized lead read remains",
+      "future/stale/expired recent-auth grants rejected; password-only grant default mfa=false",
+      "generic reset response and30minute TTL; concurrent single-use reset; all old sessions revoked; expired token rejected",
+      "wrong reauth password and obsolete fields denied;5minute/8hour boundaries",
+      "new-owned global disable serializes with active tenant transaction and revokes both sessions"
+    ],
+    "coverageLimits": [
+      {
+        "criterion": "Actual password change/old-password rejection",
+        "source": "auth-data-recovery.test.ts48-49",
+        "status": "PENDING_BROWSER_RECOVERY_PROOF",
+        "reason": "Bounded API test resets to the same current password. It proves token/session behavior, not replacement credential transition. Root confirms planned browserRecovery uses distinct new password and old401/new200."
+      },
+      {
+        "criterion": "Last-admin rejection, publication, new unenrolled recipient worker delivery",
+        "status": "PENDING_DEDICATED_RUNTIME",
+        "reason": "Not in the three bounded API suites; current source review must not infer these from helper eligibility or positive administrator-count assertions."
+      }
+    ],
+    "fixtureBoundaries": "openFixtureSession reads unchanged old private fixture passwords and delegates password login without rewriting factors. AUTH setup uses3UI+2API accounts, creates0extra tenants, requires releasedUI checkpoint and actual invite/register/verify/accept; new tests select purpose-bound API accounts.",
+    "execution": "NOT_RUN by reviewer. Owner reported pure/static results; actual three-suite execution still pending this review."
+  },
+  "runtimeArtifactConsistency": {
+    "cutoverCorrectHash": true,
+    "firstOnlyThenSkip": true,
+    "oldCookie200To401": true,
+    "oldSession105To0": true,
+    "oldGrant4To0": true,
+    "preserved31Tables": true,
+    "legacy8FactorRowsUnchanged": true,
+    "catalog9Checks": true,
+    "existingUiFactorFree": true
+  },
+  "runtimeArtifacts": {
+    "cutover": "Recorded migration89fc0b...a2a5 once/ledger rerun skip,105sessions4grants to0/0, oldcookie200to401.",
+    "catalog": "9recorded checks PASS/39functions/40policies; active factors and legacy calls absent, new helper ownership/search path/EXECUTE checked. This does not independently establish every RLS catalog flag or behavior.",
+    "preservation": "31table per-row preservation at cutover;8legacy encrypted factor rows and original user/account rows unchanged. Post-UAT preservation still separate.",
+    "existingLogin": "Actual owner artifact reports isolated installedChrome155 PlatformOnly/A2 correct landing, factor-free payload/currentCSRF, A2 password-only reauth and logout-private-clear.",
+    "newOwner": "First attempt FAIL after exactlyone registration retained. GET-only diagnostic200/0POST and scoped alert counts support harness selector diagnosis. Resume exactsameaccount PASS:403unverified denial, existing boundlocalverification, verified passwordsession withoutmembership, explicit acceptA\u2192CMS, registrationRequests0/factorRequests0. No broader lifecycle inferred."
+  },
+  "artifactIntegrity": [
+    {
+      "path": "docs/evidence/auth-001/cutover-checks.json",
+      "sha256": "af57602f2bfc1bee726c31afebe1fca858de38fc1cdeaf7f8c78b7ea44b41833"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/catalog.json",
+      "sha256": "81634ea211ac689b7406c620a562c1e6dfdfa66d3807099d4fc918f872c09748"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/cutover-preservation.json",
+      "sha256": "3b973d96090130e409916e0992ab004e595c576bad904530c58b38f2f3cbed98"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/login-result.json",
+      "sha256": "b3cecd6fb324d41a48fcf535fd7d2373f1b23008eef1702c7de8dbdbe61a849f"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/onboarding-owner-result.json",
+      "sha256": "7b45766c8fcb0028fec226c216c98b3fa5276ae5211c0c6d237d8e8b2645bdea"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/onboarding-diagnostic.json",
+      "sha256": "bb6cc3b499d4c163189b3b10937592acb538873cda319bb553ab87af6a208355"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/onboarding-owner-resume-result.json",
+      "sha256": "791221bc1ba79a0eb89d39839bd7081a09b6f2d8d744014ade21febd65d6811d"
+    }
+  ],
+  "dependencyAssessment": {
+    "newAuditRun": false,
+    "lockSha256": "a930f219e8e876e9645f9f7fea32a05992bdb0c2c04fb6585e4d30bfba35dcdc",
+    "unchangedFromReviewedM1Snapshot": true,
+    "disposition": "Prior actual braces audit FAIL/local deferral retained; reassess2026-10-22/earlier patch/dependency/exposure/beforeproduction. Final built trace refresh pending final admin build; no production waiver."
+  },
+  "limits": [
+    "No reviewer browser/DB/test execution or runtime mutation",
+    "Source/test consistency is not whole-UAT completion",
+    "Final admin copy build, remaining browser/security/domain/worker criteria and actual bounded integration results await owner evidence",
+    "Package acceptance remains separate"
+  ],
+  "permissions": "Only docs/evidence/auth-001/security/** written; no application/SQL/test/helper/private/DB/browser/migration/dependency/Git changes or delegation."
+}

@@ -1,0 +1,40 @@
+Browser tab: 334097798, Title: "Bản nháp dịch vụ · Godent", URL: "http://127.0.0.1:5891/cms/services/3f8db691-8254-4841-826f-8fb5d8d4e2bf?tenant=4e206516-529a-4799-b146-05f950214a00".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 161-162
+~		158 link Description: Xem website, Value: localhost:5892/s05-ui-ef95e0e2/dich-vu/tu-van
+~				160 text NỘI DUNG NHA KHOA / DỊCH VỤ
++				161 heading Tư vấn nha khoa, Value: 1
++					162 text Tư vấn nha khoa
++				163 text Đã xuất bản
++				164 button (disabled) Lưu bản nháp
++				165 button Xem trước
++				166 button (disabled) Cập nhật website
++				167 tab group Soạn dịch vụ
++					168 tab (selected, settable, boolean) Nội dung, Value: 1, ID: content-tab
++					169 tab (selectable, settable, boolean) SEO & đường dẫn, Value: 0, ID: seo-tab
++					170 text VI · Tiếng Việt
++				171 container Description: Nội dung, ID: content-panel
++					172 container
++						173 text Tên dịch vụ 
++						174 text field (settable) Tên dịch vụ, Value: Tư vấn nha khoa, ID: service-title
++					175 container
++						176 text Giới thiệu ngắn
++						177 text entry area (settable) Giới thiệu ngắn Giới thiệu rõ ràng, gần gũi với người đọc., Value: Dịch vụ minh họa cho quy trình tiếp nhận và xử lý tư vấn., ID: service-summary
++						178 text Giới thiệu rõ ràng, gần gũi với người đọc.
++					179 text Nội dung chi tiết
++					180 toolbar Định dạng nội dung
++						181 button Định dạng tiêu đề H2
++						182 button Định dạng danh sách
++						183 button Văn bản
++						184 button Chèn liên kết
++					185 text entry area (settable) Nội dung chi tiết, Value: Gửi yêu cầu để phòng khám liên hệ tư vấn., ID: service-body
++					186 text 10 từ VI · Tiếng Việt
++					187 text Dùng H2, danh sách và liên kết HTTP/HTTPS. Nội dung HTML được hiển thị như văn bản. Tối đa 20.000 ký tự hiển thị.
++				188 container
++					189 heading Xuất bản, Value: 2
++						190 text Xuất bản
++					191 text Trạng thái website Đã xuất bản Phiên bản đang chạy Phiên bản 1 Bản nháp Đã lưu · phiên bản 1 Ngôn ngữ Tiếng Việt Lưu bản nháp không làm thay đổi website. Chỉ cập nhật khi bạn chọn 
++					192 text Cập nhật website
++					193 text .
++					194 link Description: Xem bản đã xuất bản, Value: localhost:5892/s05-ui-ef95e0e2/dich-vu/tu-van
+The focused UI element is 1 AXWebArea Bản nháp dịch vụ · Godent, URL: 127.0.0.1:5891/cms/services/3f8db691-8254-4841-826f-8fb5d8d4e2bf?tenant=4e206516-529a-4799-b146-05f950214a00

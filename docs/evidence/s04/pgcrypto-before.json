@@ -1,0 +1,10 @@
+{
+  "installed": [],
+  "available": [
+    {
+      "name": "pgcrypto",
+      "default_version": "1.4",
+      "installed_version": null
+    }
+  ]
+}

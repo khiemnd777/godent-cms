@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-16T04:15:30.472Z",
+  "actor": "A2",
+  "ordinaryExistingMfa": true,
+  "reviewURL": "http://127.0.0.1:5891/cms/leads?tenant=4e206516-529a-4799-b146-05f950214a00",
+  "publicURL": "http://localhost:5892/s05-ui-ef95e0e2/dich-vu/tu-van",
+  "pendingMutation": false,
+  "authFieldsInImage": false,
+  "selected": {
+    "assignee": "Chưa phân công",
+    "code": "YC-000057",
+    "detailHeadings": [
+      "Chi tiết yêu cầu",
+      "M1 UAT T07 5f5f86c9"
+    ],
+    "footer": "57 yêu cầu phù hợp · 20 trên trang này",
+    "query": "",
+    "sourcePaths": [
+      "/s05-ui-ef95e0e2/dich-vu/tu-van"
+    ],
+    "status": "Mới",
+    "tenant": "4e206516-529a-4799-b146-05f950214a00",
+    "version": "Phiên bản 1. Ghi nhận trao đổi thực tế ở phần Thêm hoạt động để chuyển sang Đã liên hệ. Lưu riêng từng thao tác để giữ nội dung đang soạn."
+  }
+}

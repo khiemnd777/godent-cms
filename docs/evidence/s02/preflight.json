@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "postgres": {
+    "server_version": "18.4",
+    "database": "gcms_s01",
+    "application_tables": 0,
+    "schemas": [
+      "public"
+    ],
+    "dumpSha256": "694cd6f069a053658995e61ace80eb6d34f8acd7573e30d30bc71924333341d8",
+    "dumpBytes": 670,
+    "observedAtUtc": "2026-10-15T16:46:32.355581+00:00"
+  },
+  "existingComposeProject": "godent-cms-s01",
+  "servicesHealthy": 3,
+  "existingAppsLoopbackPorts": [
+    5890,
+    5891,
+    5892
+  ],
+  "credentialsMode": "0600",
+  "applicationFilesBefore": 234,
+  "backupsPrivate": true,
+  "scope": "Read-only preflight, no existing database tables; existing service volumes retained."
+}

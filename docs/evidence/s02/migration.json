@@ -1,0 +1,126 @@
+{
+  "status": "APPLIED_METADATA_VERIFIED",
+  "command": "bun --env-file=.local/s02.env scripts/s02-migrate.ts --local-s02",
+  "migration": "0001_s02_access.sql",
+  "data": {
+    "roles": [
+      {
+        "rolname": "gcms_s02_auth",
+        "rolsuper": false,
+        "rolbypassrls": false,
+        "rolcanlogin": true
+      },
+      {
+        "rolname": "gcms_s02_migration",
+        "rolsuper": false,
+        "rolbypassrls": false,
+        "rolcanlogin": true
+      },
+      {
+        "rolname": "gcms_s02_owner",
+        "rolsuper": false,
+        "rolbypassrls": false,
+        "rolcanlogin": false
+      },
+      {
+        "rolname": "gcms_s02_platform",
+        "rolsuper": false,
+        "rolbypassrls": false,
+        "rolcanlogin": true
+      },
+      {
+        "rolname": "gcms_s02_tenant",
+        "rolsuper": false,
+        "rolbypassrls": false,
+        "rolcanlogin": true
+      }
+    ],
+    "protected_tables": [
+      {
+        "schema": "gcms_s02",
+        "name": "audit_event",
+        "rls": true,
+        "force_rls": true,
+        "owner": "gcms_s02_owner"
+      },
+      {
+        "schema": "gcms_s02",
+        "name": "invitation",
+        "rls": true,
+        "force_rls": true,
+        "owner": "gcms_s02_owner"
+      },
+      {
+        "schema": "gcms_s02",
+        "name": "membership",
+        "rls": true,
+        "force_rls": true,
+        "owner": "gcms_s02_owner"
+      },
+      {
+        "schema": "gcms_s02",
+        "name": "schema_migration",
+        "rls": false,
+        "force_rls": false,
+        "owner": "gcms_s02_owner"
+      },
+      {
+        "schema": "gcms_s02",
+        "name": "service_draft",
+        "rls": true,
+        "force_rls": true,
+        "owner": "gcms_s02_owner"
+      },
+      {
+        "schema": "gcms_s02",
+        "name": "tenant",
+        "rls": true,
+        "force_rls": true,
+        "owner": "gcms_s02_owner"
+      },
+      {
+        "schema": "gcms_s02_auth",
+        "name": "account",
+        "rls": false,
+        "force_rls": false,
+        "owner": "gcms_s02_owner"
+      },
+      {
+        "schema": "gcms_s02_auth",
+        "name": "reauth_grant",
+        "rls": false,
+        "force_rls": false,
+        "owner": "gcms_s02_owner"
+      },
+      {
+        "schema": "gcms_s02_auth",
+        "name": "session",
+        "rls": false,
+        "force_rls": false,
+        "owner": "gcms_s02_owner"
+      },
+      {
+        "schema": "gcms_s02_auth",
+        "name": "two_factor",
+        "rls": false,
+        "force_rls": false,
+        "owner": "gcms_s02_owner"
+      },
+      {
+        "schema": "gcms_s02_auth",
+        "name": "user",
+        "rls": true,
+        "force_rls": true,
+        "owner": "gcms_s02_owner"
+      },
+      {
+        "schema": "gcms_s02_auth",
+        "name": "verification",
+        "rls": false,
+        "force_rls": false,
+        "owner": "gcms_s02_owner"
+      }
+    ]
+  },
+  "limit": "Schema/role metadata only; effective authorization and pool behavior are not proved by this check."
+}

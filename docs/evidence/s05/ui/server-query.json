@@ -1,0 +1,46 @@
+[
+  {
+    "query": "uppercase accented substring + New + unassigned + same HCM date",
+    "result": {
+      "firstName": "S05 Minh họa phân trang 49",
+      "footer": "55 yêu cầu phù hợp · 50 trên trang nàyTrang tiếp",
+      "globalNew": "55"
+    }
+  },
+  {
+    "query": "unaccented variant is distinct",
+    "result": {
+      "detailPrivateVisible": false,
+      "empty": "Chưa có yêu cầu tư vấnKhi khách gửi biểu mẫu trên website, yêu cầu sẽ xuất hiện tại đây.",
+      "footer": "0 yêu cầu phù hợp · 0 trên trang này"
+    }
+  },
+  {
+    "query": "exact code + Contacted + Me",
+    "result": {
+      "code": "YC-000001",
+      "footer": "1 yêu cầu phù hợp · 1 trên trang này",
+      "globalNew": "55"
+    }
+  },
+  {
+    "query": "lead leaves Me filter after reassignment",
+    "result": {
+      "assignee": "S02 A1",
+      "detailName": "Khách thử S05 01",
+      "footer": "0 yêu cầu phù hợp · 0 trên trang này",
+      "rowCount": 0,
+      "notices": [
+        "Đã lưu YC-000001. Yêu cầu không còn trong trang hoặc bộ lọc hiện tại. Chi tiết yêu cầu vừa lưu vẫn đang mở."
+      ]
+    }
+  },
+  {
+    "query": "same lead restored to Me filter",
+    "result": {
+      "assignee": "S02 A2",
+      "code": "YC-000001",
+      "status": "contacted"
+    }
+  }
+]

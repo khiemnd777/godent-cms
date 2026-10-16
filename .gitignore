@@ -1,0 +1,22 @@
+# Machine-specific state and credentials
+.DS_Store
+.env
+.env.*
+!.env.example
+CLAUDE.local.md
+.claude/settings.local.json
+.claude/agent-memory-local/
+__pycache__/
+# Owned local verification fixtures; never project evidence intended for delivery
+.kit-work/
+.local/
+
+# Future application artifacts; no application is initialized by setup
+node_modules/
+.next/
+dist/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+# Keep Bun's future text lockfile in version control

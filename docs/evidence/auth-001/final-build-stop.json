@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-16T05:00:25.669809+00:00",
+  "ownedLauncher": 26863,
+  "reason": "Final approved invitation hint copy build; no migration or session deletion",
+  "ownedPortsClosed": [
+    5890,
+    5891,
+    5892
+  ]
+}

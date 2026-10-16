@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-16T02:25:41.841791+00:00",
+  "steps": [
+    {
+      "action": "bootstrap_new_worker_role_schema_credential",
+      "exitCode": 0
+    },
+    {
+      "action": "apply0008_only",
+      "exitCode": 0,
+      "checksum": "0670219b8c4a88f099b9bd0db4f886aac360f38c43f837d8eec1d2c2a5af263b"
+    }
+  ],
+  "scope": "Approved new S05 worker principal/schema and additive0008; existing0001\u20130007 checksums verified; worker0009 not applied, dispatch NOT_RUN.",
+  "worker0009": {
+    "status": "PASS",
+    "appliedAtUtc": "2026-10-16T02:34:57.360460+00:00",
+    "file": "0009_s05_notification_worker.sql",
+    "sha256": "7cd76bdc4793de29074c2a036c199d3ef6fb402a877a40b7db6b414aefe2778f",
+    "exitCode": 0,
+    "workerDispatched": false,
+    "scopeEnable": "PASS only new S05 UI tenant explicitly enabled; no dispatch",
+    "review": "Independent exacthash source ACK before apply; runtimefaulttests separate",
+    "oldRowsProjection": "PASS468originalrows/10tables afterapply"
+  },
+  "forward0010": {
+    "status": "PASS",
+    "observedAtUtc": "2026-10-16T02:37:38.902295+00:00",
+    "file": "0010_s05_worker_recipient_alias.sql",
+    "sha256": "24c5e7cbd3ef91a3e4b4b7e18cc36d9cdfff1e712dc646fd00f2bc0901941721",
+    "exitCode": 0,
+    "scope": "CREATE OR REPLACE worker_claim/finish explicit qualified recipient aliases only; reviewer compared immutable0009bodies. No automaticdispatch.",
+    "oldMigrationPolicy": "0001\u20130010nowimmutable"
+  },
+  "forward0011": {
+    "status": "PASS",
+    "observedAtUtc": "2026-10-16T02:40:35.902018+00:00",
+    "file": "0011_s05_worker_initial_readiness.sql",
+    "sha256": "3f4e66c1695ae668c5365917c66af65e2d4dd3f9f9d9e133fe0796a66db251f9",
+    "exitCode": 0,
+    "scope": "Explicit delivery.available_at=claim stamp only; exactbodydiff reviewed. Existing0001\u20130010bytes retained."
+  },
+  "forward0012": {
+    "status": "PASS",
+    "observedAtUtc": "2026-10-16T02:45:43.494946+00:00",
+    "file": "0012_s05_notification_login_link.sql",
+    "sha256": "6d598f7d20c1d8f11cc7ea7e1500af9a4674d57a795d77696723f7a58abaf7d0",
+    "exitCode": 0,
+    "scope": "worker_start fixedallowlist /sign-in\u2192/login only, reviewer exactbodydiff ACK; original wrong-link receipt preserved unchanged."
+  }
+}

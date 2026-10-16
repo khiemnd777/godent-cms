@@ -1,0 +1,37 @@
+{
+  "scope": "S01 Platform shell and impacted CMS regression",
+  "platformChecks": [
+    {
+      "clipped": [],
+      "scroll": 320,
+      "width": 320
+    },
+    {
+      "clipped": [],
+      "scroll": 390,
+      "width": 390
+    },
+    {
+      "clipped": [],
+      "scroll": 768,
+      "width": 768
+    },
+    {
+      "clipped": [],
+      "scroll": 1024,
+      "width": 1024
+    },
+    {
+      "clipped": [],
+      "scroll": 1440,
+      "width": 1440
+    }
+  ],
+  "accountHeading": "Tài khoản quản trị",
+  "cmsNav": {
+    "heading": "Tổng quan",
+    "platformNavPresent": false,
+    "sidebar": 232
+  },
+  "accountHeadingNote": "Final settled navigation verified in browser; initial loading heading was transient."
+}

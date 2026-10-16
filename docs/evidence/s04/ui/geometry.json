@@ -1,0 +1,319 @@
+[
+  {
+    "screen": "public-challenge",
+    "requestedWidth": 320,
+    "controls": [
+      {
+        "left": 62,
+        "right": 258,
+        "tag": "INPUT",
+        "width": 196
+      },
+      {
+        "left": 62,
+        "right": 207.359375,
+        "tag": "BUTTON",
+        "width": 145.359375
+      },
+      {
+        "left": 43,
+        "right": 277,
+        "tag": "BUTTON",
+        "width": 234
+      }
+    ],
+    "height": 1080,
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "screen": "public-challenge",
+    "requestedWidth": 768,
+    "controls": [
+      {
+        "left": 76,
+        "right": 692,
+        "tag": "INPUT",
+        "width": 616
+      },
+      {
+        "left": 76,
+        "right": 221.359375,
+        "tag": "BUTTON",
+        "width": 145.359375
+      },
+      {
+        "left": 57,
+        "right": 244.25,
+        "tag": "BUTTON",
+        "width": 187.25
+      }
+    ],
+    "height": 1080,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "screen": "public-challenge",
+    "requestedWidth": 1024,
+    "controls": [
+      {
+        "left": 138,
+        "right": 886,
+        "tag": "INPUT",
+        "width": 748
+      },
+      {
+        "left": 138,
+        "right": 283.359375,
+        "tag": "BUTTON",
+        "width": 145.359375
+      },
+      {
+        "left": 119,
+        "right": 306.25,
+        "tag": "BUTTON",
+        "width": 187.25
+      }
+    ],
+    "height": 1080,
+    "overflow": false,
+    "width": 1024
+  },
+  {
+    "screen": "public-challenge",
+    "requestedWidth": 1440,
+    "controls": [
+      {
+        "left": 346,
+        "right": 1094,
+        "tag": "INPUT",
+        "width": 748
+      },
+      {
+        "left": 346,
+        "right": 491.359375,
+        "tag": "BUTTON",
+        "width": 145.359375
+      },
+      {
+        "left": 327,
+        "right": 514.25,
+        "tag": "BUTTON",
+        "width": 187.25
+      }
+    ],
+    "height": 1080,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "screen": "cms-list-detail",
+    "requestedWidth": 320,
+    "buttons": [
+      {
+        "label": "Làm mới",
+        "left": 206.359375,
+        "right": 294
+      },
+      {
+        "label": "Mở yêu cầu Khách kiểm chứng S04 email",
+        "left": 22,
+        "right": 192.78125
+      },
+      {
+        "label": "Mở yêu cầu Khách kiểm chứng S04 điện thoại",
+        "left": 22,
+        "right": 195.09375
+      }
+    ],
+    "containers": [
+      {
+        "class": "panel leads-list",
+        "client": 294,
+        "left": 12,
+        "right": 308,
+        "scroll": 294
+      },
+      {
+        "class": "table-wrap",
+        "client": 294,
+        "left": 13,
+        "right": 307,
+        "scroll": 294
+      },
+      {
+        "class": "panel detail-panel",
+        "client": 0,
+        "left": 0,
+        "right": 0,
+        "scroll": 0
+      }
+    ],
+    "height": 1080,
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "screen": "cms-list-detail",
+    "requestedWidth": 768,
+    "buttons": [
+      {
+        "label": "Làm mới",
+        "left": 317.703125,
+        "right": 417
+      },
+      {
+        "label": "Mở yêu cầu Khách kiểm chứng S04 email",
+        "left": 37,
+        "right": 145.46875
+      },
+      {
+        "label": "Mở yêu cầu Khách kiểm chứng S04 điện thoại",
+        "left": 37,
+        "right": 145.46875
+      }
+    ],
+    "containers": [
+      {
+        "class": "panel leads-list",
+        "client": 414,
+        "left": 24,
+        "right": 440,
+        "scroll": 414
+      },
+      {
+        "class": "table-wrap",
+        "client": 414,
+        "left": 25,
+        "right": 439,
+        "scroll": 414
+      },
+      {
+        "class": "panel detail-panel",
+        "client": 288,
+        "left": 454,
+        "right": 744,
+        "scroll": 288
+      }
+    ],
+    "height": 1080,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "screen": "cms-list-detail",
+    "requestedWidth": 1024,
+    "buttons": [
+      {
+        "label": "Làm mới",
+        "left": 569.703125,
+        "right": 669
+      },
+      {
+        "label": "Mở yêu cầu Khách kiểm chứng S04 email",
+        "left": 251,
+        "right": 371.625
+      },
+      {
+        "label": "Mở yêu cầu Khách kiểm chứng S04 điện thoại",
+        "left": 251,
+        "right": 371.625
+      }
+    ],
+    "containers": [
+      {
+        "class": "panel leads-list",
+        "client": 452,
+        "left": 238,
+        "right": 692,
+        "scroll": 452
+      },
+      {
+        "class": "table-wrap",
+        "client": 452,
+        "left": 239,
+        "right": 691,
+        "scroll": 452
+      },
+      {
+        "class": "panel detail-panel",
+        "client": 288,
+        "left": 706,
+        "right": 996,
+        "scroll": 288
+      }
+    ],
+    "height": 1080,
+    "overflow": false,
+    "width": 1024
+  },
+  {
+    "screen": "cms-list-detail",
+    "requestedWidth": 1440,
+    "buttons": [
+      {
+        "label": "Làm mới",
+        "left": 936.703125,
+        "right": 1036
+      },
+      {
+        "label": "Mở yêu cầu Khách kiểm chứng S04 email",
+        "left": 286,
+        "right": 456.78125
+      },
+      {
+        "label": "Mở yêu cầu Khách kiểm chứng S04 điện thoại",
+        "left": 286,
+        "right": 483.765625
+      }
+    ],
+    "containers": [
+      {
+        "class": "panel leads-list",
+        "client": 789,
+        "left": 268,
+        "right": 1059,
+        "scroll": 789
+      },
+      {
+        "class": "table-wrap",
+        "client": 789,
+        "left": 269,
+        "right": 1058,
+        "scroll": 789
+      },
+      {
+        "class": "panel detail-panel",
+        "client": 323,
+        "left": 1079,
+        "right": 1404,
+        "scroll": 323
+      }
+    ],
+    "height": 1080,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "screen": "cms-detail",
+    "requestedWidth": 320,
+    "back": {
+      "bottom": 301.28125,
+      "height": 40,
+      "left": 33,
+      "right": 192.453125,
+      "top": 261.28125,
+      "width": 159.453125,
+      "x": 33,
+      "y": 261.28125
+    },
+    "detail": {
+      "client": 294,
+      "scroll": 294
+    },
+    "height": 844,
+    "overflow": false,
+    "width": 320
+  }
+]

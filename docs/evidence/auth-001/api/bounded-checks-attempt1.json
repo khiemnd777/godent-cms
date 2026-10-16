@@ -1,0 +1,12 @@
+{
+  "recordedAtUtc": "2026-10-16T05:34:56.836Z",
+  "status": "FAIL",
+  "suites": [
+    {
+      "file": "auth-001-boundaries.test.ts",
+      "exitCode": 1
+    }
+  ],
+  "intendedSuites": 3,
+  "limits": "Actual restricted PostgreSQL/auth/domain/setting checks on AUTH-owned resources. Existing historical broad integration suites and browser/worker checks are separate."
+}

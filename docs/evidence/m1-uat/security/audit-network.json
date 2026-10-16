@@ -1,0 +1,15 @@
+{
+  "command": [
+    "./node_modules/.bin/bun",
+    "audit",
+    "--json"
+  ],
+  "startedAtUtc": "2026-10-16T03:36:42.071733+00:00",
+  "endedAtUtc": "2026-10-16T03:36:42.411877+00:00",
+  "exitCode": 1,
+  "stdout": "{\"braces\":[{\"id\":1240992,\"url\":\"https://github.com/advisories/GHSA-vfj7-8cjw-p6xm\",\"title\":\"braces vulnerable to stack-exhaustion denial of service through deeply nested patterns\",\"severity\":\"high\",\"vulnerable_versions\":\"<=3.0.3\",\"cwe\":[\"CWE-674\"],\"cvss\":{\"score\":7.5,\"vectorString\":\"CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H\"}}]}\n",
+  "stderr": "[0.03ms] \".env\"\n",
+  "sandbox": "require_escalated",
+  "lockSha256Before": "a930f219e8e876e9645f9f7fea32a05992bdb0c2c04fb6585e4d30bfba35dcdc",
+  "lockSha256After": "a930f219e8e876e9645f9f7fea32a05992bdb0c2c04fb6585e4d30bfba35dcdc"
+}

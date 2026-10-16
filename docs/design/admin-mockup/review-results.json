@@ -1,0 +1,524 @@
+{
+  "task": "GCMS-UX-001 v1",
+  "revision": "Draft v0.1",
+  "recordedAt": "2026-10-15T14:38:11.594Z",
+  "scope": "Static synthetic mockup only; not application/security proof",
+  "browser": "Managed Codex in-app browser",
+  "checks": [
+    {
+      "check": "Tenant search narrows to Mộc An",
+      "pass": true
+    },
+    {
+      "check": "Tenant no-match state",
+      "pass": true
+    },
+    {
+      "check": "Editor saves draft in memory",
+      "pass": true
+    },
+    {
+      "check": "Saving draft leaves live mock title unchanged",
+      "pass": true
+    },
+    {
+      "check": "Preview shows current mock draft",
+      "pass": true
+    },
+    {
+      "check": "Explicit confirm publishes saved mock draft",
+      "pass": true
+    },
+    {
+      "check": "Editor required-title validation",
+      "pass": true
+    },
+    {
+      "check": "Closing mock lead requires reason",
+      "pass": true
+    },
+    {
+      "check": "Closing mock lead updates status and timeline",
+      "pass": true
+    },
+    {
+      "check": "Reopening mock lead requires reason",
+      "pass": true
+    },
+    {
+      "check": "platform has no page horizontal overflow at 1440",
+      "pass": true
+    },
+    {
+      "check": "overview has no page horizontal overflow at 1440",
+      "pass": true
+    },
+    {
+      "check": "editor has no page horizontal overflow at 1440",
+      "pass": true
+    },
+    {
+      "check": "leads has no page horizontal overflow at 1440",
+      "pass": true
+    },
+    {
+      "check": "platform has no page horizontal overflow at 390",
+      "pass": true
+    },
+    {
+      "check": "overview has no page horizontal overflow at 390",
+      "pass": true
+    },
+    {
+      "check": "editor has no page horizontal overflow at 390",
+      "pass": true
+    },
+    {
+      "check": "leads has no page horizontal overflow at 390",
+      "pass": true
+    },
+    {
+      "check": "Mobile list opens dedicated detail view",
+      "pass": true
+    },
+    {
+      "check": "Mobile detail returns to list",
+      "pass": true
+    },
+    {
+      "check": "Mobile navigation opens",
+      "pass": true
+    },
+    {
+      "check": "Escape closes mobile navigation",
+      "pass": true
+    },
+    {
+      "check": "platform renders loading sample state",
+      "pass": true
+    },
+    {
+      "check": "platform renders empty sample state",
+      "pass": true
+    },
+    {
+      "check": "platform renders error sample state",
+      "pass": true
+    },
+    {
+      "check": "platform renders denied sample state",
+      "pass": true
+    },
+    {
+      "check": "overview renders loading sample state",
+      "pass": true
+    },
+    {
+      "check": "overview renders empty sample state",
+      "pass": true
+    },
+    {
+      "check": "overview renders error sample state",
+      "pass": true
+    },
+    {
+      "check": "overview renders denied sample state",
+      "pass": true
+    },
+    {
+      "check": "editor renders loading sample state",
+      "pass": true
+    },
+    {
+      "check": "editor renders empty sample state",
+      "pass": true
+    },
+    {
+      "check": "editor renders error sample state",
+      "pass": true
+    },
+    {
+      "check": "editor renders denied sample state",
+      "pass": true
+    },
+    {
+      "check": "leads renders loading sample state",
+      "pass": true
+    },
+    {
+      "check": "leads renders empty sample state",
+      "pass": true
+    },
+    {
+      "check": "leads renders error sample state",
+      "pass": true
+    },
+    {
+      "check": "leads renders denied sample state",
+      "pass": true
+    },
+    {
+      "check": "Conflict keeps typed title and blocks save simulation",
+      "pass": true
+    },
+    {
+      "check": "platform has no page horizontal overflow at 320",
+      "pass": true
+    },
+    {
+      "check": "overview has no page horizontal overflow at 320",
+      "pass": true
+    },
+    {
+      "check": "editor has no page horizontal overflow at 320",
+      "pass": true
+    },
+    {
+      "check": "leads has no page horizontal overflow at 320",
+      "pass": true
+    },
+    {
+      "check": "platform has no page horizontal overflow at 768",
+      "pass": true
+    },
+    {
+      "check": "overview has no page horizontal overflow at 768",
+      "pass": true
+    },
+    {
+      "check": "editor has no page horizontal overflow at 768",
+      "pass": true
+    },
+    {
+      "check": "leads has no page horizontal overflow at 768",
+      "pass": true
+    },
+    {
+      "check": "platform has no page horizontal overflow at 1024",
+      "pass": true
+    },
+    {
+      "check": "overview has no page horizontal overflow at 1024",
+      "pass": true
+    },
+    {
+      "check": "editor has no page horizontal overflow at 1024",
+      "pass": true
+    },
+    {
+      "check": "leads has no page horizontal overflow at 1024",
+      "pass": true
+    },
+    {
+      "check": "Mobile editor actions visible in bottom bar at 390x844",
+      "pass": true
+    },
+    {
+      "check": "ArrowRight switches editor tab and shows SEO panel",
+      "pass": true
+    },
+    {
+      "check": "Repaired editor action containment at 320x844",
+      "pass": true
+    },
+    {
+      "check": "Review mobile preset has a 390px content viewport on desktop",
+      "pass": true
+    },
+    {
+      "check": "Review toolbar switches iframe sample state",
+      "pass": true
+    },
+    {
+      "check": "Mock retry returns to normal overview",
+      "pass": true
+    },
+    {
+      "check": "Review toolbar itself fits 390px without page overflow",
+      "pass": true
+    },
+    {
+      "check": "Retry synchronizes review selector back to normal",
+      "pass": true
+    },
+    {
+      "check": "Retry after source repair restores normal mock overview",
+      "pass": true
+    }
+  ],
+  "layouts": [
+    {
+      "screen": "platform",
+      "viewport": {
+        "width": 1440,
+        "height": 1050,
+        "label": "desktop"
+      },
+      "scrollWidth": 1440,
+      "title": "Nha khoa",
+      "width": 1440
+    },
+    {
+      "screen": "overview",
+      "viewport": {
+        "width": 1440,
+        "height": 1050,
+        "label": "desktop"
+      },
+      "scrollWidth": 1440,
+      "title": "Chào Minh, một ngày tốt lành.",
+      "width": 1440
+    },
+    {
+      "screen": "editor",
+      "viewport": {
+        "width": 1440,
+        "height": 1050,
+        "label": "desktop"
+      },
+      "scrollWidth": 1440,
+      "title": "Chăm sóc răng định kỳ",
+      "width": 1440
+    },
+    {
+      "screen": "leads",
+      "viewport": {
+        "width": 1440,
+        "height": 1050,
+        "label": "desktop"
+      },
+      "scrollWidth": 1440,
+      "title": "Yêu cầu tư vấn",
+      "width": 1440
+    },
+    {
+      "screen": "platform",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "label": "mobile"
+      },
+      "scrollWidth": 390,
+      "title": "Nha khoa",
+      "width": 390
+    },
+    {
+      "screen": "overview",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "label": "mobile"
+      },
+      "scrollWidth": 390,
+      "title": "Chào Minh, một ngày tốt lành.",
+      "width": 390
+    },
+    {
+      "screen": "editor",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "label": "mobile"
+      },
+      "scrollWidth": 390,
+      "title": "Chăm sóc răng định kỳ",
+      "width": 390
+    },
+    {
+      "screen": "leads",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "label": "mobile"
+      },
+      "scrollWidth": 390,
+      "title": "Yêu cầu tư vấn",
+      "width": 390
+    },
+    {
+      "screen": "platform",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scrollWidth": 320,
+      "title": "Nha khoa",
+      "width": 320
+    },
+    {
+      "screen": "overview",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scrollWidth": 320,
+      "title": "Chào Minh, một ngày tốt lành.",
+      "width": 320
+    },
+    {
+      "screen": "editor",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scrollWidth": 320,
+      "title": "Chăm sóc răng định kỳ",
+      "width": 320
+    },
+    {
+      "screen": "leads",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scrollWidth": 320,
+      "title": "Yêu cầu tư vấn",
+      "width": 320
+    },
+    {
+      "screen": "platform",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "scrollWidth": 768,
+      "title": "Nha khoa",
+      "width": 768
+    },
+    {
+      "screen": "overview",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "scrollWidth": 768,
+      "title": "Chào Minh, một ngày tốt lành.",
+      "width": 768
+    },
+    {
+      "screen": "editor",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "scrollWidth": 768,
+      "title": "Chăm sóc răng định kỳ",
+      "width": 768
+    },
+    {
+      "screen": "leads",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "scrollWidth": 768,
+      "title": "Yêu cầu tư vấn",
+      "width": 768
+    },
+    {
+      "screen": "platform",
+      "viewport": {
+        "width": 1024,
+        "height": 900
+      },
+      "scrollWidth": 1024,
+      "title": "Nha khoa",
+      "width": 1024
+    },
+    {
+      "screen": "overview",
+      "viewport": {
+        "width": 1024,
+        "height": 900
+      },
+      "scrollWidth": 1024,
+      "title": "Chào Minh, một ngày tốt lành.",
+      "width": 1024
+    },
+    {
+      "screen": "editor",
+      "viewport": {
+        "width": 1024,
+        "height": 900
+      },
+      "scrollWidth": 1024,
+      "title": "Chăm sóc răng định kỳ",
+      "width": 1024
+    },
+    {
+      "screen": "leads",
+      "viewport": {
+        "width": 1024,
+        "height": 900
+      },
+      "scrollWidth": 1024,
+      "title": "Yêu cầu tư vấn",
+      "width": 1024
+    }
+  ],
+  "editorActionBounds390": [
+    {
+      "bottom": 834,
+      "right": 131.1953125,
+      "text": "Lưu bản nháp",
+      "top": 792,
+      "x": 12
+    },
+    {
+      "bottom": 834,
+      "right": 239.7734375,
+      "text": "Xem trước",
+      "top": 792,
+      "x": 137.1953125
+    },
+    {
+      "bottom": 834,
+      "right": 385.5546875,
+      "text": "Cập nhật website",
+      "top": 792,
+      "x": 245.7734375
+    }
+  ],
+  "editorActionBounds320AfterRepair": [
+    {
+      "bottom": 834,
+      "left": 8,
+      "right": 93.2421875,
+      "text": "Lưu bản nháp",
+      "top": 792
+    },
+    {
+      "bottom": 834,
+      "left": 98.2421875,
+      "right": 167.296875,
+      "text": "Xem trước",
+      "top": 792
+    },
+    {
+      "bottom": 834,
+      "left": 172.296875,
+      "right": 312,
+      "text": "Cập nhật website",
+      "top": 792
+    }
+  ],
+  "reviewPreset": {
+    "clientWidth": 390,
+    "outerWidth": 392
+  },
+  "unattributedBrowserLog": [
+    {
+      "level": "error",
+      "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+      "timestamp": "2026-10-15T14:30:49.392Z"
+    }
+  ],
+  "notRun": [
+    "Backend/auth/tenant isolation",
+    "Database/Docker",
+    "Real publication/SEO/lead persistence/email",
+    "Full accessibility/axe/screen-reader audit",
+    "Independent review",
+    "Human design acceptance"
+  ]
+}

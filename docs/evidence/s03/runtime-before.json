@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-15T23:54:31.209268+00:00",
+  "processes": [
+    {
+      "name": "api",
+      "port": 5890,
+      "listenerPid": 47901,
+      "actualBunExecutable": true,
+      "noBootstrapOrMigrationEnvironment": true,
+      "webNoServerCredentials": null,
+      "apiThreeRestrictedRoleCredentials": true
+    },
+    {
+      "name": "admin",
+      "port": 5891,
+      "listenerPid": 47904,
+      "actualBunExecutable": true,
+      "noBootstrapOrMigrationEnvironment": true,
+      "webNoServerCredentials": true,
+      "apiThreeRestrictedRoleCredentials": null
+    },
+    {
+      "name": "website",
+      "port": 5892,
+      "listenerPid": 47905,
+      "actualBunExecutable": true,
+      "noBootstrapOrMigrationEnvironment": true,
+      "webNoServerCredentials": true,
+      "apiThreeRestrictedRoleCredentials": null
+    }
+  ],
+  "http": [
+    {
+      "url": "http://127.0.0.1:5890/health",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5890/ready",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5891/login",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:5892/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5892/",
+      "status": 421
+    },
+    {
+      "url": "http://localhost:5891/login",
+      "status": 421
+    }
+  ],
+  "scope": "Pre-S03 retained S02 built-source running snapshot; process env/executable inspected in memory only, no secret values recorded.",
+  "limit": "Host rejection happens after cookie header arrival; ports do not isolate cookies. Runtime snapshot is not permanent availability or production proof."
+}

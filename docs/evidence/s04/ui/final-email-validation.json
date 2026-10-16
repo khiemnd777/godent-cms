@@ -1,0 +1,22 @@
+[
+  {
+    "case": "a<b@example.invalid",
+    "localError": "Vui lòng kiểm tra thông tin. Cần ít nhất số điện thoại hợp lệ (7–15 chữ số) hoặc email hợp lệ. Kênh liên hệ đã chọn phải có thông tin tương ứng. Họ tên tối đa 120 ký tự.",
+    "attemptNotCreated": true
+  },
+  {
+    "case": "a@example..invalid",
+    "localError": "Vui lòng kiểm tra thông tin. Cần ít nhất số điện thoại hợp lệ (7–15 chữ số) hoặc email hợp lệ. Kênh liên hệ đã chọn phải có thông tin tương ứng. Họ tên tối đa 120 ký tự.",
+    "attemptNotCreated": true
+  },
+  {
+    "case": "a@-example.invalid",
+    "localError": "Vui lòng kiểm tra thông tin. Cần ít nhất số điện thoại hợp lệ (7–15 chữ số) hoặc email hợp lệ. Kênh liên hệ đã chọn phải có thông tin tương ứng. Họ tên tối đa 120 ký tự.",
+    "attemptNotCreated": true
+  },
+  {
+    "case": "a@example.invalid>",
+    "localError": "Vui lòng kiểm tra thông tin. Cần ít nhất số điện thoại hợp lệ (7–15 chữ số) hoặc email hợp lệ. Kênh liên hệ đã chọn phải có thông tin tương ứng. Họ tên tối đa 120 ký tự.",
+    "attemptNotCreated": true
+  }
+]

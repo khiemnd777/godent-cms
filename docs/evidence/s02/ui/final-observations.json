@@ -1,0 +1,101 @@
+{
+  "status": "SOURCE_COMPLETE_PARTIAL_BROWSER_VERIFIED",
+  "scope": "Local S02 UI. Human acceptance and whole-S02 completion remain coordinator decisions.",
+  "sourceChecks": "PASS: 12 tests / 44 assertions; admin and website type checks; scoped ESLint. Coordinator reported final admin build PASS.",
+  "representativeFlow": {
+    "fixture": "A1",
+    "login": "PASS existing credentials",
+    "mfa": "PASS existing backup-code challenge, last A1 code consumed once",
+    "tenant": "PASS explicit current membership selected per URL",
+    "createSaveReload": "PASS real persisted version1",
+    "preview": "PASS saved VI title/plain-text with literal script markup; no execution",
+    "route": "/cms/services/f0d1a29e-49a8-4889-8b80-031a37975c27?tenant=aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+  },
+  "finalBuildBrowser": {
+    "buildReference": "Coordinator final server 74810",
+    "viewports": [
+      1440,
+      1024,
+      768,
+      390,
+      320
+    ],
+    "horizontalOverflow": "PASS documentWidth equals viewport at all five widths",
+    "actionOrder": "PASS Save then Preview; bottom fixed actions on narrow mobile; side panel 280px desktop",
+    "inputLimits": "PASS rendered maxLength title160/body20000",
+    "drawerKeyboard": "PASS opening close-button focus, shift-tab wrap, tab wrap, Escape return, skip link",
+    "temporaryDiagnostics": "PASS removed",
+    "wrongTenant": "PASS denied and no draft fields",
+    "tenantAdminPlatformRoute": "PASS role denial"
+  },
+  "otherBrowserObservations": {
+    "members": "PASS real member list and empty invitations, responsive table/card layout",
+    "memberConfirmation": "PASS explicit target, focus on confirmation heading, cancel",
+    "buildLimit": "Member confirmation/read screenshots precede last minor limits/copy/CSS rebuild; current source static checks and final coordinator build passed."
+  },
+  "notRunReference": "source-handoff.json includes exact CUA credential/grant policy quotes, preserved-fixture revoke/disable limits, native-confirm provider limit and manual UAT steps.",
+  "providerRecovery": {
+    "original": "Native discard-confirm opened from synthetic dirty draft; input/observation timed out; getJsDialog returned none. Dirty extra line was not saved.",
+    "supportedRecovery": "New tab without unsupported visibility override allowed DOM reads/navigation, but submit clicks did not progress. Closing original tab timed out.",
+    "privacyCleanup": "PASS existing login fields cleared without screenshots; viewport reset; no new credentials created; no grant/revoke submitted."
+  },
+  "artifacts": [
+    {
+      "file": "editor-1440.jpg",
+      "sha256": "d1356f1bc5d6093bff75d480f7de2a8b6026cb306a2e727522491313a1079dbb"
+    },
+    {
+      "file": "editor-1024.jpg",
+      "sha256": "a467bc4c449e6f958f5959fb5bd9ffa1bb833f9c6f4da85fc2d626d21d85c7aa"
+    },
+    {
+      "file": "editor-768.jpg",
+      "sha256": "2787b394f0f13c409a020d0c32c6afb476e5b35ed21a1c82b7f3c373f341a314"
+    },
+    {
+      "file": "editor-390.jpg",
+      "sha256": "0c28c21c671b988989b5d84608f7c1403bbf703decdc45985e2b2453103a447d"
+    },
+    {
+      "file": "editor-320.jpg",
+      "sha256": "ac2d16355c87e7bb68548115d4270dbe0a5a408b7fc07b1e726cfa48b989211b"
+    },
+    {
+      "file": "members-1440.jpg",
+      "sha256": "e40890e2f299f258d5a7239ca8e8a1408cb3f599d5e3484752a3a58231de35b3"
+    },
+    {
+      "file": "members-390.jpg",
+      "sha256": "751fe1814a7a960fc906e182d883c267a1ad1ccc4a505e6f285830accb2e539c"
+    },
+    {
+      "file": "wrong-tenant-1440.jpg",
+      "sha256": "c39aad707864a28cd9924112e43a7e6fdebeafed4e7e2dd28d9ceb44b8350a3b"
+    },
+    {
+      "file": "no-platform-role-1440.jpg",
+      "sha256": "4de5526127da329057691e41ec7562fb9b85b835fd75ae0bd9535350559bcc5d"
+    },
+    {
+      "file": "preview-1440.jpg",
+      "sha256": "159ee5b88dfbc7192dc699b30dd4aec99e587ae7c90789100f25e43b13600ed6"
+    },
+    {
+      "file": "drawer-keyboard-final.json",
+      "sha256": "9a34a9666c2576fb5b26b9735e32c97645e27437b4d9ad32341aef2f9dc2b6ff"
+    },
+    {
+      "file": "responsive-final.json",
+      "sha256": "80d97d2ace848298bd8c4b7ecaf6b01d126cfe4ba1f5185b658d96e4e85eb2e2"
+    },
+    {
+      "file": "drawer-focus-cause.json",
+      "sha256": "25caf99419418a54451b9d5352b9c8b7ac9fc5bacc3e8db9f104562cbee5def8"
+    },
+    {
+      "file": "source-handoff.json",
+      "sha256": "8b73cefe78b5778981ab78556db29047ecb8c9f36a05aefd59807e4b7a3fef48"
+    }
+  ],
+  "historicalEvidenceLimit": "*-initial.jpg are initial/transitional geometry evidence. Final settled editor screenshots omit initial suffix. Do not use initial captures for final visual acceptance."
+}

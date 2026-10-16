@@ -1,0 +1,111 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "FAIL",
+  "startedAt": "2026-10-16T05:19:57.457Z",
+  "steps": [
+    {
+      "step": "Owner-Peer-activeAB-before-revocation",
+      "at": "2026-10-16T05:20:10.116Z"
+    },
+    {
+      "step": "Peer-A-membership-revoked-once",
+      "at": "2026-10-16T05:20:10.408Z"
+    },
+    {
+      "step": "Peer-A-private-cleared-B-private-retained",
+      "at": "2026-10-16T05:20:10.532Z"
+    },
+    {
+      "step": "sole-Owner-A-self-revoke-denied409",
+      "at": "2026-10-16T05:20:10.833Z"
+    },
+    {
+      "step": "sole-Owner-global-disable-denied409",
+      "at": "2026-10-16T05:20:11.106Z"
+    },
+    {
+      "step": "Owner-identity-active-after-both-last-admin-denials",
+      "at": "2026-10-16T05:20:11.187Z"
+    },
+    {
+      "step": "Peer-globally-disabled-once",
+      "at": "2026-10-16T05:20:11.455Z"
+    },
+    {
+      "step": "disabled-Peer-old-session-and-password-denied",
+      "at": "2026-10-16T05:20:20.324Z"
+    },
+    {
+      "step": "Recovery-invitedA-once",
+      "at": "2026-10-16T05:20:20.550Z"
+    },
+    {
+      "step": "Recovery-registered-once",
+      "at": "2026-10-16T05:20:20.819Z"
+    },
+    {
+      "step": "Recovery-local-verification-GET-complete",
+      "at": "2026-10-16T05:20:20.897Z"
+    },
+    {
+      "step": "Recovery-verified-password-session",
+      "at": "2026-10-16T05:20:21.030Z"
+    },
+    {
+      "step": "Recovery-acceptedA-once",
+      "at": "2026-10-16T05:20:21.311Z"
+    },
+    {
+      "step": "Recovery-two-current-private-sessions",
+      "at": "2026-10-16T05:20:21.733Z"
+    },
+    {
+      "step": "Recovery-generic-reset-request-local-capture",
+      "at": "2026-10-16T05:20:21.896Z"
+    },
+    {
+      "step": "Recovery-new-password-persisted-before-POST",
+      "at": "2026-10-16T05:20:22.050Z"
+    },
+    {
+      "step": "Recovery-password-changed-once-current-private-password-saved",
+      "at": "2026-10-16T05:20:22.158Z"
+    },
+    {
+      "step": "Recovery-both-old-private-sessions-cleared401",
+      "at": "2026-10-16T05:20:22.270Z"
+    },
+    {
+      "step": "Recovery-consumed-token-replay-denied400",
+      "at": "2026-10-16T05:20:22.334Z"
+    }
+  ],
+  "scope": "New Owner/Peer A/B authorization and last-admin lifecycle; exactly one new Recovery account in A, two-session password reset and token replay through ordinary UI. No retained identity, tenant or lead mutation.",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "headless": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "existingProfileOrCookies": false,
+    "CDP": false,
+    "downloads": false
+  },
+  "browserVersion": "155.0.8059.80",
+  "failure": {
+    "phase": "Recovery-old-password:login-submit",
+    "name": "Error",
+    "assertion": "INVALID_OR_DISABLED_PASSWORD_LOGIN",
+    "strict": false,
+    "detached": false,
+    "timeout": false,
+    "rawDetailsRedacted": true
+  },
+  "finishedAt": "2026-10-16T05:20:31.565Z"
+}

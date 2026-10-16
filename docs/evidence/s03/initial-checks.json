@@ -1,0 +1,38 @@
+{
+  "status": "HISTORICAL_REPAIRED",
+  "checks": [
+    {
+      "check": "First site PUT",
+      "result": "FAIL_409",
+      "cause": "Bun SQL typed-jsonb serialized string again",
+      "repair": "JSON.stringify through explicit text::jsonb, preserve strict SQL checks",
+      "retest": "PASS actual Drizzle object roundtrip and site/publication integration"
+    },
+    {
+      "check": "Initial role-denial assertion",
+      "result": "HARNESS_FAIL",
+      "cause": "Bun rejects expects native Promise; Drizzle PgRaw is thenable",
+      "repair": "Promise.resolve executes actual query, same rejection assertion",
+      "retest": "PASS restricted role/immutable/pointer guards"
+    },
+    {
+      "check": "Early SQL shape review",
+      "result": "SOURCE_P2",
+      "cause": "NULL IF/comparison could accept missing JSON keys",
+      "repair": "Explicit required/allowed keys, IS DISTINCT FROM, coalesce false before0004 applied",
+      "retest": "PASS actual SQL negative/CHECK tests"
+    },
+    {
+      "check": "Mobile publication badges",
+      "result": "CSS_VISUAL_FAIL_REPAIRED",
+      "cause": "Inherited mobile .editor-head .buttons matched nested status badges and fixed them behind action bar",
+      "repair": "Narrow exactly two mobile selectors to direct .editor-head > .editor-actions",
+      "retest": "Admin focused typecheck/lint/build PASS; actual final-build390 live/pending badges static above editor, action bar within viewport. Source and UI artifacts retain confirming geometry."
+    }
+  ],
+  "firstPassingIntegration": {
+    "tests": 14,
+    "assertions": 87
+  },
+  "limit": "Dated intermediate results; final combined result and UI proofs are separate."
+}

@@ -1,0 +1,37 @@
+{
+  "detailControls": [
+    {
+      "disabled": false,
+      "label": "Danh sách yêu cầu"
+    },
+    {
+      "disabled": true,
+      "label": "lead-assignee"
+    },
+    {
+      "disabled": true,
+      "label": "lead-status"
+    },
+    {
+      "disabled": true,
+      "label": "Lưu cập nhật"
+    },
+    {
+      "disabled": true,
+      "label": "activity-kind"
+    },
+    {
+      "disabled": true,
+      "label": "activity-text"
+    },
+    {
+      "disabled": true,
+      "label": "Lưu ghi chú"
+    }
+  ],
+  "notice": [
+    "Nha khoa đang tạm ngưng. Bạn có thể xem yêu cầu; các thao tác cập nhật đang bị khóa."
+  ],
+  "rows": 1,
+  "version": "Phiên bản 1. Ghi nhận trao đổi thực tế ở phần Thêm hoạt động để chuyển sang Đã liên hệ. Lưu riêng từng thao tác để giữ nội dung đang soạn."
+}

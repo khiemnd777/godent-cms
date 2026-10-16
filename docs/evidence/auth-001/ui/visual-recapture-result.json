@@ -1,0 +1,50 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "PASS",
+  "startedAt": "2026-10-16T05:30:35.651Z",
+  "widths": [
+    {
+      "width": 768,
+      "height": 1024,
+      "headings": 1,
+      "backLinks": 1,
+      "panels": 3,
+      "viewport": 768,
+      "documentWidth": 768,
+      "documentHeight": 1024,
+      "bodyHeight": 926,
+      "scrollY": 0,
+      "bottomControlVisible": true,
+      "passwordEmpty": true
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "headings": 1,
+      "backLinks": 1,
+      "panels": 3,
+      "viewport": 1024,
+      "documentWidth": 1024,
+      "documentHeight": 1006,
+      "bodyHeight": 926,
+      "scrollY": 0,
+      "bottomControlVisible": true,
+      "passwordEmpty": true
+    }
+  ],
+  "scope": "Read-only768/1024 account recapture in new Pages configured before navigation. Preserve earlier full-page artifacts. No reauth/credential/business/manifest mutation; login only.",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "existingProfileOrCookies": false
+  },
+  "finishedAt": "2026-10-16T05:30:36.921Z"
+}

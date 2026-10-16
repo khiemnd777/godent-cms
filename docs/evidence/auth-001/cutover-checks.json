@@ -1,0 +1,43 @@
+{
+  "recordedAtUtc": "2026-10-16T04:42:28.424585+00:00",
+  "status": "PASS",
+  "migration": "0013_auth_password_only.sql",
+  "migrationSha256": "89fc0ba78b1fe80c921506fc6c0e57f409da0b7ccc4645f22d713b04b836a2a5",
+  "firstRun": {
+    "exitCode": 0,
+    "applied": true,
+    "sessionRevocation": "APPLIED_ONCE"
+  },
+  "secondRun": {
+    "exitCode": 0,
+    "applied": false,
+    "sessionRevocation": "ALREADY_APPLIED_NO_REPEAT"
+  },
+  "sessionTransition": {
+    "before": 105,
+    "after": 0
+  },
+  "reauthGrantTransition": {
+    "before": 4,
+    "after": 0
+  },
+  "oldCookieHttpTransition": [
+    200,
+    401
+  ],
+  "protectedOriginalFilesCompared": 330,
+  "changedProtectedOriginalFiles": [],
+  "allSourceTypecheck": {
+    "exitCode": 0
+  },
+  "lint": {
+    "initialExitCode": 1,
+    "cause": "New SSR test children-prop lint rule",
+    "repair": "Test-only JSX children; same5cases/17assertions",
+    "finalExitCode": 0
+  },
+  "build": {
+    "exitCode": 0
+  },
+  "limit": "Coordinator records actual completed command results; application runtime/UAT is recorded separately. No production/dependency/Git action."
+}

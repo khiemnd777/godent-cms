@@ -1,0 +1,55 @@
+{
+  "actor": "Existing multiAB ordinary login + existing factor",
+  "observations": [
+    {
+      "step": "A-initial-transition-observation",
+      "editable": false,
+      "path": "/cms/services/020681b1-dcb8-4e69-9f6f-c0697d940c21",
+      "selectedTenant": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+      "tenant": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+      "title": "Tab A",
+      "titleInput": "Tab A"
+    },
+    {
+      "step": "A-settled-before-B-navigation",
+      "path": "/cms/services/020681b1-dcb8-4e69-9f6f-c0697d940c21",
+      "selectedTenant": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+      "tenant": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+      "title": "Tab A"
+    },
+    {
+      "step": "B-own-service",
+      "path": "/cms/services/1b393841-646e-4f29-a8a1-c904c16f4144",
+      "selectedTenant": "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb",
+      "tenant": "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb",
+      "title": "Tab B"
+    },
+    {
+      "step": "A-retained-after-B-open",
+      "path": "/cms/services/020681b1-dcb8-4e69-9f6f-c0697d940c21",
+      "selectedTenant": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+      "tenant": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+      "title": "Tab A"
+    },
+    {
+      "step": "A-id-under-B-denied",
+      "editorPresent": false,
+      "error": "Không thể mở dịch vụ",
+      "path": "/cms/services/020681b1-dcb8-4e69-9f6f-c0697d940c21",
+      "savePresent": false,
+      "selectedTenant": "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb",
+      "tenant": "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb"
+    },
+    {
+      "step": "B-restored-own-service",
+      "tenant": "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb",
+      "title": "Tab B"
+    },
+    {
+      "step": "A-reload-still-A",
+      "tenant": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+      "title": "Tab A"
+    }
+  ],
+  "applicationWrites": false
+}

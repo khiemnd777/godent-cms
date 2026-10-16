@@ -1,0 +1,15 @@
+{
+  "recordedAtUtc": "2026-10-16T05:19:50.467Z",
+  "status": "PASS",
+  "newOrdinaryUserIdLength": 32,
+  "exactBrowserOperationKeySha256": "2bd5dee7922244a9a2a93c11833899d7ccf6ec05c19c356a7b6b29bebe795b4f",
+  "restrictedTenantServiceReplay": true,
+  "replayed": true,
+  "leadVersion": 2,
+  "historyCount": 1,
+  "receiptCount": 1,
+  "leadHistoryReceiptUnchanged": true,
+  "newAssignmentsCreated": 0,
+  "secretsPrinted": false,
+  "limit": "Exact successful new-account browser assignment receipt replay via ordinary service and actual restricted PostgreSQL role; no additional assignment, lead or historical fixture changes."
+}

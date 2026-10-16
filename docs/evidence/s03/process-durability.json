@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-16T00:12:47.243Z",
+  "snapshotId": "44b83aa0-2055-49ba-86f5-cb93cc344781",
+  "intentsBeforeRestart": 1,
+  "publicApiJsonUnchanged": true,
+  "route": "http://localhost:5892/s03-synthetic-a/dich-vu/loss-98943c6a-9fe1-418f-97c0-b4b99ca27646",
+  "limit": "Actual owned launcher OS-process restart with retained PostgreSQL; not a machine crash, backup restore or power-loss durability claim.",
+  "intentsAfterRestart": 1,
+  "databaseClosureUnchanged": true,
+  "databaseAfterObservedAtUtc": "2026-10-16T00:14:53.424Z"
+}

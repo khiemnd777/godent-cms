@@ -1,0 +1,22 @@
+{
+  "before": {
+    "mode": "default",
+    "version": "Phiên bản 3. Cần xác thực lại trong 5 phút khi lưu. Cấu hình mới áp dụng cho thông báo còn chờ, không gửi lại người đã thành công."
+  },
+  "after": {
+    "error": "Yêu cầu đã được cập nhật. Thông tin bạn đang soạn được giữ lại. Đối chiếu bản hiện tại trước khi lưu lại.",
+    "mode": "default"
+  },
+  "compare": [
+    "Môi trường thử tại máy này chỉ ghi nhận thông báo cục bộ. Chưa gửi email thật.",
+    "Cấu hình hiện tại · Phiên bản 4 · 1 người nhận đã chọnS02 A2Dùng cấu hình hiện tại"
+  ],
+  "cancelMode": "default",
+  "resolved": {
+    "mode": "selected",
+    "selected": [
+      "S02 A2a2@s02.example.test"
+    ],
+    "version": "Phiên bản 4. Cần xác thực lại trong 5 phút khi lưu. Cấu hình mới áp dụng cho thông báo còn chờ, không gửi lại người đã thành công."
+  }
+}

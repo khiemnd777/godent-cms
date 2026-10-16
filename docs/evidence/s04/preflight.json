@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-16T01:07:38.665669+00:00",
+  "entryFiles": 417,
+  "services": [
+    {
+      "service": "postgres",
+      "id": "02fbedfe942e",
+      "image": "postgres:18.4-alpine@sha256:9a8afca54e7861fd90fab5fdf4c42477a6b1cb7d293595148e674e0a3181de15",
+      "health": "healthy",
+      "publishers": [
+        {
+          "URL": "127.0.0.1",
+          "TargetPort": 5432,
+          "PublishedPort": 5888,
+          "Protocol": "tcp"
+        }
+      ]
+    },
+    {
+      "service": "redis",
+      "id": "669a60ecf6bd",
+      "image": "redis:7.4.9-alpine3.21@sha256:6ab0b6e7381779332f97b8ca76193e45b0756f38d4c0dcda72dbb3c32061ab99",
+      "health": "healthy",
+      "publishers": [
+        {
+          "URL": "127.0.0.1",
+          "TargetPort": 6379,
+          "PublishedPort": 5889,
+          "Protocol": "tcp"
+        }
+      ]
+    },
+    {
+      "service": "s3",
+      "id": "e33baccab765",
+      "image": "chrislusf/seaweedfs:4.48@sha256:4e61d15fd35994cb1e43e1e553dff106794841fd9a99ade2fc8c8bfce4d7872d",
+      "health": "healthy",
+      "publishers": [
+        {
+          "URL": "127.0.0.1",
+          "TargetPort": 8333,
+          "PublishedPort": 5887,
+          "Protocol": "tcp"
+        }
+      ]
+    }
+  ],
+  "database": {
+    "database": "gcms_s01",
+    "draftCount": 29,
+    "identityCount": 11,
+    "membershipCount": 51,
+    "migrations": [
+      "0001_s02_access.sql",
+      "0002_session_mfa_assurance.sql",
+      "0003_reauth_grant_rls.sql",
+      "0004_s03_publication.sql"
+    ]
+  },
+  "preservedOriginalRowCounts": {
+    "service_draft": 29,
+    "site_draft": 2,
+    "publication_snapshot": 15,
+    "publication_pointer": 10,
+    "publication_intent": 15,
+    "schema_migration": 4
+  },
+  "privateFilesByteModeBaseline": [
+    ".env",
+    ".local/s02.env",
+    ".local/s02-fixtures.json",
+    ".local/s03-fixtures.json",
+    ".local/s03-before.sql"
+  ],
+  "privateBackup": {
+    "bytes": 155705,
+    "sha256": "807a32e525b0b2ee5f08d6d5c3a6155e187019bb7546c393710c8bc21ae929c4",
+    "mode": "0600"
+  },
+  "limit": "Pre-application S04 retained resources/rows and private backup. No reset, migration, restore, role or fixture mutation."
+}

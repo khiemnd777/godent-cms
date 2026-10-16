@@ -1,0 +1,100 @@
+{
+  "observedAtUtc": "2026-10-15T16:08:50.584704+00:00",
+  "status": "PASS",
+  "processes": [
+    {
+      "name": "api",
+      "registeredPid": 39517,
+      "listenerPid": 39517,
+      "parentChain": [
+        39517
+      ],
+      "listener": "127.0.0.1:5890",
+      "executable": "/Users/khiemnguyen/Works/godent-cms/godent-cms/node_modules/.bun/bun@1.4.3/node_modules/bun/bin/bun.exe",
+      "runtime": "Bun"
+    },
+    {
+      "name": "admin",
+      "registeredPid": 39518,
+      "listenerPid": 39521,
+      "parentChain": [
+        39521,
+        39518
+      ],
+      "listener": "127.0.0.1:5891",
+      "executable": "/Users/khiemnguyen/Works/godent-cms/godent-cms/node_modules/.bun/bun@1.4.3/node_modules/bun/bin/bun.exe",
+      "runtime": "Bun"
+    },
+    {
+      "name": "website",
+      "registeredPid": 39519,
+      "listenerPid": 39520,
+      "parentChain": [
+        39520,
+        39519
+      ],
+      "listener": "127.0.0.1:5892",
+      "executable": "/Users/khiemnguyen/Works/godent-cms/godent-cms/node_modules/.bun/bun@1.4.3/node_modules/bun/bin/bun.exe",
+      "runtime": "Bun"
+    }
+  ],
+  "http": [
+    {
+      "url": "http://127.0.0.1:5890/health",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:5890/ready",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:5891/cms",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:5891/platform",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:5891/cms/services",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:5891/platform/accounts",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:5891/unrecognized",
+      "status": 404,
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:5892/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:5892/technical-tenant/unknown",
+      "status": 404,
+      "result": "PASS"
+    }
+  ],
+  "secretScan": {
+    "result": "PASS",
+    "filesChecked": 34,
+    "secretValuesChecked": 5,
+    "limit": "Exact current generated credential values only; not a general secret scanner."
+  },
+  "lockSha256": "a930f219e8e876e9645f9f7fea32a05992bdb0c2c04fb6585e4d30bfba35dcdc",
+  "limits": [
+    "No authentication/session/tenant-isolation proof",
+    "No business workflow or tenant resolver",
+    "No DNS/TLS/production deployment"
+  ]
+}

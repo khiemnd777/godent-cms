@@ -1,0 +1,1 @@
+export default function Home() { return <><header><span className="wordmark">godent<span>.</span></span></header><main id="main-content"><p className="eyebrow">Không gian website nha khoa</p><h1>Godent</h1><p>Chưa có website nha khoa được kết nối tại địa chỉ này.</p></main><footer>Godent · Website nha khoa</footer></>; }

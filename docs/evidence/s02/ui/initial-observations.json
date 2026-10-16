@@ -1,0 +1,98 @@
+{
+  "observedAt": "2026-10-15T17:01:34.792Z",
+  "browser": "CUA in-app browser",
+  "fixture": "A1",
+  "flow": {
+    "login": "PASS",
+    "existingBackupChallenge": "PASS",
+    "tenantSelection": "PASS",
+    "createDraft": "PASS",
+    "reloadPersistence": "PASS",
+    "privatePlainTextPreview": "PASS",
+    "draftUrl": "http://127.0.0.1:5891/cms/services/f0d1a29e-49a8-4889-8b80-031a37975c27?tenant=aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+  },
+  "viewports": [
+    {
+      "actions": [
+        {
+          "label": "Xem trước",
+          "visible": true
+        },
+        {
+          "label": "Lưu bản nháp",
+          "visible": true
+        }
+      ],
+      "documentWidth": 1440,
+      "editorWidth": 1136,
+      "width": 1440
+    },
+    {
+      "actions": [
+        {
+          "label": "Xem trước",
+          "visible": true
+        },
+        {
+          "label": "Lưu bản nháp",
+          "visible": true
+        }
+      ],
+      "documentWidth": 1024,
+      "editorWidth": 758,
+      "width": 1024
+    },
+    {
+      "actions": [
+        {
+          "label": "Xem trước",
+          "visible": true
+        },
+        {
+          "label": "Lưu bản nháp",
+          "visible": true
+        }
+      ],
+      "documentWidth": 768,
+      "editorWidth": 720,
+      "width": 768
+    },
+    {
+      "actions": [
+        {
+          "label": "Xem trước",
+          "visible": true
+        },
+        {
+          "label": "Lưu bản nháp",
+          "visible": true
+        }
+      ],
+      "documentWidth": 390,
+      "editorWidth": 356,
+      "width": 390
+    },
+    {
+      "actions": [
+        {
+          "label": "Xem trước",
+          "visible": true
+        },
+        {
+          "label": "Lưu bản nháp",
+          "visible": true
+        }
+      ],
+      "documentWidth": 320,
+      "editorWidth": 296,
+      "width": 320
+    }
+  ],
+  "knownInitialDefect": "Valid service detail breadcrumb displayed Trang không tồn tại; bounded source repair pending coordinator rebuild",
+  "limits": {
+    "credentialChangeUI": "NOT_RUN: CUA Hand-Off Required policy",
+    "grantUI": "NOT_RUN: CUA action-time confirmation policy",
+    "runtimeHeaders": "NOT_RUN in child shell: managed socket denial",
+    "production": "NOT_RUN"
+  }
+}

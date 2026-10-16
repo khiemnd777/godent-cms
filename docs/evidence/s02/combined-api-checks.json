@@ -1,0 +1,36 @@
+{
+  "recordedAtUtc": "2026-10-15T17:18:32.676Z",
+  "status": "PASS",
+  "suites": [
+    {
+      "file": "auth-data-integration.test.ts",
+      "exitCode": 0
+    },
+    {
+      "file": "domain-integration.test.ts",
+      "exitCode": 0
+    },
+    {
+      "file": "auth-data-recovery.test.ts",
+      "exitCode": 0
+    },
+    {
+      "file": "auth-data-isolation.test.ts",
+      "exitCode": 0
+    },
+    {
+      "file": "auth-data-registration.test.ts",
+      "exitCode": 0
+    },
+    {
+      "file": "auth-data-domain-contract.test.ts",
+      "exitCode": 0
+    },
+    {
+      "file": "auth-data-lifecycle.test.ts",
+      "exitCode": 0
+    }
+  ],
+  "intendedSuites": 7,
+  "limits": "Authorized local synthetic database/handler/HTTP checks; not browser actions, email delivery or production acceptance."
+}

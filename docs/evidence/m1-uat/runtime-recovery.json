@@ -1,0 +1,28 @@
+{
+  "observedAtUtc": "2026-10-16T04:16:09.159613+00:00",
+  "scope": "Read-only recovery after T09 bounded API pause; exact established local hosts; no restart or writes",
+  "http": [
+    {
+      "url": "http://127.0.0.1:5890/health",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5890/ready",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5891/login",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:5892/",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:5892/s05-ui-ef95e0e2/dich-vu/tu-van",
+      "status": 200
+    }
+  ],
+  "status": "PASS",
+  "diagnosticLimit": "An initial public root probe used127.0.0.1 instead of configured localhost and returned421. Correct configured host and published page returned200; no app change."
+}

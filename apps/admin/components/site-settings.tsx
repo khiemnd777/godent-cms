@@ -1,0 +1,34 @@
+"use client";
+import Link from "next/link";
+import { useEffect, useRef, useState, type FormEvent } from "react";
+import { Save, ArrowLeft } from "lucide-react";
+import { S03_LIMITS, S03_ROUTES, type SiteDraft } from "../../api/src/contracts/s03";
+import { apiRequest, ApiError, errorText } from "../lib/access";
+import { visibleText } from "../lib/rich-text";
+import { validSlug } from "../lib/service-input";
+import { useSession } from "./session-provider";
+import { useWorkspace } from "./workspace";
+import { ShellState } from "./shell-state";
+import { UnsavedChanges } from "./unsaved-changes";
+type Fields = { name: string; slug: string; intro: string; footer: string };
+const fieldsFrom = (site: SiteDraft): Fields => ({ name: site.name, slug: site.slug ?? "", intro: site.footer.intro, footer: visibleText(site.footer.body) });
+export function SiteSettings() {
+  const { data } = useSession(); const { membership, href } = useWorkspace(); const tenantId = membership!.tenantId;
+  const [site, setSite] = useState<SiteDraft | null>(null); const [fields, setFields] = useState<Fields>({ name: "", slug: "", intro: "", footer: "" });
+  const [error, setError] = useState(""); const [notice, setNotice] = useState(""); const [busy, setBusy] = useState(false); const [loading, setLoading] = useState(true); const [attempt, setAttempt] = useState(0); const [conflict, setConflict] = useState(false);
+  const saving = useRef<AbortController | null>(null); const dirty = !!site && JSON.stringify(fields) !== JSON.stringify(fieldsFrom(site));
+  useEffect(() => { const controller = new AbortController(); apiRequest<SiteDraft>(S03_ROUTES.site(tenantId), { signal: controller.signal }).then(result => { if (!controller.signal.aborted) { setSite(result); setFields(fieldsFrom(result)); setLoading(false); setError(""); } }).catch(error => { if (!controller.signal.aborted) { setError(errorText(error)); setLoading(false); } }); return () => controller.abort(); }, [tenantId, attempt]);
+  useEffect(() => () => saving.current?.abort(), []);
+  const update = (key: keyof Fields, value: string) => { setFields(previous => ({ ...previous, [key]: value })); setNotice(""); };
+  async function save(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault(); if (!site) return; setNotice(""); setError("");
+    if (!validSlug(fields.slug) || !fields.name.trim()) { setError("Nhập tên website và đường dẫn hợp lệ (1–63 ký tự chữ thường không dấu, chữ số hoặc dấu gạch nối; không dùng tên dành riêng)."); return; }
+    const controller = new AbortController(); saving.current = controller; setBusy(true);
+    try { const result = await apiRequest<SiteDraft>(S03_ROUTES.site(tenantId), { method: "PUT", csrf: data!.csrfToken, signal: controller.signal, body: { slug: fields.slug, name: fields.name, footer: { intro: fields.intro, body: fields.footer === visibleText(site.footer.body) ? site.footer.body : { type: "doc", version: 1, blocks: [{ type: "paragraph", children: [{ type: "text", text: fields.footer }] }] } }, expectedVersion: site.version } }); if (controller.signal.aborted) return; setSite(result); setFields(fieldsFrom(result)); setConflict(false); setNotice(`Đã lưu thông tin website · Phiên bản ${result.version}. Xuất bản dịch vụ để cập nhật thông tin này lên trang dịch vụ.`); }
+    catch (error) { if (controller.signal.aborted) return; if (error instanceof ApiError && error.status === 409) { setConflict(true); setError("Thông tin đã thay đổi hoặc đường dẫn đang được sử dụng. Nội dung bạn nhập được giữ lại. Đối chiếu bản đã lưu trước khi tải lại."); } else setError(errorText(error)); }
+    finally { if (!controller.signal.aborted) setBusy(false); }
+  }
+  if (loading) return <ShellState kind="loading" title="Đang tải thông tin website" description="Đang kiểm tra quyền hiện tại."/>;
+  if (!site) return <ShellState kind="error" title="Chưa thể tải thông tin website" description={error}><button className="btn" onClick={() => { setLoading(true); setAttempt(value => value + 1); }}>Thử lại</button></ShellState>;
+  return <><UnsavedChanges dirty={dirty}/><Link className="back-link" href={href("/cms/settings")} prefetch={false}><ArrowLeft size={14}/>Cài đặt website</Link><div className="page-head"><div><div className="eyebrow">Website nha khoa</div><h1>Tên, đường dẫn &amp; chân trang</h1><p>Lưu thông tin riêng cho {membership!.tenantName}.</p></div></div><section className="panel"><div className="panel-body"><form className="form-stack site-settings-form" onSubmit={save}>{error && <div role="alert" className="notice error"><p>{error}</p>{conflict && <Link className="btn" href={href("/cms/settings/site")} target="_blank" rel="noopener noreferrer" prefetch={false}>Mở bản đã lưu để đối chiếu</Link>}</div>}{notice && <p className="notice" role="status">{notice}</p>}<label className="field">Tên website<input value={fields.name} required maxLength={160} disabled={busy} onChange={event => update("name", event.target.value)}/></label><label className="field">Đường dẫn nha khoa<input value={fields.slug} required maxLength={S03_LIMITS.slug} disabled={busy || site.slugLocked} onChange={event => update("slug", event.target.value)} autoCapitalize="none" spellCheck={false}/><span className="field-help">{site.slugLocked ? "Đường dẫn đã khóa sau lần xuất bản đầu tiên." : "Đường dẫn sẽ khóa sau lần xuất bản đầu tiên."}</span></label><label className="field">Giới thiệu ở chân trang<textarea value={fields.intro} rows={3} maxLength={S03_LIMITS.footerIntro} disabled={busy} onChange={event => update("intro", event.target.value)}/></label><label className="field">Nội dung chân trang<textarea value={fields.footer} rows={5} maxLength={S03_LIMITS.footerText} disabled={busy} onChange={event => update("footer", event.target.value)}/><span className="field-help">Văn bản thuần, tối đa 2.000 ký tự. HTML được hiển thị như văn bản.</span></label><p className="publish-note">Lưu thay đổi không làm đổi website đang chạy. Mỗi lần cập nhật một dịch vụ, trang đó nhận phiên bản thông tin website bạn đã xác nhận.</p><div className="buttons"><button className="btn primary" disabled={busy || conflict || !dirty}><Save size={15}/>{busy ? "Đang lưu…" : "Lưu thông tin website"}</button><Link className="btn" href={href("/cms/services")} prefetch={false}>Trở về dịch vụ</Link></div></form></div></section></>;
+}

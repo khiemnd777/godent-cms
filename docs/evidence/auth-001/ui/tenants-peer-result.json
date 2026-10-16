@@ -1,0 +1,70 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "FAIL",
+  "startedAt": "2026-10-16T04:55:25.680Z",
+  "steps": [
+    {
+      "step": "created-only-new-tenantB",
+      "at": "2026-10-16T04:55:26.674Z"
+    },
+    {
+      "step": "tenantB-local-invitation-bound",
+      "at": "2026-10-16T04:55:26.674Z"
+    },
+    {
+      "step": "owner-acceptedB",
+      "at": "2026-10-16T04:55:27.217Z"
+    },
+    {
+      "step": "peer-private-credential-prepared-not-registered",
+      "at": "2026-10-16T04:55:27.242Z"
+    },
+    {
+      "step": "peer-invitedA",
+      "at": "2026-10-16T04:55:27.481Z"
+    },
+    {
+      "step": "peer-registered-once",
+      "at": "2026-10-16T04:55:27.787Z"
+    },
+    {
+      "step": "peer-verified-password-only",
+      "at": "2026-10-16T04:55:28.020Z"
+    },
+    {
+      "step": "peer-acceptedA",
+      "at": "2026-10-16T04:55:28.257Z"
+    },
+    {
+      "step": "peer-invitedB",
+      "at": "2026-10-16T04:55:28.509Z"
+    }
+  ],
+  "scope": "One new tenantB via ordinary Platform UI; existing browserOwner acceptsB; one new browserPeer via actual invitation registration and verification acceptsA/B. No retained membership/content changes.",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "headless": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "existingProfileOrCookies": false,
+    "CDP": false,
+    "downloads": false
+  },
+  "browserVersion": "155.0.8059.80",
+  "failure": {
+    "phase": "peer-B:invitation-page",
+    "name": "TimeoutError",
+    "strict": false,
+    "detached": false,
+    "timeout": true,
+    "rawDetailsRedacted": true
+  },
+  "finishedAt": "2026-10-16T04:55:40.675Z"
+}

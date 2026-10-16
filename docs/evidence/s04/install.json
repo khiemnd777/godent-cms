@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-16T01:08:45.880700+00:00",
+  "command": "project Bun install --frozen-lockfile --ignore-scripts",
+  "exitCode": 0,
+  "lockUnchanged": true,
+  "lockSha256": "a930f219e8e876e9645f9f7fea32a05992bdb0c2c04fb6585e4d30bfba35dcdc",
+  "stdout": "bun install v1.4.3 (c6da4a4d3)\n\nChecked 489 installs across 552 packages (no changes) [126.00ms]",
+  "stderr": "[0.04ms] \".env\"",
+  "limit": "Existing-tree dependency verification, no new fresh-tree install or lifecycle execution claim."
+}

@@ -1,0 +1,148 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-15T17:23:11.664Z",
+  "migrations": [
+    {
+      "name": "0001_s02_access.sql",
+      "checksum": "2ae0985dbd0ce36c905161e2b56a322e1afc3b12eb66b8875102defff4c14199"
+    },
+    {
+      "name": "0002_session_mfa_assurance.sql",
+      "checksum": "a6ec21939f829a620f5ce628f9a82edea14ed93d456f1d0fa4c950cd81949bc0"
+    },
+    {
+      "name": "0003_reauth_grant_rls.sql",
+      "checksum": "fc7b11f8d5a54fe442458859fb0a214cda0ac9b78090e087829b90a54b824ccc"
+    }
+  ],
+  "roles": [
+    {
+      "rolname": "gcms_s02_auth",
+      "rolsuper": false,
+      "rolbypassrls": false,
+      "rolcreaterole": false,
+      "rolcreatedb": false,
+      "rolcanlogin": true
+    },
+    {
+      "rolname": "gcms_s02_migration",
+      "rolsuper": false,
+      "rolbypassrls": false,
+      "rolcreaterole": false,
+      "rolcreatedb": false,
+      "rolcanlogin": true
+    },
+    {
+      "rolname": "gcms_s02_owner",
+      "rolsuper": false,
+      "rolbypassrls": false,
+      "rolcreaterole": false,
+      "rolcreatedb": false,
+      "rolcanlogin": false
+    },
+    {
+      "rolname": "gcms_s02_platform",
+      "rolsuper": false,
+      "rolbypassrls": false,
+      "rolcreaterole": false,
+      "rolcreatedb": false,
+      "rolcanlogin": true
+    },
+    {
+      "rolname": "gcms_s02_tenant",
+      "rolsuper": false,
+      "rolbypassrls": false,
+      "rolcreaterole": false,
+      "rolcreatedb": false,
+      "rolcanlogin": true
+    }
+  ],
+  "tables": [
+    {
+      "schema": "gcms_s02",
+      "name": "audit_event",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "invitation",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "membership",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "schema_migration",
+      "rls": false,
+      "force_rls": false,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "service_draft",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "tenant",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02_auth",
+      "name": "account",
+      "rls": false,
+      "force_rls": false,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02_auth",
+      "name": "reauth_grant",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02_auth",
+      "name": "session",
+      "rls": false,
+      "force_rls": false,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02_auth",
+      "name": "two_factor",
+      "rls": false,
+      "force_rls": false,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02_auth",
+      "name": "user",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02_auth",
+      "name": "verification",
+      "rls": false,
+      "force_rls": false,
+      "owner": "gcms_s02_owner"
+    }
+  ],
+  "publicTableCount": 0,
+  "limits": "Checksums and metadata only; effective isolation separately verified by real tests. No data reset or fixture cleanup."
+}

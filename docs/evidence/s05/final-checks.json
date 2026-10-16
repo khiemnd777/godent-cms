@@ -1,0 +1,135 @@
+{
+  "observedAtUtc": "2026-10-16T03:08:46.876089+00:00",
+  "status": "READY_FOR_USER_REVIEW",
+  "commands": [
+    {
+      "command": "./node_modules/.bin/bun run build",
+      "exitCode": 0,
+      "status": "PASS",
+      "scope": "admin19generatedpages/website3/APIcompiled"
+    },
+    {
+      "command": "./node_modules/.bin/bun run typecheck",
+      "exitCode": 0,
+      "status": "PASS",
+      "scope": "admin+website+API+tests+rootscripts afterbuild"
+    },
+    {
+      "command": "./node_modules/.bin/bun run lint",
+      "exitCode": 0,
+      "status": "PASS"
+    },
+    {
+      "command": "./node_modules/.bin/bun test apps/admin",
+      "exitCode": 0,
+      "status": "PASS",
+      "passed": 29,
+      "failed": 0,
+      "assertions": 101
+    },
+    {
+      "command": "./node_modules/.bin/bun run test:s05",
+      "exitCode": 0,
+      "status": "PASS",
+      "passed": 32,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 472
+    },
+    {
+      "command": "./node_modules/.bin/bun run check:api:s05",
+      "exitCode": 0,
+      "status": "PASS",
+      "scope": "health/readiness/validation/redaction/notfound/PGRedisS3unavailable503/SIGTERMSIGINTlistenerclosure"
+    },
+    {
+      "command": "bun run --cwd apps/admin build; then bun run typecheck (separate sequential invocations)",
+      "status": "PASS",
+      "exitCode": 0,
+      "scope": "Final CSS-only textarea width fix admin19pages; API/website sources unchanged from prior fullbuild"
+    }
+  ],
+  "historicalFinalHarnessFailure": {
+    "command": "typecheck inparallel withNextbuild",
+    "exitCode": 2,
+    "error": "TS6053 generated.next/types cache-life.d.ts/validator.ts absent whilebuild regeneratedtypes",
+    "repair": "Ran unchangedfulltypecheck sequentially aftersuccessfulbuild; exit0. No sourcechange orweakenedcheck."
+  },
+  "runtime": "Final3app ownedrestart99848READY; runtime-final.jsonactual3Bun+6HTTPPASS; no automatic worker",
+  "pending": [],
+  "audit": "FAIL withfreshindependentboundedS05localdeferral, see dependency-audit.json; no productionwaiver",
+  "finalBrowser": {
+    "status": "PASS_SCOPED_WITH_EXPLICIT_NOT_RUN",
+    "owner": "/root/s05_frontend",
+    "rootFinalVisualInspection": true,
+    "viewports": [
+      320,
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "textareaFullFieldWidths": [
+      254,
+      314,
+      252,
+      252,
+      287
+    ],
+    "dailySharedWorkflow": true,
+    "serverQueryAnd56UniqueCursorSequence20And50": true,
+    "real10000PlusCap": true,
+    "leadAndSettingsConflictInputPreservation": true,
+    "dirtyNavigationAndKeyboardFocus": true,
+    "unknownThenNaturalReauthAndSameOperationRetry": true,
+    "deniedTenantPrivateClearing": true,
+    "suspendedCurrentMemberReadOnlyControls": true,
+    "getLoadingPrivateClearing": true,
+    "sessionOutageFailClosedAndAutomaticRecovery": true,
+    "finalIdentity": "ordinaryA2",
+    "finalTenant": "newS05UI",
+    "finalLead": "YC-000001/v10/A2/Contacted/clean",
+    "screenshot": "docs/evidence/s05/ui/final-desktop-1440x1080.jpg",
+    "notRun": [
+      "Browser timed-expiry lead removal (actual backendexpiry alreadyPASS)",
+      "Enter-triggered outage recovery (periodicpoll automatically recovered beforeEnter; Retry focusonlyobserved)"
+    ],
+    "proofBoundary": "BrowserunknownPUT had no observedcommitbefore timeout; actualpostcommitresponse-loss+APIrestart single-receipt proof is separate APIrace suite."
+  },
+  "humanAcceptance": "PENDING",
+  "finalPreservation": {
+    "source": "preservation.json",
+    "status": "PASS",
+    "entryFiles": 501,
+    "currentFilesAtSnapshot": 622,
+    "deleted": 0,
+    "uiPins": 13,
+    "masterRows": 18,
+    "unchangedPrivateFiles": 7,
+    "oldS01ThroughS04EvidenceAnd0001Through0007MigrationsUnchanged": true,
+    "modifiedExistingFiles": 26,
+    "newFiles": 121
+  },
+  "finalSecretScan": {
+    "source": "secret-scan.json",
+    "status": "PASS",
+    "exactKnownSecretValues": 92,
+    "scannedTextAndBuiltJsFiles": 557,
+    "matches": 0
+  },
+  "historicalFinalEvidenceWhitespaceFailure": {
+    "status": "CLOSED",
+    "finding": "New S05 UI JSON artifacts omitted finalnewline",
+    "repair": "Append only finalnewline to18newUIJSONfiles afterFErelease; no evidencevalue/application/DBchange; finalpreservation/whitespace scanPASS."
+  },
+  "finalStatic": {
+    "status": "PASS",
+    "markdownFiles": 120,
+    "localLinks": 1171,
+    "maintainedHashes": 81,
+    "mirrors": 28,
+    "originalCanonicalFiles": 20,
+    "adaptedCanonicalFiles": 6
+  },
+  "closure": "Allsource/documentownersreleased; finalpost-documentruntime/preservation/secret/static snapshotsPASS. AuditFAILboundedlocaldeferral/exactNOT_RUN/humanacceptancepending remain unchanged; no further workwithin approvedlocalpackage is pending."
+}

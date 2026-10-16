@@ -1,0 +1,90 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "PASS",
+  "startedAt": "2026-10-16T05:18:54.493Z",
+  "widths": [
+    {
+      "width": 320,
+      "height": 844,
+      "viewport": 320,
+      "documentWidth": 320,
+      "bodyWidth": 320,
+      "panels": 3,
+      "emptyPasswordField": true,
+      "factorUI": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "panels": 3,
+      "emptyPasswordField": true,
+      "factorUI": false
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "viewport": 768,
+      "documentWidth": 768,
+      "bodyWidth": 768,
+      "panels": 3,
+      "emptyPasswordField": true,
+      "factorUI": false
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "viewport": 1024,
+      "documentWidth": 1024,
+      "bodyWidth": 1024,
+      "panels": 3,
+      "emptyPasswordField": true,
+      "factorUI": false
+    },
+    {
+      "width": 1440,
+      "height": 1080,
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "bodyWidth": 1440,
+      "panels": 3,
+      "emptyPasswordField": true,
+      "factorUI": false
+    }
+  ],
+  "scope": "Read-only final-bundle account layout at five widths, real keyboard focus order and authorized new-B lead detail. No reauth/credential/business mutation; login only.",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "existingProfileOrCookies": false
+  },
+  "browserVersion": "155.0.8059.80",
+  "keyboard": {
+    "start": "Không gian quản trị",
+    "tabOrder": [
+      "Đăng xuất",
+      "Đặt lại mật khẩu",
+      "Mật khẩu",
+      "Xác thực lại"
+    ],
+    "submitted": false
+  },
+  "sidebar": {
+    "x": 0,
+    "width": 232
+  },
+  "factorRequests": 0,
+  "finalTenant": "new-owned-B",
+  "finalLead": "L1",
+  "finishedAt": "2026-10-16T05:18:55.711Z"
+}

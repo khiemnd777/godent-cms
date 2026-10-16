@@ -1,0 +1,106 @@
+{
+  "at": "2026-10-16T04:12:07.541Z",
+  "result": "PASS",
+  "priorPagingScope": "Reused exact ordered56 roster before T07 addition; no fresh57-row paging claim",
+  "currentTotal": 57,
+  "mutations": 0,
+  "observations": [
+    {
+      "actor": "A1",
+      "step": "current-new-57",
+      "assignee": "Chưa phân công",
+      "code": "YC-000057",
+      "detailHeadings": [
+        "Chi tiết yêu cầu",
+        "M1 UAT T07 5f5f86c9"
+      ],
+      "footer": "57 yêu cầu phù hợp · 20 trên trang này",
+      "query": "",
+      "sourcePaths": [
+        "/s05-ui-ef95e0e2/dich-vu/tu-van"
+      ],
+      "status": "Mới",
+      "tenant": "4e206516-529a-4799-b146-05f950214a00",
+      "version": "Phiên bản 1. Ghi nhận trao đổi thực tế ở phần Thêm hoạt động để chuyển sang Đã liên hệ. Lưu riêng từng thao tác để giữ nội dung đang soạn."
+    },
+    {
+      "actor": "A1",
+      "step": "retained-original-1",
+      "assignee": "S02 A2",
+      "code": "YC-000001",
+      "detailHeadings": [
+        "Chi tiết yêu cầu",
+        "Khách thử S05 01"
+      ],
+      "footer": "1 yêu cầu phù hợp · 1 trên trang này",
+      "query": "YC-000001",
+      "sourcePaths": [
+        "/s05-ui-ef95e0e2/dich-vu/tu-van"
+      ],
+      "status": "Đã liên hệ",
+      "tenant": "4e206516-529a-4799-b146-05f950214a00",
+      "version": "Phiên bản 10. Ghi nhận trao đổi thực tế ở phần Thêm hoạt động để chuyển sang Đã liên hệ. Lưu riêng từng thao tác để giữ nội dung đang soạn."
+    },
+    {
+      "actor": "A1",
+      "step": "other-authorized-tenant-clears-detail",
+      "at": "2026-10-16T04:11:31.179Z",
+      "detailHeadings": [],
+      "sourcePaths": [],
+      "tenant": "01b0df9d-9e36-48a6-b875-94bdab559158"
+    },
+    {
+      "actor": "A1",
+      "step": "restored-tenant-stays-clean",
+      "at": "2026-10-16T04:11:37.379Z",
+      "detailHeadings": [],
+      "sourcePaths": [],
+      "tenant": "4e206516-529a-4799-b146-05f950214a00"
+    },
+    {
+      "actor": "A2",
+      "step": "same-new-57",
+      "at": "2026-10-16T04:12:00.406Z",
+      "assignee": "Chưa phân công",
+      "code": "YC-000057",
+      "detailHeadings": [
+        "Chi tiết yêu cầu",
+        "M1 UAT T07 5f5f86c9"
+      ],
+      "footer": "57 yêu cầu phù hợp · 20 trên trang này",
+      "query": "",
+      "sourcePaths": [
+        "/s05-ui-ef95e0e2/dich-vu/tu-van"
+      ],
+      "status": "Mới",
+      "tenant": "4e206516-529a-4799-b146-05f950214a00",
+      "version": "Phiên bản 1. Ghi nhận trao đổi thực tế ở phần Thêm hoạt động để chuyển sang Đã liên hệ. Lưu riêng từng thao tác để giữ nội dung đang soạn."
+    },
+    {
+      "actor": "A2",
+      "step": "same-retained-original-1",
+      "at": "2026-10-16T04:12:07.511Z",
+      "assignee": "S02 A2",
+      "code": "YC-000001",
+      "detailHeadings": [
+        "Chi tiết yêu cầu",
+        "Khách thử S05 01"
+      ],
+      "footer": "1 yêu cầu phù hợp · 1 trên trang này",
+      "query": "YC-000001",
+      "sourcePaths": [
+        "/s05-ui-ef95e0e2/dich-vu/tu-van"
+      ],
+      "status": "Đã liên hệ",
+      "tenant": "4e206516-529a-4799-b146-05f950214a00",
+      "version": "Phiên bản 10. Ghi nhận trao đổi thực tế ở phần Thêm hoạt động để chuyển sang Đã liên hệ. Lưu riêng từng thao tác để giữ nội dung đang soạn."
+    }
+  ],
+  "unavailableOption": {
+    "target": "originalS02tenantA",
+    "present": false,
+    "optionCount": 100,
+    "selectionUnchanged": true,
+    "repair": "NOT_RUN: no app edits authorized"
+  }
+}

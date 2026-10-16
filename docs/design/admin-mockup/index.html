@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; img-src 'self' data:; frame-src 'self'; form-action 'none'; base-uri 'none'">
+  <title>Godent — UI/UX Review v0.1</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#e6eae8;color:#19342e;font:13px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,select{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #0f766e;outline-offset:3px}.review{padding:14px 24px;background:#173d36;color:#fff;display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px}.identity{display:flex;gap:12px;align-items:center}.identity strong{font-size:17px;letter-spacing:-.7px}.identity span{font-size:10px;letter-spacing:1.5px;color:#bcd4cd}.tabs{display:flex;gap:4px;flex:1;flex-wrap:wrap}.tabs button{border:0;color:#d4e5df;background:transparent;border-radius:6px;padding:10px 12px;min-height:40px}.tabs button[aria-pressed=true]{background:#fff;color:#173d36;font-weight:650}.tools{display:flex;gap:8px;align-items:center}.tools select{background:#fff;border:0;border-radius:5px;padding:9px;max-width:180px;min-height:40px}.caption{padding:10px 24px;display:flex;justify-content:space-between;gap:12px;color:#435c55;font-size:12px}.caption a{color:#275d52}.canvas{margin:auto;transition:width .18s;max-width:100%;padding:0 16px 16px}.canvas.mobile{width:424px}iframe{display:block;border:1px solid #c9d6d0;border-radius:10px;background:#f7f9f8;width:100%;height:calc(100dvh - 126px);min-height:620px;box-shadow:0 8px 28px #19342e0d}@media(max-width:650px){.review{padding:12px;gap:10px}.identity{width:100%}.tabs{order:2;flex-basis:100%}.tabs button{padding:8px;font-size:12px;flex:1}.tools{width:100%}.tools select{flex:1;max-width:none}.caption{padding:10px 12px}.caption span:last-child{display:none}.canvas{padding:0}.canvas.mobile{width:100%}iframe{border-radius:0;height:calc(100dvh - 205px);min-height:620px}}
+  </style>
+</head>
+<body>
+  <header class="review">
+    <div class="identity"><strong>godent<span style="color:#93cfb7;font-size:20px;letter-spacing:0">.</span></strong><span>DESIGN REVIEW · V0.1</span></div>
+    <nav class="tabs" aria-label="Màn hình mockup">
+      <button data-screen="platform" aria-pressed="false">01 · Platform</button>
+      <button data-screen="overview" aria-pressed="true">02 · Tổng quan CMS</button>
+      <button data-screen="editor" aria-pressed="false">03 · Soạn dịch vụ</button>
+      <button data-screen="leads" aria-pressed="false">04 · Yêu cầu tư vấn</button>
+    </nav>
+    <div class="tools">
+      <select id="viewport" aria-label="Kích thước xem"><option value="desktop">Desktop · co giãn</option><option value="mobile">Mobile · 390 px</option></select>
+      <select id="state" aria-label="Trạng thái minh họa"><option value="normal">Dữ liệu mẫu</option><option value="loading">Đang tải</option><option value="empty">Chưa có dữ liệu</option><option value="error">Lỗi tải dữ liệu</option><option value="denied">Không có quyền</option><option value="conflict">Xung đột khi lưu · editor</option></select>
+    </div>
+  </header>
+  <div class="caption"><span>Mockup tương tác · Dữ liệu giả · Không kết nối hệ thống · Tải lại sẽ đặt lại thao tác</span><span id="size">Hai khu vực, cùng một ngôn ngữ thiết kế</span></div>
+  <main class="canvas" id="canvas"><iframe id="preview" title="Bản xem thử giao diện Godent" src="mockup.html?screen=overview"></iframe></main>
+  <script>
+    let current='overview';
+    const frame=document.querySelector('#preview'),state=document.querySelector('#state');
+    function mark(screen){current=screen;document.querySelectorAll('[data-screen]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.screen===screen)));}
+    function show(screen){if(state.value==='conflict')screen='editor';mark(screen);frame.src='mockup.html?'+new URLSearchParams({screen,state:state.value});}
+    document.querySelectorAll('[data-screen]').forEach(b=>b.addEventListener('click',()=>{state.value='normal';show(b.dataset.screen)}));
+    state.addEventListener('change',()=>show(current));
+    document.querySelector('#viewport').addEventListener('change',e=>{document.querySelector('#canvas').classList.toggle('mobile',e.target.value==='mobile');document.querySelector('#size').textContent=e.target.value==='mobile'?'Khung nội dung rộng 390 px trên màn hình đủ rộng':'Hai khu vực, cùng một ngôn ngữ thiết kế';});
+    window.addEventListener('message',e=>{if(e.source!==frame.contentWindow||e.origin!==location.origin||!['platform','overview','editor','leads'].includes(e.data?.screen))return;mark(e.data.screen);state.value='normal';});
+  </script>
+</body>
+</html>

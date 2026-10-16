@@ -1,0 +1,16 @@
+{
+  "recordedAtUtc": "2026-10-16T04:52:45.014008+00:00",
+  "status": "PASS",
+  "historicalEvidence": "docs/evidence/s02/combined-api-checks.json",
+  "historicalSuite": "domain-integration.test.ts",
+  "historicalSuiteExitCode": 0,
+  "priorWholeSourceSha256": "7248eca644aef560dc8af4b81c05e8c7ef6f9ad0716983aac1a99c5145fb6d9b",
+  "reconstructionMatchedPriorWholeSource": true,
+  "reconstructionOnlyChanges": [
+    "Current session login test title",
+    "Two removed factor-session field assertions"
+  ],
+  "unchangedRaceTestSha256": "e43abe65a10c2debd5d732492a6ae5824d7235e76b5b513ec5b0650bcd984ec4",
+  "freshRaceRun": "NOT_RUN",
+  "limit": "Correlates retained historical passing race source. New auth policy and UI last-admin rejection require their own proof. Current installed trigger body comparison is in catalog runner."
+}

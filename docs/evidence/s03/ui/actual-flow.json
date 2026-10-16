@@ -1,0 +1,133 @@
+{
+  "actor": "A1 existing synthetic account",
+  "tenant": "c3000000-0000-4000-8000-000000000001",
+  "serviceId": "2db0e1f4-05bf-45c0-bd4f-07b236c46757",
+  "editorUrl": "http://127.0.0.1:5891/cms/services/2db0e1f4-05bf-45c0-bd4f-07b236c46757?tenant=c3000000-0000-4000-8000-000000000001",
+  "siteDraftVersion": 7,
+  "ordinaryLogin": true,
+  "existingMfaChallenge": true,
+  "keyboardTabs": true,
+  "publicV1": {
+    "canonical": "http://localhost:5892/s03-synthetic-a/dich-vu/cham-soc-rang-dinh-ky-ui-s03",
+    "injectedScript": false,
+    "lang": "vi",
+    "robots": "noindex, nofollow",
+    "title": "Chăm sóc răng định kỳ | Nha khoa thử nghiệm S03",
+    "v1": true
+  },
+  "pendingPublic": {
+    "publicHasV2": false,
+    "publicKeepsV1": true
+  },
+  "staleSave": {
+    "compareLink": true,
+    "conflict": "Bản đã lưu đã thay đổi hoặc đường dẫn đang được sử dụng. Nội dung bạn đang soạn được giữ lại. Đối chiếu trước khi tải lại.Mở bản đã lưu để đối chiếu",
+    "preserved": true
+  },
+  "unsavedCancelPreserved": true,
+  "staleConfirmationRejected": true,
+  "publicV2": {
+    "canonical": "http://localhost:5892/s03-synthetic-a/dich-vu/cham-soc-rang-dinh-ky-ui-s03",
+    "lang": "vi",
+    "oldV1": false,
+    "robots": "noindex, nofollow",
+    "v2": true
+  },
+  "publicationVersions": [
+    1,
+    2
+  ],
+  "finalDraftVersion": 4,
+  "publicUrl": "http://localhost:5892/s03-synthetic-a/dich-vu/cham-soc-rang-dinh-ky-ui-s03",
+  "mobileMenu": {
+    "closed": true,
+    "focus": "Mở menu"
+  },
+  "publicDesktopGeometry": {
+    "documentWidth": 1440,
+    "height": 1080,
+    "width": 1440
+  },
+  "publicMobileGeometry": {
+    "documentWidth": 390,
+    "heading": "Chăm sóc răng định kỳ · UI S03",
+    "height": 844,
+    "width": 390
+  },
+  "badgeRepair": {
+    "actions": [
+      {
+        "bottom": 834,
+        "label": "Lưu bản nháp",
+        "left": 12,
+        "right": 132.203125,
+        "top": 792
+      },
+      {
+        "bottom": 834,
+        "label": "Xem trước",
+        "left": 138.203125,
+        "right": 240.78125,
+        "top": 792
+      },
+      {
+        "bottom": 834,
+        "label": "Cập nhật website",
+        "left": 246.78125,
+        "right": 378,
+        "top": 792
+      }
+    ],
+    "badgeBottom": 169.6875,
+    "badgePosition": "static",
+    "badgeText": "Đã xuất bản",
+    "badgeTop": 148.6875,
+    "height": 844,
+    "width": 390
+  },
+  "pendingBadgeRepair": {
+    "bottom": 167.6875,
+    "panelTop": 185.6875,
+    "position": "static",
+    "text": "Đã xuất bảnCó thay đổi chưa xuất bản",
+    "top": 146.6875
+  },
+  "denied": {
+    "documentWidth": 390,
+    "hasEditor": false,
+    "title": "Không có quyền truy cập nha khoa này",
+    "width": 390
+  },
+  "errorState": {
+    "documentWidth": 390,
+    "retry": true,
+    "title": "Không thể mở dịch vụ",
+    "width": 390
+  },
+  "emptyState": {
+    "count": "0 đang hiển thị",
+    "documentWidth": 390,
+    "fixtureReadOnly": true,
+    "title": "Chưa có bản nháp dịch vụ",
+    "width": 390
+  },
+  "loadingState": {
+    "observed": true,
+    "evidence": "CUA AX transition before service controls: Đang tải dịch vụ / Đang kiểm tra quyền truy cập hiện tại; no artificial delay or interception",
+    "screenshot": "NOT_RUN: transient state completed before capture"
+  },
+  "console": {
+    "adminFinal": [],
+    "public": []
+  },
+  "finalGeometry": {
+    "widths": [
+      320,
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "allPassed": true
+  }
+}

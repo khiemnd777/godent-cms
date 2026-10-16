@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-15",
+  "status": "PASS",
+  "baselineEntries": 156,
+  "baselineModified": [
+    "README.md",
+    ".gitignore",
+    "AGENTS.md",
+    "docs/project-context.md",
+    "docs/project-state.md",
+    "docs/skills-manifest.json",
+    "docs/verification-results.md",
+    "docs/project-plan.md",
+    "docs/tasks/README.md"
+  ],
+  "deleted": [],
+  "otherBaselinePreserved": true,
+  "approvedPinsMatched": 13,
+  "textFilesWhitespaceChecked": 183,
+  "initialWhitespaceFinding": "One trailing space in service-trial.ts removed; no semantic source change.",
+  "limits": "Untracked repository; explicit filesystem preservation check supplements empty git diff."
+}

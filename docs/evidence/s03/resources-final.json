@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-16T00:22:32.466929+00:00",
+  "services": [
+    {
+      "service": "postgres",
+      "sameContainer": true,
+      "samePinnedImage": true,
+      "health": "healthy",
+      "sameLoopbackBindings": true
+    },
+    {
+      "service": "redis",
+      "sameContainer": true,
+      "samePinnedImage": true,
+      "health": "healthy",
+      "sameLoopbackBindings": true
+    },
+    {
+      "service": "s3",
+      "sameContainer": true,
+      "samePinnedImage": true,
+      "health": "healthy",
+      "sameLoopbackBindings": true
+    }
+  ],
+  "retainedPrivateBackupBytes": 82120,
+  "privateBackupMode": "0600",
+  "backupUnchanged": true,
+  "limit": "Same retained container identity/image/bindings and backup bytes. No backup restore or production availability claim."
+}

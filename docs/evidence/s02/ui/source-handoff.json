@@ -1,0 +1,77 @@
+{
+  "scope": "S02 v0.1 D01-D10 UI implementation; local only",
+  "owner": "/root/s02_ui",
+  "routes": [
+    "/login",
+    "/account",
+    "/forgot-password",
+    "/reset-password?token=<private-link>",
+    "/verify-email",
+    "/invitations#token=<private-link>",
+    "/cms?tenant=<current-membership>",
+    "/cms/services?tenant=<current-membership>",
+    "/cms/services/new?tenant=<current-membership>",
+    "/cms/services/:id?tenant=<current-membership>",
+    "/cms/services/:id/preview?tenant=<current-membership>",
+    "/cms/settings/members?tenant=<current-membership>",
+    "/platform",
+    "/platform/accounts"
+  ],
+  "sourceChecks": [
+    {
+      "command": "./node_modules/.bin/bun test apps/admin/lib apps/admin/proxy.test.ts apps/website/proxy.test.ts apps/admin/components/navigation.test.ts",
+      "result": "PASS: 12 tests, 44 assertions"
+    },
+    {
+      "command": "./node_modules/.bin/bun run --cwd apps/admin typecheck",
+      "result": "PASS"
+    },
+    {
+      "command": "./node_modules/.bin/bun run --cwd apps/website typecheck",
+      "result": "PASS"
+    },
+    {
+      "command": "./node_modules/.bin/bun --bun eslint apps/admin apps/website --max-warnings 0",
+      "result": "PASS"
+    }
+  ],
+  "notRun": {
+    "credentialMutationUI": {
+      "result": "NOT_RUN",
+      "source": "CUA Computer/Browser Use Confirmation Policy: Hand-Off Required",
+      "quote": "Changing a password or other authentication credential: Ask the user to take over before any new credential is entered, and have them complete the entry, confirmation, and submission steps themselves.",
+      "actions": [
+        "invitation new password registration",
+        "password reset submission",
+        "TOTP enrollment/change",
+        "backup code replacement",
+        "MFA disable"
+      ]
+    },
+    "accessGrantUI": {
+      "result": "NOT_RUN",
+      "source": "CUA Computer/Browser Use Confirmation Policy: Confirmation Required at Action time",
+      "quote": "Creates or materially expands security-sensitive access: Grants a person, app, or agent new or broader access to sensitive data or security-critical systems, including through credentials, permission changes, delegation, or public exposure.",
+      "modeQuote": "This is required even if the user has pre-approved the action.",
+      "actions": [
+        "provision initial invitation submission",
+        "member invitation send/resend",
+        "invitation acceptance"
+      ]
+    },
+    "revokeDisableUI": "NOT_RUN: coordinator preserves core fixture memberships and identities; real confirmation/cancel/read states checked, backend mutations verified separately by coordinator",
+    "production": "NOT_RUN/outside approved local scope",
+    "humanAcceptance": "PENDING: coordinator owns final acceptance record",
+    "unsavedNavigationConfirmUI": "NOT_RUN: native window.confirm blocked the CUA tab adapter; getJsDialog returned none and subsequent observation timed out. Draft edit before this check was synthetic and unsaved. No app redesign was made for a provider-specific limitation.",
+    "platformOnlyBrowserRead": "NOT_RUN: native confirm in temporary tab1 blocked CUA input dispatch. New tab2 navigation/DOM reads worked, but existing PlatformOnly login submit did not advance. Supported tab1.close() also timed out on Emulation.setFocusEmulationEnabled. No further workaround; credentials cleared and viewport reset.",
+    "multiABBrowserTabs": "NOT_RUN: browser provider block after representative/denial proof; tenant-per-URL source/unit checks passed, backend proof belongs to coordinator.",
+    "draftConflictBrowser": "NOT_RUN: browser provider block; server conflict proof belongs to coordinator."
+  },
+  "manualUAT": [
+    "Open a private local invitation link. Register with a new password manually, verify email from privileged local mail, sign in, complete TOTP setup manually, save backup codes privately, reauthenticate, then explicitly accept the fixed invitation.",
+    "As tenant admin, reauthenticate, verify recipient and current tenant, send an invitation, inspect local mail, resend to void the old link, then revoke. No token should appear in public UI or evidence.",
+    "As Platform Admin, reauthenticate, confirm organization and initial-admin email, submit provisioning, verify metadata and invitation without private tenant access.",
+    "Request reset using a synthetic email. Open the private reset link and let the human enter/submit a new password. Verify old sessions end and enrolled MFA remains required.",
+    "Under a disposable independent fixture, reauthenticate and revoke membership or globally disable an identity. Confirm last-admin protection without changing shared fixture access."
+  ]
+}

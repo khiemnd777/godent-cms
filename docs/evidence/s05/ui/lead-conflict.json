@@ -1,0 +1,23 @@
+{
+  "before": {
+    "draft": "S05 stale note: phải giữ nguyên khi có xung đột.",
+    "version": "Phiên bản 9. Ghi nhận trao đổi thực tế ở phần Thêm hoạt động để chuyển sang Đã liên hệ. Lưu riêng từng thao tác để giữ nội dung đang soạn."
+  },
+  "after": {
+    "compareVisible": true,
+    "draft": "S05 stale note: phải giữ nguyên khi có xung đột.",
+    "error": "Yêu cầu đã được cập nhật. Thông tin bạn đang soạn được giữ lại. Đối chiếu bản hiện tại trước khi lưu lại."
+  },
+  "compare": {
+    "comparison": [
+      "Bản hiện tại · Phiên bản 10Đã liên hệ · S02 A2Dùng bản hiện tại"
+    ],
+    "draft": "S05 stale note: phải giữ nguyên khi có xung đột."
+  },
+  "cancelDraft": "S05 stale note: phải giữ nguyên khi có xung đột.",
+  "resolved": {
+    "draft": "",
+    "history": "Ghi chú nội bộS05 winning note: một lần ghi, không ghi đè nội dung khác.09:45 16/10/26 · S02 A2 · Phiên bản 10Phân công cho S02 A209:45 16/10/26 · S02 A2 · Phiên bản 9Phân công cho S02 A109:44 16/10/26 · S02 A2 · Phiên bản 8Mở lại · Đã liên hệMở lại cho kịch bản kiểm thử S05; không tự gia hạn lưu dữ liệu.09:42 16/10/26 · S02 A2 · Phiên bản 7Đóng yêu cầu · Đã hoàn tất09:42 16/10/26 · S02 A2 · Phiên bản 6Email · Đã trao đổi hai chiềuTrao đổi hai chiều tổng hợp trong kịch bản kiểm thử S05. Không có khách hàng hoặc email thật.09:42 16/10/26 · S02 A2 · Phiên bản 5Email · Đã gửi emailBản ghi tổng hợp kiểm thử: email gửi đi, chưa có trao đổi hai chiều. Không gửi email thật.09:42 16/10/26 · S02 A2 · Phiên bản 4Ghi chú nội bộGhi chú kiểm thử S05: <script>alert('synthetic')</script> á 😀. Văn bản thuần.09:42 16/10/26 · S02 A2 · Phiên bản 3Phân công cho S02 A209:30 16/10/26 · S02 A1 · Phiên bản 2Tiếp nhận từ website09:28 16/10/26 · Website",
+    "version": "Phiên bản 10. Ghi nhận trao đổi thực tế ở phần Thêm hoạt động để chuyển sang Đã liên hệ. Lưu riêng từng thao tác để giữ nội dung đang soạn."
+  }
+}

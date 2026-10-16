@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "layouts": [
+    {
+      "actions": [
+        {
+          "bottom": 198,
+          "label": "Lưu bản nháp",
+          "right": 1285,
+          "x": 1155
+        },
+        {
+          "bottom": 198,
+          "label": "Xem trước",
+          "right": 1404,
+          "x": 1293
+        }
+      ],
+      "bodyMax": "20000",
+      "documentWidth": 1440,
+      "editorColumns": "834px 280px",
+      "sidebarVisibility": "visible",
+      "titleMax": "160",
+      "width": 1440
+    },
+    {
+      "actions": [
+        {
+          "bottom": 192,
+          "label": "Lưu bản nháp",
+          "right": 877,
+          "x": 747
+        },
+        {
+          "bottom": 192,
+          "label": "Xem trước",
+          "right": 996,
+          "x": 885
+        }
+      ],
+      "bodyMax": "20000",
+      "documentWidth": 1024,
+      "editorColumns": "456px 280px",
+      "sidebarVisibility": "visible",
+      "titleMax": "160",
+      "width": 1024
+    },
+    {
+      "actions": [
+        {
+          "bottom": 192,
+          "label": "Lưu bản nháp",
+          "right": 625,
+          "x": 495
+        },
+        {
+          "bottom": 192,
+          "label": "Xem trước",
+          "right": 744,
+          "x": 633
+        }
+      ],
+      "bodyMax": "20000",
+      "documentWidth": 768,
+      "editorColumns": "418px 280px",
+      "sidebarVisibility": "hidden",
+      "titleMax": "160",
+      "width": 768
+    },
+    {
+      "actions": [
+        {
+          "bottom": 832,
+          "label": "Lưu bản nháp",
+          "right": 191,
+          "x": 17
+        },
+        {
+          "bottom": 832,
+          "label": "Xem trước",
+          "right": 373,
+          "x": 199
+        }
+      ],
+      "bodyMax": "20000",
+      "documentWidth": 390,
+      "editorColumns": "356px",
+      "sidebarVisibility": "hidden",
+      "titleMax": "160",
+      "width": 390
+    },
+    {
+      "actions": [
+        {
+          "bottom": 832,
+          "label": "Lưu bản nháp",
+          "right": 156,
+          "x": 17
+        },
+        {
+          "bottom": 832,
+          "label": "Xem trước",
+          "right": 303,
+          "x": 164
+        }
+      ],
+      "bodyMax": "20000",
+      "documentWidth": 320,
+      "editorColumns": "296px",
+      "sidebarVisibility": "hidden",
+      "titleMax": "160",
+      "width": 320
+    }
+  ],
+  "limits": "Geometry and settled screenshots of representative draft; separate browser mutations have their own evidence."
+}

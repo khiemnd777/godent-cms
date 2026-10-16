@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-16T04:14:49.664Z",
+  "result": "PASS",
+  "actor": "PlatformOnly",
+  "ordinaryExistingLoginAndMfa": true,
+  "permissionOrCredentialChanges": 0,
+  "observations": [
+    {
+      "at": "2026-10-16T04:14:44.187Z",
+      "inputs": 0,
+      "leadDetail": false,
+      "main": "Không có quyền truy cập nha khoa nàyChỉ các nha khoa bạn đang có quyền quản trị mới xuất hiện ở đây.Tài khoản chưa có quyền quản trị nha khoa.Được xây dựng cùng GodentWebsite nha khoa · Nội dung của bạn, thương hiệu của bạn",
+      "path": "/cms/leads",
+      "saveButtons": 0,
+      "tenant": "4e206516-529a-4799-b146-05f950214a00"
+    },
+    {
+      "at": "2026-10-16T04:14:49.631Z",
+      "inputs": 0,
+      "leadDetail": false,
+      "main": "Không có quyền truy cập nha khoa nàyChỉ các nha khoa bạn đang có quyền quản trị mới xuất hiện ở đây.Tài khoản chưa có quyền quản trị nha khoa.Được xây dựng cùng GodentWebsite nha khoa · Nội dung của bạn, thương hiệu của bạn",
+      "path": "/cms/services/3f8db691-8254-4841-826f-8fb5d8d4e2bf",
+      "saveButtons": 0,
+      "tenant": "4e206516-529a-4799-b146-05f950214a00"
+    }
+  ],
+  "scope": "Actual denied shell at private tenant lead and service URLs; no private content/editor/save controls. This is distinct from platform metadata homepage read."
+}

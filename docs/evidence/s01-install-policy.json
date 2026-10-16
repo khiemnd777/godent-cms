@@ -1,0 +1,369 @@
+{
+  "schemaVersion": 1,
+  "task": "GCMS-S01-001",
+  "observedAtUtc": "2026-10-15T16:03:48.095736+00:00",
+  "scope": "Dependency lifecycle policy only; clean-install integration is owned by the coordinator.",
+  "authority": {
+    "reference": "docs/tasks/GCMS-S01-001.md",
+    "scope": "Approved local dependencies and checks; no commit/push/deploy or global changes.",
+    "ownedWrites": [
+      "package.json:trustedDependencies",
+      "docs/evidence/s01-install-policy.json"
+    ]
+  },
+  "installationBoundary": {
+    "root": ".",
+    "packageManager": "bun@1.4.3",
+    "lockfile": "bun.lock",
+    "lockfileAtReviewSha256": "a23d2ba7deb8a0be212c1f049b4b423034f089eaedb9e316e6a617825a112a27",
+    "lockfileStatus": "Trust metadata recorded with scripts disabled; package resolutions and integrities unchanged; clean frozen proof PASS.",
+    "competingRootManagerLockfiles": [],
+    "currentLockSha256": "a930f219e8e876e9645f9f7fea32a05992bdb0c2c04fb6585e4d30bfba35dcdc"
+  },
+  "policy": {
+    "status": "SOURCE_REVIEWED_AND_CLEAN_INSTALL_VERIFIED",
+    "trustedDependencies": [
+      "bun"
+    ],
+    "defaultCuratedAllowlistReplaced": true,
+    "allOtherDependencyLifecycleScripts": "Denied by the explicit Bun allowlist; trust is package-name based and must be reviewed with version/lockfile changes.",
+    "rootWorkspaceLifecycleScripts": [
+      {
+        "path": "package.json",
+        "lifecycleScripts": {}
+      },
+      {
+        "path": "apps/admin/package.json",
+        "lifecycleScripts": {}
+      },
+      {
+        "path": "apps/api/package.json",
+        "lifecycleScripts": {}
+      },
+      {
+        "path": "apps/website/package.json",
+        "lifecycleScripts": {}
+      }
+    ],
+    "globalConfigurationChanged": false
+  },
+  "officialDocumentation": {
+    "url": "https://bun.sh/docs/pm/lifecycle",
+    "retrievedDate": "2026-10-15",
+    "verifiedRules": [
+      "An explicit trustedDependencies field replaces Bun default curated trust.",
+      "An empty array trusts no dependency scripts.",
+      "Omission uses the built-in curated list for npm packages.",
+      "--ignore-scripts disables lifecycle scripts.",
+      "Frozen install runs lifecycle scripts for newly installed packages, not already present packages.",
+      "Bun records the explicit trust list in the lockfile."
+    ],
+    "limit": "Source rules; later coordinator cleanFrozenProof below records actual fresh local behavior."
+  },
+  "initialInstallHistory": {
+    "source": "Coordinator-provided report; not independently rerun by this worker.",
+    "initialInstallAndFrozenInstall": "Used Bun built-in curated dependency script policy; --ignore-scripts was NOT used.",
+    "explicitPerPackagePolicyAtInitialInstall": false,
+    "limit": "This later source review and policy do not retroactively prove that initial execution was script-disabled or explicitly reviewed."
+  },
+  "reviewedScripts": [
+    {
+      "package": "bun",
+      "version": "1.4.3",
+      "decision": "ALLOW",
+      "lifecycle": {
+        "postinstall": "node install.js"
+      },
+      "sources": [
+        {
+          "path": "node_modules/bun/package.json",
+          "sha256": "553d214db5c9e05f00c61796ded151a3a0b89473beeaacd4dbf14cf0cc356865",
+          "bytes": 1168
+        },
+        {
+          "path": "node_modules/bun/install.js",
+          "sha256": "965029860ba2757348106b42804d645bde1c26695cbdc6ba0729ecf949dc7c40",
+          "bytes": 16624
+        }
+      ],
+      "upstreamSourcePointer": "https://github.com/oven-sh/bun/blob/main/packages/bun-release/scripts/npm-postinstall.ts",
+      "upstreamPointerLimit": "Pointer embedded in the installed script; not a byte-for-byte upstream provenance verification.",
+      "behavior": [
+        "Selects platform/architecture and resolves the exact @oven/bun platform optional dependency.",
+        "Executes the optional platform binary with --version.",
+        "Renames the binary into bun/bin/bun.exe, then hard-links or copies bun/bin/bunx.exe.",
+        "If optional resolution or binary execution fails, invokes npm install of the exact platform package in a temporary directory, then can download its exact-version tarball from registry.npmjs.org.",
+        "The fallback tarball path is outside Bun lockfile integrity verification; it is not necessary when the supported optional package resolves.",
+        "The shell installer command in optimizeBun is error text, not an executed curl/shell installer."
+      ],
+      "boundary": [
+        "Script can execute Node, the optional Bun binary, sysctl on translated macOS x64, or npm on fallback.",
+        "Filesystem operations modify the dependency tree and owned temporary directories; no global install path is selected.",
+        "Explicit trust permits this complete reviewed script; an allowlist alone does not disable its npm/download fallback.",
+        "Keep optional dependencies enabled, use an environment without supplied secrets, and stop on any fallback diagnostics for investigation."
+      ]
+    },
+    {
+      "package": "unrs-resolver",
+      "version": "1.12.2",
+      "decision": "DENY_NOT_REQUIRED_ON_SUPPORTED_OPTIONAL_BINDING_PATH",
+      "lifecycle": {
+        "postinstall": "node postinstall.js"
+      },
+      "sources": [
+        {
+          "path": "node_modules/.bun/unrs-resolver@1.12.2/node_modules/unrs-resolver/package.json",
+          "sha256": "3ef3f74675fe31a88dc490e4136178a5fd8f96142df0c565d66be9a894543adf",
+          "bytes": 2909
+        },
+        {
+          "path": "node_modules/.bun/unrs-resolver@1.12.2/node_modules/unrs-resolver/postinstall.js",
+          "sha256": "446a0aeed55eeb28eadd9ac31f0b71654265aba8ca5a99dbc22dab0b26a02469",
+          "bytes": 156
+        },
+        {
+          "path": "node_modules/.bun/unrs-resolver@1.12.2/node_modules/unrs-resolver/index.js",
+          "sha256": "27d182dbbaf5eefe65230cf8ab257037197376ca3da067adae26530401ccd19f",
+          "bytes": 25000
+        },
+        {
+          "path": "node_modules/.bun/napi-postinstall@0.3.4/node_modules/napi-postinstall/lib/index.js",
+          "sha256": "5c2547bb5ff29882a69737fe31509e32efc5a9cf0f4aa832e31e718403d70b04",
+          "bytes": 10533
+        }
+      ],
+      "behavior": [
+        "postinstall.js calls napi-postinstall checkAndPreparePackage(packageJson, true).",
+        "The helper resolves matching optional native binaries; if absent it can run npm install and directly download a registry tarball.",
+        "index.js directly loads a platform-specific optional binding; on this Darwin arm64 host the applicable package is @unrs/resolver-binding-darwin-arm64@1.12.2.",
+        "The runtime fallback invoking napi-postinstall is guarded by process.versions.webcontainer; that path is outside this local macOS Bun proof."
+      ],
+      "sourceConclusion": "Postinstall is not required when the correct optional binding is installed.",
+      "runtimeProof": "PASS in coordinator fresh frozen install: native binding and Next ESLint succeeded with this installer denied."
+    }
+  ],
+  "dependencyLifecycleInventory": [
+    {
+      "name": "@eslint/eslintrc",
+      "version": "3.3.7",
+      "scripts": {
+        "prepare": "npm run build"
+      },
+      "trusted": false
+    },
+    {
+      "name": "@humanfs/core",
+      "version": "0.19.2",
+      "scripts": {
+        "prepare": "npm run build"
+      },
+      "trusted": false
+    },
+    {
+      "name": "@humanfs/node",
+      "version": "0.16.8",
+      "scripts": {
+        "prepare": "npm run build"
+      },
+      "trusted": false
+    },
+    {
+      "name": "@humanfs/types",
+      "version": "0.15.0",
+      "scripts": {
+        "prepare": "npm run build"
+      },
+      "trusted": false
+    },
+    {
+      "name": "@humanwhocodes/module-importer",
+      "version": "1.0.1",
+      "scripts": {
+        "prepare": "npm run build"
+      },
+      "trusted": false
+    },
+    {
+      "name": "@humanwhocodes/retry",
+      "version": "0.4.3",
+      "scripts": {
+        "prepare": "npm run build"
+      },
+      "trusted": false
+    },
+    {
+      "name": "acorn",
+      "version": "8.19.0",
+      "scripts": {
+        "prepare": "cd ..; npm run build:main"
+      },
+      "trusted": false
+    },
+    {
+      "name": "balanced-match",
+      "version": "4.0.4",
+      "scripts": {
+        "prepare": "tshy"
+      },
+      "trusted": false
+    },
+    {
+      "name": "brace-expansion",
+      "version": "5.0.12",
+      "scripts": {
+        "prepare": "tshy"
+      },
+      "trusted": false
+    },
+    {
+      "name": "bun",
+      "version": "1.4.3",
+      "scripts": {
+        "postinstall": "node install.js"
+      },
+      "trusted": true
+    },
+    {
+      "name": "content-type",
+      "version": "2.1.0",
+      "scripts": {
+        "prepare": "ts-scripts install && npm run build"
+      },
+      "trusted": false
+    },
+    {
+      "name": "eslint-visitor-keys",
+      "version": "3.4.3",
+      "scripts": {
+        "prepare": "npm run build"
+      },
+      "trusted": false
+    },
+    {
+      "name": "globals",
+      "version": "14.0.0",
+      "scripts": {
+        "prepare": "npm run --silent update-types"
+      },
+      "trusted": false
+    },
+    {
+      "name": "globals",
+      "version": "16.4.0",
+      "scripts": {
+        "prepare": "npm run build"
+      },
+      "trusted": false
+    },
+    {
+      "name": "hashery",
+      "version": "1.5.1",
+      "scripts": {
+        "prepare": "pnpm build"
+      },
+      "trusted": false
+    },
+    {
+      "name": "hookified",
+      "version": "1.15.1",
+      "scripts": {
+        "prepare": "pnpm build"
+      },
+      "trusted": false
+    },
+    {
+      "name": "is-bun-module",
+      "version": "2.0.0",
+      "scripts": {
+        "prepare": "bun husky"
+      },
+      "trusted": false
+    },
+    {
+      "name": "keyv",
+      "version": "4.5.4",
+      "scripts": {
+        "prepare": "yarn build"
+      },
+      "trusted": false
+    },
+    {
+      "name": "minimatch",
+      "version": "10.2.6",
+      "scripts": {
+        "prepare": "tshy"
+      },
+      "trusted": false
+    },
+    {
+      "name": "path-to-regexp",
+      "version": "8.4.2",
+      "scripts": {
+        "prepare": "ts-scripts install && npm run build"
+      },
+      "trusted": false
+    },
+    {
+      "name": "set-cookie-parser",
+      "version": "3.1.3",
+      "scripts": {
+        "prepare": "husky"
+      },
+      "trusted": false
+    },
+    {
+      "name": "ts-api-utils",
+      "version": "2.5.0",
+      "scripts": {
+        "prepare": "husky"
+      },
+      "trusted": false
+    },
+    {
+      "name": "unrs-resolver",
+      "version": "1.12.2",
+      "scripts": {
+        "postinstall": "node postinstall.js"
+      },
+      "trusted": false
+    },
+    {
+      "name": "zod-validation-error",
+      "version": "4.0.2",
+      "scripts": {
+        "prepare": "husky"
+      },
+      "trusted": false
+    }
+  ],
+  "inventoryLimit": "Installed package-root manifests only; nested test fixtures are excluded. Prepare-only registry package scripts do not justify trust. Inventory is a source snapshot, not an execution trace.",
+  "reviewedLockfileIntegrities": {
+    "bun": "sha512-EvQQ2dUJlixjKgJjeXZvdsHUWIKnVfYufrQNDHa++0YM4XksQ4GtGofEdRnQSiyNp/yUWiX6SlqS8zugZCo+2A==",
+    "@oven/bun-darwin-aarch64": "sha512-u2wAM9RzqyF4baO5oFVhcFUVWO1CCMLG6yC5/aPWCYGZPfL5ULMbeHt+0/3I0h3yaPx1m+PKSANO/61jPtDZcQ==",
+    "unrs-resolver": "sha512-dmlRxBJJayXjqTwC+JtF1HhJmgf3ftQ3YejFcZrf4+KKtJv0qDsK1pjqaaVjG7wJ5NJ6UVP1OqRMQ71Z4C3rxQ==",
+    "@unrs/resolver-binding-darwin-arm64": "sha512-u9DiNT1auQMO20A9SyTuG3wUgQWB9Z7KjAg0uFuCDR1FsAY8A0CG2S6JpHS1xwm/w1G08bjXZDcyOCjv1WAm2w==",
+    "napi-postinstall": "sha512-PHI5f1O0EP5xJ9gQmFGMS6IZcrVvTjpXjz7Na41gTE7eE2hK11lg04CECCYEEjdc17EV4DO+fkGEtt7TpTaTiQ=="
+  },
+  "cleanFrozenProof": {
+    "status": "PASS",
+    "runtime": "bun1.4.3",
+    "installExitCode": 0,
+    "freshNodeModules": true,
+    "secretFreeEnvironmentAndCopy": true,
+    "lockUnchanged": true,
+    "localBunBinary": "1.4.3",
+    "nativeBindingAndNextEslint": "PASS",
+    "eslintExitCode": 0,
+    "temporaryRoot": "/tmp/gcms-s01-clean-762ietcx"
+  },
+  "staticVerification": {
+    "status": "PASS",
+    "checks": [
+      "package.json parses with packageManager bun@1.4.3 and trustedDependencies exactly [bun].",
+      "Root and all three app manifests have no install/prepare lifecycle scripts.",
+      "Evidence records current exact installed source SHA256 and matching package versions.",
+      "Only bun and unrs-resolver package roots in this installed snapshot declare preinstall/install/postinstall; remaining entries are prepare-only."
+    ],
+    "limits": "Source checks plus later coordinator clean frozen proof below; not a trace of every dependency instruction."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "observedAt": "2026-10-16T03:44:10.887Z",
+  "tenantId": "4e206516-529a-4799-b146-05f950214a00",
+  "currentRows": 56,
+  "checks": {
+    "rows56": true,
+    "exactCurrentIdRoster": true,
+    "allTenantScoped": true,
+    "allPublishedSourceMatches": true,
+    "allRetainedBaselineKeys": true,
+    "artifactSameOrdered56": true,
+    "artifactMatchesCurrentCodes": true,
+    "backArraysMatch": true
+  },
+  "idCodeRosterHash": "f3dd71c515f85e11835cbd08684d04499aad79f2596b66efe7c32e4b20896a6a",
+  "artifactHash": "52dc4132281083453f4dc9b8a5a311368137aaceb13b37039b6a74548eca7c6e",
+  "sourceHashes": [
+    {
+      "path": "apps/admin/components/lead-workspace.tsx",
+      "sha256": "b3d6c5b896cd866be6076cfebbd032238011d095337cd9e378926b56d71c24fc"
+    },
+    {
+      "path": "apps/admin/components/lead-filters.tsx",
+      "sha256": "071104614c3c95fea6910f885302cb7728a6e4ccd54487e7f1e8d3c66d6662f8"
+    },
+    {
+      "path": "apps/admin/components/lead-detail.tsx",
+      "sha256": "285901c3c778f05a146790a22961c10b20d8a147c1d63f875d72caf266edf0eb"
+    },
+    {
+      "path": "apps/admin/lib/lead-input.ts",
+      "sha256": "6e93cf3f8a6438c656ad5f6c0194a4c97469008faf82ae4570aa8d5d4a4fdae7"
+    },
+    {
+      "path": "apps/api/src/contracts/s05.ts",
+      "sha256": "c059149c4a988104144911863cdb59e12347437af3d145934c4eeb92a8bbcf28"
+    }
+  ],
+  "scope": "Read-only ID/source correlation plus exact pure comparison of existing browser paging proof; no fresh paging execution or raw contact read.",
+  "remaining": "Fresh current tenant/detail browser correlation and multiAB cross-tenant tabs remain separate."
+}

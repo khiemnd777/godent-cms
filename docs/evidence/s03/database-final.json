@@ -1,0 +1,196 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-16T00:11:18.955Z",
+  "migrations": [
+    {
+      "name": "0001_s02_access.sql",
+      "checksum": "2ae0985dbd0ce36c905161e2b56a322e1afc3b12eb66b8875102defff4c14199"
+    },
+    {
+      "name": "0002_session_mfa_assurance.sql",
+      "checksum": "a6ec21939f829a620f5ce628f9a82edea14ed93d456f1d0fa4c950cd81949bc0"
+    },
+    {
+      "name": "0003_reauth_grant_rls.sql",
+      "checksum": "fc7b11f8d5a54fe442458859fb0a214cda0ac9b78090e087829b90a54b824ccc"
+    },
+    {
+      "name": "0004_s03_publication.sql",
+      "checksum": "ef250975223abad30581d0e4866ef06c6d3dc9f903bed7fefad0030e932d9ed6"
+    }
+  ],
+  "tables": [
+    {
+      "schema": "gcms_s02",
+      "name": "audit_event",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "invitation",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "membership",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "publication_intent",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "publication_pointer",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "publication_snapshot",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "schema_migration",
+      "rls": false,
+      "force_rls": false,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "service_draft",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "site_draft",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "tenant",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02_auth",
+      "name": "account",
+      "rls": false,
+      "force_rls": false,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02_auth",
+      "name": "reauth_grant",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02_auth",
+      "name": "session",
+      "rls": false,
+      "force_rls": false,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02_auth",
+      "name": "two_factor",
+      "rls": false,
+      "force_rls": false,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02_auth",
+      "name": "user",
+      "rls": true,
+      "force_rls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "schema": "gcms_s02_auth",
+      "name": "verification",
+      "rls": false,
+      "force_rls": false,
+      "owner": "gcms_s02_owner"
+    }
+  ],
+  "roles": [
+    {
+      "rolname": "gcms_s02_auth",
+      "rolsuper": false,
+      "rolbypassrls": false,
+      "rolcanlogin": true,
+      "rolcreaterole": false,
+      "rolcreatedb": false
+    },
+    {
+      "rolname": "gcms_s02_migration",
+      "rolsuper": false,
+      "rolbypassrls": false,
+      "rolcanlogin": true,
+      "rolcreaterole": false,
+      "rolcreatedb": false
+    },
+    {
+      "rolname": "gcms_s02_owner",
+      "rolsuper": false,
+      "rolbypassrls": false,
+      "rolcanlogin": false,
+      "rolcreaterole": false,
+      "rolcreatedb": false
+    },
+    {
+      "rolname": "gcms_s02_platform",
+      "rolsuper": false,
+      "rolbypassrls": false,
+      "rolcanlogin": true,
+      "rolcreaterole": false,
+      "rolcreatedb": false
+    },
+    {
+      "rolname": "gcms_s02_tenant",
+      "rolsuper": false,
+      "rolbypassrls": false,
+      "rolcanlogin": true,
+      "rolcreaterole": false,
+      "rolcreatedb": false
+    }
+  ],
+  "publicReadFunctionExecute": {
+    "tenant": true,
+    "auth": false,
+    "platform": false
+  },
+  "ownerMutationGuards": [
+    {
+      "table": "publication_snapshot",
+      "sqlState": "23514",
+      "result": "DENIED_ROLLED_BACK"
+    },
+    {
+      "table": "publication_intent",
+      "sqlState": "23514",
+      "result": "DENIED_ROLLED_BACK"
+    }
+  ],
+  "limit": "Checksums/catalog and rollback-only mutation denial on owned S03 rows; effective runtime authorization separately proved by actual suites."
+}

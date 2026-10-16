@@ -1,0 +1,39 @@
+{
+  "status": "FAIL",
+  "recordedAtUtc": "2026-10-16T01:09:12.707749+00:00",
+  "exitCode": 1,
+  "audit": {
+    "braces": [
+      {
+        "id": 1240992,
+        "url": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+        "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+        "severity": "high",
+        "vulnerable_versions": "<=3.0.3",
+        "cwe": [
+          "CWE-674"
+        ],
+        "cvss": {
+          "score": 7.5,
+          "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      }
+    ]
+  },
+  "disposition": "CONFIRMED fresh independent S04 bounded local deferral; audit remains FAIL, not an inherited S03 waiver or production waiver.",
+  "nextProductionTraceFiles": 32,
+  "advisoryChainTraceReferences": 0,
+  "traceFilesWithReferences": [],
+  "traceObservedAtUtc": "2026-10-16T01:31:12.862912+00:00",
+  "officialReview": "2026-10-16 official GitHub advisory GHSA-vfj7-8cjw-p6xm shows patched versions None; https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+  "reviewer": "Native kit-reviewer xhigh /root/s04_security; final frozen source and32productiontraces reviewed.",
+  "reassessBy": "2026-10-22",
+  "earlierTriggers": [
+    "patch availability",
+    "dependency change",
+    "exposure change",
+    "before production"
+  ],
+  "owner": "Desktop Project Coordinator",
+  "automationCreated": false
+}

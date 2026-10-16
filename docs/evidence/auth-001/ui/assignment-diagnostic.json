@@ -1,0 +1,37 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "PASS",
+  "startedAt": "2026-10-16T05:09:56.755Z",
+  "scope": "Ordinary login and GET-only existing L1/eligible-assignee state after failed assignment. Pure validator reproduction uses synthetic ID. No lead command/settings/business mutation.",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "existingProfileOrCookies": false
+  },
+  "http": {
+    "detailStatus": 200,
+    "assigneeOptionsStatus": 200
+  },
+  "current": {
+    "version": 1,
+    "assignee": null,
+    "peerEligible": true,
+    "peerIdLength": 32,
+    "peerIdIsUuid": false
+  },
+  "pureReproduction": {
+    "syntheticUserIdLength": 32,
+    "assignRejected": true,
+    "recipientsRejected": true
+  },
+  "originalCommandHttpStatus": "UNKNOWN: prior helper did not persist it",
+  "finishedAt": "2026-10-16T05:09:57.737Z"
+}

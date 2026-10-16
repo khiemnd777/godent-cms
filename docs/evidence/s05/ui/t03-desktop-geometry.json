@@ -1,0 +1,41 @@
+{
+  "controls": [
+    {
+      "height": 0,
+      "inPanel": false,
+      "label": "Danh sách yêu cầu",
+      "visible": false,
+      "width": 0,
+      "x": 0
+    },
+    {
+      "height": 40,
+      "inPanel": true,
+      "label": "lead-assignee",
+      "visible": true,
+      "width": 287,
+      "x": 1098
+    },
+    {
+      "height": 40,
+      "inPanel": true,
+      "label": "lead-status",
+      "visible": true,
+      "width": 287,
+      "x": 1098
+    },
+    {
+      "height": 40,
+      "inPanel": true,
+      "label": "Lưu cập nhật",
+      "visible": true,
+      "width": 287,
+      "x": 1098
+    }
+  ],
+  "documentWidth": 1440,
+  "viewport": {
+    "height": 1080,
+    "width": 1440
+  }
+}

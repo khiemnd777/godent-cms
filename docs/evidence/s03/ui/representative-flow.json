@@ -1,0 +1,32 @@
+{
+  "status": "PASS_WITH_SCOPE",
+  "actor": "Existing legitimate A1 browser session; fresh login not executed in this observation",
+  "tenant": "c3000000-0000-4000-8000-000000000001",
+  "service": "b7743bc0-5a21-41bb-a47d-c6af6a320889",
+  "flow": [
+    "CMS tenant selection",
+    "create rich-text VI draft with summary and SEO",
+    "save actual API/DB version1",
+    "reload preserves fields/newlines",
+    "private saved preview renders H2/list and literal script safely"
+  ],
+  "desktop": {
+    "viewport": [
+      1440,
+      1080
+    ],
+    "screenshot": "representative-editor-1440.jpg",
+    "matchedApprovedEditor": "PASS bounded S03 fields/actions; prototype image/history omitted per approved scope"
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "documentWidth": 390,
+    "allThreeActionsVisibleInOrder": true,
+    "actionRectsWithinViewport": true,
+    "screenshot": "representative-editor-390.jpg"
+  },
+  "limit": "Representative checkpoint only; publish/reauth, remaining widths/keyboard/states and final public page still separate."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "observedAt": "2026-10-16T03:59:29.560Z",
+  "tenantsCreated": 1,
+  "invitations": 1,
+  "captures": 1,
+  "captureTokenBoundToExactTenantEmail": true,
+  "captureMode": "0600",
+  "linkLocalAdminOnly": true,
+  "accounts": 0,
+  "members": 0,
+  "externalEmailSent": false,
+  "credentialOrFactorChangedByAgent": false,
+  "limit": "Read-only DB/capture correlation of exact human-authorized provision; user registration/MFA/membership acceptance remain separate."
+}

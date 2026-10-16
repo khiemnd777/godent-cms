@@ -1,0 +1,91 @@
+{
+  "package": "GCMS-AUTH-001 v0.1",
+  "stage": "ORDINARY_USER_IDENTIFIER_REPAIR_SOURCE_REVIEW",
+  "status": "TS_SOURCE_REVIEW_CLOSED_SQL_ASSIGNMENT_FINDING_OPEN",
+  "recordedAtUtc": "2026-10-16T05:13:25.351239+00:00",
+  "runtimeConfiguration": {
+    "status": "PASS",
+    "role": "kit-reviewer",
+    "thread": "01a14283-7099-7a61-a627-171a8bbdbe8f",
+    "parent": "01a1402c-3c81-7933-9927-d974f70c9fbc",
+    "model": "gpt-6.1-sol",
+    "requiredRequestedObservedEffort": [
+      "xhigh",
+      "xhigh",
+      "xhigh"
+    ],
+    "turn": "01a1431d-aa10-7172-8147-09b4ac631ad4",
+    "observedAtUtc": "2026-10-16T05:12:02.679Z"
+  },
+  "scope": [
+    {
+      "path": "apps/api/src/contracts/user-identifier.ts",
+      "sha256": "077e96ac2671d1b3fc51898868f30043acfc8eb7ed194597a321ac8d4959612d"
+    },
+    {
+      "path": "apps/api/src/modules/input.ts",
+      "sha256": "ca13218d94c55d204e9333ee2a8fc5fd697493eff3473d2885a5c6f62b168603"
+    },
+    {
+      "path": "apps/api/src/contracts/lead-operations.ts",
+      "sha256": "3a7b5ba8810837588f5edd904b73e376bd0d8a7e7b9c7fbb610cce97cf009499"
+    },
+    {
+      "path": "apps/api/test/s05-input.test.ts",
+      "sha256": "09caa48642a64ccb1dbf8598412737ba15453d48dac4c73839d4251abfd304b2"
+    }
+  ],
+  "verifiedSource": {
+    "sharedRule": "normalizeUserIdentifier extracts the existing case-preserving string rule: 1-128 characters, ASCII letters/digits/underscore/hyphen. It accepts Better Auth generated text IDs and retained UUID fixtures without changing either ID.",
+    "wrapper": "modules/input.userIdentifier delegates to the pure contract and maps rejection to existing BadRequestException; domain member removal/account disable consumers retain the same accepted identifier set.",
+    "s05Sites": "Only assignment assigneeUserId, list/count assignee filter, and recipientUserIds use the new user parser. Null unassign, me/unassigned query semantics, selected nonempty/unique IDs, sorting and page context remain.",
+    "resourceBoundaries": "Operation IDs and S05 cursor record IDs still use intakeUuid. Lead/tenant route identifiers retain parseIdentifier; public request/publication/challenge IDs retain intakeUuid. Downstream list filters use parameterized text and settings uses text arrays.",
+    "regressions": "New test includes ordinary 32-character mixed-case ID, underscore/hyphen, 128-character boundary and retained UUID across four consumers, including count query. Empty/129-character/whitespace/control/slash/email/non-ASCII/nonstring rejection; null unassign; non-UUID operation/cursor IDs rejected."
+  },
+  "findings": [
+    {
+      "priority": "P1",
+      "status": "OPEN_SOURCE_VERIFIED",
+      "path": "apps/api/migrations/0008_s05_lead_operations.sql",
+      "line": 125,
+      "currentDefinition": "gcms_s05.lead_command(text,text,jsonb); no replacement in migrations0009-0013",
+      "trigger": "Assign an eligible newly registered Better Auth account with a 32-character case-sensitive ID after the TypeScript parser repair.",
+      "finding": "Current SQL assignment input predicate still requires ^[a-f0-9-]{36}$, so the API parser repair alone cannot restore ordinary-account assignment.",
+      "impact": "SQL returns INVALID_INPUT before eligible/row-lock/assignment logic; the approved new-account assignment flow remains incomplete.",
+      "recommendedCorrection": "Preserve all applied migrations. Add a narrow forward migration replacing only the assignee string predicate with the shared 1-128 ASCII user-ID contract. Preserve null unassign, current authorization/eligibility/locking/version/receipt/history semantics.",
+      "requiredCheck": "Actual restricted-role or HTTP assignment to an owned eligible ordinary account succeeds with exactly one new version/history/receipt; same-operation retry replays. Invalid/missing/cross-tenant/inactive/unverified IDs remain denied, and resource UUID boundaries remain unchanged.",
+      "runtimeVerification": "NOT_RUN by reviewer; root/API owner informed before assignment flow resumes."
+    }
+  ],
+  "ownerReportedChecks": {
+    "red": "5 pass / 1 fail / 27 assertions",
+    "green": "10 tests / 123 assertions",
+    "static": "API/test typecheck and focused lint PASS",
+    "limit": "Reported by coordinator/API owner; reviewer did not execute tests."
+  },
+  "inspectedRuntimeArtifact": {
+    "path": "docs/evidence/auth-001/ui/assignment-diagnostic.json",
+    "status": "PASS_FOR_GET_ONLY_DIAGNOSIS",
+    "facts": [
+      "detail200",
+      "assigneeOptions200",
+      "lead version1/unassigned",
+      "eligible peer ID32/nonUUID",
+      "two pure validators rejected before repair"
+    ],
+    "limits": [
+      "Original command HTTP status unknown; prior helper did not persist it.",
+      "No assignment/settings business mutation in this diagnostic.",
+      "The diagnostic alone does not execute or prove the remaining SQL rejection."
+    ]
+  },
+  "retainedIntegrity": {
+    "migration0013Sha256": "89fc0ba78b1fe80c921506fc6c0e57f409da0b7ccc4645f22d713b04b836a2a5",
+    "bunLockSha256": "a930f219e8e876e9645f9f7fea32a05992bdb0c2c04fb6585e4d30bfba35dcdc"
+  },
+  "limits": [
+    "No application, SQL, DB, runtime, browser, private data, dependency or Git mutation by reviewer.",
+    "No new audit/network lookup; prior advisory FAIL/local deferral and reassessment2026-10-22 or earlier patch/dependency/exposure/before production remain.",
+    "New forward SQL repair and final actual UAT artifacts await owner callback. Unchanged core was not re-audited."
+  ]
+}

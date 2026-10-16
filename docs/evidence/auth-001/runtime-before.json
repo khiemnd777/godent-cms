@@ -1,0 +1,48 @@
+{
+  "observedAtUtc": "2026-10-16T04:35:18.730975+00:00",
+  "status": "PASS",
+  "phase": "before_AUTH_cutover",
+  "readOnly": true,
+  "http": [
+    {
+      "url": "http://127.0.0.1:5890/health",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5890/ready",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5891/login",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:5892/",
+      "status": 200
+    }
+  ],
+  "containers": [
+    {
+      "ID": "02fbedfe942e",
+      "Service": "postgres",
+      "State": "running",
+      "Health": "healthy",
+      "Ports": "127.0.0.1:5888->5432/tcp"
+    },
+    {
+      "ID": "669a60ecf6bd",
+      "Service": "redis",
+      "State": "running",
+      "Health": "healthy",
+      "Ports": "127.0.0.1:5889->6379/tcp"
+    },
+    {
+      "ID": "e33baccab765",
+      "Service": "s3",
+      "State": "running",
+      "Health": "healthy",
+      "Ports": "127.0.0.1:5887->8333/tcp"
+    }
+  ],
+  "scope": "Existing local resources only; no restart or database mutation"
+}

@@ -1,0 +1,45 @@
+{
+  "observedAtUtc": "2026-10-16T02:28:53.450709+00:00",
+  "status": "PASS_WITH_NOT_RUN_INTEGRATION_CASES",
+  "command": "./node_modules/.bin/bun test apps/api/test/diagnostics.test.ts apps/api/test/auth-data-policy.test.ts apps/api/test/auth-data-domain-contract.test.ts apps/api/test/domain-input.test.ts apps/api/test/domain-csrf.test.ts apps/api/test/domain-security.test.ts apps/api/test/domain-postgres-shape.test.ts apps/api/test/s03-content.test.ts apps/api/test/s04-input.test.ts apps/api/test/s04-security.test.ts",
+  "exitCode": 0,
+  "passed": 41,
+  "failed": 0,
+  "skipped": 4,
+  "assertions": 213,
+  "limits": "Selected pure/regression checks only. Three S02 invitation integration hooks/case and one optional PostgreSQL error-shape case were not enabled and remain NOT_RUN here. No live S03 publication integration/retained-fixture mutation. Actual S05 DB/HTTP/browser/worker proof is separate.",
+  "optionalPostgresErrorShape": {
+    "status": "PASS_AFTER_LOCAL_CONNECTION_PERMISSION",
+    "command": "S02_ERROR_SHAPE=1 ./node_modules/.bin/bun --env-file=.env --env-file=.local/s02.env test apps/api/test/domain-postgres-shape.test.ts --timeout 15000",
+    "exitCode": 0,
+    "passed": 1,
+    "failed": 0,
+    "assertions": 1,
+    "observedRedactedChain": [
+      "Error",
+      "PostgresError(errno22012)"
+    ],
+    "expectedSqlState": "22012",
+    "diagnosis": "Same unchanged read-only check passes with approved local PostgreSQL connection permission; initial restricted attempt did not reach expected PostgreSQL error. No source/test/DB mutation.",
+    "historicalRestrictedFailure": {
+      "exitCode": 1,
+      "passed": 0,
+      "failed": 1,
+      "assertions": 1,
+      "observedRedactedChain": [
+        "Error",
+        "Error"
+      ]
+    }
+  },
+  "actualS04Intake": {
+    "status": "PASS",
+    "command": "S04_INTEGRATION=1 bun --env-file=.env --env-file=.local/s02.env --env-file=.local/s04.env test apps/api/test/s04-intake-integration.test.ts --test-name-pattern '^(?!.*stable keyset pagination)' --timeout120000",
+    "exitCode": 0,
+    "passed": 14,
+    "failed": 0,
+    "filteredOut": 1,
+    "assertions": 230,
+    "limits": "Only newlycreated synthetic test tenants/session, no retained S04fixture mutation. Historical pagination test excludes allstatus filters; approvedS05 addsstatusfilters and tests currentcursor/count separately. Oldtest unchanged and intentionally filtered, not claimedPASS. BrowserCAPTCHA solving separateNOT_RUN; APIchallengeverifiedwithtestownedchallenge."
+  }
+}

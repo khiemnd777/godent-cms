@@ -1,0 +1,26 @@
+{
+  "heading": "Tham gia quản trị nha khoa",
+  "passwordFields": [
+    {
+      "empty": true,
+      "maxLength": 128,
+      "minLength": 12,
+      "name": "password"
+    },
+    {
+      "empty": true,
+      "maxLength": 128,
+      "minLength": 12,
+      "name": "confirm"
+    }
+  ],
+  "path": "/invitations",
+  "registrationHeading": [
+    "Tạo tài khoản theo lời mời"
+  ],
+  "sensitiveUrlCleared": true,
+  "submitPresent": true,
+  "accountLabel": "M1 UAT Owner",
+  "agentEnteredNewCredential": false,
+  "agentSubmittedRegistration": false
+}

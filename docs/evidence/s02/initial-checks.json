@@ -1,0 +1,47 @@
+{
+  "scope": "Actual early S02 checks; not final acceptance",
+  "checks": [
+    {
+      "check": "bootstrap roles",
+      "status": "PASS"
+    },
+    {
+      "check": "0001 migration",
+      "status": "PASS"
+    },
+    {
+      "check": "0002 session MFA migration",
+      "status": "PASS"
+    },
+    {
+      "check": "fixtures first attempt",
+      "status": "FAIL",
+      "reason": "Explicit env-file omitted root authentication config; no DB reset"
+    },
+    {
+      "check": "fixtures explicit both configuration files",
+      "status": "PASS",
+      "counts": {
+        "tenants": 2,
+        "identities": 6
+      }
+    },
+    {
+      "check": "API build",
+      "status": "PASS"
+    },
+    {
+      "check": "Admin representative production build",
+      "status": "PASS"
+    },
+    {
+      "check": "Public production build",
+      "status": "PASS"
+    },
+    {
+      "check": "first real auth factor integration",
+      "status": "FAIL",
+      "observed": "verify-totp HTTP401; affected flow paused for focused library/session-hook repair"
+    }
+  ]
+}

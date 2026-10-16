@@ -1,0 +1,71 @@
+{
+  "observedAtUtc": "2026-10-16T04:19:01.535028+00:00",
+  "status": "PARTIAL_VERIFIED_LOCAL_UAT",
+  "acceptance": "NOT_FULLY_CLOSED",
+  "baselineFilesCompared": 595,
+  "changedExistingPaths": [
+    "README.md",
+    "AGENTS.md",
+    "docs/project-context.md",
+    "docs/project-state.md",
+    "docs/local-development.md",
+    "docs/skills-manifest.json",
+    "docs/verification-results.md",
+    "docs/project-plan.md",
+    "docs/tasks/README.md"
+  ],
+  "missingExistingPaths": [],
+  "outsideOwnedExistingChanges": [],
+  "preservation": "ui/final-preservation.json",
+  "runtimeRecovery": "runtime-recovery.json",
+  "secretScan": "ui/secret-scan.json",
+  "staticVerification": {
+    "command": "python3 -B scripts/verify_agent_setup.py",
+    "exitCode": 0,
+    "hashes": 81,
+    "adaptations": 9,
+    "mirrors": 28,
+    "skills": 17,
+    "roles": 3,
+    "markdown": 123,
+    "localLinks": 1277,
+    "scope": "Static documentation/package integrity only"
+  },
+  "privateCredentialHandoff": {
+    "path": ".local/m1-uat-login-handoff.md",
+    "exists": true,
+    "mode": "0600",
+    "ignored": true,
+    "existingActorsOnly": [
+      "A1",
+      "A2",
+      "multiAB",
+      "PlatformOnly"
+    ],
+    "newInvitedOwnerLoginReady": false,
+    "secretValuesIncludedInReceipt": false
+  },
+  "completedCriteria": [
+    "T02 existing-account tab isolation and explicit private denial",
+    "T03 exact authorized local invitation and bound capture only",
+    "T07 real committed response discard and same-form same-key retry one lead/intent",
+    "T08 historical56-row paging reuse plus fresh57-row detail/context correlation",
+    "T09 equivalent current editor component loading and recovery"
+  ],
+  "remainingNotRun": [
+    "T03 new-user registration/email verification/MFA/invitation acceptance and negatives",
+    "T04 new-user revoke/disable/last-admin browser flows",
+    "T05 new-password recovery/MFA/backup browser flows",
+    "T06 CAPTCHA browser submission",
+    "Exact unavailable original-record switch/loading checks"
+  ],
+  "audit": "FAIL/open; fresh bounded local deferral; reassess2026-10-22 or earlier stated triggers",
+  "boundaries": [
+    "No application source edits",
+    "No migrations or dependency changes",
+    "No original password/MFA changes",
+    "No commit/push/deploy/external email",
+    "No further manual-step question pending"
+  ],
+  "limit": "Scoped dated evidence and retained row/content projections; not backup restore, complete UAT, human acceptance or production proof"
+}

@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "stage": "opened",
+      "inSidebar": true,
+      "label": "Đóng menu"
+    },
+    {
+      "stage": "shift-tab-wrap",
+      "inSidebar": true,
+      "label": "Cài đặt website"
+    },
+    {
+      "stage": "tab-wrap",
+      "inSidebar": true,
+      "label": "Đóng menu"
+    },
+    {
+      "stage": "escape",
+      "label": "Mở menu"
+    },
+    {
+      "stage": "skip-link",
+      "focused": "main-content"
+    }
+  ]
+}

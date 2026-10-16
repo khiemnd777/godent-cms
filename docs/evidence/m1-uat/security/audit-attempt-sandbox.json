@@ -1,0 +1,20 @@
+{
+  "command": [
+    "./node_modules/.bin/bun",
+    "audit",
+    "--json"
+  ],
+  "startedAtUtc": "2026-10-16T03:36:28.866179+00:00",
+  "endedAtUtc": "2026-10-16T03:36:28.878101+00:00",
+  "exitCode": 1,
+  "stdout": "",
+  "stderr": "[0.20ms] \".env\"\nerror: POST https://registry.npmjs.org/-/npm/v1/security/advisories/bulk - DNSResolveFailed\n",
+  "sandbox": "use_default",
+  "pinnedBun": {
+    "exitCode": 0,
+    "stdout": "1.4.3\n",
+    "stderr": ""
+  },
+  "lockSha256Before": "a930f219e8e876e9645f9f7fea32a05992bdb0c2c04fb6585e4d30bfba35dcdc",
+  "lockSha256After": "a930f219e8e876e9645f9f7fea32a05992bdb0c2c04fb6585e4d30bfba35dcdc"
+}

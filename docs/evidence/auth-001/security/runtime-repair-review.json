@@ -1,0 +1,153 @@
+{
+  "package": "GCMS-AUTH-001 v0.1",
+  "stage": "BOUNDED_0014_RUNTIME_REPAIR_AND_WORKER_ARTIFACT_REVIEW",
+  "status": "ASSIGNMENT_P1_CLOSED_PACKAGE_VERIFICATION_PENDING",
+  "recordedAtUtc": "2026-10-16T05:26:15.633751+00:00",
+  "runtimeConfiguration": {
+    "status": "PASS",
+    "role": "kit-reviewer",
+    "thread": "01a14283-7099-7a61-a627-171a8bbdbe8f",
+    "parent": "01a1402c-3c81-7933-9927-d974f70c9fbc",
+    "model": "gpt-6.1-sol",
+    "requiredRequestedObservedEffort": [
+      "xhigh",
+      "xhigh",
+      "xhigh"
+    ],
+    "turn": "01a1432b-9864-70a3-b544-a13cb902320c",
+    "observedAtUtc": "2026-10-16T05:24:56.646Z"
+  },
+  "newBlockingFindings": [],
+  "findingClosure": {
+    "priority": "P1",
+    "reference": "user-identifier-review.json and forward-0014-review.json",
+    "status": "CLOSED_SOURCE_AND_REVIEWED_OWNER_RUNTIME",
+    "originalFailure": "ui/operations-resume-result.json retains actual400 INVALID_INPUT after the TypeScript repair. Applied0008 assignment SQL predicate was the remaining mismatch.",
+    "repair": "Forward0014 frozen e91f2cde773bba098b8cce046f754c2d62fbb7afdf24d5e8dd4688e15261a429, no0013 rewrite.",
+    "actualMigration": "0014-only apply exit0 then rerun no appliedNames; recorded no repeated session revocation. All four HTTP endpoints200 after restart.",
+    "actualUserFlow": "Existing new ordinary-account assignment200; assignee query200; selected Owner-only recipient settings200. Resume adds0leads/0accounts.",
+    "actualReplay": "Exact successful browser operation key replayed through ordinary restricted tenant service;32-character user,v2,exactly1history/1receipt,all before/after hashes unchanged,no additional assignment."
+  },
+  "workerReview": {
+    "result": "PASS_FOR_BOUNDED_LOCAL_CAPTURE",
+    "newOwnedScope": "Helper checks selected new B tenant and recipient absent from retained baseline, exact three owned lead IDs and current Published source. Active/verified/member eligibility remains; selected recipient is only the fresh owner with inert legacy flagfalse.",
+    "realRoleAndFence": "Actual worker verifyRole, stale-fence process skipped, then3claims/3captured; every settled row/intent captured with attempts1.",
+    "privacy": "Actual private receipt metadata records0600 and exact six generic-message keys/recipient/link/transport. Unchanged LocalLeadCapture source creates/verifies0700directory,0600non-symlink exclusive files, fixed generic subject/text/loginURL and immutable byte reuse. Reviewer did not open private captures.",
+    "repeatAndPreservation": "Repeat claim0 and actual other-tenant intent/delivery hashes unchanged. One bounded tenant claim, no autostart/global poll/backlog drain.",
+    "limits": "Local technical capture only; external mail/real delivery/external exactly-once not tested or claimed. This does not rerun the full S05 crash/race matrix."
+  },
+  "catalogReview": {
+    "status": "PASS",
+    "checks": 12,
+    "functions": 39,
+    "policies": 40,
+    "limits": "Recorded current body/privilege/factor/legacy storage/source-continuity checks. Historical unchanged last-admin race proof is explicitly reuse, not a fresh race execution."
+  },
+  "helperFailurePreservation": {
+    "assignment": "Original generic helper failure and actual read-only diagnosis retained. Single ::text::jsonb receipt comparison repair matches existing application transport. Final replayPASS is separate.",
+    "catalog": "Initial failure retained. JavaScript replacement-string dollar-apostrophe expansion corrected with literal callback; no application/migration delta. Final current12-check catalogPASS is separate."
+  },
+  "lifecycleArtifactReview": {
+    "status": "REVIEWED_SCOPED_OWNER_PASS",
+    "original": "Preserved FAIL after19 confirmed UI checkpoints. Two last-admin409 denials, sole owner remains active, A revocation while B retained, later global disable/oldsession and password401, new A-onlyRecovery account/verification/acceptance/twosessions/distinctpasswordreset/twooldcookies401/tokenreuse400.",
+    "continuation": "Only two sign-ins for the exact already-created Recovery account after11second quiet waits: oldpassword401 INVALID_EMAIL_OR_PASSWORD; newpassword200/private access.0factor requests in continuation.",
+    "integrity": "Original FAIL SHA matches final-result reference; original19 plus continuation2 equals final21 steps. No repeated registration/reset/revoke/disable mutation.",
+    "unknowns": [
+      "Original failed final-login HTTP status was not recorded; throttle is a supported hypothesis, not a verified original response.",
+      "Original whole-run factor request count remains NOT_RECORDED; do not infer zero from continuation."
+    ],
+    "limits": "Reviewed owner artifacts and helper preparation, not reviewer browser execution or independent inspection of private lifecycle helper/credentials."
+  },
+  "publicationSupportingArtifact": "ui/publication-result.json records new no-factor owner saved/published exactly one owned new B service and anonymous render; no retained publication or lead mutation. This is owner-scoped browser evidence, not full publication regression.",
+  "pureArtifactConsistencyChecks": {
+    "uiAll3Http200": true,
+    "uiNoNewResource": true,
+    "replayExactOne": true,
+    "worker3andNoBacklog": true,
+    "capture3mode600": true,
+    "catalog12": true,
+    "migrationOnly14ThenSkip": true,
+    "lifecycle19plus2": true,
+    "originalFailureHashPreserved": true,
+    "lifecycleOld401New200": true
+  },
+  "pureCheckStatus": "PASS",
+  "artifactIntegrity": [
+    {
+      "path": "docs/evidence/auth-001/runtime-user-id-sql-repair.json",
+      "sha256": "d2f838ee7b56352ebcf00ec1904fa613c3fc24fda76abd3354bb1142c587eb10"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/operations-resume-result.json",
+      "sha256": "1a334789f41db00af097b693563b180b455e01b1c90c6e352753ebcfc00372ac"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/operations-sql-resume-result.json",
+      "sha256": "1bf8f864138a2e5a35aa1885cee137468e8deacd02418193a2bd2a92cfd35543"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/assignment-exact-replay.json",
+      "sha256": "8004b04eb7ebbb53e2d204578d40f747525e3b0402420eac36ea67c906640877"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/assignment-proof-helper-repair.json",
+      "sha256": "e67005e0d09a6dad08ae69e84296e27e75c62d5fd90c9ce0c6e3c1312b0c00a1"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/worker-local-capture.json",
+      "sha256": "becf909813c92cd94b366d2fb4fcd53e5444b5c1e7b13d5d7f192f1937f1168e"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/catalog-before-helper-repair.json",
+      "sha256": "44a1acbdf8c916724f4dd41a8d2a9479db7799e7b4d01531ecc61336ae40119a"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/catalog-helper-repair.json",
+      "sha256": "be3c2e790bbe8244cb3a0758af19598b21201929aebfe6b7fe9c7fc610ef5ff7"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/catalog.json",
+      "sha256": "e089ff439117f83ec809c5a9867d6c9de261c64687c44ec45d0b4d4edbec17d3"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/lifecycle/result.json",
+      "sha256": "dc0dba3a4b32fb8e5a8833504a2c4ff45799b5f9d5335a73e2851ed2e8023762"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/lifecycle/password-login-continuation.json",
+      "sha256": "1f8355c3ce223629831eed452a4970a0d36de99fa6134aa022539cfef81511de"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/lifecycle/final-result.json",
+      "sha256": "3252eb322c742444d8447eb23080f5d7fd8495fadf2562423965baf93f4d02a7"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/publication-result.json",
+      "sha256": "0b0bb99d2893f721a023119753e536b4faf409a9f1893423cd0085000f661b47"
+    }
+  ],
+  "supportingSourceIntegrity": [
+    {
+      "path": "scripts/auth-001-worker-check.ts",
+      "sha256": "401277b940c56e6403e32b4df920f3d5938f66131810faf9fe33974f601d444b"
+    },
+    {
+      "path": "scripts/auth-001-assignment-proof.ts",
+      "sha256": "4ca91986401276c4540aaf747088c7394a9f66e2965466f3fef281aa8dc701d7"
+    },
+    {
+      "path": "scripts/auth-001-catalog.ts",
+      "sha256": "2f803ff98decdc600a2c40dcb37ab257c961c9c49c73795e134202f975a2b24f"
+    },
+    {
+      "path": "apps/api/src/worker/local-capture.ts",
+      "sha256": "97b2d10f21afdf04ded1b44dbc7e84121ccbbc73ec008805624f27169f9544cb"
+    }
+  ],
+  "limits": [
+    "No app/SQL/private/browser/DB/runtime/dependency/Git writes or runtime tests by reviewer. Only owned security evidence was written.",
+    "Final negative UI, bounded API integration suites, final preservation/build traces remain separate pending owner callbacks; this does not close AUTH or M1/human acceptance.",
+    "Original helper/UI failures and previous source review snapshots remain intact.",
+    "Dependency audit remains FAIL/local-only deferral; no new audit/network lookup. Reassess2026-10-22 or earlier patch/dependency/exposure/before production; no production waiver."
+  ]
+}

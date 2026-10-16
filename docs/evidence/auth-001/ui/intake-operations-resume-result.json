@@ -1,0 +1,130 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "FAIL",
+  "startedAt": "2026-10-16T05:08:20.785Z",
+  "steps": [
+    {
+      "step": "existing-L1-correlated-no-resubmission",
+      "at": "2026-10-16T05:08:21.807Z"
+    },
+    {
+      "step": "L2-request-key-captured",
+      "at": "2026-10-16T05:08:21.912Z"
+    },
+    {
+      "step": "L2-accepted-once",
+      "at": "2026-10-16T05:08:21.913Z"
+    },
+    {
+      "step": "L2-public-ACK",
+      "requestKeyHash": "24784d1cd4d8b8c9a7f639a5efbeb3400eab98336de72d6daa1d8ef00fe6604c",
+      "at": "2026-10-16T05:08:21.913Z"
+    },
+    {
+      "step": "L3-request-key-captured",
+      "at": "2026-10-16T05:08:22.038Z"
+    },
+    {
+      "step": "L3-accepted-once",
+      "at": "2026-10-16T05:08:22.268Z"
+    },
+    {
+      "step": "L3-public-ACK",
+      "requestKeyHash": "cf926b145d5f124446cf2f9f8920ae3486a3eced644c2afa83d887c0150ab808",
+      "at": "2026-10-16T05:08:22.268Z"
+    },
+    {
+      "step": "three-public-leads-correlated-to-real-CMS-IDs",
+      "at": "2026-10-16T05:08:22.331Z"
+    }
+  ],
+  "scope": "Continuation preserves original committed L1, submits ONLY remaining L2/L3, exactly3 total newBpublic leads; third local arithmetic challenge required/invalid/valid through actual form. Authenticated CMS count2afterinvalid/count3aftervalid, Peer assignment, both new factor-free eligible options and selectedOwnerONLY recipient config. No retained source/counter changes or worker dispatch.",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "headless": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "existingProfileOrCookies": false,
+    "CDP": false,
+    "downloads": false
+  },
+  "browserVersion": "155.0.8059.80",
+  "before": {
+    "count": 1,
+    "originalL1Resubmitted": false,
+    "originalL1HeaderProof": "NOT_RUN: original security headers were not captured"
+  },
+  "requestHeaderChecks": [
+    {
+      "label": "L2",
+      "status": 200,
+      "originPresent": true,
+      "originMatches": true,
+      "cookiePresent": false,
+      "authorizationPresent": false,
+      "forwardedForPresent": false
+    },
+    {
+      "label": "L3",
+      "status": 428,
+      "originPresent": true,
+      "originMatches": true,
+      "cookiePresent": false,
+      "authorizationPresent": false,
+      "forwardedForPresent": false
+    },
+    {
+      "label": "L3",
+      "status": 400,
+      "originPresent": true,
+      "originMatches": true,
+      "cookiePresent": false,
+      "authorizationPresent": false,
+      "forwardedForPresent": false
+    },
+    {
+      "label": "L3",
+      "status": 200,
+      "originPresent": true,
+      "originMatches": true,
+      "cookiePresent": false,
+      "authorizationPresent": false,
+      "forwardedForPresent": false
+    }
+  ],
+  "afterInvalid": {
+    "count": 2,
+    "pageItems": 2,
+    "status": 400
+  },
+  "challenge": {
+    "requiredStatus": 428,
+    "invalidStatus": 400,
+    "validStatus": 200,
+    "sameKey": true,
+    "sameFrozenPayload": true,
+    "adapter": "ordinary-local-arithmetic",
+    "counterReset": false
+  },
+  "afterValid": {
+    "count": 3,
+    "pageItems": 3
+  },
+  "failure": {
+    "phase": "new-no-factor-Peer-assignment",
+    "name": "Error",
+    "assertion": "ASSIGN_STATUS",
+    "strict": false,
+    "detached": false,
+    "timeout": false,
+    "rawDetailsRedacted": true
+  },
+  "finishedAt": "2026-10-16T05:08:22.512Z"
+}

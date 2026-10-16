@@ -1,0 +1,35 @@
+import { ArgumentsHost, Body, Catch, Controller, ExceptionFilter, Get, HttpCode, Inject, Module, Param, Post, Put, Query, Req, UseFilters, type DynamicModule } from '@nestjs/common';
+import { PublicationServiceOperations, ReauthenticationRequired } from './publication.service';
+import type { PrivateRequest } from './request-security';
+
+const PUBLICATION_SERVICE=Symbol('PUBLICATION_SERVICE');
+@Catch(ReauthenticationRequired)
+class ReauthenticationFilter implements ExceptionFilter {
+  catch(_error:ReauthenticationRequired,host:ArgumentsHost) {
+    host.switchToHttp().getResponse().status(403).json({statusCode:403,error:'Forbidden',code:'REAUTH_REQUIRED'});
+  }
+}
+@Controller('api/tenants/:tenantId/publication')
+@UseFilters(ReauthenticationFilter)
+class PublicationController {
+  constructor(@Inject(PUBLICATION_SERVICE) private readonly service:PublicationServiceOperations) {}
+  @Get('site') site(@Req() r:PrivateRequest,@Param('tenantId') tenant:string) {return this.service.getSite(r,tenant);}
+  @Put('site') saveSite(@Req() r:PrivateRequest,@Param('tenantId') tenant:string,@Body() input:unknown) {return this.service.saveSite(r,tenant,input);}
+  @Get('services') list(@Req() r:PrivateRequest,@Param('tenantId') tenant:string,@Query('cursor') cursor?:string) {return this.service.list(r,tenant,cursor);}
+  @Post('services') create(@Req() r:PrivateRequest,@Param('tenantId') tenant:string,@Body() input:unknown) {return this.service.create(r,tenant,input);}
+  @Get('services/:id') get(@Req() r:PrivateRequest,@Param('tenantId') tenant:string,@Param('id') id:string) {return this.service.read(r,tenant,id);}
+  @Put('services/:id') save(@Req() r:PrivateRequest,@Param('tenantId') tenant:string,@Param('id') id:string,@Body() input:unknown) {return this.service.save(r,tenant,id,input);}
+  @Get('services/:id/preview') preview(@Req() r:PrivateRequest,@Param('tenantId') tenant:string,@Param('id') id:string) {return this.service.preview(r,tenant,id);}
+  @Post('services/:id/publish') @HttpCode(200)
+  publish(@Req() r:PrivateRequest,@Param('tenantId') tenant:string,@Param('id') id:string,@Body() input:unknown) {return this.service.publish(r,tenant,id,input);}
+}
+@Controller('api/public/sites')
+class PublicServiceController {
+  constructor(@Inject(PUBLICATION_SERVICE) private readonly service:PublicationServiceOperations) {}
+  @Get(':tenant/services/:slug') read(@Req() r:PrivateRequest,@Param('tenant') tenant:string,@Param('slug') slug:string) {return this.service.publicRead(r,tenant,slug);}
+}
+@Module({})
+class PublicationModule {}
+export function createPublicationModule(service:PublicationServiceOperations):DynamicModule {
+  return {module:PublicationModule,controllers:[PublicationController,PublicServiceController],providers:[{provide:PUBLICATION_SERVICE,useValue:service}]};
+}

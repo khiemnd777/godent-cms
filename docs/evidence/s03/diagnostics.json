@@ -1,0 +1,69 @@
+{
+  "scope": "S03 regression of S01 diagnostic API contracts",
+  "apiRecordedAt": "2026-10-16T00:21:43.128Z",
+  "apiChecks": {
+    "health": {
+      "status": "PASS",
+      "body": {
+        "status": "ok",
+        "scope": "process",
+        "runtime": "bun",
+        "version": "1.4.3"
+      },
+      "implicitCors": false,
+      "sessionCookie": false
+    },
+    "readiness": {
+      "status": "PASS",
+      "httpStatus": 200
+    },
+    "validation": {
+      "status": "PASS",
+      "valid": 1,
+      "invalid": 5,
+      "errorsRedacted": true
+    },
+    "notFound": {
+      "status": "PASS",
+      "cases": 3,
+      "scope": "diagnostic routes only; auth is checked separately by S02"
+    },
+    "shutdownSIGTERM": {
+      "status": "PASS",
+      "exitCode": 143,
+      "listenerClosed": true
+    },
+    "unavailable-postgres": {
+      "status": "PASS",
+      "httpStatus": 503,
+      "services": {
+        "postgres": "unavailable",
+        "redis": "available",
+        "s3": "available"
+      }
+    },
+    "shutdownSIGINT": {
+      "status": "PASS",
+      "exitCode": 130,
+      "listenerClosed": true
+    },
+    "unavailable-redis": {
+      "status": "PASS",
+      "httpStatus": 503,
+      "services": {
+        "postgres": "available",
+        "redis": "unavailable",
+        "s3": "available"
+      }
+    },
+    "unavailable-s3": {
+      "status": "PASS",
+      "httpStatus": 503,
+      "services": {
+        "postgres": "available",
+        "redis": "available",
+        "s3": "unavailable"
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "package": "GCMS-AUTH-001 v0.1",
+  "stage": "INITIAL_CORE_SOURCE_REVIEW",
+  "status": "CORE_SOURCE_CLOSED_RUNTIME_PENDING",
+  "recordedAtUtc": "2026-10-16T04:41:01.334141+00:00",
+  "approvalSource": "docs/tasks/GCMS-AUTH-001.md and docs/decisions/010-password-only-mvp.md; direct human approval verified by coordinator",
+  "runtimeConfiguration": {
+    "status": "PASS",
+    "role": "kit-reviewer",
+    "thread": "01a14283-7099-7a61-a627-171a8bbdbe8f",
+    "parent": "01a1402c-3c81-7933-9927-d974f70c9fbc",
+    "turn": "01a14300-492c-7de1-961f-0a5279823616",
+    "observedAtUtc": "2026-10-16T04:37:38.017Z",
+    "model": "gpt-6.1-sol",
+    "requiredRequestedObservedEffort": [
+      "xhigh",
+      "xhigh",
+      "xhigh"
+    ]
+  },
+  "scope": [
+    "apps/api/src/auth/index.ts",
+    "apps/api/src/database/index.ts",
+    "apps/api/src/database/schema.ts",
+    "apps/api/src/modules/input.ts",
+    "apps/api/src/modules/domain.service.ts",
+    "apps/api/src/modules/leads.service.ts",
+    "apps/api/migrations/0013_auth_password_only.sql",
+    "scripts/auth-001-migrate.ts"
+  ],
+  "sourceIntegrity": [
+    {
+      "path": "apps/api/src/auth/index.ts",
+      "sha256": "216bda6c1a9cf47e16828fbf7906ca89fb4e595ceda1c6e3afe5a6e4a7b019e6"
+    },
+    {
+      "path": "apps/api/src/database/index.ts",
+      "sha256": "ff9dd13165071de316ff5b39ba68ede84f8c72c6737050c84ac72ff04201a16c"
+    },
+    {
+      "path": "apps/api/src/database/schema.ts",
+      "sha256": "779e9e5790ef67639da535a53f68e7e8380cba8ce5e9b59cac6b8ea8b508e5db"
+    },
+    {
+      "path": "apps/api/src/modules/input.ts",
+      "sha256": "0e05dab471def62714fa34188e17321c9dacb8dd11566026a55d339191af6a28"
+    },
+    {
+      "path": "apps/api/src/modules/domain.service.ts",
+      "sha256": "caa6823096ba39a227ff29ae54675df95903679750f2de8678db040b217ac197"
+    },
+    {
+      "path": "apps/api/src/modules/leads.service.ts",
+      "sha256": "a78248f8d829d857301179ba6385c6810951814d558d915b4b75f29736e5c19c"
+    },
+    {
+      "path": "apps/api/migrations/0013_auth_password_only.sql",
+      "sha256": "89fc0ba78b1fe80c921506fc6c0e57f409da0b7ccc4645f22d713b04b836a2a5"
+    },
+    {
+      "path": "scripts/auth-001-migrate.ts",
+      "sha256": "48e343a57d5e99266bc5338ded20eacf012ea32510ddfe3d3354f833ffbe0983"
+    }
+  ],
+  "findingHistory": [
+    {
+      "priority": "P1",
+      "path": "apps/api/migrations/0013_auth_password_only.sql",
+      "line": 102,
+      "trigger": "Any recipient-settings command after cutover",
+      "finding": "settings_command initially called authorize(text), but only authorize(text,boolean) exists with no default.",
+      "impact": "Recipient settings would fail function resolution instead of applying write authorization.",
+      "recommendedCorrection": "Call gcms_s05.authorize(p_tenant,true) before recent-auth/input/receipt handling.",
+      "status": "FIXED_BEFORE_APPLY_SOURCE_VERIFIED",
+      "verifiedCorrection": "Explicit two-argument true call present, one-argument call absent, order preserved.",
+      "verifiedMigrationSha256": "89fc0ba78b1fe80c921506fc6c0e57f409da0b7ccc4645f22d713b04b836a2a5",
+      "runtimeRegression": "NOT_RUN by reviewer; owner preparing actual restricted-role settings/recent/replay/suspended checks."
+    }
+  ],
+  "openBlockingSourceFindings": [],
+  "verifiedSource": {
+    "auth": "No twoFactor plugin/routes/hooks or mapped MFA/session fields; unchanged verified-email/password12-128/session8h/reset revocation/rate/cookie/Origin/Host protections. Existing response token redaction remains.",
+    "currentActor": "lock_actor validates live active+verified user and bound current session, <=now and <8h; transaction GUC and row locking retained.",
+    "authorization": "withPlatform still requires platformAdmin; withTenant/invitation and domain mutations retain tenant/current membership/status/CSRF/binding/expiry controls. Suspended lead reads remain separate from active-only mutations.",
+    "recentPassword": "requireRecent, disableUser, publication trigger and recipient settings use has_recent_auth; current session and non-future5min login/grant timestamps required. Reauth accepts only password, validates old session again, writes only session-bound verified/expires metadata.",
+    "membership": "New canonical has_current_membership checks active verified user/current valid session/active membership. Exact old has_membership(text,boolean defaulttrue) wrapper preserved with p_mfa unused. Active policies/callers use canonical helper.",
+    "sqlPrivileges": "New security-definer helpers have fixed pg_catalog search_path, explicit PUBLIC revoke and tenant/platform EXECUTE grants. Existing policies/FORCE-RLS and last-admin triggers are not disabled/dropped. Actual catalog state pending.",
+    "s05": "has_lead_access preserves tenant context and active/suspended read; authorize keeps active-onlywrite. eligible and assignee-options remove only MFA condition while retaining active verified membership. Existing worker functions call current eligibility and preserve their separate tenant/deadline/fencing rules.",
+    "legacyFactors": "No two_factor ORM mapping, factor API, fake MFA boolean or migration factor-row/column DML/DROP. Encrypted legacy storage preservation must be measured by root before/after, not inferred as runtime proof.",
+    "cutover": "Runner checks explicit local marker/project, validated migration role, SET LOCAL owner, same migration advisory lock, exact13file set, all retained checksums, existing ledger and onlynew0013. One transaction includes0013 plus ledger; source deletes all grants/sessions once. Re-run skips ledger entry and source is not re-executed."
+  },
+  "verificationLimits": {
+    "independentTests": "NOT_RUN: first bounded source review only",
+    "actualMigration": "NOT_RUN by reviewer",
+    "effectiveRlsGrants": "Pending root actual catalog/restricted-role proof",
+    "cutoverOldSessionRevocationAndRerun": "Pending root actual HTTP/DB proof",
+    "legacyFactorAndCredentialBusinessPreservation": "Pending root before/after proof",
+    "frontendFullConsistency": "Pending frozen frontend review callback",
+    "actualAffectedApiDbWorkerNegativeTests": "Pending owner execution;49puretests257assertions and98integrationSKIP reported by owner are not actual integration proof",
+    "browserUat": "Pending owner execution",
+    "dependencyAudit": "No new audit executed; prior braces FAIL/local deferral remains separate. No upgrade authorized."
+  },
+  "permissions": "Reviewer source reads and evidence writes only under docs/evidence/auth-001/security; no source/tests/DB/browser/migrations/dependency/Git/private/runtime mutation or delegation."
+}

@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-16T02:20:23.163488+00:00",
+  "services": [
+    {
+      "service": "postgres",
+      "id": "02fbedfe942e",
+      "image": "postgres:18.4-alpine@sha256:9a8afca54e7861fd90fab5fdf4c42477a6b1cb7d293595148e674e0a3181de15",
+      "health": "healthy",
+      "publishers": [
+        {
+          "URL": "127.0.0.1",
+          "TargetPort": 5432,
+          "PublishedPort": 5888,
+          "Protocol": "tcp"
+        }
+      ]
+    },
+    {
+      "service": "redis",
+      "id": "669a60ecf6bd",
+      "image": "redis:7.4.9-alpine3.21@sha256:6ab0b6e7381779332f97b8ca76193e45b0756f38d4c0dcda72dbb3c32061ab99",
+      "health": "healthy",
+      "publishers": [
+        {
+          "URL": "127.0.0.1",
+          "TargetPort": 6379,
+          "PublishedPort": 5889,
+          "Protocol": "tcp"
+        }
+      ]
+    },
+    {
+      "service": "s3",
+      "id": "e33baccab765",
+      "image": "chrislusf/seaweedfs:4.48@sha256:4e61d15fd35994cb1e43e1e553dff106794841fd9a99ade2fc8c8bfce4d7872d",
+      "health": "healthy",
+      "publishers": [
+        {
+          "URL": "127.0.0.1",
+          "TargetPort": 8333,
+          "PublishedPort": 5887,
+          "Protocol": "tcp"
+        }
+      ]
+    }
+  ],
+  "database": {
+    "database": "gcms_s01",
+    "migrations": [
+      "0001_s02_access.sql",
+      "0002_session_mfa_assurance.sql",
+      "0003_reauth_grant_rls.sql",
+      "0004_s03_publication.sql",
+      "0005_s04_consultation.sql",
+      "0006_s04_anonymous_audit.sql",
+      "0007_s04_email_syntax.sql"
+    ],
+    "identities": 11,
+    "memberships": 126
+  },
+  "originalRowCounts": {
+    "gcms_s02.service_draft": 70,
+    "gcms_s02.site_draft": 37,
+    "gcms_s02.publication_snapshot": 50,
+    "gcms_s02.publication_pointer": 43,
+    "gcms_s02.publication_intent": 50,
+    "gcms_s02.schema_migration": 7,
+    "gcms_s04.lead": 53,
+    "gcms_s04.notification_intent": 53,
+    "gcms_s04.accepted_request": 52,
+    "gcms_s04.audit_event": 53
+  },
+  "comparisonContract": "Compare original-column projections after approved additive backfill; retain all original business values/status/expiry/intents outside new S05 fixtures. New columns may be added.",
+  "privateFilesBaseline": [
+    ".env",
+    ".local/s02.env",
+    ".local/s04.env",
+    ".local/s02-fixtures.json",
+    ".local/s03-fixtures.json",
+    ".local/s04-fixtures.json",
+    ".local/s04-before.sql"
+  ],
+  "backup": {
+    "bytes": 416259,
+    "sha256": "bc20d60a8ef4656d8c36a9f23d9614d3a56d914da1e5bf5dcd425a1b267607b6",
+    "mode": "0600"
+  },
+  "limit": "Preflight/read-only original database observations and private backup; backup restore NOT_RUN. No role/password/resource reset, migration or fixture mutation."
+}

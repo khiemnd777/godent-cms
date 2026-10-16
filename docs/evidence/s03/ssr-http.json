@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-16T00:13:48.632759+00:00",
+  "publicUrl": "http://localhost:5892/s03-synthetic-a/dich-vu/loss-98943c6a-9fe1-418f-97c0-b4b99ca27646",
+  "htmlWithoutJavaScript": {
+    "status": 200,
+    "h1MatchesPublishedSnapshot": true,
+    "lang": "vi",
+    "absoluteCanonical": "http://localhost:5892/s03-synthetic-a/dich-vu/loss-98943c6a-9fe1-418f-97c0-b4b99ca27646",
+    "localNoindex": true,
+    "noAdminCookie": true,
+    "noStore": true
+  },
+  "httpCases": [
+    {
+      "case": "HEAD",
+      "status": 200
+    },
+    {
+      "case": "forwarded-host",
+      "status": 200
+    },
+    {
+      "case": "wrong-host",
+      "status": 421
+    },
+    {
+      "case": "unknown-tenant",
+      "status": 404
+    },
+    {
+      "case": "draft-only",
+      "status": 404
+    },
+    {
+      "case": "encoded-path",
+      "status": 404
+    },
+    {
+      "case": "reserved-tenant",
+      "status": 404
+    }
+  ],
+  "limit": "Actual local HTTP/SSR and header cases; browser rendering separate, no live domain/DNS/indexing/EN/custom-domain claim."
+}

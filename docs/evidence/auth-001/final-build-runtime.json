@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-16T05:00:56.987657+00:00",
+  "http": [
+    {
+      "url": "http://127.0.0.1:5890/health",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5890/ready",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5891/login",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:5892/",
+      "status": 200
+    }
+  ],
+  "finalTypecheckExitCode": 0,
+  "finalLintExitCode": 0,
+  "finalAdminBuildExitCode": 0,
+  "sessionRevocationRepeated": false,
+  "processes": {
+    "launcher": 29526,
+    "runtime": "1.4.3",
+    "processes": [
+      {
+        "name": "api",
+        "port": 5890,
+        "pid": 29527
+      },
+      {
+        "name": "admin",
+        "port": 5891,
+        "pid": 29528
+      },
+      {
+        "name": "website",
+        "port": 5892,
+        "pid": 29529
+      }
+    ]
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "task": "GCMS-UX-001 Lucide update",
+  "date": "2026-10-15T14:45:42.689Z",
+  "package": "lucide",
+  "version": "1.8.0",
+  "scope": "Prototype icons only; no application or full-regression proof",
+  "checks": [
+    {
+      "screen": "platform",
+      "viewport": {
+        "width": 1440,
+        "height": 1050,
+        "label": "desktop"
+      },
+      "lucide": 20,
+      "scrollWidth": 1440,
+      "svgs": 20,
+      "title": "Nha khoa",
+      "unnamedButtons": 0,
+      "width": 1440,
+      "pass": true
+    },
+    {
+      "screen": "overview",
+      "viewport": {
+        "width": 1440,
+        "height": 1050,
+        "label": "desktop"
+      },
+      "lucide": 46,
+      "scrollWidth": 1440,
+      "svgs": 46,
+      "title": "Chào Minh, một ngày tốt lành.",
+      "unnamedButtons": 0,
+      "width": 1440,
+      "pass": true
+    },
+    {
+      "screen": "editor",
+      "viewport": {
+        "width": 1440,
+        "height": 1050,
+        "label": "desktop"
+      },
+      "lucide": 37,
+      "scrollWidth": 1440,
+      "svgs": 37,
+      "title": "Chăm sóc răng định kỳ",
+      "unnamedButtons": 0,
+      "width": 1440,
+      "pass": true
+    },
+    {
+      "screen": "leads",
+      "viewport": {
+        "width": 1440,
+        "height": 1050,
+        "label": "desktop"
+      },
+      "lucide": 34,
+      "scrollWidth": 1440,
+      "svgs": 34,
+      "title": "Yêu cầu tư vấn",
+      "unnamedButtons": 0,
+      "width": 1440,
+      "pass": true
+    },
+    {
+      "screen": "platform",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "label": "mobile"
+      },
+      "lucide": 20,
+      "scrollWidth": 390,
+      "svgs": 20,
+      "title": "Nha khoa",
+      "unnamedButtons": 0,
+      "width": 390,
+      "pass": true
+    },
+    {
+      "screen": "overview",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "label": "mobile"
+      },
+      "lucide": 46,
+      "scrollWidth": 390,
+      "svgs": 46,
+      "title": "Chào Minh, một ngày tốt lành.",
+      "unnamedButtons": 0,
+      "width": 390,
+      "pass": true
+    },
+    {
+      "screen": "editor",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "label": "mobile"
+      },
+      "lucide": 37,
+      "scrollWidth": 390,
+      "svgs": 37,
+      "title": "Chăm sóc răng định kỳ",
+      "unnamedButtons": 0,
+      "width": 390,
+      "pass": true
+    },
+    {
+      "screen": "leads",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "label": "mobile"
+      },
+      "lucide": 34,
+      "scrollWidth": 390,
+      "svgs": 34,
+      "title": "Yêu cầu tư vấn",
+      "unnamedButtons": 0,
+      "width": 390,
+      "pass": true
+    },
+    {
+      "check": "Lucide SVG click opens mobile menu",
+      "pass": true
+    },
+    {
+      "check": "Escape still closes mobile menu",
+      "pass": true
+    },
+    {
+      "check": "Lucide Heading2 button preserves mock insert behavior",
+      "pass": true
+    },
+    {
+      "check": "320px editor actions remain fully in viewport",
+      "bounds": [
+        {
+          "bottom": 834,
+          "left": 8,
+          "right": 93.2421875,
+          "text": "Lưu bản nháp",
+          "top": 792
+        },
+        {
+          "bottom": 834,
+          "left": 98.2421875,
+          "right": 167.296875,
+          "text": "Xem trước",
+          "top": 792
+        },
+        {
+          "bottom": 834,
+          "left": 172.296875,
+          "right": 312,
+          "text": "Cập nhật website",
+          "top": 792
+        }
+      ],
+      "pass": true
+    }
+  ]
+}

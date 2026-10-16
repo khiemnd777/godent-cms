@@ -1,0 +1,59 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "PASS",
+  "startedAt": "2026-10-16T04:49:12.981Z",
+  "steps": [
+    {
+      "step": "unverified-login-response",
+      "at": "2026-10-16T04:49:13.754Z",
+      "status": 403
+    },
+    {
+      "step": "unverified-login-403-scoped-error-no-accept",
+      "at": "2026-10-16T04:49:13.804Z"
+    },
+    {
+      "step": "exact-owned-existing-capture",
+      "at": "2026-10-16T04:49:13.807Z"
+    },
+    {
+      "step": "verified-password-session-without-membership",
+      "at": "2026-10-16T04:49:14.030Z"
+    },
+    {
+      "step": "accepted-exact-tenantA",
+      "at": "2026-10-16T04:49:14.386Z"
+    },
+    {
+      "step": "authorized-owner-CMS-no-factor",
+      "at": "2026-10-16T04:49:14.535Z"
+    }
+  ],
+  "scope": "Resume the exact already-registered unverified owner. No registration, new password, new account or tenant; use existing private credentials and exact owned local verification capture.",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "headless": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "existingProfileOrCookies": false,
+    "CDP": false,
+    "downloads": false
+  },
+  "browserVersion": "155.0.8059.80",
+  "alertCounts": {
+    "global": 2,
+    "scopedMain": 1
+  },
+  "newRegistrations": 0,
+  "existingRegisteredOwnerCompleted": 1,
+  "registrationRequests": 0,
+  "factorRequests": 0,
+  "finishedAt": "2026-10-16T04:49:14.598Z"
+}

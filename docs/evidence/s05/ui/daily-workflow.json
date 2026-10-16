@@ -1,0 +1,60 @@
+[
+  {
+    "step": "before-note",
+    "observation": {
+      "globalNewBadge": "55",
+      "resultCount": "1 yêu cầu phù hợp · 1 trên trang này",
+      "retention": "Thời hạn lưu đến 09:28 14/4/27. Xem hoặc đổi người phụ trách không kéo dài thời hạn lưu.",
+      "status": "assigned",
+      "version": "Phiên bản 2. Ghi nhận trao đổi thực tế ở phần Thêm hoạt động để chuyển sang Đã liên hệ. Lưu riêng từng thao tác để giữ nội dung đang soạn."
+    }
+  },
+  {
+    "step": "note-v3",
+    "observation": {
+      "history": "Ghi chú nội bộGhi chú kiểm thử S05: <script>alert('synthetic')</script> á 😀. Văn bản thuần.09:42 16/10/26 · S02 A2 · Phiên bản 3Phân công cho S02 A209:30 16/10/26 · S02 A1 · Phiên bản 2Tiếp nhận từ website09:28 16/10/26 · Website",
+      "retention": "Thời hạn lưu đến 09:28 14/4/27. Xem hoặc đổi người phụ trách không kéo dài thời hạn lưu.",
+      "scriptsInTimeline": 0
+    }
+  },
+  {
+    "step": "email-attempt-v4",
+    "observation": {
+      "history": "Email · Đã gửi emailBản ghi tổng hợp kiểm thử: email gửi đi, chưa có trao đổi hai chiều. Không gửi email thật.09:42 16/10/26 · S02 A2 · Phiên bản 4Ghi chú nội bộGhi chú kiểm thử S05: <script>alert('synthetic')</script> á 😀. Văn bản thuần.09:42 16/10/26 · S02 A2 · Phiên bản 3Phân công cho S02 A209:30 16/10/26 · S02 A1 · Phiên bản 2Tiếp nhận từ website09:28 16/10/26 · Website",
+      "retention": "Thời hạn lưu đến 09:42 14/4/27. Xem hoặc đổi người phụ trách không kéo dài thời hạn lưu.",
+      "status": "assigned"
+    }
+  },
+  {
+    "step": "two-way-v5",
+    "observation": {
+      "history": "Email · Đã trao đổi hai chiềuTrao đổi hai chiều tổng hợp trong kịch bản kiểm thử S05. Không có khách hàng hoặc email thật.09:42 16/10/26 · S02 A2 · Phiên bản 5Email · Đã gửi emailBản ghi tổng hợp kiểm thử: email gửi đi, chưa có trao đổi hai chiều. Không gửi email thật.09:42 16/10/26 · S02 A2 · Phiên bản 4Ghi chú nội bộGhi chú kiểm thử S05: <script>alert('synthetic')</script> á 😀. Văn bản thuần.09:42 16/10/26 · S02 A2 · Phiên bản 3Phân công cho S02 A209:30 16/10/26 · S02 A1 · Phiên bản 2Tiếp nhận từ website09:28 16/10/26 · Website",
+      "retention": "Thời hạn lưu đến 09:42 14/4/27. Xem hoặc đổi người phụ trách không kéo dài thời hạn lưu.",
+      "status": "contacted"
+    }
+  },
+  {
+    "step": "closed-completed-v6",
+    "observation": {
+      "history": "Đóng yêu cầu · Đã hoàn tất09:42 16/10/26 · S02 A2 · Phiên bản 6Email · Đã trao đổi hai chiềuTrao đổi hai chiều tổng hợp trong kịch bản kiểm thử S05. Không có khách hàng hoặc email thật.09:42 16/10/26 · S02 A2 · Phiên bản 5Email · Đã gửi emailBản ghi tổng hợp kiểm thử: email gửi đi, chưa có trao đổi hai chiều. Không gửi email thật.09:42 16/10/26 · S02 A2 · Phiên bản 4Ghi chú nội bộGhi chú kiểm thử S05: <script>alert('synthetic')</script> á 😀. Văn bản thuần.09:42 16/10/26 · S02 A2 · Phiên bản 3Phân công cho S02 A209:30 16/10/26 · S02 A1 · Phiên bản 2Tiếp nhận từ website09:28 16/10/26 · Website",
+      "retention": "Thời hạn lưu đến 09:42 14/1/27. Xem hoặc đổi người phụ trách không kéo dài thời hạn lưu.",
+      "status": "closed"
+    }
+  },
+  {
+    "step": "empty-reopen-refused",
+    "observation": {
+      "requiredReasonMissing": true,
+      "versionText": "Phiên bản 6. Ghi nhận trao đổi thực tế ở phần Thêm hoạt động để chuyển sang Đã liên hệ. Lưu riêng từng thao tác để giữ nội dung đang soạn."
+    }
+  },
+  {
+    "step": "reopened-v7",
+    "observation": {
+      "history": "Mở lại · Đã liên hệMở lại cho kịch bản kiểm thử S05; không tự gia hạn lưu dữ liệu.09:42 16/10/26 · S02 A2 · Phiên bản 7Đóng yêu cầu · Đã hoàn tất09:42 16/10/26 · S02 A2 · Phiên bản 6Email · Đã trao đổi hai chiềuTrao đổi hai chiều tổng hợp trong kịch bản kiểm thử S05. Không có khách hàng hoặc email thật.09:42 16/10/26 · S02 A2 · Phiên bản 5Email · Đã gửi emailBản ghi tổng hợp kiểm thử: email gửi đi, chưa có trao đổi hai chiều. Không gửi email thật.09:42 16/10/26 · S02 A2 · Phiên bản 4Ghi chú nội bộGhi chú kiểm thử S05: <script>alert('synthetic')</script> á 😀. Văn bản thuần.09:42 16/10/26 · S02 A2 · Phiên bản 3Phân công cho S02 A209:30 16/10/26 · S02 A1 · Phiên bản 2Tiếp nhận từ website09:28 16/10/26 · Website",
+      "notification": "Thông báo thử: Đã ghi nhận tại máy thử. Chỉ ghi nhận tại máy thử, chưa gửi email thật.",
+      "retention": "Thời hạn lưu đến 09:42 14/1/27. Xem hoặc đổi người phụ trách không kéo dài thời hạn lưu.",
+      "status": "contacted"
+    }
+  }
+]

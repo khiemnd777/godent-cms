@@ -1,0 +1,346 @@
+{
+  "package": "GCMS-AUTH-001 v0.1",
+  "stage": "FINAL_BOUNDED_SECURITY_SOURCE_AND_OWNER_ARTIFACT_REVIEW",
+  "status": "REVIEW_CLOSED_NO_BLOCKING_FINDINGS",
+  "recordedAtUtc": "2026-10-16T05:45:14.649771+00:00",
+  "securityEvidenceOwnership": "RELEASED_TO_PROJECT_COORDINATOR_AFTER_THIS_WRITE",
+  "runtimeConfiguration": {
+    "status": "PASS",
+    "role": "kit-reviewer",
+    "thread": "01a14283-7099-7a61-a627-171a8bbdbe8f",
+    "parent": "01a1402c-3c81-7933-9927-d974f70c9fbc",
+    "model": "gpt-6.1-sol",
+    "requiredRequestedObservedEffort": [
+      "xhigh",
+      "xhigh",
+      "xhigh"
+    ],
+    "turn": "01a1433c-b2cc-7140-bff6-a683ac36a735",
+    "observedAtUtc": "2026-10-16T05:43:33.887Z"
+  },
+  "openBlockingFindings": [],
+  "findingHistory": "Preapply settings authorize(text,bool) correction and ordinary user-ID TS/forward0014 assignment repair are closed in prior linked snapshots/runtime-repair-review.json. Original failed attempts remain intact.",
+  "finalAPIEvidence": {
+    "status": "REVIEWED_OWNER_ACTUAL_PASS",
+    "runnerExitCode": 0,
+    "suites": [
+      {
+        "file": "auth-001-boundaries.test.ts",
+        "tests": 3,
+        "assertions": 25
+      },
+      {
+        "file": "auth-data-lifecycle.test.ts",
+        "tests": 2,
+        "assertions": 30
+      },
+      {
+        "file": "auth-data-recovery.test.ts",
+        "tests": 4,
+        "assertions": 24
+      }
+    ],
+    "totalTests": 9,
+    "totalAssertions": 79,
+    "realLimiterEnabled": true,
+    "scope": "Real AUTH-owned restricted PostgreSQL/auth/domain/settings tests: removed endpoints404, retained enrolled/new unenrolled login, actor/CSRF/tenant/password-read denial, suspension-before-replay, future/stale/expired grants,5minute recent auth, global disable concurrency/session revocation, generic reset/single-use[200,400]/distinctpassword old401new200, absolute8hour owned-clock boundary. No broad historical fixture runner or reviewer runtime execution."
+  },
+  "finalStaticEvidence": {
+    "status": "REVIEWED_OWNER_PASS",
+    "typecheckExitCode": 0,
+    "lintExitCode": 0,
+    "builds": {
+      "admin": "PASS latest approved UI source",
+      "website": "PASS unchanged website source after initial AUTH build",
+      "api": "PASS latest canonical user-ID application source"
+    },
+    "limit": "Actual completed coordinator command results. Earlier first-attempt failures are preserved separately. App builds precede later test/helper-only fixes; no unchanged application rebuild is claimed."
+  },
+  "preservationRuleReview": {
+    "status": "NO_NEW_FINDING",
+    "source": "scripts/auth-001-preservation.ts",
+    "sourceSha256": "f1b0a07ae3369dee48a08edcfef1f4a79771aee60552b006bdd62a792f1c19c4",
+    "rule": "Only new audit keys absent from baseline may match tenant_idNULL/eventidentity.disabled/actor_id retainedPlatformOnly/target_id exact browserPeer or apiDisable. Count must equal1per target. Old baseline rows still require unchanged hashes and never enter the additions allowlist. Retained PlatformOnly actor existence is checked against original user baseline.",
+    "failureHistory": "Original preservationFAIL retained with exactly2unexpected new global audit rows, while all764old audit rows were unchanged. Read-only diagnosis confirms new keys/exact actor/NULLtenant/count1each. Final correction changes verification classification only; no application/DB mutation.",
+    "actualResult": "31/31tablesPASS;764/764original audit rows unchanged;15original users/11credential accounts/8encrypted factor rows unchanged;12old migration rows unchanged;105old sessions/4grants removed; approved single owned invitation accepted_at delta and bounded new AUTH additions.",
+    "limits": "Per-row hashes prove retained rows unchanged outside exact column-limited M1 invitation/recipient-settings/lead-sequence fixture rows and revoked sessions/grants; additions use bounded AUTH tenant/account IDs. Exactly one new tenant-null identity.disabled audit per browserPeer/apiDisable target must use retained PlatformOnly actor. New auth transient state is additive. No backup/restore proof."
+  },
+  "preclosureScans": {
+    "knownSecretScan": "Owner PASS140knownvalues/167representations/57newtextfiles/18newcaptures,0matches. Exact matching only, no imageOCR/comprehensive repository audit. Root final post-document scan is separate.",
+    "fileSnapshot": "Owner PASS349protected originals,106original privatefiles; only owned processes.json changed, no private mode/missing changes;13approved mockup pinsPASS. Snapshot precedes later documentation closure and is not a final post-document inventory."
+  },
+  "dependencyDisposition": {
+    "auditStatus": "FAIL_RETAINED_HIGH_BRACES_ADVISORY",
+    "freshAuditRun": "NOT_RUN_LOCK_UNCHANGED",
+    "lockSha256": "a930f219e8e876e9645f9f7fea32a05992bdb0c2c04fb6585e4d30bfba35dcdc",
+    "currentPatchStatus": "No new determination made in AUTH review. Do not repeat an unverified no-patch claim. Prior M1official-source refresh remains dated evidence.",
+    "scope": "Existing rootdev ESLint/Next plugin/fast-glob/micromatch/braces chain; no AUTH dependency or consumer change. Final production Next trace read refresh supports the same bounded local exposure assessment. Trace absence alone does not prove all runtime safety.",
+    "traceSummary": {
+      "totalTraces": 33,
+      "adminTraces": 26,
+      "websiteTraces": 7,
+      "advisoryChainReferenceCount": 0
+    },
+    "localDisposition": "Prior independent bounded local-only deferral retained; audit is never PASS. Desktop reassesses2026-10-22 or earlier patch/dependency/exposure change/before production. No production waiver or automatic follow-up."
+  },
+  "pureArtifactChecks": {
+    "apiAll3Exits0": true,
+    "api9tests79assertions": true,
+    "staticPass": true,
+    "preservation31of31": true,
+    "originalAudit764Unchanged": true,
+    "exactTwoGlobalDisableAudits": true,
+    "preservedInitialAuditFailure": true,
+    "readonlyDiagnosisExact": true,
+    "retainedCredentialsFactors": true,
+    "oldSessionsAndGrantsRemoved": true,
+    "old12MigrationsUnchanged": true,
+    "preclosureKnownSecretScan": true,
+    "protectedFileSnapshotPass": true,
+    "finalTrace33Chain0": true,
+    "unchangedReviewedCore": true
+  },
+  "pureArtifactCheckStatus": "PASS",
+  "artifactIntegrity": [
+    {
+      "path": "docs/evidence/auth-001/api/bounded-checks.json",
+      "sha256": "45b21405729cc917412d44519d95a9f6899a37fdd7ff83641ae75ce80200ecba"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/bounded-checks-attempt1.json",
+      "sha256": "b8123ab1a8f4fdf13e0f69f978af55eea70a03d598f1b7bdc96f64bb812dcc34"
+    },
+    {
+      "path": "docs/evidence/auth-001/final-source-checks.json",
+      "sha256": "7601543914ca08342fad09e1637cf5ec4e89ab519a8a4ca1d67a3e5536930363"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/preservation.json",
+      "sha256": "04e3b7c826f8deda3d3238b71e6b937ad07fccde99b37791aa48da6272f0c1d8"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/preservation-before-global-audit-rule.json",
+      "sha256": "6cf37839577784a29f4642ba76d8e7fe2145f8b710ef00d96c15b4ac964f62e4"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/owned-global-audit-diagnostic.json",
+      "sha256": "7d43fc7359c72979d75d8fd825e35224b7ef1a9359661158174563ff2d062d27"
+    },
+    {
+      "path": "docs/evidence/auth-001/secret-scan.json",
+      "sha256": "43d7db145d14861e9e6d775e9f37715b5f8ab4199f0d77a14ae7328f323beb62"
+    },
+    {
+      "path": "docs/evidence/auth-001/final-file-preservation.json",
+      "sha256": "4430df69acd4a0f8d2eff1208af705732b05d5edd67d71172fb5531be7b695e3"
+    }
+  ],
+  "finalTraceSnapshot": [
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/next-minimal-server.js.nft.json",
+      "sha256": "554468d19cd58853361a108ff270c10625ca4eec6d92a280a917b4fc37e1f333",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/next-server.js.nft.json",
+      "sha256": "7e1c2895212be5a2e82ff386e9236e7146b1dd0d8c6f205dee000639c307f284",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/_global-error/page.js.nft.json",
+      "sha256": "c73a4af71ac6893afb7d422657f7634bb106080f11ccb068eba8299db7f6b1dd",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/_not-found/page.js.nft.json",
+      "sha256": "0970e2a4c617d35fbe9c9fd8af6b12daea819de17a05c47bba06256eaa03efd1",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/account/page.js.nft.json",
+      "sha256": "81323db806df63e6a3cd1873b27fb86f1773eebdb3cef71742ea67687cb12848",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/cms/[...path]/page.js.nft.json",
+      "sha256": "cd84b5a9e2c238f8a733e6ce3df36a37f48467afe9417addd19a7bbbcecb8721",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/cms/leads/page.js.nft.json",
+      "sha256": "38a1685324175543af1c5d1858ee403257a834ee16335de65f8d3498cb7351db",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/cms/page.js.nft.json",
+      "sha256": "396ee4c8f1f88a9b6b40060e37498242d4dbf6d64c773636e8d73302b8ae52b1",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/cms/services/[id]/page.js.nft.json",
+      "sha256": "25959e9d8bd51768dd1cf6602e58be20be0eb8ed8113e2435a55d53b19f31e33",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/cms/services/[id]/preview/page.js.nft.json",
+      "sha256": "cccc81b0884415930484b60b59be3efc9979d4b38551594d7f1277b282cf2e68",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/cms/services/new/page.js.nft.json",
+      "sha256": "30d61b1d24f45655c3a6f41670125413661566bf22869c06e9b17dcb136048e5",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/cms/services/page.js.nft.json",
+      "sha256": "3e3fa63fe3fc29e73ecc9e13b794b190e32eaba7f5b281c9c2fcb8cf3122a562",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/cms/settings/members/page.js.nft.json",
+      "sha256": "80bd3c2526add9018f34671443125f2f153b8a6f89268e0c32f88bd4313af554",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/cms/settings/notifications/page.js.nft.json",
+      "sha256": "b08c89cb3ce5e8b50abd9997e21c56fba1981a68eeaf9684f1afb9edd1680976",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/cms/settings/page.js.nft.json",
+      "sha256": "417eed7eac2e63b110eb58d0d0aaf62b4d7175ca7014e565f505f287140b7db2",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/cms/settings/site/page.js.nft.json",
+      "sha256": "70b7236f10436e4a167ec9d5dfbc4939c1f6381ed598b27b6e7e4e8574eabda1",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/forgot-password/page.js.nft.json",
+      "sha256": "7c575ce50ae085f50927971c1aa79afc4ce0e4b382c0a5397332d2f9530658c5",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/invitations/page.js.nft.json",
+      "sha256": "e4a25a978a7677ebcd36d8e0bbac944a57de27ff1d4d0f4078c4a5634a177417",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/login/page.js.nft.json",
+      "sha256": "933ecdc68aef4d3d429d7596f8ae042c1b5060995a01fc1a7783a2f70a92d515",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/page.js.nft.json",
+      "sha256": "6c3ec135729bff4b494a34a80a2adcec338604ae6fdd33fc1dec1495e58205a4",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/platform/[...path]/page.js.nft.json",
+      "sha256": "8c371157f2f42b58ee78afa447565be37f3675e82b556db284a92bcc49433db9",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/platform/accounts/page.js.nft.json",
+      "sha256": "666b3bb0e8a81db9ef6e1e6566f76226d39401279c6edb7691cc646d525b3b99",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/platform/page.js.nft.json",
+      "sha256": "37183c5342df1f4255daa434b535d8da5b18d83232fb94ada7fd8fbf84f68722",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/reset-password/page.js.nft.json",
+      "sha256": "843ae687a911f5fff6ad5e9018989ccc56e697f0bf35fadcb0c3d52b3f7440cf",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/app/verify-email/page.js.nft.json",
+      "sha256": "74f4db24302d9eeeac96928632e2b8b7c67e553428093700c954dfb0fbc8899d",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "admin",
+      "path": "apps/admin/.next/server/middleware.js.nft.json",
+      "sha256": "2983414cfe98cd2701d97e7c4ab942a6607adce1a35176499dd9521fc04ad54f",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "website",
+      "path": "apps/website/.next/next-minimal-server.js.nft.json",
+      "sha256": "554468d19cd58853361a108ff270c10625ca4eec6d92a280a917b4fc37e1f333",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "website",
+      "path": "apps/website/.next/next-server.js.nft.json",
+      "sha256": "7e1c2895212be5a2e82ff386e9236e7146b1dd0d8c6f205dee000639c307f284",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "website",
+      "path": "apps/website/.next/server/app/[tenant]/dich-vu/[slug]/page.js.nft.json",
+      "sha256": "d6dab8893188bcb9b0345ffcd9e73077459e58f1fc98d02011488426ef8c8700",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "website",
+      "path": "apps/website/.next/server/app/_global-error/page.js.nft.json",
+      "sha256": "d729a607df07134525f9bb09d610c3c6de83596c6127cf09cf622dcc4b96aeec",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "website",
+      "path": "apps/website/.next/server/app/_not-found/page.js.nft.json",
+      "sha256": "7d7dfeb085485f76ce88d4672f0608ab8f98d7584baf3661be974b467c7e667a",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "website",
+      "path": "apps/website/.next/server/app/page.js.nft.json",
+      "sha256": "e0b3258d0dec1d604744de249e2fd212505f5730a47c46302e3a85d973f4dfc8",
+      "advisoryChainReferences": []
+    },
+    {
+      "app": "website",
+      "path": "apps/website/.next/server/middleware.js.nft.json",
+      "sha256": "d452d35f1ad004cbf2c2e9909eecf1265df9829d91fc26479739e6fd2e9f7e10",
+      "advisoryChainReferences": []
+    }
+  ],
+  "knownLimits": [
+    "Reviewer read source/owner artifacts and ran bounded pure metadata/hash/JSON/trace comparisons only; no application/test/helper/SQL/private/DB/browser/runtime/dependency/Git mutation or runtime test execution.",
+    "Fresh AUTH browser invitation expiry and natural8hour expiry were not run; accelerated DB session-age checks are separate.",
+    "Original hash-only second-invitation navigation remains unproved/possible preexisting behavior; normal fresh-mail-page flow passed.",
+    "Original first assignment status, lifecycle final-login response and whole-run factor-request count remain unknown in their historical records; later exact400and old401/new200 proof is separate.",
+    "External email/production/backuprestore/S06+/Git/deploy not tested or authorized; old TOTP-only unrun criteria are SUPERSEDED, never PASS.",
+    "Final post-document known-secret scan/static/file inventory and AUTH/M1integration status/human acceptance belong to coordinator. This review does not perform package acceptance or automatically close M1."
+  ]
+}

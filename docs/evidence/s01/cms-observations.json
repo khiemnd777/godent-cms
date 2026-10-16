@@ -1,0 +1,50 @@
+{
+  "scope": "S01 representative CMS shell",
+  "viewports": [
+    {
+      "clippedButtons": [],
+      "headerHeight": 61,
+      "mainVisible": true,
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "clippedButtons": [],
+      "headerHeight": 61,
+      "mainVisible": true,
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "clippedButtons": [],
+      "headerHeight": 74,
+      "mainVisible": true,
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "clippedButtons": [],
+      "headerHeight": 74,
+      "mainVisible": true,
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "clippedButtons": [],
+      "headerHeight": 74,
+      "mainVisible": true,
+      "scrollWidth": 1440,
+      "width": 1440
+    }
+  ],
+  "desktopHeader": 74,
+  "desktopSidebar": 232,
+  "drawerOpenCloseEscapeFocus": "PASS",
+  "sourceVersion": "initial CMS build on Bun1.4.3",
+  "limitations": [
+    "No authentication or tenant data proof"
+  ],
+  "componentStates": "PASS; component-states.json",
+  "focusTrap": "PASS; cms-navigation.json",
+  "platformExtensionRegression": "PASS; platform-observations.json"
+}

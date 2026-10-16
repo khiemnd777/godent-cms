@@ -1,0 +1,57 @@
+{
+  "recordedAtUtc": "2026-10-16T05:34:46.509Z",
+  "status": "PASS",
+  "phase": "final-exact-five-actor-memberships",
+  "events": [
+    {
+      "phase": "existing-unverified-actor-bound",
+      "existing": true,
+      "verified": false,
+      "memberships": 0,
+      "registrationsAttempted": 0
+    },
+    {
+      "phase": "unverified-password-denial",
+      "status": 403
+    },
+    {
+      "phase": "existing-local-verification-GET",
+      "status": 302
+    },
+    {
+      "phase": "owner-password-login",
+      "result": "SUCCESS"
+    },
+    {
+      "phase": "existing-apiDisable-password-login",
+      "result": "SUCCESS"
+    },
+    {
+      "phase": "accept-existing-A-invitation",
+      "acceptedTenantA": true
+    },
+    {
+      "phase": "invite-only-new-B-membership",
+      "result": "INVITATION_CREATED"
+    },
+    {
+      "phase": "accept-new-B-invitation",
+      "acceptedTenantB": true
+    },
+    {
+      "phase": "final-exact-five-actor-memberships",
+      "totalCanonicalIdentities": 5,
+      "apiRecoveryMemberships": [
+        "A"
+      ],
+      "apiDisableMemberships": [
+        "A",
+        "B"
+      ],
+      "newRegistrations": 0
+    }
+  ],
+  "priorAttempt": "FAIL_GENERIC_REPORTED_BY_COORDINATOR",
+  "scope": "Resume exact existing unverified apiDisable, then accept A and invite/accept B; no registration/reset/new identity.",
+  "secretsPrinted": false
+}

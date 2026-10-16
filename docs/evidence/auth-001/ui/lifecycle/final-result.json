@@ -1,0 +1,153 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-16T05:25:10.309Z",
+  "originalResult": {
+    "path": "docs/evidence/auth-001/ui/lifecycle/result.json",
+    "status": "FAIL",
+    "preserved": true,
+    "confirmedCheckpoints": 19,
+    "sha256": "dc0dba3a4b32fb8e5a8833504a2c4ff45799b5f9d5335a73e2851ed2e8023762",
+    "failure": {
+      "phase": "Recovery-old-password:login-submit",
+      "name": "Error",
+      "assertion": "INVALID_OR_DISABLED_PASSWORD_LOGIN",
+      "strict": false,
+      "detached": false,
+      "timeout": false,
+      "rawDetailsRedacted": true
+    }
+  },
+  "continuationResult": {
+    "path": "docs/evidence/auth-001/ui/lifecycle/password-login-continuation.json",
+    "status": "PASS",
+    "confirmedCheckpoints": 2,
+    "observations": [
+      {
+        "kind": "old",
+        "status": 401,
+        "code": "INVALID_EMAIL_OR_PASSWORD",
+        "at": "2026-10-16T05:24:58.773Z"
+      },
+      {
+        "kind": "new",
+        "status": 200,
+        "code": null,
+        "at": "2026-10-16T05:25:10.157Z"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "step": "Owner-Peer-activeAB-before-revocation",
+      "at": "2026-10-16T05:20:10.116Z"
+    },
+    {
+      "step": "Peer-A-membership-revoked-once",
+      "at": "2026-10-16T05:20:10.408Z"
+    },
+    {
+      "step": "Peer-A-private-cleared-B-private-retained",
+      "at": "2026-10-16T05:20:10.532Z"
+    },
+    {
+      "step": "sole-Owner-A-self-revoke-denied409",
+      "at": "2026-10-16T05:20:10.833Z"
+    },
+    {
+      "step": "sole-Owner-global-disable-denied409",
+      "at": "2026-10-16T05:20:11.106Z"
+    },
+    {
+      "step": "Owner-identity-active-after-both-last-admin-denials",
+      "at": "2026-10-16T05:20:11.187Z"
+    },
+    {
+      "step": "Peer-globally-disabled-once",
+      "at": "2026-10-16T05:20:11.455Z"
+    },
+    {
+      "step": "disabled-Peer-old-session-and-password-denied",
+      "at": "2026-10-16T05:20:20.324Z"
+    },
+    {
+      "step": "Recovery-invitedA-once",
+      "at": "2026-10-16T05:20:20.550Z"
+    },
+    {
+      "step": "Recovery-registered-once",
+      "at": "2026-10-16T05:20:20.819Z"
+    },
+    {
+      "step": "Recovery-local-verification-GET-complete",
+      "at": "2026-10-16T05:20:20.897Z"
+    },
+    {
+      "step": "Recovery-verified-password-session",
+      "at": "2026-10-16T05:20:21.030Z"
+    },
+    {
+      "step": "Recovery-acceptedA-once",
+      "at": "2026-10-16T05:20:21.311Z"
+    },
+    {
+      "step": "Recovery-two-current-private-sessions",
+      "at": "2026-10-16T05:20:21.733Z"
+    },
+    {
+      "step": "Recovery-generic-reset-request-local-capture",
+      "at": "2026-10-16T05:20:21.896Z"
+    },
+    {
+      "step": "Recovery-new-password-persisted-before-POST",
+      "at": "2026-10-16T05:20:22.050Z"
+    },
+    {
+      "step": "Recovery-password-changed-once-current-private-password-saved",
+      "at": "2026-10-16T05:20:22.158Z"
+    },
+    {
+      "step": "Recovery-both-old-private-sessions-cleared401",
+      "at": "2026-10-16T05:20:22.270Z"
+    },
+    {
+      "step": "Recovery-consumed-token-replay-denied400",
+      "at": "2026-10-16T05:20:22.334Z"
+    },
+    {
+      "step": "Recovery-old-password-denied401",
+      "at": "2026-10-16T05:24:58.820Z"
+    },
+    {
+      "step": "Recovery-new-password-private-access200",
+      "at": "2026-10-16T05:25:10.309Z"
+    }
+  ],
+  "lastAdmin": {
+    "selfRevokeStatus": 409,
+    "globalDisableStatus": 409,
+    "ownerStillActive": true
+  },
+  "revocation": {
+    "PeerA": "PRIVATE_CLEARED",
+    "PeerB": "RETAINED_UNTIL_GLOBAL_DISABLE",
+    "globalDisable": 200,
+    "oldSession": 401,
+    "passwordLogin": 401
+  },
+  "recovery": {
+    "newAccounts": 1,
+    "verified": true,
+    "acceptedOnlyA": true,
+    "distinctNewPassword": true,
+    "oldSessionsDenied": 2,
+    "tokenReuseStatus": 400,
+    "oldPasswordStatus": 401,
+    "newPasswordStatus": 200
+  },
+  "factorRequests": {
+    "originalRun": "NOT_RECORDED",
+    "continuation": 0
+  },
+  "limits": "Combines the preserved19confirmed original UI checkpoints with only2new login checks. Original final login HTTP status and original whole-run factor-request count were not recorded and remain Unknown. No repeated lifecycle mutations."
+}

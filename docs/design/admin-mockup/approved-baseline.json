@@ -1,0 +1,93 @@
+{
+  "task": "GCMS-UX-001",
+  "revision": "v0.1+Lucide",
+  "status": "APPROVED_UI_UX",
+  "approval": {
+    "actor": "Khiêm (Project Lead)",
+    "quote": "TAo duyệt bộ mockup UI UX này.",
+    "date": "2026-10-15",
+    "timezone": "Asia/Ho_Chi_Minh",
+    "source": {
+      "kind": "direct human acceptance in parent conversation; verified by parent and supplied to bounded writer",
+      "thread_id": "01a13e59-fa91-7cb1-a156-5361bb21ca58"
+    },
+    "scope": {
+      "screens": [
+        "platform tenant list",
+        "CMS overview",
+        "service editor",
+        "consultation list/detail"
+      ],
+      "shared": [
+        "navigation",
+        "style",
+        "components",
+        "responsive behavior",
+        "states as delivered",
+        "Lucide Icons"
+      ]
+    },
+    "exclusions": [
+      "application implementation or acceptance",
+      "S01 execution",
+      "all future screens or full MVP UX",
+      "completed screens for placeholder menu items",
+      "new account/MFA/theme/D5/domain policy decisions"
+    ]
+  },
+  "reference_use": "Future authorized implementation slices should follow the pinned branding, layout, navigation and control behavior. The review toolbar, synthetic data, in-memory logic and prototype messages are review-only material to replace or remove during application implementation.",
+  "files": [
+    {
+      "path": "docs/design/admin-mockup/index.html",
+      "sha256": "22869acbb2805f5144b9344cbccdaae2db0e788b8a6f8da143e07369da165ac8"
+    },
+    {
+      "path": "docs/design/admin-mockup/mockup.html",
+      "sha256": "9c6ba866f845eba9d5687f3182985afb1ace7363cd9e7b22652eaf5d24966ac6"
+    },
+    {
+      "path": "docs/design/admin-mockup/mockup.css",
+      "sha256": "d9ef0fb0ea405c58b50184ed862ba439a5b7d83a4b8e09dc9950d39e01810412"
+    },
+    {
+      "path": "docs/design/admin-mockup/mockup.js",
+      "sha256": "bed03768076ae4ad9a279e34b57e13c58be1a288f1d8c398bdf7110edc6a44d9"
+    },
+    {
+      "path": "docs/design/admin-mockup/LUCIDE-LICENSE.txt",
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/lucide/01-platform-desktop.jpg",
+      "sha256": "7e2b2f69447289dd1b85d35df7ca45cbadc48216b1b37c19cae52fc818f61847"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/lucide/01-platform-mobile.jpg",
+      "sha256": "31934bff87dfe28769113b78d8c407a90cee52e2ff61600090b13ffbb0420d33"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/lucide/02-cms-desktop.jpg",
+      "sha256": "3db29f4fc0499eb7b401546dfbf4df70d7c643fab9130fc845ba795cc2817ce5"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/lucide/02-cms-mobile.jpg",
+      "sha256": "2479faabda6612788151c64102ce44bd0f11bf4ceed6511813e5ef3904c3001d"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/lucide/03-editor-desktop.jpg",
+      "sha256": "b99d22f7cec92edff3cff88adb3d9f89a3cf1101a842a39b41b1d4a532658acc"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/lucide/03-editor-mobile.jpg",
+      "sha256": "cf1fc8f0dcad6908819663e440a1dac76aba1003301ffb3da958afc2f2aff841"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/lucide/04-leads-desktop.jpg",
+      "sha256": "2f9f1e5decc7130fad01985d422cf31bd3f31c5ebb241e8e87079faaa3bf56f4"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/lucide/04-leads-mobile.jpg",
+      "sha256": "dac3de86c06cf434c8013c5e9a74ea86e0eb3690c8560471d8e1a27605516198"
+    }
+  ]
+}

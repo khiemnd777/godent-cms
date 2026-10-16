@@ -1,0 +1,24 @@
+{
+  "recordedAtUtc": "2026-10-16T00:09:16.021Z",
+  "status": "PASS",
+  "suites": [
+    {
+      "file": "s03-content.test.ts",
+      "exitCode": 0,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 27
+    },
+    {
+      "file": "s03-publication-integration.test.ts",
+      "exitCode": 0,
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 89
+    }
+  ],
+  "intendedSuites": 2,
+  "limits": "Authorized local synthetic HTTP/PostgreSQL/handler and unit checks; browser, OS process restart and human acceptance are separate evidence."
+}

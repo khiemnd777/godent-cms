@@ -1,0 +1,37 @@
+{
+  "controls": [
+    {
+      "height": 40,
+      "inPanel": true,
+      "label": "Danh sách yêu cầu",
+      "visible": true,
+      "width": 159.4453125
+    },
+    {
+      "height": 40,
+      "inPanel": true,
+      "label": "lead-assignee",
+      "visible": true,
+      "width": 314
+    },
+    {
+      "height": 40,
+      "inPanel": true,
+      "label": "lead-status",
+      "visible": true,
+      "width": 314
+    },
+    {
+      "height": 40,
+      "inPanel": true,
+      "label": "Lưu cập nhật",
+      "visible": true,
+      "width": 314
+    }
+  ],
+  "documentWidth": 390,
+  "viewport": {
+    "height": 844,
+    "width": 390
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-16T01:30:15.044771+00:00",
+  "migrations": [
+    {
+      "name": "0001_s02_access.sql",
+      "checksum": "2ae0985dbd0ce36c905161e2b56a322e1afc3b12eb66b8875102defff4c14199"
+    },
+    {
+      "name": "0002_session_mfa_assurance.sql",
+      "checksum": "a6ec21939f829a620f5ce628f9a82edea14ed93d456f1d0fa4c950cd81949bc0"
+    },
+    {
+      "name": "0003_reauth_grant_rls.sql",
+      "checksum": "fc7b11f8d5a54fe442458859fb0a214cda0ac9b78090e087829b90a54b824ccc"
+    },
+    {
+      "name": "0004_s03_publication.sql",
+      "checksum": "ef250975223abad30581d0e4866ef06c6d3dc9f903bed7fefad0030e932d9ed6"
+    },
+    {
+      "name": "0005_s04_consultation.sql",
+      "checksum": "804909aec2f1b56a1dfa976a854292f3bae959953789d23f5af2258e71fcc439"
+    },
+    {
+      "name": "0006_s04_anonymous_audit.sql",
+      "checksum": "2bca40d52c1dae085b48f69e3c38ed3cdf2f0bba8d1a439fbda517d4924dccef"
+    },
+    {
+      "name": "0007_s04_email_syntax.sql",
+      "checksum": "96455719a7042d8f47c215419e1360acfa550deb21c0f78a726bf99bcf86d901"
+    }
+  ],
+  "tables": [
+    {
+      "name": "accepted_request",
+      "rls": true,
+      "forceRls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "name": "audit_event",
+      "rls": true,
+      "forceRls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "name": "challenge",
+      "rls": true,
+      "forceRls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "name": "intake_activity",
+      "rls": true,
+      "forceRls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "name": "lead",
+      "rls": true,
+      "forceRls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "name": "notification_intent",
+      "rls": true,
+      "forceRls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "name": "request_event",
+      "rls": true,
+      "forceRls": true,
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "name": "secret",
+      "rls": true,
+      "forceRls": true,
+      "owner": "gcms_s02_owner"
+    }
+  ],
+  "roles": [
+    {
+      "name": "gcms_s02_auth",
+      "superuser": false,
+      "bypassRls": false,
+      "createRole": false,
+      "createDb": false
+    },
+    {
+      "name": "gcms_s02_migration",
+      "superuser": false,
+      "bypassRls": false,
+      "createRole": false,
+      "createDb": false
+    },
+    {
+      "name": "gcms_s02_owner",
+      "superuser": false,
+      "bypassRls": false,
+      "createRole": false,
+      "createDb": false
+    },
+    {
+      "name": "gcms_s02_platform",
+      "superuser": false,
+      "bypassRls": false,
+      "createRole": false,
+      "createDb": false
+    },
+    {
+      "name": "gcms_s02_tenant",
+      "superuser": false,
+      "bypassRls": false,
+      "createRole": false,
+      "createDb": false
+    },
+    {
+      "name": "gcms_s04_intake",
+      "superuser": false,
+      "bypassRls": false,
+      "createRole": false,
+      "createDb": false
+    }
+  ],
+  "catalogGrants": {
+    "intakeDirectLeadSelect": false,
+    "intakeDirectLeadInsert": false,
+    "intakeExecute": true,
+    "authLeadSelect": false,
+    "platformLeadSelect": false,
+    "tenantLeadSelect": true,
+    "tenantLeadUpdate": false
+  },
+  "sameThreeDockerContainersHealthy": true,
+  "loopbackBindings": true,
+  "uiSyntheticFixture": {
+    "leads": 2,
+    "intents": 2,
+    "acceptedResults": 2
+  },
+  "limits": "Catalog and original-row preservation; effective restricted-role/current-session/tenant isolation is separately tested in combined-api-checks.json. Private backup exists but restore NOT_RUN."
+}

@@ -1,0 +1,36 @@
+{
+  "recordedAtUtc": "2026-10-16T05:18:32.598Z",
+  "status": "PASS",
+  "newTenantOnly": true,
+  "exactManifestLeadCount": 3,
+  "freshPasswordOnlyRecipient": true,
+  "recipientNeverEnrolled": true,
+  "narrowWorkerRoleVerified": true,
+  "staleFence": "DENIED",
+  "claimed": 3,
+  "captured": 3,
+  "captureChecks": [
+    {
+      "mode": "0600",
+      "genericMessageOnly": true,
+      "sha256": "3a3e7231d99e9c41c533d4a08d243f33672457afb69758ca9202cce27036d001",
+      "attempts": 1
+    },
+    {
+      "mode": "0600",
+      "genericMessageOnly": true,
+      "sha256": "00623d7f723cb28ff09a0245df3ebff14e112fa67eca644bc62efdd409fff3a3",
+      "attempts": 1
+    },
+    {
+      "mode": "0600",
+      "genericMessageOnly": true,
+      "sha256": "17f7d910e091621d7a5aa09a8e5c4764c9b2ea4011309163bc8be7edc70285f5",
+      "attempts": 1
+    }
+  ],
+  "repeatedClaimCount": 0,
+  "otherTenantBacklogUnchanged": true,
+  "externalMail": "NOT_RUN_LOCAL_CAPTURE_ONLY",
+  "secretsPrinted": false
+}

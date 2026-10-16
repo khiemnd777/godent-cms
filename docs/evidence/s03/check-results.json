@@ -1,0 +1,52 @@
+{
+  "status": "CODE_INTEGRATED_VERIFIED_LOCAL_READY_FOR_USER_REVIEW",
+  "recordedAtUtc": "2026-10-16T00:23:38.094362+00:00",
+  "s03Suites": {
+    "result": "PASS",
+    "tests": 19,
+    "assertions": 116,
+    "artifact": "combined-api-checks.json"
+  },
+  "s02Regressions": {
+    "result": "PASS",
+    "tests": 10,
+    "assertions": 138,
+    "suites": [
+      "domain-integration.test.ts 7/88",
+      "auth-data-isolation.test.ts 3/50"
+    ]
+  },
+  "apiUnit": {
+    "result": "PASS",
+    "passed": 31,
+    "skippedGated": 52,
+    "failed": 0,
+    "assertions": 145
+  },
+  "frontendUnit": {
+    "result": "PASS",
+    "passed": 25,
+    "failed": 0,
+    "assertions": 93
+  },
+  "build": "PASS all3 apps, admin17 routes + public dynamic service route",
+  "typecheck": "PASS all3 apps/root scripts/API tests; runner child-stream typing repair confirmed",
+  "lint": "PASS full and final runner-focused ESLint; admin final2CSSselector repair focused ESLint/typecheck/build PASS",
+  "independentSourceReview": "CLOSED no open actionable finding; independent pure19/81 overlap prior checks, no reviewer DB/browser rerun",
+  "migration": "PASS 4checksums/16tables/5roles; original3appliedSQL unchanged",
+  "processRestart": "PASS actualOSprocess restart, DBintentAfter1/closure and publicJSON unchanged",
+  "ssrHttp": "PASS HTMLwithoutJS and7negative/header/HEADcases",
+  "browser": "PASS ordinary A1 login/existing MFA, real recent reauth, explicit publish V1/V2, pending draft isolation, private preview, stale save/confirmation and preserved input, custom unsaved cancel/discard, 5-width geometry, final390 publication badges/actions, mobile Escape/focus, denied/error/empty states; actual-flow.json",
+  "audit": "FAIL1highdev advisory; fresh localS03 scoped deferral, not inheritedS02 waiver",
+  "limits": [
+    "Human S03 acceptance pending",
+    "Actual loading AX observed; deterministic transient loading screenshot NOT_RUN (no forced latency)",
+    "Historical S02 sensitive browser credential/grant actions retain their original NOT_RUN status despite human acceptance",
+    "Audit remains FAIL one high dev-only advisory with fresh independent localS03 deferral; no production waiver",
+    "No fullMVP, production, realemail, DNS/TLS, backup restore, machine power-loss, S04 or Git/deploy claim"
+  ],
+  "diagnostics": "PASS health/readiness/valid1-invalid5/404-method3/PG-Redis-S3 unavailable503/SIGTERM-SIGINT owned closure; diagnostics.json",
+  "runtime": "PASS final3 actualBun executables/restrictedAPI and secret-freeweb env/HTTP6 after finalrestart; runtime.json",
+  "uiPublishedSsr": "PASS actual no-JavaScript SSR on final UI-published V2 demo, ui-published-ssr.json",
+  "preservation": "PASS13originaldrafts including updated_at/by, retained3privatefiles hashes+modes/lock/13UIpins/18masterrows, same3healthyDockercontainers/images/bindings/privatebackup; supporting artifacts separate"
+}

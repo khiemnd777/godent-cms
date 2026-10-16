@@ -1,0 +1,57 @@
+{
+  "scope": "Current source and retained browser artifacts at M1-UAT checkpoint; historical browser execution remains separately scoped",
+  "files": [
+    {
+      "path": "apps/admin/components/draft-editor.tsx",
+      "sha256": "4096dae805c5b8029effa77b9ebfd60a5418e597d9a7c36674a9ae42ae11755d"
+    },
+    {
+      "path": "apps/admin/components/publication-dialog.tsx",
+      "sha256": "88e292b0c09d645965d18ede09edcda3cfed19eac0bdffa28d59e2b525168699"
+    },
+    {
+      "path": "apps/admin/components/unsaved-changes.tsx",
+      "sha256": "c834b2d1ef8ca7801d2929552ac63e0f79ce0bd94338283b7acf9eff336583a9"
+    },
+    {
+      "path": "apps/admin/components/admin-shell.tsx",
+      "sha256": "c74843b44b0adedfe35bbecede6cbff8923495282cb7e4a1e2329926d05aa3f3"
+    },
+    {
+      "path": "apps/admin/components/lead-workspace.tsx",
+      "sha256": "b3d6c5b896cd866be6076cfebbd032238011d095337cd9e378926b56d71c24fc"
+    },
+    {
+      "path": "apps/admin/components/lead-filters.tsx",
+      "sha256": "071104614c3c95fea6910f885302cb7728a6e4ccd54487e7f1e8d3c66d6662f8"
+    },
+    {
+      "path": "apps/admin/components/lead-detail.tsx",
+      "sha256": "285901c3c778f05a146790a22961c10b20d8a147c1d63f875d72caf266edf0eb"
+    },
+    {
+      "path": "apps/admin/lib/lead-input.ts",
+      "sha256": "6e93cf3f8a6438c656ad5f6c0194a4c97469008faf82ae4570aa8d5d4a4fdae7"
+    },
+    {
+      "path": "apps/api/src/contracts/s05.ts",
+      "sha256": "c059149c4a988104144911863cdb59e12347437af3d145934c4eeb92a8bbcf28"
+    },
+    {
+      "path": "apps/website/components/consultation-form.tsx",
+      "sha256": "170f7de6fab9e69cd677cf59bb5d4d44444a6adea9ad3f18150227d3787523d4"
+    },
+    {
+      "path": "apps/website/lib/consultation.ts",
+      "sha256": "60155a29c21c1b891a87b5ce3d908c26308efe6fdcc7aeb5be9dc49bb8261d25"
+    },
+    {
+      "path": "docs/evidence/s03/ui/actual-flow.json",
+      "sha256": "30182eb395d1cbc4aa3cfeebff9a7634c13acd5bffd9b6f5d51ad8559a806ff8"
+    },
+    {
+      "path": "docs/evidence/s05/ui/cursor-sequence.json",
+      "sha256": "52dc4132281083453f4dc9b8a5a311368137aaceb13b37039b6a74548eca7c6e"
+    }
+  ]
+}

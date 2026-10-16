@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-16T02:56:23.013893+00:00",
+  "publicUrl": "http://localhost:5892/s05-ui-ef95e0e2/dich-vu/tu-van",
+  "htmlWithoutJs": {
+    "lang": "vi",
+    "canonical": "http://localhost:5892/s05-ui-ef95e0e2/dich-vu/tu-van",
+    "h1": "Tư vấn nha khoa",
+    "consultationForm": true,
+    "noAttachment": true,
+    "noindex": true,
+    "noStore": true,
+    "noSetCookie": true
+  },
+  "corsPreflights": [
+    {
+      "case": "intake",
+      "status": 204
+    },
+    {
+      "case": "challenge",
+      "status": 204
+    },
+    {
+      "case": "foreign-origin",
+      "status": 403
+    },
+    {
+      "case": "public-origin-private",
+      "status": 403
+    },
+    {
+      "case": "public-origin-auth",
+      "status": 403
+    }
+  ],
+  "limit": "Actual SSR and route-scoped CORS observations only; no intake counter/lead mutation, browser/PG acceptance/CAPTCHA completion separate."
+}

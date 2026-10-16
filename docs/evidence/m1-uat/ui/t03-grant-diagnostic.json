@@ -1,0 +1,28 @@
+{
+  "diagnostic": {
+    "alerts": [
+      "Không được phép thực hiện. Kiểm tra quyền truy cập, xác thực hai bước hoặc xác thực lại tài khoản."
+    ],
+    "confirmationChecked": true,
+    "headings": [
+      "Nha khoa",
+      "Nha khoa mới"
+    ],
+    "notices": [],
+    "passwordFieldCount": 1,
+    "passwordFieldsFilled": false,
+    "provisionFormPresent": true,
+    "reauthOpen": false,
+    "submitButtons": [
+      {
+        "disabled": false,
+        "text": "Tạo và gửi lời mời"
+      },
+      {
+        "disabled": false,
+        "text": "Xác thực lại"
+      }
+    ]
+  },
+  "scope": "Read-only DOM after human reported first grant error; no grant/auth retry by agent; exact backend code not exposed; resource creation not inferred from UI"
+}

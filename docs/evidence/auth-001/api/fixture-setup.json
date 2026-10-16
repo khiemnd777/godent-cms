@@ -1,0 +1,10 @@
+{
+  "recordedAtUtc": "2026-10-16T05:34:46.509Z",
+  "status": "PASS",
+  "totalNewAccounts": 5,
+  "newApiAccounts": 2,
+  "additionalTenantsCreated": 0,
+  "resumeArtifact": "docs/evidence/auth-001/api/fixture-setup-resume.json",
+  "retainedPasswordsUnchanged": true,
+  "secretsPrinted": false
+}

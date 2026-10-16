@@ -1,0 +1,76 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "PASS",
+  "startedAt": "2026-10-16T04:41:30.118Z",
+  "observations": [
+    {
+      "label": "PlatformOnly",
+      "initialCookies": 0,
+      "signInStatus": 200,
+      "roleLanding": "/platform",
+      "userKeys": [
+        "email",
+        "emailVerified",
+        "id",
+        "name"
+      ],
+      "sessionKeys": [
+        "expiresAt"
+      ],
+      "emailVerified": true,
+      "csrfPresent": true,
+      "liveExpiry": true,
+      "factorRequests": 0,
+      "privateTenantDenied": true,
+      "logoutPrivateClear": true
+    },
+    {
+      "label": "A2",
+      "initialCookies": 0,
+      "signInStatus": 200,
+      "roleLanding": "/cms",
+      "userKeys": [
+        "email",
+        "emailVerified",
+        "id",
+        "name"
+      ],
+      "sessionKeys": [
+        "expiresAt"
+      ],
+      "emailVerified": true,
+      "csrfPresent": true,
+      "liveExpiry": true,
+      "factorRequests": 0,
+      "authorizedLeadRead": true,
+      "passwordReauth": {
+        "status": 200,
+        "bodyKeys": [
+          "password"
+        ],
+        "csrfPresent": true,
+        "fieldCleared": true
+      },
+      "logoutPrivateClear": true
+    }
+  ],
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "headless": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "existingProfileOrCookies": false,
+    "CDP": false,
+    "downloads": false
+  },
+  "scope": "Fresh isolated installed Chrome, unchanged existing PlatformOnly/A2 passwords, real UI login/private gates/session/password-only reauth/logout. No new fixture/business/credential/factor changes. No interception or API-only login.",
+  "browserVersion": "155.0.8059.80",
+  "finishedAt": "2026-10-16T04:41:32.513Z"
+}

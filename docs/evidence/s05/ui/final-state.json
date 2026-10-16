@@ -1,0 +1,21 @@
+{
+  "documentWidth": 1440,
+  "draftText": "",
+  "query": "YC-000001",
+  "saveDisabled": true,
+  "scroll": {
+    "x": 0,
+    "y": 0
+  },
+  "selectedTenant": "4e206516-529a-4799-b146-05f950214a00",
+  "sidebar": {
+    "left": 0,
+    "transform": "none"
+  },
+  "version": "Phiên bản 10. Ghi nhận trao đổi thực tế ở phần Thêm hoạt động để chuyển sang Đã liên hệ. Lưu riêng từng thao tác để giữ nội dung đang soạn.",
+  "viewport": {
+    "height": 1080,
+    "width": 1440
+  },
+  "warningErrorLogs": []
+}

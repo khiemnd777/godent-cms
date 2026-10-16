@@ -1,0 +1,101 @@
+{
+  "observedAtUtc": "2026-10-15T17:23:28.924371+00:00",
+  "status": "PASS_WITH_EXPLICIT_LIMITS",
+  "checks": [
+    {
+      "name": "auth real login/MFA/logout",
+      "result": "PASS",
+      "tests": 1,
+      "assertions": 8
+    },
+    {
+      "name": "HTTP domain including isolation/version/invites/admin races",
+      "result": "PASS",
+      "tests": 7,
+      "assertions": 88,
+      "durationSeconds": 23.53
+    },
+    {
+      "name": "auth recovery and DB isolation",
+      "result": "PASS",
+      "tests": 7,
+      "assertions": 80,
+      "durationSeconds": 45.07
+    },
+    {
+      "name": "invited registration/email verification",
+      "result": "PASS",
+      "tests": 2,
+      "assertions": 16
+    },
+    {
+      "name": "review regression title/fresh invite acceptance",
+      "result": "PASS",
+      "tests": 2,
+      "assertions": 5
+    },
+    {
+      "name": "factor rotation/positive global disable",
+      "result": "PASS",
+      "tests": 3,
+      "assertions": 35
+    },
+    {
+      "name": "S01 diagnostic contract regression on S02 runtime",
+      "result": "PASS",
+      "artifact": "../s02-diagnostics.json"
+    }
+  ],
+  "repairs": [
+    {
+      "issue": "TOTP helper Base32 and module symlink resolution",
+      "result": "FIXED_RETEST_PASS",
+      "applicationAuthChanged": false
+    },
+    {
+      "issue": "Bun SQLSTATE uses errno; last admin conflict should409",
+      "result": "FIXED_RETEST_PASS"
+    },
+    {
+      "issue": "auth response JSON null/empty redirect",
+      "result": "FIXED_RETEST_PASS"
+    },
+    {
+      "issue": "custom CSRF boolean result ignored",
+      "result": "FIXED_RETEST_PASS"
+    },
+    {
+      "issue": "title API/DB mismatch160",
+      "result": "FIXED_RETEST_PASS",
+      "ui": "160/20000 aligned and UI checks PASS"
+    },
+    {
+      "issue": "acceptance activated membership without fresh reauth",
+      "result": "FIXED_RETEST_PASS"
+    }
+  ],
+  "pending": [
+    "specific human browser UAT in runbook",
+    "human S02 acceptance"
+  ],
+  "limits": [
+    "No global single-use TOTP value guarantee; replay test covers consumed challenge.",
+    "CUA requires human credential entry and action-time confirmation for grants; corresponding browser submissions NOT_RUN, backend integration is separate.",
+    "No production/real email/DNS/deploy/Git delivery."
+  ],
+  "suites": 7,
+  "tests": 22,
+  "assertions": 232,
+  "combinedArtifact": "combined-api-checks.json",
+  "independentSourceReview": "four findings CLOSED; no independent DB/browser rerun",
+  "browser": {
+    "result": "PARTIAL_PASS",
+    "artifact": "ui/final-observations.json",
+    "notRun": [
+      "credential and access lifecycle submissions",
+      "additional PlatformOnly login/read",
+      "multi-tab/conflict UI",
+      "unsaved-navigation confirmation"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-16T01:23:33.415080+00:00",
+  "steps": [
+    {
+      "action": "bootstrap",
+      "exitCode": 0,
+      "output": "S04 new intake role and private crypto ready; retained roles and credentials unchanged."
+    },
+    {
+      "action": "migrate",
+      "exitCode": 0,
+      "output": "S04 additive migration and keyed acceptance function ready; retained migration checksums verified."
+    },
+    {
+      "action": "migrate0006_anonymous_audit",
+      "exitCode": 0,
+      "output": "S04 additive migration and keyed acceptance function ready; retained migration checksums verified."
+    },
+    {
+      "action": "migrate0007_email_syntax",
+      "exitCode": 0,
+      "output": "S04 additive migration and keyed acceptance function ready; retained migration checksums verified."
+    }
+  ],
+  "limit": "Approved new role/private crypto/schema and additive migration only; effective isolation/behavior tests remain separate."
+}

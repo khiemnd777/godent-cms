@@ -1,0 +1,25 @@
+[
+  {
+    "inSidebar": false,
+    "label": null,
+    "stage": "opened"
+  },
+  {
+    "inSidebar": true,
+    "label": "Cài đặt website",
+    "stage": "shift-tab-wrap"
+  },
+  {
+    "inSidebar": true,
+    "label": "Đóng menu",
+    "stage": "tab-wrap"
+  },
+  {
+    "label": "Mở menu",
+    "stage": "escape"
+  },
+  {
+    "focused": "main-content",
+    "stage": "skip-link"
+  }
+]

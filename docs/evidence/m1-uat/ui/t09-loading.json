@@ -1,0 +1,60 @@
+{
+  "at": "2026-10-16T04:14:13.658Z",
+  "result": "PASS_EQUIVALENT_CURRENT_COMPONENT",
+  "stage": {
+    "at": "2026-10-16T04:13:10.447Z",
+    "actor": "A2",
+    "targetSubstitutionPending": true,
+    "originalS03TenantAttempt": {
+      "tenant": "c3000000-0000-4000-8000-000000000001",
+      "result": "DENIED_BY_CURRENT_MEMBERSHIP_OPTIONS",
+      "editorEntered": false
+    },
+    "availableTarget": {
+      "headings": [
+        "Dịch vụ",
+        "Dịch vụ của nha khoa"
+      ],
+      "height": 987,
+      "links": [
+        {
+          "href": "/cms/services/new?tenant=4e206516-529a-4799-b146-05f950214a00",
+          "text": "Soạn dịch vụ"
+        },
+        {
+          "href": "/cms/services/3f8db691-8254-4841-826f-8fb5d8d4e2bf?tenant=4e206516-529a-4799-b146-05f950214a00",
+          "text": "Tư vấn nha khoa"
+        }
+      ],
+      "path": "/cms/services",
+      "tenant": "4e206516-529a-4799-b146-05f950214a00",
+      "width": 1874
+    }
+  },
+  "loading": {
+    "editorInputs": 0,
+    "headings": [
+      "Đang tải dịch vụ"
+    ],
+    "path": "/cms/services/3f8db691-8254-4841-826f-8fb5d8d4e2bf",
+    "statuses": [
+      {
+        "busy": "true",
+        "text": "Đang tải dịch vụĐang kiểm tra quyền truy cập hiện tại."
+      }
+    ],
+    "tenant": "4e206516-529a-4799-b146-05f950214a00"
+  },
+  "recovery": {
+    "busy": false,
+    "editorInputs": 8,
+    "path": "/cms/services/3f8db691-8254-4841-826f-8fb5d8d4e2bf",
+    "publicationText": "Xuất bảnTrạng thái websiteĐã xuất bảnPhiên bản đang chạyPhiên bản 1Bản nhápĐã lưu · phiên bản 1Ngôn ngữTiếng ViệtLưu bản nháp không làm thay đổi website. Chỉ cập nhật khi bạn chọn Cập nhật website.Xem bản đã xuất bản",
+    "saveDisabled": true,
+    "tenant": "4e206516-529a-4799-b146-05f950214a00",
+    "title": "Tư vấn nha khoa"
+  },
+  "approvedEquivalence": "Same current DraftEditor/ShellState and S03 service GET contract; available S05 published service; original c300 record remains NOT_RUN due current100option access limitation",
+  "writes": 0,
+  "faultOwner": "root: verified owned API SIGSTOP with30s independent SIGCONT watchdog; API process confirmation recorded separately by coordinator"
+}

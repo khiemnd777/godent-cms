@@ -1,0 +1,12 @@
+{
+  "apiPid": 89699,
+  "ownedExecutableAndWorkspaceVerified": true,
+  "maxPauseSeconds": 30,
+  "scope": "One bounded owned API pause for actual editor-loading capture; no process exit, app/data edit or container action",
+  "pausedAtUtc": "2026-10-16T04:13:26.001260+00:00",
+  "resumeReason": "30_second_watchdog",
+  "sameProcessBeforeResume": true,
+  "resumedAtUtc": "2026-10-16T04:13:56.077375+00:00",
+  "pauseSeconds": 30.076,
+  "status": "PASS"
+}

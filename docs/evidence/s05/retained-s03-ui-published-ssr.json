@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-16T02:56:23.642779+00:00",
+  "publicUrl": "http://localhost:5892/s03-synthetic-a/dich-vu/cham-soc-rang-dinh-ky-ui-s03",
+  "htmlWithoutJavaScript": true,
+  "lang": "vi",
+  "canonical": "http://localhost:5892/s03-synthetic-a/dich-vu/cham-soc-rang-dinh-ky-ui-s03",
+  "h1": "Chăm sóc răng định kỳ · UI S03",
+  "noindex": true,
+  "noStore": true,
+  "noSetCookie": true,
+  "noInjectedScriptElement": true,
+  "limit": "Actual anonymous SSR for the UI-published V2 URL; no rendered responsive or external indexing claim."
+}

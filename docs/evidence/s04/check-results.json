@@ -1,0 +1,111 @@
+{
+  "recordedAtUtc": "2026-10-16T01:32:33.802158+00:00",
+  "status": "PASS",
+  "checks": {
+    "typecheck": {
+      "command": "bun run typecheck",
+      "exitCode": 0
+    },
+    "lint": {
+      "command": "bun run lint",
+      "exitCode": 0
+    },
+    "nextBuilds": {
+      "adminPages": 18,
+      "websiteDynamicService": true,
+      "exitCode": 0
+    },
+    "frontendUnit": {
+      "passed": 32,
+      "assertions": 119,
+      "exitCode": 0
+    },
+    "s04": {
+      "passed": 25,
+      "assertions": 313,
+      "exitCode": 0,
+      "artifact": "combined-api-checks.json"
+    },
+    "s02Regression": {
+      "domain": {
+        "passed": 7,
+        "assertions": 88,
+        "exitCode": 0
+      },
+      "isolation": {
+        "passed": 3,
+        "assertions": 50,
+        "exitCode": 0
+      },
+      "initialInvocation": "Integration flag omitted:0pass14skip, NOT_RUN; subsequent S02_INTEGRATION=1 selected suites above executed and passed."
+    },
+    "diagnostics": {
+      "exitCode": 0,
+      "artifact": "diagnostics.json",
+      "status": "PASS"
+    },
+    "runtimeFinal": {
+      "status": "PASS",
+      "actualBunProcesses": 3,
+      "httpCases": 6,
+      "artifact": "runtime-final.json"
+    },
+    "databaseFinal": {
+      "status": "PASS",
+      "migrationChecksums": 7,
+      "forceRlsS04Tables": 8,
+      "restrictedRoles": 6,
+      "originalRowsRetained": 75,
+      "artifact": "database-final.json"
+    },
+    "s03ReadOnlySsrRegression": {
+      "status": "PASS",
+      "artifact": "s03-ssr-regression.json"
+    },
+    "preservation": {
+      "status": "PASS",
+      "artifact": "preservation.json",
+      "uiPins": 13,
+      "masterRows": 18,
+      "oldRows": 75,
+      "historicalEvidenceUnchanged": true,
+      "entryFiles": 417,
+      "currentFiles": 500,
+      "modifiedExistingFiles": 23,
+      "addedFiles": 83,
+      "deletedFiles": 0
+    },
+    "secretScan": {
+      "status": "PASS",
+      "artifact": "secret-scan.json",
+      "currentValues": 90,
+      "matches": 0,
+      "textAndBuiltJsFiles": 462
+    },
+    "browserReadFaults": {
+      "status": "PASS",
+      "actualLoadingAndRecovery": true,
+      "actualOutageAndRetryRecovery": true,
+      "artifact": "ui-fault-control.json",
+      "source": "ui/implementation.md"
+    },
+    "staticPackage": {
+      "status": "PASS",
+      "command": "python3 -B scripts/verify_agent_setup.py",
+      "maintainedHashes": 81,
+      "mirrorPairs": 28,
+      "markdownFiles": 117,
+      "localLinksAndAnchors": 1014,
+      "originalIntegrityRecipe": "PASS unchanged"
+    }
+  },
+  "limits": "Selected regression/local verification only; browser and human acceptance remain separate. S03 original publication integration not rerun because its fixture setup mutates retained site rows; original SSR checked separately.",
+  "independentReview": "CLOSED, review.json",
+  "audit": "FAIL; fresh independently confirmed bounded local deferral in dependency-audit.json",
+  "browserLimits": [
+    "CAPTCHA completion:NOT_RUN/action-time human confirmation required",
+    "Public unknown-timeout/same-key browser retry and full cursor UI sequence:NOT_RUN; helper/API proofs separate"
+  ],
+  "humanAcceptance": "PENDING",
+  "finalStage": "CODE_INTEGRATED + VERIFIED_LOCAL_API_SSR + READY_FOR_USER_REVIEW"
+}

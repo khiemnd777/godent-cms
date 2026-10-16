@@ -1,0 +1,19 @@
+{
+  "name": "@godent-cms/website",
+  "private": true,
+  "scripts": {
+    "dev": "bun --bun next dev --hostname 127.0.0.1 --port 5892",
+    "build": "bun --bun next build",
+    "start": "bun --bun next start --hostname 127.0.0.1 --port 5892",
+    "typecheck": "bun --bun tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "16.4.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0"
+  }
+}

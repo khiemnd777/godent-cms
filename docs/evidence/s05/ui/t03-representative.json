@@ -1,0 +1,103 @@
+{
+  "publicIntake": "accepted_once_no_captcha",
+  "leadCode": "YC-000001",
+  "a1Identity": "verified account page S02 A1",
+  "assignment": "A1 -> A2 saved",
+  "a1Reload": "version2 assigned A2 and assignment history",
+  "a2SignIn": "ordinary existing credentials and existing MFA, no credential changes",
+  "a2Reload": {
+    "assignee": "S02 A2",
+    "history": "Phân công cho S02 A209:30 16/10/26 · S02 A1 · Phiên bản 2Tiếp nhận từ website09:28 16/10/26 · Website",
+    "retention": "Thời hạn lưu đến 09:28 14/4/27. Xem hoặc đổi người phụ trách không kéo dài thời hạn lưu.",
+    "status": "Đã phân công",
+    "version": "Phiên bản 2. Phân công lần đầu chuyển yêu cầu Mới thành Đã phân công."
+  },
+  "desktop": {
+    "controls": [
+      {
+        "height": 0,
+        "inPanel": false,
+        "label": "Danh sách yêu cầu",
+        "visible": false,
+        "width": 0,
+        "x": 0
+      },
+      {
+        "height": 40,
+        "inPanel": true,
+        "label": "lead-assignee",
+        "visible": true,
+        "width": 287,
+        "x": 1098
+      },
+      {
+        "height": 40,
+        "inPanel": true,
+        "label": "lead-status",
+        "visible": true,
+        "width": 287,
+        "x": 1098
+      },
+      {
+        "height": 40,
+        "inPanel": true,
+        "label": "Lưu cập nhật",
+        "visible": true,
+        "width": 287,
+        "x": 1098
+      }
+    ],
+    "documentWidth": 1440,
+    "viewport": {
+      "height": 1080,
+      "width": 1440
+    }
+  },
+  "mobile": {
+    "controls": [
+      {
+        "height": 40,
+        "inPanel": true,
+        "label": "Danh sách yêu cầu",
+        "visible": true,
+        "width": 159.4453125
+      },
+      {
+        "height": 40,
+        "inPanel": true,
+        "label": "lead-assignee",
+        "visible": true,
+        "width": 314
+      },
+      {
+        "height": 40,
+        "inPanel": true,
+        "label": "lead-status",
+        "visible": true,
+        "width": 314
+      },
+      {
+        "height": 40,
+        "inPanel": true,
+        "label": "Lưu cập nhật",
+        "visible": true,
+        "width": 314
+      }
+    ],
+    "documentWidth": 390,
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  "keyboard": "assignee Tab -> Save; dirty refresh Cancel preserves A1 input and returns focus to Refresh; reverted to persisted A2 without save",
+  "mobileFocus": "opening -> customer heading; Back -> same row",
+  "warningsAndErrors": [],
+  "limits": [
+    "search/status filtering/count T07 pending checkpoint",
+    "contact/note/close/settings UI pending checkpoint",
+    "full conflict/unknown retry/five-width proof pending expansion",
+    "initial unmatched viewport image excluded from matched proof",
+    "first list400 repaired by API owner and same accepted lead retried"
+  ]
+}

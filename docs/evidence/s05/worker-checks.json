@@ -1,0 +1,53 @@
+{
+  "observedAtUtc": "2026-10-16T02:40:55.746012+00:00",
+  "status": "PASS_FINAL",
+  "attempts": [
+    {
+      "exitCode": 1,
+      "passed": 0,
+      "failed": 8,
+      "assertions": 58,
+      "rootCauseSqlState": "42702",
+      "rootCause": "worker_claim unnest alias target conflicts with PL/pgSQL variable target",
+      "secondary": "Separate OS processes could not reach started marker because claimfailed",
+      "retainedMigrationPolicy": "0001\u20130009immutable; approved scopedforward0010repair required"
+    },
+    {
+      "exitCode": 0,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 162,
+      "elapsedSeconds": 44.26,
+      "unsettledIoHoldMs": 31156.9,
+      "scope": [
+        "actualrestrictedworkerrole/noauthprivateSELECT/DML",
+        "two workers disjoint claims/selectedscope",
+        "initialadminunavailable/selectedrecipients",
+        "inflightconfigA\u2192B/nosuccessfulresend",
+        "separateOSprocess31sIOleasebudget/nooverlap",
+        "processcrashbeforeaftercapture/idempotentreceipt/backoff/fencing",
+        "5attempt/transient/permanent",
+        "suspend/revoke/close/expirebeforeattempt"
+      ]
+    }
+  ],
+  "limits": "Actual local restricted-role/worker/process/capture/fault/race proof; initial8failSQLalias and firstpoll0claim history retained. Externalemail/provider/exactly-once andS06workers remain outofscope. Browserunknownbeforecommit andactualAPIpostcommitloss/restart remain separate proof.",
+  "finalRun": {
+    "source": "combined-api-checks.json",
+    "recordedAtUtc": "2026-10-16T02:46:36.840Z",
+    "worker": {
+      "passed": 8,
+      "assertions": 162,
+      "failed": 0,
+      "skipped": 0
+    },
+    "additionalRaces": {
+      "passed": 7,
+      "assertions": 119,
+      "failed": 0,
+      "skipped": 0
+    },
+    "functionalCaptureLink": "CLOSED:worker-cli.json correctedfuture10captures/loginHTTP200/oldreceiptunchanged"
+  }
+}

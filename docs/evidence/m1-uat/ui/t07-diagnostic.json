@@ -1,0 +1,40 @@
+{
+  "phase": "complete",
+  "posts": 0,
+  "formFilled": false,
+  "securityBypass": false,
+  "environmentKeys": [
+    "PATH",
+    "HOME",
+    "TMPDIR",
+    "LANG",
+    "LC_ALL",
+    "LC_CTYPE"
+  ],
+  "status": 200,
+  "url": "http://localhost:5892/s05-ui-ef95e0e2/dich-vu/tu-van",
+  "title": "Tư vấn nha khoa",
+  "headings": [
+    "Tư vấn nha khoa",
+    "Gửi yêu cầu tư vấn"
+  ],
+  "labels": [
+    "Họ tên (không bắt buộc)",
+    "Số điện thoại",
+    "Email",
+    "Ngôn ngữ tư vấnTiếng ViệtEnglish",
+    "Kênh liên hệĐiện thoạiEmail",
+    "Lời nhắn (không bắt buộc)",
+    "Tôi đồng ý để phòng khám sử dụng thông tin đã cung cấp để liên hệ tư vấn theo yêu cầu này."
+  ],
+  "selectors": {
+    "consultationHeading": 1,
+    "name": 1,
+    "email": 1,
+    "channelOriginalExactLabel": 0,
+    "channelRole": 1,
+    "message": 1,
+    "consent": 1,
+    "submit": 1
+  }
+}

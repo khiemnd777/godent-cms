@@ -1,0 +1,235 @@
+{
+  "recordedAtUtc": "2026-10-16T05:19:37.365Z",
+  "status": "FAIL",
+  "checks": {
+    "assignmentUserIdentifierForwardRepair": false,
+    "lastAdminTriggersRetained": true,
+    "lastAdminBodiesMatchHistorical": true,
+    "activeFactorReferencesAbsent": true,
+    "activeLegacyMembershipCallsAbsent": true,
+    "legacyStorageRetained": true,
+    "inertGrantDefaultFalse": true,
+    "wrapperKeepsExactArgumentAndDefault": true,
+    "actorPayloadFactorFree": true,
+    "helpersOwnerAndSearchPath": true,
+    "recentUsesCurrentClock": true,
+    "narrowHelperPrivileges": true
+  },
+  "lastAdminRaceEvidenceReuse": {
+    "historicalRaceSuitePassed": true,
+    "migrationMatchesHistorical": true,
+    "retainedBodies": [
+      {
+        "name": "retain_admin",
+        "sourceBodySha256": "dc7f06c5beef2edaf5798826c34ee7e8fe8edd280b8feb079a497c995a7c72ee",
+        "exactBodyMatch": true
+      },
+      {
+        "name": "retain_admin_on_disable",
+        "sourceBodySha256": "63db18740941a3e1bd810680482b0b8f5d0f9dacebaf68f2fac4578a6f14ac87",
+        "exactBodyMatch": true
+      }
+    ],
+    "limit": "Reuses historical actual race proof only for unchanged last-admin counting/locks/triggers. Fresh password-only and UI last-admin tests remain separate; no fresh race run is claimed."
+  },
+  "functionCount": 39,
+  "policyCount": 40,
+  "functionHashes": [
+    {
+      "schema": "gcms_s02",
+      "name": "current_actor",
+      "sha256": "f726e37b3e7b347af1252f086c2310f7ff32ff688eeffde81fb80e3ab8fc4c4e"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "guard_draft_compatibility",
+      "sha256": "36c4888a6479fe92068a36a7edf2340819165f5266597178c47c38e9187e2794"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "guard_publication",
+      "sha256": "e1ab44254903be0db98847982c319331b4068ab3a69dd48f2032e7c0c633ff05"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "guard_publication_pointer",
+      "sha256": "f0224a3102c944f9174222049987684c6b49f4a5c86d2a63d8d73f3c86bf486f"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "guard_site_slug",
+      "sha256": "0b8cfb3614433e9fe6480cf307735c26680c14762a2b6ca85b010deae4b3ec2c"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "has_current_membership",
+      "sha256": "d71b163fad5efe4e3d5acbe6e19ba7378946be86930da2f3d0bc627a9a67bd7f"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "has_membership",
+      "sha256": "cd4f86b45302334f7691d301133e968ba7dea00dfa71136af305fb3db867798b"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "has_recent_auth",
+      "sha256": "80285a7d3f92f8635caa8df710e7771fffdf5a18711c3564be2e65343aa7152b"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "immutable_publication",
+      "sha256": "6236fbcd76c993dee9266a1554e558dec18cc66445c575f68fa99c087a0be097"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "invited_email",
+      "sha256": "aefd0a6de26bfac25f951002e2090b273b34714cb7a3d8f364386f9569bb84e7"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "lock_actor",
+      "sha256": "70d52d8b2e3fa7fc44fc815a67a2d6f8822c8b51db4fdee9eae5fd639e9236c2"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "plain_document",
+      "sha256": "d819cdd51a14882def1b7ac76d248c100459ecdebedcbe5ddd3f41f11c26b35c"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "read_public_service",
+      "sha256": "9e82e9c53a1f07fe066b738527b997100ecbefddd35575177fc7765c10ea1943"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "require_publication_closure",
+      "sha256": "6318eab4d2d6db04b63266c0d42bc84e23fee22da62a78a13005925a3ff4cd0c"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "retain_admin",
+      "sha256": "ed6d15e4066d395f4038eeae8f6d49992a8e6da74ca6bfa3ef9ecf963e4d0186"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "retain_admin_on_disable",
+      "sha256": "91043e4a57a82eb0f9a63c766014f889f957b5228cac6172cf4627d26dea1fe1"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "same_tenant_user",
+      "sha256": "622a17335de4857340a81dd905586f1f77b09101fce00e0878ff6722cb7e4d9a"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "snapshot_closure",
+      "sha256": "eb21dfe9948262228a8fc8dc6e2f0972f070f39ec185c647c8dad5654416a283"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "valid_document",
+      "sha256": "662db84a7d75d7a386c3e6c24e6de3735699c17f3e616c2a937200d7d2b56fbc"
+    },
+    {
+      "schema": "gcms_s02",
+      "name": "valid_slug",
+      "sha256": "9ab25b54cdec3cc09a2a93fbd9b8a4f11f8456e8904a2e699f39edaa1ca3ac95"
+    },
+    {
+      "schema": "gcms_s04",
+      "name": "has_lead_access",
+      "sha256": "e22048416bc91af7a11861473dd81a5ff327c489e613ab27a4c489ab8ffdf0a3"
+    },
+    {
+      "schema": "gcms_s04",
+      "name": "intake",
+      "sha256": "ef6d3e57a537e5f048145d3e42780aa52d24fcc7c3c316a4d38a63669b49d9a7"
+    },
+    {
+      "schema": "gcms_s04",
+      "name": "require_intake_closure",
+      "sha256": "ebb1ca43e94dd9af414067d1640a967e4e9ee9ae9ed20f92b6050ad12c2f4df1"
+    },
+    {
+      "schema": "gcms_s04",
+      "name": "valid_email",
+      "sha256": "5587a4c8d027649cad5e71bf80c02359d6962c202a42f478c6f473a85cdd80c4"
+    },
+    {
+      "schema": "gcms_s04",
+      "name": "valid_payload",
+      "sha256": "832fbc698d33b71f68ea90633eb63029714fc1efdc794b990dc048677de062c0"
+    },
+    {
+      "schema": "gcms_s05",
+      "name": "allocate_lead_code",
+      "sha256": "68bb5627c8ac34945284e4fcfa9c9baa204b895782e4706b1d26f709fc40f7db"
+    },
+    {
+      "schema": "gcms_s05",
+      "name": "assignee",
+      "sha256": "36b5823d2812ea2da6e47059348ec8bc32feb096c9d0b4021f4177fee0bac9df"
+    },
+    {
+      "schema": "gcms_s05",
+      "name": "authorize",
+      "sha256": "4a2652da824aa21c283c5fe0a34971489969e7bce7cb64f02570d8608d09ec29"
+    },
+    {
+      "schema": "gcms_s05",
+      "name": "current_recipients",
+      "sha256": "e991d57cd7edde695d98a25640068c59ae116fb971bb9a6ce9d55dfefc801d4e"
+    },
+    {
+      "schema": "gcms_s05",
+      "name": "eligible",
+      "sha256": "d21b38db065bf75c8f8b8cfacfb51d7bf8401eb349a261121c31551234af2081"
+    },
+    {
+      "schema": "gcms_s05",
+      "name": "lead_command",
+      "sha256": "eeae5f863c807fdf1197f381cb8955e4930026d574631c2af4ac179df223ec15"
+    },
+    {
+      "schema": "gcms_s05",
+      "name": "lead_notification",
+      "sha256": "628adb469112dd2d1c4cf4cbb61b51b679c38d1b0e09b7c6cc1be8dcd19f19e0"
+    },
+    {
+      "schema": "gcms_s05",
+      "name": "read_settings",
+      "sha256": "4d1b5590f9e6bc06450a76c92c0d15fbd675178f1aebbb830d37628c595d9457"
+    },
+    {
+      "schema": "gcms_s05",
+      "name": "settings_command",
+      "sha256": "fc24c0a27dbbc9fe625aabf2ae2692e8752dc5e9a2e0b0b6e00cfa5f23dcaa4b"
+    },
+    {
+      "schema": "gcms_s05",
+      "name": "track_initial_recipient",
+      "sha256": "739ae7ad558675e370ae1687a3194d983ca9c252557bd3303f47f9e9e3595746"
+    },
+    {
+      "schema": "gcms_s05",
+      "name": "valid_text",
+      "sha256": "786ede4907c1be71d9872d942096bf0542df60361afbd6997c9994029509271c"
+    },
+    {
+      "schema": "gcms_s05",
+      "name": "worker_claim",
+      "sha256": "9e3c8b87c10c049398eed128ab84e3387d323d8523d91c8df3b979ce8269721e"
+    },
+    {
+      "schema": "gcms_s05",
+      "name": "worker_finish",
+      "sha256": "e793fa61ba7e4f3c9eef68b1c070949a43e7759c70a515e30ae9e0614813126e"
+    },
+    {
+      "schema": "gcms_s05",
+      "name": "worker_start",
+      "sha256": "4862eb3ef60542fcd5aae21ef9252e466ff149d0a490d1b488eeb2ca256e3c5f"
+    }
+  ],
+  "limit": "Read-only PostgreSQL catalog checks. Behavioral/session and browser proof remain separate."
+}

@@ -1,0 +1,77 @@
+name: godent-cms-s01
+
+services:
+  postgres:
+    image: postgres:18.4-alpine@sha256:9a8afca54e7861fd90fab5fdf4c42477a6b1cb7d293595148e674e0a3181de15
+    environment:
+      POSTGRES_USER: gcms_local
+      POSTGRES_DB: gcms_s01
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run bun scripts/local-setup.ts first}
+    ports:
+      - "127.0.0.1:5888:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    networks: [local]
+    mem_limit: 256m
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U gcms_local -d gcms_s01"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+
+  redis:
+    image: redis:7.4.9-alpine3.21@sha256:6ab0b6e7381779332f97b8ca76193e45b0756f38d4c0dcda72dbb3c32061ab99
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD:?Run bun scripts/local-setup.ts first}
+    command: [sh, -c, 'exec redis-server --requirepass "$$REDIS_PASSWORD" --maxmemory 32mb --maxmemory-policy noeviction --save "" --appendonly no']
+    ports:
+      - "127.0.0.1:5889:6379"
+    networks: [local]
+    mem_limit: 96m
+    healthcheck:
+      test: [CMD-SHELL, 'REDISCLI_AUTH="$$REDIS_PASSWORD" redis-cli ping | grep -q PONG']
+      interval: 5s
+      timeout: 3s
+      retries: 12
+
+  s3:
+    image: chrislusf/seaweedfs:4.48@sha256:4e61d15fd35994cb1e43e1e553dff106794841fd9a99ade2fc8c8bfce4d7872d
+    command:
+      - server
+      - -dir=/data
+      - -ip=s3
+      - -ip.bind=0.0.0.0
+      - -master.telemetry=false
+      - -master.volumeSizeLimitMB=256
+      - -volume.max=8
+      - -volume.preStopSeconds=1
+      - -filer
+      - -filer.exposeDirectoryData=false
+      - -s3
+      - -s3.port=8333
+      - -s3.config=/etc/seaweedfs/s3.json
+      - -s3.iam=false
+      - -s3.port.iceberg=0
+      - -s3.port.lance=0
+      - -s3.autoCreateBucket=false
+      - -s3.allowDeleteBucketNotEmpty=false
+    ports:
+      - "127.0.0.1:5887:8333"
+    volumes:
+      - s3_data:/data
+      - ./.local/s3.json:/etc/seaweedfs/s3.json:ro
+    networks: [local]
+    mem_limit: 384m
+    healthcheck:
+      test: [CMD-SHELL, 'wget -q -O /dev/null http://127.0.0.1:9333/cluster/status']
+      interval: 5s
+      timeout: 3s
+      retries: 18
+
+networks:
+  local:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  s3_data:

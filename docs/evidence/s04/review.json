@@ -1,0 +1,41 @@
+{
+  "status": "CLOSED",
+  "observedAtUtc": "2026-10-16T01:27:13.172509+00:00",
+  "reviewer": "Native kit-reviewer /root/s04_security, observed xhigh",
+  "sourceScope": "Frozen S04 API/SQL/FE/shared contracts/runner plus recorded actual integration artifact; no reviewer edits, DB writes or browser actions.",
+  "findings": [
+    {
+      "priority": "P1",
+      "issue": "SQL NULL challenge comparison bypass",
+      "disposition": "Fixed before0005 applied; direct restricted-role null/type/pair regressions PASS"
+    },
+    {
+      "priority": "P2",
+      "issue": "Owner schema CREATE unavailable",
+      "disposition": "Scoped bootstrap creates only new private schemas; old role grants unchanged; actual apply PASS"
+    },
+    {
+      "priority": "P1",
+      "issue": "Positive CMS read403/SQL42501 FOR SHARE privilege mismatch",
+      "disposition": "Remove unnecessary tenant rowlock only; no UPDATE grant; actual A1/A2 browser/API read PASS"
+    },
+    {
+      "priority": "P2",
+      "issue": "Provided malformed mailbox accepted",
+      "disposition": "Shared supported ASCII mailbox parser plus forward0007 constraint/function; pure/directSQL/HTTP/client checks PASS"
+    }
+  ],
+  "additionalReviewedRepair": "Anonymous audit NOTNULL authenticated actor incompatibility repaired by dedicated redacted S04 audit in forward0006. Existing authenticated audit unchanged.",
+  "runtimeEvidence": {
+    "s04Tests": 25,
+    "assertions": 313,
+    "failures": 0,
+    "skips": 0
+  },
+  "dependencyDisposition": "Fresh independently confirmed bounded local deferral; audit remains FAIL, see dependency-audit.json.",
+  "limits": [
+    "Reviewer independently ran pure checks and inspected source/artifacts; root/API executed actual HTTP/PG",
+    "Browser CAPTCHA solving NOT_RUN",
+    "No SMTP, physical retention worker, production or human acceptance proof"
+  ]
+}

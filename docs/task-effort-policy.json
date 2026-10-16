@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "policy_id": "GCMS-EFFORT-001 v1",
+  "project": "godent-cms",
+  "effort_order": [
+    "medium",
+    "high",
+    "xhigh"
+  ],
+  "task_types": {
+    "agent-kit-analysis": {
+      "effort": "high",
+      "label": "Analyze Agent Kit repository"
+    },
+    "cms-requirements-analysis": {
+      "effort": "high",
+      "label": "Analyze dental CMS requirements"
+    },
+    "multi-tenant-architecture": {
+      "effort": "xhigh",
+      "label": "Design multi-tenant SaaS architecture"
+    },
+    "tenant-rbac-security-review": {
+      "effort": "xhigh",
+      "label": "Assess tenant isolation, RBAC and security"
+    },
+    "tech-stack-selection": {
+      "effort": "high",
+      "label": "Select/evaluate technology stack"
+    },
+    "architecture-review": {
+      "effort": "xhigh",
+      "label": "Review architecture before a decision"
+    },
+    "template-initialization": {
+      "effort": "medium",
+      "label": "Initialize from an agreed template"
+    },
+    "agent-artifact-generation": {
+      "effort": "medium",
+      "label": "Generate agent/skill/document artifacts from settled rules"
+    },
+    "agent-policy-design": {
+      "effort": "high",
+      "label": "Design/change agent, skill, approval, routing or ownership policy"
+    },
+    "implementation": {
+      "effort": "medium",
+      "label": "Implement bounded APIs/services/components under settled contracts"
+    },
+    "test-development": {
+      "effort": "medium",
+      "label": "Write/run ordinary unit and integration tests"
+    },
+    "complex-debugging": {
+      "effort": "high",
+      "label": "Debug difficult cross-layer or poorly understood failures"
+    },
+    "critical-debugging": {
+      "effort": "xhigh",
+      "label": "Debug exceptional ambiguity with critical invariants or competing hypotheses"
+    },
+    "final-architecture-security-audit": {
+      "effort": "xhigh",
+      "label": "Final architecture/security audit"
+    }
+  },
+  "risk_floors": {
+    "tenant-isolation": "xhigh",
+    "authorization": "xhigh",
+    "security-boundary": "xhigh",
+    "sensitive-data": "xhigh",
+    "publication-integrity": "xhigh",
+    "transaction-concurrency": "xhigh",
+    "irreversible-data-change": "xhigh",
+    "shared-contract": "high",
+    "bun-runtime-compatibility": "high"
+  },
+  "fallback": {
+    "mode": "inherit",
+    "source": "docs/model-routing.md#general-fallback",
+    "when": "No task type and no risk floor matches",
+    "requested_effort": null
+  },
+  "roles": {
+    "coordinator": null,
+    "explorer": "kit-explorer",
+    "implementer": "kit-implementer",
+    "reviewer": "kit-reviewer"
+  },
+  "evidence": {
+    "selection_is_runtime_proof": false,
+    "model_selection": "preserve developer selection",
+    "native_execution": "not performed by classifier"
+  }
+}

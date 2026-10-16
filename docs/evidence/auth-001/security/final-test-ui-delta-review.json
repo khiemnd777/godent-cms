@@ -1,0 +1,134 @@
+{
+  "package": "GCMS-AUTH-001 v0.1",
+  "stage": "FINAL_TEST_HARNESS_AND_RELEASED_UI_DELTA_REVIEW",
+  "status": "SOURCE_AND_SCOPED_UI_CLOSED_FINAL_API_PRESERVATION_PENDING",
+  "recordedAtUtc": "2026-10-16T05:38:49.914439+00:00",
+  "runtimeConfiguration": {
+    "status": "PASS",
+    "role": "kit-reviewer",
+    "thread": "01a14283-7099-7a61-a627-171a8bbdbe8f",
+    "parent": "01a1402c-3c81-7933-9927-d974f70c9fbc",
+    "model": "gpt-6.1-sol",
+    "requiredRequestedObservedEffort": [
+      "xhigh",
+      "xhigh",
+      "xhigh"
+    ],
+    "turn": "01a14336-d2d1-73b2-b49b-b36f28cff7b5",
+    "observedAtUtc": "2026-10-16T05:37:11.498Z"
+  },
+  "newBlockingFindings": [],
+  "boundedTestSourceReview": {
+    "transport": "AUTH harness waits an11-second quiet interval between sign-ins and invokes unchanged identity.handler. It neither mocks nor disables the real limiter. Sequential source call sites respect the real installed authentication budget.",
+    "SQL": "Settings JSON passes through explicit ::text::jsonb, preserving the actual PostgreSQL object contract. Restricted password-read rejection wraps PgRaw with Promise.resolve so thenable execution reaches the DB and the rejected-promise assertion. No assertion is removed.",
+    "recovery": "Distinct random new password is persisted as pending before concurrent reset attempts; canonical password updates after exact[200,400]. Existing all-session/token assertions remain; actual old password401/newpassword200 and factor-free login assertion are added. Mutations target only the owned recovery fixture.",
+    "lifecycle": "Retained enrolled and new unenrolled logins exercise six old factor routes404 each. New-owned multi-tenant disable serializes against active restricted tenant transaction, then revokes both sessions/current actor/password login. It retains positive administrator-count checks; fresh UI last-admin409 remains separate.",
+    "negativeCoverage": "Real tenant/platform/cross-tenant/CSRF/password-read boundaries, suspended read/write/replay split, future/stale/expired grants and nonfuture5minute reauth remain. Session8hour boundary is accelerated owned-clock evidence, not a natural8hour browser wait.",
+    "execution": "NOT_RUN by reviewer. Coordinator reports current boundaries3PASS/25assertions. Final three-suite runner is in progress and current combined JSON is not treated as PASS."
+  },
+  "fixtureResumeReview": {
+    "result": "PASS_EXACT_EXISTING_ACCOUNT_CONTINUATION",
+    "facts": "Exact existing active but unverified apiDisable with no memberships is bound to the same email/ID/captures. Read-only SQL verifies identity/invitation bindings; normal handler verifies email and ordinary password/service accepts A/invites+accepts B. No registration/reset/new account in resume; total canonical new AUTH actors5 (3UI+2API), adds0tenants.",
+    "scopeLimit": "New5-account count and retained-password assertion are owner evidence; final full preservation is separate. Historical initial setup generic failure is retained in the resume record, not converted into success."
+  },
+  "uiReview": {
+    "invitationNegatives": "Used token409, resend200/old token409/replacement acceptedB/privateaccess, wrongactor409, revoke200/revoked registration400,0successful new accounts.409responses do not contain a structured code; do not claim a more specific code.",
+    "fiveWidths": "320/390/768/1024/1440 DOM widths match viewport, all3account sections, empty password, no factor UI/network requests. Actual Tab sequence backlink\u2192logout\u2192reset\u2192password\u2192reauth; no submission.",
+    "imageScope": "Reviewer inspected existing account-final-320.jpg and fresh account-settled-768-bottom.jpg/account-settled-1024-bottom.jpg. These show empty password, factor-free account content/actions and no repeated top-strip artifact. No independent reviewer browser or all-width image replay occurred.",
+    "recapture": "Fresh Pages at768/1024configured before navigation record one heading/backlink and3panels, visible bottom action/empty password/no horizontal overflow. Earlier full-page resize artifacts remain historical. No product-layout or compositor root cause is asserted.",
+    "remainingUnknowns": [
+      "Fresh AUTH browser invitation-expiry and natural8-hour expiry not run.",
+      "Original same-path/hash-only second invitation did not complete; normal new-mail-page continuation passed.",
+      "Earlier original assignment response and original lifecycle final-login response/count gaps remain labeled in their historical records."
+    ]
+  },
+  "pureArtifactConsistencyChecks": {
+    "negativeStatuses": true,
+    "noSuccessfulProbeAccount": true,
+    "fiveWidths": true,
+    "noHorizontalOverflow": true,
+    "emptyPasswordFactorFree": true,
+    "keyboardNoMutation": true,
+    "recaptureExact2Widths": true,
+    "fixtureNoDuplicate": true,
+    "initialRunnerFailurePreserved": true
+  },
+  "pureCheckStatus": "PASS",
+  "currentRunnerSnapshot": {
+    "status": "PASS",
+    "recordedAtUtc": "2026-10-16T05:38:29.135Z",
+    "suites": [
+      {
+        "file": "auth-001-boundaries.test.ts",
+        "exitCode": 0
+      },
+      {
+        "file": "auth-data-lifecycle.test.ts",
+        "exitCode": 0
+      },
+      {
+        "file": "auth-data-recovery.test.ts",
+        "exitCode": 0
+      }
+    ],
+    "limit": "In-progress owner run; this snapshot is historical only. Final owner result has not been reviewed here."
+  },
+  "sourceIntegrity": [
+    {
+      "path": "apps/api/test/auth-001-support.ts",
+      "sha256": "85aac27f1b7e25b0dcb8e5b5b592e4d4ea5abdbc57c64439dbfa4b58b850a6c4"
+    },
+    {
+      "path": "apps/api/test/auth-001-boundaries.test.ts",
+      "sha256": "7ce4147256795ff09fda130a8f3ff0afb7ed21955993c7e5caeaf16560964c42"
+    },
+    {
+      "path": "apps/api/test/auth-data-lifecycle.test.ts",
+      "sha256": "d30a2231eed40fe5af116ebc7c1bd1ea6dab204453bb3c3207c6f5a715079d1e"
+    },
+    {
+      "path": "apps/api/test/auth-data-recovery.test.ts",
+      "sha256": "86068147e81eb65437c019fc4ee271957009fe939e31e7ca3fca0245b24c5ac0"
+    },
+    {
+      "path": "scripts/auth-001-check.ts",
+      "sha256": "f3a4a736835b4618b800ea40b5b252625e62d6b8dea3d1aa183363cf8c7e2071"
+    },
+    {
+      "path": "scripts/auth-001-fixtures.ts",
+      "sha256": "6538d5d172ac3aca6c1904317cf9b44e8cdf861a4907cfb8e684dab3e7614fe3"
+    }
+  ],
+  "artifactIntegrity": [
+    {
+      "path": "docs/evidence/auth-001/ui/invitation-negatives-result.json",
+      "sha256": "09a29658952ced8103a83b9fd43f96909b7a78432552f58b2de62385d83a662d"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/final-visual-result.json",
+      "sha256": "563cf3fb60bac2294bef62e354cf77f9f4478ab3cdd54dc9c1e384169fda2636"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/visual-recapture-result.json",
+      "sha256": "bdccd72b92e9e493c02740c8124110e03d326976b55b1a6d8e0e5e46892954df"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/fixture-setup.json",
+      "sha256": "ebdfbf0b870a96614e4e6e4c93804c380cc8af6d9f062a932bbdf776acf0ba84"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/fixture-setup-resume.json",
+      "sha256": "701c533affa24d0a6612999b8bacd8b5e7df299b3ea91a7be2501d277c545b52"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/bounded-checks-attempt1.json",
+      "sha256": "b8123ab1a8f4fdf13e0f69f978af55eea70a03d598f1b7bdc96f64bb812dcc34"
+    }
+  ],
+  "unchangedCoreHashCheck": "Current auth/index.ts,database/index.ts/schema.ts,domain.service.ts/leads.service.ts and bun.lock hashes match previously reviewed snapshots; no broad re-audit.",
+  "limits": [
+    "Only security evidence written. No application/test/script/SQL/private/DB/browser/runtime/Git/dependency edits or test execution by reviewer.",
+    "Final API suites, final preservation/runtime/build-trace callback and package/human acceptance remain separate.",
+    "Known dependency audit remains FAIL with local-only deferral/reassess2026-10-22 or earlier patch/dependency/exposure/before production; no new audit, production waiver or external email proof."
+  ]
+}

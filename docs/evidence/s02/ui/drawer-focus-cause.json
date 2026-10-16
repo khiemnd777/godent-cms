@@ -1,0 +1,15 @@
+{
+  "status": "FAIL before CSS repair",
+  "evidence": {
+    "targetConnected": true,
+    "targetVisibilityAtFocus": "hidden",
+    "focusBefore": "Mở menu",
+    "focusImmediatelyAfter": "Mở menu",
+    "focusAfterOpening": "BODY",
+    "drawerCount": 1,
+    "sidebarInert": false,
+    "mainInert": true
+  },
+  "cause": "Visibility transition leaves the target hidden at the first scheduled focus call.",
+  "repair": "Make opening visibility immediate, retain transform animation; diagnostics removed before final build."
+}

@@ -1,0 +1,18 @@
+{
+  "before": {
+    "focus": {
+      "tag": "BUTTON",
+      "text": "Thử lại"
+    },
+    "heading": "Chưa thể kiểm tra phiên",
+    "leadRegions": 0,
+    "privateContactVisible": false
+  },
+  "after": {
+    "heading": "Yêu cầu tư vấn",
+    "leadRegions": 2,
+    "rows": 20,
+    "sessionGateErrorVisible": false
+  },
+  "trigger": "periodic session validation automatically recovered before keyboard activation; Enter not executed"
+}

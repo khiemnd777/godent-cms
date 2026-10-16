@@ -1,0 +1,46 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "PASS",
+  "startedAt": "2026-10-16T04:59:22.874Z",
+  "steps": [
+    {
+      "step": "new-B-site-saved",
+      "at": "2026-10-16T04:59:23.691Z"
+    },
+    {
+      "step": "new-B-service-created",
+      "at": "2026-10-16T04:59:23.857Z"
+    },
+    {
+      "step": "new-B-published-with-password-only-session",
+      "at": "2026-10-16T04:59:23.978Z"
+    },
+    {
+      "step": "new-B-anonymous-public-render",
+      "at": "2026-10-16T04:59:24.195Z"
+    }
+  ],
+  "scope": "New browserOwner without factor enrollment edits/saves/publishes exactly one new service on the new owned tenantB via real UI, then anonymous public rendering. No retained publication/content changes.",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "headless": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "existingProfileOrCookies": false,
+    "CDP": false,
+    "downloads": false
+  },
+  "browserVersion": "155.0.8059.80",
+  "newServices": 1,
+  "newPublications": 1,
+  "newLeads": 0,
+  "oldBusinessMutations": 0,
+  "finishedAt": "2026-10-16T04:59:24.273Z"
+}

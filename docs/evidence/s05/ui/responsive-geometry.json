@@ -1,0 +1,1280 @@
+[
+  {
+    "screen": "lead-list",
+    "width": 320,
+    "observation": {
+      "controls": [
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Làm mới",
+          "visible": true,
+          "width": 87.6328125
+        },
+        {
+          "height": 20.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Tìm tên hoặc mã yêu cầu",
+          "visible": true,
+          "width": 220
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lọc trạng thái yêu cầu",
+          "visible": true,
+          "width": 181.125
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Áp dụng",
+          "visible": true,
+          "width": 76.875
+        },
+        {
+          "height": 26.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Bộ lọc thêm",
+          "visible": true,
+          "width": 268
+        },
+        {
+          "height": 44,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Tất cả người phụ tráchTôiChưa phân côngS02 A1S02 A",
+          "visible": true,
+          "width": 268
+        },
+        {
+          "height": 48.796875,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 268
+        },
+        {
+          "height": 48.796875,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 268
+        },
+        {
+          "height": 44,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "2050",
+          "visible": true,
+          "width": 268
+        },
+        {
+          "height": 34.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Xóa bộ lọc",
+          "visible": true,
+          "width": 59.5
+        },
+        {
+          "height": 32,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Mở yêu cầu Khách thử S05 01",
+          "visible": true,
+          "width": 104.0859375
+        }
+      ],
+      "documentWidth": 320,
+      "sidebar": {
+        "left": -260,
+        "transform": "matrix(1, 0, 0, 1, -260, 0)",
+        "width": 260
+      },
+      "viewport": {
+        "height": 844,
+        "width": 320
+      },
+      "violations": []
+    }
+  },
+  {
+    "screen": "lead-detail",
+    "width": 320,
+    "observation": {
+      "controls": [
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Danh sách yêu cầu",
+          "visible": true,
+          "width": 159.4453125
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "lead-assignee",
+          "visible": true,
+          "width": 254
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "lead-status",
+          "visible": true,
+          "width": 254
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lưu cập nhật",
+          "visible": true,
+          "width": 254
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "activity-kind",
+          "visible": true,
+          "width": 254
+        },
+        {
+          "height": 80.375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "activity-text",
+          "visible": true,
+          "width": 152
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lưu ghi chú",
+          "visible": true,
+          "width": 254
+        }
+      ],
+      "documentWidth": 320,
+      "sidebar": {
+        "left": -260,
+        "transform": "matrix(1, 0, 0, 1, -260, 0)",
+        "width": 260
+      },
+      "viewport": {
+        "height": 844,
+        "width": 320
+      },
+      "violations": []
+    }
+  },
+  {
+    "screen": "lead-list",
+    "width": 390,
+    "observation": {
+      "controls": [
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Làm mới",
+          "visible": true,
+          "width": 95.6328125
+        },
+        {
+          "height": 20.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Tìm tên hoặc mã yêu cầu",
+          "visible": true,
+          "width": 280
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lọc trạng thái yêu cầu",
+          "visible": true,
+          "width": 241.125
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Áp dụng",
+          "visible": true,
+          "width": 76.875
+        },
+        {
+          "height": 26.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Bộ lọc thêm",
+          "visible": true,
+          "width": 328
+        },
+        {
+          "height": 44,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Tất cả người phụ tráchTôiChưa phân côngS02 A1S02 A",
+          "visible": true,
+          "width": 328
+        },
+        {
+          "height": 48.796875,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 328
+        },
+        {
+          "height": 48.796875,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 328
+        },
+        {
+          "height": 44,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "2050",
+          "visible": true,
+          "width": 328
+        },
+        {
+          "height": 34.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Xóa bộ lọc",
+          "visible": true,
+          "width": 59.5
+        },
+        {
+          "height": 32,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Mở yêu cầu Khách thử S05 01",
+          "visible": true,
+          "width": 104.0859375
+        }
+      ],
+      "documentWidth": 390,
+      "sidebar": {
+        "left": -260,
+        "transform": "matrix(1, 0, 0, 1, -260, 0)",
+        "width": 260
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "violations": []
+    }
+  },
+  {
+    "screen": "lead-detail",
+    "width": 390,
+    "observation": {
+      "controls": [
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Danh sách yêu cầu",
+          "visible": true,
+          "width": 159.4453125
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "lead-assignee",
+          "visible": true,
+          "width": 314
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "lead-status",
+          "visible": true,
+          "width": 314
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lưu cập nhật",
+          "visible": true,
+          "width": 314
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "activity-kind",
+          "visible": true,
+          "width": 314
+        },
+        {
+          "height": 80.375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "activity-text",
+          "visible": true,
+          "width": 152
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lưu ghi chú",
+          "visible": true,
+          "width": 314
+        }
+      ],
+      "documentWidth": 390,
+      "sidebar": {
+        "left": -260,
+        "transform": "matrix(1, 0, 0, 1, -260, 0)",
+        "width": 260
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "violations": []
+    }
+  },
+  {
+    "screen": "lead-workspace",
+    "width": 768,
+    "observation": {
+      "controls": [
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Làm mới",
+          "visible": true,
+          "width": 99.2890625
+        },
+        {
+          "height": 20.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Tìm tên hoặc mã yêu cầu",
+          "visible": true,
+          "width": 164.5
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lọc trạng thái yêu cầu",
+          "visible": true,
+          "width": 151.5
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Áp dụng",
+          "visible": true,
+          "width": 76.875
+        },
+        {
+          "height": 26.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Bộ lọc thêm",
+          "visible": true,
+          "width": 374
+        },
+        {
+          "height": 44,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Tất cả người phụ tráchTôiChưa phân côngS02 A1S02 A",
+          "visible": true,
+          "width": 181
+        },
+        {
+          "height": 45.6953125,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 181
+        },
+        {
+          "height": 45.6953125,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 181
+        },
+        {
+          "height": 44,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "2050",
+          "visible": true,
+          "width": 181
+        },
+        {
+          "height": 34.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Xóa bộ lọc",
+          "visible": true,
+          "width": 59.5
+        },
+        {
+          "height": 32,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Mở yêu cầu Khách thử S05 01",
+          "visible": true,
+          "width": 104.0859375
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "lead-assignee",
+          "visible": true,
+          "width": 252
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "lead-status",
+          "visible": true,
+          "width": 252
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lưu cập nhật",
+          "visible": true,
+          "width": 252
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "activity-kind",
+          "visible": true,
+          "width": 252
+        },
+        {
+          "height": 80.375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "activity-text",
+          "visible": true,
+          "width": 152
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lưu ghi chú",
+          "visible": true,
+          "width": 252
+        }
+      ],
+      "documentWidth": 768,
+      "sidebar": {
+        "left": -260,
+        "transform": "matrix(1, 0, 0, 1, -260, 0)",
+        "width": 260
+      },
+      "viewport": {
+        "height": 1080,
+        "width": 768
+      },
+      "violations": []
+    }
+  },
+  {
+    "screen": "lead-workspace",
+    "width": 1024,
+    "observation": {
+      "controls": [
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Làm mới",
+          "visible": true,
+          "width": 99.2890625
+        },
+        {
+          "height": 20.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Tìm tên hoặc mã yêu cầu",
+          "visible": true,
+          "width": 115.625
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lọc trạng thái yêu cầu",
+          "visible": true,
+          "width": 151.5
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Áp dụng",
+          "visible": true,
+          "width": 76.875
+        },
+        {
+          "height": 26.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Bộ lọc thêm",
+          "visible": true,
+          "width": 412
+        },
+        {
+          "height": 44,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Tất cả người phụ tráchTôiChưa phân côngS02 A1S02 A",
+          "visible": true,
+          "width": 200
+        },
+        {
+          "height": 45.6953125,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 200
+        },
+        {
+          "height": 45.6953125,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 200
+        },
+        {
+          "height": 44,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "2050",
+          "visible": true,
+          "width": 200
+        },
+        {
+          "height": 34.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Xóa bộ lọc",
+          "visible": true,
+          "width": 59.5
+        },
+        {
+          "height": 32,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Mở yêu cầu Khách thử S05 01",
+          "visible": true,
+          "width": 104.0859375
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "lead-assignee",
+          "visible": true,
+          "width": 252
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "lead-status",
+          "visible": true,
+          "width": 252
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lưu cập nhật",
+          "visible": true,
+          "width": 252
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "activity-kind",
+          "visible": true,
+          "width": 252
+        },
+        {
+          "height": 80.375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "activity-text",
+          "visible": true,
+          "width": 152
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lưu ghi chú",
+          "visible": true,
+          "width": 252
+        }
+      ],
+      "documentWidth": 1024,
+      "sidebar": {
+        "left": 0,
+        "transform": "none",
+        "width": 210
+      },
+      "viewport": {
+        "height": 1080,
+        "width": 1024
+      },
+      "violations": []
+    }
+  },
+  {
+    "screen": "lead-workspace",
+    "width": 1440,
+    "observation": {
+      "controls": [
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Làm mới",
+          "visible": true,
+          "width": 99.2890625
+        },
+        {
+          "height": 20.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Tìm tên hoặc mã yêu cầu",
+          "visible": true,
+          "width": 282
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lọc trạng thái yêu cầu",
+          "visible": true,
+          "width": 151.5
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Áp dụng",
+          "visible": true,
+          "width": 76.875
+        },
+        {
+          "height": 26.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Bộ lọc thêm",
+          "visible": true,
+          "width": 749
+        },
+        {
+          "height": 44,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Tất cả người phụ tráchTôiChưa phân côngS02 A1S02 A",
+          "visible": true,
+          "width": 368.5
+        },
+        {
+          "height": 45.6953125,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 368.5
+        },
+        {
+          "height": 45.6953125,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 368.5
+        },
+        {
+          "height": 44,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "2050",
+          "visible": true,
+          "width": 368.5
+        },
+        {
+          "height": 34.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Xóa bộ lọc",
+          "visible": true,
+          "width": 59.5
+        },
+        {
+          "height": 32,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Mở yêu cầu Khách thử S05 01",
+          "visible": true,
+          "width": 104.0859375
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "lead-assignee",
+          "visible": true,
+          "width": 287
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "lead-status",
+          "visible": true,
+          "width": 287
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lưu cập nhật",
+          "visible": true,
+          "width": 287
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "activity-kind",
+          "visible": true,
+          "width": 287
+        },
+        {
+          "height": 80.375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "activity-text",
+          "visible": true,
+          "width": 152
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lưu ghi chú",
+          "visible": true,
+          "width": 287
+        }
+      ],
+      "documentWidth": 1440,
+      "sidebar": {
+        "left": 0,
+        "transform": "none",
+        "width": 232
+      },
+      "viewport": {
+        "height": 1080,
+        "width": 1440
+      },
+      "violations": []
+    }
+  },
+  {
+    "screen": "recipient-settings",
+    "width": 320,
+    "observation": {
+      "controls": [
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Làm mới cấu hình",
+          "visible": true,
+          "width": 122.4140625
+        },
+        {
+          "height": 18,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 18
+        },
+        {
+          "height": 18,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 18
+        },
+        {
+          "height": 34.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Bỏ chọn",
+          "visible": true,
+          "width": 46.21875
+        },
+        {
+          "height": 46.796875,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 266
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Tìm người nhận",
+          "visible": true,
+          "width": 118.234375
+        },
+        {
+          "height": 18,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 18
+        },
+        {
+          "height": 18,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 18
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lưu người nhận",
+          "visible": true,
+          "width": 266
+        }
+      ],
+      "documentWidth": 320,
+      "sidebar": {
+        "left": -248.6935882568359,
+        "transform": "matrix(1, 0, 0, 1, -248.694, 0)",
+        "width": 260
+      },
+      "viewport": {
+        "height": 844,
+        "width": 320
+      },
+      "violations": []
+    }
+  },
+  {
+    "screen": "recipient-settings",
+    "width": 390,
+    "observation": {
+      "controls": [
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Làm mới cấu hình",
+          "visible": true,
+          "width": 122.4140625
+        },
+        {
+          "height": 18,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 18
+        },
+        {
+          "height": 18,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 18
+        },
+        {
+          "height": 34.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Bỏ chọn",
+          "visible": true,
+          "width": 46.21875
+        },
+        {
+          "height": 46.796875,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 326
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Tìm người nhận",
+          "visible": true,
+          "width": 118.234375
+        },
+        {
+          "height": 18,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 18
+        },
+        {
+          "height": 18,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 18
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lưu người nhận",
+          "visible": true,
+          "width": 326
+        }
+      ],
+      "documentWidth": 390,
+      "sidebar": {
+        "left": -260,
+        "transform": "matrix(1, 0, 0, 1, -260, 0)",
+        "width": 260
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "violations": []
+    }
+  },
+  {
+    "screen": "recipient-settings",
+    "width": 768,
+    "observation": {
+      "controls": [
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Làm mới cấu hình",
+          "visible": true,
+          "width": 129.875
+        },
+        {
+          "height": 18,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 18
+        },
+        {
+          "height": 18,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 18
+        },
+        {
+          "height": 34.59375,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Bỏ chọn",
+          "visible": true,
+          "width": 46.21875
+        },
+        {
+          "height": 44,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 543.765625
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Tìm người nhận",
+          "visible": true,
+          "width": 118.234375
+        },
+        {
+          "height": 18,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 18
+        },
+        {
+          "height": 18,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "",
+          "visible": true,
+          "width": 18
+        },
+        {
+          "height": 40,
+          "insidePanel": true,
+          "insideViewportWidth": true,
+          "label": "Lưu người nhận",
+          "visible": true,
+          "width": 674
+        }
+      ],
+      "documentWidth": 768,
+      "sidebar": {
+        "left": -260,
+        "transform": "matrix(1, 0, 0, 1, -260, 0)",
+        "width": 260
+      },
+      "viewport": {
+        "height": 1080,
+        "width": 768
+      },
+      "violations": []
+    }
+  },
+  {
+    "state": "recipient-settings-1024",
+    "controls": [
+      {
+        "height": 40,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "Làm mới cấu hình",
+        "visible": true,
+        "width": 129.875
+      },
+      {
+        "height": 18,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "",
+        "visible": true,
+        "width": 18
+      },
+      {
+        "height": 18,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "",
+        "visible": true,
+        "width": 18
+      },
+      {
+        "height": 34.59375,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "Bỏ chọn",
+        "visible": true,
+        "width": 46.21875
+      },
+      {
+        "height": 44,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "",
+        "visible": true,
+        "width": 581.765625
+      },
+      {
+        "height": 40,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "Tìm người nhận",
+        "visible": true,
+        "width": 118.234375
+      },
+      {
+        "height": 18,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "",
+        "visible": true,
+        "width": 18
+      },
+      {
+        "height": 18,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "",
+        "visible": true,
+        "width": 18
+      },
+      {
+        "height": 40,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "Lưu người nhận",
+        "visible": true,
+        "width": 712
+      }
+    ],
+    "documentWidth": 1024,
+    "sidebar": {
+      "left": 0,
+      "transform": "none",
+      "width": 210
+    },
+    "viewport": {
+      "height": 1080,
+      "width": 1024
+    },
+    "violations": []
+  },
+  {
+    "state": "recipient-settings-1440",
+    "controls": [
+      {
+        "height": 40,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "Làm mới cấu hình",
+        "visible": true,
+        "width": 129.875
+      },
+      {
+        "height": 18,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "",
+        "visible": true,
+        "width": 18
+      },
+      {
+        "height": 18,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "",
+        "visible": true,
+        "width": 18
+      },
+      {
+        "height": 34.59375,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "Bỏ chọn",
+        "visible": true,
+        "width": 46.21875
+      },
+      {
+        "height": 44,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "",
+        "visible": true,
+        "width": 683.765625
+      },
+      {
+        "height": 40,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "Tìm người nhận",
+        "visible": true,
+        "width": 118.234375
+      },
+      {
+        "height": 18,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "",
+        "visible": true,
+        "width": 18
+      },
+      {
+        "height": 18,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "",
+        "visible": true,
+        "width": 18
+      },
+      {
+        "height": 40,
+        "insidePanel": true,
+        "insideViewportWidth": true,
+        "label": "Lưu người nhận",
+        "visible": true,
+        "width": 814
+      }
+    ],
+    "documentWidth": 1440,
+    "sidebar": {
+      "left": 0,
+      "transform": "none",
+      "width": 232
+    },
+    "viewport": {
+      "height": 1080,
+      "width": 1440
+    },
+    "violations": []
+  }
+]

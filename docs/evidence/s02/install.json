@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "command": "bun install --frozen-lockfile --ignore-scripts",
+  "exitCode": 0,
+  "lockUnchanged": true,
+  "lockSha256": "a930f219e8e876e9645f9f7fea32a05992bdb0c2c04fb6585e4d30bfba35dcdc",
+  "dependencyResolutionUnchangedFromS01": true,
+  "limit": "Existing installed dependency tree; S01 fresh-install proof retained. No dependency version changed for S02."
+}

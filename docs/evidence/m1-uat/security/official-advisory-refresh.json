@@ -1,0 +1,47 @@
+{
+  "observedAtUtc": "2026-10-16T03:39:44.526204+00:00",
+  "currentAdvisory": {
+    "url": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+    "id": "GHSA-vfj7-8cjw-p6xm",
+    "cve": "CVE-2026-93687",
+    "severity": "high",
+    "affected": "<=3.0.3",
+    "patchedVersionField": "None",
+    "updated": "2026-10-02",
+    "currentFreshRetrieval": true
+  },
+  "officialDatabase": {
+    "url": "https://raw.githubusercontent.com/github/advisory-database/main/advisories/github-reviewed/2026/09/GHSA-vfj7-8cjw-p6xm/GHSA-vfj7-8cjw-p6xm.json",
+    "lastAffected": "3.0.3",
+    "fixedEventPresent": false,
+    "modified": "2026-10-02T22:36:33Z"
+  },
+  "olderDistinctAdvisory": {
+    "url": "https://github.com/advisories/GHSA-grv7-fg5c-xmjg",
+    "cve": "CVE-2024-4068",
+    "affected": "<3.0.3",
+    "patchedVersionField": "3.0.3",
+    "relationship": "Different memory-exhaustion issue. Its fixed version does not resolve the current recursion advisory."
+  },
+  "upstream": {
+    "url": "https://github.com/micromatch/braces/issues/70",
+    "state": "open",
+    "maintainerDisputesApplicability": true,
+    "disposition": "The maintainer dispute does not withdraw the reviewed advisory or change this audit FAIL."
+  },
+  "versionConflictAssessment": "No conflicting patched field for the same advisory observed. The 3.0.3 fix belongs to GHSA-grv7-fg5c-xmjg; current GHSA-vfj7-8cjw-p6xm still lists None.",
+  "fetchLimits": [
+    {
+      "url": "https://api.github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+      "result": "web tool inaccessible; public advisory page and raw official database succeeded"
+    },
+    {
+      "url": "https://registry.npmjs.org/braces/latest",
+      "result": "web tool inaccessible; registry latest-version status Unknown, no universal no-patch claim"
+    }
+  ],
+  "releasesPage": {
+    "url": "https://github.com/micromatch/braces/releases",
+    "observed": "No GitHub releases listed; this does not establish npm version availability."
+  }
+}

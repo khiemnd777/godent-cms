@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-16T00:21:51.704806+00:00",
+  "retainedDrafts": 13,
+  "currentDrafts": 29,
+  "unchangedLegacyFields": [
+    "id",
+    "tenant_id",
+    "title",
+    "body",
+    "locale",
+    "version"
+  ],
+  "limit": "Original rows/legacy fields and update metadata compared privately; no raw content recorded. New owned S03 rows retained.",
+  "fullOriginalFieldComparison": "PASS",
+  "originalRowsIncludingUpdatedMetadata": 13,
+  "additionalUnchangedFields": [
+    "updated_at",
+    "updated_by"
+  ]
+}

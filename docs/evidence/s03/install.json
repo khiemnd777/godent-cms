@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-15T23:55:27.118106+00:00",
+  "command": "./node_modules/.bin/bun install --frozen-lockfile --ignore-scripts",
+  "result": "Checked489 installs across552 packages; no changes",
+  "lockSha256": "a930f219e8e876e9645f9f7fea32a05992bdb0c2c04fb6585e4d30bfba35dcdc",
+  "lockUnchangedFromS02": true,
+  "limit": "Existing dependency-tree verification, not a new fresh-tree install."
+}

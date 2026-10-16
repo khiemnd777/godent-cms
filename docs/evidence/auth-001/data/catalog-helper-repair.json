@@ -1,0 +1,16 @@
+{
+  "recordedAtUtc": "2026-10-16T05:20:09.655074+00:00",
+  "scope": "Catalog comparison helper only",
+  "preservedFailure": "catalog-before-helper-repair.json",
+  "cause": "JavaScript replacement-string dollar-apostrophe substitution expanded the SQL suffix in the expected body.",
+  "pureDiagnostic": {
+    "originalAndMigrationBodiesFound": true,
+    "stringReplacementMatched": false,
+    "literalCallbackMatched": true,
+    "stringReplacementLength": 11613,
+    "literalExpectedLength": 6470
+  },
+  "repair": "Use a replacement callback to insert the predicate literally.",
+  "appOrMigrationChanged": false,
+  "liveCatalogRerun": "NOT_RUN_BY_THIS_CHILD"
+}

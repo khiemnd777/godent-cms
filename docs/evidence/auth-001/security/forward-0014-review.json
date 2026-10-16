@@ -1,0 +1,76 @@
+{
+  "package": "GCMS-AUTH-001 v0.1",
+  "stage": "FROZEN_FORWARD_0014_SOURCE_REVIEW",
+  "status": "SOURCE_CLOSED_RUNTIME_PENDING",
+  "recordedAtUtc": "2026-10-16T05:18:07.696163+00:00",
+  "runtimeConfiguration": {
+    "status": "PASS",
+    "role": "kit-reviewer",
+    "thread": "01a14283-7099-7a61-a627-171a8bbdbe8f",
+    "parent": "01a1402c-3c81-7933-9927-d974f70c9fbc",
+    "model": "gpt-6.1-sol",
+    "requiredRequestedObservedEffort": [
+      "xhigh",
+      "xhigh",
+      "xhigh"
+    ],
+    "turn": "01a14324-6465-7801-9a0d-81e845fa4bac",
+    "observedAtUtc": "2026-10-16T05:17:00.954Z"
+  },
+  "sourceIntegrity": [
+    {
+      "path": "apps/api/migrations/0014_s05_user_identifier.sql",
+      "sha256": "e91f2cde773bba098b8cce046f754c2d62fbb7afdf24d5e8dd4688e15261a429"
+    },
+    {
+      "path": "scripts/auth-001-migrate.ts",
+      "sha256": "dfe38576bd8ff49573b5d18d712af79a646f92f46734bfddadc40cdf75419def"
+    },
+    {
+      "path": "scripts/auth-001-catalog.ts",
+      "sha256": "df940f86c64a887a0dba55c5c6ff540e5dcff22e920a2d141a3ceeced733f596"
+    },
+    {
+      "path": "scripts/auth-001-preservation.ts",
+      "sha256": "4432e0dbe780aee538d88413c67c28142a14da37f9d28d980a4e48b6c2686866"
+    },
+    {
+      "path": "scripts/auth-001-assignment-proof.ts",
+      "sha256": "6056a678c7a73ebc5d133bc3c976a7e4afc35d854d8a4f4c819011f1c46ce42e"
+    }
+  ],
+  "pureSourceComparisons": {
+    "fullStatementExactlyExpected": true,
+    "exactlyOneNewUserPredicate": true,
+    "oldUserPredicateAbsent": true,
+    "noSessionDml": true,
+    "fixedSearchPath": true
+  },
+  "sourceComparisonStatus": "PASS",
+  "newBlockingFindings": [],
+  "findingResolution": {
+    "priorReport": "user-identifier-review.json",
+    "priority": "P1",
+    "status": "FORWARD_REPAIR_SOURCE_VERIFIED_ACTUAL_ASSIGNMENT_REPLAY_PENDING",
+    "source": "0014 copies the exact0008 lead_command statement with CREATE OR REPLACE and only the assignment user-ID predicate changed to ^[A-Za-z0-9_-]{1,128}$. No applied migration was rewritten.",
+    "preserved": "Null unassign/type/allowlisted fields, active write authorization, current eligibility, resource UUIDs, locking, receipt actor/body binding, version conflict/history/audit/expiry behavior, function signature/security/search_path/grants remain unchanged.",
+    "runtimeFailure": "Coordinator reports actual post-TypeScript-repair400 INVALID_INPUT in ui/operations-resume-result.json; first failure remains retained.",
+    "runtimeClosure": "NOT_RUN by reviewer; actual owner new-account assignment and exact-command replay await callback."
+  },
+  "helperReview": {
+    "migrator": "Requires explicit local AUTH flag/project directory and validated migration role, transaction/advisory lock, all14 source/ledger checksums. Only13/14 may be new. Before first0014, installed lead_command prosrc must exactly match retained0008 body. Already-applied checksums skip SQL; sessionRevocation APPLIED_ONCE only if0013 actually applied.0014 itself has no session/grant DML.",
+    "catalog": "Read-only current function-body extraction must match the new source, which must equal retained original body after only the target predicate substitution. Existing factor-free/helper/last-admin checks retain their boundaries; historical race reuse is labeled separately from fresh behavior.",
+    "preservation": "Only new schema_migration allowlist addition is0014; existing per-row retained hashes/limited owned exceptions continue. New sessions/grants are permitted transient state, not evidence of fresh revocation. No restore claim.",
+    "exactAssignmentReplay": "Requires released UI checkpoint, existing owned lead/verified owner+peer, ordinary32-char peer, browser200 saved exact command and version+1. Reads before state: one history, one receipt, exact receipt body. Calls ordinary LeadsService with current cookie/CSRF through restricted tenant DB transaction, reuses the exact saved operation/body, requires replayed/applied/currentversion/assignee. All before/after lead/history/receipt hashes/counts must match; creates no additional assignment."
+  },
+  "retainedIntegrity": {
+    "migration0013Sha256": "89fc0ba78b1fe80c921506fc6c0e57f409da0b7ccc4645f22d713b04b836a2a5",
+    "bunLockSha256": "a930f219e8e876e9645f9f7fea32a05992bdb0c2c04fb6585e4d30bfba35dcdc"
+  },
+  "limits": [
+    "Reviewer executed five bounded pure source comparisons only, not tests, DB queries/migrations, browser, service or runtime helpers.",
+    "Actual migration first apply/rerun/new-session preservation, UI assignment/settings, replay, lifecycle/publication/worker proof remain owner runtime criteria.",
+    "No unchanged core re-audit, new advisory lookup, application/SQL/private/dependency/Git edits or child delegation.",
+    "Known dependency audit FAIL/local-only deferral remains; reassess2026-10-22 or earlier patch/dependency/exposure/before production, no production waiver."
+  ]
+}

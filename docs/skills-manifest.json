@@ -1,0 +1,1749 @@
+{
+  "schema_version": 1,
+  "kit_version": "0.1.0",
+  "release_status": "preview; native runtime and two-machine verification NOT_RUN",
+  "upstream": {
+    "repository": "https://github.com/addyosmani/agent-skills",
+    "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+    "unchanged_file_count": 20,
+    "license": "MIT",
+    "file_count": 26,
+    "adapted_file_count": 6
+  },
+  "canonical_root": ".agents",
+  "mirror_root": ".claude",
+  "skills": [
+    {
+      "name": "api-and-interface-design",
+      "canonical": ".agents/skills/api-and-interface-design/SKILL.md",
+      "mirror": ".claude/skills/api-and-interface-design/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "code-review-and-quality",
+      "canonical": ".agents/skills/code-review-and-quality/SKILL.md",
+      "mirror": ".claude/skills/code-review-and-quality/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "code-simplification",
+      "canonical": ".agents/skills/code-simplification/SKILL.md",
+      "mirror": ".claude/skills/code-simplification/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "context-engineering",
+      "canonical": ".agents/skills/context-engineering/SKILL.md",
+      "mirror": ".claude/skills/context-engineering/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "debugging-and-error-recovery",
+      "canonical": ".agents/skills/debugging-and-error-recovery/SKILL.md",
+      "mirror": ".claude/skills/debugging-and-error-recovery/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "documentation-and-adrs",
+      "canonical": ".agents/skills/documentation-and-adrs/SKILL.md",
+      "mirror": ".claude/skills/documentation-and-adrs/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "frontend-ui-engineering",
+      "canonical": ".agents/skills/frontend-ui-engineering/SKILL.md",
+      "mirror": ".claude/skills/frontend-ui-engineering/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "incremental-implementation",
+      "canonical": ".agents/skills/incremental-implementation/SKILL.md",
+      "mirror": ".claude/skills/incremental-implementation/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "observability-and-instrumentation",
+      "canonical": ".agents/skills/observability-and-instrumentation/SKILL.md",
+      "mirror": ".claude/skills/observability-and-instrumentation/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "performance-optimization",
+      "canonical": ".agents/skills/performance-optimization/SKILL.md",
+      "mirror": ".claude/skills/performance-optimization/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "planning-and-task-breakdown",
+      "canonical": ".agents/skills/planning-and-task-breakdown/SKILL.md",
+      "mirror": ".claude/skills/planning-and-task-breakdown/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "security-and-hardening",
+      "canonical": ".agents/skills/security-and-hardening/SKILL.md",
+      "mirror": ".claude/skills/security-and-hardening/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "source-driven-development",
+      "canonical": ".agents/skills/source-driven-development/SKILL.md",
+      "mirror": ".claude/skills/source-driven-development/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "spec-driven-development",
+      "canonical": ".agents/skills/spec-driven-development/SKILL.md",
+      "mirror": ".claude/skills/spec-driven-development/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "technote",
+      "canonical": ".agents/skills/technote/SKILL.md",
+      "mirror": ".claude/skills/technote/SKILL.md",
+      "source": "agent-kit"
+    },
+    {
+      "name": "test-driven-development",
+      "canonical": ".agents/skills/test-driven-development/SKILL.md",
+      "mirror": ".claude/skills/test-driven-development/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "using-agent-skills",
+      "canonical": ".agents/skills/using-agent-skills/SKILL.md",
+      "mirror": ".claude/skills/using-agent-skills/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    }
+  ],
+  "mirror_pairs": [
+    {
+      "canonical": ".agents/ADDY-AGENT-SKILLS-LICENSE",
+      "mirror": ".claude/ADDY-AGENT-SKILLS-LICENSE",
+      "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7"
+    },
+    {
+      "canonical": ".agents/references/accessibility-checklist.md",
+      "mirror": ".claude/references/accessibility-checklist.md",
+      "sha256": "61c759d94d52296231f5f310b92b401f56c44e4430dc3cc95ebac5d7b1d5ffac"
+    },
+    {
+      "canonical": ".agents/references/definition-of-done.md",
+      "mirror": ".claude/references/definition-of-done.md",
+      "sha256": "efb615a93227d23fa85d77af206143a7baac1895956c0447fe28a2e0c64e75c3"
+    },
+    {
+      "canonical": ".agents/references/observability-checklist.md",
+      "mirror": ".claude/references/observability-checklist.md",
+      "sha256": "25fcd0e854596a5ab6f11b002050d245bf78f5ae0fcbd1df699b89451ae0e1e8"
+    },
+    {
+      "canonical": ".agents/references/orchestration-patterns.md",
+      "mirror": ".claude/references/orchestration-patterns.md",
+      "sha256": "61e543d86f19f86b83074f8c1c769455c7085a2c72dd47b1da21a8c63785be4a"
+    },
+    {
+      "canonical": ".agents/references/performance-checklist.md",
+      "mirror": ".claude/references/performance-checklist.md",
+      "sha256": "40f564d1e62341e277c01ba42c42d95264b9ef3b8e5a23249dc6e121a7e70067"
+    },
+    {
+      "canonical": ".agents/references/security-checklist.md",
+      "mirror": ".claude/references/security-checklist.md",
+      "sha256": "37774056502fe8970dcd2fd27dca5fa31f2a55232649fc3056c89c3af7d62755"
+    },
+    {
+      "canonical": ".agents/references/template-application.md",
+      "mirror": ".claude/references/template-application.md",
+      "sha256": "417c2f9ac2d50407e2ce438abe05ccf0730f10f27e8a0b59489b7d4ac8035b6c"
+    },
+    {
+      "canonical": ".agents/references/testing-patterns.md",
+      "mirror": ".claude/references/testing-patterns.md",
+      "sha256": "f0bf05acd0edcadc27297ad5b74f104c8103ccfedba1a05cd6d6ae4af8364c56"
+    },
+    {
+      "canonical": ".agents/skills/api-and-interface-design/SKILL.md",
+      "mirror": ".claude/skills/api-and-interface-design/SKILL.md",
+      "sha256": "e83d34f52ff12dd8a7c5134cd7e8140ea4541ec65e204f8a1e4cd366e30c4192"
+    },
+    {
+      "canonical": ".agents/skills/code-review-and-quality/SKILL.md",
+      "mirror": ".claude/skills/code-review-and-quality/SKILL.md",
+      "sha256": "c4c025387b0ab6a63d822b9bc8289e2bdc23fee3fe292d29b7d3a14474c9459a"
+    },
+    {
+      "canonical": ".agents/skills/code-simplification/SKILL.md",
+      "mirror": ".claude/skills/code-simplification/SKILL.md",
+      "sha256": "f0c5ed754057eb0c1e027e2587f59de816651feb5e837242296c43ea21cf621d"
+    },
+    {
+      "canonical": ".agents/skills/context-engineering/SKILL.md",
+      "mirror": ".claude/skills/context-engineering/SKILL.md",
+      "sha256": "8b736cb9e55b82b265ab6ff78349c0e826e8a6df550deddf665b7fb3ff858b63"
+    },
+    {
+      "canonical": ".agents/skills/debugging-and-error-recovery/SKILL.md",
+      "mirror": ".claude/skills/debugging-and-error-recovery/SKILL.md",
+      "sha256": "21f3960f5d7ae2cc95c40896545004dbbcbbd752ea65fc2d53962554d4174220"
+    },
+    {
+      "canonical": ".agents/skills/documentation-and-adrs/SKILL.md",
+      "mirror": ".claude/skills/documentation-and-adrs/SKILL.md",
+      "sha256": "359b22460045583b0233ec3f80223459c4096b0fa513f5c29ade9c3985207d65"
+    },
+    {
+      "canonical": ".agents/skills/frontend-ui-engineering/SKILL.md",
+      "mirror": ".claude/skills/frontend-ui-engineering/SKILL.md",
+      "sha256": "03e47e8cb21fa917afec3863f63dbe5bf0c3b83a52c37f83407fa7e499571cf0"
+    },
+    {
+      "canonical": ".agents/skills/incremental-implementation/SKILL.md",
+      "mirror": ".claude/skills/incremental-implementation/SKILL.md",
+      "sha256": "4bbdc9ad0456e01cb59ef2b6487d1ff379f99582313ef947059da4ba3538ca65"
+    },
+    {
+      "canonical": ".agents/skills/observability-and-instrumentation/SKILL.md",
+      "mirror": ".claude/skills/observability-and-instrumentation/SKILL.md",
+      "sha256": "e7fcb0820306d46268de9594d676ad98e35040858926c412b7000faa52a61f87"
+    },
+    {
+      "canonical": ".agents/skills/performance-optimization/SKILL.md",
+      "mirror": ".claude/skills/performance-optimization/SKILL.md",
+      "sha256": "665a83a7218d6aebd02ca329a7b2422cf28f7c55cb56f870c05e12047770245c"
+    },
+    {
+      "canonical": ".agents/skills/performance-optimization/references/optimization-patterns.md",
+      "mirror": ".claude/skills/performance-optimization/references/optimization-patterns.md",
+      "sha256": "fbf724076ffb8ac1a28e1a2773c0b550f5361090024b2dd32e5a682c69b7945f"
+    },
+    {
+      "canonical": ".agents/skills/planning-and-task-breakdown/SKILL.md",
+      "mirror": ".claude/skills/planning-and-task-breakdown/SKILL.md",
+      "sha256": "84cdaf07b2734e6cee079c9b509a5a15ee4e00943adbb6586edc759caf6f02e8"
+    },
+    {
+      "canonical": ".agents/skills/security-and-hardening/SKILL.md",
+      "mirror": ".claude/skills/security-and-hardening/SKILL.md",
+      "sha256": "2e3fc60eed5aba97fe416f3f3c9317fdb014a682925ec70a733c3ff99e4b9858"
+    },
+    {
+      "canonical": ".agents/skills/security-and-hardening/references/hardening-patterns.md",
+      "mirror": ".claude/skills/security-and-hardening/references/hardening-patterns.md",
+      "sha256": "d8ba58cad151aeca4804e48fc768240af0dd6b0ecddd07fbf24a1562140ba97a"
+    },
+    {
+      "canonical": ".agents/skills/source-driven-development/SKILL.md",
+      "mirror": ".claude/skills/source-driven-development/SKILL.md",
+      "sha256": "c59faf851377f0eeda45306398d16eb96d77ab1c2fd3e1a7fb58e9a0af33c1e9"
+    },
+    {
+      "canonical": ".agents/skills/spec-driven-development/SKILL.md",
+      "mirror": ".claude/skills/spec-driven-development/SKILL.md",
+      "sha256": "c4b97ce3d7f24be0e67fd612c7595f65504872e3a9f8d338d098b2363fdb66ef"
+    },
+    {
+      "canonical": ".agents/skills/technote/SKILL.md",
+      "mirror": ".claude/skills/technote/SKILL.md",
+      "sha256": "247699731082b9a0c7bcbdf16509df942df67337f73ed9764b679a5b4fe878e1"
+    },
+    {
+      "canonical": ".agents/skills/test-driven-development/SKILL.md",
+      "mirror": ".claude/skills/test-driven-development/SKILL.md",
+      "sha256": "7c0c6ac057c19d7f8be65d9f49c3a638703b868f4625c78b70da5439d5d74fca"
+    },
+    {
+      "canonical": ".agents/skills/using-agent-skills/SKILL.md",
+      "mirror": ".claude/skills/using-agent-skills/SKILL.md",
+      "sha256": "fd309a442037a5c0bec7d966f0d35e8f413b73338a55852c3012e7ecc9b90183"
+    }
+  ],
+  "native_agents": [
+    {
+      "name": "kit-explorer",
+      "role_source": "docs/roles/explorer.md",
+      "codex": ".codex/agents/kit-explorer.toml",
+      "claude": ".claude/agents/kit-explorer.md",
+      "model_policy": "inherit developer selection; report runtime overrides"
+    },
+    {
+      "name": "kit-implementer",
+      "role_source": "docs/roles/implementer.md",
+      "codex": ".codex/agents/kit-implementer.toml",
+      "claude": ".claude/agents/kit-implementer.md",
+      "model_policy": "inherit developer selection; report runtime overrides"
+    },
+    {
+      "name": "kit-reviewer",
+      "role_source": "docs/roles/reviewer.md",
+      "codex": ".codex/agents/kit-reviewer.toml",
+      "claude": ".claude/agents/kit-reviewer.md",
+      "model_policy": "inherit developer selection; report runtime overrides"
+    }
+  ],
+  "files": [
+    {
+      "path": ".agents/ADDY-AGENT-SKILLS-LICENSE",
+      "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "LICENSE",
+        "git_blob_sha": "d67778ada6b9cda6227e9130da182c13e73c8b2e"
+      }
+    },
+    {
+      "path": ".agents/references/accessibility-checklist.md",
+      "sha256": "61c759d94d52296231f5f310b92b401f56c44e4430dc3cc95ebac5d7b1d5ffac",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/accessibility-checklist.md",
+        "git_blob_sha": "c8c61e5f3d5a010a0d0ecb918bfaffe6c76fca78"
+      }
+    },
+    {
+      "path": ".agents/references/definition-of-done.md",
+      "sha256": "efb615a93227d23fa85d77af206143a7baac1895956c0447fe28a2e0c64e75c3",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/definition-of-done.md",
+        "git_blob_sha": "35e39f9e15f6dd0ff4725a6e5cbce7f2aa69064a"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination"
+      }
+    },
+    {
+      "path": ".agents/references/observability-checklist.md",
+      "sha256": "25fcd0e854596a5ab6f11b002050d245bf78f5ae0fcbd1df699b89451ae0e1e8",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/observability-checklist.md",
+        "git_blob_sha": "ad40d7aa3fca5d2091fa45be234c14aee22c3588"
+      }
+    },
+    {
+      "path": ".agents/references/orchestration-patterns.md",
+      "sha256": "61e543d86f19f86b83074f8c1c769455c7085a2c72dd47b1da21a8c63785be4a",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/orchestration-patterns.md",
+        "git_blob_sha": "09cddd31d52a95be1d9bca814547d184b9945e44"
+      }
+    },
+    {
+      "path": ".agents/references/performance-checklist.md",
+      "sha256": "40f564d1e62341e277c01ba42c42d95264b9ef3b8e5a23249dc6e121a7e70067",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/performance-checklist.md",
+        "git_blob_sha": "ba9744fe60dbe4f04f3f907029638d923158d7a2"
+      }
+    },
+    {
+      "path": ".agents/references/security-checklist.md",
+      "sha256": "37774056502fe8970dcd2fd27dca5fa31f2a55232649fc3056c89c3af7d62755",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/security-checklist.md",
+        "git_blob_sha": "fc5e29b92c183fa69e0952b61a99761dc48b4c0b"
+      }
+    },
+    {
+      "path": ".agents/references/template-application.md",
+      "sha256": "417c2f9ac2d50407e2ce438abe05ccf0730f10f27e8a0b59489b7d4ac8035b6c",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".agents/references/testing-patterns.md",
+      "sha256": "f0bf05acd0edcadc27297ad5b74f104c8103ccfedba1a05cd6d6ae4af8364c56",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/testing-patterns.md",
+        "git_blob_sha": "bc96e271ad241ca567f06d21c6ecc001455b80f1"
+      }
+    },
+    {
+      "path": ".agents/skills/api-and-interface-design/SKILL.md",
+      "sha256": "e83d34f52ff12dd8a7c5134cd7e8140ea4541ec65e204f8a1e4cd366e30c4192",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/api-and-interface-design/SKILL.md",
+        "git_blob_sha": "3e2e37f8f4fba2c66f9f1599eaf01a55ae3f3e33"
+      }
+    },
+    {
+      "path": ".agents/skills/code-review-and-quality/SKILL.md",
+      "sha256": "c4c025387b0ab6a63d822b9bc8289e2bdc23fee3fe292d29b7d3a14474c9459a",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/code-review-and-quality/SKILL.md",
+        "git_blob_sha": "08209ff2208d2883d48d945f7754c428b77f8d87"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity and evidence boundary"
+      }
+    },
+    {
+      "path": ".agents/skills/code-simplification/SKILL.md",
+      "sha256": "f0c5ed754057eb0c1e027e2587f59de816651feb5e837242296c43ea21cf621d",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/code-simplification/SKILL.md",
+        "git_blob_sha": "239b2848489511de30d9e63b0bd183adc4b01347"
+      }
+    },
+    {
+      "path": ".agents/skills/context-engineering/SKILL.md",
+      "sha256": "8b736cb9e55b82b265ab6ff78349c0e826e8a6df550deddf665b7fb3ff858b63",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/context-engineering/SKILL.md",
+        "git_blob_sha": "fb8bb5f85128302b231d301c1201da1e223f6869"
+      }
+    },
+    {
+      "path": ".agents/skills/debugging-and-error-recovery/SKILL.md",
+      "sha256": "21f3960f5d7ae2cc95c40896545004dbbcbbd752ea65fc2d53962554d4174220",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/debugging-and-error-recovery/SKILL.md",
+        "git_blob_sha": "356da20365a7cd6825b4ffad14be39280c92cdfc"
+      }
+    },
+    {
+      "path": ".agents/skills/documentation-and-adrs/SKILL.md",
+      "sha256": "359b22460045583b0233ec3f80223459c4096b0fa513f5c29ade9c3985207d65",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/documentation-and-adrs/SKILL.md",
+        "git_blob_sha": "e37c38f30d76263c77aacdb7dcbacceb1218bc80"
+      }
+    },
+    {
+      "path": ".agents/skills/frontend-ui-engineering/SKILL.md",
+      "sha256": "03e47e8cb21fa917afec3863f63dbe5bf0c3b83a52c37f83407fa7e499571cf0",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/frontend-ui-engineering/SKILL.md",
+        "git_blob_sha": "eaf0fa163876a5274674f42ea208742c50f27119"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity and evidence boundary"
+      }
+    },
+    {
+      "path": ".agents/skills/incremental-implementation/SKILL.md",
+      "sha256": "4bbdc9ad0456e01cb59ef2b6487d1ff379f99582313ef947059da4ba3538ca65",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/incremental-implementation/SKILL.md",
+        "git_blob_sha": "9c4f49bc841adb3c0f98baaa9eabd435a5b64ef9"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity"
+      }
+    },
+    {
+      "path": ".agents/skills/observability-and-instrumentation/SKILL.md",
+      "sha256": "e7fcb0820306d46268de9594d676ad98e35040858926c412b7000faa52a61f87",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/observability-and-instrumentation/SKILL.md",
+        "git_blob_sha": "84d9cb373467fe0e15236e190833ecc90f840c38"
+      }
+    },
+    {
+      "path": ".agents/skills/performance-optimization/SKILL.md",
+      "sha256": "665a83a7218d6aebd02ca329a7b2422cf28f7c55cb56f870c05e12047770245c",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/performance-optimization/SKILL.md",
+        "git_blob_sha": "498735724035f468737bd118f9c60676a013d544"
+      }
+    },
+    {
+      "path": ".agents/skills/performance-optimization/references/optimization-patterns.md",
+      "sha256": "fbf724076ffb8ac1a28e1a2773c0b550f5361090024b2dd32e5a682c69b7945f",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/performance-optimization/references/optimization-patterns.md",
+        "git_blob_sha": "63e27bcc7a051c3dc23c164f146f374e119874cc"
+      }
+    },
+    {
+      "path": ".agents/skills/planning-and-task-breakdown/SKILL.md",
+      "sha256": "84cdaf07b2734e6cee079c9b509a5a15ee4e00943adbb6586edc759caf6f02e8",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/planning-and-task-breakdown/SKILL.md",
+        "git_blob_sha": "296249b64334bcfd1aeaefd27b9e3e5494e38ec0"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity"
+      }
+    },
+    {
+      "path": ".agents/skills/security-and-hardening/SKILL.md",
+      "sha256": "2e3fc60eed5aba97fe416f3f3c9317fdb014a682925ec70a733c3ff99e4b9858",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/security-and-hardening/SKILL.md",
+        "git_blob_sha": "e80e1e9a4f5b2989308c376d4ea0d333fe2c26ef"
+      }
+    },
+    {
+      "path": ".agents/skills/security-and-hardening/references/hardening-patterns.md",
+      "sha256": "d8ba58cad151aeca4804e48fc768240af0dd6b0ecddd07fbf24a1562140ba97a",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/security-and-hardening/references/hardening-patterns.md",
+        "git_blob_sha": "9af2604409af9a085bad0b14a269a89a74d34084"
+      }
+    },
+    {
+      "path": ".agents/skills/source-driven-development/SKILL.md",
+      "sha256": "c59faf851377f0eeda45306398d16eb96d77ab1c2fd3e1a7fb58e9a0af33c1e9",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/source-driven-development/SKILL.md",
+        "git_blob_sha": "2704f0e130bc4659951aa552373914b2d63d18c9"
+      }
+    },
+    {
+      "path": ".agents/skills/spec-driven-development/SKILL.md",
+      "sha256": "c4b97ce3d7f24be0e67fd612c7595f65504872e3a9f8d338d098b2363fdb66ef",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/spec-driven-development/SKILL.md",
+        "git_blob_sha": "f54426bec00bcda5f700ab3368eed7203306830f"
+      }
+    },
+    {
+      "path": ".agents/skills/technote/SKILL.md",
+      "sha256": "247699731082b9a0c7bcbdf16509df942df67337f73ed9764b679a5b4fe878e1",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".agents/skills/test-driven-development/SKILL.md",
+      "sha256": "7c0c6ac057c19d7f8be65d9f49c3a638703b868f4625c78b70da5439d5d74fca",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/test-driven-development/SKILL.md",
+        "git_blob_sha": "8898bcbba4c4f6acca473ece95e82105bd9cfea0"
+      }
+    },
+    {
+      "path": ".agents/skills/using-agent-skills/SKILL.md",
+      "sha256": "fd309a442037a5c0bec7d966f0d35e8f413b73338a55852c3012e7ecc9b90183",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/using-agent-skills/SKILL.md",
+        "git_blob_sha": "d56ac03ab057036c1bdcc9127c88952758ee2f0d"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination"
+      }
+    },
+    {
+      "path": ".claude/ADDY-AGENT-SKILLS-LICENSE",
+      "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "LICENSE",
+        "git_blob_sha": "d67778ada6b9cda6227e9130da182c13e73c8b2e"
+      }
+    },
+    {
+      "path": ".claude/agents/kit-explorer.md",
+      "sha256": "5e730d6658025cfaf47755cb85a9dc6981b3f262b1c528e29d08f855137ac308",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".claude/agents/kit-implementer.md",
+      "sha256": "4996d99145dc19858096ee2a0f3e39d33b8178b4bf49667d7a91b0ebbf892207",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".claude/agents/kit-reviewer.md",
+      "sha256": "3520b42ee31bbe644ca46c9f70c78371c7f81dce3a437e6375afaacc8099162b",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".claude/references/accessibility-checklist.md",
+      "sha256": "61c759d94d52296231f5f310b92b401f56c44e4430dc3cc95ebac5d7b1d5ffac",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/accessibility-checklist.md",
+        "git_blob_sha": "c8c61e5f3d5a010a0d0ecb918bfaffe6c76fca78"
+      }
+    },
+    {
+      "path": ".claude/references/definition-of-done.md",
+      "sha256": "efb615a93227d23fa85d77af206143a7baac1895956c0447fe28a2e0c64e75c3",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/definition-of-done.md",
+        "git_blob_sha": "35e39f9e15f6dd0ff4725a6e5cbce7f2aa69064a"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination"
+      }
+    },
+    {
+      "path": ".claude/references/observability-checklist.md",
+      "sha256": "25fcd0e854596a5ab6f11b002050d245bf78f5ae0fcbd1df699b89451ae0e1e8",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/observability-checklist.md",
+        "git_blob_sha": "ad40d7aa3fca5d2091fa45be234c14aee22c3588"
+      }
+    },
+    {
+      "path": ".claude/references/orchestration-patterns.md",
+      "sha256": "61e543d86f19f86b83074f8c1c769455c7085a2c72dd47b1da21a8c63785be4a",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/orchestration-patterns.md",
+        "git_blob_sha": "09cddd31d52a95be1d9bca814547d184b9945e44"
+      }
+    },
+    {
+      "path": ".claude/references/performance-checklist.md",
+      "sha256": "40f564d1e62341e277c01ba42c42d95264b9ef3b8e5a23249dc6e121a7e70067",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/performance-checklist.md",
+        "git_blob_sha": "ba9744fe60dbe4f04f3f907029638d923158d7a2"
+      }
+    },
+    {
+      "path": ".claude/references/security-checklist.md",
+      "sha256": "37774056502fe8970dcd2fd27dca5fa31f2a55232649fc3056c89c3af7d62755",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/security-checklist.md",
+        "git_blob_sha": "fc5e29b92c183fa69e0952b61a99761dc48b4c0b"
+      }
+    },
+    {
+      "path": ".claude/references/template-application.md",
+      "sha256": "417c2f9ac2d50407e2ce438abe05ccf0730f10f27e8a0b59489b7d4ac8035b6c",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".claude/references/testing-patterns.md",
+      "sha256": "f0bf05acd0edcadc27297ad5b74f104c8103ccfedba1a05cd6d6ae4af8364c56",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/testing-patterns.md",
+        "git_blob_sha": "bc96e271ad241ca567f06d21c6ecc001455b80f1"
+      }
+    },
+    {
+      "path": ".claude/skills/api-and-interface-design/SKILL.md",
+      "sha256": "e83d34f52ff12dd8a7c5134cd7e8140ea4541ec65e204f8a1e4cd366e30c4192",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/api-and-interface-design/SKILL.md",
+        "git_blob_sha": "3e2e37f8f4fba2c66f9f1599eaf01a55ae3f3e33"
+      }
+    },
+    {
+      "path": ".claude/skills/code-review-and-quality/SKILL.md",
+      "sha256": "c4c025387b0ab6a63d822b9bc8289e2bdc23fee3fe292d29b7d3a14474c9459a",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/code-review-and-quality/SKILL.md",
+        "git_blob_sha": "08209ff2208d2883d48d945f7754c428b77f8d87"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity and evidence boundary"
+      }
+    },
+    {
+      "path": ".claude/skills/code-simplification/SKILL.md",
+      "sha256": "f0c5ed754057eb0c1e027e2587f59de816651feb5e837242296c43ea21cf621d",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/code-simplification/SKILL.md",
+        "git_blob_sha": "239b2848489511de30d9e63b0bd183adc4b01347"
+      }
+    },
+    {
+      "path": ".claude/skills/context-engineering/SKILL.md",
+      "sha256": "8b736cb9e55b82b265ab6ff78349c0e826e8a6df550deddf665b7fb3ff858b63",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/context-engineering/SKILL.md",
+        "git_blob_sha": "fb8bb5f85128302b231d301c1201da1e223f6869"
+      }
+    },
+    {
+      "path": ".claude/skills/debugging-and-error-recovery/SKILL.md",
+      "sha256": "21f3960f5d7ae2cc95c40896545004dbbcbbd752ea65fc2d53962554d4174220",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/debugging-and-error-recovery/SKILL.md",
+        "git_blob_sha": "356da20365a7cd6825b4ffad14be39280c92cdfc"
+      }
+    },
+    {
+      "path": ".claude/skills/documentation-and-adrs/SKILL.md",
+      "sha256": "359b22460045583b0233ec3f80223459c4096b0fa513f5c29ade9c3985207d65",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/documentation-and-adrs/SKILL.md",
+        "git_blob_sha": "e37c38f30d76263c77aacdb7dcbacceb1218bc80"
+      }
+    },
+    {
+      "path": ".claude/skills/frontend-ui-engineering/SKILL.md",
+      "sha256": "03e47e8cb21fa917afec3863f63dbe5bf0c3b83a52c37f83407fa7e499571cf0",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/frontend-ui-engineering/SKILL.md",
+        "git_blob_sha": "eaf0fa163876a5274674f42ea208742c50f27119"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity and evidence boundary"
+      }
+    },
+    {
+      "path": ".claude/skills/incremental-implementation/SKILL.md",
+      "sha256": "4bbdc9ad0456e01cb59ef2b6487d1ff379f99582313ef947059da4ba3538ca65",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/incremental-implementation/SKILL.md",
+        "git_blob_sha": "9c4f49bc841adb3c0f98baaa9eabd435a5b64ef9"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity"
+      }
+    },
+    {
+      "path": ".claude/skills/observability-and-instrumentation/SKILL.md",
+      "sha256": "e7fcb0820306d46268de9594d676ad98e35040858926c412b7000faa52a61f87",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/observability-and-instrumentation/SKILL.md",
+        "git_blob_sha": "84d9cb373467fe0e15236e190833ecc90f840c38"
+      }
+    },
+    {
+      "path": ".claude/skills/performance-optimization/SKILL.md",
+      "sha256": "665a83a7218d6aebd02ca329a7b2422cf28f7c55cb56f870c05e12047770245c",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/performance-optimization/SKILL.md",
+        "git_blob_sha": "498735724035f468737bd118f9c60676a013d544"
+      }
+    },
+    {
+      "path": ".claude/skills/performance-optimization/references/optimization-patterns.md",
+      "sha256": "fbf724076ffb8ac1a28e1a2773c0b550f5361090024b2dd32e5a682c69b7945f",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/performance-optimization/references/optimization-patterns.md",
+        "git_blob_sha": "63e27bcc7a051c3dc23c164f146f374e119874cc"
+      }
+    },
+    {
+      "path": ".claude/skills/planning-and-task-breakdown/SKILL.md",
+      "sha256": "84cdaf07b2734e6cee079c9b509a5a15ee4e00943adbb6586edc759caf6f02e8",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/planning-and-task-breakdown/SKILL.md",
+        "git_blob_sha": "296249b64334bcfd1aeaefd27b9e3e5494e38ec0"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity"
+      }
+    },
+    {
+      "path": ".claude/skills/security-and-hardening/SKILL.md",
+      "sha256": "2e3fc60eed5aba97fe416f3f3c9317fdb014a682925ec70a733c3ff99e4b9858",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/security-and-hardening/SKILL.md",
+        "git_blob_sha": "e80e1e9a4f5b2989308c376d4ea0d333fe2c26ef"
+      }
+    },
+    {
+      "path": ".claude/skills/security-and-hardening/references/hardening-patterns.md",
+      "sha256": "d8ba58cad151aeca4804e48fc768240af0dd6b0ecddd07fbf24a1562140ba97a",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/security-and-hardening/references/hardening-patterns.md",
+        "git_blob_sha": "9af2604409af9a085bad0b14a269a89a74d34084"
+      }
+    },
+    {
+      "path": ".claude/skills/source-driven-development/SKILL.md",
+      "sha256": "c59faf851377f0eeda45306398d16eb96d77ab1c2fd3e1a7fb58e9a0af33c1e9",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/source-driven-development/SKILL.md",
+        "git_blob_sha": "2704f0e130bc4659951aa552373914b2d63d18c9"
+      }
+    },
+    {
+      "path": ".claude/skills/spec-driven-development/SKILL.md",
+      "sha256": "c4b97ce3d7f24be0e67fd612c7595f65504872e3a9f8d338d098b2363fdb66ef",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/spec-driven-development/SKILL.md",
+        "git_blob_sha": "f54426bec00bcda5f700ab3368eed7203306830f"
+      }
+    },
+    {
+      "path": ".claude/skills/technote/SKILL.md",
+      "sha256": "247699731082b9a0c7bcbdf16509df942df67337f73ed9764b679a5b4fe878e1",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".claude/skills/test-driven-development/SKILL.md",
+      "sha256": "7c0c6ac057c19d7f8be65d9f49c3a638703b868f4625c78b70da5439d5d74fca",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/test-driven-development/SKILL.md",
+        "git_blob_sha": "8898bcbba4c4f6acca473ece95e82105bd9cfea0"
+      }
+    },
+    {
+      "path": ".claude/skills/using-agent-skills/SKILL.md",
+      "sha256": "fd309a442037a5c0bec7d966f0d35e8f413b73338a55852c3012e7ecc9b90183",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/using-agent-skills/SKILL.md",
+        "git_blob_sha": "d56ac03ab057036c1bdcc9127c88952758ee2f0d"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination"
+      }
+    },
+    {
+      "path": ".codex/agents/kit-explorer.toml",
+      "sha256": "029bb3067023a52f6e6b8b7a282dc740b6c3ffb10290d23296f1681978508a92",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".codex/agents/kit-implementer.toml",
+      "sha256": "41f6b5cabda3e8abe790f8aeaaa6e5e648e20f3c232b6fe68e95a22a6fbd9ddc",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".codex/agents/kit-reviewer.toml",
+      "sha256": "deabc935e33f879a5a136c41178dd45e9b46eaecfd13a058e060e58cbd298873",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "c5db1669bf8cf9876fbfea0cca64c01f497900f02a176dc11872fb0c3eba0adb",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      },
+      "project_adaptation": {
+        "source_commit": "919ce6b8d84c8ac5ad4ce473ad6e6c2c9973d2ac",
+        "template_sha256": "7185430f631e1b5c7393b5d8fca63e4d0cb416820fa41a5507ebc57d08f0eb7c",
+        "reason": "Future Bun/Next/build/test artifacts, preserving the future text Bun lockfile",
+        "record": "docs/agent-kit/adoption.md",
+        "updates": [
+          {
+            "task": "docs/tasks/GCMS-S01-001.md",
+            "previous_sha256": "787206c056a90c9bbbf2f9f438016c9a62ff94d41888a700fe653683247ee5dc",
+            "reason": "Ignore checkout-local generated S01 credentials/process metadata and build/package outputs; approved application scope"
+          }
+        ]
+      }
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "660af1f11a99161e686df0b0b5575c42e5adcbd352f408dfbc9473b27cc6301e",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      },
+      "project_adaptation": {
+        "source_commit": "919ce6b8d84c8ac5ad4ce473ad6e6c2c9973d2ac",
+        "template_sha256": "33a055c8a7fe372c9cfe9babc4338c4de643e48a0a39f00696bd392c0502d3e8",
+        "reason": "Project orientation, Bun/setup boundary, setup owner and dental/privacy constraints",
+        "record": "docs/agent-kit/adoption.md",
+        "updates": [
+          {
+            "task": "docs/tasks/GCMS-EFFORT-001.md",
+            "previous_sha256": "7223e56d46b9d2d27b209007941919392510d78d48f52ac1e5414e23dd35583a",
+            "reason": "Project task/risk effort matrix precedes inheritance; explicit dispatch and observation limits"
+          },
+          {
+            "task": "docs/tasks/GCMS-EFFORT-002.md",
+            "previous_sha256": "b68c789832efc19d7abfc8e54aa5880a350666675f371f408a3b2555ff2f6e0e",
+            "reason": "Task-boundary runtime check, matrix-bound native execution and scoped actual conformance evidence"
+          },
+          {
+            "task": "docs/tasks/GCMS-DOCS-001.md",
+            "previous_sha256": "e70247f6386e5505dd9e8215596457f8ae5abd9e180acf59f9d8aec1bfcdac76",
+            "reason": "Expose approved simple tenant/admin/Draft-Published product baseline, current documentation task and deferred D5; retain generic Kit policy and runtime governance"
+          },
+          {
+            "task": "docs/tasks/GCMS-DOCS-002.md",
+            "previous_sha256": "08c22462b2863434abe33575e5025896119eb9c9e49a661bc36539c8ceba31df",
+            "reason": "Current task/ownership and approved platform-path plus verified-custom-host entry to one site; D1-D4 and deferred D5 unchanged, no application or DNS authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-DOCS-003.md",
+            "previous_sha256": "e035acd8dd438e7a3a67e4d6b72ff0b128130a8b2216f94e231b91bcb0652c49",
+            "reason": "Expose GCMS-DOCS-003 approved Godent-first primary, explicit own verified custom-domain activation and public-page 301; preserve D1-D4, deferred D5 and documentation-only authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-DOCS-004.md",
+            "previous_sha256": "999b351ce89c453dc2b77c6bbfffba69dbc096bd659109c6a850903101ecec85",
+            "reason": "Expose fresh approved local-MVP endpoints/Redis/S3, Published VI fallback, section builder and accepted policies; production AC-09 deferred, account/recovery and initial catalog still open; docs-only authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-DOCS-005.md",
+            "previous_sha256": "c946cb165914a211aeba151e7a78637d97567951380c1dfdc01ef1f67ef6cdf4",
+            "reason": "Expose saved canonical master-plan Draft v0.2, current document-save authority and approved shared admin app/platform-CMS S01 shell boundary; implementation remains unapproved"
+          },
+          {
+            "task": "docs/tasks/GCMS-DELIVERY-001.md",
+            "previous_sha256": "5ef599a9fb3872d09e40d71f4f1704cfc8a7b36f8732372689370484542a5932",
+            "reason": "Expose approved project-specific staged delivery workflow and current adoption authority/owner; preserve matrix, approved UI and unapproved application boundary"
+          },
+          {
+            "task": "docs/tasks/GCMS-MASTER-PLAN-001.md",
+            "previous_sha256": "fbc563bcf860495fd27e016a148675f1f8d3d74fd7c5f0b253c1cfc4021d2b24",
+            "reason": "Record direct human master-plan v0.2 planning-baseline approval and current bounded bookkeeping ownership; no implementation package authority; common Kit rules unchanged"
+          },
+          {
+            "task": "docs/tasks/GCMS-S01-001.md",
+            "previous_sha256": "76848d8dfad918ededc5c88d4c054bdfe24e2818473ea84aa1fd9442d67857d7",
+            "reason": "Expose direct human approved S01 v0.1 local execution and current ownership/restrictions; preserve common Kit policy and master/design pins"
+          },
+          {
+            "task": "docs/tasks/GCMS-S01-001.md",
+            "previous_sha256": "186482b86dd32e32449b5bd8d5fdb12552ec5c7875b6dec98351902232c3513b",
+            "reason": "Record actual verified local scaffold/runtime handoff, commands, ownership and scoped dependency advisory; preserve generic Kit and future product boundaries"
+          },
+          {
+            "task": "docs/tasks/GCMS-S02-001.md",
+            "previous_sha256": "6ad1b8e80da10ffcf1b4062c2f14c549f2e307e95c98da54d1e735862fc4d32a",
+            "reason": "Record direct approved S02 v0.1/D01-D10 local execution and S01 human acceptance; preserve common Kit policy and no Git/deploy boundary"
+          },
+          {
+            "task": "docs/tasks/GCMS-S02-001.md",
+            "previous_sha256": "bd005bf130ab8dd5d4efb2b595bb904a07671361a4880127eaa05fc3fe8cd804",
+            "reason": "Record integrated S02 source and bounded actual API/browser proof, human sensitive-action UAT/acceptance pending; preserve current authority and no Git/deploy boundary"
+          },
+          {
+            "task": "docs/tasks/GCMS-S03-001.md",
+            "previous_sha256": "f21517f3f447f9507d75aa6cfd250a3ef8668fa18d1ff1fbe951429b919d0e73",
+            "reason": "Record direct approved S03 v0.1/S03-D01-D06 local execution and S02 human acceptance with historical NOT_RUN limits retained; preserve common Kit and no Git/deploy boundary"
+          },
+          {
+            "task": "docs/tasks/GCMS-S03-001.md",
+            "previous_sha256": "c200006e71a1bfe698dccf06bbb4b85022e1c6c962a4642367c035b11e6c8de2",
+            "reason": "Record integrated S03 actual API/PostgreSQL/SSR/process/check/review proof with final browser and human acceptance limits; fresh local audit deferral; preserve common Kit, stable master/UI pins and no Git/deploy boundary"
+          },
+          {
+            "task": "docs/tasks/GCMS-S03-001.md",
+            "previous_sha256": "ce4906df42bd965a7415be498f928e0599c69a47f395e550244bbe292a294b4a",
+            "reason": "Record final actual S03 browser publication/pending-draft/conflict/state/keyboard/five-width/runtime proof and READY_FOR_USER_REVIEW; preserve human acceptance pending, scoped audit failure/loading screenshot limits, common Kit and no Git/deploy boundary"
+          },
+          {
+            "task": "docs/tasks/GCMS-S03-001.md",
+            "previous_sha256": "0df7392f6057d041764249ab602461af1cef4cfbbb6a61ea6927508810dc4ded",
+            "reason": "Record direct human Nghiệm thu S03 acceptance on 2026-10-16; preserve historical technical proof, audit FAIL/local deferral, NOT_RUN limits and no S04/Git/deploy authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-S04-001.md",
+            "previous_sha256": "576af6ce3b619a328c01bc1e56805789efe49a5b1385a6a7b8ede8095b8824c3",
+            "reason": "Record direct approved S04 v0.1/D01-D10 local execution/new intake role and current pointers; preserve S01-S03 acceptance/historical proof, common Kit and no Git/deploy/S05+ boundary"
+          },
+          {
+            "task": "docs/tasks/GCMS-S04-001.md",
+            "previous_sha256": "9e1288966bf010b390122697f8a6cce2b92eb4c979c7e359b2098b1bf55358e2",
+            "reason": "Record integrated S04 real intake/API/PG/browser and bounded final integration proof, ADR008/runbook, human acceptance pending and CAPTCHA/unobserved browser/audit FAIL limits; no new policy or S05+ authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-S04-001.md",
+            "previous_sha256": "9405b2d871ff984f6f984f70816be72aca90816a8f82fb593a2f9fb7e62411ab",
+            "reason": "Record direct human Nghiệm thu S04. acceptance on 2026-10-16; preserve historical technical results, browser NOT_RUN/audit FAIL limits and no S05/Git/deploy authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-S05-001.md",
+            "previous_sha256": "fe2e17ddb6aba84b43d87d63af3d3e69fbe233e037f997adb6d3dfcb13516146",
+            "reason": "Record direct approved S05 v0.1/S05-D01-D12 full local execution plan/current pointers with new worker/local capture scope; preserve S01-S04 acceptance, retained S04 backlog and no S06+/Git/deploy boundary"
+          },
+          {
+            "task": "docs/tasks/GCMS-S05-001.md",
+            "previous_sha256": "3efbd3358777d595ce5b57a67ddc5fd13e39ceca4dfc7d73b7a6842c814e9ab7",
+            "reason": "Record settled S05 source-integrated actual API/worker and partial browser results/canonical ADR009/runbook, closing verification pending; preserve historical evidence, audit FAIL/local-only and no S06+/Git/deploy boundaries"
+          }
+        ]
+      }
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "a54530187a0ab76b993dd50c2233322fa0093f06c35cc0e7cd12649db6aa009b",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      },
+      "project_adaptation": {
+        "source_commit": "919ce6b8d84c8ac5ad4ce473ad6e6c2c9973d2ac",
+        "template_sha256": "febfc98914b9434983ec004d9068e8fa0f19a33f45a626add4e97afd59b1246b",
+        "reason": "Project-specific task, toolchain, verification and delivery rules",
+        "record": "docs/agent-kit/adoption.md",
+        "updates": [
+          {
+            "task": "docs/tasks/GCMS-EFFORT-001.md",
+            "previous_sha256": "5d29da8d0079e218642cf03dd0ccb02824b7ab4d271f8bd76c58cf1fa24b585f",
+            "reason": "Task classification before general effort fallback"
+          },
+          {
+            "task": "docs/tasks/GCMS-EFFORT-002.md",
+            "previous_sha256": "54260c3d24c51303eb08570b222096d4e53d927a97d65a7d81b35e78ae41653f",
+            "reason": "Task-boundary runtime check, matrix-bound native execution and scoped actual conformance evidence"
+          },
+          {
+            "task": "docs/tasks/GCMS-DOCS-001.md",
+            "previous_sha256": "909ac2d3fc5c294ae3d6d3cb71f8034290b6f42b979f8896c59756b0a7d50534",
+            "reason": "Expose approved simple tenant/admin/Draft-Published product baseline, current documentation task and deferred D5; retain generic Kit policy and runtime governance"
+          },
+          {
+            "task": "docs/tasks/GCMS-DOCS-002.md",
+            "previous_sha256": "718d4f04a6e324b9495b9b8b74cf7f98cf7d61bb5cdc4c3f6b0b5080dfc39ad2",
+            "reason": "Current task/ownership and approved platform-path plus verified-custom-host entry to one site; D1-D4 and deferred D5 unchanged, no application or DNS authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-DOCS-003.md",
+            "previous_sha256": "17735f354b145b7bdd8b0dc1a3de61dc8963793312e46ce62170aafeba94d873",
+            "reason": "Expose GCMS-DOCS-003 approved Godent-first primary, explicit own verified custom-domain activation and public-page 301; preserve D1-D4, deferred D5 and documentation-only authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-DOCS-004.md",
+            "previous_sha256": "1f9a68c69e835310b24d7486687a3821c35df6eb367208d0149ed22fe3ee560c",
+            "reason": "Expose fresh approved local-MVP endpoints/Redis/S3, Published VI fallback, section builder and accepted policies; production AC-09 deferred, account/recovery and initial catalog still open; docs-only authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-DOCS-005.md",
+            "previous_sha256": "df53a4b24102ae22aefa65d3a53800e8590e50f05050f164486a210ea00ca6c9",
+            "reason": "Expose saved canonical master-plan Draft v0.2, current document-save authority and approved shared admin app/platform-CMS S01 shell boundary; implementation remains unapproved"
+          }
+        ]
+      }
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "75a171545431065872aff744db85559cea6f3dc6d3b033298919b943269aa17e",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "README.md",
+      "sha256": "b67542d983025b141283eee6de0f9dae51d841ad74e92f38395f9a0721890d0f",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      },
+      "project_adaptation": {
+        "source_commit": "919ce6b8d84c8ac5ad4ce473ad6e6c2c9973d2ac",
+        "template_sha256": "1ae43e7d041fd78b1240fa800e8f21764779365e2fb51fe5868c6b1920eb61a3",
+        "reason": "Project entrypoint and documentation-only commands/status",
+        "record": "docs/agent-kit/adoption.md",
+        "updates": [
+          {
+            "task": "docs/tasks/GCMS-EFFORT-001.md",
+            "previous_sha256": "4a917d883fc7801bda40aafa2f36f44a6f68978be6ff02ec64e19cc1c20cf8e8",
+            "reason": "Project effort policy, routing helper, regression command and separate governance authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-EFFORT-002.md",
+            "previous_sha256": "f98af1129eba2b0dea44e09d873c4581e063cf58f067ee386a5dd1b10b3bdb2b",
+            "reason": "Task-boundary runtime check, matrix-bound native execution and scoped actual conformance evidence"
+          },
+          {
+            "task": "docs/tasks/GCMS-DOCS-001.md",
+            "previous_sha256": "8188d2de723087fe5cb6070048503a511b729f80dd3fca14d41472f9ac3732fa",
+            "reason": "Expose approved simple tenant/admin/Draft-Published product baseline, current documentation task and deferred D5; retain generic Kit policy and runtime governance"
+          },
+          {
+            "task": "docs/tasks/GCMS-DOCS-002.md",
+            "previous_sha256": "7bc14c310a876323e01b58d46e84608674545d97bd819c23874ae9c283e2bbca",
+            "reason": "Current task/ownership and approved platform-path plus verified-custom-host entry to one site; D1-D4 and deferred D5 unchanged, no application or DNS authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-DOCS-003.md",
+            "previous_sha256": "71592ad6e0e5516297d4b4cb8f4fcc23b5018878f70fbb12634de62bbe2c4e07",
+            "reason": "Expose GCMS-DOCS-003 approved Godent-first primary, explicit own verified custom-domain activation and public-page 301; preserve D1-D4, deferred D5 and documentation-only authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-DOCS-004.md",
+            "previous_sha256": "41ea0b7ad20ae6b5be14e3588fc4d2e8c8d75ee519d01043e3e79e4606bc9e58",
+            "reason": "Expose fresh approved local-MVP endpoints/Redis/S3, Published VI fallback, section builder and accepted policies; production AC-09 deferred, account/recovery and initial catalog still open; docs-only authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-DOCS-005.md",
+            "previous_sha256": "3c96efcea33f52a76a6c4b637ee5cf008d3e1118c73947c3d6b9c6e437d456df",
+            "reason": "Expose saved canonical master-plan Draft v0.2, current document-save authority and approved shared admin app/platform-CMS S01 shell boundary; implementation remains unapproved"
+          },
+          {
+            "task": "docs/tasks/GCMS-S01-001.md",
+            "previous_sha256": "65c310ba61abeeb3f7c2e2dd8a562aad924b7262f1ab94bf692aaf83ef51ad8e",
+            "reason": "Record actual verified local scaffold/runtime handoff, commands, ownership and scoped dependency advisory; preserve generic Kit and future product boundaries"
+          },
+          {
+            "task": "docs/tasks/GCMS-S02-001.md",
+            "previous_sha256": "b977b409afcd5eac478fb991f9156c7c5d80e4228d5179b6d38db4de1928c7a0",
+            "reason": "Synchronize S01 acceptance, approved S02 in-progress authority and account/session runbook references; preserve historical provenance and no Git/deploy boundary"
+          },
+          {
+            "task": "docs/tasks/GCMS-S02-001.md",
+            "previous_sha256": "c672f4d585a8ce5b320a283d069092b086b00aa8a3b228533636c710f41a3071",
+            "reason": "Record integrated S02 source and bounded actual API/browser proof, human sensitive-action UAT/acceptance pending; preserve current authority and no Git/deploy boundary"
+          },
+          {
+            "task": "docs/tasks/GCMS-S03-001.md",
+            "previous_sha256": "1904ca3069ba89b2dc0966ae153984ab444468f78aebef7048ebdae6dabd9fd6",
+            "reason": "Record direct approved S03 v0.1/S03-D01-D06 local execution and S02 human acceptance with historical NOT_RUN limits retained; preserve common Kit and no Git/deploy boundary"
+          },
+          {
+            "task": "docs/tasks/GCMS-S03-001.md",
+            "previous_sha256": "7f42b0b4912a17ba6c26fde7da42fca6ebea075eebf64f71a1cd92abd3f55c08",
+            "reason": "Record integrated S03 actual API/PostgreSQL/SSR/process/check/review proof with final browser and human acceptance limits; fresh local audit deferral; preserve common Kit, stable master/UI pins and no Git/deploy boundary"
+          },
+          {
+            "task": "docs/tasks/GCMS-S03-001.md",
+            "previous_sha256": "9403f4ac5c7909a2e8e65d6381d1746ba1e0a5298f57e11e61a5cea58890dcc3",
+            "reason": "Record final actual S03 browser publication/pending-draft/conflict/state/keyboard/five-width/runtime proof and READY_FOR_USER_REVIEW; preserve human acceptance pending, scoped audit failure/loading screenshot limits, common Kit and no Git/deploy boundary"
+          },
+          {
+            "task": "docs/tasks/GCMS-S03-001.md",
+            "previous_sha256": "b29e2336089314b5a10b90eb0ec4df55116469eb451511b87ce0a068642c4295",
+            "reason": "Record direct human Nghiệm thu S03 acceptance on 2026-10-16; preserve historical technical proof, audit FAIL/local deferral, NOT_RUN limits and no S04/Git/deploy authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-S04-001.md",
+            "previous_sha256": "d9ad3933db4d12e787cd95bc62e3221a8ea00e76c75789c13421638e155e7dc3",
+            "reason": "Record direct approved S04 v0.1/D01-D10 local execution/new intake role and current pointers; preserve S01-S03 acceptance/historical proof, common Kit and no Git/deploy/S05+ boundary"
+          },
+          {
+            "task": "docs/tasks/GCMS-S04-001.md",
+            "previous_sha256": "997af19f9317781a23bad805d5c7a47034e488e4c0540e02c9b16da73d1d7383",
+            "reason": "Record integrated S04 real intake/API/PG/browser and bounded final integration proof, ADR008/runbook, human acceptance pending and CAPTCHA/unobserved browser/audit FAIL limits; no new policy or S05+ authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-S04-001.md",
+            "previous_sha256": "dec983595a33533e89a47b0ef0ba03a1d164d91e491e46c85ccace621d452c55",
+            "reason": "Record direct human Nghiệm thu S04. acceptance on 2026-10-16; preserve historical technical results, browser NOT_RUN/audit FAIL limits and no S05/Git/deploy authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-S05-001.md",
+            "previous_sha256": "b1236d6620d0220309d6166ddf4c7995f0358a819e30e5ac7364c57e73e05400",
+            "reason": "Record direct approved S05 v0.1/S05-D01-D12 full local execution plan/current pointers with new worker/local capture scope; preserve S01-S04 acceptance, retained S04 backlog and no S06+/Git/deploy boundary"
+          },
+          {
+            "task": "docs/tasks/GCMS-S05-001.md",
+            "previous_sha256": "34a7121e5328ade49e447ad9ab079888e44d52747e9b57fa323e9f160a86ce91",
+            "reason": "Record settled S05 source-integrated actual API/worker and partial browser results/canonical ADR009/runbook, closing verification pending; preserve historical evidence, audit FAIL/local-only and no S06+/Git/deploy boundaries"
+          }
+        ]
+      }
+    },
+    {
+      "path": "docs/agent-compatibility.md",
+      "sha256": "f639e3dc500357282f61cc40a72bafec319ad949a71f0b7d42b78273f889ba48",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      },
+      "project_adaptation": {
+        "source_commit": "919ce6b8d84c8ac5ad4ce473ad6e6c2c9973d2ac",
+        "template_sha256": "c92514826b98a19118bbf275f9cc9b98269e8ae71263c775639c5417604e643c",
+        "reason": "Project evidence boundary without inherited runtime proof",
+        "record": "docs/agent-kit/adoption.md",
+        "updates": [
+          {
+            "task": "docs/tasks/GCMS-EFFORT-002.md",
+            "previous_sha256": "780de2544774968bf2a8edfdc1cb61d71e331204903d0f612ffe23da73cddb92",
+            "reason": "Task-boundary runtime check, matrix-bound native execution and scoped actual conformance evidence"
+          }
+        ]
+      }
+    },
+    {
+      "path": "docs/agent-coordination-templates.md",
+      "sha256": "ad2f4b249dd9e28b69276cc1c48a610e571425a6fc00ee5de3043fb8c47f846a",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      },
+      "project_adaptation": {
+        "source_commit": "919ce6b8d84c8ac5ad4ce473ad6e6c2c9973d2ac",
+        "template_sha256": "3c53a7b26b6d5d4bd2c1a0322dd61bd53d44d0859282527e724fb612298c4c6a",
+        "reason": "Assignments/state record task type, risk, required/requested/observed effort and fallback reason",
+        "record": "docs/agent-kit/adoption.md",
+        "updates": [
+          {
+            "task": "docs/tasks/GCMS-EFFORT-001.md",
+            "previous_sha256": "3c53a7b26b6d5d4bd2c1a0322dd61bd53d44d0859282527e724fb612298c4c6a",
+            "reason": "Assignments/state record task type, risk, required/requested/observed effort and fallback reason"
+          },
+          {
+            "task": "docs/tasks/GCMS-EFFORT-002.md",
+            "previous_sha256": "e582e25c008edc30c9b3b0297c8c2ef1d415f019b48f0bc0b3540fb9d4e7f97d",
+            "reason": "Task-boundary runtime check, matrix-bound native execution and scoped actual conformance evidence"
+          }
+        ]
+      }
+    },
+    {
+      "path": "docs/model-routing.md",
+      "sha256": "3a19e511eebaab6594829109707942d487bd2e904b6b0b5cd53c764731696e82",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      },
+      "project_adaptation": {
+        "source_commit": "919ce6b8d84c8ac5ad4ce473ad6e6c2c9973d2ac",
+        "template_sha256": "2f1ba8e4b5122c9ddf835c7abcff8274f99e6561bc088a5b88e6ea33667a812e",
+        "reason": "Task-specific explicit effort first; inheritance only for unclassified work",
+        "record": "docs/agent-kit/adoption.md",
+        "updates": [
+          {
+            "task": "docs/tasks/GCMS-EFFORT-001.md",
+            "previous_sha256": "2f1ba8e4b5122c9ddf835c7abcff8274f99e6561bc088a5b88e6ea33667a812e",
+            "reason": "Task-specific explicit effort first; inheritance only for unclassified work"
+          },
+          {
+            "task": "docs/tasks/GCMS-EFFORT-002.md",
+            "previous_sha256": "d9665f534110621350d653d528f445e6aefbd16bb56513c4e413f69a83696208",
+            "reason": "Task-boundary runtime check, matrix-bound native execution and scoped actual conformance evidence"
+          }
+        ]
+      }
+    },
+    {
+      "path": "docs/roles/coordinator.md",
+      "sha256": "8f406eac3aaadaa173fe6c89131f4c5dbb9cfc66eaef06f65cfa929c6114f6d4",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/roles/explorer.md",
+      "sha256": "904314740059decec76d09c7ac43e593f05c68c3dd0398bd5de2c6122b6545c4",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/roles/implementer.md",
+      "sha256": "614723bc3e02240d1ae8d2e70abf7864802710a626e5dbcde4dc2a76acd14d95",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/roles/reviewer.md",
+      "sha256": "0e265282a62bd2a789d93f98827d36c8b82f77ceb3ce79db2bece0280675ad6e",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/skills-catalog.md",
+      "sha256": "2766db5b5a26e958d6b6544abb8185a4f50284756641756dc58f9d279fcf26bb",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      },
+      "project_adaptation": {
+        "source_commit": "919ce6b8d84c8ac5ad4ce473ad6e6c2c9973d2ac",
+        "template_sha256": "c4aeedb0c5d5b6ca3b7cf302bb8e4f29da12157a92e185d511bf27db743c2545",
+        "reason": "Upstream approval attribution and immutable task provenance links",
+        "record": "docs/agent-kit/adoption.md"
+      }
+    },
+    {
+      "path": "docs/team-policy.md",
+      "sha256": "16607323712c0103ce25f2dedaa6431bfccf02145646bbbc42c6475644d2b9be",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/team-workflow.md",
+      "sha256": "55b5e851751db91ed46314f9c41a1260bc59f4fbeb7ccf352ff9f8f15708cff7",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/technote.md",
+      "sha256": "9355f5fc4fa48517d19505d816573c3b3dfd76a94bf72382593c2d0c72f8f823",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/template-application-acceptance.md",
+      "sha256": "e11d640c7b9150120c10098d7c97f18a2d055b0d8ff9f9cf1b211435885069c4",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/verification-guide.md",
+      "sha256": "10783ec154e52ecdee174307240bcffb0009664ee57ee276bc496011ffebecaa",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      },
+      "project_adaptation": {
+        "source_commit": "919ce6b8d84c8ac5ad4ce473ad6e6c2c9973d2ac",
+        "template_sha256": "02f9a80234caf7bfa6d6e77e2dcf194ca39829451b8fc35bb1a699427c68c1e5",
+        "reason": "Project checker entrypoint and separation of source history from current authority",
+        "record": "docs/agent-kit/adoption.md"
+      }
+    }
+  ],
+  "excluded_mutable_paths": [
+    "docs/project-context.md",
+    "docs/project-plan.md",
+    "docs/project-state.md",
+    "docs/skills-manifest.json",
+    "docs/tasks/README.md",
+    "docs/verification-results.md"
+  ],
+  "integrity_note": "SHA-256 checks detect differences; hashes and parsed fields do not prove runtime behavior. godent-cms local adaptations retain original origins and template digests; project records and runtime results are outside this inventory.",
+  "project_adoption": {
+    "project": "godent-cms",
+    "approval": "GCMS-SETUP-001 v2",
+    "template_repository": "https://github.com/khiemnd777/agent-kit",
+    "template_commit": "919ce6b8d84c8ac5ad4ce473ad6e6c2c9973d2ac",
+    "upstream_snapshot": "docs/agent-kit/upstream-skills-manifest.json",
+    "source_index": "docs/agent-kit/template-source.json",
+    "record": "docs/agent-kit/adoption.md",
+    "adapted_paths": [
+      ".gitignore",
+      "AGENTS.md",
+      "CONTRIBUTING.md",
+      "README.md",
+      "docs/agent-compatibility.md",
+      "docs/agent-coordination-templates.md",
+      "docs/model-routing.md",
+      "docs/skills-catalog.md",
+      "docs/verification-guide.md"
+    ]
+  },
+  "project_changes": [
+    {
+      "task": "GCMS-EFFORT-001 v1",
+      "record": "docs/tasks/GCMS-EFFORT-001.md",
+      "authority": "Direct human request to evaluate and apply supplied project effort matrix",
+      "scope": "Project governance, routing helper/checks and provenance only; no application or global settings"
+    },
+    {
+      "task": "GCMS-EFFORT-002",
+      "record": "docs/tasks/GCMS-EFFORT-002.md",
+      "authority": "Direct human request to verify actual coordinator and subagent effort and use matrix in execution",
+      "scope": "Project-local execution/check wiring, bounded native conformance, filtered evidence and records; no application or global settings"
+    },
+    {
+      "task": "GCMS-DOCS-001 v1",
+      "record": "docs/tasks/GCMS-DOCS-001.md",
+      "authority": "Direct human approval to synchronize D1-D4 project documents and record D5 direction only",
+      "scope": "Exact documentation allowlist and existing static checks; desktop accountable, bounded sole execution writer; no application, new agents, configuration or Git delivery",
+      "maintained_paths": [
+        "AGENTS.md",
+        "CONTRIBUTING.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-DOCS-002 v1",
+      "record": "docs/tasks/GCMS-DOCS-002.md",
+      "authority": "Fresh direct human approval of godent.vn tenant-path and custom-domain documentation; no application or DNS configuration",
+      "scope": "Affected routing/project documents and existing static checks; desktop accountable, existing bounded sole writer; no new agents, config, external or Git writes",
+      "maintained_paths": [
+        "AGENTS.md",
+        "CONTRIBUTING.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-DOCS-003 v1",
+      "record": "docs/tasks/GCMS-DOCS-003.md",
+      "authority": "Fresh direct human approval of option A: Godent first, explicit verified custom-domain activation and page-level 301; documentation only",
+      "scope": "Affected allowlisted documents/provenance and existing static checks; desktop accountable, existing bounded sole writer; no application, DNS/configuration, external/Git writes or new agents",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md",
+        "CONTRIBUTING.md"
+      ]
+    },
+    {
+      "task": "GCMS-DOCS-004 v1",
+      "record": "docs/tasks/GCMS-DOCS-004.md",
+      "authority": "Fresh direct human Approve of bounded latest-decision documentation synchronization, not implementation or blanket advisory approval",
+      "scope": "Affected allowlisted project docs/provenance and existing static checks; desktop accountable, existing sole xhigh writer; no app/Docker/configuration/services/DNS/Git/external work or new agents",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md",
+        "CONTRIBUTING.md"
+      ]
+    },
+    {
+      "task": "GCMS-DOCS-005 v1",
+      "record": "docs/tasks/GCMS-DOCS-005.md",
+      "authority": "Fresh direct human instruction to save Draft v0.2 and accepted shared administration-app clarification; not implementation approval",
+      "scope": "Affected allowlisted documents/provenance and existing static checks only; desktop accountable, existing sole xhigh writer; no new agent/reviewer, application/configuration/Git/external work",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md",
+        "CONTRIBUTING.md"
+      ]
+    },
+    {
+      "task": "GCMS-UX-001 v1",
+      "record": "docs/tasks/GCMS-UX-001.md",
+      "authority": "Direct provisional human approval to create a UI/UX mockup for review; no final design or application approval",
+      "scope": "Four-screen static design artifacts, synthetic in-memory interactions, read-only loopback preview, scoped browser/source checks and project records; no maintained Kit changes, application/dependencies/Docker/DNS/Git delivery"
+    },
+    {
+      "task": "GCMS-DELIVERY-001 v0.1",
+      "record": "docs/tasks/GCMS-DELIVERY-001.md",
+      "authority": "Direct human “Duyệt và lưu quy trình triển khai” approving the preceding staged-delivery workflow proposal",
+      "scope": "Project delivery workflow/task, entrypoint/current records/provenance and static checks only; no application package, matrix/mockup/generic Kit change or Git delivery",
+      "maintained_paths": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "task": "GCMS-MASTER-PLAN-001 v0.2",
+      "record": "docs/tasks/GCMS-MASTER-PLAN-001.md",
+      "authority": "Direct human “Duyệt Approve GCMS-MASTER-PLAN-001” on 2026-10-15 Asia/Ho_Chi_Minh, desktop-verified thread01a13e59-fa91-7cb1-a156-5361bb21ca58; accepts saved v0.2 planning baseline",
+      "scope": "Approval bookkeeping/current records/provenance and static checks only; desktop accountable, sole bounded writer; no implementation package, detailed S01 saved plan, new agents or Git delivery",
+      "maintained_paths": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "task": "GCMS-S01-001 v0.1",
+      "record": "docs/tasks/GCMS-S01-001.md",
+      "authority": "Direct human “Duyệt S01 v0.1. Lưu kế hoạch rồi triển khai trong phạm vi local đã đề xuất, gồm cài dependencies, chạy Docker, tạo tài nguyên thử kỹ thuật và kiểm chứng. Chưa commit/push hoặc deploy.” on 2026-10-15 Asia/Ho_Chi_Minh, desktop thread `01a1402c-3c81-7933-9927-d974f70c9fbc`.",
+      "scope": "Approved S01 local scaffold/dependencies/Docker/technical trials/build/tests/browser, routine repairs and current evidence/docs; no commit/push/deploy/global or common-policy change",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md",
+        ".gitignore"
+      ]
+    },
+    {
+      "task": "GCMS-S02-001 v0.1",
+      "record": "docs/tasks/GCMS-S02-001.md",
+      "authority": "Duyệt S02 v0.1 và D01–D10. Lưu kế hoạch, cập nhật nghiệm thu S01 rồi triển khai S02a/S02b trong phạm vi local đã đề xuất, gồm migrations, fixtures và kiểm chứng. Chưa commit/push hoặc deploy. Direct human source verified by desktop on 2026-10-15 Asia/Ho_Chi_Minh, thread 01a1402c-3c81-7933-9927-d974f70c9fbc.",
+      "scope": "Save S02 approved plan/D01-D10, S01 acceptance and current pointers/provenance before local implementation; no Git/deploy/global/paid/real data or destruction",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-S03-001 v0.1",
+      "record": "docs/tasks/GCMS-S03-001.md",
+      "authority": "Direct human S03 v0.1/S03-D01-D06 local execution approval and prior S02 acceptance on 2026-10-16",
+      "scope": "Settled approved plan, S02 acceptance append and current pointers; maintained AGENTS/README hashes only; no application/configuration/service/DB/Git action by bounded writer",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-S03-001 final local execution record",
+      "record": "docs/tasks/GCMS-S03-001.md",
+      "authority": "Existing direct human approved S03 v0.1/S03-D01-D06 local scope on 2026-10-16",
+      "scope": "Settled actual evidence/current pointers/runbook only; maintained AGENTS/README digest provenance; no app/runtime/DB/Git action by writer",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-S03-001 final local browser closure",
+      "record": "docs/tasks/GCMS-S03-001.md",
+      "authority": "Continuing direct human S03 v0.1/S03-D01-D06 local approval on 2026-10-16",
+      "scope": "Settled final local browser/runtime/preservation and current records only; AGENTS/README maintained digest provenance; human acceptance remains pending; no app/runtime/DB/Git action by writer",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-S03-001 human acceptance bookkeeping",
+      "record": "docs/tasks/GCMS-S03-001.md",
+      "authority": "Khiêm direct Nghiệm thu S03. on 2026-10-16 Asia/Ho_Chi_Minh, verified by desktop",
+      "scope": "Acceptance append and exact current-status pointers only; AGENTS/README maintained hashes with appended provenance; no new implementation/runtime/evidence/Git authority",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-S04-001 approved plan save",
+      "record": "docs/tasks/GCMS-S04-001.md",
+      "authority": "Khiêm direct Approve. Đồng ý triển khai S04 v0.1 trong phạm vi đã planned. on 2026-10-16 Asia/Ho_Chi_Minh, verified by desktop",
+      "scope": "Approved source-complete S04 plan and current pointers; AGENTS/README maintained digests with appended provenance only; documentation writer performs no application/runtime/DB/Git action",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-S04-001 local implementation handoff",
+      "record": "docs/tasks/GCMS-S04-001.md",
+      "authority": "Continuing direct human S04 v0.1/D01-D10 approval, 2026-10-16 Asia/Ho_Chi_Minh",
+      "scope": "Settled approved decisions/canonical docs/ADR008/current results/runbook; maintained AGENTS/README digest provenance only; no app/runtime/DB/Git/evidence JSON changes by writer",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-S04-001 human acceptance bookkeeping",
+      "record": "docs/tasks/GCMS-S04-001.md",
+      "authority": "Khiêm direct Nghiệm thu S04. on 2026-10-16 Asia/Ho_Chi_Minh, verified by desktop",
+      "scope": "Current acceptance pointers/append only; AGENTS/README maintained digests with appended existing-format provenance; no new implementation/runtime/evidence/Git authority",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-S05-001 approved plan save",
+      "record": "docs/tasks/GCMS-S05-001.md",
+      "authority": "Direct human S05 v0.1/S05-D01-D12 approval on2026-10-16 Asia/Ho_Chi_Minh, verified by desktop",
+      "scope": "Exact source-complete approved plan/current pointers only; AGENTS/README maintained hash+appended provenance; no app/runtime/DB/evidence JSON/Git writes by writer",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-S05-001 settled implementation checkpoint",
+      "record": "docs/tasks/GCMS-S05-001.md",
+      "authority": "Continuing direct human S05 v0.1/D01-D12 approval2026-10-16",
+      "scope": "Settled contracts/results/runbook/current pointers; AGENTS/README maintained hashes+appended provenance; no app/runtime/DB/evidence JSON/Git changes by writer",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-S05-001 final settled local handoff",
+      "record": "docs/tasks/GCMS-S05-001.md",
+      "authority": "Continuing direct human S05 v0.1/D01-D12 approval2026-10-16; desktop final callback",
+      "scope": "Final settled docs/ADR009/current pointers and exact proof limits; AGENTS/README maintained hashes only; no app/runtime/DB/evidence JSON/Git writes by writer",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-S05-001 root post-release factual closure",
+      "record": "docs/tasks/GCMS-S05-001.md",
+      "authority": "Continuing direct human S05 approval; desktop settled post-release verification callback2026-10-16",
+      "scope": "Only assigned current documentation pointers/verification append; AGENTS/README maintained hashes and appended provenance; no app/runtime/DB/evidence JSON/Git writes",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-S05-001 human acceptance bookkeeping",
+      "record": "docs/tasks/GCMS-S05-001.md",
+      "authority": "Khiêm direct “Nghiệm thu S05.”2026-10-16 Asia/Ho_Chi_Minh, verified desktop source",
+      "scope": "Only S05 acceptance/current documentation pointers; historical technical evidence unchanged; AGENTS/README maintained hashes and appended provenance only",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-M1-UAT-001 approved v0.1 plan save",
+      "record": "docs/tasks/GCMS-M1-UAT-001.md",
+      "authority": "Khiêm direct GCMS-M1-UAT-001 v0.1 local UAT approval2026-10-16 Asia/Ho_Chi_Minh, verified desktop source",
+      "scope": "Full approved UAT plan/current pointers; AGENTS/README maintained hashes and appended provenance only; no app/runtime/DB/browser/evidence JSON/Git writes by writer",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-M1-UAT-001 human-guided execution checkpoint",
+      "record": "docs/tasks/GCMS-M1-UAT-001.md",
+      "authority": "Continuing human M1 UAT approval; exact T07 and reauth/invitation human permissions recorded separately",
+      "scope": "Settled callback/current pointers; AGENTS/README maintained hashes and appended provenance only; no app/runtime/private/DB/evidence JSON/Git writes by writer",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-AUTH-001 approved v0.1 plan/current-policy save",
+      "record": "docs/tasks/GCMS-AUTH-001.md",
+      "authority": "Khiêm direct approved AUTH local UI/API/DB+automatic UAT2026-10-16 Asia/Ho_Chi_Minh; verified desktop source",
+      "scope": "Full approved AUTH plan/M1 current criteria revision/current pointers; AGENTS/README maintained hashes+appended provenance only; no app/runtime/private/DB/evidence JSON/Git writes by writer",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-AUTH-001 actual source/UI checkpoint",
+      "record": "docs/tasks/GCMS-AUTH-001.md",
+      "authority": "Continuing direct approved AUTH v0.1 local implementation and automatic UAT; actual coordinator callbacks",
+      "scope": "Settled task/M1 current revision/current pointers; AGENTS/README maintained hashes+appended provenance only; no app/runtime/private/evidence JSON/DB/Git writes by writer",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-AUTH-001 final scoped local handoff",
+      "record": "docs/tasks/GCMS-AUTH-001.md",
+      "authority": "Continuing directly approved AUTH v0.1; final actual coordinator suite/preservation/review callback2026-10-16",
+      "scope": "Only assigned final task/M1 mapping/current-policy/current pointers and AGENTS/README maintained hashes+append provenance; no app/private/runtime/DB/evidence JSON/Git writes by writer",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    }
+  ]
+}

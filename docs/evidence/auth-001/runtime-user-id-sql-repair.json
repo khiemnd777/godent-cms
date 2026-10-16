@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-16T05:17:34.046293+00:00",
+  "migration": "0014_s05_user_identifier.sql",
+  "firstRun": {
+    "exitCode": 0,
+    "appliedNames": [
+      "0014_s05_user_identifier.sql"
+    ]
+  },
+  "replay": {
+    "exitCode": 0,
+    "appliedNames": []
+  },
+  "sessionRevocationRepeated": false,
+  "installedOldFunctionVerifiedBeforeApply": true,
+  "http": [
+    {
+      "url": "http://127.0.0.1:5890/health",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5890/ready",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5891/login",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:5892/",
+      "status": 200
+    }
+  ],
+  "sourceChecks": {
+    "typecheckExitCode": 0,
+    "lintExitCode": 0,
+    "apiBuildExitCode": 0
+  },
+  "migrationSha256": "e91f2cde773bba098b8cce046f754c2d62fbb7afdf24d5e8dd4688e15261a429",
+  "migration0013Unchanged": true,
+  "processes": {
+    "launcher": 31990,
+    "runtime": "1.4.3",
+    "processes": [
+      {
+        "name": "api",
+        "port": 5890,
+        "pid": 31991
+      },
+      {
+        "name": "admin",
+        "port": 5891,
+        "pid": 31992
+      },
+      {
+        "name": "website",
+        "port": 5892,
+        "pid": 31993
+      }
+    ]
+  }
+}

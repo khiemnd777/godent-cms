@@ -1,0 +1,128 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "VERIFIED_LOCAL_READY_FOR_USER_REVIEW",
+  "recordedAtUtc": "2026-10-16T05:48:14.226852+00:00",
+  "humanAcceptance": "PENDING",
+  "http": [
+    {
+      "url": "http://127.0.0.1:5890/health",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5890/ready",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5891/login",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:5892/",
+      "status": 200
+    }
+  ],
+  "receipts": [
+    {
+      "path": "docs/evidence/auth-001/api/bounded-checks.json",
+      "status": "PASS",
+      "sha256": "45b21405729cc917412d44519d95a9f6899a37fdd7ff83641ae75ce80200ecba"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/preservation.json",
+      "status": "PASS",
+      "sha256": "04e3b7c826f8deda3d3238b71e6b937ad07fccde99b37791aa48da6272f0c1d8"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/catalog.json",
+      "status": "PASS",
+      "sha256": "e089ff439117f83ec809c5a9867d6c9de261c64687c44ec45d0b4d4edbec17d3"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/login-result.json",
+      "status": "PASS",
+      "sha256": "b3cecd6fb324d41a48fcf535fd7d2373f1b23008eef1702c7de8dbdbe61a849f"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/publication-result.json",
+      "status": "PASS",
+      "sha256": "0b0bb99d2893f721a023119753e536b4faf409a9f1893423cd0085000f661b47"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/operations-sql-resume-result.json",
+      "status": "PASS",
+      "sha256": "1bf8f864138a2e5a35aa1885cee137468e8deacd02418193a2bd2a92cfd35543"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/lifecycle/final-result.json",
+      "status": "PASS",
+      "sha256": "3252eb322c742444d8447eb23080f5d7fd8495fadf2562423965baf93f4d02a7"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/invitation-negatives-result.json",
+      "status": "PASS",
+      "sha256": "09a29658952ced8103a83b9fd43f96909b7a78432552f58b2de62385d83a662d"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/final-visual-result.json",
+      "status": "PASS",
+      "sha256": "563cf3fb60bac2294bef62e354cf77f9f4478ab3cdd54dc9c1e384169fda2636"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/visual-recapture-result.json",
+      "status": "PASS",
+      "sha256": "bdccd72b92e9e493c02740c8124110e03d326976b55b1a6d8e0e5e46892954df"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/assignment-exact-replay.json",
+      "status": "PASS",
+      "sha256": "8004b04eb7ebbb53e2d204578d40f747525e3b0402420eac36ea67c906640877"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/worker-local-capture.json",
+      "status": "PASS",
+      "sha256": "becf909813c92cd94b366d2fb4fcd53e5444b5c1e7b13d5d7f192f1937f1168e"
+    },
+    {
+      "path": "docs/evidence/auth-001/final-source-checks.json",
+      "status": "PASS",
+      "sha256": "7601543914ca08342fad09e1637cf5ec4e89ab519a8a4ca1d67a3e5536930363"
+    },
+    {
+      "path": "docs/evidence/auth-001/final-file-preservation.json",
+      "status": "PASS",
+      "sha256": "8f3d5adb8d9191f224108e7cd400e07c1771d244f53ae564c6a16192333c6fc5"
+    },
+    {
+      "path": "docs/evidence/auth-001/knownsecret-scan-final.json",
+      "status": "PASS",
+      "sha256": "752e43157792dbd041a03babd655826fffee630c105fbe85d55e56878b2afbed"
+    }
+  ],
+  "coordinatorStaticCheck": {
+    "exitCode": 0,
+    "maintainedHashes": 81,
+    "mirrorPairs": 28,
+    "markdownFiles": 129,
+    "localLinks": 1416
+  },
+  "privateHandoff": {
+    "path": ".local/auth-001-ui-login-handoff.md",
+    "mode": "0600",
+    "secretValuesPrinted": false
+  },
+  "remainingLimits": [
+    "Fresh browser invitation expiry and natural eight-hour wait NOT_RUN; expiry/session controls verified through bounded API/DB tests",
+    "Historical failures and missing early request statuses/factor count retained as Unknown",
+    "Dependency braces audit FAIL/open under bounded local deferral; no production waiver",
+    "M1 overall closure and AUTH human acceptance are separate"
+  ],
+  "actionsNotPerformed": [
+    "commit",
+    "push",
+    "deploy",
+    "dependency upgrade",
+    "external email",
+    "production changes"
+  ],
+  "limit": "Coordinator final integration receipt after document freeze and a factual replay-label correction. Known-secret scan covers the exact62 text inputs in its report, not image OCR, this generated receipt or a comprehensive repository audit."
+}

@@ -1,0 +1,91 @@
+{
+  "package": "GCMS-AUTH-001",
+  "status": "PASS",
+  "startedAt": "2026-10-16T05:26:53.995Z",
+  "steps": [
+    {
+      "step": "negative-inputs-private-only-prepared",
+      "at": "2026-10-16T05:26:53.996Z"
+    },
+    {
+      "step": "used-link-response-observed",
+      "status": 409,
+      "at": "2026-10-16T05:26:54.991Z"
+    },
+    {
+      "step": "existing-Recovery-B-invitation-created",
+      "at": "2026-10-16T05:26:55.285Z"
+    },
+    {
+      "step": "new-link-captured-old-invalidated",
+      "at": "2026-10-16T05:26:55.423Z"
+    },
+    {
+      "step": "resend-old-link-response-observed",
+      "status": 409,
+      "at": "2026-10-16T05:26:55.985Z"
+    },
+    {
+      "step": "resend-new-link-accepted-B",
+      "at": "2026-10-16T05:26:56.314Z"
+    },
+    {
+      "step": "probe-invitation-created-no-account",
+      "at": "2026-10-16T05:26:56.651Z"
+    },
+    {
+      "step": "wrong-actor-response-observed",
+      "status": 409,
+      "at": "2026-10-16T05:26:56.818Z"
+    },
+    {
+      "step": "probe-invitation-revoked",
+      "at": "2026-10-16T05:26:56.946Z"
+    },
+    {
+      "step": "revoked-probe-registration-response",
+      "at": "2026-10-16T05:26:57.192Z"
+    }
+  ],
+  "scope": "After lifecycle checkpoint and Recovery merge: existing-user B invitation resend/old-link denial/new-link acceptance, used-link denial, wrong-actor denial, revoked-probe registration denial. No successful new account, retained fixture or source changes.",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "existingProfileOrCookies": false
+  },
+  "browserVersion": "155.0.8059.80",
+  "used-linkResponse": {
+    "status": 409,
+    "structuredCodePresent": false
+  },
+  "resend": {
+    "status": 200
+  },
+  "resend-old-linkResponse": {
+    "status": 409,
+    "structuredCodePresent": false
+  },
+  "recoveryBAccess": true,
+  "wrong-actorResponse": {
+    "status": 409,
+    "structuredCodePresent": false
+  },
+  "revoke": {
+    "status": 200
+  },
+  "revokedRegistration": {
+    "status": 400
+  },
+  "newSuccessfulAccounts": 0,
+  "existingRecoveryAddedToB": true,
+  "finalHintCopy": true,
+  "finishedAt": "2026-10-16T05:26:57.352Z"
+}

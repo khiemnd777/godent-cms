@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "observedAtUtc": "2026-10-16T02:49:57.178113+00:00",
+  "tables": {
+    "gcms_s02.service_draft": {
+      "originalRows": 70,
+      "currentRows": 197,
+      "originalColumnCount": 14,
+      "originalValuesPreserved": true
+    },
+    "gcms_s02.site_draft": {
+      "originalRows": 37,
+      "currentRows": 163,
+      "originalColumnCount": 11,
+      "originalValuesPreserved": true
+    },
+    "gcms_s02.publication_snapshot": {
+      "originalRows": 50,
+      "currentRows": 176,
+      "originalColumnCount": 11,
+      "originalValuesPreserved": true
+    },
+    "gcms_s02.publication_pointer": {
+      "originalRows": 43,
+      "currentRows": 168,
+      "originalColumnCount": 3,
+      "originalValuesPreserved": true
+    },
+    "gcms_s02.publication_intent": {
+      "originalRows": 50,
+      "currentRows": 176,
+      "originalColumnCount": 5,
+      "originalValuesPreserved": true
+    },
+    "gcms_s02.schema_migration": {
+      "originalRows": 7,
+      "currentRows": 12,
+      "originalColumnCount": 3,
+      "originalValuesPreserved": true
+    },
+    "gcms_s04.lead": {
+      "originalRows": 53,
+      "currentRows": 30282,
+      "originalColumnCount": 24,
+      "originalValuesPreserved": true
+    },
+    "gcms_s04.notification_intent": {
+      "originalRows": 53,
+      "currentRows": 30282,
+      "originalColumnCount": 5,
+      "originalValuesPreserved": true
+    },
+    "gcms_s04.accepted_request": {
+      "originalRows": 52,
+      "currentRows": 30280,
+      "originalColumnCount": 9,
+      "originalValuesPreserved": true
+    },
+    "gcms_s04.audit_event": {
+      "originalRows": 53,
+      "currentRows": 30282,
+      "originalColumnCount": 6,
+      "originalValuesPreserved": true
+    }
+  },
+  "limit": "Every original row fingerprint retained over its original columns; additive new columns/owned records allowed. Captures no plaintext contact/message. Auth/session churn, transient abuse records and new S05 records are outside this specific comparison."
+}

@@ -1,0 +1,67 @@
+{
+  "status": "FAIL",
+  "recordedAtUtc": "2026-10-16T02:21:56.481860+00:00",
+  "command": "./node_modules/.bin/bun audit --json",
+  "exitCode": 1,
+  "advisories": [
+    {
+      "package": "braces",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+      "vulnerableVersions": "<=3.0.3",
+      "id": 1240992
+    }
+  ],
+  "disposition": "Fresh independently reviewed bounded S05 LOCAL deferral; audit remains FAIL. Not inherited from S04 and not a production waiver.",
+  "independentReview": {
+    "reviewer": "/root/s05_review",
+    "requiredRequestedObservedEffort": "xhigh/xhigh/xhigh",
+    "observedAtUtc": "2026-10-16T02:41:24Z",
+    "productionTraces": {
+      "admin": 26,
+      "website": 7,
+      "total": 33,
+      "advisoryChainReferences": 0
+    },
+    "appAndScriptsAdvisoryChainImports": 0,
+    "dependencyGraph": "root dev eslint-config-next → @next/eslint-plugin-next → fast-glob → micromatch → braces3.0.3",
+    "globInput": "Repo ESLint settings.rootDir fixed apps/admin/ and apps/website/",
+    "officialAdvisory": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+    "patchedVersionOfficial": "None",
+    "workerImports": "Bun.SQL and Node filesystem; no advisory chain",
+    "finalTraceRefresh": {
+      "status": "PASS",
+      "observedAtUtc": "2026-10-16T02:55:58.614846Z",
+      "adminTraces": 26,
+      "websiteTraces": 7,
+      "total": 33,
+      "advisoryChainTraceReferences": 0,
+      "appScriptsSourceImports": 0,
+      "lockSha256": "a930f219e8e876e9645f9f7fea32a05992bdb0c2c04fb6585e4d30bfba35dcdc",
+      "reviewerDisposition": "CLOSED no new actionable source finding; local deferral supported, actual audit FAIL unchanged"
+    }
+  },
+  "reassessment": {
+    "owner": "Desktop Coordinator",
+    "byDate": "2026-10-22",
+    "earlierTriggers": [
+      "patch available",
+      "dependency change",
+      "exposure change",
+      "before production"
+    ],
+    "automationCreated": false
+  },
+  "rootPostCssMechanicalRefresh": {
+    "status": "PASS",
+    "observedAtUtc": "2026-10-16T03:03:48.059958+00:00",
+    "traces": {
+      "admin": 26,
+      "website": 7
+    },
+    "total": 33,
+    "advisoryChainReferenceFiles": [],
+    "lockSha256": "a930f219e8e876e9645f9f7fea32a05992bdb0c2c04fb6585e4d30bfba35dcdc",
+    "scope": "Mechanical artifact/lock refresh after CSS-only textarea width build; independent xhigh source/exposure assessment above remains distinct. ActualauditFAIL unchanged."
+  }
+}

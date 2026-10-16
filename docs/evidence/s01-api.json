@@ -1,0 +1,182 @@
+{
+  "scope": "S01 technical API and services only",
+  "recordedAt": "2026-10-15T15:52:42.951Z",
+  "runtime": {
+    "name": "bun",
+    "version": "1.4.3"
+  },
+  "checks": {
+    "postgres18": {
+      "status": "PASS",
+      "details": {
+        "version": "180004",
+        "driver": "drizzle-orm/bun-sql + Bun.SQL"
+      }
+    },
+    "postgresCommitRollback": {
+      "status": "PASS",
+      "details": {
+        "resource": "session-local temporary table",
+        "committedRows": 1,
+        "rowsAfterRollback": 1
+      }
+    },
+    "postgresCleanup": {
+      "status": "PASS",
+      "details": {}
+    },
+    "redisTtl": {
+      "status": "PASS",
+      "details": {
+        "prefix": "gcms:s01:",
+        "expirySeconds": 1,
+        "expired": true
+      }
+    },
+    "redisCleanup": {
+      "status": "PASS",
+      "details": {}
+    },
+    "s3ByteShape": {
+      "expectedType": "Uint8Array",
+      "receivedType": "Uint8Array",
+      "expectedLength": 6,
+      "receivedLength": 6
+    },
+    "s3RoundTrip": {
+      "status": "PASS",
+      "details": {
+        "bytes": 6,
+        "privateTechnicalBucket": true
+      }
+    },
+    "s3AnonymousDenied": {
+      "status": "PASS",
+      "details": {
+        "status": 403
+      }
+    },
+    "s3MissingObject": {
+      "status": "PASS",
+      "details": {
+        "status": 404
+      }
+    },
+    "s3WrongCredentialsDenied": {
+      "status": "PASS",
+      "details": {}
+    },
+    "s3Cleanup": {
+      "status": "PASS",
+      "details": {
+        "objectAbsent": true,
+        "bucketAbsent": true
+      }
+    },
+    "stalledServiceTimeouts": {
+      "status": "PASS",
+      "details": {
+        "services": {
+          "postgres": "unavailable",
+          "redis": "unavailable",
+          "s3": "unavailable"
+        },
+        "elapsedMs": 2504,
+        "maximumMs": 5000
+      }
+    },
+    "closedLoopbackFailures": {
+      "status": "PASS",
+      "details": {
+        "elapsedMs": 5
+      }
+    },
+    "betterAuthAdapter": {
+      "status": "PASS",
+      "details": {
+        "status": "initialized",
+        "adapter": "drizzle",
+        "scope": "initialization-only",
+        "login": "NOT_RUN",
+        "session": "NOT_RUN"
+      }
+    },
+    "readiness": {
+      "status": "PASS",
+      "details": {
+        "status": "ready",
+        "services": {
+          "postgres": "available",
+          "redis": "available",
+          "s3": "available"
+        }
+      }
+    }
+  },
+  "apiRecordedAt": "2026-10-15T15:56:36.685Z",
+  "apiChecks": {
+    "health": {
+      "status": "PASS",
+      "body": {
+        "status": "ok",
+        "scope": "process",
+        "runtime": "bun",
+        "version": "1.4.3"
+      },
+      "implicitCors": false,
+      "sessionCookie": false
+    },
+    "readiness": {
+      "status": "PASS",
+      "httpStatus": 200
+    },
+    "validation": {
+      "status": "PASS",
+      "valid": 1,
+      "invalid": 5,
+      "errorsRedacted": true
+    },
+    "notFound": {
+      "status": "PASS",
+      "cases": 3,
+      "authRoutesAbsent": true
+    },
+    "shutdownSIGTERM": {
+      "status": "PASS",
+      "exitCode": 143,
+      "listenerClosed": true
+    },
+    "unavailable-postgres": {
+      "status": "PASS",
+      "httpStatus": 503,
+      "services": {
+        "postgres": "unavailable",
+        "redis": "available",
+        "s3": "available"
+      }
+    },
+    "shutdownSIGINT": {
+      "status": "PASS",
+      "exitCode": 130,
+      "listenerClosed": true
+    },
+    "unavailable-redis": {
+      "status": "PASS",
+      "httpStatus": 503,
+      "services": {
+        "postgres": "available",
+        "redis": "unavailable",
+        "s3": "available"
+      }
+    },
+    "unavailable-s3": {
+      "status": "PASS",
+      "httpStatus": 503,
+      "services": {
+        "postgres": "available",
+        "redis": "available",
+        "s3": "unavailable"
+      }
+    }
+  }
+}

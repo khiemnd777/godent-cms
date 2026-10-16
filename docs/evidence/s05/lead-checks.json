@@ -1,0 +1,57 @@
+{
+  "observedAtUtc": "2026-10-16T02:34:17.526862+00:00",
+  "status": "PASS_FINAL",
+  "attempts": [
+    {
+      "exitCode": 1,
+      "passed": 7,
+      "failed": 1,
+      "assertions": 122,
+      "failedCase": "search/performance synthetic bulk setup",
+      "sqlState": "23502",
+      "redactedConstraint": "gcms_s04.audit_event.event NOT NULL",
+      "passedScope": [
+        "real HTTP intake/assignment/sharedversion/replay/history",
+        "sameversionrace/precommitrollback",
+        "note/contact/deadline/completed",
+        "spam/duplicate/reopen",
+        "expiry/currentrights-before-replay",
+        "tenant/suspended/CSRF/revokedassignee",
+        "recipientdefault/ambiguous/versionedsettings"
+      ]
+    },
+    {
+      "exitCode": 0,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 139,
+      "fixtureRows": 10001,
+      "forceRlsRole": "gcms_s02_tenant",
+      "explainExecutionMs": {
+        "list": 2.539,
+        "substring": 409.205,
+        "boundedCount": 478.649
+      },
+      "limit": "LocalEXPLAIN on new synthetic tenant; substring/count scan10001qualifyingrows. No production latency/load guarantee. Actor-bound me-cursor extension test source added afterward, not yetrun."
+    },
+    {
+      "source": "combined-api-checks.json",
+      "recordedAtUtc": "2026-10-16T02:46:36.840Z",
+      "exitCode": 0,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 151,
+      "fixtureRows": 10001,
+      "forceRlsRole": "gcms_s02_tenant",
+      "explainExecutionMs": {
+        "list": 2.817,
+        "substring": 2.563,
+        "count": 423.685
+      },
+      "additionalCoverage": "Personal me-cursor binds actual actor identity; strict calendar timestamp decoding pure regression in final input suite."
+    }
+  ],
+  "limits": "Actual local HTTP/PG query/command/recipient proof. Prior bulkfixture23502 failure preserved; corrected final suite9/151PASS. Count cap does not bound scannedrows or prove productionload; browser proof is separate."
+}

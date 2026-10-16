@@ -1,0 +1,48 @@
+{
+  "recordedAtUtc": "2026-10-16T02:36:00.719Z",
+  "status": "FAIL",
+  "suites": [
+    {
+      "file": "s05-input.test.ts",
+      "exitCode": 0,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 23
+    },
+    {
+      "file": "s05-capture.test.ts",
+      "exitCode": 0,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 9
+    },
+    {
+      "file": "s05-worker-environment.test.ts",
+      "exitCode": 0,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 3
+    },
+    {
+      "file": "s05-lead-integration.test.ts",
+      "exitCode": 0,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 139
+    },
+    {
+      "file": "s05-worker-integration.test.ts",
+      "exitCode": 1,
+      "passed": 0,
+      "failed": 8,
+      "skipped": 0,
+      "assertions": 58
+    }
+  ],
+  "intendedSuites": 5,
+  "limits": "New owned synthetic unit, actual local HTTP/PostgreSQL and bounded worker/capture/fault processes; rendered browser proof is separate. Retained S04 intents are outside selected worker scope. Human acceptance and production are not inferred."
+}

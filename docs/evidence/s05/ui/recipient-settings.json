@@ -1,0 +1,29 @@
+{
+  "default": {
+    "mode": "default",
+    "text": "Chế độ người nhậnQuản trị viên đầu tiên của nha khoaS02 A1 Người nhận mặc định không thay đổi theo người phụ trách yêu cầu.Chọn quản trị viên cụ thể"
+  },
+  "emptySelectionSaveDisabled": true,
+  "reauthRequired": {
+    "error": "Không được phép thực hiện. Kiểm tra quyền truy cập, xác thực hai bước hoặc xác thực lại tài khoản.",
+    "reauthVisible": true,
+    "selectedIdsCount": 1,
+    "selectedLabels": [
+      "S02 A2a2@s02.example.test"
+    ]
+  },
+  "saved": {
+    "mode": "selected",
+    "selected": [
+      "S02 A2a2@s02.example.test"
+    ],
+    "version": "Phiên bản 2. Cần xác thực lại trong 5 phút khi lưu. Cấu hình mới áp dụng cho thông báo còn chờ, không gửi lại người đã thành công."
+  },
+  "reload": {
+    "mode": "selected",
+    "selected": [
+      "S02 A2a2@s02.example.test"
+    ],
+    "version": "Phiên bản 2. Cần xác thực lại trong 5 phút khi lưu. Cấu hình mới áp dụng cho thông báo còn chờ, không gửi lại người đã thành công."
+  }
+}

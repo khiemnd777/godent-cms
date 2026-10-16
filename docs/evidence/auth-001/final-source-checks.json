@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-16T05:41:59.794832+00:00",
+  "fullTypecheckExitCode": 0,
+  "fullLintExitCode": 0,
+  "applicationBuilds": {
+    "admin": "PASS latest approved UI source",
+    "website": "PASS unchanged website source after initial AUTH build",
+    "api": "PASS latest canonical user-ID application source"
+  },
+  "boundedIntegration": {
+    "runnerExitCode": 0,
+    "suites": [
+      {
+        "file": "auth-001-boundaries.test.ts",
+        "tests": 3,
+        "assertions": 25
+      },
+      {
+        "file": "auth-data-lifecycle.test.ts",
+        "tests": 2,
+        "assertions": 30
+      },
+      {
+        "file": "auth-data-recovery.test.ts",
+        "tests": 4,
+        "assertions": 24
+      }
+    ],
+    "totalTests": 9,
+    "totalAssertions": 79,
+    "realAuthLimiterEnabled": true
+  },
+  "limit": "Actual completed coordinator command results. Earlier first-attempt failures are preserved separately. App builds precede later test/helper-only fixes; no unchanged application rebuild is claimed."
+}

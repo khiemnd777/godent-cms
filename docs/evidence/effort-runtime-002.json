@@ -1,0 +1,220 @@
+{
+  "task": "GCMS-EFFORT-002",
+  "date": "2026-10-15",
+  "policy_id": "GCMS-EFFORT-001 v1",
+  "policy_sha256": "a75d33f9599567cd7385b9b35fba9ef4b9c92ff453899b82311261744b6ee6e9",
+  "evidence_basis": "Runtime-written session_meta and turn_context; native tool invocation arguments; no agent self-report",
+  "cli_version": "0.162.0-alpha.17.2",
+  "model_capability_observation": {
+    "source": "temporary stdio app-server model/list",
+    "selected_model": "gpt-6.1-sol",
+    "supported_efforts": [
+      "low",
+      "medium",
+      "high",
+      "xhigh",
+      "max",
+      "ultra"
+    ]
+  },
+  "results": [
+    {
+      "status": "PASS",
+      "required_effort": "high",
+      "observed": {
+        "thread_id": "01a13e59-fa91-7cb1-a156-5361bb21ca58",
+        "cli_version": "0.162.0-alpha.17.2",
+        "cwd": ".",
+        "role": null,
+        "parent_thread_id": null,
+        "source_kind": "vscode",
+        "turn_id": "01a13e7e-836d-7460-a859-4affd6ffbf04",
+        "timestamp": "2026-10-15T07:50:49.297Z",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "evidence_kind": "runtime_written_turn_context"
+      },
+      "errors": [],
+      "limit": "Recorded runtime configuration; not an internal reasoning trace or quality guarantee",
+      "case": "desktop-coordinator",
+      "task_type": "agent-policy-design",
+      "source_log_basename": "rollout-2026-10-15T13-57-26-01a13e59-fa91-7cb1-a156-5361bb21ca58.jsonl"
+    },
+    {
+      "status": "PASS",
+      "required_effort": "high",
+      "observed": {
+        "thread_id": "01a13e84-1065-7302-8086-2eee7b0a899c",
+        "cli_version": "0.162.0-alpha.17.2",
+        "cwd": ".",
+        "role": null,
+        "parent_thread_id": null,
+        "source_kind": "exec",
+        "turn_id": "01a13e84-10e6-7463-9d11-e33ec9f88ca4",
+        "timestamp": "2026-10-15T07:43:28.952Z",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "evidence_kind": "runtime_written_turn_context"
+      },
+      "errors": [],
+      "limit": "Recorded runtime configuration; not an internal reasoning trace or quality guarantee",
+      "case": "native-probe-coordinator",
+      "task_type": "agent-policy-design",
+      "source_log_basename": "rollout-2026-10-15T14-43-24-01a13e84-1065-7302-8086-2eee7b0a899c.jsonl"
+    },
+    {
+      "status": "PASS",
+      "required_effort": "medium",
+      "observed": {
+        "thread_id": "01a13e87-da33-7f82-a253-dc96362798cb",
+        "cli_version": "0.162.0-alpha.17.2",
+        "cwd": ".",
+        "role": null,
+        "parent_thread_id": null,
+        "source_kind": "exec",
+        "turn_id": "01a13e87-daa8-71f2-8161-51007615bf2b",
+        "timestamp": "2026-10-15T07:47:38.186Z",
+        "model": "gpt-6.1-sol",
+        "effort": "medium",
+        "evidence_kind": "runtime_written_turn_context"
+      },
+      "errors": [],
+      "limit": "Recorded runtime configuration; not an internal reasoning trace or quality guarantee",
+      "case": "matrix-launched-coordinator",
+      "task_type": "agent-artifact-generation",
+      "source_log_basename": "rollout-2026-10-15T14-47-33-01a13e87-da33-7f82-a253-dc96362798cb.jsonl",
+      "dispatch": {
+        "mechanism": "codex exec per-process configuration override",
+        "model_source": "runtime-observed parent",
+        "model_reasoning_effort": "medium",
+        "global_settings_changed": false,
+        "native_exit_code": 0
+      }
+    },
+    {
+      "status": "PASS",
+      "required_effort": "medium",
+      "observed": {
+        "thread_id": "01a13e84-6b0a-7703-af19-b66f797e7f55",
+        "cli_version": "0.162.0-alpha.17.2",
+        "cwd": ".",
+        "role": "kit-implementer",
+        "parent_thread_id": "01a13e84-1065-7302-8086-2eee7b0a899c",
+        "source_kind": "subagent",
+        "turn_id": "01a13e84-6b91-73f0-a641-2cd83323d958",
+        "timestamp": "2026-10-15T07:43:50.168Z",
+        "model": "gpt-6.1-sol",
+        "effort": "medium",
+        "evidence_kind": "runtime_written_turn_context"
+      },
+      "errors": [],
+      "limit": "Recorded runtime configuration; not an internal reasoning trace or quality guarantee",
+      "case": "native-medium",
+      "task_type": "agent-artifact-generation",
+      "source_log_basename": "rollout-2026-10-15T14-43-48-01a13e84-6b0a-7703-af19-b66f797e7f55.jsonl",
+      "native_spawn_arguments": {
+        "task_name": "effort_medium",
+        "agent_type": "kit-implementer",
+        "fork_turns": "none",
+        "reasoning_effort": "medium"
+      },
+      "runtime_guard_cli_exit_code": 0
+    },
+    {
+      "status": "PASS",
+      "required_effort": "high",
+      "observed": {
+        "thread_id": "01a13e84-9047-7742-8a28-c51ac68af931",
+        "cli_version": "0.162.0-alpha.17.2",
+        "cwd": ".",
+        "role": "kit-explorer",
+        "parent_thread_id": "01a13e84-1065-7302-8086-2eee7b0a899c",
+        "source_kind": "subagent",
+        "turn_id": "01a13e84-90c5-70f1-860e-cd85eef7dfc9",
+        "timestamp": "2026-10-15T07:43:59.577Z",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "evidence_kind": "runtime_written_turn_context"
+      },
+      "errors": [],
+      "limit": "Recorded runtime configuration; not an internal reasoning trace or quality guarantee",
+      "case": "native-high",
+      "task_type": "agent-policy-design",
+      "source_log_basename": "rollout-2026-10-15T14-43-57-01a13e84-9047-7742-8a28-c51ac68af931.jsonl",
+      "native_spawn_arguments": {
+        "task_name": "effort_high",
+        "agent_type": "kit-explorer",
+        "fork_turns": "none",
+        "reasoning_effort": "high"
+      },
+      "runtime_guard_cli_exit_code": 0
+    },
+    {
+      "status": "PASS",
+      "required_effort": "xhigh",
+      "observed": {
+        "thread_id": "01a13e84-cbfb-7071-8ba5-f383d03831ca",
+        "cli_version": "0.162.0-alpha.17.2",
+        "cwd": ".",
+        "role": "kit-reviewer",
+        "parent_thread_id": "01a13e84-1065-7302-8086-2eee7b0a899c",
+        "source_kind": "subagent",
+        "turn_id": "01a13e84-cc70-7f90-9974-4d82e4cc071d",
+        "timestamp": "2026-10-15T07:44:15.187Z",
+        "model": "gpt-6.1-sol",
+        "effort": "xhigh",
+        "evidence_kind": "runtime_written_turn_context"
+      },
+      "errors": [],
+      "limit": "Recorded runtime configuration; not an internal reasoning trace or quality guarantee",
+      "case": "native-xhigh",
+      "task_type": "architecture-review",
+      "source_log_basename": "rollout-2026-10-15T14-44-12-01a13e84-cbfb-7071-8ba5-f383d03831ca.jsonl",
+      "native_spawn_arguments": {
+        "task_name": "effort_xhigh",
+        "agent_type": "kit-reviewer",
+        "fork_turns": "none",
+        "reasoning_effort": "xhigh"
+      },
+      "runtime_guard_cli_exit_code": 0
+    }
+  ],
+  "negative_check": {
+    "task_type": "architecture-review",
+    "expected_exit_code": 3,
+    "observed_exit_code": 3,
+    "result": {
+      "status": "FAIL",
+      "required_effort": "xhigh",
+      "observed": {
+        "thread_id": "01a13e59-fa91-7cb1-a156-5361bb21ca58",
+        "cli_version": "0.162.0-alpha.17.2",
+        "cwd": ".",
+        "role": null,
+        "parent_thread_id": null,
+        "source_kind": "vscode",
+        "turn_id": "01a13e7e-836d-7460-a859-4affd6ffbf04",
+        "timestamp": "2026-10-15T07:50:49.297Z",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "evidence_kind": "runtime_written_turn_context"
+      },
+      "errors": [
+        "Required effort does not equal recorded runtime effort"
+      ],
+      "limit": "Recorded runtime configuration; not an internal reasoning trace or quality guarantee"
+    },
+    "execution_launched": false
+  },
+  "limits": [
+    "Recorded configuration is not an internal reasoning trace or quality benchmark",
+    "Fresh CLI exact Kit discovery passed; existing desktop schema still lacks those selectors",
+    "Child effective permission enforcement, Claude runtime and two-machine portability NOT_RUN",
+    "Project workflow checks do not intercept arbitrary manual host invocations"
+  ],
+  "scope": {
+    "application_changes": false,
+    "global_settings_changes": false,
+    "git_delivery": false
+  }
+}
