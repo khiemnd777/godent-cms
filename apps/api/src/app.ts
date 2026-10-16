@@ -24,6 +24,10 @@ import { MediaService } from './modules/media.service';
 import { createMediaModule } from './modules/media.module';
 import { MediaStorage, readMediaStorageConfig } from './media/storage';
 import { MediaSigner } from './media/signing';
+import {M3_LIMITS} from './contracts/m3';
+import {isContentJsonRequest} from './modules/content-request';
+import {ContentService} from './modules/content.service';
+import {createContentModule} from './modules/content.module';
 
 class EchoQuery {
   @IsString()
@@ -56,7 +60,7 @@ export async function createApp() {
   const leads = new LeadsService(database,identity);
   const mediaStorage = new MediaStorage(readMediaStorageConfig());
   @Module({ controllers: [DiagnosticsController], imports: [createDomainModule(new DomainService(database, identity)),
-    createPublicationModule(new PublicationServiceOperations(database, identity)),createIntakeModule(new IntakeService(database,identity)),createLeadsModule(leads),
+    createPublicationModule(new PublicationServiceOperations(database, identity)),createContentModule(new ContentService(database,identity)),createIntakeModule(new IntakeService(database,identity)),createLeadsModule(leads),
     createRetentionModule(new RetentionService(database,identity,leads)),createMediaModule(new MediaService(database,identity,mediaStorage,new MediaSigner(process.env.S07_MEDIA_SIGNING_SECRET??'')))],
     providers: [{ provide: 'DATABASE_LIFECYCLE', useValue: { onApplicationShutdown: async () => {mediaStorage.close();await database.close();} } }] })
   class AppModule {}
@@ -68,6 +72,9 @@ export async function createApp() {
   // Better Auth 1.7.10 consumes the raw stream before the custom JSON parser.
   // Source: https://better-auth.com/docs/integrations/express#mount-the-handler
   express.all(/^\/api\/auth(?:\/.*)?$/, toNodeHandler(identity.handler));
+  // M3 galleries can exceed the legacy 64 KiB cap. A separate bounded parser
+  // permits their combined fields without changing other API request limits.
+  app.useBodyParser('json',{limit:M3_LIMITS.requestBytes,strict:true,type:isContentJsonRequest});
   app.useBodyParser('json', { limit: '64kb', strict: true });
   app.use(bodyParserError);
   // Source: https://docs.nestjs.com/techniques/validation

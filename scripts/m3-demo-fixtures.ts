@@ -1,0 +1,67 @@
+import { randomUUID } from 'node:crypto';
+import { lstat, readFile, rename, writeFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import sharp from 'sharp';
+import { createS02Database } from '../apps/api/src/database';
+import { createS02Auth } from '../apps/api/src/auth';
+import { loadRuntimeEnvironment } from '../apps/api/src/auth/runtime-environment';
+import { legacyDocument } from '../apps/api/src/contracts/content';
+import { M3_KINDS, M3_ROUTES, type ContentCommandResult, type ContentDraft, type ContentKind, type ContentPermissionCommandResult, type ContentReference, type DentalContent, type ServiceContentLinksView } from '../apps/api/src/contracts/m3';
+import { S07_ROUTES, type MediaAsset } from '../apps/api/src/contracts/s07';
+import { ContentService } from '../apps/api/src/modules/content.service';
+import { PublicationServiceOperations } from '../apps/api/src/modules/publication.service';
+import type { PrivateRequest } from '../apps/api/src/modules/request-security';
+import { MediaWorker } from '../apps/api/src/worker/media-worker';
+import { readM3Fixtures } from './m3-fixtures';
+import { openPasswordSession } from './s02-fixtures';
+
+const PATH='.local/m3-demo-fixtures.json';
+interface Entry {key:string;kind:ContentKind;id:string;slug:string;publishOperation:string;grants:string[];publicationId:string|null}
+interface Demo {owner:'GCMS-M3-DEMO-v1';fixtureRun:string;tenantId:string;tenantSlug:string;status:'provisioning'|'complete';entries:Entry[];assets:Array<{operationId:string;id:string|null}>;serviceLinksOperation:string;servicePublishOperation:string}
+async function store(value:Demo) {const file=`.local/m3-demo-${randomUUID()}.tmp`;await writeFile(file,JSON.stringify(value,null,2)+'\n',{mode:0o600,flag:'wx'});await rename(file,PATH);}
+async function main() {
+ if(Bun.version!=='1.4.3'||process.cwd()!==resolve(import.meta.dir,'..')||!process.argv.includes('--local-m3')||!process.argv.includes('--synthetic-fixtures'))throw new Error('Explicit pinned local M3 demo required');
+ const fixtures=await readM3Fixtures();if(fixtures.status!=='complete')throw new Error('Owned base fixtures required');const tenant=fixtures.tenants.find(t=>t.label==='A')!,identity=fixtures.identities.find(i=>i.label==='A1')!;
+ let demo:Demo;
+ if(await Bun.file(PATH).exists()){const meta=await lstat(PATH);if(!meta.isFile()||meta.isSymbolicLink()||(meta.mode&0o777)!==0o600)throw new Error('Unsafe demo manifest');demo=JSON.parse(await readFile(PATH,'utf8')) as Demo;if(demo.owner!=='GCMS-M3-DEMO-v1'||demo.fixtureRun!==fixtures.runId||demo.tenantId!==tenant.id)throw new Error('Demo ownership mismatch');}
+ else {const kinds:[string,ContentKind][]=[...M3_KINDS.map(k=>[k,k] as [string,ContentKind]),['location2','location'],['location3','location'],['priceRange','price'],['priceFrom','price'],['article2','article'],['withdrawCase','case']];demo={owner:'GCMS-M3-DEMO-v1',fixtureRun:fixtures.runId,tenantId:tenant.id,tenantSlug:tenant.slug,status:'provisioning',entries:kinds.map(([key,kind])=>({key,kind,id:randomUUID(),slug:`minh-hoa-${key.replace(/[A-Z]/g,v=>`-${v.toLowerCase()}`).replace(/([a-z])(\d)/,'$1-$2')}`,publishOperation:randomUUID(),grants:Array.from({length:4},()=>randomUUID()),publicationId:null})),assets:[{operationId:randomUUID(),id:null},{operationId:randomUUID(),id:null}],serviceLinksOperation:randomUUID(),servicePublishOperation:randomUUID()};await writeFile(PATH,JSON.stringify(demo,null,2)+'\n',{mode:0o600,flag:'wx'});}
+ if(demo.status==='complete'){console.info(JSON.stringify({status:'PASS',phase:'existing_owned_demo',reset:false,resources:demo.entries.length}));return;}
+ const runtime=await loadRuntimeEnvironment();Object.assign(process.env,runtime.api);const db=createS02Database(),auth=createS02Auth(db),content=new ContentService(db,auth),publishing=new PublicationServiceOperations(db,auth);
+ try {
+  const session=await openPasswordSession(auth,identity),headers={host:'127.0.0.1:5890',origin:'http://127.0.0.1:5891','content-type':'application/json',cookie:session.headers.get('cookie')??'','x-csrf-token':auth.csrfToken(session.actor)};
+  const request=(method='POST'):PrivateRequest=>({method,originalUrl:`/api/tenants/${tenant.id}/content`,headers});
+  const picture=await sharp({create:{width:160,height:100,channels:3,background:'#52678f'}}).png().toBuffer();
+  for(const [index,item] of demo.assets.entries()){
+   if(!item.id){const form=new FormData();form.set('operationId',item.operationId);form.set('materialKind','ordinary');form.set('file',new File([picture],`m3-synthetic-${index}.png`,{type:'image/png'}));const upload=await fetch(`http://127.0.0.1:5890${S07_ROUTES.media(tenant.id)}`,{method:'POST',headers:{host:headers.host,origin:headers.origin,cookie:headers.cookie,'x-csrf-token':headers['x-csrf-token']},body:form,signal:AbortSignal.timeout(20000)});if(upload.status!==201)throw new Error('Owned media upload failed');const asset=await upload.json() as MediaAsset;item.id=asset.id;await store(demo);}
+  }
+  const worker=new MediaWorker(process.env.S07_WORKER_DATABASE_URL!);try{await worker.runOnce(tenant.id);}finally{await worker.close();}
+  const assets:MediaAsset[]=[];for(const item of demo.assets){const result=await fetch(`http://127.0.0.1:5890${S07_ROUTES.asset(tenant.id,item.id!)}`,{headers:{host:headers.host,cookie:headers.cookie},signal:AbortSignal.timeout(10000)});if(result.status!==200)throw new Error('Owned media lookup failed');const asset=await result.json() as MediaAsset;if(asset.state!=='ready')throw new Error('Owned media not ready');assets.push(asset);}
+  const image=(index:number)=>({assetId:assets[index].id,revision:assets[index].revision,alt:`Hình khối tổng hợp minh họa ${index+1}; không có bệnh nhân`});
+  const references=new Map<string,ContentReference>();const service:ContentReference={kind:'service',id:tenant.serviceId!,publicationId:tenant.publicationId!};references.set('service',service);
+  const title:Record<string,string>={specialty:'Chuyên khoa tổng hợp minh họa',service_group:'Nhóm chăm sóc răng minh họa',location:'Cơ sở minh họa Trung tâm',location2:'Cơ sở minh họa Phía Đông',location3:'Cơ sở minh họa Phía Tây',doctor:'Hồ sơ bác sĩ minh họa',price:'Giá chính xác minh họa',priceRange:'Khoảng giá minh họa',priceFrom:'Giá từ minh họa',case:'Ca tổng hợp minh họa',gallery:'Cặp hình tổng hợp trước và sau',testimonial:'Đánh giá tổng hợp minh họa',category:'Chuyên mục kiến thức minh họa',faq:'Cần chuẩn bị gì trước khi tư vấn?',article:'Bài viết minh họa về chăm sóc răng',article2:'Bài viết minh họa dùng chung câu hỏi',withdrawCase:'Ca thử thu hồi quyền'};
+  const ref=(...keys:string[])=>keys.map(key=>{const v=references.get(key);if(!v)throw new Error('Fixture dependency unpublished');return v;});
+  const order=['specialty','service_group','location','location2','location3','category','faq','doctor','price','priceRange','priceFrom','gallery','case','testimonial','article','article2','withdrawCase'];
+  for(const key of order){const entry=demo.entries.find(e=>e.key===key)!;const base={kind:entry.kind,slug:entry.slug,title:title[key],summary:'Dữ liệu minh họa tổng hợp để kiểm chứng local. Không dùng dữ liệu khách hàng thật.',body:legacyDocument(key==='faq'?'Chuẩn bị câu hỏi cần tư vấn. Nội dung này chỉ dùng để minh họa chức năng.':'Nội dung tổng hợp minh họa của Chặng 3. Không phải thông tin điều trị hoặc cam kết kết quả.'),seo:{title:'',description:''},references:[] as ContentReference[]};
+   const extra:Record<string,unknown>=entry.kind==='location'?{address:`Địa chỉ tổng hợp ${key==='location'?1:key==='location2'?2:3}, Việt Nam`,phone:'',email:'',mapUrl:'',openingHours:[{day:1,closed:false,intervals:[{opens:'08:00',closes:'12:00'},{opens:'13:00',closes:'17:00'}]},{day:0,closed:true,intervals:[]}]}:
+    entry.kind==='doctor'?{professionalTitle:'Chức danh minh họa do quản trị viên cung cấp',credentials:['Chứng chỉ tổng hợp minh họa'],languages:['Tiếng Việt','English'],image:image(0),references:ref('specialty','service','location')}:
+    entry.kind==='price'?{price:key==='priceRange'?{type:'range',minimum:'1500000.25',maximum:'2500000.75',currency:'VND',unit:'răng'}:{type:key==='priceFrom'?'from':'exact',amount:key==='priceFrom'?'3000000':'1250000.5',currency:'VND',unit:'răng'},inclusions:'Phần bao gồm minh họa',notes:'Giá tổng hợp phục vụ kiểm chứng; không phải báo giá thực tế.',references:ref('service',...(key==='price'?['location']:[]))}:
+    entry.kind==='gallery'?{pairs:[{before:{...image(0),caption:'Hình tổng hợp trước'},after:{...image(1),caption:'Hình tổng hợp sau'}}],references:ref('service','doctor')}:
+    entry.kind==='case'?{image:image(0),references:ref('service','doctor','gallery')}:
+    entry.kind==='testimonial'?{quote:'Đây là lời đánh giá tổng hợp dùng để thử chức năng.',displayName:'Biệt danh minh họa',attribution:'Nguồn tổng hợp nội bộ',image:image(1),references:ref('service','doctor')}:
+    entry.kind==='article'?{attribution:'Tác giả minh họa do quản trị viên cung cấp',image:image(0),references:ref('category','doctor','service','faq')}:
+    entry.kind==='faq'?{references:ref('specialty','service')}:{};
+   const desired={...base,...extra} as DentalContent;
+   let draft:ContentDraft;
+   try{draft=await content.read(request('GET'),tenant.id,entry.kind,entry.id);}catch(error){if(!(error&&typeof error==='object'&&'getStatus'in error&&typeof error.getStatus==='function'&&error.getStatus()===404))throw error;if(entry.slug.includes('_')&&!entry.publicationId){entry.slug=entry.slug.replaceAll('_','-');desired.slug=entry.slug;await store(demo);}const created=await content.command(request(),tenant.id,entry.kind,undefined,'create',{operationId:entry.id,content:desired}) as ContentCommandResult;draft=created.draft;}
+   if(['case','gallery','testimonial'].includes(entry.kind)){const scopes=[{type:'text'},...(entry.kind==='gallery'?[0,1]:[entry.kind==='testimonial'?1:0]).map(index=>({type:'asset',assetId:assets[index].id,assetRevision:assets[index].revision}))];for(const [index,scope] of scopes.entries()){const p=await content.permissions(request('GET'),tenant.id,entry.kind,entry.id);if(!p.items.some(item=>!item.withdrawnAt&&item.revision===draft.version&&JSON.stringify(item.scope)===JSON.stringify(scope))){const granted=await content.command(request(),tenant.id,entry.kind,entry.id,'grant',{operationId:entry.grants[index],expectedVersion:draft.version,revision:draft.version,scope,evidenceReference:'Quyền tổng hợp minh họa M3; không phải hồ sơ bệnh nhân'}) as ContentPermissionCommandResult;if(granted.operationId!==entry.grants[index]||granted.permission.revision!==draft.version||JSON.stringify(granted.permission.scope)!==JSON.stringify(scope))throw new Error('Owned permission command response mismatch');}}}
+   if(!draft.activePublication){const site=await publishing.getSite(request('GET'),tenant.id);const result=await content.command(request(),tenant.id,entry.kind,entry.id,'publish',{operationId:entry.publishOperation,expectedVersion:draft.version,expectedPublicationVersion:draft.publicationVersion,expectedPublicationRevision:draft.publicationRevision,expectedSiteVersion:site.version}) as ContentCommandResult;draft=result.draft;}
+   const publicPage=await content.publicRead({method:'GET',originalUrl:M3_ROUTES.publicDetail(tenant.slug,entry.kind,entry.slug),headers:{host:headers.host}},tenant.slug,entry.kind,entry.slug);entry.publicationId=publicPage.publicationId;references.set(key,{kind:entry.kind,id:entry.id,publicationId:entry.publicationId});await store(demo);
+  }
+  const links=ref('specialty','service_group','location','location2','location3','faq');let serviceDraft=await publishing.read(request('GET'),tenant.id,tenant.serviceId!);
+  const currentLinks=await content.serviceLinks(request('GET'),tenant.id,tenant.serviceId!) as ServiceContentLinksView;
+  if(!currentLinks.references.length){await content.serviceLinks(request('PUT'),tenant.id,tenant.serviceId!,{operationId:demo.serviceLinksOperation,expectedDraftVersion:serviceDraft.draftVersion,references:links});serviceDraft=await publishing.read(request('GET'),tenant.id,tenant.serviceId!);}else if(JSON.stringify(currentLinks.references)!==JSON.stringify(links))throw new Error('Owned demo service links changed; preserve current input');
+  const site=await publishing.getSite(request('GET'),tenant.id);if(serviceDraft.publishedDraftVersion!==serviceDraft.draftVersion)await publishing.publish(request(),tenant.id,tenant.serviceId!,{expectedDraftVersion:serviceDraft.draftVersion,expectedPublicationVersion:serviceDraft.publicationVersion,expectedPublicationRevision:serviceDraft.publicationRevision,expectedSiteVersion:site.version,requestKey:demo.servicePublishOperation});
+  demo.status='complete';await store(demo);console.info(JSON.stringify({status:'PASS',phase:'owned_demo_complete',tenantSlug:tenant.slug,resources:demo.entries.length,assets:demo.assets.length,retainedDataChanged:false,credentialsPrinted:false}));
+ }finally{await db.close();}
+}
+if(import.meta.main)void main().catch(async error=>{await writeFile(`.local/m3-demo-error-${Date.now()}.json`,JSON.stringify({message:error instanceof Error?error.message:'Unknown',stack:error instanceof Error?error.stack:null})+'\n',{mode:0o600,flag:'wx'});console.error(JSON.stringify({status:'FAIL',phase:'m3-demo-fixtures',code:error&&typeof error==='object'&&'code'in error?String(error.code):'UNKNOWN',detailsRedacted:true}));process.exitCode=1;});

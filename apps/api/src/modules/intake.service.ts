@@ -100,7 +100,7 @@ export class IntakeService {
   async detail(request:PrivateRequest,tenant:string,id:string):Promise<LeadDetail> {
     const tenantId=parseIdentifier(tenant),leadId=parseIdentifier(id),actor=await this.actor(request.headers);
     return this.db.withLeadTenant(actor,tenantId,async tx=>{
-      const rows=await tx.execute(sql`SELECT ${listColumns},phone,email,message,
+      const rows=await tx.execute(sql`SELECT ${listColumns},phone,email,message,location_snapshot AS location,
         jsonb_build_object('acceptedAt',consent_at,'version',consent_version,'copy',consent_copy) AS consent,
         CASE WHEN interest_service_id IS NULL THEN NULL ELSE jsonb_build_object('serviceSlug',interest_service_slug,'serviceTitle',interest_service_title) END AS interest,
         last_activity_at AS "lastActivityAt",expires_at AS "expiresAt" FROM gcms_s04.lead

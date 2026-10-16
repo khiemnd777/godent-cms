@@ -2,10 +2,11 @@
 import { useRef, useState } from "react";
 import { codePointLength } from "../../api/src/contracts/intake";
 import { S04_CONSENT_COPY, S04_LIMITS, type IntakeChallenge } from "../../api/src/contracts/s04";
+import type { PublicServiceContentLinks } from "../../api/src/contracts/m3";
 import { createAttempt, IntakeFailure, intakeErrorText, requestChallenge, sendAttempt, type ConsultationValues, type SubmissionAttempt } from "../lib/consultation";
 
 const initialValues: ConsultationValues = { name: "", phone: "", email: "", preferredLanguage: "vi", preferredChannel: "phone", message: "", consent: false };
-export function ConsultationForm({ tenantSlug, serviceSlug, publicationId }: { tenantSlug: string; serviceSlug: string; publicationId: string }) {
+export function ConsultationForm({ tenantSlug, serviceSlug, publicationId, locations = [] }: { tenantSlug: string; serviceSlug: string; publicationId: string; locations?: PublicServiceContentLinks["locations"] }) {
   const [values, setValues] = useState(initialValues);
   const [attempt, setAttempt] = useState<SubmissionAttempt | null>(null);
   const [busy, setBusy] = useState(false);
@@ -55,7 +56,9 @@ export function ConsultationForm({ tenantSlug, serviceSlug, publicationId }: { t
         <label>Email<input type="email" autoComplete="email" value={values.email} aria-describedby="contact-help" onChange={event => update("email", event.target.value)} /></label>
         <label>Ngôn ngữ tư vấn<select value={values.preferredLanguage} onChange={event => update("preferredLanguage", event.target.value as "vi" | "en")}><option value="vi">Tiếng Việt</option><option value="en">English</option></select></label>
         <label>Kênh liên hệ<select value={values.preferredChannel} onChange={event => update("preferredChannel", event.target.value as "phone" | "email")}><option value="phone">Điện thoại</option><option value="email">Email</option></select></label>
+        {locations.length > 0 && <label>Cơ sở quan tâm <span>(không bắt buộc)</span><select value={values.locationId ?? ""} aria-describedby="location-help" onChange={event => update("locationId", event.target.value)}><option value="">Chưa chọn cơ sở</option>{locations.map(location => <option key={location.id} value={location.id}>{location.name} — {location.address}</option>)}</select></label>}
       </div><p id="contact-help" className="consultation-help">Cần số điện thoại hoặc email. Nếu chọn điện thoại, hãy điền số điện thoại; nếu chọn email, hãy điền email. Số điện thoại gồm 7–15 chữ số.</p>
+      {locations.length > 0 && <p id="location-help" className="consultation-help">Chỉ hiển thị cơ sở được công bố cho dịch vụ này. Lựa chọn giúp phòng khám hiểu yêu cầu tư vấn; đây chưa phải lịch hẹn.</p>}
       <label>Lời nhắn <span>(không bắt buộc)</span><textarea rows={4} value={values.message} aria-describedby="message-help message-count" aria-invalid={codePointLength(values.message.trim()) > S04_LIMITS.message || undefined} onChange={event => update("message", event.target.value)} /></label><div className="consultation-message-help"><p id="message-help" className="consultation-help">Tối đa 500 ký tự. Vui lòng không gửi hồ sơ sức khỏe hoặc thông tin bệnh án.</p><span id="message-count" className={codePointLength(values.message.trim()) > S04_LIMITS.message ? "invalid-count" : ""}>{codePointLength(values.message.trim())}/500</span></div>
       <label className="consultation-consent"><input type="checkbox" checked={values.consent} onChange={event => update("consent", event.target.checked)} /><span>{S04_CONSENT_COPY}</span></label></fieldset>
       {attempt && <p className="consultation-help">Thông tin được giữ nguyên để thử lại cùng yêu cầu. Giữ trang này mở cho đến khi có kết quả xác nhận.</p>}

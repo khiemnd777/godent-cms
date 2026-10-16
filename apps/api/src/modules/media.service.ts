@@ -138,4 +138,12 @@ export class MediaService {
     const current=await getTarget();if(current.key!==initial.key) throw new NotFoundException();
     return {body,type:'image/webp',attachment:false};
   }
+  /** M3 grants never authorize the legacy service-cover gateway. */
+  async contentPublicRead(request:PrivateRequest,tenant:string,resource:string,publication:string,id:string,revision:string):Promise<MediaBinary>{
+    assertApiHost(request.headers);await this.db.verifyRoles();const t=parseIdentifier(tenant),r=parseIdentifier(resource),p=parseIdentifier(publication),a=parseIdentifier(id),v=mediaVersion(Number(revision));
+    if(String(v)!==revision)throw new BadRequestException();
+    const target=async()=>{const rows=await this.db.tenantDb.execute(sql`SELECT gcms_m3.public_media_target(${t},${r},${p},${a},${v}) AS target`);if(!rows[0]?.target)throw new NotFoundException();return rows[0].target as Target;};
+    const initial=await target();let body:Buffer;try{body=await this.storage.get(initial.key,initial.bytes);}catch{throw new ServiceUnavailableException();}
+    const current=await target();if(current.key!==initial.key)throw new NotFoundException();return {body,type:'image/webp',attachment:false};
+  }
 }

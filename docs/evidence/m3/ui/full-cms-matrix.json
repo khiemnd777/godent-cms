@@ -1,0 +1,230 @@
+{
+  "recordedAt": "2026-10-16T11:00:46.882Z",
+  "editors": [
+    {
+      "kind": "specialty",
+      "error": null,
+      "heading": "Chuyên khoa tổng hợp minh họa",
+      "images": 0,
+      "inputs": 8
+    },
+    {
+      "kind": "service_group",
+      "error": null,
+      "heading": "Nhóm chăm sóc răng minh họa",
+      "images": 0,
+      "inputs": 8
+    },
+    {
+      "kind": "location",
+      "error": null,
+      "heading": "Cơ sở minh họa Trung tâm",
+      "images": 0,
+      "inputs": 23
+    },
+    {
+      "kind": "doctor",
+      "error": null,
+      "heading": "Hồ sơ bác sĩ minh họa",
+      "images": 0,
+      "inputs": 15
+    },
+    {
+      "kind": "price",
+      "error": null,
+      "heading": "Giá chính xác minh họa",
+      "images": 0,
+      "inputs": 14
+    },
+    {
+      "kind": "case",
+      "error": null,
+      "heading": "Ca tổng hợp minh họa",
+      "images": 0,
+      "inputs": 11
+    },
+    {
+      "kind": "gallery",
+      "error": null,
+      "heading": "Cặp hình tổng hợp trước và sau",
+      "images": 1,
+      "inputs": 14
+    },
+    {
+      "kind": "testimonial",
+      "error": null,
+      "heading": "Đánh giá tổng hợp minh họa",
+      "images": 1,
+      "inputs": 14
+    },
+    {
+      "kind": "article",
+      "error": null,
+      "heading": "Bài viết minh họa về chăm sóc răng",
+      "images": 1,
+      "inputs": 12
+    },
+    {
+      "kind": "category",
+      "error": null,
+      "heading": "Chuyên mục kiến thức minh họa",
+      "images": 0,
+      "inputs": 8
+    },
+    {
+      "kind": "faq",
+      "error": null,
+      "heading": "Cần chuẩn bị gì trước khi tư vấn?",
+      "images": 0,
+      "inputs": 8
+    }
+  ],
+  "responsive": [
+    {
+      "key": "location",
+      "requested": 320,
+      "overflowControls": [],
+      "scroll": 320,
+      "width": 320
+    },
+    {
+      "key": "location",
+      "requested": 390,
+      "overflowControls": [],
+      "scroll": 390,
+      "width": 390
+    },
+    {
+      "key": "location",
+      "requested": 768,
+      "overflowControls": [],
+      "scroll": 768,
+      "width": 768
+    },
+    {
+      "key": "location",
+      "requested": 1024,
+      "overflowControls": [],
+      "scroll": 1024,
+      "width": 1024
+    },
+    {
+      "key": "location",
+      "requested": 1440,
+      "overflowControls": [],
+      "scroll": 1440,
+      "width": 1440
+    },
+    {
+      "key": "priceRange",
+      "requested": 320,
+      "overflowControls": [],
+      "scroll": 320,
+      "width": 320
+    },
+    {
+      "key": "priceRange",
+      "requested": 390,
+      "overflowControls": [],
+      "scroll": 390,
+      "width": 390
+    },
+    {
+      "key": "priceRange",
+      "requested": 768,
+      "overflowControls": [],
+      "scroll": 768,
+      "width": 768
+    },
+    {
+      "key": "priceRange",
+      "requested": 1024,
+      "overflowControls": [],
+      "scroll": 1024,
+      "width": 1024
+    },
+    {
+      "key": "priceRange",
+      "requested": 1440,
+      "overflowControls": [],
+      "scroll": 1440,
+      "width": 1440
+    },
+    {
+      "key": "gallery",
+      "requested": 320,
+      "overflowControls": [],
+      "scroll": 320,
+      "width": 320
+    },
+    {
+      "key": "gallery",
+      "requested": 390,
+      "overflowControls": [],
+      "scroll": 390,
+      "width": 390
+    },
+    {
+      "key": "gallery",
+      "requested": 768,
+      "overflowControls": [],
+      "scroll": 768,
+      "width": 768
+    },
+    {
+      "key": "gallery",
+      "requested": 1024,
+      "overflowControls": [],
+      "scroll": 1024,
+      "width": 1024
+    },
+    {
+      "key": "gallery",
+      "requested": 1440,
+      "overflowControls": [],
+      "scroll": 1440,
+      "width": 1440
+    },
+    {
+      "key": "article",
+      "requested": 320,
+      "overflowControls": [],
+      "scroll": 320,
+      "width": 320
+    },
+    {
+      "key": "article",
+      "requested": 390,
+      "overflowControls": [],
+      "scroll": 390,
+      "width": 390
+    },
+    {
+      "key": "article",
+      "requested": 768,
+      "overflowControls": [],
+      "scroll": 768,
+      "width": 768
+    },
+    {
+      "key": "article",
+      "requested": 1024,
+      "overflowControls": [],
+      "scroll": 1024,
+      "width": 1024
+    },
+    {
+      "key": "article",
+      "requested": 1440,
+      "overflowControls": [],
+      "scroll": 1440,
+      "width": 1440
+    }
+  ],
+  "journeys": {
+    "locationSaveReloadRestoreDraft": true,
+    "textWithdrawalCanonicalWithoutReload": true,
+    "passwordReauthentication": true
+  },
+  "limits": "Owned synthetic local journeys and representative layouts only; no all-browser or production claim."
+}

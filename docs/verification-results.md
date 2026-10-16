@@ -1,5 +1,26 @@
 # godent-cms verification results
 
+## Current M3 local result — 2026-10-16
+
+**HUMAN_ACCEPTED for local M3 S09–S12.** [Direct human acceptance](tasks/GCMS-M3-001.md#human-m3-acceptance--2026-10-16) records the exact source and documentation-only authority. Technical CODE_INTEGRATED + VERIFIED_LOCAL and all historical FAIL/Unknown/NOT_RUN remain unchanged. The original final-checks.json pending field is immutable historical evidence. Acceptance adds no runtime/full-MVP/Production proof. [Acceptance bookkeeping/static results](evidence/m3/acceptance-record.json) are separate from runtime evidence. [Complete plan/final handoff](tasks/GCMS-M3-001.md#final-local-handoff--2026-10-16), [ADR-012](decisions/012-local-m3-dental-content.md), [local commands](local-development.md#current-m3-local-operation), [independent review](evidence/m3/review.md) and [final snapshot](evidence/m3/final-checks.json) record exact boundaries. Inherited M1/AUTH/S01–S08/M2 acceptance and historical FAIL/Unknown/NOT_RUN are unchanged. No Git/deploy/Production/S13–S18 execution.
+
+| Check | Actual final result | Scope and evidence |
+| --- | --- | --- |
+| M3 API/SQL/native storage/worker | PASS16tests/1597assertions, zero fail/skip | [Core12/1362 + media4/235](evidence/m3/integration-checks-1792150656431.json); actual roles, references, races, HTTP limits,205 grants, native scopes/retention |
+| CMS + website | PASS109/392,30files | Admin77/261 + website32/131; price/input/contract/pagination/refresh/eligibility |
+| Root pure runner | PASS30/128 | [Seven suites](evidence/m3/unit-checks-1792150857615.json); overlaps some FE, not an extra grand total |
+| Actual browser | PASS within recorded bounds | [Lifecycle](evidence/m3/ui/representative.json), [intake/CAPTCHA/A1/A2](evidence/m3/ui/location-intake-journey.json), [FAQ](evidence/m3/ui/faq-reuse.json), [conflict](evidence/m3/ui/price-conflict.json), [states](evidence/m3/ui/states.json), [CMS](evidence/m3/ui/full-cms-matrix.json)/[public widths](evidence/m3/ui/full-public-matrix.json) |
+| Historical permissions | PASS R8/R9 | [205-grant browser withdrawal/poll](evidence/m3/ui/r8-permission-history.json), [doctor/article V2null history/scoped pruning](evidence/m3/ui/r9-image-history.json), [anonymous pages/media](evidence/m3/revocation-anonymous-final.json) |
+| Resource worker | PASS11runs/10completed/idle stop | [Explicit owned tenant only](evidence/m3/r8-content-worker-checks.json);0copies, not physical purge; earlier six-completion run separate |
+| Build/lint/post-build typecheck | PASS exit0 | Private final logs pinned by reviewer; root demo response-type seam repaired and checked; no dependency/lock upgrade |
+| Preservation | PASS50tables/210406baseline rows/894files | [Retained comparison](evidence/m3/preservation-1792150937419.json), zero unexpected failures; narrow volatile/launcher/log exclusions, not backup/restore |
+| Runtime | PASS3Bun listeners/6diagnostic cases | [Actual owned listener executable/ancestry](evidence/m3/final-diagnostics.json); point-in-time loopback only |
+| SSR/media/migration/known-value/static | Exact refreshed results in final snapshot | [Final snapshot](evidence/m3/final-checks.json); no OCR/runtime-memory/comprehensive secret-discovery claim |
+| Independent review | CLOSED R1–R9 | [Report/pins](evidence/m3/review.md);39Next traces/1235existing paths/0missing/0chain hits; source and root runtime evidence distinguished |
+| Dependency audit | **FAIL/open** | Fresh bounded local-M3 assessment of high braces advisory; reassess2026-10-22 or earlier patch/dependency/exposure/before Production; no Production waiver |
+
+Operational backup/restore, natural waiting, every browser/state/width combination, production scale/SLO, EN/themes/domains/external email/full MVP/Production remain NOT_RUN/outside this package. Resource invalidation is distinct from physical Media purge. The final existing-demo early return preserves edits; its typed grant-provisioning branch was not rerun after the caller repair. Human acceptance is separate.
+
 ## Current M2 local result — 2026-10-16
 
 **HUMAN_ACCEPTED** for approved local M2, inherited S05 and S06–S08; [human acceptance](tasks/GCMS-M2-001.md#human-m2-acceptance--2026-10-16) records the direct source. Technical **CODE_INTEGRATED + VERIFIED_LOCAL** and all historical FAIL/Unknown/NOT_RUN limits remain unchanged. The original final-checks.json acceptance-pending field is historical immutable evidence. Acceptance adds no runtime/full-MVP/Production proof. [Final task handoff](tasks/GCMS-M2-001.md#final-local-handoff--2026-10-16), [ADR-011](decisions/011-local-m2-retention-media-editorial.md), [M2 operation](local-development.md#current-m2-local-operation) and [independent review](evidence/m2/review.md) are current. The earlier S06+ unapproved/pending statements below describe historical checkpoints; M2 direct local approval supersedes them only within its scope. No Git delivery/deployment or S09–S18 authority follows.

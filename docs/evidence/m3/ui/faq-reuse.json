@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T11:03:52.572Z",
+  "checks": [
+    "normal CMS edit/save/publish FAQ V2",
+    "article remained on FAQ V1 after child publish",
+    "picker reports newer publication and explicit Dung ban 2",
+    "save plus explicit parent publication changes article to FAQ V2",
+    "second article still FAQ V1"
+  ],
+  "screenshots": [
+    "s12-parent-old-faq.png",
+    "s12-parent-adopted-v2.png"
+  ],
+  "limits": "Owned synthetic FAQ and two articles; API suite separately covers unpublish/generation."
+}

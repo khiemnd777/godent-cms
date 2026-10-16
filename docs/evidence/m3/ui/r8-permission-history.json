@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T11:40:02.155Z",
+  "tenantId": "0854f0ce-9efa-439d-9a35-a8736c1786ce",
+  "resourceId": "27a28b8f-097c-4031-941a-55aeb2e13fc9",
+  "checks": [
+    "initial50 rows; four Load older actions reach205 unique revision rows",
+    "oldest revision1 grant selected; normal password reauthentication preserves reason",
+    "same explicit withdrawal updates old row and canonical unpublished editor without reload",
+    "all205 loaded rows retained during mutation and singleton polling",
+    "actual scoped worker advances old row from pending to completed without page reload",
+    "public browser shows page not found"
+  ],
+  "screenshots": [
+    "r8-old-permission-withdrawn.png",
+    "r8-old-permission-completed.png"
+  ],
+  "limits": "New owned synthetic case only; API keyset/context and native image scopes have separate actual integration proof."
+}

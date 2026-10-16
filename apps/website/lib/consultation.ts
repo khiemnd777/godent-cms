@@ -1,10 +1,11 @@
 import { normalizeIntakeInput } from "../../api/src/contracts/intake";
 import { S04_ROUTES, type IntakeAcknowledgement, type IntakeChallenge, type IntakeErrorCode, type IntakeInput, type PreferredChannel, type PreferredLanguage } from "../../api/src/contracts/s04";
 
-export type ConsultationValues = { name: string; phone: string; email: string; preferredLanguage: PreferredLanguage; preferredChannel: PreferredChannel; message: string; consent: boolean };
+export type ConsultationValues = { name: string; phone: string; email: string; preferredLanguage: PreferredLanguage; preferredChannel: PreferredChannel; message: string; consent: boolean; locationId?: string };
 export type SubmissionAttempt = Readonly<IntakeInput>;
 export function createAttempt(values: ConsultationValues, sourcePublicationId: string): SubmissionAttempt {
-  return Object.freeze(normalizeIntakeInput({ ...values, requestKey: crypto.randomUUID(), sourcePublicationId }));
+  const { locationId, ...contact } = values;
+  return Object.freeze(normalizeIntakeInput({ ...contact, ...(locationId ? { locationId } : {}), requestKey: crypto.randomUUID(), sourcePublicationId }));
 }
 export class IntakeFailure extends Error {
   constructor(public status: number, public code: IntakeErrorCode | undefined, public uncertain: boolean) {

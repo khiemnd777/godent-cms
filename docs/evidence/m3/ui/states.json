@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T11:17:49.078Z",
+  "checks": [
+    "previous private price editor cleared on unauthorized tenant navigation",
+    "denied tenant shows no old editor fields",
+    "real owned launcher outage",
+    "CMS search via Enter shows explicit connection error and retry",
+    "owned launcher recovery",
+    "Enter on retry shows loading then two matching articles",
+    "public next cursor navigates to next page",
+    "public no-match search shows explicit empty published result"
+  ],
+  "screenshots": [
+    "m3-tenant-denied.png",
+    "cms-outage.png",
+    "cms-outage-recovered.png",
+    "public-empty-query.png"
+  ],
+  "limits": "Local controlled outage affects only owned launcher; DB/storage retained. API/RLS and integration evidence separate."
+}

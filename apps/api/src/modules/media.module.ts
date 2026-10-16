@@ -26,6 +26,7 @@ class MediaDeliveryController {
   constructor(@Inject(MEDIA) private readonly service:MediaService) {}
   @Get('media/access') async privateRead(@Req() r:PrivateRequest,@Query('token') token:string,@Res() response:ServerResponse) {send(response,await this.service.privateRead(r,token));}
   @Get('public/media/:tenant/:id/:revision/cover') async publicRead(@Req() r:PrivateRequest,@Param('tenant') t:string,@Param('id') id:string,@Param('revision') revision:string,@Res() response:ServerResponse) {send(response,await this.service.publicRead(r,t,id,revision));}
+  @Get('public/content-media/:tenant/:resource/:publication/:id/:revision/cover') async contentPublicRead(@Req() r:PrivateRequest,@Param('tenant') t:string,@Param('resource') resource:string,@Param('publication') publication:string,@Param('id') id:string,@Param('revision') revision:string,@Res() response:ServerResponse) {send(response,await this.service.contentPublicRead(r,t,resource,publication,id,revision));}
 }
 @Module({}) class MediaModule {}
 export function createMediaModule(service:MediaService):DynamicModule {return {module:MediaModule,controllers:[TenantMediaController,MediaDeliveryController],providers:[{provide:MEDIA,useValue:service}]};}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T11:19:33.426Z",
+  "tenantId": "0854f0ce-9efa-439d-9a35-a8736c1786ce",
+  "selectedLocation": "Cơ sở minh họa Phía Đông",
+  "checks": [
+    "real public service shows three eligible optional locations",
+    "synthetic email/name/message with unchecked-by-default consent selected explicitly",
+    "frozen input retained after CAPTCHA_REQUIRED",
+    "first approved old challenge expired and was rejected; not counted as success",
+    "human approved load-fresh-and-solve action",
+    "fresh challenge solved immediately through UI",
+    "same request accepted; acknowledgement replaces and clears fields and receives focus",
+    "normal A1 CMS search shows exactly one matching shared lead and East address snapshot",
+    "normal logout/password login A2, tenant selection and same shared lead/location snapshot",
+    "no appointment confirmation or external email claimed"
+  ],
+  "screenshots": [
+    "s10-location-intake-accepted.png",
+    "s10-location-lead-a1.png",
+    "s10-location-lead-a2.png"
+  ],
+  "limits": "Synthetic local data only; exact database idempotency and S06 graph deletion separately covered by actual API/worker suites."
+}

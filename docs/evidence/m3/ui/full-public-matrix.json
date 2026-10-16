@@ -1,0 +1,272 @@
+{
+  "recordedAt": "2026-10-16T11:07:34.648Z",
+  "details": [
+    {
+      "kind": "specialty",
+      "heading": "Chuyên khoa tổng hợp minh họa",
+      "images": 0,
+      "links": 3
+    },
+    {
+      "kind": "service_group",
+      "heading": "Nhóm chăm sóc răng minh họa",
+      "images": 0,
+      "links": 2
+    },
+    {
+      "kind": "location",
+      "heading": "Cơ sở minh họa Trung tâm",
+      "images": 0,
+      "links": 5
+    },
+    {
+      "kind": "doctor",
+      "heading": "Hồ sơ bác sĩ minh họa",
+      "images": 1,
+      "links": 4
+    },
+    {
+      "kind": "price",
+      "heading": "Giá chính xác minh họa",
+      "images": 0,
+      "links": 3
+    },
+    {
+      "kind": "case",
+      "heading": "Ca tổng hợp minh họa",
+      "images": 4,
+      "links": 4
+    },
+    {
+      "kind": "gallery",
+      "heading": "Cặp hình tổng hợp trước và sau",
+      "images": 3,
+      "links": 3
+    },
+    {
+      "kind": "testimonial",
+      "heading": "Đánh giá tổng hợp minh họa",
+      "images": 2,
+      "links": 3
+    },
+    {
+      "kind": "article",
+      "heading": "Bài viết minh họa về chăm sóc răng",
+      "images": 2,
+      "links": 4
+    },
+    {
+      "kind": "category",
+      "heading": "Chuyên mục kiến thức minh họa",
+      "images": 0,
+      "links": 3
+    },
+    {
+      "kind": "faq",
+      "heading": "Cần chuẩn bị gì trước khi tư vấn?",
+      "images": 0,
+      "links": 3
+    }
+  ],
+  "lists": [
+    {
+      "kind": "specialty",
+      "cards": 2,
+      "heading": "Chuyên khoa"
+    },
+    {
+      "kind": "service_group",
+      "cards": 1,
+      "heading": "Nhóm dịch vụ"
+    },
+    {
+      "kind": "location",
+      "cards": 3,
+      "heading": "Cơ sở"
+    },
+    {
+      "kind": "doctor",
+      "cards": 3,
+      "heading": "Bác sĩ"
+    },
+    {
+      "kind": "price",
+      "cards": 3,
+      "heading": "Bảng giá"
+    },
+    {
+      "kind": "case",
+      "cards": 1,
+      "heading": "Ca điều trị"
+    },
+    {
+      "kind": "gallery",
+      "cards": 3,
+      "heading": "Trước và sau"
+    },
+    {
+      "kind": "testimonial",
+      "cards": 1,
+      "heading": "Đánh giá"
+    },
+    {
+      "kind": "article",
+      "cards": 4,
+      "heading": "Bài viết"
+    },
+    {
+      "kind": "category",
+      "cards": 1,
+      "heading": "Chuyên mục"
+    },
+    {
+      "kind": "faq",
+      "cards": 20,
+      "heading": "Hỏi đáp"
+    }
+  ],
+  "responsive": [
+    {
+      "key": "service",
+      "requested": 320,
+      "overflowControls": [],
+      "scroll": 320,
+      "width": 320
+    },
+    {
+      "key": "service",
+      "requested": 390,
+      "overflowControls": [],
+      "scroll": 390,
+      "width": 390
+    },
+    {
+      "key": "service",
+      "requested": 768,
+      "overflowControls": [],
+      "scroll": 768,
+      "width": 768
+    },
+    {
+      "key": "service",
+      "requested": 1024,
+      "overflowControls": [],
+      "scroll": 1024,
+      "width": 1024
+    },
+    {
+      "key": "service",
+      "requested": 1440,
+      "overflowControls": [],
+      "scroll": 1440,
+      "width": 1440
+    },
+    {
+      "key": "gallery",
+      "requested": 320,
+      "overflowControls": [],
+      "scroll": 320,
+      "width": 320
+    },
+    {
+      "key": "gallery",
+      "requested": 390,
+      "overflowControls": [],
+      "scroll": 390,
+      "width": 390
+    },
+    {
+      "key": "gallery",
+      "requested": 768,
+      "overflowControls": [],
+      "scroll": 768,
+      "width": 768
+    },
+    {
+      "key": "gallery",
+      "requested": 1024,
+      "overflowControls": [],
+      "scroll": 1024,
+      "width": 1024
+    },
+    {
+      "key": "gallery",
+      "requested": 1440,
+      "overflowControls": [],
+      "scroll": 1440,
+      "width": 1440
+    },
+    {
+      "key": "article",
+      "requested": 320,
+      "overflowControls": [],
+      "scroll": 320,
+      "width": 320
+    },
+    {
+      "key": "article",
+      "requested": 390,
+      "overflowControls": [],
+      "scroll": 390,
+      "width": 390
+    },
+    {
+      "key": "article",
+      "requested": 768,
+      "overflowControls": [],
+      "scroll": 768,
+      "width": 768
+    },
+    {
+      "key": "article",
+      "requested": 1024,
+      "overflowControls": [],
+      "scroll": 1024,
+      "width": 1024
+    },
+    {
+      "key": "article",
+      "requested": 1440,
+      "overflowControls": [],
+      "scroll": 1440,
+      "width": 1440
+    },
+    {
+      "key": "faq-list",
+      "requested": 320,
+      "overflowControls": [],
+      "scroll": 320,
+      "width": 320
+    },
+    {
+      "key": "faq-list",
+      "requested": 390,
+      "overflowControls": [],
+      "scroll": 390,
+      "width": 390
+    },
+    {
+      "key": "faq-list",
+      "requested": 768,
+      "overflowControls": [],
+      "scroll": 768,
+      "width": 768
+    },
+    {
+      "key": "faq-list",
+      "requested": 1024,
+      "overflowControls": [],
+      "scroll": 1024,
+      "width": 1024
+    },
+    {
+      "key": "faq-list",
+      "requested": 1440,
+      "overflowControls": [],
+      "scroll": 1440,
+      "width": 1440
+    }
+  ],
+  "reverseSameGeneration": true,
+  "limits": "Rendered synthetic local pages and representative geometry/screenshots; exact HTTP missing statuses separately checked."
+}

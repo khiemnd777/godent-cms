@@ -1,0 +1,26 @@
+{
+  "recordedAt": "2026-10-16T10:43:52.962Z",
+  "status": "PASS",
+  "scope": "Specialty representative only",
+  "editorUrl": "http://127.0.0.1:5891/cms/services/specialties/2a66dff3-ed97-4374-89af-a5289f2d8974?tenant=0854f0ce-9efa-439d-9a35-a8736c1786ce",
+  "publicUrl": "http://localhost:5892/m3-8a09242b-a/chuyen-khoa/chuyen-khoa-minh-hoa-m3",
+  "checks": {
+    "newAccountLogin": true,
+    "emptyList": true,
+    "createSaveReload": true,
+    "privateSavedPreview": true,
+    "passwordReauthenticationObserved": true,
+    "explicitPublish": true,
+    "desktop1440Rendered": true,
+    "mobile390Rendered": true,
+    "mobileControlsWithinViewport": true,
+    "keyboardEnterSavedDraft2": true,
+    "publicStayedAtPublication1": true,
+    "unsavedLeaveGuard": true
+  },
+  "limits": [
+    "Other M3 screens not yet browser verified",
+    "Source build does not prove other flows",
+    "Initial query400 and create409 preserved separately"
+  ]
+}

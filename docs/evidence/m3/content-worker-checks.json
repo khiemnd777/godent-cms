@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T11:12:55.011Z",
+  "tenantId": "0854f0ce-9efa-439d-9a35-a8736c1786ce",
+  "maximumRuns": 20,
+  "runs": [
+    {
+      "environmentKeys": [
+        "HOME",
+        "PATH",
+        "S07_WORKER_DATABASE_URL",
+        "TMPDIR"
+      ],
+      "claimed": 1,
+      "completed": 1,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    },
+    {
+      "environmentKeys": [
+        "HOME",
+        "PATH",
+        "S07_WORKER_DATABASE_URL",
+        "TMPDIR"
+      ],
+      "claimed": 1,
+      "completed": 1,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    },
+    {
+      "environmentKeys": [
+        "HOME",
+        "PATH",
+        "S07_WORKER_DATABASE_URL",
+        "TMPDIR"
+      ],
+      "claimed": 1,
+      "completed": 1,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    },
+    {
+      "environmentKeys": [
+        "HOME",
+        "PATH",
+        "S07_WORKER_DATABASE_URL",
+        "TMPDIR"
+      ],
+      "claimed": 1,
+      "completed": 1,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    },
+    {
+      "environmentKeys": [
+        "HOME",
+        "PATH",
+        "S07_WORKER_DATABASE_URL",
+        "TMPDIR"
+      ],
+      "claimed": 1,
+      "completed": 1,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    },
+    {
+      "environmentKeys": [
+        "HOME",
+        "PATH",
+        "S07_WORKER_DATABASE_URL",
+        "TMPDIR"
+      ],
+      "claimed": 1,
+      "completed": 1,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    },
+    {
+      "environmentKeys": [
+        "HOME",
+        "PATH",
+        "S07_WORKER_DATABASE_URL",
+        "TMPDIR"
+      ],
+      "claimed": 0,
+      "completed": 0,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    }
+  ],
+  "limits": "Only positively enrolled new M3 fixture tenant; resource delivery invalidation owns zero objects. No old tenant backlog or physical derivative purge claimed."
+}

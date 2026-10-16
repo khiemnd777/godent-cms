@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T11:39:40.836Z",
+  "tenantId": "0854f0ce-9efa-439d-9a35-a8736c1786ce",
+  "runs": [
+    {
+      "claimed": 1,
+      "completed": 1,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    },
+    {
+      "claimed": 1,
+      "completed": 1,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    },
+    {
+      "claimed": 1,
+      "completed": 1,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    },
+    {
+      "claimed": 1,
+      "completed": 1,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    },
+    {
+      "claimed": 1,
+      "completed": 1,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    },
+    {
+      "claimed": 1,
+      "completed": 1,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    },
+    {
+      "claimed": 1,
+      "completed": 1,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    },
+    {
+      "claimed": 1,
+      "completed": 1,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    },
+    {
+      "claimed": 1,
+      "completed": 1,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    },
+    {
+      "claimed": 1,
+      "completed": 1,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    },
+    {
+      "claimed": 0,
+      "completed": 0,
+      "ownedObjects": 0,
+      "scope": "resource_delivery"
+    }
+  ],
+  "limit": "Explicit positively enrolled owned M3 tenant only; zero copied objects describes delivery invalidation, not global physical purge."
+}

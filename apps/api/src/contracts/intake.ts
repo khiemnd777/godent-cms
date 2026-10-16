@@ -33,7 +33,7 @@ export function intakeSlug(value: unknown): string {
   return value;
 }
 export function normalizeIntakeInput(input: unknown): IntakeInput {
-  const v=object(input,['requestKey','sourcePublicationId','name','phone','email','preferredLanguage','preferredChannel','message','consent','interestServiceSlug','challenge']);
+  const v=object(input,['requestKey','sourcePublicationId','name','phone','email','preferredLanguage','preferredChannel','message','consent','interestServiceSlug','challenge','locationId']);
   const name=text(v.name,S04_LIMITS.name),message=text(v.message,S04_LIMITS.message);
   let phone=text(v.phone,80); const email=text(v.email,S04_LIMITS.email)?.toLowerCase();
   if (phone) {
@@ -54,7 +54,7 @@ export function normalizeIntakeInput(input: unknown): IntakeInput {
   return {requestKey:intakeUuid(v.requestKey),sourcePublicationId:intakeUuid(v.sourcePublicationId),
     ...(name?{name}:{}),...(phone?{phone}:{}),...(email?{email}:{}),preferredLanguage:v.preferredLanguage as 'vi'|'en',
     preferredChannel:v.preferredChannel as 'phone'|'email',...(message?{message}:{}),consent:true,
-    ...(v.interestServiceSlug===undefined?{}:{interestServiceSlug:intakeSlug(v.interestServiceSlug)}),...(challenge?{challenge}:{})};
+    ...(v.interestServiceSlug===undefined?{}:{interestServiceSlug:intakeSlug(v.interestServiceSlug)}),...(v.locationId===undefined?{}:{locationId:intakeUuid(v.locationId)}),...(challenge?{challenge}:{})};
 }
 export function normalizeChallengeInput(input: unknown) {const v=object(input,['requestKey']);return {requestKey:intakeUuid(v.requestKey)};}
 

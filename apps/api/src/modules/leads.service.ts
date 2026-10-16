@@ -72,7 +72,7 @@ export class LeadsService {
     });
   }
   private async get(tx: S02Transaction, tenant: string, id: string): Promise<LeadDetail> {
-    const rows = await tx.execute(sql`SELECT ${columns},l.phone,l.email,l.message,
+    const rows = await tx.execute(sql`SELECT ${columns},l.phone,l.email,l.message,l.location_snapshot AS location,
       jsonb_build_object('acceptedAt',l.consent_at,'version',l.consent_version,'copy',l.consent_copy) AS consent,
       l.last_activity_at AS "lastActivityAt",l.expires_at AS "expiresAt",l.closed_at AS "closedAt",l.closure_reason AS "closureReason",
       l.has_contact_attempt AS "hasContactAttempt",l.has_two_way_contact AS "hasTwoWayContact",

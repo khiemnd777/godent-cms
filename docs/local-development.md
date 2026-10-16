@@ -1,5 +1,35 @@
 # Local development and verification
 
+## Current M3 local operation
+
+The [complete approved M3 plan and execution ledger](tasks/GCMS-M3-001.md) governs S09–S12. M1/AUTH/S01–S08/M2 remain HUMAN_ACCEPTED; M3 S09–S12 is [HUMAN_ACCEPTED](tasks/GCMS-M3-001.md#human-m3-acceptance--2026-10-16) within recorded local scope. Acceptance adds no runtime proof or new execution authority; historical FAIL/Unknown/NOT_RUN remain unchanged. [ADR-012](decisions/012-local-m3-dental-content.md) records the contracts. Existing Bun1.4.3, ports, database, storage and credentials are retained; no dependency version/global Bun/DNS/TLS/external email/deployment change is required. Historical procedures below do not authorize resets or old backlog dispatch.
+
+Use project-local `./node_modules/.bin/bun`. [package.json](../package.json) aliases select the exact scripts/local flags/private env used in M3 evidence:
+
+| Command | Scope |
+| --- | --- |
+| `bun run m3:bootstrap` | Assert/create only the owner-scoped M3 namespace; no credential change. |
+| `bun run m3:migrate` | Allowlisted forward0025–0031 in one transaction/advisory lock, every retained checksum verified, no dispatch. Stop the positively identified owned launcher before0031 so SQL/API continuation contracts change together. With the private migration env, `scripts/m3-migrate.ts --local-m3 --through=0031 --compile-only --probe-content` rolls back intentionally. |
+| `bun run m3:fixtures` | Two new tenants/four synthetic identities and owned service/site, exclusive0600manifest. Complete manifest returns without reset. |
+| `bun run m3:demo` | Seventeen owned content resources, three locations/three prices/two shared-FAQ articles, two generated images through native processing. Complete manifest preserves later browser edits. |
+| `bun run m3:worker-scope` | Explicitly enroll only the two owned M3 tenants in content invalidation; this command never dispatches. |
+| `bun run start:m3-worker -- content --tenant <owned-M3-tenant-id> --once` | One claim with minimal execute-only worker environment. `ownedObjects:0` describes delivery invalidation, not physical asset deletion. Omitting `content` selects the separately scoped Media worker. |
+| `bun run test:m3:unit` | Pure M3 input/transport/CMS/public checks; no integration hooks. |
+| `bun run test:m3` | Explicit M3_INTEGRATION=1; manifest-owned tests and actual ephemeral API/SQL/storage/native/isolated retention cases. Raw output0600private, filtered dated evidence. Do not rerun old broad mutating suites as a substitute. |
+| `bun run m3:performance` | Dedicated owned tenant,1000published synthetic articles/2categories, tenant-role/RLS EXPLAIN and sparse reverse measurement. Complete data reused; no planner disabling/global instrumentation/production extrapolation. |
+| `bun run m3:readonly` | Anonymous SSR/list/detail/media/status, migration hashes and exact known-value secret scan; no product mutation. |
+| `bun run m3:preserve` | Original-column retained row/file comparison against exclusive .local/m3-baseline.json. Narrow session/rate/challenge expiry, launcher metadata and original-prefix log appends only. Not backup/restore. |
+
+Demo [public service](http://localhost:5892/m3-8a09242b-a/dich-vu/cham-soc-rang), [CMS](http://127.0.0.1:5891/cms). Synthetic login secrets remain only in private `.local/m3-fixtures.json`. Admin/API use127.0.0.1, public useslocalhost; current session/origin/CSRF boundaries remain. Do not bypass browser CAPTCHA confirmation through another submission path; keep that exact browser action separate from API proof.
+
+Public VI responses use no-store/noindex. Directed references remain pinned until deliberate parent publication; reverse discovery by resource identity keeps eligible older pins within the current generation. Unavailable pages return404 before streaming. Complete graphs/list/service-links DTOs stay within1MiB; a byte-limited page can contain fewer than20cards with continuation after the last returned ID. M3 JSON commands admit512KiB; other JSON stays64KiB and uploads5MiB. Resource invalidation owns no copies; global Media withdrawal remains physical derivative purge.
+
+Permission history uses separate default50/max100 source-side pages, exact microsecond timestamp/ID cursors and authorized singleton refresh. The CMS preserves loaded history and pending polling even when a new draft removes its image. The explicit opt-in `apps/api/test/m3-permission-browser-fixture.ts --m3-permission-browser-fixture` creates a separate205-grant case; `apps/api/test/m3-historical-image-browser-fixture.ts --m3-historical-image-browser-fixture` creates a new isolated doctor/article patient-derived image scope with PublishedV1 and pendingV2image:null. Both require `M3_INTEGRATION=1` and the same five private env files as `test:m3`, record private ownership before writes, and leave new records for browser verification. They are optional fixture creation, not ordinary startup or cleanup. Do not rerun to reset a completed journey. The existing completed demo command returns `reset:false` and preserves browser changes.
+
+`./node_modules/.bin/bun --no-env-file scripts/m3-runtime-checks.ts --local-m3` checks the actual owned listener ancestry/executable and six health/ready/redacted statuses. It does not infer Node from Next's process title or claim persistent availability.
+
+Audit braces remains **FAIL/open** under the fresh bounded local-M3 assessment. Reassess2026-10-22 or earlier patch/dependency/exposure change and before Production. No Production waiver, commit, push or deploy follows.
+
 ## Current M2 local operation
 
 M2 v0.1/S06–S08 has direct local execution approval; see [the complete task and evidence limits](tasks/GCMS-M2-001.md) and [ADR-011](decisions/011-local-m2-retention-media-editorial.md). No Git delivery, deployment, external provider or production action is authorized. Earlier S06+ restrictions below describe historical checkpoints.

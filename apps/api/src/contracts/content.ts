@@ -1,4 +1,5 @@
 import { PUBLIC_SITE_ORIGIN, RESERVED_SLUGS, S03_LIMITS, type RichInline, type RichTextDocument, type ServiceContent } from './s03';
+import {parseContentReferences} from './m3-validation';
 
 export function exactObject(input: unknown, keys: readonly string[]): Record<string, unknown> {
   if (!input || typeof input !== 'object' || Array.isArray(input) || Object.getPrototypeOf(input) !== Object.prototype ||
@@ -59,7 +60,7 @@ export function richTextPlain(document: RichTextDocument): string {
     block.children.map(item => item.text).join('')).join('\n');
 }
 export function parseServiceInput(input: unknown): ServiceContent {
-  const value = exactObject(input, ['slug', 'title', 'summary', 'body', 'seo', 'coverImage']);
+  const value = exactObject(input, ['slug', 'title', 'summary', 'body', 'seo', 'coverImage','contentLinks']);
   const seo = exactObject(value.seo, ['title', 'description']);
   let coverImage: ServiceContent['coverImage'];
   if (value.coverImage !== undefined && value.coverImage !== null) {
@@ -71,7 +72,7 @@ export function parseServiceInput(input: unknown): ServiceContent {
   return { slug: parseSlug(value.slug), title: boundedText(value.title, S03_LIMITS.title, true).trim(),
     summary: boundedText(value.summary, S03_LIMITS.summary), body: parseRichText(value.body),
     seo: { title: boundedText(seo.title, S03_LIMITS.seoTitle), description: boundedText(seo.description, S03_LIMITS.seoDescription) },
-    ...(coverImage === undefined ? {} : { coverImage }) };
+    ...(coverImage === undefined ? {} : { coverImage }),...(value.contentLinks===undefined?{}:{contentLinks:{references:parseContentReferences(exactObject(value.contentLinks,['references']).references)}}) };
 }
 export function canonicalServiceUrl(tenantSlug: string, serviceSlug: string): string {
   return `${PUBLIC_SITE_ORIGIN}/${parseSlug(tenantSlug)}/dich-vu/${parseSlug(serviceSlug)}`;

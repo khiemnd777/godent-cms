@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T11:18:08.024Z",
+  "resourceId": "2a66dff3-ed97-4374-89af-a5289f2d8974",
+  "checks": [
+    "explicit unpublish identity confirmation",
+    "normal password reauthentication",
+    "draft and history remain",
+    "live link removed",
+    "public page unavailable",
+    "explicit republish of saved V2 returns public content"
+  ],
+  "limits": "Owned representative specialty has no dependent demo references; generation non-resurrection separately actual API.",
+  "screenshot": "s09-unpublished-404.png"
+}

@@ -1,0 +1,26 @@
+"use client";
+import { useState } from "react";
+import { createPortal } from "react-dom";
+import { ArrowDown, ArrowUp, Image as ImageIcon, Plus, Trash2 } from "lucide-react";
+import { M3_LIMITS, type DentalContent, type GalleryImage } from "../../api/src/contracts/m3";
+import type { MediaAsset, ServiceMediaReference } from "../../api/src/contracts/s07";
+import { moveReference } from "../lib/content-references";
+import { MediaPreview } from "./media-preview";
+import { MediaPickerDialog } from "./service-cover";
+
+const blankImage = (): GalleryImage => ({ assetId: "", revision: 0, alt: "", caption: "" });
+type Picker = { type: "image" } | { type: "pair"; index: number; side: "before" | "after" };
+function ImageFields({ tenantId, reference, label, caption, disabled, onChange, onPick, onRemove }: { tenantId: string; reference: ServiceMediaReference | null; label: string; caption?: string; disabled: boolean; onChange: (reference: ServiceMediaReference, caption?: string) => void; onPick: () => void; onRemove?: () => void }) {
+  return <section className="form-stack content-image-fields"><h4>{label}</h4>{reference?.assetId ? <><MediaPreview key={`${reference.assetId}:${reference.revision}`} tenantId={tenantId} reference={reference}/><label className="field">Mô tả {label.toLowerCase()} (alt) *<input required maxLength={500} disabled={disabled} value={reference.alt} onChange={event => onChange({ ...reference, alt: event.target.value }, caption)}/></label>{caption !== undefined && <label className="field">Chú thích {label.toLowerCase()}<textarea rows={2} maxLength={1000} disabled={disabled} value={caption} onChange={event => onChange(reference, event.target.value)}/></label>}</> : <p className="field-help">Chưa chọn ảnh.</p>}<div className="buttons"><button className="btn" type="button" disabled={disabled} onClick={onPick}><ImageIcon size={14}/>{reference?.assetId ? "Đổi ảnh" : "Chọn ảnh"}</button>{onRemove && reference?.assetId && <button className="btn" type="button" disabled={disabled} onClick={onRemove}>Bỏ ảnh</button>}</div></section>;
+}
+export function ContentMediaFields({ tenantId, content, disabled, onChange }: { tenantId: string; content: DentalContent; disabled: boolean; onChange: (content: DentalContent) => void }) {
+  const [picker, setPicker] = useState<Picker | null>(null);
+  function choose(asset: MediaAsset) {
+    const image = { assetId: asset.id, revision: asset.revision, alt: "" };
+    if (picker?.type === "image" && "image" in content) onChange({ ...content, image });
+    if (picker?.type === "pair" && content.kind === "gallery") onChange({ ...content, pairs: content.pairs.map((pair, index) => index === picker.index ? { ...pair, [picker.side]: { ...image, caption: "" } } : pair) });
+    setPicker(null);
+  }
+  if (!("image" in content) && content.kind !== "gallery") return null;
+  return <><section className="form-stack"><h3>{content.kind === "gallery" ? "Cặp ảnh trước và sau" : "Ảnh đại diện"}</h3><p className="field-help">Chỉ chọn ảnh đã xử lý. Ca điều trị, gallery và đánh giá cần quyền cho từng ảnh. Mọi quyền công bố phải khớp nội dung, phiên bản và phạm vi sử dụng.</p>{"image" in content && <ImageFields tenantId={tenantId} reference={content.image} label="Ảnh đại diện" disabled={disabled} onChange={image => onChange({ ...content, image })} onPick={() => setPicker({ type: "image" })} onRemove={() => onChange({ ...content, image: null })}/ >}{content.kind === "gallery" && <>{content.pairs.map((pair, index) => <section className="gallery-pair form-stack" key={index}><div className="content-inline-row"><h4>Cặp ảnh {index + 1}</h4><div className="buttons"><button className="icon-button" type="button" disabled={disabled || index === 0} aria-label={`Đưa cặp ${index + 1} lên trên`} onClick={() => onChange({ ...content, pairs: moveReference(content.pairs, index, -1) })}><ArrowUp size={15}/></button><button className="icon-button" type="button" disabled={disabled || index === content.pairs.length - 1} aria-label={`Đưa cặp ${index + 1} xuống dưới`} onClick={() => onChange({ ...content, pairs: moveReference(content.pairs, index, 1) })}><ArrowDown size={15}/></button><button className="icon-button" type="button" disabled={disabled} aria-label={`Bỏ cặp ảnh ${index + 1}`} onClick={() => onChange({ ...content, pairs: content.pairs.filter((_, at) => at !== index) })}><Trash2 size={15}/></button></div></div><div className="gallery-image-grid">{(["before", "after"] as const).map(side => <ImageFields key={side} tenantId={tenantId} reference={pair[side]} label={side === "before" ? "Ảnh trước" : "Ảnh sau"} caption={pair[side].caption} disabled={disabled} onPick={() => setPicker({ type: "pair", index, side })} onChange={(image, caption) => onChange({ ...content, pairs: content.pairs.map((item, at) => at === index ? { ...item, [side]: { ...image, caption: caption ?? "" } } : item) })}/>)}</div></section>)}<button className="btn" type="button" disabled={disabled || content.pairs.length >= M3_LIMITS.pairs} onClick={() => onChange({ ...content, pairs: [...content.pairs, { before: blankImage(), after: blankImage() }] })}><Plus size={15}/>Thêm cặp ảnh</button></>}</section>{picker && createPortal(<div onSubmit={event => event.stopPropagation()}><MediaPickerDialog pickReady onPick={choose} onClose={() => setPicker(null)}/></div>, document.body)}</>;
+}

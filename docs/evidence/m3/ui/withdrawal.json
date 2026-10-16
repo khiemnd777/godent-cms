@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T11:01:49.347Z",
+  "resourceId": "42c3496c-42ac-4615-8cd2-5a2d029ad4f1",
+  "tenantId": "0854f0ce-9efa-439d-9a35-a8736c1786ce",
+  "checks": [
+    "actual published case with text and image scopes",
+    "withdrawal first required recent password",
+    "existing password reauthentication normal UI",
+    "reason preserved through reauthentication",
+    "text withdrawal success without reload",
+    "editor shows Ban nhap and Chua xuat ban",
+    "live link removed without reload",
+    "resource delivery invalidation shown pending separately from global asset purge"
+  ],
+  "screenshot": "s11-withdraw-canonical.png",
+  "limits": "Synthetic owned case only; no physical deletion claimed by this UI result."
+}

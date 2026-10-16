@@ -1,0 +1,24 @@
+{
+  "recordedAt": "2026-10-16T11:31:50.599Z",
+  "mode": "integration",
+  "status": "PASS",
+  "suites": [
+    {
+      "file": "apps/api/test/m3-integration.test.ts",
+      "exitCode": 0,
+      "passed": 12,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 1360
+    },
+    {
+      "file": "apps/api/test/m3-media-integration.test.ts",
+      "exitCode": 0,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 150
+    }
+  ],
+  "limits": "Scoped actual tests; API/database/browser/media/worker and human acceptance remain distinct. Private raw output retained without exporting credentials."
+}

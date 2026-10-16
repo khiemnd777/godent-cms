@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T11:42:36.200Z",
+  "checks": [
+    {
+      "kind": "doctor",
+      "publicPage": 200,
+      "image": null,
+      "media": 0,
+      "privateAltRemoved": true,
+      "oldMediaStatus": 404
+    },
+    {
+      "kind": "article",
+      "publicPage": 200,
+      "image": null,
+      "media": 0,
+      "privateAltRemoved": true,
+      "oldMediaStatus": 404
+    },
+    {
+      "kind": "old205permissionCase",
+      "publicPage": 404,
+      "cacheControl": "no-store"
+    }
+  ],
+  "limits": "Actual anonymous requests after browser scoped withdrawals; does not claim global physical deletion."
+}

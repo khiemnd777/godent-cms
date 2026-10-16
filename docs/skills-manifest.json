@@ -965,7 +965,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "6c420e86bfd506fdee020534b46f222d39ccc22ef67a520e029a181e81eece94",
+      "sha256": "11507b01954ba2deb6cd312df93056fcd860efb083a9110f6480ebea8676a137",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1095,6 +1095,16 @@
             "task": "docs/tasks/GCMS-M1-UAT-001.md",
             "previous_sha256": "76f00b57f02cacb5391929b5bb9636db76c313e07d9910dde827a560cb3cd951",
             "reason": "Record direct human M1 acceptance and future user-created M2 slice-planning thread; preserve technical proof, historical limits and unapproved S06-S18 execution"
+          },
+          {
+            "task": "docs/tasks/GCMS-M3-001.md",
+            "previous_sha256": "22094524f4dbc9fc53bc322870173311e34401850041593f709f3968e33f1fb7",
+            "reason": "Record approved M3 local S09-S12 final scoped handoff, independent closure, preserved historical acceptance and audit FAIL; no Git/deploy/S13-S18 authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-M3-001.md",
+            "previous_sha256": "8427ae4fdb1df56353de319c83316edda3e8461b66a2d1e5fc5cc257ecac7761",
+            "reason": "Record direct human local M3 S09-S12 acceptance and documentation-only authority; preserve historical evidence, audit FAIL, Kit/mirror/adaptation pins and no S13-S18/Git/deploy boundary"
           }
         ]
       }
@@ -1168,7 +1178,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "1fcb6543ce49a72e4b4758494fd4c48f8a11dd244bf512b744bf83807ae5ac33",
+      "sha256": "eb514363b84b473a1569ba2f85769b2cf2e4b400189f6bdbb3ffbf9367809162",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1283,6 +1293,16 @@
             "task": "docs/tasks/GCMS-M1-UAT-001.md",
             "previous_sha256": "c104cd461f29f69a8869a65243b65bf3feb13d4bef11422a7b02f2f2aba05272",
             "reason": "Record direct human M1 acceptance and future user-created M2 slice-planning thread; preserve technical proof, historical limits and unapproved S06-S18 execution"
+          },
+          {
+            "task": "docs/tasks/GCMS-M3-001.md",
+            "previous_sha256": "7fb1e542badb10786eb23ae14a68797566e176b3cce83d6a832e97aa7a9d67b7",
+            "reason": "Record approved M3 local S09-S12 final scoped handoff, independent closure, preserved historical acceptance and audit FAIL; no Git/deploy/S13-S18 authority"
+          },
+          {
+            "task": "docs/tasks/GCMS-M3-001.md",
+            "previous_sha256": "651eaec4f7dbdcff82279fb7e4d1bfde2c7467a680dc12cd805e5c3ddd000149",
+            "reason": "Record direct human local M3 S09-S12 acceptance and documentation-only authority; preserve historical evidence, audit FAIL, Kit/mirror/adaptation pins and no S13-S18/Git/deploy boundary"
           }
         ]
       }
@@ -1810,6 +1830,26 @@
       "record": "docs/tasks/GCMS-M2-001.md",
       "authority": "Direct human M2 acceptance/documentation update,2026-10-16 Asia/Ho_Chi_Minh,desktop01a1437b-7cd2-7b23-92ef-70226da96f3f,turn01a14424-fabd-7d43-8fa6-800dad9fc40c; desktop verified source",
       "scope": "Assigned acceptance/current pointers and maintained AGENTS/README digest provenance only; technical limits/historical evidence and original Kit/mirror/adaptation pins unchanged; no runtime/app/Git/deploy or S09-S18 execution",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-M3-001 local execution",
+      "record": "docs/tasks/GCMS-M3-001.md",
+      "authority": "Direct human M3 v0.1/all decisions/full local S09-S12 execution approval2026-10-16 desktop01a1442c-b412-7f63-b03f-b23c76825bf2 turn01a14435-f0f6-7321-bb97-a00bd03cc50f",
+      "scope": "Full plan save/current pointers and maintained AGENTS/README hashes; original Kit/mirror/adaptation pins and old evidence preserved; no Git/deploy",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-M3-001 human M3 acceptance",
+      "record": "docs/tasks/GCMS-M3-001.md",
+      "authority": "Direct human M3 acceptance/documentation-status update2026-10-16 Asia/Saigon,desktop01a1442c-b412-7f63-b03f-b23c76825bf2,turn01a144a4-a9a9-7271-9b3c-4c4da88c4854; desktop verified source",
+      "scope": "Settled acceptance/current pointers and maintained AGENTS/README hashes/provenance only; technical proof and historical evidence/audit FAIL preserved; original Kit/mirror/adaptation pins unchanged; no new runtime/app/DB/browser/dependency/Git/deploy or S13-S18 execution",
       "maintained_paths": [
         "AGENTS.md",
         "README.md"

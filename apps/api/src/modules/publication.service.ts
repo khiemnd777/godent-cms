@@ -17,7 +17,7 @@ function version(value: unknown, zero = false): number {
 const draftColumns = sql`d.id,d.tenant_id AS "tenantId",d.slug,d.title,d.summary,
   coalesce(d.body_document,gcms_s02.plain_document(d.body)) AS body,
   jsonb_build_object('title',d.seo_title,'description',d.seo_description) AS seo,d.locale,d.version AS "draftVersion",
-  d.cover_image AS "coverImage",d.slug_locked AS "slugLocked",d.updated_at AS "updatedAt",coalesce(h.publication_version,0) AS "publicationVersion",
+    d.cover_image AS "coverImage",d.slug_locked AS "slugLocked",d.updated_at AS "updatedAt",coalesce(h.publication_version,0) AS "publicationVersion",
   (ptr.snapshot_id IS NOT NULL) AS "activePublication",coalesce(h.revision,0) AS "publicationRevision",
   p.draft_version AS "publishedDraftVersion",p.site_version AS "publishedSiteVersion",coalesce(s.version,0) AS "siteVersion"`;
 const draftJoins = sql`LEFT JOIN gcms_s02.publication_pointer ptr ON ptr.tenant_id=d.tenant_id AND ptr.service_id=d.id
@@ -77,13 +77,20 @@ export class PublicationServiceOperations {
       return this.site(tx,tenantId);
     });
   }
-  async list(request: PrivateRequest, tenant: string, cursor: unknown): Promise<Page<PublicationService>> {
-    const tenantId=parseIdentifier(tenant); const scope=`${tenantId}:publication-services`; const after=decodePageCursor(cursor,scope); const actor=await this.actor(request);
+  async list(request: PrivateRequest, tenant: string, cursor: unknown, search?:unknown, pageSize?:unknown): Promise<Page<PublicationService>> {
+    const tenantId=parseIdentifier(tenant);const query=parsed(()=>{
+      const q=search===undefined?'':boundedText(search,160).normalize('NFC').trim().toLowerCase();
+      let limit=search===undefined&&pageSize===undefined?25:20;
+      if(pageSize!==undefined){if(typeof pageSize!=='string'||!/^[1-9][0-9]?$/.test(pageSize)||Number(pageSize)>50)throw new TypeError();limit=Number(pageSize);}return {q,limit};
+    });
+    const scope=search===undefined&&pageSize===undefined?`${tenantId}:publication-services`:`${tenantId}:publication-services:${createHash('sha256').update(JSON.stringify(query)).digest('hex')}`; const after=decodePageCursor(cursor,scope); const actor=await this.actor(request);
     return this.db.withTenant(actor,tenantId,async tx=>{
       const rows=await tx.execute(sql`SELECT ${draftColumns} FROM gcms_s02.service_draft d ${draftJoins}
-        WHERE d.tenant_id=${tenantId} AND (${after}::text IS NULL OR d.id>${after}) ORDER BY d.id LIMIT 26`);
-      const items=(rows as unknown as PublicationService[]).slice(0,25).map(service);
-      return {items,nextCursor:rows.length>25?encodePageCursor(scope,items[items.length-1].id):null};
+        WHERE d.tenant_id=${tenantId} AND (${after}::text IS NULL OR d.id>${after})
+        AND (${query.q}='' OR position(${query.q} IN lower(d.title))>0 OR position(${query.q} IN lower(d.slug))>0)
+        ORDER BY d.id LIMIT ${query.limit+1}`);
+      const items=(rows as unknown as PublicationService[]).slice(0,query.limit).map(service);
+      return {items,nextCursor:rows.length>query.limit?encodePageCursor(scope,items[items.length-1].id):null};
     });
   }
   async read(request: PrivateRequest, tenant: string, id: string): Promise<PublicationService> {
@@ -105,18 +112,21 @@ export class PublicationServiceOperations {
       await tx.execute(sql`INSERT INTO gcms_s02.service_draft(tenant_id,id,slug,title,summary,body,body_document,seo_title,seo_description,updated_by,cover_image)
         VALUES(${tenantId},${id},${value.slug},${value.title},${value.summary},${richTextPlain(value.body)},${JSON.stringify(value.body)}::text::jsonb,
           ${value.seo.title},${value.seo.description},${current.userId},${(value.coverImage?JSON.stringify(value.coverImage):null)}::text::jsonb)`);
+      if(value.contentLinks){await tx.execute(sql`SELECT gcms_m3.stage_service_links(${tenantId},${id},${JSON.stringify(value.contentLinks.references)}::text::jsonb)`);
+        await tx.execute(sql`UPDATE gcms_s02.service_draft SET version=version+1 WHERE tenant_id=${tenantId} AND id=${id}`);}
       await this.audit(tx,current,tenantId,'draft.created',id); return this.get(tx,tenantId,id);
     });
   }
   async save(request: PrivateRequest, tenant: string, id: string, input: unknown) {
     const tenantId=parseIdentifier(tenant); const serviceId=parseIdentifier(id); const actor=await this.actor(request);
-    const value=parsed(()=>{const entry=exactObject(input,['slug','title','summary','body','seo','coverImage','expectedDraftVersion']);
+    const value=parsed(()=>{const entry=exactObject(input,['slug','title','summary','body','seo','coverImage','contentLinks','expectedDraftVersion']);
       const {expectedDraftVersion,...content}=entry; return {content:parseServiceInput(content),expected:version(expectedDraftVersion)};});
     return this.db.withTenant(actor,tenantId,async(tx,current)=>{
       const previous=await this.get(tx,tenantId,serviceId);
       if(previous.draftVersion!==value.expected || (previous.slugLocked&&previous.slug!==value.content.slug)) throw new ConflictException();
       const c=value.content;
       await this.assertMedia(tx,tenantId,c.coverImage);
+      if(c.contentLinks)await tx.execute(sql`SELECT gcms_m3.stage_service_links(${tenantId},${serviceId},${JSON.stringify(c.contentLinks.references)}::text::jsonb)`);
       await tx.execute(sql`UPDATE gcms_s02.service_draft SET slug=${c.slug},title=${c.title},summary=${c.summary},body=${richTextPlain(c.body)},
         body_document=${JSON.stringify(c.body)}::text::jsonb,seo_title=${c.seo.title},seo_description=${c.seo.description},version=version+1,
         cover_image=${(c.coverImage?JSON.stringify(c.coverImage):null)}::text::jsonb,updated_by=${current.userId},updated_at=now() WHERE tenant_id=${tenantId} AND id=${serviceId} AND version=${value.expected}`);
@@ -248,6 +258,7 @@ export class PublicationServiceOperations {
         const c=parsed(()=>parseServiceInput({...saved,slug:saved.slug??'unrouted-draft'}));
         // Route identity and publication permission are current authority, never historical content.
         const slug=previous.slugLocked?previous.slug:saved.slug===null?null:c.slug;
+        await tx.execute(sql`SELECT gcms_m3.stage_service_links(${tenantId},${resourceId},${JSON.stringify(c.contentLinks?.references??[])}::text::jsonb,true)`);
         await tx.execute(sql`UPDATE gcms_s02.service_draft SET slug=${slug},title=${c.title},summary=${c.summary},body=${richTextPlain(c.body)},body_document=${JSON.stringify(c.body)}::text::jsonb,
           seo_title=${c.seo.title},seo_description=${c.seo.description},cover_image=${(c.coverImage?JSON.stringify(c.coverImage):null)}::text::jsonb,version=version+1,updated_by=${current.userId},updated_at=clock_timestamp()
           WHERE tenant_id=${tenantId} AND id=${resourceId} AND version=${value.expectedVersion}`);applied=value.expectedVersion+1;

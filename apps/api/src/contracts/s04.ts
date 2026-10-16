@@ -18,6 +18,7 @@ export interface IntakeInput {
   message?: string;
   consent: true;
   interestServiceSlug?: string;
+  locationId?:string;
   challenge?: { token: string; answer: string };
 }
 export interface IntakeAcknowledgement { status: 'accepted' }
@@ -46,6 +47,7 @@ export interface LeadListItem {
   source: LeadSource;
 }
 export interface LeadDetail extends LeadListItem {
+  location?:{id:string;publicationId:string;name:string;address:string}|null;
   phone: string | null;
   email: string | null;
   message: string | null;

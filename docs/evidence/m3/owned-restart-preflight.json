@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "oldLauncher": 73942,
+  "oldRuntime": "1.4.3",
+  "matchedCommand": "bun scripts/start-local.ts",
+  "matchedWorkspace": true,
+  "signal": "SIGTERM",
+  "portsReleased": [
+    5890,
+    5891,
+    5892
+  ],
+  "dataReset": false
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T11:04:41.217Z",
+  "resourceId": "3fa2570b-f381-4ebe-bbc7-84240bfc1cbc",
+  "checks": [
+    "range high below low rejected before save",
+    "invalid input remains editable",
+    "two same-authorized-user browser tabs read V1",
+    "second tab saves V2",
+    "first stale save409 preserves its inclusions and amount strings",
+    "canonical compare shows V2 and keeps local fields",
+    "explicit keep and continue saves V3",
+    "no publish performed by save"
+  ],
+  "screenshot": "s10-conflict-compare.png",
+  "limits": "Two browser tabs use one authorized identity; distinct A1/A2 concurrency and tenant denial are separately actual API tests."
+}

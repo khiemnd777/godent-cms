@@ -14,7 +14,7 @@ export interface SiteDraft { tenantId: string; slug: string | null; version: num
   footer: SiteFooter; slugLocked: boolean }
 export interface SaveSiteInput { slug: string; name: string; footer: SiteFooter; expectedVersion: number }
 export interface ServiceContent { slug: string; title: string; summary: string; body: RichTextDocument;
-  seo: { title: string; description: string }; coverImage?: ServiceMediaReference | null }
+  seo: { title: string; description: string }; coverImage?: ServiceMediaReference | null; contentLinks?:import('./m3').ServiceContentLinks }
 export interface PublicationService extends Omit<ServiceContent, 'slug'> { id: string; tenantId: string;
   slug: string | null; locale: 'vi'; draftVersion: number; publicationVersion: number; siteVersion: number;
   publishedDraftVersion: number | null; publishedSiteVersion: number | null; slugLocked: boolean; updatedAt: string;

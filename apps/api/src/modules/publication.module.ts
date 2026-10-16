@@ -17,7 +17,7 @@ class PublicationController {
   @Get('site/history') siteHistory(@Req() r:PrivateRequest,@Param('tenantId') tenant:string,@Query('cursor') cursor?:string) {return this.service.history(r,tenant,'site',tenant,cursor);}
   @Post('site/restore') @HttpCode(200) siteRestore(@Req() r:PrivateRequest,@Param('tenantId') tenant:string,@Body() input:unknown) {return this.service.restore(r,tenant,'site',tenant,input);}
   @Put('site') saveSite(@Req() r:PrivateRequest,@Param('tenantId') tenant:string,@Body() input:unknown) {return this.service.saveSite(r,tenant,input);}
-  @Get('services') list(@Req() r:PrivateRequest,@Param('tenantId') tenant:string,@Query('cursor') cursor?:string) {return this.service.list(r,tenant,cursor);}
+  @Get('services') list(@Req() r:PrivateRequest,@Param('tenantId') tenant:string,@Query('cursor') cursor?:string,@Query('q') q?:string,@Query('pageSize') pageSize?:string) {return this.service.list(r,tenant,cursor,q,pageSize);}
   @Post('services') create(@Req() r:PrivateRequest,@Param('tenantId') tenant:string,@Body() input:unknown) {return this.service.create(r,tenant,input);}
   @Get('services/:id') get(@Req() r:PrivateRequest,@Param('tenantId') tenant:string,@Param('id') id:string) {return this.service.read(r,tenant,id);}
   @Put('services/:id') save(@Req() r:PrivateRequest,@Param('tenantId') tenant:string,@Param('id') id:string,@Body() input:unknown) {return this.service.save(r,tenant,id,input);}

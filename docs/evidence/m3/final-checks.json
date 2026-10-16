@@ -1,0 +1,124 @@
+{
+  "status": "CODE_INTEGRATED_VERIFIED_LOCAL_READY_FOR_USER_REVIEW",
+  "implementation": "CODE_INTEGRATED",
+  "behavior": "VERIFIED_LOCAL_WITH_RECORDED_SCOPE",
+  "humanAcceptance": "PENDING",
+  "date": "2026-10-16",
+  "ownerThread": "01a1442c-b412-7f63-b03f-b23c76825bf2",
+  "checks": {
+    "integration": {
+      "status": "PASS",
+      "tests": 16,
+      "assertions": 1597,
+      "failures": 0,
+      "skips": 0,
+      "report": "integration-checks-1792150656431.json"
+    },
+    "frontend": {
+      "status": "PASS",
+      "tests": 109,
+      "assertions": 392,
+      "files": 30
+    },
+    "unit": {
+      "status": "PASS",
+      "tests": 30,
+      "assertions": 128,
+      "report": "unit-checks-1792150857615.json"
+    },
+    "preservation": {
+      "status": "PASS",
+      "tables": 50,
+      "baselineRows": 210406,
+      "files": 894,
+      "report": "preservation-1792150937419.json"
+    },
+    "runtime": {
+      "status": "PASS",
+      "bunListeners": 3,
+      "diagnostics": 6,
+      "report": "final-diagnostics.json"
+    },
+    "review": {
+      "status": "CLOSED",
+      "closedFindings": "R1-R9",
+      "report": "review.md",
+      "pins": "review-source-pins.json"
+    },
+    "worker": {
+      "status": "PASS",
+      "runs": 11,
+      "completed": 10,
+      "ownedCopies": 0,
+      "report": "r8-content-worker-checks.json"
+    },
+    "revocation": {
+      "status": "PASS",
+      "report": "revocation-anonymous-final.json"
+    },
+    "readonly": {
+      "status": "PASS",
+      "checks": 68,
+      "report": "readonly-checks-1792151247069.json"
+    },
+    "static": {
+      "status": "PASS",
+      "command": "python3 -B scripts/verify_agent_setup.py",
+      "exitCode": 0,
+      "maintainedHashes": 81,
+      "adaptations": 9,
+      "mirrorPairs": 28,
+      "markdownFiles": 136,
+      "localLinksAndAnchors": 1630,
+      "limits": "Static integrity only; native/runtime product checks separate"
+    },
+    "whitespace": {
+      "status": "PASS",
+      "command": "git diff --check",
+      "exitCode": 0
+    },
+    "build": {
+      "status": "PASS",
+      "exitCode": 0,
+      "privateLogSha256": "108aa684f572e20a69b7b779bd6d556d8d7aad69d54234b462d4c03d2e96b22f"
+    },
+    "lint": {
+      "status": "PASS",
+      "exitCode": 0,
+      "privateLogSha256": "dee4ed27004c3ac7c6715d0ba4a97bdbd2c55c7238b4a9b5b2745e176d575ff5"
+    },
+    "typecheck": {
+      "status": "PASS",
+      "exitCode": 0,
+      "privateLogSha256": "5b4e245b2468e2c2c8ae753279b6ee1d44a8ba70151027c6b8fe6d3554d34d36"
+    },
+    "reviewPins": {
+      "status": "PASS",
+      "files": 130,
+      "traces": 39,
+      "expectedAbsent": 1
+    }
+  },
+  "audit": {
+    "status": "FAIL_OPEN",
+    "advisory": "GHSA-vfj7-8cjw-p6xm",
+    "package": "braces",
+    "assessment": "Fresh independent bounded local M3 only",
+    "reassessBy": "2026-10-22",
+    "earlierTriggers": [
+      "patch",
+      "dependency",
+      "exposure change",
+      "before Production"
+    ]
+  },
+  "boundaries": [
+    "Inherited S01-S08/AUTH/M1/M2 acceptance and historical FAIL/Unknown/NOT_RUN unchanged",
+    "Test suites overlap; do not add assertions as one aggregate",
+    "No Git writes/commit/push/deploy or S13-S18 execution",
+    "No backup/restore, natural waiting, every browser/state, Production scale/SLO/full MVP proof",
+    "Known-value scan is not comprehensive discovery/OCR/runtime-memory proof",
+    "Resource invalidation owns zero copies; separate native Media cases prove physical purge"
+  ],
+  "recordedAt": "2026-10-16T11:47:48.647424+00:00"
+}

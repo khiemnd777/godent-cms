@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T11:40:43.284Z",
+  "tenantId": "0fa72a9d-260d-4a8a-b627-74edffcd649b",
+  "checks": [
+    "doctor and article saved draftV2 image:null while PublishedV1 stays active",
+    "both CMS panels show historical revision1 asset grant and withdrawal control despite zero current scopes",
+    "new-grant controls disabled with explicit explanation; no empty-scope exception",
+    "doctor V1 public image loaded before withdrawal",
+    "doctor scoped withdrawal keeps public page and prunes image",
+    "article use of same asset still loads after doctor scoped withdrawal",
+    "article historical grant withdrawal keeps article public and prunes its image"
+  ],
+  "screenshots": [
+    "r9-doctor-history-withdrawn.png",
+    "r9-article-history-withdrawn.png"
+  ],
+  "limits": "New isolated owned synthetic patient_derived classification and generated solid-color PNG only. Public old-gateway denial and immutable scope separately covered by actual API/native regression."
+}

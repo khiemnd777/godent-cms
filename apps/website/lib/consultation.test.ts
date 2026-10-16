@@ -63,3 +63,12 @@ test("keeps the frozen key after conflicts and fails closed when challenge loadi
   await expect(sendAttempt("synthetic", "service", attempt)).rejects.toMatchObject({ status: 409, code: "REQUEST_CONFLICT", uncertain: false });
   await expect(requestChallenge("synthetic", "service", attempt.requestKey)).rejects.toMatchObject({ status: 503, code: "CAPTCHA_UNAVAILABLE", uncertain: false });
 });
+test("keeps optional location absent for old payloads and freezes a selected location for retries", () => {
+  const locationId = "c7cc0cc4-76e0-4762-92dc-089184f51ea7";
+  expect(createAttempt({ ...values, locationId: "" }, publicationId)).not.toHaveProperty("locationId");
+  const attempt = createAttempt({ ...values, locationId }, publicationId);
+  expect(attempt.locationId).toBe(locationId); expect(Object.isFrozen(attempt)).toBe(true);
+  const changed = createAttempt({ ...values, locationId: "f78132b3-80f9-4d22-86e8-e37559f53016" }, publicationId);
+  expect(changed.requestKey).not.toBe(attempt.requestKey); expect(changed.locationId).not.toBe(attempt.locationId);
+  expect(() => createAttempt({ ...values, locationId: "../other-tenant" }, publicationId)).toThrow();
+});
