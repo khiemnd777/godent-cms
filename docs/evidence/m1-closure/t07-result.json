@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "events": [
+    {
+      "step": "owned_source_and_quota_verified",
+      "at": "2026-10-16T06:12:26.015Z",
+      "leads": 3,
+      "intents": 3,
+      "active_new_window": 0,
+      "active_request_window": 0
+    },
+    {
+      "step": "real_api_200_accepted",
+      "at": "2026-10-16T06:12:27.168Z"
+    },
+    {
+      "step": "initial_commit_db_barrier_before_response_discard",
+      "at": "2026-10-16T06:12:27.171Z",
+      "accepted": 1,
+      "leads": 1,
+      "intents": 1
+    },
+    {
+      "step": "first_browser_response_discarded_after_commit",
+      "at": "2026-10-16T06:12:27.171Z"
+    },
+    {
+      "step": "actual_unknown_ui_inputs_retained_and_frozen",
+      "at": "2026-10-16T06:12:27.255Z"
+    },
+    {
+      "step": "same_frozen_body_and_key_retry",
+      "at": "2026-10-16T06:12:27.291Z",
+      "bodyHash": "2e8832a20b606652b356dd08ec141ee58b991e1620b1a3e59e989c87cd0ef612",
+      "requestKeyHash": "a68313eedf71749c4b23542bbcfac49dd1a8a74047a15d97561d52c72f292a01"
+    },
+    {
+      "step": "browser_ack_and_exactly_one_lead_intent_after_retry",
+      "at": "2026-10-16T06:12:27.399Z",
+      "accepted": 1,
+      "leads": 1,
+      "intents": 1
+    }
+  ],
+  "sourceTenantId": "01aa4687-3f31-4965-85ac-4116b8d2f13c",
+  "website": "http://localhost:5892/auth-uat-b-01aa4687/dich-vu/auth-tu-van",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "headless": true,
+    "environmentKeyNames": [
+      "PATH",
+      "HOME",
+      "TMPDIR",
+      "LANG",
+      "LC_ALL",
+      "LC_CTYPE"
+    ],
+    "customProfile": false,
+    "existingCookiesImported": false,
+    "attachCDP": false,
+    "downloads": false
+  },
+  "expectedNormalUpdates": [
+    "One new lead/accepted_request/notification_intent/anonymous audit row",
+    "S05 source lead_sequence.last_number advances by exactly one",
+    "Source abuse-window records advance or expire through normal intake only"
+  ],
+  "limit": "One actual public intake with committed DB barrier before first browser response discard; unchanged same-form retry only. No auth, counter reset, backlog dispatch or app changes. CAPTCHA needed would stop this bounded retry check, not bypass normal adapter.",
+  "before": {
+    "leads": 3,
+    "intents": 3,
+    "active_new_window": 0,
+    "active_request_window": 0
+  },
+  "browserVersion": "155.0.8059.80",
+  "unknownUi": {
+    "retryVisible": true,
+    "inputsFrozen": true,
+    "inputRetained": true
+  },
+  "afterRetry": {
+    "accepted": 1,
+    "leads": 1,
+    "intents": 1
+  },
+  "after": {
+    "leads": 4,
+    "intents": 4
+  },
+  "requestKeyHash": "a68313eedf71749c4b23542bbcfac49dd1a8a74047a15d97561d52c72f292a01",
+  "normalizedBodyHash": "2e8832a20b606652b356dd08ec141ee58b991e1620b1a3e59e989c87cd0ef612",
+  "requests": 2,
+  "discardedBrowserResponses": 1,
+  "finalAckVisible": true,
+  "completedAt": "2026-10-16T06:12:27.399Z"
+}

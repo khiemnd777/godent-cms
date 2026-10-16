@@ -2,7 +2,7 @@
 
 ## Current authority, scope and initial state
 
-**Current result — CODE_INTEGRATED / VERIFIED_LOCAL within recorded scope / READY_FOR_USER_REVIEW; HUMAN_ACCEPTANCE_PENDING.** Final actual results are appended below; initial plan/NOT_RUN and prior checkpoints remain historical. No automatic M1 closure.
+**Current result — HUMAN_ACCEPTED — 2026-10-16.** Khiêm directly accepted AUTH. The acceptance append records provenance and the separately authorized automated M1 technical closure. Initial plan/NOT_RUN, prior technical handoffs and failed attempts remain historical.
 
 **APPROVED_EXECUTION_PLAN v0.1 / PLAN_SAVED — 2026-10-16, Asia/Ho_Chi_Minh.** This complete approved plan is saved before dependent application writes. Initial AUTH implementation/migration/runtime/browser checks are **NOT_RUN**. S01–S05 HUMAN_ACCEPTED and their historical PASS/FAIL/NOT_RUN remain unchanged; approval of AUTH is not new technical proof or automatic closure of M1 UAT.
 
@@ -187,3 +187,13 @@ Coordinator verified continuing direct human approval/disjoint owners/native sen
 Settled writer current-turn native medium/kit-implementer/gpt-6.1-sol/exact parent PASS turn01a14336-b22d-7840-8970-9e0f6807c691 at05:37:04.133Z; same approved writing turn/settings reused for final actual callback. Only16assigned documentation/ADR/current-policy/provenance paths changed across this closure scope. No app/SQL/scripts/package/lock/runtime/private/evidence JSON/DB/browser/Git writes by writer. Historical pins/master rows/accepted tasks/evidence preserved. Static results and FROZEN/RELEASED ownership are reported after execution; no further document callback needed for mechanical final receipts.
 
 Final settled documentation check actual PASS: ordinary verifier81maintained hashes/9adaptations/28mirror pairs/17skills per root/3native roles per client/129Markdown/1416local links; original unchanged integrity recipe20original/6adapted;13immutable UI pins/18exact master rows;16owned text whitespace/final newline; original6387-character plan/hash intact. AGENTS/README maintained digests+append provenance updated only. All16assigned documentation paths FROZEN/RELEASED to desktop. Coordinator performs its ordered after-document exact-known-secret/file-preservation/static receipt with no further writer pass required. Human AUTH acceptance pending; no new runtime/UAT proof or automatic M1 closure follows from these static checks.
+
+## Human acceptance and M1 closure — 2026-10-16
+
+Khiêm directly stated in desktop thread `01a1402c-3c81-7933-9927-d974f70c9fbc`,2026-10-16 Asia/Ho_Chi_Minh:
+
+> Nghiệm thu AUTH. Hoàn tất các kiểm chứng UAT còn mở bằng tự động trong local, cập nhật hồ sơ và báo cáo để đóng Chặng 1. Không bắt tao thao tác thủ công, chưa nâng dependency hoặc deploy.
+
+Desktop verified the direct human source. **AUTH is HUMAN_ACCEPTED.** This acceptance preserves all prior scoped API/browser/worker/build/review results and historical failures/NOT_RUN. It adds no technical proof by itself. The same instruction separately authorizes the remaining local automatic UAT and report to close M1, with no manual user step/dependency upgrade/deploy.
+
+The [M1 closure ledger](GCMS-M1-UAT-001.md#automated-local-closure-results--2026-10-16) records actual fresh invitation-expiry, controlled absolute-session401/private-clear/relogin, concurrent last-admin200/409, exact public postcommit retry and equivalent accessible current paging/detail/switch/loading. All required M1 functional criteria are now covered by fresh or validated current equivalent proof. AUTH acceptance and requested M1 local technical closure remain distinct from an invented separate human M1-UAT acceptance. Natural eight-hour waiting and exact unavailable historical records remain NOT_RUN as test modes; current equivalent/boundary criteria are closed. MFA-only criteria remain SUPERSEDED, not PASS. `braces` audit FAIL/local deferral/reassessment2026-10-22/earlier triggers and no production/S06+/Git/deploy boundary remain unchanged.

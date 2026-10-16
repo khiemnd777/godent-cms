@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "startedAt": "2026-10-16T06:15:54.318Z",
+  "paging": [
+    {
+      "label": "first20",
+      "size": 20,
+      "pageIndex": 0,
+      "rows": 20,
+      "firstCode": "YC-000057",
+      "lastCode": "YC-000007",
+      "idRosterHash": "410ad0d265c18b97bc43760549257b7dc28103d71526d6bb8c1d2c7c2ec66dfe",
+      "nextCursorPresent": true
+    },
+    {
+      "label": "first50",
+      "size": 50,
+      "pageIndex": 0,
+      "rows": 50,
+      "firstCode": "YC-000057",
+      "lastCode": "YC-000018",
+      "idRosterHash": "eb296d19420ca609b3c3d9d6570a001fab27e53dae89fa12bc0a446e838d7df8",
+      "nextCursorPresent": true
+    },
+    {
+      "label": "last50",
+      "size": 50,
+      "pageIndex": 1,
+      "rows": 7,
+      "firstCode": "YC-000006",
+      "lastCode": "YC-000001",
+      "idRosterHash": "f092c9dda3a1639da8190095816cb90eb1f67c52d5cfb8dc6dd7e082e94411f6",
+      "nextCursorPresent": false
+    },
+    {
+      "label": "back50",
+      "size": 50,
+      "pageIndex": 0,
+      "rows": 50,
+      "firstCode": "YC-000057",
+      "lastCode": "YC-000018",
+      "idRosterHash": "eb296d19420ca609b3c3d9d6570a001fab27e53dae89fa12bc0a446e838d7df8",
+      "nextCursorPresent": true
+    }
+  ],
+  "scope": "Fresh password-only A1 UI on accessible owned S05 dataset. Stable exact ID/code/source paging20/50/Back, detail and authorized tenant-switch clearing; unchanged S03 DraftEditor loading/busy/recovery with real API response transport delay. Original inaccessible historical tenant/c300 record remains not rerun.",
+  "dataset": {
+    "tenantId": "4e206516-529a-4799-b146-05f950214a00",
+    "rows": 57,
+    "orderedIdCodeHash": "19dc389dca46bd76e7c4f620c671766c6227f3e8c6ecf1b986d9825d7839bd12",
+    "sourceServiceId": "3f8db691-8254-4841-826f-8fb5d8d4e2bf",
+    "sourcePublicationId": "532902e0-e8bd-4fff-86b4-319746e77ea8"
+  },
+  "browserVersion": "155.0.8059.80",
+  "reused20Pages": {
+    "artifact": "paging-loading.json",
+    "observations": 5,
+    "orderedIdCodeHash": "19dc389dca46bd76e7c4f620c671766c6227f3e8c6ecf1b986d9825d7839bd12",
+    "limit": "Same current dataset/source; prior last failure is retained"
+  },
+  "pageSizeSelector": {
+    "exactLabelCount": 0,
+    "rolePatternCount": 1
+  },
+  "detail": {
+    "status": "PASS",
+    "leadId": "37cdedb4-f6d9-4ed1-adeb-96369bc8d167",
+    "code": "YC-000057",
+    "sourcePublicationId": "532902e0-e8bd-4fff-86b4-319746e77ea8",
+    "sourcePath": "/s05-ui-ef95e0e2/dich-vu/tu-van"
+  },
+  "tenantSwitch": {
+    "status": "PASS",
+    "otherTenantId": "01b0df9d-9e36-48a6-b875-94bdab559158",
+    "oldPrivateNodesAfter": 0
+  },
+  "loading": {
+    "status": "PASS_EQUIVALENT_CURRENT_COMPONENT",
+    "serviceId": "3f8db691-8254-4841-826f-8fb5d8d4e2bf",
+    "loading": {
+      "roleStatus": true,
+      "ariaBusy": 1,
+      "editorInputs": 0,
+      "capturedAt": "2026-10-16T06:15:55.744Z"
+    },
+    "transport": {
+      "upstreamStatus": 200,
+      "upstreamAt": "2026-10-16T06:15:55.742Z",
+      "responseBodyReplaced": false,
+      "releasedAt": "2026-10-16T06:15:55.773Z"
+    },
+    "recovery": {
+      "editorInputs": 1,
+      "busyNodes": 0,
+      "saveDisabled": true,
+      "title": "Tư vấn nha khoa"
+    },
+    "originalHistoricalRecord": "NOT_RUN - accessible owned equivalent used; original c300 record not rerun"
+  },
+  "sourceHashes": [
+    {
+      "path": "apps/admin/components/lead-workspace.tsx",
+      "sha256": "b3d6c5b896cd866be6076cfebbd032238011d095337cd9e378926b56d71c24fc"
+    },
+    {
+      "path": "apps/admin/components/lead-detail.tsx",
+      "sha256": "285901c3c778f05a146790a22961c10b20d8a147c1d63f875d72caf266edf0eb"
+    },
+    {
+      "path": "apps/admin/components/lead-filters.tsx",
+      "sha256": "071104614c3c95fea6910f885302cb7728a6e4ccd54487e7f1e8d3c66d6662f8"
+    },
+    {
+      "path": "apps/admin/components/workspace.tsx",
+      "sha256": "2dbbf5dea0cd6d63fea583ec3064e539fc8009afd00f42248e257ba7a82db88b"
+    },
+    {
+      "path": "apps/admin/components/draft-editor.tsx",
+      "sha256": "4096dae805c5b8029effa77b9ebfd60a5418e597d9a7c36674a9ae42ae11755d"
+    },
+    {
+      "path": "apps/admin/components/shell-state.tsx",
+      "sha256": "bfa6b2ebcb3a8902504b25fb68f6a684ff4c9119e2923ce0580438fd7d2d0418"
+    },
+    {
+      "path": "apps/admin/lib/access.ts",
+      "sha256": "02b4175e932ce57ad0024eb964bb3e27591103a90f9a7c47fdbb370b4a56e866"
+    },
+    {
+      "path": "apps/api/src/contracts/s03.ts",
+      "sha256": "fb83e0e072b7d32a0c4778c8ee40546e8c9cfc5faf0a764d7def97638bba7b06"
+    },
+    {
+      "path": "apps/api/src/contracts/s05.ts",
+      "sha256": "c059149c4a988104144911863cdb59e12347437af3d145934c4eeb92a8bbcf28"
+    }
+  ],
+  "finishedAt": "2026-10-16T06:15:55.912Z"
+}

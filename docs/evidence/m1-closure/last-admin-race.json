@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "startedAt": "2026-10-16T06:13:07.260Z",
+  "steps": [
+    {
+      "step": "concurrent-ui-self-revoke-200-409-single-survivor",
+      "at": "2026-10-16T06:13:08.579Z"
+    },
+    {
+      "step": "owned-roster-restored-through-normal-ui",
+      "at": "2026-10-16T06:13:09.359Z"
+    }
+  ],
+  "scope": "Actual isolated password-only UI concurrent self-revocation on exactly two owned AUTH B effective administrators; DB invariant and real access checks; ordinary invitation/acceptance restores only the revoked owned fixture. No retained account/credential/source change.",
+  "tenantId": "01aa4687-3f31-4965-85ac-4116b8d2f13c",
+  "before": {
+    "effectiveActiveAdministrators": 2,
+    "ownedActorLabels": [
+      "browserOwner",
+      "browserRecovery"
+    ]
+  },
+  "browserVersion": "155.0.8059.80",
+  "race": {
+    "status": "PASS",
+    "arrivals": [
+      {
+        "actor": "browserOwner",
+        "at": "2026-10-16T06:13:08.530Z"
+      },
+      {
+        "actor": "browserRecovery",
+        "at": "2026-10-16T06:13:08.545Z"
+      }
+    ],
+    "statuses": [
+      200,
+      409
+    ],
+    "effectiveActiveAdministratorsAfter": 1,
+    "survivorLabel": "browserRecovery",
+    "revokedLabel": "browserOwner",
+    "revokedUserIdHash": "e471c0c736a3f4232f778ab10982529b722a84a8331a161a27bb9c03680b8207"
+  },
+  "restoration": {
+    "status": "PASS",
+    "method": "ordinary UI invitation, local capture, password reauth and explicit acceptance",
+    "newAccounts": 0,
+    "effectiveActiveAdministrators": 2,
+    "retainedFixtureMembershipsChanged": 0
+  },
+  "finishedAt": "2026-10-16T06:13:09.447Z"
+}

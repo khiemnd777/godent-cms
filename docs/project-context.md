@@ -1,15 +1,15 @@
 # Project context
 
-**Current AUTH result — CODE_INTEGRATED / VERIFIED_LOCAL within recorded scope / READY_FOR_USER_REVIEW; HUMAN_ACCEPTANCE_PENDING.** Password-only UI/API/DB cutover and0014opaque-user-ID repair are verified. Actual bounded API9tests/79assertions, fulltype/lint/latest applicable appbuilds, browser lifecycle/invitation/operations/CAPTCHA/rendering, worker3captures/exact replay, DB31table preservation and protected-file/private-data checks PASS within the [final ledger](tasks/GCMS-AUTH-001.md#final-local-handoff--2026-10-16). Fresh browser invitation-expiry/natural8-hour wait NOT_RUN; API/historical expiry/race reuse is separate. Audit braces FAIL/open under local deferral/reassess2026-10-22 or earlier triggers. S01–S05 HUMAN_ACCEPTED unchanged; no automatic M1 closure/full-MVP/production/dependency-upgrade/Git/deploy/S06+ claim. Coordinator post-document exact-value scan/static receipt is the ordered final mechanical step; no extra human prompt.
+**M1 result — HUMAN_ACCEPTED — 2026-10-16.** Khiêm directly stated “Nghiệm thu Chặng 1.”; [full acceptance and next-stage direction](tasks/GCMS-M1-UAT-001.md#human-m1-acceptance-and-next-stage-direction--2026-10-16) record the source. Technical status remains VERIFIED_LOCAL_UAT_COMPLETE with the existing scoped local evidence and historical FAIL/NOT_RUN limits. S01–S05 and AUTH remain HUMAN_ACCEPTED. Khiêm will create a separate thread to plan each slice of all M2; M2 as a whole is not accepted, and S06–S18 execution remains unapproved. Acceptance adds no runtime proof, Git delivery or deployment authority.
 
-**M1 UAT prior checkpoint — PARTIAL_VERIFIED_LOCAL_UAT.** Historical scoped autonomous proof/manual NOT_RUN remains intact. [Current authentication-policy revision](tasks/GCMS-M1-UAT-001.md#authentication-policy-revision--2026-10-16) supersedes TOTP/MFA/backup-only criteria without converting them to PASS; AUTH implementation/UAT is a separate package and does not close M1 automatically.
+**AUTH result — HUMAN_ACCEPTED.** Khiêm directly stated “Nghiệm thu AUTH.” in the latest [approval](tasks/GCMS-AUTH-001.md#human-acceptance-and-m1-closure--2026-10-16). Password-only implementation and prior scoped API9tests/79assertions/build/type/lint/browser/worker evidence remain valid. Historical failed/NOT_RUN records are preserved; MFA-only cases are SUPERSEDED, not PASS. Natural eight-hour waiting and the exact unavailable historical c300/tenant navigation remain NOT_RUN as execution modes; controlled boundary and accessible equivalent-component proof satisfy the criteria. `braces` audit stays FAIL/open under the bounded local deferral, reassessment2026-10-22 or earlier patch/dependency/exposure/before production. No dependency upgrade, Git delivery, deployment, full-MVP/production or S06+ authority follows.
 
 | Field | Current value |
 | --- | --- |
 | Project | godent-cms |
 | Project Lead | Khiêm |
-| Accountable Project Coordinator | Desktop `/root`; AUTH shared contracts/runtime/cutover/final integration |
-| Documentation execution writer | Bounded settled `/root/s03_record` AUTH plan/current-pointer writer medium; desktop resumes on release |
+| Accountable Project Coordinator | Desktop `/root`; shared contracts/runtime/final integration and requested M1 technical closure |
+| Documentation execution writer | Bounded `/root/m1_acceptance_record` native kit-implementer/medium acceptance-record writer; desktop retains accountability |
 | Goal | Secure, maintainable, extensible, cost-efficient SaaS dental websites, publishing, SEO and consultation leads |
 | Users | Platform administrators; clinic owners/managers, marketing, dental professionals and reception using tenant administration; visitors and international visitors |
 | Organization model | One organization tenant / one branded website; locations are ordinary tenant-owned address/contact/opening rows |
@@ -26,10 +26,10 @@
 | Remaining product choices | S03-D01–D06 settle minimum layout/slug/safe text/explicit publish/SSR/SEO; full themes/catalog/localization/domain choices stay later scope |
 | Stack baseline | Bun, TypeScript, Bun workspaces; Next.js public/admin; NestJS/Express; PostgreSQL 18 and Drizzle; Better Auth adapter baseline |
 | D5 direction only | Moderate VPS Docker + S3-compatible storage in Vietnam only; production operating choices/AC-09 deferred beyond local MVP, not local security/functional/D4 proof |
-| Current authority | Direct human GCMS-AUTH-001 v0.1 password-only UI/API/DB+automatic local UAT approval2026-10-16; [full plan/provenance](tasks/GCMS-AUTH-001.md); no dependency upgrade/Git/deploy |
+| Current authority | Direct human M1 acceptance2026-10-16; future separate M2 slice-planning thread will be created by Khiêm; S06–S18 execution unapproved |
 | Design artifact | [Administration v0.1+Lucide](design/admin-ui-ux.md), [approved baseline](design/admin-mockup/approved-baseline.json); APPROVED_UI_UX for four representative screens and shared delivered patterns |
 | Delivery workflow | [GCMS-DELIVERY-001 v0.1](delivery-workflow.md), APPROVED_WORKFLOW; apply before planning/executing staged delivery. Saving it does not authorize app work |
-| Application status | S01–S05 HUMAN_ACCEPTED; AUTH CODE_INTEGRATED/VERIFIED_LOCAL scoped/READY_FOR_USER_REVIEW, human acceptance pending; M1 closure separate |
+| Application status | M1/S01–S05/AUTH HUMAN_ACCEPTED; M1 technical VERIFIED_LOCAL_UAT_COMPLETE unchanged; M2 as a whole not accepted |
 | Historical environment | Local Bun 1.3.1, Python 3.13.3 and Git 2.50.1 observed during setup; not a production compatibility selection |
 | Current bookkeeping effort | AUTH settled writer medium PASS; sensitive auth/database/FE/testing+review native xhigh; desktop coordinator owns contracts/runtime/integration |
 | Commands and proof | [S02 ledger](tasks/GCMS-S02-001.md#actual-execution-and-handoff--2026-10-16), [runbook](local-development.md), [verification results](verification-results.md); historical S01 retained |

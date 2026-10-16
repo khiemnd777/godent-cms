@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "startedAt": "2026-10-16T06:11:14.114Z",
+  "steps": [
+    {
+      "step": "normal-ui-invite-local-capture-then-exact-owned-expiry",
+      "at": "2026-10-16T06:11:15.382Z",
+      "invitationId": "6a91921b-f3bb-493f-9d69-2e2079cb010c"
+    },
+    {
+      "step": "real-expired-invitation-ui-rejected-no-account-or-grant",
+      "at": "2026-10-16T06:11:15.675Z"
+    },
+    {
+      "step": "fresh-session-age-over-eight-hours-with-future-expiry",
+      "at": "2026-10-16T06:11:16.168Z",
+      "sessionIdHash": "36218cd9a3734c654a0a6227f1fe521ca0708a52a6ec79ab6e22084cfe564b9f",
+      "privateRowsBefore": 3
+    },
+    {
+      "step": "absolute-boundary-401-private-clear-login-link-and-successful-relogin",
+      "at": "2026-10-16T06:11:16.550Z"
+    }
+  ],
+  "scope": "Fresh isolated installed Chrome, real UI/API/DB: expired invitation registration denial and controlled absolute-session boundary. No system clock/application/source changes or natural eight-hour wait.",
+  "browserLaunch": {
+    "channel": "chrome",
+    "chromiumSandbox": true,
+    "existingProfileOrCookies": false,
+    "CDP": false,
+    "downloads": false
+  },
+  "health": [
+    {
+      "endpoint": "http://127.0.0.1:5890/health",
+      "status": 200
+    },
+    {
+      "endpoint": "http://127.0.0.1:5891/login",
+      "status": 200
+    },
+    {
+      "endpoint": "http://localhost:5892",
+      "status": 200
+    }
+  ],
+  "browserVersion": "155.0.8059.80",
+  "invitationExpiry": {
+    "status": "PASS",
+    "registrationStatus": 400,
+    "newAccounts": 0,
+    "membershipDelta": 0,
+    "accepted": false,
+    "revoked": false,
+    "controlledOwnedExpiry": true
+  },
+  "absoluteSession": {
+    "status": "PASS",
+    "controlledAgeSeconds": 28860,
+    "expiresAtStillFuture": true,
+    "protectedStatus": 401,
+    "privateRowsBefore": 3,
+    "privateNodesAfter": 0,
+    "naturalEightHourWait": "NOT_RUN - controlled owned session age proves boundary"
+  },
+  "successfulLoginAfterBoundary": true,
+  "completedAt": "2026-10-16T06:11:16.626Z"
+}

@@ -1,0 +1,40 @@
+- main:
+  - text: Nội dung nha khoa / Dịch vụ
+  - heading "Tư vấn nha khoa" [level=1]
+  - text: Đã xuất bản
+  - button "Lưu bản nháp" [disabled]
+  - button "Xem trước"
+  - button "Cập nhật website" [disabled]
+  - tablist "Soạn dịch vụ":
+    - tab "Nội dung" [selected]
+    - tab "SEO & đường dẫn"
+    - text: VI · Tiếng Việt
+  - tabpanel "Nội dung":
+    - text: Tên dịch vụ
+    - textbox "Tên dịch vụ": Tư vấn nha khoa
+    - text: Giới thiệu ngắn
+    - textbox "Giới thiệu ngắn Giới thiệu rõ ràng, gần gũi với người đọc.": Dịch vụ minh họa cho quy trình tiếp nhận và xử lý tư vấn.
+    - text: Giới thiệu rõ ràng, gần gũi với người đọc. Nội dung chi tiết
+    - toolbar "Định dạng nội dung":
+      - button "Định dạng tiêu đề H2"
+      - button "Định dạng danh sách"
+      - button "Văn bản"
+      - button "Chèn liên kết"
+    - textbox "Nội dung chi tiết": Gửi yêu cầu để phòng khám liên hệ tư vấn.
+    - text: 10 từ VI · Tiếng Việt
+    - paragraph: Dùng H2, danh sách và liên kết HTTP/HTTPS. Nội dung HTML được hiển thị như văn bản. Tối đa 20.000 ký tự hiển thị.
+  - complementary:
+    - heading "Xuất bản" [level=2]
+    - text: Trạng thái website Đã xuất bản Phiên bản đang chạy
+    - strong: Phiên bản 1
+    - text: Bản nháp
+    - strong: Đã lưu · phiên bản 1
+    - text: Ngôn ngữ
+    - strong: Tiếng Việt
+    - paragraph:
+      - text: Lưu bản nháp không làm thay đổi website. Chỉ cập nhật khi bạn chọn
+      - strong: Cập nhật website
+      - text: .
+    - link "Xem bản đã xuất bản":
+      - /url: http://localhost:5892/s05-ui-ef95e0e2/dich-vu/tu-van
+  - text: Được xây dựng cùng Godent Website nha khoa · Nội dung của bạn, thương hiệu của bạn

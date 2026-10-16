@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T06:22:28.354593+00:00",
+  "sourceBaseline": "f6877b8dc60e4d0a2c3f35270df0658b2c368178",
+  "applicationChanges": 0,
+  "migrationDependencyChanges": 0,
+  "ordinaryVerifier": {
+    "command": "python3 -B scripts/verify_agent_setup.py",
+    "exitCode": 0,
+    "maintainedHashes": 81,
+    "declaredAdaptations": 9,
+    "mirrorPairs": 28,
+    "skillsPerRoot": 17,
+    "nativeRolesPerClient": 3,
+    "markdownFiles": 129,
+    "localLinks": 1430
+  },
+  "originalRecipe": {
+    "source": "docs/verification-guide.md unchanged original Python recipe",
+    "status": "PASS",
+    "original": 20,
+    "adapted": 6
+  },
+  "filePreservation": "file-preservation-final.json",
+  "databasePreservation": "preservation.json",
+  "runtime": {
+    "status": "PASS",
+    "taskType": "test-development",
+    "risk": "authorization",
+    "required": "xhigh",
+    "requested": "xhigh",
+    "observed": "xhigh",
+    "role": "kit-implementer",
+    "model": "gpt-6.1-sol",
+    "threadId": "01a14353-02d5-7082-b66a-6cc8f189a21a",
+    "parentThreadId": "01a1402c-3c81-7933-9927-d974f70c9fbc",
+    "turnId": "01a14353-0356-70d0-8f37-6ecb3a44e8b0",
+    "evidenceKind": "runtime_written_turn_context"
+  },
+  "helperHashes": [
+    {
+      "path": ".local/m1-closure-baseline.ts",
+      "sha256": "8ccdbb9b8ef0021fda51f623b62721ae5d5fd28acce9c13680c637f6a14c6cf6"
+    },
+    {
+      "path": ".local/m1-closure-browser-boundaries.ts",
+      "sha256": "d16e5bbf7908a2bd93c69289eb1dfe4353e9e0191eabd5fcbeb5acbf7f6e7338"
+    },
+    {
+      "path": ".local/m1-closure-t07.ts",
+      "sha256": "1d1ad0bf821b37e856aab69e3b37f0a0a231366859de64ec31ad213a78d35fe2"
+    },
+    {
+      "path": ".local/m1-closure-last-admin-race.ts",
+      "sha256": "db21b3310c00b4d9702cec88eb8a12c12aaf7d0766a4206c782b3d57752ec944"
+    },
+    {
+      "path": ".local/m1-closure-paging-loading.ts",
+      "sha256": "09e85ece928c97a8ba25867b43d0f9887a41d3665a98c084121d6fa057d5974c"
+    },
+    {
+      "path": ".local/m1-closure-paging-loading-attempt2.ts",
+      "sha256": "d7d3cae2a982caa2b9e8050f627830ffd29ff76ffea4b7c3f4beaa835cbcb8b2"
+    },
+    {
+      "path": ".local/m1-closure-preservation.ts",
+      "sha256": "61e863a4a5c28d7575a10d66a2dcd0fb6b296fe631c441e057f209540b5c9e43"
+    }
+  ],
+  "visualReview": {
+    "reviewer": "Desktop parent coordinator",
+    "newJpegs": 11,
+    "ocr": false
+  },
+  "requiredFunctionalUatGaps": 0,
+  "validReuse": "Prior accepted S03/M1/AUTH current-policy source/runtime/security evidence with unchanged application/dependency inputs; no new independent reviewer claimed.",
+  "limits": [
+    "Natural8hour wait not run; controlled owned session age proves absolute boundary",
+    "Original inaccessible tenant/c300 record not rerun; equivalent accessible current component proves criterion",
+    "Braces audit remains FAIL/open with bounded local deferral through2026-10-22/earlier triggers",
+    "No backuprestore,domainTLS,production,S06+,Gitdelivery or deploy proof"
+  ]
+}

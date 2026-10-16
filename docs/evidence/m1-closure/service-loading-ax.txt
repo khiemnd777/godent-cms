@@ -1,0 +1,5 @@
+- main:
+  - status:
+    - heading "Đang tải dịch vụ" [level=2]
+    - paragraph: Đang kiểm tra quyền truy cập hiện tại.
+  - text: Được xây dựng cùng Godent Website nha khoa · Nội dung của bạn, thương hiệu của bạn

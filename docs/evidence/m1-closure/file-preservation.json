@@ -1,0 +1,80 @@
+{
+  "status": "FAIL",
+  "observedAt": "2026-10-16T06:21:05.077943+00:00",
+  "trackedBaselineFiles": 793,
+  "unchangedTrackedFiles": 783,
+  "changedOwnedFiles": [
+    "AGENTS.md",
+    "README.md",
+    "docs/local-development.md",
+    "docs/project-context.md",
+    "docs/project-plan.md",
+    "docs/project-state.md",
+    "docs/skills-manifest.json",
+    "docs/tasks/GCMS-AUTH-001.md",
+    "docs/tasks/GCMS-M1-UAT-001.md",
+    "docs/verification-results.md"
+  ],
+  "unexpectedTrackedChanges": [],
+  "retainedPrivateFiles": 161,
+  "privateFilesByteUnchanged": 161,
+  "permittedPrivateMetadataChanges": [],
+  "unexpectedPrivateChanges": [],
+  "approvedUiPins": 13,
+  "allPinsUnchanged": true,
+  "masterSliceRows": 18,
+  "allMasterRowsByteUnchanged": true,
+  "historicalTasks": [
+    {
+      "path": "docs/tasks/GCMS-AUTH-001.md",
+      "oldBodyPreserved": false
+    },
+    {
+      "path": "docs/tasks/GCMS-M1-UAT-001.md",
+      "oldBodyPreserved": true
+    }
+  ],
+  "whitespace": [
+    {
+      "path": "docs/project-context.md",
+      "pass": true
+    },
+    {
+      "path": "docs/tasks/GCMS-AUTH-001.md",
+      "pass": true
+    },
+    {
+      "path": "docs/skills-manifest.json",
+      "pass": true
+    },
+    {
+      "path": "AGENTS.md",
+      "pass": true
+    },
+    {
+      "path": "README.md",
+      "pass": true
+    },
+    {
+      "path": "docs/project-plan.md",
+      "pass": true
+    },
+    {
+      "path": "docs/project-state.md",
+      "pass": true
+    },
+    {
+      "path": "docs/tasks/GCMS-M1-UAT-001.md",
+      "pass": true
+    },
+    {
+      "path": "docs/verification-results.md",
+      "pass": true
+    },
+    {
+      "path": "docs/local-development.md",
+      "pass": true
+    }
+  ],
+  "scope": "Current scoped hashes, not backup/restore. Only assigned10documentation/manifest paths may differ; all old tracked source, migrations, package/lock, evidence and private files preserve bytes except legitimate launcher process metadata. New owned closure evidence/helpers are additive."
+}

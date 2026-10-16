@@ -1,0 +1,74 @@
+{
+  "status": "FAIL",
+  "startedAt": "2026-10-16T06:14:38.623Z",
+  "paging": [
+    {
+      "label": "first20",
+      "size": 20,
+      "pageIndex": 0,
+      "rows": 20,
+      "firstCode": "YC-000057",
+      "lastCode": "YC-000007",
+      "idRosterHash": "410ad0d265c18b97bc43760549257b7dc28103d71526d6bb8c1d2c7c2ec66dfe",
+      "nextCursorPresent": true
+    },
+    {
+      "label": "next20:1",
+      "size": 20,
+      "pageIndex": 1,
+      "rows": 20,
+      "firstCode": "YC-000040",
+      "lastCode": "YC-000011",
+      "idRosterHash": "ca92c6ebbe41112e2dde541d12cafe6b7f2df25a27dbec7fe2b6359b7386c05e",
+      "nextCursorPresent": true
+    },
+    {
+      "label": "next20:2",
+      "size": 20,
+      "pageIndex": 2,
+      "rows": 17,
+      "firstCode": "YC-000054",
+      "lastCode": "YC-000001",
+      "idRosterHash": "a094831883de5c0d89d28c9ae20e69fda7a98cbca609ea1547a21452c2cea8c7",
+      "nextCursorPresent": false
+    },
+    {
+      "label": "back20:1",
+      "size": 20,
+      "pageIndex": 1,
+      "rows": 20,
+      "firstCode": "YC-000040",
+      "lastCode": "YC-000011",
+      "idRosterHash": "ca92c6ebbe41112e2dde541d12cafe6b7f2df25a27dbec7fe2b6359b7386c05e",
+      "nextCursorPresent": true
+    },
+    {
+      "label": "back20:0",
+      "size": 20,
+      "pageIndex": 0,
+      "rows": 20,
+      "firstCode": "YC-000057",
+      "lastCode": "YC-000007",
+      "idRosterHash": "410ad0d265c18b97bc43760549257b7dc28103d71526d6bb8c1d2c7c2ec66dfe",
+      "nextCursorPresent": true
+    }
+  ],
+  "scope": "Fresh password-only A1 UI on accessible owned S05 dataset. Stable exact ID/code/source paging20/50/Back, detail and authorized tenant-switch clearing; unchanged S03 DraftEditor loading/busy/recovery with real API response transport delay. Original inaccessible historical tenant/c300 record remains not rerun.",
+  "dataset": {
+    "tenantId": "4e206516-529a-4799-b146-05f950214a00",
+    "rows": 57,
+    "orderedIdCodeHash": "19dc389dca46bd76e7c4f620c671766c6227f3e8c6ecf1b986d9825d7839bd12",
+    "sourceServiceId": "3f8db691-8254-4841-826f-8fb5d8d4e2bf",
+    "sourcePublicationId": "532902e0-e8bd-4fff-86b4-319746e77ea8"
+  },
+  "browserVersion": "155.0.8059.80",
+  "failure": {
+    "phase": "page-size50",
+    "name": "TimeoutError",
+    "strict": false,
+    "detached": false,
+    "timeout": true,
+    "rawDetailsRedacted": true
+  },
+  "finishedAt": "2026-10-16T06:14:51.914Z"
+}
