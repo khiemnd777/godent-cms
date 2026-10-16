@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="4" assertions="36" failures="2" skipped="0" time="1.716696">
+  <testsuite name="apps/api/test/m5-domain-lifecycle-local.test.ts" file="apps/api/test/m5-domain-lifecycle-local.test.ts" tests="4" assertions="36" failures="2" skipped="0" time="1.69506" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 controlled domain lifecycle and URL-context races" file="apps/api/test/m5-domain-lifecycle-local.test.ts" line="7" tests="4" assertions="36" failures="2" skipped="0" time="0.513" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="www is a distinct exact binding; another tenant cannot claim the registered host" classname="M5 controlled domain lifecycle and URL-context races" time="0.108691" file="apps/api/test/m5-domain-lifecycle-local.test.ts" line="16" assertions="4" />
+      <testcase name="replacement sends both previous entries directly to the new primary; deactivation denies only the old alias" classname="M5 controlled domain lifecycle and URL-context races" time="0.315045" file="apps/api/test/m5-domain-lifecycle-local.test.ts" line="19" assertions="18" />
+      <testcase name="remove and re-register allocate a new identity/generation; old receipts cannot resurrect the removed binding" classname="M5 controlled domain lifecycle and URL-context races" time="0.036721" file="apps/api/test/m5-domain-lifecycle-local.test.ts" line="24" assertions="6">
+        <failure type="AssertionError" message="expect(received).toBeGreaterThan(expected)&#10;&#10;Expected: &gt; 3&#10;Received: 1&#10;">AssertionError: expect(received).toBeGreaterThan(expected)&#10;&#10;Expected: &gt; 3&#10;Received: 1&#10;&#10;      at apps/api/test/m5-domain-lifecycle-local.test.ts:25:428&#10;</failure>
+      </testcase>
+      <testcase name="primary reverify keeps its identity while denying stale entry pins until explicit fresh verification" classname="M5 controlled domain lifecycle and URL-context races" time="0.054478" file="apps/api/test/m5-domain-lifecycle-local.test.ts" line="28" assertions="8">
+        <failure type="AssertionError" message="expect(received).toBe(expected)&#10;&#10;Expected: false&#10;Received: true&#10;">AssertionError: expect(received).toBe(expected)&#10;&#10;Expected: false&#10;Received: true&#10;&#10;      at apps/api/test/m5-domain-lifecycle-local.test.ts:30:39&#10;</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="15" assertions="171" failures="0" skipped="0" time="1.42458">
+  <testsuite name="apps/website/components/m5-navigation.test.tsx" file="apps/website/components/m5-navigation.test.tsx" tests="1" assertions="92" failures="0" skipped="0" time="0.39424" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="targets the absolute current primary from a custom entry for both themes, locales and primary modes" classname="" time="0.156328" file="apps/website/components/m5-navigation.test.tsx" line="12" assertions="92" />
+  </testsuite>
+  <testsuite name="apps/admin/components/m5-recovery-controls.test.tsx" file="apps/admin/components/m5-recovery-controls.test.tsx" tests="4" assertions="15" failures="0" skipped="0" time="0.498925" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="offers verify-local for a pending current-primary generation without requiring another reverify" classname="" time="0.000759" file="apps/admin/components/m5-recovery-controls.test.tsx" line="12" assertions="6" />
+    <testcase name="keeps explicit reverify available for an active current primary" classname="" time="0.000161" file="apps/admin/components/m5-recovery-controls.test.tsx" line="18" assertions="2" />
+    <testcase name="removes new execution controls after irreversible deletion has failed" classname="" time="0.00559" file="apps/admin/components/m5-recovery-controls.test.tsx" line="22" assertions="4" />
+    <testcase name="keeps the confirmed deletion form explicit and blocks an unelapsed executeAfter" classname="" time="0.000656" file="apps/admin/components/m5-recovery-controls.test.tsx" line="28" assertions="3" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/m5-input.test.ts" file="apps/admin/lib/m5-input.test.ts" tests="4" assertions="17" failures="0" skipped="0" time="0.002131" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 administrative inputs" file="apps/admin/lib/m5-input.test.ts" line="5" tests="3" assertions="13" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="keeps unset, monitor and enforced distinct without implicit quota values" classname="M5 administrative inputs" time="0.000691" file="apps/admin/lib/m5-input.test.ts" line="6" assertions="4" />
+      <testcase name="rejects fractions, negative, exponent and unsafe integer limits" classname="M5 administrative inputs" time="0.000128" file="apps/admin/lib/m5-input.test.ts" line="12" assertions="4" />
+      <testcase name="requires an explicit deletion instant without an invented grace default" classname="M5 administrative inputs" time="0.00019" file="apps/admin/lib/m5-input.test.ts" line="15" assertions="5" />
+    </testsuite>
+    <testcase name="requires an explicit initial quota choice and preserves an enforced zero" classname="" time="0.000254" file="apps/admin/lib/m5-input.test.ts" line="23" assertions="4" />
+  </testsuite>
+  <testsuite name="apps/api/test/m5-domains-safety.test.ts" file="apps/api/test/m5-domains-safety.test.ts" tests="4" assertions="42" failures="0" skipped="0" time="0.001647" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 suspended safety classification" file="apps/api/test/m5-domains-safety.test.ts" line="7" tests="4" assertions="42" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="admits only complete unpublish and withdrawal shapes" classname="M5 suspended safety classification" time="0.00009" file="apps/api/test/m5-domains-safety.test.ts" line="8" assertions="3" />
+      <testcase name="spoofed selectors, nested commands, extra writes and malformed versions stay denied" classname="M5 suspended safety classification" time="0.00007" file="apps/api/test/m5-domains-safety.test.ts" line="13" assertions="33" />
+      <testcase name="HTTP command parser owns type; caller cannot relabel a save as safety" classname="M5 suspended safety classification" time="0.000197" file="apps/api/test/m5-domains-safety.test.ts" line="16" assertions="3" />
+      <testcase name="private referenced images use read capabilities and incomplete gallery pairs disappear together" classname="M5 suspended safety classification" time="0.000241" file="apps/api/test/m5-domains-safety.test.ts" line="22" assertions="3" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/api/test/m5-root.test.ts" file="apps/api/test/m5-root.test.ts" tests="2" assertions="5" failures="0" skipped="0" time="0.51782" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="quota failure exposes only bounded public admission facts" classname="" time="0.000451" file="apps/api/test/m5-root.test.ts" line="5" assertions="2" />
+    <testcase name="M5 command failures and recent-auth requirements retain known codes without messages" classname="" time="0.000338" file="apps/api/test/m5-root.test.ts" line="11" assertions="3" />
+  </testsuite>
+</testsuites>

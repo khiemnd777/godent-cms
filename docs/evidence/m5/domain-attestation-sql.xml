@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="4" assertions="5" failures="0" skipped="0" time="0.365012">
+  <testsuite name="apps/api/test/m5-domains-attestation.test.ts" file="apps/api/test/m5-domains-attestation.test.ts" tests="4" assertions="5" failures="0" skipped="0" time="0.356965" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 direct restricted-role domain attestation boundary" file="apps/api/test/m5-domains-attestation.test.ts" line="10" tests="4" assertions="5" failures="0" skipped="0" time="0.079" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="matching forged synthetic JSON cannot verify an unlisted host" classname="M5 direct restricted-role domain attestation boundary" time="0.026595" file="apps/api/test/m5-domains-attestation.test.ts" line="25" assertions="1" />
+      <testcase name="omitting JSON evidence cannot mint proof without owner enrollment" classname="M5 direct restricted-role domain attestation boundary" time="0.031592" file="apps/api/test/m5-domains-attestation.test.ts" line="33" assertions="1" />
+      <testcase name="old defaulted command body is not an executable bypass" classname="M5 direct restricted-role domain attestation boundary" time="0.01391" file="apps/api/test/m5-domains-attestation.test.ts" line="40" assertions="1" />
+      <testcase name="runtime role cannot read or enroll the owner attestation capability" classname="M5 direct restricted-role domain attestation boundary" time="0.009943" file="apps/api/test/m5-domains-attestation.test.ts" line="43" assertions="2" />
+    </testsuite>
+  </testsuite>
+</testsuites>

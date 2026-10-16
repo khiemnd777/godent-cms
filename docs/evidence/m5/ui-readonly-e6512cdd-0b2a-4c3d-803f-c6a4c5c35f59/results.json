@@ -1,0 +1,43 @@
+{
+  "owner": "GCMS-M5-UI-READONLY-v1",
+  "fixtureRun": "6c18ade7-1f3e-4d80-9931-e4e02b4243b7",
+  "status": "PASS",
+  "checks": [
+    {
+      "state": "platform-responsive",
+      "width": 1440,
+      "viewport": 1440,
+      "document": 1440,
+      "outside": 0,
+      "status": "PASS"
+    },
+    {
+      "state": "platform-responsive",
+      "width": 390,
+      "viewport": 390,
+      "document": 390,
+      "outside": 0,
+      "status": "PASS"
+    },
+    {
+      "state": "platform-responsive",
+      "width": 320,
+      "viewport": 320,
+      "document": 320,
+      "outside": 0,
+      "status": "PASS"
+    },
+    {
+      "state": "loading-error-keyboard-retry-real-GET",
+      "endpoint": "/api/tenants/3668d499-dda1-46ed-b03f-a959d93786e1/domains",
+      "status": "PASS"
+    },
+    {
+      "state": "loading-error-keyboard-retry-real-GET",
+      "endpoint": "/api/cms/tenants/3668d499-dda1-46ed-b03f-a959d93786e1/m5/platform",
+      "status": "PASS"
+    }
+  ],
+  "pageErrors": [],
+  "limits": "Browser-only read faults; recovery reads the actual API. No business commands, export download, domain or lifecycle mutation."
+}

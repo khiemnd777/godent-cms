@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "archive": "m5-export-2cd199e9-c216-4363-bbc6-8b0e03488124.zip",
+      "entries": 27,
+      "datasets": 25,
+      "crc": "PASS",
+      "manifestComplete": true,
+      "restoreBackup": false
+    },
+    {
+      "archive": "m5-export-3d29ee6f-cb34-4b29-8134-68c6510c870c.zip",
+      "entries": 27,
+      "datasets": 25,
+      "crc": "PASS",
+      "manifestComplete": true,
+      "restoreBackup": false
+    },
+    {
+      "archive": "m5-export-77134b7e-7dac-40d6-a534-90ef829b3fa9.zip",
+      "entries": 27,
+      "datasets": 25,
+      "crc": "PASS",
+      "manifestComplete": true,
+      "restoreBackup": false
+    },
+    {
+      "archive": "m5-export-d3c1f974-bdce-42fa-96d2-40514c5ec329.zip",
+      "entries": 27,
+      "datasets": 25,
+      "crc": "PASS",
+      "manifestComplete": true,
+      "restoreBackup": false
+    }
+  ],
+  "validator": "Python standard zipfile independent reader",
+  "historicalProbe": "Initial checker expected26 datasets; corrected to the declared25 after source comparison. No export bytes changed."
+}

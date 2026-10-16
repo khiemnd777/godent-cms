@@ -67,7 +67,7 @@ export class DomainService {
   async listDrafts(request: PrivateRequest, tenant: string, cursor: unknown): Promise<Page<ServiceDraft>> {
     const tenantId = parseIdentifier(tenant); const scope = `${tenantId}:services`;
     const after = decodePageCursor(cursor, scope); const actor = await this.actor(request);
-    return this.db.withTenant(actor, tenantId, async tx => {
+    return this.db.withReadTenant(actor, tenantId, async tx => {
       const items = rows<ServiceDraft>(await tx.execute(sql`SELECT ${draftColumns} FROM gcms_s02.service_draft
         WHERE tenant_id = ${tenantId} AND (${after}::text IS NULL OR id > ${after}) ORDER BY id LIMIT ${PAGE_SIZE + 1}`));
       return page(items.map(draft), scope, item => item.id);
@@ -75,7 +75,7 @@ export class DomainService {
   }
   async getDraft(request: PrivateRequest, tenant: string, id: string): Promise<ServiceDraft> {
     const tenantId = parseIdentifier(tenant); const draftId = parseIdentifier(id); const actor = await this.actor(request);
-    return this.db.withTenant(actor, tenantId, async tx => {
+    return this.db.withReadTenant(actor, tenantId, async tx => {
       const [value] = rows<ServiceDraft>(await tx.execute(sql`SELECT ${draftColumns} FROM gcms_s02.service_draft
         WHERE tenant_id = ${tenantId} AND id = ${draftId}`));
       if (!value) throw new NotFoundException();
@@ -123,6 +123,8 @@ export class DomainService {
       await this.identity.requireRecent(current, tx);
       const [tenant] = rows<TenantSummary>(await tx.execute(sql`INSERT INTO gcms_s02.tenant (id,name,status)
         VALUES (${randomUUID()},${value.name},'active') RETURNING id,name,status,created_at AS "createdAt"`));
+      // Initialize the explicit policy in the same transaction, before any invitation can be handed off.
+      await tx.execute(sql`SELECT gcms_m5.initialize_new_tenant(${tenant.id},${JSON.stringify(value.initialQuotaPolicy)}::text::jsonb)`);
       const invite = await this.insertInvitation(tx, current, tenant.id, value.initialAdminEmail, token);
       await this.audit(tx, current, tenant.id, 'tenant.provisioned', tenant.id);
       return { tenant: { ...tenant, createdAt: iso(tenant.createdAt) }, invitation: invite };
@@ -133,7 +135,7 @@ export class DomainService {
   async listMembers(request: PrivateRequest, tenant: string, cursor: unknown): Promise<Page<MemberSummary>> {
     const tenantId = parseIdentifier(tenant); const actor = await this.actor(request);
     const scope = `${tenantId}:members`; const after = decodePageCursor(cursor, scope);
-    return this.db.withTenant(actor, tenantId, async tx => {
+    return this.db.withReadTenant(actor, tenantId, async tx => {
       const items = rows<MemberSummary>(await tx.execute(sql`SELECT m.user_id AS "userId",u.name,u.email,m.role,m.status
         FROM gcms_s02.membership m JOIN gcms_s02_auth."user" u ON u.id=m.user_id
         WHERE m.tenant_id=${tenantId} AND (${after}::text IS NULL OR m.user_id>${after}) ORDER BY m.user_id LIMIT ${PAGE_SIZE + 1}`));
@@ -154,7 +156,7 @@ export class DomainService {
   async listInvitations(request: PrivateRequest, tenant: string, cursor: unknown): Promise<Page<InvitationSummary>> {
     const tenantId = parseIdentifier(tenant); const actor = await this.actor(request);
     const scope = `${tenantId}:invitations`; const after = decodePageCursor(cursor, scope);
-    return this.db.withTenant(actor, tenantId, async tx => {
+    return this.db.withReadTenant(actor, tenantId, async tx => {
       const items = rows<InvitationSummary>(await tx.execute(sql`SELECT ${invitationColumns} FROM gcms_s02.invitation
         WHERE tenant_id=${tenantId} AND (${after}::text IS NULL OR id>${after}) ORDER BY id LIMIT ${PAGE_SIZE + 1}`));
       return page(items.map(invitation), scope, item => item.id);

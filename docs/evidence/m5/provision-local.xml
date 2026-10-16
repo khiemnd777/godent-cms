@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="1" assertions="6" failures="0" skipped="0" time="0.683655">
+  <testsuite name="apps/api/test/m5-provision-local.test.ts" file="apps/api/test/m5-provision-local.test.ts" tests="1" assertions="6" failures="0" skipped="0" time="0.676149" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 real new-tenant policy before invitation handoff" file="apps/api/test/m5-provision-local.test.ts" line="5" tests="1" assertions="6" failures="0" skipped="0" time="0.094" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="explicit zero quota is committed atomically with the new synthetic tenant and invitation" classname="M5 real new-tenant policy before invitation handoff" time="0.094873" file="apps/api/test/m5-provision-local.test.ts" line="7" assertions="6" />
+    </testsuite>
+  </testsuite>
+</testsuites>

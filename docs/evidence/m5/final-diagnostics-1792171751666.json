@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T17:29:11.666Z",
+  "processes": [
+    {
+      "name": "api",
+      "launcherChild": 79517,
+      "listenerPid": 79517,
+      "port": 5890,
+      "ancestry": [
+        79517
+      ],
+      "runtime": "bun",
+      "executable": "/Users/khiemnguyen/Works/godent-cms/godent-cms/node_modules/.bun/bun@1.4.3/node_modules/bun/bin/bun.exe",
+      "loopback": true
+    },
+    {
+      "name": "admin",
+      "launcherChild": 79518,
+      "listenerPid": 79521,
+      "port": 5891,
+      "ancestry": [
+        79521,
+        79518
+      ],
+      "runtime": "bun",
+      "executable": "/Users/khiemnguyen/Works/godent-cms/godent-cms/node_modules/.bun/bun@1.4.3/node_modules/bun/bin/bun.exe",
+      "loopback": true
+    },
+    {
+      "name": "website",
+      "launcherChild": 79519,
+      "listenerPid": 79520,
+      "port": 5892,
+      "ancestry": [
+        79520,
+        79519
+      ],
+      "runtime": "bun",
+      "executable": "/Users/khiemnguyen/Works/godent-cms/godent-cms/node_modules/.bun/bun@1.4.3/node_modules/bun/bin/bun.exe",
+      "loopback": true
+    }
+  ],
+  "tests": [
+    {
+      "path": "/health",
+      "status": 200,
+      "sessionCookie": false
+    },
+    {
+      "path": "/ready",
+      "status": 200,
+      "sessionCookie": false
+    },
+    {
+      "path": "/diagnostics/echo?value=technical",
+      "status": 200,
+      "sessionCookie": false
+    },
+    {
+      "path": "/diagnostics/echo?value=",
+      "status": 400,
+      "sessionCookie": false
+    },
+    {
+      "path": "/diagnostics/echo?value=ok&extra=private",
+      "status": 400,
+      "sessionCookie": false
+    },
+    {
+      "path": "/owned-missing-m5",
+      "status": 404,
+      "sessionCookie": false
+    }
+  ],
+  "limits": "Actual current owned loopback listener executables, ancestry and diagnostic requests. Availability is point-in-time, not Production or all-error-flow proof."
+}

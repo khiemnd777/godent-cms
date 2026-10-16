@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="6" assertions="110" failures="0" skipped="0" time="1.72085">
+  <testsuite name="apps/api/test/m5-http-local.test.ts" file="apps/api/test/m5-http-local.test.ts" tests="6" assertions="110" failures="0" skipped="0" time="1.713521" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 actual built website HTTP and SEO entry contracts" file="apps/api/test/m5-http-local.test.ts" line="8" tests="6" assertions="110" failures="0" skipped="0" time="1.083" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="GET/HEAD Godent aliases directly 301 to the same published page and actual language" classname="M5 actual built website HTTP and SEO entry contracts" time="0.76533" file="apps/api/test/m5-http-local.test.ts" line="15" assertions="74" />
+      <testcase name="missing EN directly302 to primaryVI, absent pages404, methods/intake keep dedicated contracts" classname="M5 actual built website HTTP and SEO entry contracts" time="0.051192" file="apps/api/test/m5-http-local.test.ts" line="22" assertions="9" />
+      <testcase name="tracking allowlist and functional listing query survive a direct redirect" classname="M5 actual built website HTTP and SEO entry contracts" time="0.02295" file="apps/api/test/m5-http-local.test.ts" line="30" assertions="4" />
+      <testcase name="sitemap and robots pass exact metadata routes on each valid entry" classname="M5 actual built website HTTP and SEO entry contracts" time="0.066489" file="apps/api/test/m5-http-local.test.ts" line="33" assertions="12" />
+      <testcase name="return to Godent keeps old custom200 with correct canonical and working absolute navigation" classname="M5 actual built website HTTP and SEO entry contracts" time="0.147021" file="apps/api/test/m5-http-local.test.ts" line="37" assertions="8" />
+      <testcase name="untrusted forwarded context and credentials cannot change tenant, language or publication" classname="M5 actual built website HTTP and SEO entry contracts" time="0.032571" file="apps/api/test/m5-http-local.test.ts" line="41" assertions="3" />
+    </testsuite>
+  </testsuite>
+</testsuites>

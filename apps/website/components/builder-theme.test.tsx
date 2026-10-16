@@ -38,7 +38,7 @@ test("an inactive promotion removes a landing offer action and form while retain
   const page = pageFor("landing", "en", "showcase"), promotionPage = pageFor("promotion", "en", "showcase");
   const promotion = { id: ids.resource, kind: "promotion" as const, locale: "en" as const, publicationId: ids.publication, publicationVersion: 1, publishedAt: promotionPage.publishedAt, canonicalUrl: promotionPage.canonicalUrl, content: promotionPage.content, references: [], media: [], promotionState: "expired" as const };
   page.sections = [{ section: { id: "hero", type: "hero", hidden: false, title: "Landing information", text: "Published page information", image: null, action: { label: "Request this offer", target: { kind: "landing", id: ids.resource, locale: "en" }, allowViFallback: false } }, action: { label: "Request this offer", path: "/clinic-a/en/landing/resource-a", actualLocale: "en", fallback: false }, references: [], media: null, promotion: null, form: null }, { section: { id: "form", type: "consultation", hidden: false, title: "Consultation", promotion: { kind: "promotion", id: ids.resource, publicationId: ids.publication }, serviceOptions: [], locationOptions: [] }, action: null, references: [], media: null, promotion, form: null }];
-  const html = renderToStaticMarkup(createElement(BuilderPage, { page }));
+  const html = renderToStaticMarkup(createElement(BuilderPage, { page, tenant: "clinic-a" }));
   expect(html).toContain("This promotion has ended"); expect(html).toContain("Selected services only"); expect(html).not.toContain("Request this offer"); expect(html).not.toContain("<form");
 });
 test("EN form uses server-selected consent copy and does not invent a service selection", () => {

@@ -68,7 +68,16 @@
     "check:runtime:m4": "bun scripts/m4-runtime-checks.ts --local-m4",
     "check:ui:m4": "bun scripts/m4-full-browser.ts --local-m4",
     "test:m4:unit": "bun scripts/check-m4.ts unit",
-    "test:m4": "bun scripts/check-m4.ts integration"
+    "test:m4": "bun scripts/check-m4.ts integration",
+    "m5:bootstrap": "bun --env-file=.env scripts/m5-bootstrap.ts --local-m5",
+    "m5:migrate": "bun --env-file=.local/s02.env scripts/m5-migrate.ts --local-m5 --through=0058",
+    "m5:fixtures": "bun --env-file=.env --env-file=.local/s02.env scripts/m5-fixtures.ts --local-m5 --synthetic-fixtures",
+    "m5:demo": "bun --env-file=.env --env-file=.local/s02.env scripts/m5-demo.ts --local-m5 --synthetic-fixtures",
+    "m5:preserve": "bun --env-file=.env scripts/m5-preservation.ts --local-m5 compare",
+    "check:runtime:m5": "bun --env-file=.env scripts/m5-runtime-checks.ts --local-m5",
+    "m5:domain-proof": "bun --env-file=.local/s02.env scripts/m5-domain-attestation.ts --local-m5 --enroll-local-domain-proof",
+    "check:secrets:m5": "bun --no-env-file scripts/m5-secret-check.ts --local-m5",
+    "test:m5:unit": "bun --no-env-file test apps/api/test/m5-domains.test.ts apps/api/test/m5-domains-safety.test.ts apps/api/test/m5-platform-unit.test.ts apps/api/test/m5-platform-export.test.ts apps/api/test/m5-platform-worker.test.ts apps/api/test/m5-root.test.ts apps/api/test/domain-input.test.ts"
   },
   "devDependencies": {
     "@playwright/test": "1.64.1",

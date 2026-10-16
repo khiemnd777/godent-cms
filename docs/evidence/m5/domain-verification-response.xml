@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="1" assertions="0" failures="1" skipped="0" time="0.510193">
+  <testsuite name="apps/api/test/m5-domain-lifecycle-local.test.ts" file="apps/api/test/m5-domain-lifecycle-local.test.ts" tests="1" assertions="0" failures="1" skipped="0" time="0.498486" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 controlled domain lifecycle and URL-context races" file="apps/api/test/m5-domain-lifecycle-local.test.ts" line="7" tests="1" assertions="0" failures="1" skipped="0" time="0.091" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="(unnamed)" classname="M5 controlled domain lifecycle and URL-context races" time="0.091242" file="apps/api/test/m5-domain-lifecycle-local.test.ts" assertions="0">
+        <failure type="Error" message="Invalid S02 database configuration for gcms_s02_migration">Error: Invalid S02 database configuration for gcms_s02_migration&#10;      at validateDatabaseUrl (apps/api/src/auth/policy.ts:13:23)&#10;      at setup (apps/api/test/m5-support.ts:30:24)&#10;      at apps/api/test/m5-domain-lifecycle-local.test.ts:9:30&#10;</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>

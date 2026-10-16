@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="1" assertions="333" failures="0" skipped="0" time="17.035116">
+  <testsuite name="apps/api/test/m5-deletion-local.test.ts" file="apps/api/test/m5-deletion-local.test.ts" tests="1" assertions="333" failures="0" skipped="0" time="17.026971" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 one-shot irreversible deletion of the positively owned Deletion fixture only" file="apps/api/test/m5-deletion-local.test.ts" line="49" tests="1" assertions="333" failures="0" skipped="0" time="5.019" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="confirmed scope deletes real immutable business/media data with fenced retry and preserves other tenants and global credentials" classname="M5 one-shot irreversible deletion of the positively owned Deletion fixture only" time="5.01973" file="apps/api/test/m5-deletion-local.test.ts" line="80" assertions="333" />
+    </testsuite>
+  </testsuite>
+</testsuites>

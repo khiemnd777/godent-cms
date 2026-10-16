@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "purpose": "Accepted M5 normal Git delivery preflight; not deploy or runtime proof",
+  "runtime": {
+    "status": "PASS",
+    "required_effort": "xhigh",
+    "observed": {
+      "thread_id": "01a14576-0038-7232-8531-e6395fab7975",
+      "cli_version": "0.163.0-alpha.10.2",
+      "cwd": "/Users/khiemnguyen/Works/godent-cms/godent-cms",
+      "role": null,
+      "parent_thread_id": null,
+      "source_kind": "vscode",
+      "turn_id": "01a145c6-d9f5-7be0-baf8-8128bac8cff8",
+      "timestamp": "2026-10-16T17:33:42.314Z",
+      "model": "gpt-6.1-sol",
+      "effort": "xhigh",
+      "evidence_kind": "runtime_written_turn_context"
+    },
+    "errors": [],
+    "limit": "Recorded runtime configuration; not an internal reasoning trace or quality guarantee"
+  },
+  "originalFinalSnapshotSha256": "deb0b697fd7d9e428d60af0fa848a5bc3fbedc9bc52d6590d621cc94e6458f13",
+  "applicationPinsUnchanged": 479,
+  "compiledPinsUnchanged": 82,
+  "originalEvidencePinsUnchanged": 76,
+  "acceptanceStatus": "ACCEPTED_UNDER_DELEGATED_AUTHORITY",
+  "branch": "main",
+  "localHeadBefore": "49f2a1a7be0188ebec019fee14a0dff9e4513726",
+  "originMainBefore": "49f2a1a7be0188ebec019fee14a0dff9e4513726",
+  "divergenceBefore": [
+    0,
+    0
+  ],
+  "unrelatedChanges": [],
+  "gitAuthorityTurn": "01a145c6-d9f5-7be0-baf8-8128bac8cff8",
+  "staticIntegrity": "PASS",
+  "gitDiffCheck": "PASS",
+  "secretScan": "docs/evidence/m5/secret-check-1792172121770.json",
+  "audit": {
+    "status": "FAIL/open",
+    "boundedLocalM5Deferral": true,
+    "reassess": "2026-10-22 or earlier patch/dependency/exposure triggers and before Production",
+    "productionWaiver": false
+  },
+  "deployAuthorized": false,
+  "commitPushResult": "Not yet executed at preflight; report actual SHA/remote/final worktree after normal delivery.",
+  "gitDiffCheckScope": "Unstaged tracked-file diff at preflight time; untracked migrations had not been staged.",
+  "stagedFullWhitespaceCheck": {
+    "status": "FAIL",
+    "evidence": "docs/evidence/m5/git-staged-whitespace.json",
+    "disposition": "Retain applied0053bytes; other staged paths PASS; non-blocking formatting only."
+  }
+}

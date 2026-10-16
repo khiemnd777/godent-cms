@@ -1,0 +1,14 @@
+{
+  "owner": "GCMS-M5-UI-READONLY-v1",
+  "fixtureRun": "6c18ade7-1f3e-4d80-9931-e4e02b4243b7",
+  "status": "PASS",
+  "checks": [
+    {
+      "state": "loading-error-keyboard-retry-real-GET",
+      "endpoint": "/api/cms/tenants/3668d499-dda1-46ed-b03f-a959d93786e1/m5/platform",
+      "status": "PASS"
+    }
+  ],
+  "pageErrors": [],
+  "limits": "Browser-only read faults; recovery reads the actual API. No business commands, export download, domain or lifecycle mutation."
+}

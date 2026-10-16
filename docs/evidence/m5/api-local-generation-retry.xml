@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="7" assertions="94" failures="2" skipped="0" time="23.636295">
+  <testsuite name="apps/api/test/m5-local.test.ts" file="apps/api/test/m5-local.test.ts" tests="7" assertions="94" failures="2" skipped="0" time="23.629366" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 real local API/SQL journeys on positively owned new fixtures" file="apps/api/test/m5-local.test.ts" line="14" tests="7" assertions="94" failures="2" skipped="0" time="0.806" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="active private contracts and tenant/platform boundaries remain enforced" classname="M5 real local API/SQL journeys on positively owned new fixtures" time="0.129153" file="apps/api/test/m5-local.test.ts" line="19" assertions="10" />
+      <testcase name="M4 config, immutable published pages and M3 content use real current contracts" classname="M5 real local API/SQL journeys on positively owned new fixtures" time="0.188239" file="apps/api/test/m5-local.test.ts" line="30" assertions="15" />
+      <testcase name="content quota serializes concurrent legacy/M3 growth; locale and saved revisions do not grow usage" classname="M5 real local API/SQL journeys on positively owned new fixtures" time="0.113126" file="apps/api/test/m5-local.test.ts" line="38" assertions="25" />
+      <testcase name="domain verification, exact binding, primary CAS and durable replay work through actual SQL" classname="M5 real local API/SQL journeys on positively owned new fixtures" time="0.084907" file="apps/api/test/m5-local.test.ts" line="50" assertions="17" />
+      <testcase name="cross-entry intake has one tenant-scoped accepted receipt and shared lead operations" classname="M5 real local API/SQL journeys on positively owned new fixtures" time="0.023329" file="apps/api/test/m5-local.test.ts" line="72" assertions="1">
+        <failure type="AssertionError" message="expect(received).toBe(expected)&#10;&#10;Expected: 200&#10;Received: 428&#10;">AssertionError: expect(received).toBe(expected)&#10;&#10;Expected: 200&#10;Received: 428&#10;&#10;      at apps/api/test/m5-local.test.ts:76:20&#10;</failure>
+      </testcase>
+      <testcase name="suspension preserves authorized read/export and denies business writes; safety unpublish still works" classname="M5 real local API/SQL journeys on positively owned new fixtures" time="0.228853" file="apps/api/test/m5-local.test.ts" line="82" assertions="21">
+        <failure type="AssertionError" message="expect(received).toBe(expected)&#10;&#10;Expected: 200&#10;Received: 404&#10;">AssertionError: expect(received).toBe(expected)&#10;&#10;Expected: 200&#10;Received: 404&#10;&#10;      at apps/api/test/m5-local.test.ts:89:131&#10;</failure>
+      </testcase>
+      <testcase name="forged safety selectors cannot write a suspended tenant through the restricted role" classname="M5 real local API/SQL journeys on positively owned new fixtures" time="0.041263" file="apps/api/test/m5-local.test.ts" line="93" assertions="5" />
+    </testsuite>
+  </testsuite>
+</testsuites>

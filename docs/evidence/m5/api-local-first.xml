@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="7" assertions="97" failures="1" skipped="0" time="24.345222">
+  <testsuite name="apps/api/test/m5-local.test.ts" file="apps/api/test/m5-local.test.ts" tests="7" assertions="97" failures="1" skipped="0" time="24.336423" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 real local API/SQL journeys on positively owned new fixtures" file="apps/api/test/m5-local.test.ts" line="14" tests="7" assertions="97" failures="1" skipped="0" time="1.11" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="active private contracts and tenant/platform boundaries remain enforced" classname="M5 real local API/SQL journeys on positively owned new fixtures" time="0.169702" file="apps/api/test/m5-local.test.ts" line="19" assertions="10" />
+      <testcase name="M4 config, immutable published pages and M3 content use real current contracts" classname="M5 real local API/SQL journeys on positively owned new fixtures" time="0.242798" file="apps/api/test/m5-local.test.ts" line="30" assertions="15" />
+      <testcase name="content quota serializes concurrent legacy/M3 growth; locale and saved revisions do not grow usage" classname="M5 real local API/SQL journeys on positively owned new fixtures" time="0.152566" file="apps/api/test/m5-local.test.ts" line="38" assertions="25" />
+      <testcase name="domain verification, exact binding, primary CAS and durable replay work through actual SQL" classname="M5 real local API/SQL journeys on positively owned new fixtures" time="0.056183" file="apps/api/test/m5-local.test.ts" line="50" assertions="7">
+        <failure type="AssertionError" message="expect(received).toBe(expected)&#10;&#10;Expected: 200&#10;Received: 400&#10;">AssertionError: expect(received).toBe(expected)&#10;&#10;Expected: 200&#10;Received: 400&#10;&#10;      at apps/api/test/m5-local.test.ts:57:132&#10;</failure>
+      </testcase>
+      <testcase name="cross-entry intake has one tenant-scoped accepted receipt and shared lead operations" classname="M5 real local API/SQL journeys on positively owned new fixtures" time="0.083489" file="apps/api/test/m5-local.test.ts" line="68" assertions="8" />
+      <testcase name="suspension preserves authorized read/export and denies business writes; safety unpublish still works" classname="M5 real local API/SQL journeys on positively owned new fixtures" time="0.340225" file="apps/api/test/m5-local.test.ts" line="78" assertions="27" />
+      <testcase name="forged safety selectors cannot write a suspended tenant through the restricted role" classname="M5 real local API/SQL journeys on positively owned new fixtures" time="0.068085" file="apps/api/test/m5-local.test.ts" line="89" assertions="5" />
+    </testsuite>
+  </testsuite>
+</testsuites>

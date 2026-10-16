@@ -1,14 +1,15 @@
 import { boundedText, exactObject, parseRichText, parseSlug } from "../../api/src/contracts/content";
 import type { ContentPublicMedia } from "../../api/src/contracts/m3";
-import { M4_CONSENTS, M4_LIMITS, m4PublicPath, type BuilderContent, type BuilderSection, type M4Content, type M4FormContext, type M4Kind, type M4Locale, type M4PromotionBlock, type M4PublicConfig, type M4PublicList, type M4PublicReference, type M4PublicSection, type M4Resolution, type M4SeoEntry, type PublicM4Page } from "../../api/src/contracts/m4";
+import { M4_CONSENTS, M4_LIMITS, type BuilderContent, type BuilderSection, type M4Content, type M4FormContext, type M4Kind, type M4Locale, type M4PromotionBlock, type M4PublicConfig, type M4PublicList, type M4PublicReference, type M4PublicSection, type M4Resolution, type M4SeoEntry, type PublicM4Page } from "../../api/src/contracts/m4";
 import { parseM4Content, parseM4Kind, parseM4Locale, parseSitePresentation } from "../../api/src/contracts/m4-validation";
 import { m3Id, m3Version, parseContentReferences } from "../../api/src/contracts/m3-validation";
+import { publicPath, scopePublicResult, type PublicUrlBase } from "./public-url-context";
 import { PUBLIC_SITE_ORIGIN } from "../../api/src/contracts/s03";
 import type { PublicMediaBlock, ServiceMediaReference } from "../../api/src/contracts/s07";
 
 const pageKeys = ["schemaVersion", "id", "kind", "locale", "requestedLocale", "actualLocale", "publicationId", "publicationVersion", "publishedAt", "canonicalUrl", "configPublicationId", "config", "site", "content", "references", "media", "sections", "form", "promotionState", "alternates", "legacy"];
 type Scope = { kind: M4Kind | "config"; id: string; publicationId: string; locale: M4Locale; legacy?: boolean; globalLegacyService?: boolean };
-type Context = { tenant: string; locale: M4Locale; nodes: number; mediaTenant?: string };
+type Context = { tenant: string; locale: M4Locale; nodes: number; mediaTenant?: string; primary?: PublicUrlBase };
 function list(value: unknown, maximum: number): unknown[] { if (!Array.isArray(value) || value.length > maximum) throw new TypeError("Invalid public list"); return value; }
 function flag(value: unknown): boolean { if (typeof value !== "boolean") throw new TypeError("Invalid flag"); return value; }
 function stable(value: unknown): string {
@@ -17,20 +18,20 @@ function stable(value: unknown): string {
   return JSON.stringify(value);
 }
 function same(value: unknown, expected: unknown) { if (stable(value) !== stable(expected)) throw new TypeError("Invalid publication closure"); }
-function canonical(value: unknown, tenant: string, locale: M4Locale, kind: M4Kind, slug?: string): string {
-  const expected = PUBLIC_SITE_ORIGIN + m4PublicPath(tenant, locale, kind, slug);
+function canonical(value: unknown, tenant: string, locale: M4Locale, kind: M4Kind, slug?: string, primary?: PublicUrlBase): string {
+  const expected = (primary?.origin ?? PUBLIC_SITE_ORIGIN) + publicPath(tenant, locale, kind, slug, primary);
   if (value !== expected) throw new TypeError("Invalid public canonical"); return expected;
 }
-function path(value: unknown, tenant: string, locale: M4Locale, kind: M4Kind, slug?: string): string {
-  const expected = m4PublicPath(tenant, locale, kind, slug);
+function path(value: unknown, tenant: string, locale: M4Locale, kind: M4Kind, slug?: string, primary?: PublicUrlBase): string {
+  const expected = publicPath(tenant, locale, kind, slug, primary);
   if (value !== expected) throw new TypeError("Invalid public path"); return expected;
 }
 /** A menu target stores identity rather than a mutable slug. Validate its resolved route family and tenant. */
-function targetPath(value: unknown, tenant: string, locale: M4Locale, kind: M4Kind): string {
-  if (kind === "home") return path(value, tenant, locale, kind);
+function targetPath(value: unknown, tenant: string, locale: M4Locale, kind: M4Kind, primary?: PublicUrlBase): string {
+  if (kind === "home") return path(value, tenant, locale, kind, undefined, primary);
   if (typeof value !== "string") throw new TypeError("Invalid target path");
   const slug = parseSlug(value.slice(value.lastIndexOf("/") + 1));
-  return path(value, tenant, locale, kind, slug);
+  return path(value, tenant, locale, kind, slug, primary);
 }
 function publicContent(kind: M4Kind, value: unknown): M4Content {
   // The public gateway may remove all complete gallery pairs after current withdrawal.
@@ -68,7 +69,7 @@ function config(value: unknown, publicationId: unknown, context: Context): M4Pub
     same({ id: item.id, label: item.label, target: item.target, allowViFallback: item.allowViFallback }, original);
     const actualLocale = parseM4Locale(item.actualLocale), fallback = flag(item.fallback);
     if (fallback ? !(original.allowViFallback && original.target.locale === "en" && actualLocale === "vi") : original.target.locale !== actualLocale) throw new TypeError("Invalid menu locale");
-    return { ...original, actualLocale, fallback, path: targetPath(item.path, context.tenant, actualLocale, original.target.kind) };
+    return { ...original, actualLocale, fallback, path: targetPath(item.path, context.tenant, actualLocale, original.target.kind, context.primary) };
   });
   if (new Set(menu.map(item => item.id)).size !== menu.length || menu.some((item, index) => index > 0 && content.menu.findIndex(candidate => candidate.id === menu[index - 1].id) >= content.menu.findIndex(candidate => candidate.id === item.id))) throw new TypeError("Invalid menu order");
   let logoMedia = null;
@@ -125,7 +126,7 @@ function references(value: unknown, context: Context, depth: number): M4PublicRe
     if (!("title" in content) || content.title !== v.title) throw new TypeError("Invalid reference title");
     const children = references(v.references, context, depth + 1); validatePins(pins(content), children);
     const legacy = v.legacy === undefined ? false : flag(v.legacy); if (legacy && context.locale !== "vi") throw new TypeError("Invalid legacy locale");
-    return { id, kind, publicationId, publicationVersion: m3Version(v.publicationVersion), locale: context.locale, title: boundedText(v.title, 160, true), slug, path: path(v.path, context.tenant, context.locale, kind, slug), content, references: children, media: publicMedia(v.media, content, { kind, id, publicationId, locale: context.locale, legacy }, context), ...(v.legacy === undefined ? {} : { legacy }) };
+    return { id, kind, publicationId, publicationVersion: m3Version(v.publicationVersion), locale: context.locale, title: boundedText(v.title, 160, true), slug, path: path(v.path, context.tenant, context.locale, kind, slug, context.primary), content, references: children, media: publicMedia(v.media, content, { kind, id, publicationId, locale: context.locale, legacy }, context), ...(v.legacy === undefined ? {} : { legacy }) };
   });
 }
 function form(value: unknown, page: Scope & { configPublicationId: string | null }, context: Context, depth: number): M4FormContext | null {
@@ -144,7 +145,7 @@ function promotionBlock(value: unknown, context: Context, depth: number): M4Prom
   if (v.kind !== "promotion" || v.locale !== context.locale || typeof v.publishedAt !== "string" || !Number.isFinite(Date.parse(v.publishedAt)) || !["upcoming", "active", "expired"].includes(String(v.promotionState))) throw new TypeError("Invalid promotion block");
   const content = publicContent("promotion", v.content); if (!("kind" in content) || content.kind !== "promotion") throw new TypeError("Invalid promotion content");
   const id = m3Id(v.id), publicationId = m3Id(v.publicationId), refs = references(v.references, context, depth + 1); validatePins(content.references, refs, true);
-  return { id, kind: "promotion", locale: context.locale, publicationId, publicationVersion: m3Version(v.publicationVersion), publishedAt: v.publishedAt, canonicalUrl: canonical(v.canonicalUrl, context.tenant, context.locale, "promotion", content.slug), content, references: refs, media: publicMedia(v.media, content, { kind: "promotion", id, publicationId, locale: context.locale }, context), promotionState: v.promotionState as M4PromotionBlock["promotionState"] };
+  return { id, kind: "promotion", locale: context.locale, publicationId, publicationVersion: m3Version(v.publicationVersion), publishedAt: v.publishedAt, canonicalUrl: canonical(v.canonicalUrl, context.tenant, context.locale, "promotion", content.slug, context.primary), content, references: refs, media: publicMedia(v.media, content, { kind: "promotion", id, publicationId, locale: context.locale }, context), promotionState: v.promotionState as M4PromotionBlock["promotionState"] };
 }
 function sections(value: unknown, content: M4Content, scope: Scope & { configPublicationId: string | null }, context: Context, depth: number): M4PublicSection[] {
   const visible = "sections" in content ? (content as BuilderContent).sections.filter(section => !section.hidden) : [];
@@ -160,7 +161,7 @@ function sections(value: unknown, content: M4Content, scope: Scope & { configPub
         if (!section.action) throw new TypeError("Unpinned hero action");
         const a = exactObject(v.action, ["label", "path", "actualLocale", "fallback"]), actualLocale = parseM4Locale(a.actualLocale), fallback = flag(a.fallback);
         if (a.label !== section.action.label || (fallback ? !(section.action.allowViFallback && section.action.target.locale === "en" && actualLocale === "vi") : section.action.target.locale !== actualLocale)) throw new TypeError("Invalid hero action");
-        action = { label: section.action.label, path: targetPath(a.path, context.tenant, actualLocale, section.action.target.kind), actualLocale, fallback };
+        action = { label: section.action.label, path: targetPath(a.path, context.tenant, actualLocale, section.action.target.kind, context.primary), actualLocale, fallback };
       }
     } else if (v.media !== null || v.action !== null) throw new TypeError("Unexpected section media/action");
     if (section.type === "promotion" || section.type === "consultation") {
@@ -194,26 +195,26 @@ function publicPage(value: unknown, context: Context, kind: M4Kind, slug?: strin
   if (kind === "landing") same(resolvedForm, projectedSections.find(item => item.section.type === "consultation")?.form ?? null);
   else if (kind !== "service" && resolvedForm !== null) throw new TypeError("Unexpected page form");
   if (kind === "promotion" ? !["upcoming", "active", "expired"].includes(String(v.promotionState)) : v.promotionState !== null) throw new TypeError("Invalid promotion state");
-  const alternates = list(v.alternates, 2).map(raw => { const a = exactObject(raw, ["locale", "url", "publicationId"]), locale = parseM4Locale(a.locale); return { locale, url: canonical(a.url, context.tenant, locale, kind, actualSlug), publicationId: m3Id(a.publicationId) }; });
+  const alternates = list(v.alternates, 2).map(raw => { const a = exactObject(raw, ["locale", "url", "publicationId"]), locale = parseM4Locale(a.locale); return { locale, url: canonical(a.url, context.tenant, locale, kind, actualSlug, context.primary), publicationId: m3Id(a.publicationId) }; });
   if (new Set(alternates.map(item => item.locale)).size !== alternates.length || !alternates.some(item => item.locale === context.locale && item.publicationId === publicationId)) throw new TypeError("Invalid alternates");
-  return { schemaVersion: 4, id, kind, locale: context.locale, requestedLocale: context.locale, actualLocale: context.locale, publicationId, publicationVersion: m3Version(v.publicationVersion), publishedAt: v.publishedAt, canonicalUrl: canonical(v.canonicalUrl, context.tenant, context.locale, kind, actualSlug), configPublicationId: scope.configPublicationId, config: presentation, site: parsedSite, content, references: refs, media: publicMedia(v.media, content, scope, context), sections: projectedSections, form: resolvedForm, promotionState: v.promotionState as PublicM4Page["promotionState"], alternates, legacy: flag(v.legacy) };
+  return { schemaVersion: 4, id, kind, locale: context.locale, requestedLocale: context.locale, actualLocale: context.locale, publicationId, publicationVersion: m3Version(v.publicationVersion), publishedAt: v.publishedAt, canonicalUrl: canonical(v.canonicalUrl, context.tenant, context.locale, kind, actualSlug, context.primary), configPublicationId: scope.configPublicationId, config: presentation, site: parsedSite, content, references: refs, media: publicMedia(v.media, content, scope, context), sections: projectedSections, form: resolvedForm, promotionState: v.promotionState as PublicM4Page["promotionState"], alternates, legacy: flag(v.legacy) };
 }
-export function parsePublicBuilderResolution(value: unknown, tenant: string, locale: M4Locale, kind: M4Kind, slug: string): M4Resolution {
+export function parsePublicBuilderResolution(value: unknown, tenant: string, locale: M4Locale, kind: M4Kind, slug: string, primary?: PublicUrlBase): M4Resolution {
   parseSlug(tenant); parseM4Locale(locale); parseM4Kind(kind); parseSlug(slug);
   const v = exactObject(value, ["resolution", "requestedLocale", "actualLocale", "canonicalUrl", "fallbackPublicationId", "page"]);
   if (v.requestedLocale !== locale) throw new TypeError("Invalid requested locale");
   if (v.resolution === "fallback") {
     if (locale !== "en" || v.actualLocale !== "vi" || v.page !== null) throw new TypeError("Invalid fallback");
-    return { resolution: "fallback", requestedLocale: "en", actualLocale: "vi", canonicalUrl: canonical(v.canonicalUrl, tenant, "vi", kind, slug), fallbackPublicationId: m3Id(v.fallbackPublicationId), page: null };
+    return { resolution: "fallback", requestedLocale: "en", actualLocale: "vi", canonicalUrl: canonical(v.canonicalUrl, tenant, "vi", kind, slug, primary), fallbackPublicationId: m3Id(v.fallbackPublicationId), page: null };
   }
   if (v.resolution !== "page" || v.actualLocale !== locale || v.fallbackPublicationId !== null) throw new TypeError("Invalid resolution");
-  const page = publicPage(v.page, { tenant, locale, nodes: 0 }, kind, slug); same(v.canonicalUrl, page.canonicalUrl);
-  return { resolution: "page", requestedLocale: locale, actualLocale: locale, canonicalUrl: page.canonicalUrl, fallbackPublicationId: null, page };
+  const page = publicPage(v.page, { tenant, locale, nodes: 0, primary }, kind, slug); same(v.canonicalUrl, page.canonicalUrl);
+  return { resolution: "page", requestedLocale: locale, actualLocale: locale, canonicalUrl: page.canonicalUrl, fallbackPublicationId: null, page: scopePublicResult(page, primary) };
 }
-export function parsePublicBuilderList(value: unknown, tenant: string, locale: M4Locale, kind: M4Kind): M4PublicList {
+export function parsePublicBuilderList(value: unknown, tenant: string, locale: M4Locale, kind: M4Kind, primary?: PublicUrlBase): M4PublicList {
   const v = exactObject(value, ["schemaVersion", "locale", "kind", "items", "nextCursor", "config", "canonicalUrl"]);
   if (v.schemaVersion !== 4 || v.locale !== locale || v.kind !== kind) throw new TypeError("Invalid list identity");
-  const context = { tenant, locale, nodes: 0 }, rawConfig = v.config === null ? null : exactObject(v.config, ["publicationId", "publicationVersion", "locale", "content", "menu", "logoMedia"]);
+  const context = { tenant, locale, nodes: 0, primary }, rawConfig = v.config === null ? null : exactObject(v.config, ["publicationId", "publicationVersion", "locale", "content", "menu", "logoMedia"]);
   const items = list(v.items, M4_LIMITS.maxPageSize).map(raw => {
     const item = exactObject(raw, ["id", "kind", "locale", "publicationId", "publicationVersion", "title", "slug", "content", "path", "legacy", "media", "references", "promotionState"]), slug = parseSlug(item.slug);
     if (item.kind !== kind || item.locale !== locale) throw new TypeError("Invalid list item locale");
@@ -221,16 +222,16 @@ export function parsePublicBuilderList(value: unknown, tenant: string, locale: M
     const legacy = flag(item.legacy); if (legacy && locale !== "vi") throw new TypeError("Invalid legacy locale");
     const id = m3Id(item.id), publicationId = m3Id(item.publicationId), refs = references(item.references, context, 1); validatePins(pins(content), refs);
     if (kind === "promotion" ? !["upcoming", "active", "expired"].includes(String(item.promotionState)) : item.promotionState !== null) throw new TypeError("Invalid list promotion state");
-    return { id, kind, locale, publicationId, publicationVersion: m3Version(item.publicationVersion), title: boundedText(item.title, 160, true), slug, content, path: path(item.path, tenant, locale, kind, slug), legacy, references: refs, media: publicMedia(item.media, content, { kind, id, publicationId, locale, legacy, globalLegacyService: kind === "service" && legacy }, context), promotionState: item.promotionState as "upcoming" | "active" | "expired" | null };
+    return { id, kind, locale, publicationId, publicationVersion: m3Version(item.publicationVersion), title: boundedText(item.title, 160, true), slug, content, path: path(item.path, tenant, locale, kind, slug, primary), legacy, references: refs, media: publicMedia(item.media, content, { kind, id, publicationId, locale, legacy, globalLegacyService: kind === "service" && legacy }, context), promotionState: item.promotionState as "upcoming" | "active" | "expired" | null };
   });
-  return { schemaVersion: 4, locale, kind, items, nextCursor: v.nextCursor === null ? null : boundedText(v.nextCursor, 8192, true), config: config(v.config, rawConfig?.publicationId ?? null, context), canonicalUrl: canonical(v.canonicalUrl, tenant, locale, kind) };
+  return scopePublicResult({ schemaVersion: 4 as const, locale, kind, items, nextCursor: v.nextCursor === null ? null : boundedText(v.nextCursor, 8192, true), config: config(v.config, rawConfig?.publicationId ?? null, context), canonicalUrl: canonical(v.canonicalUrl, tenant, locale, kind, undefined, primary) }, primary);
 }
-export function parsePublicBuilderSeo(value: unknown, tenant: string): M4SeoEntry[] {
+export function parsePublicBuilderSeo(value: unknown, tenant: string, primary?: PublicUrlBase): M4SeoEntry[] {
   const entries = list(value, 10_000).map(raw => {
     const v = exactObject(raw, ["kind", "id", "locale", "path", "canonicalUrl", "publicationId", "configPublicationId", "alternates"]), kind = parseM4Kind(v.kind), locale = parseM4Locale(v.locale);
-    const route = targetPath(v.path, tenant, locale, kind), url = PUBLIC_SITE_ORIGIN + route;
+    const route = targetPath(v.path, tenant, locale, kind, primary), url = (primary?.origin ?? PUBLIC_SITE_ORIGIN) + route;
     if (v.canonicalUrl !== url) throw new TypeError("Invalid SEO canonical");
-    const alternates = list(v.alternates, 2).map(raw => { const a = exactObject(raw, ["locale", "url", "publicationId"]), l = parseM4Locale(a.locale); if (typeof a.url !== "string" || !a.url.startsWith(PUBLIC_SITE_ORIGIN)) throw new TypeError("Invalid alternate URL"); targetPath(a.url.slice(PUBLIC_SITE_ORIGIN.length), tenant, l, kind); return { locale: l, url: a.url, publicationId: m3Id(a.publicationId) }; });
+    const alternates = list(v.alternates, 2).map(raw => { const a = exactObject(raw, ["locale", "url", "publicationId"]), l = parseM4Locale(a.locale); if (typeof a.url !== "string" || new URL(a.url).origin !== (primary?.origin ?? PUBLIC_SITE_ORIGIN)) throw new TypeError("Invalid alternate URL"); targetPath(new URL(a.url).pathname, tenant, l, kind, primary); if (new URL(a.url).search || new URL(a.url).hash) throw new TypeError("Invalid alternate query"); return { locale: l, url: a.url, publicationId: m3Id(a.publicationId) }; });
     return { kind, id: m3Id(v.id), locale, path: route, canonicalUrl: url, publicationId: m3Id(v.publicationId), configPublicationId: v.configPublicationId === null ? null : m3Id(v.configPublicationId), alternates };
   });
   if (new Set(entries.map(entry => entry.canonicalUrl)).size !== entries.length) throw new TypeError("Duplicate canonical route");
@@ -243,7 +244,7 @@ export function parsePublicBuilderSeo(value: unknown, tenant: string): M4SeoEntr
   }
   return entries;
 }
-export function parsePublicBuilderConfig(value: unknown, tenant: string, locale: M4Locale): M4PublicConfig {
+export function parsePublicBuilderConfig(value: unknown, tenant: string, locale: M4Locale, primary?: PublicUrlBase): M4PublicConfig {
   const v = exactObject(value, ["publicationId", "publicationVersion", "locale", "content", "menu", "logoMedia"]);
-  const parsed = config(value, v.publicationId, { tenant, locale, nodes: 0 }); if (!parsed) throw new TypeError("Missing presentation"); return parsed;
+  const parsed = config(value, v.publicationId, { tenant, locale, nodes: 0, primary }); if (!parsed) throw new TypeError("Missing presentation"); return parsed;
 }

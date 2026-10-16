@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="4" assertions="17" failures="0" skipped="3" time="1.281902">
+  <testsuite name="apps/api/test/m5-domain-lifecycle-local.test.ts" file="apps/api/test/m5-domain-lifecycle-local.test.ts" tests="4" assertions="17" failures="0" skipped="3" time="1.274547" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 controlled domain lifecycle and URL-context races" file="apps/api/test/m5-domain-lifecycle-local.test.ts" line="7" tests="4" assertions="17" failures="0" skipped="3" time="0.355" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="www is a distinct exact binding; another tenant cannot claim the registered host" classname="M5 controlled domain lifecycle and URL-context races" time="0" file="apps/api/test/m5-domain-lifecycle-local.test.ts" line="16" assertions="0">
+        <skipped />
+      </testcase>
+      <testcase name="replacement sends both previous entries directly to the new primary; deactivation denies only the old alias" classname="M5 controlled domain lifecycle and URL-context races" time="0" file="apps/api/test/m5-domain-lifecycle-local.test.ts" line="19" assertions="0">
+        <skipped />
+      </testcase>
+      <testcase name="remove and re-register allocate a new identity/generation; old receipts cannot resurrect the removed binding" classname="M5 controlled domain lifecycle and URL-context races" time="0" file="apps/api/test/m5-domain-lifecycle-local.test.ts" line="24" assertions="0">
+        <skipped />
+      </testcase>
+      <testcase name="primary reverify keeps its identity while denying stale entry pins until explicit fresh verification" classname="M5 controlled domain lifecycle and URL-context races" time="0.355584" file="apps/api/test/m5-domain-lifecycle-local.test.ts" line="28" assertions="17" />
+    </testsuite>
+  </testsuite>
+</testsuites>

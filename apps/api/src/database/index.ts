@@ -65,9 +65,9 @@ export function createS02Database(env: Record<string, string | undefined> = proc
       await tx.execute(sql`select pg_advisory_xact_lock(hashtextextended(${tenantId},7202))`);
       const fresh = await lockActor(tx, actor);
       await tx.execute(sql`select set_config('gcms.tenant_id',${tenantId},true)`);
-      const tenant = await tx.execute(sql`select id,status from gcms_s02.tenant where id=${tenantId}`);
+      const tenant = await tx.execute(sql`select id,status,gcms_m5.is_live(id) as live from gcms_s02.tenant where id=${tenantId}`);
       const membership = await tx.execute(sql`select status from gcms_s02.membership where tenant_id=${tenantId} and user_id=${fresh.userId} for share`);
-      if (tenant[0]?.status !== 'active' || membership[0]?.status !== 'active') throw new ForbiddenException();
+      if (tenant[0]?.live !== true || membership[0]?.status !== 'active') throw new ForbiddenException();
       return action(tx, fresh);
     });
   }
@@ -80,21 +80,29 @@ export function createS02Database(env: Record<string, string | undefined> = proc
       return action(tx, fresh);
     });
   }
-  /** Suspended tenants retain current authorized lead reads. Existing mutation helpers remain active-only. */
-  async function withLeadTenant<T>(actor:SessionActor,tenantId:string,action:(tx:S02Transaction,fresh:SessionActor)=>Promise<T>) {
+  /** Current authorized private reads include suspended tenants, never deleting tenants. */
+  async function withReadTenant<T>(actor:SessionActor,tenantId:string,action:(tx:S02Transaction,fresh:SessionActor)=>Promise<T>) {
     await verifyRoles();
     return tenantDb.transaction(async tx=>{
       await bounded(tx);await tx.execute(sql`select pg_advisory_xact_lock(hashtextextended(${tenantId},7202))`);
       const fresh=await lockActor(tx,actor);
       await tx.execute(sql`select set_config('gcms.tenant_id',${tenantId},true)`);
-      // Tenant runtime has SELECT only. Both existing statuses permit this read;
-      // actor/session and membership locks guard the authorization decision.
-      const tenant=await tx.execute(sql`select id,status from gcms_s02.tenant where id=${tenantId}`);
+      const tenant=await tx.execute(sql`select id,gcms_m5.is_readable(id) as readable from gcms_s02.tenant where id=${tenantId}`);
       const member=await tx.execute(sql`select status from gcms_s02.membership where tenant_id=${tenantId} and user_id=${fresh.userId} for share`);
-      if(!['active','suspended'].includes(String(tenant[0]?.status))||member[0]?.status!=='active') throw new ForbiddenException();
+      if(tenant[0]?.readable!==true||member[0]?.status!=='active') throw new ForbiddenException();
       return action(tx,fresh);
     });
   }
+  /** Only explicitly selected safety commands use this helper. SQL still validates
+   * the command kind, expected version, reason and recent authentication. */
+  async function withSafetyTenant<T>(actor:SessionActor,tenantId:string,action:(tx:S02Transaction,fresh:SessionActor)=>Promise<T>) {
+    return withReadTenant(actor,tenantId,async(tx,fresh)=>{
+      const recent=await tx.execute(sql`select gcms_s02.has_recent_auth() as recent`);
+      if(recent[0]?.recent!==true)throw new ForbiddenException('REAUTH_REQUIRED');
+      await tx.execute(sql`select gcms_m5.require_safety(${tenantId})`);return action(tx,fresh);
+    });
+  }
+  const withLeadTenant=withReadTenant;
   async function withInvitation<T>(actor: SessionActor, tokenHash: string,
     action: (tx: S02Transaction, fresh: SessionActor, invitation: LockedInvitation) => Promise<T>) {
     await verifyRoles();
@@ -123,7 +131,7 @@ export function createS02Database(env: Record<string, string | undefined> = proc
       return { status: true };
     });
   }
-  return { authDb, authSql: clients.auth, tenantDb, platformDb, intakeSql, verifyRoles, withActor, withTenant, withLeadTenant, withPlatform, withInvitation, disableUser,
+  return { authDb, authSql: clients.auth, tenantDb, platformDb, intakeSql, verifyRoles, withActor, withTenant, withReadTenant, withSafetyTenant, withLeadTenant, withPlatform, withInvitation, disableUser,
     close: async () => { await Promise.all([...Object.values(clients),...(intakeSql?[intakeSql]:[])].map(client => client.close())); } };
 }
 export type S02Database = ReturnType<typeof createS02Database>;

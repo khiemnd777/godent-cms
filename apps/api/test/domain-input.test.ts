@@ -20,8 +20,19 @@ test('invitations fix the email and cannot add a tenant or platform role', () =>
   expect(() => invitationInput({ email: 'a@example.test', role: 'platform_admin' })).toThrow();
   expect(() => invitationInput({ email: 'a@example.test', tenantId: 'other' })).toThrow();
   expect(() => acceptInput({ token: 'x'.repeat(43), email: 'other@example.test' })).toThrow();
-  expect(provisionInput({ name: 'Test Dental', initialAdminEmail: 'a@example.test' }).name).toBe('Test Dental');
+  expect(provisionInput({ name: 'Test Dental', initialAdminEmail: 'a@example.test', initialQuotaPolicy: { mode: 'monitor', contentItemsLimit: null, mediaBytesLimit: null } }).name).toBe('Test Dental');
   expect(() => provisionInput({ name: 'Test', initialAdminEmail: 'a@example.test', slug: 'public' })).toThrow();
+});
+test('new tenant handoff requires an explicit monitor or enforced quota policy', () => {
+  const input = { name: 'Synthetic M5', initialAdminEmail: 'a@example.test' };
+  expect(() => provisionInput(input)).toThrow();
+  for (const policy of [undefined, { mode: 'unset', contentItemsLimit: null, mediaBytesLimit: null },
+    { mode: 'enforced', contentItemsLimit: null, mediaBytesLimit: null },
+    { mode: 'enforced', contentItemsLimit: -1, mediaBytesLimit: null },
+    { mode: 'monitor', contentItemsLimit: null, mediaBytesLimit: null, default: true }]) {
+    expect(() => provisionInput({ ...input, initialQuotaPolicy: policy })).toThrow();
+  }
+  expect(provisionInput({ ...input, initialQuotaPolicy: { mode: 'enforced', contentItemsLimit: 0, mediaBytesLimit: null } }).initialQuotaPolicy.contentItemsLimit).toBe(0);
 });
 test('reauthentication accepts only a bounded password and rejects obsolete factor fields', () => {
   expect(reauthInput({ password: 'local-password' })).toEqual({ password: 'local-password' });

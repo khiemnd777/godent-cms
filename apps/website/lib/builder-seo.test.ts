@@ -9,5 +9,5 @@ test("metadata uses actual locale and eligible alternates and removes withdrawn 
 });
 test("structured data contains supplied facts and safely encodes HTML script delimiters", () => {
   const page = createHomePage(); page.site.name = "</script><script>unsafe</script>";
-  const json = safeJsonLd(pageStructuredData(page)); expect(json).not.toContain("<script"); expect(json).not.toContain("</script>"); expect(JSON.parse(json)).toHaveLength(2); expect(json).not.toContain("aggregateRating"); expect(json).not.toContain('"Review"');
+  const json = safeJsonLd(pageStructuredData(page, "clinic-a")); expect(json).not.toContain("<script"); expect(json).not.toContain("</script>"); expect(JSON.parse(json)).toHaveLength(2); expect(json).not.toContain("aggregateRating"); expect(json).not.toContain('"Review"');
 });

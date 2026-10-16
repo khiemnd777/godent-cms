@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "owner": "GCMS-M5-ACCEPTANCE-READONLY-v1",
+  "fixtureRun": "6c18ade7-1f3e-4d80-9931-e4e02b4243b7",
+  "demoRun": "bbe2ca3e-edd5-461e-a6f6-16a2a4ef8477",
+  "checks": [
+    {
+      "case": "same-language-direct301",
+      "key": "home",
+      "locale": "vi",
+      "method": "GET",
+      "status": "PASS"
+    },
+    {
+      "case": "same-language-direct301",
+      "key": "home",
+      "locale": "vi",
+      "method": "HEAD",
+      "status": "PASS"
+    },
+    {
+      "case": "built-page-image-language-canonical",
+      "key": "home",
+      "locale": "vi",
+      "width": 390,
+      "status": "PASS",
+      "publication": "92c7f06c-466a-4535-bc77-c6f256c67ede",
+      "config": "23b57a47-9ab8-43d7-9c3c-0dd4252672d0",
+      "images": 1
+    },
+    {
+      "case": "same-language-direct301",
+      "key": "service",
+      "locale": "en",
+      "method": "GET",
+      "status": "PASS"
+    },
+    {
+      "case": "same-language-direct301",
+      "key": "service",
+      "locale": "en",
+      "method": "HEAD",
+      "status": "PASS"
+    },
+    {
+      "case": "built-page-image-language-canonical",
+      "key": "service",
+      "locale": "en",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "b29323b5-93b0-4e56-8add-aa2d243eaf97",
+      "config": "a07b3d5d-9601-4676-a4e9-54ae4ee58dcb",
+      "images": 1
+    },
+    {
+      "case": "missing-en-direct302-primary-vi",
+      "status": "PASS"
+    }
+  ],
+  "pageErrors": [],
+  "limits": "Fresh GET/HEAD and public browser checks only. No consultation, publication, domain/lifecycle command, worker, fixture or deletion repeated; no live DNS/TLS proof."
+}

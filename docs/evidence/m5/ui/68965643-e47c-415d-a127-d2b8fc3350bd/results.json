@@ -1,0 +1,448 @@
+{
+  "schemaVersion": 1,
+  "owner": "GCMS-M5-UI-v1",
+  "runId": "68965643-e47c-415d-a127-d2b8fc3350bd",
+  "fixtureRun": "6c18ade7-1f3e-4d80-9931-e4e02b4243b7",
+  "demoRun": "bbe2ca3e-edd5-461e-a6f6-16a2a4ef8477",
+  "status": "PASS",
+  "plannedCases": 31,
+  "completedCases": 31,
+  "newPass": 12,
+  "reused": 19,
+  "sourceSha256": "274016a1a6695589f249573fd7d6b78b8eb16e0df1a4f819092e8c7a35dcff3c",
+  "resume": {
+    "priorEvidence": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+    "priorResultsSha256": "6cf16f04b1fee8433e42b35f2ce73e7b148c4cdbe8f445070ae7a902905b99a3",
+    "priorSourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479",
+    "firstCase": "platform_password_login_monitor",
+    "guards": {
+      "status": "PASS",
+      "facts": {
+        "freshA1PasswordLogin": true,
+        "currentTenantActive": true,
+        "currentCustomPrimary": true,
+        "currentPrimaryReady": true,
+        "publication": "1405cb2f-8652-450c-b417-7676d32948fa",
+        "configPublication": "23b57a47-9ab8-43d7-9c3c-0dd4252672d0",
+        "images": 1,
+        "prefixCasesReused": 19,
+        "submissionRepeated": false
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "a1_password_login",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "a1_password_login",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "domains_geometry_1440",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "domains_geometry_1440",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "domains_geometry_390",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "domains_geometry_390",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "domains_geometry_320",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "domains_geometry_320",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "data_geometry_1440",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "data_geometry_1440",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "data_geometry_390",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "data_geometry_390",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "data_geometry_320",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "data_geometry_320",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "custom_home_vi",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "custom_home_vi",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "custom_home_en",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "custom_home_en",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "custom_page_vi",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "custom_page_vi",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "custom_page_en",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "custom_page_en",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "custom_service_vi",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "custom_service_vi",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "custom_service_en",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "custom_service_en",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "custom_navigation_click",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "custom_navigation_click",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "godent_direct_301_arrival",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "godent_direct_301_arrival",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "missing_en_direct_302_vi",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "missing_en_direct_302_vi",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "custom_service_consultation",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "custom_service_consultation",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "shared_cms_lead_note",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "shared_cms_lead_note",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "tenant_zip_active",
+      "status": "REUSED",
+      "reason": "Verified in the linked prior run; not executed again.",
+      "priorEvidence": {
+        "results": "docs/evidence/m5/ui/ff9fbb73-62e5-4749-bf32-5fa419e7bf8e/results.json",
+        "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+        "caseId": "tenant_zip_active",
+        "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479"
+      }
+    },
+    {
+      "id": "platform_password_login_monitor",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:12:24.963Z",
+      "facts": {
+        "separateContext": true,
+        "monitorExplicit": true,
+        "changed": false
+      },
+      "durationMs": 564
+    },
+    {
+      "id": "platform_suspend",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:12:25.527Z",
+      "durationMs": 342
+    },
+    {
+      "id": "suspended_private_editor",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:12:25.869Z",
+      "facts": {
+        "currentPrivateContentReadable": true,
+        "draftSaveDisabled": true
+      },
+      "durationMs": 255
+    },
+    {
+      "id": "suspended_signed_media",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:12:26.124Z",
+      "facts": {
+        "signedPrivateImageReadable": true,
+        "uploadDisabled": true,
+        "safetyWithdrawalAvailable": true
+      },
+      "durationMs": 361
+    },
+    {
+      "id": "suspended_zip",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:12:26.485Z",
+      "facts": {
+        "bytes": 187775,
+        "zipEntries": 32,
+        "datasets": 25,
+        "includedMedia": 4,
+        "manifestComplete": true,
+        "restoreBackup": false,
+        "sha256": "647260b2480b8fba591ca6e7016b8f2335f6265ef5db414dfd558dc097f4d5f3"
+      },
+      "durationMs": 382
+    },
+    {
+      "id": "platform_reactivate",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:12:26.868Z",
+      "durationMs": 197
+    },
+    {
+      "id": "reactivated_controls_publication",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:12:27.065Z",
+      "facts": {
+        "controlsRecovered": true,
+        "unchangedPublication": true,
+        "unchangedConfigPublication": true
+      },
+      "durationMs": 420
+    },
+    {
+      "id": "primary_reverify_outage",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:12:27.485Z",
+      "facts": {
+        "primaryPointerPreserved": true,
+        "customDeliveryStatus": 421,
+        "customDeliveryDenied": true,
+        "verifyLocalActionAvailable": true
+      },
+      "durationMs": 747
+    },
+    {
+      "id": "primary_verify_local_recovery",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:12:28.232Z",
+      "facts": {
+        "explicitLocalVerification": true,
+        "samePrimaryHost": true,
+        "unchangedPublication": true,
+        "realTlsVerified": false
+      },
+      "durationMs": 560
+    },
+    {
+      "id": "return_godent_fresh_visitor",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:12:28.792Z",
+      "facts": {
+        "oldCustomStatus": 200,
+        "canonicalGodent": true,
+        "absoluteNavigationClicked": true,
+        "freshVisitorContext": true,
+        "cached301RecoveryClaimed": false
+      },
+      "durationMs": 724
+    },
+    {
+      "id": "restore_original_custom_primary",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:12:29.516Z",
+      "facts": {
+        "originalCustomPrimaryRestored": true,
+        "unchangedPublication": true
+      },
+      "durationMs": 705
+    },
+    {
+      "id": "browser_page_errors",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:12:30.222Z",
+      "facts": {
+        "uncaughtPageErrors": 0,
+        "consoleErrorEvents": 11,
+        "consoleMessagesRetained": false
+      },
+      "durationMs": 0
+    }
+  ],
+  "recoveries": [
+    {
+      "action": "restore_active_tenant",
+      "status": "NOT_NEEDED"
+    },
+    {
+      "action": "restore_original_custom_primary",
+      "status": "NOT_NEEDED"
+    }
+  ],
+  "browserEvents": [
+    {
+      "case": "resume_guards",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "resume_guards",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "resume_guards",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "platform_password_login_monitor",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "reactivated_controls_publication",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "primary_reverify_outage",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "primary_reverify_outage",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "primary_verify_local_recovery",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "return_godent_fresh_visitor",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "return_godent_fresh_visitor",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "restore_original_custom_primary",
+      "kind": "console-error",
+      "name": "error"
+    }
+  ],
+  "diagnosticWriteErrors": [],
+  "limits": [
+    "Local synthetic UAT only; no live DNS or TLS verification.",
+    "REUSED cases link prior PASS evidence and are not fresh execution.",
+    "Exports are business data, not restore backups; private ZIP files remain in .local.",
+    "Screenshots mask editable values; public console/page errors retain names/types only; diagnostic details are private with known credentials redacted.",
+    "No assertion about previously cached 301 recovery; return-to-Godent uses a fresh visitor context.",
+    "No new tenant or deletion execution is performed."
+  ]
+}

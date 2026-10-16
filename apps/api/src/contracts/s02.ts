@@ -29,7 +29,11 @@ export interface Page<T> { items: T[]; nextCursor: string | null }
 export interface TenantSummary { id: string; name: string; status: 'active' | 'suspended'; createdAt: string }
 export interface MemberSummary { userId: string; name: string; email: string; role: 'tenant_admin'; status: 'active' | 'revoked' }
 export interface InvitationSummary { id: string; email: string; expiresAt: string; acceptedAt: string | null; revokedAt: string | null }
-export interface ProvisionTenantInput { name: string; initialAdminEmail: string }
+export interface ProvisionTenantInput {
+  name: string;
+  initialAdminEmail: string;
+  initialQuotaPolicy: import('./m5-platform').M5QuotaPolicy & { mode: 'monitor' | 'enforced' };
+}
 export interface InviteMemberInput { email: string }
 export interface AcceptInvitationInput { token: string }
 

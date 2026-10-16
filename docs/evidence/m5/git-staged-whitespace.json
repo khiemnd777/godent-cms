@@ -1,0 +1,21 @@
+{
+  "status": "FAIL",
+  "command": "git diff --cached --check",
+  "exitCode": 2,
+  "finding": {
+    "path": "apps/api/migrations/0053_m5_read_safety.sql",
+    "line": 520,
+    "message": "new blank line at EOF",
+    "sha256": "c67c2cca17963e9f7104eb28e5d78e3223c006d237ef7532dbf0eae0e2b5a99e",
+    "matchesAcceptedAppliedMigration": true
+  },
+  "otherStagedPaths": {
+    "command": "git diff --cached --check -- . ':(exclude)apps/api/migrations/0053_m5_read_safety.sql'",
+    "status": "PASS",
+    "exitCode": 0
+  },
+  "disposition": "Non-blocking format-only finding; preserve the already-applied and accepted SQL bytes/checksum. No Git whitespace configuration, hook, test or assertion bypass. Full staged check remains FAIL, not relabelled PASS.",
+  "prior0035WhitespaceFail": "Preserved unchanged; not in this staged diff.",
+  "auditBraces": "FAIL/open unchanged; no Production waiver",
+  "authority": "Direct accepted-M5 normal commit/push authority; no deploy"
+}

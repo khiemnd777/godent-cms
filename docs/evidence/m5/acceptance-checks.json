@@ -1,0 +1,153 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-17T00:30:14.177087+07:00",
+  "scope": "Delegated M5 local acceptance review; application source and previous evidence unchanged",
+  "baseline": {
+    "path": "docs/evidence/m5/final-checks.json",
+    "sha256": "deb0b697fd7d9e428d60af0fa848a5bc3fbedc9bc52d6590d621cc94e6458f13",
+    "sourcePins": 479,
+    "compiledPins": 82,
+    "evidencePins": 76,
+    "allMatched": true,
+    "historicalPendingFieldPreserved": true
+  },
+  "fresh": {
+    "pureTests": {
+      "path": "docs/evidence/m5/acceptance-focused.xml",
+      "passed": 15,
+      "assertions": 171,
+      "failures": 0
+    },
+    "adminBrowser": {
+      "path": "docs/evidence/m5/ui-readonly-e6512cdd-0b2a-4c3d-803f-c6a4c5c35f59/results.json",
+      "checks": 5,
+      "status": "PASS"
+    },
+    "publicBrowserHTTP": {
+      "path": "docs/evidence/m5/acceptance-public-fa62e551-2eae-44fb-bc01-029774482368/results.json",
+      "checks": 7,
+      "status": "PASS"
+    },
+    "runtime": {
+      "path": "docs/evidence/m5/final-diagnostics-1792171751666.json",
+      "bunListeners": 3,
+      "diagnostics": 6,
+      "status": "PASS"
+    },
+    "preservation": {
+      "path": "docs/evidence/m5/preservation-1792171679264.json",
+      "tables": 72,
+      "baselineRows": 233213,
+      "protectedFiles": 1458,
+      "status": "PASS"
+    }
+  },
+  "independentReview": {
+    "status": "NO_BLOCKING_FINDING",
+    "thread": "01a14595-8e3f-7602-a4e5-d536b981b075",
+    "nativeEvidence": "docs/evidence/m5/acceptance-native-20261017.json",
+    "existingFindings": "8 CLOSED",
+    "newS18TestSha256": "72320fdf04489269723930a62baa91c2b8353dba8c989bd659601bd044289786",
+    "reviewerDBBrowserWorker": "NOT_RUN"
+  },
+  "decision": {
+    "status": "ACCEPTED_UNDER_DELEGATED_AUTHORITY",
+    "owner": "desktop /root",
+    "scope": "M5 v0.1 S16–S18 and full MVP within recorded local scope only",
+    "humanDelegationQuote": "Review và nghiệm thu M5 local (S16–S18) cho tôi. Giữ nguyên các giới hạn kiểm chứng và audit braces FAIL/open; chưa commit/push/deploy.",
+    "thread": "01a14576-0038-7232-8531-e6395fab7975",
+    "turn": "01a145c0-6994-7483-a348-f5cb5f487e24",
+    "directHumanAcceptedClaim": false
+  },
+  "audit": {
+    "status": "FAIL/open",
+    "boundedLocalM5Deferral": true,
+    "reassess": "2026-10-22 or earlier patch/dependency/exposure triggers and before Production",
+    "productionWaiver": false
+  },
+  "git": {
+    "head": "49f2a1a7be0188ebec019fee14a0dff9e4513726",
+    "stagedPaths": 0,
+    "commitPushDeploy": false
+  },
+  "documentationAndFinalRedaction": "PASS",
+  "limits": [
+    "Synthetic verifier only; live DNS/TLS NOT_RUN.",
+    "Historical FAIL/Unknown/NOT_RUN and applied0035 EOF whitespace FAIL retained.",
+    "External delivery/operational backup restore/natural waiting/Production AC-09 outside executed scope.",
+    "Source/current serving pins are separate recorded artifacts; zero trace refs does not prove absence of vulnerabilities.",
+    "Fresh checks did not repeat form submissions, publication/lifecycle/domain commands, migrations, fixtures, workers or destructive deletion.",
+    "Recorded audit FAIL/open and bounded local M5 deferral retained at unchanged dependency/build pins; no new Production waiver."
+  ],
+  "staticChecks": {
+    "command": "python3 -B scripts/verify_agent_setup.py",
+    "status": "PASS",
+    "maintainedHashes": 81,
+    "mirrorPairs": 28,
+    "markdownFiles": 143,
+    "localLinksAndAnchors": 1786,
+    "gitDiffCheck": "PASS",
+    "changedTextWhitespace": "PASS",
+    "changedTextFiles": 180,
+    "redaction": {
+      "path": "docs/evidence/m5/secret-check-1792171887639.json",
+      "status": "PASS",
+      "knownValues": 64,
+      "checkedForms": 138,
+      "findings": 0,
+      "limits": "Exact known private named values and URI/base64 forms in Git-visible and current serving output text files. No secret values or hashes exported. No OCR, runtime-memory scan or comprehensive secret discovery."
+    }
+  },
+  "originalSnapshotAndAllPinsPreservedAfterDocumentation": true,
+  "finalRecordedAt": "2026-10-17T00:31:43.810974+07:00",
+  "documentationPins": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "774608414ee470dbfee32f5983c08f00ce3685af246943962e9eda46fce8824f"
+    },
+    {
+      "path": "README.md",
+      "sha256": "809ac742afa2cbcdc975bc8f5ab66e2e95decaad1c3cc8c04cdb59f2f3e3a293"
+    },
+    {
+      "path": "docs/tasks/GCMS-M5-001.md",
+      "sha256": "9a0b634fe2fa61872eca0254eb6dd13817b318d2fbce47f003d86913189ce055"
+    },
+    {
+      "path": "docs/project-context.md",
+      "sha256": "9d66748e11793d0a9ee1ff73b6fd550a1910816311e2b8418d04702435ab2e81"
+    },
+    {
+      "path": "docs/project-plan.md",
+      "sha256": "a26552281af77f0b79605792af8e73120bcedb13e4d59cf3ad24f72666365278"
+    },
+    {
+      "path": "docs/project-state.md",
+      "sha256": "8c4248adfc33fad0857cb7658f11da0b4ecbba360656548c4cfec86bb62ebd03"
+    },
+    {
+      "path": "docs/acceptance-criteria.md",
+      "sha256": "3904e43174af98f4e716de92b4a5d86cab74b90f22d3745af3ac5ddaebe7fae0"
+    },
+    {
+      "path": "docs/verification-results.md",
+      "sha256": "b9fbb20d107ce173efb3d8df36a1f6fb2e4ebd0dbd1163d5d54832873984e0e3"
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha256": "0d04f561469a7cd43abd0b7472ea347b7f6eca2270b15ebdab2ef5f1fed63d5f"
+    },
+    {
+      "path": "docs/decisions/014-local-m5-domains-quota-lifecycle.md",
+      "sha256": "3357fbcb625e84f461cd3133d86b1f7de3d311d48b6ea621bdb669c1c49373e4"
+    },
+    {
+      "path": "docs/skills-manifest.json",
+      "sha256": "c165ae2d5d3941146471e21498af9d41957eec8dc189d038350a081d099bfeb1"
+    },
+    {
+      "path": "docs/evidence/m5/acceptance-review.md",
+      "sha256": "72adc5564433c9903eaa0f0a7c9ee3ee3cd6c81ccf6c9a3c3cd627be916e91bd"
+    }
+  ]
+}

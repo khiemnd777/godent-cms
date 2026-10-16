@@ -1,6 +1,7 @@
 import { BadRequestException } from '@nestjs/common';
 import { normalizeUserIdentifier } from '../contracts/user-identifier';
 import type { DraftInput, ProvisionTenantInput, SaveDraftInput } from '../contracts/s02';
+import { parseM5InitialQuotaPolicy } from '../contracts/m5-platform';
 
 function object(input: unknown, keys: readonly string[]): Record<string, unknown> {
   if (!input || typeof input !== 'object' || Array.isArray(input) || Object.getPrototypeOf(input) !== Object.prototype) {
@@ -36,10 +37,13 @@ export function invitationInput(input: unknown): { email: string } {
   return { email };
 }
 export function provisionInput(input: unknown): ProvisionTenantInput {
-  const value = object(input, ['name', 'initialAdminEmail']);
+  const value = object(input, ['name', 'initialAdminEmail', 'initialQuotaPolicy']);
   const name = text(value.name, 1, 160).trim();
   if (!name) throw new BadRequestException();
-  return { name, initialAdminEmail: invitationInput({ email: value.initialAdminEmail }).email };
+  let initialQuotaPolicy: ProvisionTenantInput['initialQuotaPolicy'];
+  try { initialQuotaPolicy = parseM5InitialQuotaPolicy(value.initialQuotaPolicy); }
+  catch { throw new BadRequestException(); }
+  return { name, initialAdminEmail: invitationInput({ email: value.initialAdminEmail }).email, initialQuotaPolicy };
 }
 export function acceptInput(input: unknown): { token: string } {
   const value = object(input, ['token']);

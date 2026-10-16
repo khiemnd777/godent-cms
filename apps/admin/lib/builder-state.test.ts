@@ -98,3 +98,8 @@ test("save captures the observed legacy state and never changes it during retry"
   expect(saved.expectedLegacyState?.version).toBe(3);
   expect(prepareBuilderSave(saved, emptyBuilder("home"), 9, () => "other", state)).toBe(saved);
 });
+
+test("does not require version comparison for an explicit quota denial", () => {
+  const result = builderSaveFailure(409, "QUOTA_EXCEEDED", false, true);
+  expect(result.conflict).toBe(false); expect(result.unknown).toBe(false); expect(result.retain).toBe(false); expect(result.denied).toBe(false);
+});

@@ -41,7 +41,7 @@ export function builderPublishCommand(draft: M4Variant, configPublicationId: str
   return { operationId, expectedVersion: draft.version, expectedPublicationVersion: draft.publicationVersion, expectedPublicationRevision: draft.publicationRevision, expectedConfigPublicationId: configPublicationId };
 }
 export function builderSaveFailure(status: number | undefined, code: string | undefined, previouslyUnknown: boolean, existing: boolean) {
-  return { ...versionedFailure(status, code, previouslyUnknown), conflict: existing && status === 409, denied: [401, 403, 404].includes(status ?? 0) && code !== "REAUTH_REQUIRED" };
+  return { ...versionedFailure(status, code, previouslyUnknown), conflict: existing && status === 409 && code !== "QUOTA_EXCEEDED", denied: [401, 403, 404].includes(status ?? 0) && code !== "REAUTH_REQUIRED" };
 }
 export function builderSources(content: M4Content): Record<string, string> {
   if ("name" in content) return { footer: documentSource(content.footer.body) };

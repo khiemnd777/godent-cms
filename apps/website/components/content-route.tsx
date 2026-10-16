@@ -1,3 +1,4 @@
+import { publicUrlBase } from "../lib/public-url-context";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { cache } from "react";
@@ -26,7 +27,7 @@ export async function listingMetadata({ params, searchParams }: ContentListProps
   const { tenant, section } = await params, kind = resolveKind(section);
   try {
     const query = parsePublicQuery(await searchParams), adopted = await loadBuilderList(tenant, "vi", kind, builderListSearch(query));
-    if (adopted?.config) return listingPageMetadata(adopted, tenant, "vi", kind);
+    if (adopted && (adopted.config || publicUrlBase(adopted))) return listingPageMetadata(adopted, tenant, "vi", kind);
     const page = await loadList(tenant, kind, publicQueryString(query));
     return page ? metadata(`${CONTENT_LABELS[kind].plural} | ${page.site.name}`, undefined, page.canonicalUrl) : metadata("Không tìm thấy trang");
   } catch (error) { if (error instanceof InvalidPublicQuery) return metadata("Bộ lọc không hợp lệ"); throw error; }
@@ -40,7 +41,7 @@ export async function ContentListing({ params, searchParams }: ContentListProps)
     return <main className="content-page"><h1>Bộ lọc không hợp lệ</h1><p>Vui lòng mở lại danh sách và chọn bộ lọc.</p><a href={contentPublicPath(tenant, kind)}>Mở danh sách</a></main>;
   }
   const adopted = await loadBuilderList(tenant, "vi", kind, builderListSearch(query));
-  if (adopted?.config) return <BuilderListing page={adopted} tenant={tenant} kind={kind} locale="vi" query={query} alternates={await listingAlternates(tenant, "vi", kind, adopted.canonicalUrl)}/>;
+  if (adopted && (adopted.config || publicUrlBase(adopted))) return <BuilderListing page={adopted} tenant={tenant} kind={kind} locale="vi" query={query} alternates={await listingAlternates(tenant, "vi", kind, adopted.canonicalUrl)}/>;
   const page = await loadList(tenant, kind, publicQueryString(query)); if (!page) notFound();
   return <PublicShell site={page.site} navigation={publicNavigation(tenant, kind)}>
     <p className="eyebrow">{page.site.name}</p><h1>{CONTENT_LABELS[kind].plural}</h1>

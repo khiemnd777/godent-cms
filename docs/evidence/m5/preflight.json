@@ -1,0 +1,253 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T16:29:24.801Z",
+  "migrations": [
+    {
+      "name": "0001_s02_access.sql",
+      "checksum": "2ae0985dbd0ce36c905161e2b56a322e1afc3b12eb66b8875102defff4c14199",
+      "status": "PASS"
+    },
+    {
+      "name": "0002_session_mfa_assurance.sql",
+      "checksum": "a6ec21939f829a620f5ce628f9a82edea14ed93d456f1d0fa4c950cd81949bc0",
+      "status": "PASS"
+    },
+    {
+      "name": "0003_reauth_grant_rls.sql",
+      "checksum": "fc7b11f8d5a54fe442458859fb0a214cda0ac9b78090e087829b90a54b824ccc",
+      "status": "PASS"
+    },
+    {
+      "name": "0004_s03_publication.sql",
+      "checksum": "ef250975223abad30581d0e4866ef06c6d3dc9f903bed7fefad0030e932d9ed6",
+      "status": "PASS"
+    },
+    {
+      "name": "0005_s04_consultation.sql",
+      "checksum": "804909aec2f1b56a1dfa976a854292f3bae959953789d23f5af2258e71fcc439",
+      "status": "PASS"
+    },
+    {
+      "name": "0006_s04_anonymous_audit.sql",
+      "checksum": "2bca40d52c1dae085b48f69e3c38ed3cdf2f0bba8d1a439fbda517d4924dccef",
+      "status": "PASS"
+    },
+    {
+      "name": "0007_s04_email_syntax.sql",
+      "checksum": "96455719a7042d8f47c215419e1360acfa550deb21c0f78a726bf99bcf86d901",
+      "status": "PASS"
+    },
+    {
+      "name": "0008_s05_lead_operations.sql",
+      "checksum": "0670219b8c4a88f099b9bd0db4f886aac360f38c43f837d8eec1d2c2a5af263b",
+      "status": "PASS"
+    },
+    {
+      "name": "0009_s05_notification_worker.sql",
+      "checksum": "7cd76bdc4793de29074c2a036c199d3ef6fb402a877a40b7db6b414aefe2778f",
+      "status": "PASS"
+    },
+    {
+      "name": "0010_s05_worker_recipient_alias.sql",
+      "checksum": "24c5e7cbd3ef91a3e4b4b7e18cc36d9cdfff1e712dc646fd00f2bc0901941721",
+      "status": "PASS"
+    },
+    {
+      "name": "0011_s05_worker_initial_readiness.sql",
+      "checksum": "3f4e66c1695ae668c5365917c66af65e2d4dd3f9f9d9e133fe0796a66db251f9",
+      "status": "PASS"
+    },
+    {
+      "name": "0012_s05_notification_login_link.sql",
+      "checksum": "6d598f7d20c1d8f11cc7ea7e1500af9a4674d57a795d77696723f7a58abaf7d0",
+      "status": "PASS"
+    },
+    {
+      "name": "0013_auth_password_only.sql",
+      "checksum": "89fc0ba78b1fe80c921506fc6c0e57f409da0b7ccc4645f22d713b04b836a2a5",
+      "status": "PASS"
+    },
+    {
+      "name": "0014_s05_user_identifier.sql",
+      "checksum": "e91f2cde773bba098b8cce046f754c2d62fbb7afdf24d5e8dd4688e15261a429",
+      "status": "PASS"
+    },
+    {
+      "name": "0015_s06_retention.sql",
+      "checksum": "557d3268481685050ac0fa396d110440164de27ed6c1685576b23d126753440e",
+      "status": "PASS"
+    },
+    {
+      "name": "0016_s07_media.sql",
+      "checksum": "7d57b1ebdf0523371791fae4ba13c8c68a7cda169e2891753d8700e430489d09",
+      "status": "PASS"
+    },
+    {
+      "name": "0017_s08_editorial.sql",
+      "checksum": "f4b7d9df09c1df0e467354fbfc45156f63dc75dfa9d3ba15f92a15ab6ea622c6",
+      "status": "PASS"
+    },
+    {
+      "name": "0018_m2_sql_boundary_repair.sql",
+      "checksum": "cb50e5e40257f7c486b385ff8203ae132f83c4b45ce564700eea02e95715c5c1",
+      "status": "PASS"
+    },
+    {
+      "name": "0019_s07_public_reference_eligibility.sql",
+      "checksum": "d637e6ef4cdd429466d3e714ca9df1968dc7d0659bf3c853f2b87339a76b58b3",
+      "status": "PASS"
+    },
+    {
+      "name": "0020_s08_history_version_guard.sql",
+      "checksum": "09ad831e81bbed43b2d3f2a74d617b7e9993c6ead02056f44b2ac79e3bff2fa6",
+      "status": "PASS"
+    },
+    {
+      "name": "0021_s06_claim_scheduled_jobs.sql",
+      "checksum": "08a6b1d65ca9f3d4e4a9780b2d8fc711268621121d520bb1c07e155608e9f240",
+      "status": "PASS"
+    },
+    {
+      "name": "0022_s08_public_cover_contract.sql",
+      "checksum": "86d079fbee64b94607a65ce56df094b5dbe89a8af449470c08bd789795fc435e",
+      "status": "PASS"
+    },
+    {
+      "name": "0024_s07_worker_current_claim.sql",
+      "checksum": "5818e4c43107fc0e7042572379c0eacec0953017dacd8d2e4475275f1ab72a8b",
+      "status": "PASS"
+    },
+    {
+      "name": "0025_m3_content.sql",
+      "checksum": "8e779f98ffe12579cd124023d2cc9bf690063f01c33f2c7a9a9170b2b2dcb9d4",
+      "status": "PASS"
+    },
+    {
+      "name": "0026_m3_service_links.sql",
+      "checksum": "30296766ba7212dddfffca7a5c188da783b2c94e18d7946aaafc144922e78ad5",
+      "status": "PASS"
+    },
+    {
+      "name": "0027_m3_lead_location.sql",
+      "checksum": "82e0377cb8cce332646baf4cdd3cf8bc4f76493f47cccf9cb799b1812827af0d",
+      "status": "PASS"
+    },
+    {
+      "name": "0028_m3_integrity.sql",
+      "checksum": "c43bdcc2e3b40b24cb7194227627bafd3d2e95901e6d440e57aadcc9d04dfc4a",
+      "status": "PASS"
+    },
+    {
+      "name": "0029_m3_intake_audit.sql",
+      "checksum": "8851370653087b00da1c4bf72be125dac6974462e13873bec0e1e8a2f9e8da76",
+      "status": "PASS"
+    },
+    {
+      "name": "0030_m3_bounded_admission.sql",
+      "checksum": "b3b2e80236607e87cbaac0289bd02751599ce4383acb4d3f4694292a5ae97509",
+      "status": "PASS"
+    },
+    {
+      "name": "0031_m3_public_list_budget.sql",
+      "checksum": "4849784dbf8d67602a82899b1ae1bdbcc96912123929f19bcbffa772b16da915",
+      "status": "PASS"
+    },
+    {
+      "name": "0032_m4_publication.sql",
+      "checksum": "afdb288824bd046e4ced3674af653e7b0bebded003798462470eada0c714ca66",
+      "status": "PASS"
+    },
+    {
+      "name": "0033_m4_public_reads.sql",
+      "checksum": "73e07da949c97ddcd77e65d3aa929157d5f1b6be52edffcecda117ce73e60256",
+      "status": "PASS"
+    },
+    {
+      "name": "0034_m4_projection_integrity.sql",
+      "checksum": "595463df6c58200b2cae916e2e3911637cb30364bbd9ef8d27f335f7443b837b",
+      "status": "PASS"
+    },
+    {
+      "name": "0035_m4_intake_sources.sql",
+      "checksum": "ff7dce23dde0dfb485d12858573a7e70575f0363cac54e7a7006f7571b00ae84",
+      "status": "PASS"
+    },
+    {
+      "name": "0036_m4_scope_integrity.sql",
+      "checksum": "cb7782214a676a7e526db3e6db8397754dff1f3c17f223a1cf45d2563b19f520",
+      "status": "PASS"
+    },
+    {
+      "name": "0037_m4_legacy_conflicts.sql",
+      "checksum": "b589dafd38e4b9855afb499e5045b8fdd0a633c927884454ba17299da4bc04e3",
+      "status": "PASS"
+    },
+    {
+      "name": "0038_m4_reference_resolution.sql",
+      "checksum": "017c9f671bc708015ce8841d1cbaa6c4ebfc3a0f6929b2f2fe81a8ceeea078c8",
+      "status": "PASS"
+    },
+    {
+      "name": "0039_m4_boundary_repairs.sql",
+      "checksum": "98fa1720a03961f166813f95c35dc50df5a1bdce9e119fb26e2102fee072384e",
+      "status": "PASS"
+    },
+    {
+      "name": "0040_m4_private_preview.sql",
+      "checksum": "51400fad92ac7c5767bc36e174081652261ef071ed67e6ed251d2caa4be3f500",
+      "status": "PASS"
+    },
+    {
+      "name": "0041_m4_intake_and_permission_lifecycle.sql",
+      "checksum": "149277a2831505df55890a0ce3ffbe9df3b3607e81bec15db3feb73319b78d87",
+      "status": "PASS"
+    },
+    {
+      "name": "0042_m4_draft_slug_identity.sql",
+      "checksum": "eb2dd90501e967b12496c7e451e2e7e1c197c01b1d82f72ca3802e914a8f26c6",
+      "status": "PASS"
+    },
+    {
+      "name": "0043_m4_post_lock_promotion_clock.sql",
+      "checksum": "74074574b9f083e7cc228cff3bf0f4a3c7ccc9db25af7c0d613925c65509d62d",
+      "status": "PASS"
+    },
+    {
+      "name": "0044_m4_legacy_budget_alias.sql",
+      "checksum": "d069862b74a08d48e8b1eb125adb5a50b2d2580d3c13f70c31fb651eebf6d2e5",
+      "status": "PASS"
+    },
+    {
+      "name": "0045_m4_locale_view_eligibility.sql",
+      "checksum": "7577156197317e2922eadd98842ed26809152bf47ec7151cbf57af62db051548",
+      "status": "PASS"
+    },
+    {
+      "name": "0046_m4_serialized_scope_budget.sql",
+      "checksum": "b334a35ae8a7d897a11c42de8e9a2dcb6e70243492b6a9fa075d7a5f8bfa89dd",
+      "status": "PASS"
+    },
+    {
+      "name": "0047_m4_asset_scope_expression.sql",
+      "checksum": "500d65edd0b3a48118ca3faee1303c0412b3552fdb4cef0dfb61670099779cb7",
+      "status": "PASS"
+    },
+    {
+      "name": "0048_m4_restore_locked_identity.sql",
+      "checksum": "ed2444f80120a3d62de15cd511057b03ac9c88a00dbb172b08696a5b1ebd4cf4",
+      "status": "PASS"
+    },
+    {
+      "name": "0049_m4_locale_asset_use_withdrawal.sql",
+      "checksum": "16f2414604ed9ad1dd44c99816c342b0845a72fba1bce00e12589c21aa58d892",
+      "status": "PASS"
+    },
+    {
+      "name": "0050_m4_seo_eligibility.sql",
+      "checksum": "ade84e01a91f65d0d93588093d4da5dbeacc683ef9d3dfddd78fcbcd0c3ed451",
+      "status": "PASS"
+    }
+  ],
+  "dispatchStarted": false,
+  "limits": "Read-only applied checksum and function-catalog inspection. No backup/restore or product behavior proof."
+}

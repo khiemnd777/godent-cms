@@ -1572,3 +1572,9 @@ small,.small {
 .builder-private.bp-theme-showcase .bp-resource.has-portrait>figure { grid-column:2; grid-row:2 / span 4; margin-top:0; }
 .builder-private.bp-theme-showcase .bp-resource.has-portrait>.bp-intro,.builder-private.bp-theme-showcase .bp-resource.has-portrait>.bp-details,.builder-private.bp-theme-showcase .bp-resource.has-portrait>.rich-content { grid-column:1; }
 @media(max-width:1023px) { .builder-private.bp-theme-showcase .bp-resource.has-portrait { display:block; } }
+
+/* Domain and lifecycle screens reuse the approved settings panels and controls. */
+.m5-binding { border:1px solid var(--line); border-radius:var(--radius); padding:18px; min-width:0; }
+.m5-binding h3,.m5-binding dd,.identifier { overflow-wrap:anywhere; }
+.m5-binding .btn,.bounded-form>.btn,.bounded-form .buttons .btn { max-width:100%; white-space:normal; overflow-wrap:anywhere; }
+@media(max-width:767px) { .m5-binding { padding:14px; } .m5-binding .buttons { align-items:stretch; } .m5-binding .buttons .btn { flex:1 1 100%; } }

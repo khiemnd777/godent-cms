@@ -1,5 +1,23 @@
 # godent-cms verification results
 
+## Current M5 local result — 2026-10-17
+
+**Later Git-delivery format finding:** full staged whitespace check FAIL at applied0053 EOF blank line; accepted SQL bytes/checksum are preserved. Other staged paths PASS. Prior0035 whitespace FAIL and braces FAIL/open remain. [Exact finding/disposition](evidence/m5/git-staged-whitespace.json); no runtime or acceptance result is relabelled.
+
+**ACCEPTED_UNDER_DELEGATED_AUTHORITY; technical CODE_INTEGRATED + VERIFIED_LOCAL unchanged.** [Direct delegation, coordinator decision and fresh checks](tasks/GCMS-M5-001.md#delegated-m5-acceptance--2026-10-17) record local S16–S18 acceptance. Fresh15pure/171assertions,5privateUI+7publicchecks,3Bun/6diagnostics and72table/233213row/1458file comparison PASS;479source/82compiled/76evidence pins unchanged; independent review no blocker. Original final snapshot pending field is preserved as historical. No fabricated direct HUMAN_ACCEPTED claim. [Complete approved plan/final handoff/AC map](tasks/GCMS-M5-001.md#final-local-handoff--2026-10-17), [ADR-014](decisions/014-local-m5-domains-quota-lifecycle.md), [independent source review](evidence/m5/review.md) and [final snapshot](evidence/m5/final-checks.json) contain the exact boundaries. Earlier M4/AUTH/M1/M2/M3 acceptances are unchanged. No Git delivery/deploy/Production/live DNS/TLS authority follows.
+
+| Check | Actual result / boundary |
+| --- | --- |
+| Integration |29unique successful cases/987assertions selected from matching SQL/API/HTTP/storage/worker evidence; [exact case/run map](evidence/m5/integration-summary.json). Historical failed suite statuses remain unchanged. |
+| Pure API / frontend |33/267 +193/1243; overlapping reviewer subsets excluded from totals. Typechecks/lint PASS; current scoped builds and serving pins retained. |
+| Browser UAT |31covered=12newPASS+19REUSED with strict current-state guards; original19PASS/1FAIL/11NOT_RUN checkpoint preserved. Actual consultation/shared lead/ZIP/domain/lifecycle and supplementary responsive/keyboard/read-error recovery. |
+| Confirmed deletion |1PASS/333assertions; only newly owned Deletion tenant, actual DELETE/HEAD/checkpoints/fault/retry/fence/competing worker,36private read surfaces/71business tables; A/B/global credentials/audit retained. |
+| Preservation |72tables/233213rows/1458files baseline; zero unexpected old-row/file changes. Original49 + new8 migration checksum matches; no old backlog dispatch/reset. |
+| Runtime / redaction |3actualBun1.4.3listeners/6diagnostics, new worker/native paths and exact known-value source/serving-output check PASS. Scope-limited checks do not prove Production. |
+| Review / dependency |All identified source findings CLOSED; braces high FAIL/open. Fresh local-M5 bounded exposure assessment at45Next traces/82APIJS, zero chain refs; reassess2026-10-22 or earlier triggers/before Production. No Production waiver. |
+
+Local AC-01–08/10–12 have current/equivalent evidence mapped in the task. Existing M1/AUTH/M2/M3/M4 breadth/security/D4 evidence is reused where unaffected. Live DNS/TLS, external-provider delivery, operational backup/restore, natural waiting, exhaustive browser combinations and Production/AC-09 remain NOT_RUN/deferred in their original modes. Applied0035 EOF whitespace FAIL remains untouched. M5 local acceptance is the coordinator decision under direct human delegation; no automatic Production claim.
+
 ## Current M4 local result — 2026-10-16
 
 **ACCEPTED_UNDER_DELEGATED_AUTHORITY; technical CODE_INTEGRATED + VERIFIED_LOCAL.** [Khiêm’s direct delegation and /root’s local acceptance decision](tasks/GCMS-M4-001.md#delegated-m4-acceptance--2026-10-16) are separately recorded. Fresh acceptance checks: source/serving pins unchanged,12pure/199assertions and10read-only browser cases PASS; existing original final snapshot remains historical PENDING. [Approved plan/final handoff](tasks/GCMS-M4-001.md#final-local-handoff--2026-10-16), [ADR-013](decisions/013-local-m4-builder-campaigns-locales.md), [review](evidence/m4/review.md) and [final snapshot](evidence/m4/final-checks.json) retain the exact boundaries. M3 and earlier acceptance remain unchanged; earlier no-S13/current-owner statements below are historical. M4 implementation baseline is813a8c9. Later direct M4 commit/push authority is recorded separately in the task; delivery does not add runtime/Production proof or authorize deploy/S16–S18.

@@ -1,5 +1,27 @@
 # Local development and verification
 
+## Current M5 local operation
+
+The [saved approved M5 plan and execution ledger](tasks/GCMS-M5-001.md) governs S16–S18 from base49f2a1a. Use project-local Bun1.4.3 and the existing127.0.0.1ports5890API/5891admin/5892website. No retained credentials, dependencies, global Bun or ports were reset. `.local/m5-fixtures.json`, `.local/m5-demo.json` and `.local/m5.env` are private owned0600 inputs. Do not print them or run earlier fixture suites as reset/cleanup.
+
+| Command | Bounded effect |
+| --- | --- |
+| `bun run m5:bootstrap` | Create/assert only new M5 namespace/narrow lifecycle role; never reset old credentials. |
+| `bun run m5:migrate -- --compile-only` / `bun run m5:migrate` | Rollback compilation, then allowlisted forward0051–0058 with every applied checksum verified. No dispatch. Existing applied migrations stay byte-identical. |
+| `bun run m5:fixtures` / `bun run m5:demo` | New owned synthetic fixture preparation; an existing complete manifest returns without reset. Completed Deletion is never recreated. These are preparation commands, not necessary to view the running demo. |
+| `bun run m5:domain-proof -- --expires-at=<explicit-UTC-instant>` | Owner-only synthetic attestation for exact owned local hosts, at most24hours. Completed Deletion is skipped only with matching minimal tombstone. Does not activate a binding or prove DNS/TLS. Current binding proof still needs explicit tenant verification and expires within1hour. |
+| `bun run m5:preserve` | Original-column/hash comparison against the exclusive72table/233213row/1458file baseline; no data output/backup claim. |
+| `bun run test:m5:unit` | Pure API contract, ZIP, safety and worker checks; no integration/deletion opt-in. |
+| `bun run check:runtime:m5` / `bun run check:secrets:m5` | Actual owned listener/diagnostic checks; exact known-value source/serving-output scan. Neither proves Production readiness. |
+
+Actual integration uses `M5_INTEGRATION=1 ./node_modules/.bin/bun --env-file=.env --env-file=.local/s02.env test apps/api/test/<selected-m5-suite>.test.ts`. Select suites by changed behavior and serialize mutations of the same owned fixture. Do not rerun valid evidence merely to create a green aggregate. Historical failed JUnit files remain intact; the task records focused repair runs and reused cases.
+
+The Deletion test additionally requires `M5_DELETION_INTEGRATION=1` and positive untouched-manifest/DB/enrollment checks. **It has completed once and is not rerunnable as a reset.** Actual media originals/derivatives and71business-table graph were removed for that new tenant only; global users/credentials and audit remain. Cleanup removes its worker scope, so a later lifecycle CLI call correctly fails closed rather than re-enrolling or deleting again. No scheduler is installed. Existing S04/S05/M2/M3/M4 backlog is not dispatched.
+
+The browser suite `scripts/m5-browser.ts --local-m5 --synthetic-fixtures` has a guarded resume for the exact prior19successful cases. Its current31-case result consists of12newPASS+19REUSED. Original FAIL remains historical. Private ZIPs stay under `.local`; screenshots mask editable values/account controls. `scripts/m5-ui-readonly.ts --local-m5` covers Platform geometry and read-error/keyboard recovery; `--data-only` selects its focused repaired case. Browser-only injected read failures do not replace real happy-path API/SQL proof.
+
+Review demo: [CMS](http://127.0.0.1:5891/cms), [Platform limits](http://127.0.0.1:5891/platform/limits?tenant=3668d499-dda1-46ed-b03f-a959d93786e1), [Godent public entry](http://localhost:5892/m5-6c18ade7-a) and [current custom entry](http://m5-6c18ade7-a.localhost:5892/). Log in normally using the owned synthetic identity kept in the private fixture file. Platform-only has no private CMS access. If local domain proof expires, the UI requires explicit reverify/verify; expiry never silently flips primary. Headless evidence used an explicit browser-local resolver rule; this did not change OS DNS. Live DNS/TLS/external email/Production/AC-09 remain outside this package.
+
 ## Current M3 local operation
 
 The [complete approved M3 plan and execution ledger](tasks/GCMS-M3-001.md) governs S09–S12. M1/AUTH/S01–S08/M2 remain HUMAN_ACCEPTED; M3 S09–S12 is [HUMAN_ACCEPTED](tasks/GCMS-M3-001.md#human-m3-acceptance--2026-10-16) within recorded local scope. Acceptance adds no runtime proof or new execution authority; historical FAIL/Unknown/NOT_RUN remain unchanged. [ADR-012](decisions/012-local-m3-dental-content.md) records the contracts. Existing Bun1.4.3, ports, database, storage and credentials are retained; no dependency version/global Bun/DNS/TLS/external email/deployment change is required. Historical procedures below do not authorize resets or old backlog dispatch.

@@ -1,3 +1,4 @@
+import type { M5FailureCode } from "../../api/src/contracts/m5-platform";
 import type { S05ErrorCode } from "../../api/src/contracts/s05";
 export type Membership = { tenantId: string; tenantName: string; role: "tenant_admin" };
 export type CurrentSession = {
@@ -30,11 +31,12 @@ export function tenantApi(tenantId: string, suffix = "") {
   return `/api/tenants/${encodeURIComponent(tenantId)}${suffix}`;
 }
 export class ApiError extends Error {
-  constructor(public status: number, public code?: S05ErrorCode) { super(`API request failed (${status})`); }
+  constructor(public status: number, public code?: S05ErrorCode | M5FailureCode, public quota?: { dimension: "content_items" | "media_bytes"; usage: number; limit: number }) { super(`API request failed (${status})`); }
 }
-const allowedErrorCodes: readonly S05ErrorCode[] = ["REAUTH_REQUIRED", "INVALID_INPUT", "VERSION_CONFLICT", "OPERATION_CONFLICT", "INVALID_TRANSITION", "ASSIGNEE_UNAVAILABLE", "RECIPIENT_UNAVAILABLE", "LEAD_UNAVAILABLE"];
+const allowedErrorCodes: readonly (S05ErrorCode | M5FailureCode)[] = ["REAUTH_REQUIRED", "INVALID_INPUT", "VERSION_CONFLICT", "OPERATION_CONFLICT", "INVALID_TRANSITION", "ASSIGNEE_UNAVAILABLE", "RECIPIENT_UNAVAILABLE", "LEAD_UNAVAILABLE", "QUOTA_EXCEEDED", "DELETION_UNAVAILABLE", "CONFIRMATION_REQUIRED", "EXECUTE_AFTER", "IRREVERSIBLE", "NOT_FOUND"];
 export function errorText(error: unknown) {
   if (!(error instanceof ApiError)) return "Không thể kết nối. Kiểm tra kết nối và thử lại.";
+  if (error.code === "QUOTA_EXCEEDED") return error.quota ? `Đã đạt hạn mức ${error.quota.dimension === "content_items" ? "nội dung" : "dung lượng ảnh"}: đang dùng ${error.quota.usage}, giới hạn ${error.quota.limit}. Nội dung đã có vẫn được giữ. Liên hệ quản trị nền tảng để điều chỉnh.` : "Đã đạt hạn mức tài nguyên. Nội dung đã có vẫn được giữ. Liên hệ quản trị nền tảng để điều chỉnh.";
   if (error.status === 401) return "Phiên đăng nhập đã kết thúc. Vui lòng đăng nhập lại.";
   if (error.status === 403) return "Không được phép thực hiện. Kiểm tra quyền truy cập hoặc xác thực lại tài khoản.";
   if (error.status === 404) return "Không tìm thấy nội dung hoặc bạn không có quyền truy cập.";
@@ -50,11 +52,12 @@ export async function apiRequest<T>(path: string, options: { method?: "GET" | "P
     ...(options.body !== undefined ? { body: multipart ? options.body as FormData : JSON.stringify(options.body) } : {}), signal: options.signal,
   });
   if (!response.ok) {
-    let code: S05ErrorCode | undefined;
-    try { const payload: unknown = await response.json(); if (payload && typeof payload === "object" && "code" in payload && typeof payload.code === "string" && allowedErrorCodes.includes(payload.code as S05ErrorCode)) code = payload.code as S05ErrorCode; } catch { /* Server messages stay private; only allowlisted control codes cross this boundary. */ }
+    let code: S05ErrorCode | M5FailureCode | undefined;
+    let quota: ApiError["quota"];
+    try { const payload: unknown = await response.json(); if (payload && typeof payload === "object" && "code" in payload && typeof payload.code === "string" && allowedErrorCodes.includes(payload.code as S05ErrorCode)) code = payload.code as S05ErrorCode | M5FailureCode; if (code === "QUOTA_EXCEEDED" && payload && typeof payload === "object" && "dimension" in payload && (payload.dimension === "content_items" || payload.dimension === "media_bytes") && "usage" in payload && Number.isSafeInteger(payload.usage) && Number(payload.usage) >= 0 && "limit" in payload && Number.isSafeInteger(payload.limit) && Number(payload.limit) >= 0) quota = { dimension: payload.dimension, usage: Number(payload.usage), limit: Number(payload.limit) }; } catch { /* Server messages stay private; only allowlisted control codes cross this boundary. */ }
     if (response.status === 401 && !options.sessionCheck && typeof window !== "undefined" && !path.startsWith("/api/auth/")) window.dispatchEvent(new Event("godent:session-expired"));
     if (response.status === 403 && !options.sessionCheck && typeof window !== "undefined" && !path.startsWith("/api/auth/")) window.dispatchEvent(new Event("godent:access-changed"));
-    throw new ApiError(response.status, code);
+    throw new ApiError(response.status, code, quota);
   }
   if (response.status === 204) return undefined as T;
   return response.json() as Promise<T>;

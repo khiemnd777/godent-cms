@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "runtime": "bun1.4.3",
+  "entrypoint": "apps/api/dist/worker/m5-lifecycle-main.js",
+  "fixtureLabel": "Deletion",
+  "expected": "Fail closed after confirmed cleanup removed its worker_scope",
+  "actualExitCode": 1,
+  "stderrBytes": 34,
+  "publicMessage": "M5 lifecycle execution incomplete",
+  "diagnostic": "Actual source worker runOnce confirmed PostgreSQL Lifecycle worker scope denied; no re-enrollment or further deletion",
+  "credentialsPrinted": false,
+  "limits": "CLI denial is runtime/role evidence; real destructive effects/fenced retry were verified separately in deletion-local-first.xml. Initial probe incorrectly expected idle and remains a historical failed harness expectation."
+}

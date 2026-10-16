@@ -1,0 +1,26 @@
+{
+  "owner": "GCMS-M5-UI-READONLY-v1",
+  "recordedBy": "root after actual tool receipts; no re-execution",
+  "status": "PASS",
+  "uniqueCoveredChecks": 5,
+  "firstRun": {
+    "overall": "FAIL",
+    "completedChecks": 4,
+    "completed": [
+      "platform-responsive1440",
+      "platform-responsive390",
+      "platform-responsive320",
+      "domains-loading-error-keyboard-real-GET-recovery"
+    ],
+    "evidence": "ui-readonly-c544bd27-d136-4ff8-a318-c66072cee6dd",
+    "sourcePin": "Unknown at initial execution; screenshot/assertion/tool result retained",
+    "failed": "Data loading assertion: browser fault blocked parent capability GET"
+  },
+  "focusedRepair": {
+    "status": "PASS",
+    "checks": 1,
+    "evidence": "ui-readonly-5af86397-8556-4281-bb70-74d5a8688ec1/results.json",
+    "repair": "Allow the parent capability read; hold/fail the component read, then Enter retry to real GET"
+  },
+  "limits": "First run remains failed overall; only four completed checks reused. Browser-injected read faults; no business writes. This is not exhaustive keyboard or accessibility certification."
+}

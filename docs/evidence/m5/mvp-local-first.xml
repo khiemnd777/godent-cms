@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="3" assertions="307" failures="0" skipped="0" time="2.474987">
+  <testsuite name="apps/api/test/m5-mvp-local.test.ts" file="apps/api/test/m5-mvp-local.test.ts" tests="3" assertions="307" failures="0" skipped="0" time="2.467614" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="S18 bounded real MVP journeys on the owned M5 B tenant" file="apps/api/test/m5-mvp-local.test.ts" line="15" tests="3" assertions="307" failures="0" skipped="0" time="1.508" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="VI/EN content uses both published themes through two entries with one current primary" classname="S18 bounded real MVP journeys on the owned M5 B tenant" time="0.914311" file="apps/api/test/m5-mvp-local.test.ts" line="67" assertions="168" />
+      <testcase name="cross-entry EN intake produces one shared lead and one bounded private local notification capture" classname="S18 bounded real MVP journeys on the owned M5 B tenant" time="0.309308" file="apps/api/test/m5-mvp-local.test.ts" line="77" assertions="48" />
+      <testcase name="pending edits and restore stay private until explicit publish; unpublish returns safe404 on both entries" classname="S18 bounded real MVP journeys on the owned M5 B tenant" time="0.285809" file="apps/api/test/m5-mvp-local.test.ts" line="94" assertions="91" />
+    </testsuite>
+  </testsuite>
+</testsuites>

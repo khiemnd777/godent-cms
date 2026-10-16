@@ -1,4 +1,5 @@
 "use client";
+import { useTenantCapabilities } from "./tenant-capabilities";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { S05_ROUTES, type RecipientSettings, type RecipientSettingsInput, type RecipientSettingsResult } from "../../api/src/contracts/s05";
@@ -38,10 +39,11 @@ function RecipientEditor({ tenantId, settings, onSaved, onUnavailable, onRefresh
   useEffect(() => { alive.current = true; return () => { alive.current = false; request.current?.abort(); }; }, []);
   const normalizedIds = mode === "selected" ? [...ids].sort() : [];
   const dirty = mode !== settings.mode || JSON.stringify(normalizedIds) !== JSON.stringify([...settings.recipientUserIds].sort()) || unknown;
-  const disabled = busy || unknown || conflict || !settings.capabilities.canWrite;
+  const { businessWrite } = useTenantCapabilities();
+  const disabled = !businessWrite || busy || unknown || conflict || !settings.capabilities.canWrite;
   const selectedUsers = ids.map(id => admins.known.find(item => item.userId === id) ?? settings.recipients.find(item => item.userId === id));
   async function save() {
-    if (busy || conflict || !settings.capabilities.canWrite || !data) return;
+    if (!businessWrite || busy || conflict || !settings.capabilities.canWrite || !data) return;
     if (!attempt.current && mode === "selected" && !ids.length) { setError("Chọn ít nhất một quản trị viên hợp lệ."); return; }
     if (!attempt.current && ids.length > 50) { setError("Chọn tối đa 50 quản trị viên."); return; }
     const body = prepareVersionedOperation(attempt.current, { mode, recipientUserIds: normalizedIds }, settings.version);

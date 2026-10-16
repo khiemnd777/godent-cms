@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="193" assertions="1243" failures="0" skipped="0" time="0.630697">
+  <testsuite name="apps/website/proxy.test.ts" file="apps/website/proxy.test.ts" tests="17" assertions="126" failures="0" skipped="0" time="0.081644" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="local public entry and credential boundary" file="apps/website/proxy.test.ts" line="19" tests="12" assertions="57" failures="0" skipped="0" time="0.003" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="rejects the administration cookie host alias before public rendering" classname="local public entry and credential boundary" time="0.001379" file="apps/website/proxy.test.ts" line="20" assertions="2" />
+      <testcase name="removes credentials and untrusted forwarding on the public platform root" classname="local public entry and credential boundary" time="0.000255" file="apps/website/proxy.test.ts" line="25" assertions="5" />
+      <testcase name="resolves exact custom hostname and rewrites the site root using server tenant identity" classname="local public entry and credential boundary" time="0.002549" file="apps/website/proxy.test.ts" line="29" assertions="13" />
+      <testcase name="does not select another tenant from a custom path prefix" classname="local public entry and credential boundary" time="0.000204" file="apps/website/proxy.test.ts" line="37" assertions="3" />
+      <testcase name="rejects unknown bindings and never uses caller forwarded-host as authority" classname="local public entry and credential boundary" time="0.000081" file="apps/website/proxy.test.ts" line="43" assertions="3" />
+      <testcase name="pins VI and EN publication and configuration and removes caller pin replacements" classname="local public entry and credential boundary" time="0.000468" file="apps/website/proxy.test.ts" line="48" assertions="4" />
+      <testcase name="returns exact301 directly to same-language custom primary for GET and HEAD" classname="local public entry and credential boundary" time="0.000553" file="apps/website/proxy.test.ts" line="55" assertions="6" />
+      <testcase name="returns one302 directly to primary VI for missing EN without a301 chain" classname="local public entry and credential boundary" time="0.00012" file="apps/website/proxy.test.ts" line="62" assertions="2" />
+      <testcase name="preserves a same-language listing cursor and resets it for locale fallback" classname="local public entry and credential boundary" time="0.000541" file="apps/website/proxy.test.ts" line="67" assertions="8" />
+      <testcase name="keeps backend failure or stale pins as503 without language or host fallback" classname="local public entry and credential boundary" time="0.000219" file="apps/website/proxy.test.ts" line="75" assertions="6" />
+      <testcase name="does not redirect or dispatch unsupported page POST" classname="local public entry and credential boundary" time="0.000071" file="apps/website/proxy.test.ts" line="81" assertions="3" />
+      <testcase name="returns400 for ambiguous functional query rather than dropping it into a redirect" classname="local public entry and credential boundary" time="0.000084" file="apps/website/proxy.test.ts" line="85" assertions="2" />
+    </testsuite>
+    <testcase name="serves a valid custom binding with Godent canonical after explicit return without a reverse301" classname="" time="0.00017" file="apps/website/proxy.test.ts" line="91" assertions="3" />
+    <testcase name="routes exact metadata paths through the real API entry parser" classname="" time="0.000407" file="apps/website/proxy.test.ts" line="97" assertions="20" />
+    <testcase name="keeps custom robots bound, nonredirecting and excluded from indexing" classname="" time="0.000147" file="apps/website/proxy.test.ts" line="111" assertions="6" />
+    <testcase name="does not generalize metadata support to dotted nested or encoded tenant paths" classname="" time="0.000061" file="apps/website/proxy.test.ts" line="119" assertions="6" />
+    <testcase name="keeps real-adapter page and metadata rewrites internal when rawURL uses the loopback listener" classname="" time="0.035635" file="apps/website/proxy.test.ts" line="123" assertions="34" />
+  </testsuite>
+  <testsuite name="apps/admin/proxy.test.ts" file="apps/admin/proxy.test.ts" tests="1" assertions="3" failures="0" skipped="0" time="0.001499" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="admin rejects host aliases and keeps private document responses out of caches" classname="" time="0.000352" file="apps/admin/proxy.test.ts" line="4" assertions="3" />
+  </testsuite>
+  <testsuite name="apps/website/components/rich-text.test.ts" file="apps/website/components/rich-text.test.ts" tests="1" assertions="4" failures="0" skipped="0" time="0.073273" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="public renderer keeps text inert and allows only validated HTTP links" classname="" time="0.007462" file="apps/website/components/rich-text.test.ts" line="5" assertions="4" />
+  </testsuite>
+  <testsuite name="apps/website/components/m5-navigation.test.tsx" file="apps/website/components/m5-navigation.test.tsx" tests="1" assertions="92" failures="0" skipped="0" time="0.04763" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="targets the absolute current primary from a custom entry for both themes, locales and primary modes" classname="" time="0.025043" file="apps/website/components/m5-navigation.test.tsx" line="12" assertions="92" />
+  </testsuite>
+  <testsuite name="apps/website/components/builder-theme.test.tsx" file="apps/website/components/builder-theme.test.tsx" tests="4" assertions="271" failures="0" skipped="0" time="0.063969" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="both themes render every approved page family in each locale without a placeholder branch" classname="" time="0.056322" file="apps/website/components/builder-theme.test.tsx" line="23" assertions="258" />
+    <testcase name="image-led listings use the current gateway projection instead of asset references or a cache" classname="" time="0.001103" file="apps/website/components/builder-theme.test.tsx" line="31" assertions="4" />
+    <testcase name="an inactive promotion removes a landing offer action and form while retaining information" classname="" time="0.001312" file="apps/website/components/builder-theme.test.tsx" line="37" assertions="4" />
+    <testcase name="EN form uses server-selected consent copy and does not invent a service selection" classname="" time="0.001849" file="apps/website/components/builder-theme.test.tsx" line="44" assertions="5" />
+  </testsuite>
+  <testsuite name="apps/website/components/public-content.test.tsx" file="apps/website/components/public-content.test.tsx" tests="5" assertions="29" failures="0" skipped="0" time="0.005524" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="gallery rendering removes both images and all alt/caption text from incomplete or duplicate pairs" classname="" time="0.00049" file="apps/website/components/public-content.test.tsx" line="11" assertions="12" />
+    <testcase name="gallery rendering preserves ordered before/after labels and uses the direct eligibility gateway" classname="" time="0.00033" file="apps/website/components/public-content.test.tsx" line="17" assertions="4" />
+    <testcase name="prices keep the from qualifier, both equal range endpoints and all decimal digits" classname="" time="0.00018" file="apps/website/components/public-content.test.tsx" line="23" assertions="2" />
+    <testcase name="consultation renders an optional eligible-location selector and keeps legacy forms without a location control" classname="" time="0.001513" file="apps/website/components/public-content.test.tsx" line="29" assertions="5" />
+    <testcase name="reverse filters and pagination preserve resource identity without adding an exact publication filter" classname="" time="0.001052" file="apps/website/components/public-content.test.tsx" line="37" assertions="6" />
+  </testsuite>
+  <testsuite name="apps/website/components/builder-page.test.tsx" file="apps/website/components/builder-page.test.tsx" tests="1" assertions="9" failures="0" skipped="0" time="0.001464" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="representative homepage renders only projected saved sections and escapes plain text" classname="" time="0.000743" file="apps/website/components/builder-page.test.tsx" line="7" assertions="9" />
+  </testsuite>
+  <testsuite name="apps/website/lib/builder-seo.test.ts" file="apps/website/lib/builder-seo.test.ts" tests="2" assertions="10" failures="0" skipped="0" time="0.001495" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="metadata uses actual locale and eligible alternates and removes withdrawn social images" classname="" time="0.000304" file="apps/website/lib/builder-seo.test.ts" line="4" assertions="5" />
+    <testcase name="structured data contains supplied facts and safely encodes HTML script delimiters" classname="" time="0.000201" file="apps/website/lib/builder-seo.test.ts" line="10" assertions="5" />
+  </testsuite>
+  <testsuite name="apps/website/lib/public-content.test.ts" file="apps/website/lib/public-content.test.ts" tests="10" assertions="35" failures="0" skipped="0" time="0.007497" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="M3 SSR reads the fixed anonymous no-store API and validates the tenant-specific canonical path" classname="" time="0.001279" file="apps/website/lib/public-content.test.ts" line="14" assertions="7" />
+    <testcase name="public responses reject private fields, draft shapes, invalid media and cross-tenant links" classname="" time="0.000479" file="apps/website/lib/public-content.test.ts" line="23" assertions="4" />
+    <testcase name="public list validates real card identities and distinguishes empty/not-found/outage" classname="" time="0.00049" file="apps/website/lib/public-content.test.ts" line="29" assertions="5" />
+    <testcase name="public response reads enforce the shared byte limit before parsing the DTO" classname="" time="0.001712" file="apps/website/lib/public-content.test.ts" line="37" assertions="1" />
+    <testcase name="filter URLs preserve one exact published reference and encode search without forwarding arbitrary parameters" classname="" time="0.000448" file="apps/website/lib/public-content.test.ts" line="43" assertions="4" />
+    <testcase name="reverse discovery after P2 republish requests eligible relationships by resource and keeps P1 pins intact" classname="" time="0.000751" file="apps/website/lib/public-content.test.ts" line="50" assertions="6" />
+    <testcase name="prices preserve exact decimal strings and reject reversed ranges and mixed shapes" classname="" time="0.000167" file="apps/website/lib/public-content.test.ts" line="69" assertions="3" />
+    <testcase name="consultation options reject locations not explicitly present among eligible service references" classname="" time="0.000203" file="apps/website/lib/public-content.test.ts" line="74" assertions="1" />
+    <testcase name="public media accepts only a scoped path for the owning resource, publication and exact asset revision" classname="" time="0.00052" file="apps/website/lib/public-content.test.ts" line="77" assertions="3" />
+    <testcase name="a gallery publication remains readable after all withdrawn pairs have been pruned" classname="" time="0.000065" file="apps/website/lib/public-content.test.ts" line="86" assertions="1" />
+  </testsuite>
+  <testsuite name="apps/website/lib/consultation.test.ts" file="apps/website/lib/consultation.test.ts" tests="8" assertions="32" failures="0" skipped="0" time="0.00482" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="normalizes phone presentation without country coercion and requires the selected contact" classname="" time="0.000793" file="apps/website/lib/consultation.test.ts" line="9" assertions="5" />
+    <testcase name="accepts email-only contact and checks every provided field" classname="" time="0.000216" file="apps/website/lib/consultation.test.ts" line="16" assertions="2" />
+    <testcase name="counts 500 Unicode code points after NFC and rejects 501" classname="" time="0.000514" file="apps/website/lib/consultation.test.ts" line="20" assertions="3" />
+    <testcase name="freezes one request key and payload across ambiguous response loss and retry" classname="" time="0.000732" file="apps/website/lib/consultation.test.ts" line="25" assertions="5" />
+    <testcase name="uses the dedicated anonymous API without credentials or URL contact data" classname="" time="0.000372" file="apps/website/lib/consultation.test.ts" line="42" assertions="4" />
+    <testcase name="keeps server errors redacted and treats invalid success as an unknown result" classname="" time="0.000372" file="apps/website/lib/consultation.test.ts" line="52" assertions="3" />
+    <testcase name="keeps the frozen key after conflicts and fails closed when challenge loading fails" classname="" time="0.000519" file="apps/website/lib/consultation.test.ts" line="58" assertions="4" />
+    <testcase name="keeps optional location absent for old payloads and freezes a selected location for retries" classname="" time="0.000087" file="apps/website/lib/consultation.test.ts" line="66" assertions="6" />
+  </testsuite>
+  <testsuite name="apps/website/lib/public-url-context.test.ts" file="apps/website/lib/public-url-context.test.ts" tests="3" assertions="7" failures="0" skipped="0" time="0.000888" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="entry-aware URL projection" file="apps/website/lib/public-url-context.test.ts" line="5" tests="3" assertions="7" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="keeps the Godent prefix and uses the custom site root" classname="entry-aware URL projection" time="0.000078" file="apps/website/lib/public-url-context.test.ts" line="6" assertions="3" />
+      <testcase name="retains registered functional queries for same-language migration" classname="entry-aware URL projection" time="0.000302" file="apps/website/lib/public-url-context.test.ts" line="11" assertions="2" />
+      <testcase name="rejects ambiguous functional queries and excludes private parameters" classname="entry-aware URL projection" time="0.000122" file="apps/website/lib/public-url-context.test.ts" line="16" assertions="2" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/website/lib/public-builder-validation.test.ts" file="apps/website/lib/public-builder-validation.test.ts" tests="9" assertions="39" failures="0" skipped="0" time="0.02102" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="same-locale content uses an exact resource/publication/asset gateway and never accepts another scope" classname="" time="0.002865" file="apps/website/lib/public-builder-validation.test.ts" line="15" assertions="7" />
+    <testcase name="a retained media projection cannot substitute alt text or an external byte URL" classname="" time="0.003385" file="apps/website/lib/public-builder-validation.test.ts" line="23" assertions="2" />
+    <testcase name="withdrawn standard images and all gallery pairs can be removed without exposing alt or captions" classname="" time="0.000292" file="apps/website/lib/public-builder-validation.test.ts" line="29" assertions="3" />
+    <testcase name="published menus preserve pinned labels and same-tenant route families with explicit VI fallback" classname="" time="0.001094" file="apps/website/lib/public-builder-validation.test.ts" line="39" assertions="5" />
+    <testcase name="a landing form has its own source and exact displayed-locale consent without an invented service" classname="" time="0.002552" file="apps/website/lib/public-builder-validation.test.ts" line="49" assertions="6" />
+    <testcase name="promotion sections accept the canonical bounded block and reject another publication or locale" classname="" time="0.003288" file="apps/website/lib/public-builder-validation.test.ts" line="59" assertions="4" />
+    <testcase name="whole-page EN fallback accepts only the same VI route and eligible publication identity" classname="" time="0.000181" file="apps/website/lib/public-builder-validation.test.ts" line="69" assertions="6" />
+    <testcase name="an EN reference cannot contain VI text through a different locale or unpinned publication" classname="" time="0.000534" file="apps/website/lib/public-builder-validation.test.ts" line="75" assertions="2" />
+    <testcase name="SEO entries exclude another tenant, unsafe route parameters and forged primary origins" classname="" time="0.00456" file="apps/website/lib/public-builder-validation.test.ts" line="83" assertions="4" />
+  </testsuite>
+  <testsuite name="apps/website/lib/price.test.ts" file="apps/website/lib/price.test.ts" tests="2" assertions="10" failures="0" skipped="0" time="0.00092" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="formats large amounts without converting exact decimal strings to floating point" classname="" time="0.000207" file="apps/website/lib/price.test.ts" line="4" assertions="3" />
+    <testcase name="refuses amounts outside the nonnegative decimal grammar" classname="" time="0.000155" file="apps/website/lib/price.test.ts" line="10" assertions="7" />
+  </testsuite>
+  <testsuite name="apps/website/lib/public-service.test.ts" file="apps/website/lib/public-service.test.ts" tests="4" assertions="13" failures="0" skipped="0" time="0.015223" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="public read uses the fixed local API without credentials, cache or inbound headers" classname="" time="0.012908" file="apps/website/lib/public-service.test.ts" line="6" assertions="7" />
+    <testcase name="missing publication is not found and invalid slugs never reach the API" classname="" time="0.000555" file="apps/website/lib/public-service.test.ts" line="15" assertions="3" />
+    <testcase name="public metadata refuses forged canonical hosts and mismatched page identity" classname="" time="0.000209" file="apps/website/lib/public-service.test.ts" line="20" assertions="1" />
+    <testcase name="API outages and transport failures do not become missing pages or stale content" classname="" time="0.000099" file="apps/website/lib/public-service.test.ts" line="24" assertions="2" />
+  </testsuite>
+  <testsuite name="apps/website/lib/m5-public-integration.test.tsx" file="apps/website/lib/m5-public-integration.test.tsx" tests="4" assertions="58" failures="0" skipped="0" time="0.005162" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 projected public rendering" file="apps/website/lib/m5-public-integration.test.tsx" line="12" tests="4" assertions="58" failures="0" skipped="0" time="0.003" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="renders both themes and locales with the custom site root and one metadata identity" classname="M5 projected public rendering" time="0.003269" file="apps/website/lib/m5-public-integration.test.tsx" line="13" assertions="40" />
+      <testcase name="uses custom-root listing forms, filters, browse and pagination links" classname="M5 projected public rendering" time="0.000332" file="apps/website/lib/m5-public-integration.test.tsx" line="30" assertions="6" />
+      <testcase name="keeps strict SEO closure while accepting current custom-primary URLs" classname="M5 projected public rendering" time="0.000161" file="apps/website/lib/m5-public-integration.test.tsx" line="38" assertions="4" />
+      <testcase name="rejects forged entry scopes, origins and modes before trusting output URLs" classname="M5 projected public rendering" time="0.000148" file="apps/website/lib/m5-public-integration.test.tsx" line="43" assertions="8" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/website/lib/builder-routing.test.ts" file="apps/website/lib/builder-routing.test.ts" tests="3" assertions="70" failures="0" skipped="0" time="0.001692" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="VI paths stay locked and EN inserts one locale segment for every content family" classname="" time="0.000566" file="apps/website/lib/builder-routing.test.ts" line="6" assertions="56" />
+    <testcase name="reverse discovery preserves identity filters and rejects malformed or partial selectors" classname="" time="0.000186" file="apps/website/lib/builder-routing.test.ts" line="17" assertions="7" />
+    <testcase name="fallback forwards only bounded tracking tokens and registered list semantics" classname="" time="0.000242" file="apps/website/lib/builder-routing.test.ts" line="23" assertions="7" />
+  </testsuite>
+  <testsuite name="apps/website/lib/builder-consultation.test.ts" file="apps/website/lib/builder-consultation.test.ts" tests="3" assertions="21" failures="0" skipped="0" time="0.002197" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="landing attempts keep source, consent locale and contact language independent with optional interest absent" classname="" time="0.000526" file="apps/website/lib/builder-consultation.test.ts" line="7" assertions="8" />
+    <testcase name="ambiguous timeout and retry send the same frozen request to the exact anonymous landing route" classname="" time="0.000662" file="apps/website/lib/builder-consultation.test.ts" line="13" assertions="11" />
+    <testcase name="M4 CAPTCHA stays bound to the source route and refuses unavailable or expired challenges" classname="" time="0.000258" file="apps/website/lib/builder-consultation.test.ts" line="19" assertions="2" />
+  </testsuite>
+  <testsuite name="apps/website/lib/public-builder.test.ts" file="apps/website/lib/public-builder.test.ts" tests="4" assertions="18" failures="0" skipped="0" time="0.006442" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="homepage consumer validates identity, presentation and sections before returning public data" classname="" time="0.001044" file="apps/website/lib/public-builder.test.ts" line="21" assertions="3" />
+    <testcase name="homepage rejects forged hosts, a different locale, changed config identity and unpinned section data" classname="" time="0.000663" file="apps/website/lib/public-builder.test.ts" line="26" assertions="4" />
+    <testcase name="homepage read uses only fixed anonymous API transport and validates the response" classname="" time="0.000899" file="apps/website/lib/public-builder.test.ts" line="34" assertions="7" />
+    <testcase name="missing homepage is distinct from invalid input and backend failure" classname="" time="0.000303" file="apps/website/lib/public-builder.test.ts" line="42" assertions="4" />
+  </testsuite>
+  <testsuite name="apps/admin/components/navigation.test.ts" file="apps/admin/components/navigation.test.ts" tests="2" assertions="7" failures="0" skipped="0" time="0.11745" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="keeps service detail and preview navigation active without accepting unknown placeholder routes" classname="" time="0.000275" file="apps/admin/components/navigation.test.ts" line="3" assertions="3" />
+    <testcase name="keeps locale variant editors in their business navigation group" classname="" time="0.000066" file="apps/admin/components/navigation.test.ts" line="8" assertions="4" />
+  </testsuite>
+  <testsuite name="apps/admin/components/rich-text.test.ts" file="apps/admin/components/rich-text.test.ts" tests="1" assertions="4" failures="0" skipped="0" time="0.002835" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="private rich text escapes markup and refuses unsafe active links" classname="" time="0.000916" file="apps/admin/components/rich-text.test.ts" line="5" assertions="4" />
+  </testsuite>
+  <testsuite name="apps/admin/components/m5-recovery-controls.test.tsx" file="apps/admin/components/m5-recovery-controls.test.tsx" tests="4" assertions="15" failures="0" skipped="0" time="0.046585" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="offers verify-local for a pending current-primary generation without requiring another reverify" classname="" time="0.000365" file="apps/admin/components/m5-recovery-controls.test.tsx" line="12" assertions="6" />
+    <testcase name="keeps explicit reverify available for an active current primary" classname="" time="0.000035" file="apps/admin/components/m5-recovery-controls.test.tsx" line="18" assertions="2" />
+    <testcase name="removes new execution controls after irreversible deletion has failed" classname="" time="0.001154" file="apps/admin/components/m5-recovery-controls.test.tsx" line="22" assertions="4" />
+    <testcase name="keeps the confirmed deletion form explicit and blocks an unelapsed executeAfter" classname="" time="0.000515" file="apps/admin/components/m5-recovery-controls.test.tsx" line="28" assertions="3" />
+  </testsuite>
+  <testsuite name="apps/admin/components/authentication.test.tsx" file="apps/admin/components/authentication.test.tsx" tests="5" assertions="17" failures="0" skipped="0" time="0.007795" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="password-only access presentation" file="apps/admin/components/authentication.test.tsx" line="21" tests="5" assertions="17" failures="0" skipped="0" time="0.002" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="opens an authenticated tenant session without factor fields" classname="password-only access presentation" time="0.000374" file="apps/admin/components/authentication.test.tsx" line="22" assertions="1" />
+      <testcase name="keeps platform authorization independent from ordinary sign-in" classname="password-only access presentation" time="0.000894" file="apps/admin/components/authentication.test.tsx" line="25" assertions="3" />
+      <testcase name="does not show private children without a session" classname="password-only access presentation" time="0.000867" file="apps/admin/components/authentication.test.tsx" line="32" assertions="2" />
+      <testcase name="uses only the current password even if stale extra factor flags are present" classname="password-only access presentation" time="0.000381" file="apps/admin/components/authentication.test.tsx" line="38" assertions="4" />
+      <testcase name="keeps account identity, session expiry, reset and logout useful without enrollment" classname="password-only access presentation" time="0.002296" file="apps/admin/components/authentication.test.tsx" line="46" assertions="7" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/admin/components/tenant-data.test.tsx" file="apps/admin/components/tenant-data.test.tsx" tests="2" assertions="10" failures="0" skipped="0" time="0.002362" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="shows stored and reserved bytes separately and preserves explicit zero quota" classname="" time="0.001185" file="apps/admin/components/tenant-data.test.tsx" line="7" assertions="6" />
+    <testcase name="keeps failed irreversible deletion distinct from completion and does not expose internal failure codes" classname="" time="0.000273" file="apps/admin/components/tenant-data.test.tsx" line="12" assertions="4" />
+  </testsuite>
+  <testsuite name="apps/admin/components/builder-private-copy.test.tsx" file="apps/admin/components/builder-private-copy.test.tsx" tests="2" assertions="13" failures="0" skipped="0" time="0.015238" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="private preview renders resolved price and FAQ snapshots rather than reference counts" classname="" time="0.001468" file="apps/admin/components/builder-private-copy.test.tsx" line="10" assertions="7" />
+    <testcase name="private forms are inert, use actual locale consent, and keep hidden content out" classname="" time="0.00039" file="apps/admin/components/builder-private-copy.test.tsx" line="18" assertions="6" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/builder-state.test.ts" file="apps/admin/lib/builder-state.test.ts" tests="14" assertions="53" failures="0" skipped="0" time="0.011359" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="builder routes keep home identity separate from ordinary page identity" classname="" time="0.000068" file="apps/admin/lib/builder-state.test.ts" line="8" assertions="7" />
+    <testcase name="keyboard section moves retain every section and do not mutate the saved baseline" classname="" time="0.000113" file="apps/admin/lib/builder-state.test.ts" line="15" assertions="4" />
+    <testcase name="an uncertain save retries the same captured content and operation" classname="" time="0.000202" file="apps/admin/lib/builder-state.test.ts" line="24" assertions="6" />
+    <testcase name="publish confirmation binds the saved revision and active config publication" classname="" time="0.000055" file="apps/admin/lib/builder-state.test.ts" line="35" assertions="2" />
+    <testcase name="rich text authoring remains separate from saved nodes until save" classname="" time="0.000692" file="apps/admin/lib/builder-state.test.ts" line="40" assertions="4" />
+    <testcase name="invalid rich text keeps the entered source and cannot become a saved draft" classname="" time="0.000219" file="apps/admin/lib/builder-state.test.ts" line="49" assertions="3" />
+    <testcase name="removed section source cannot keep a successfully saved draft dirty" classname="" time="0.00005" file="apps/admin/lib/builder-state.test.ts" line="55" assertions="1" />
+    <testcase name="M4 locale routes bind the same resource identity and reject unsupported locales" classname="" time="0.00005" file="apps/admin/lib/builder-state.test.ts" line="59" assertions="3" />
+    <testcase name="permission scopes use the current saved material usage and keep patient text explicit" classname="" time="0.000344" file="apps/admin/lib/builder-state.test.ts" line="64" assertions="3" />
+    <testcase name="promotion validity uses a closed start and open end with explicit UTC authoring" classname="" time="0.003603" file="apps/admin/lib/builder-state.test.ts" line="71" assertions="6" />
+    <testcase name="promotion wall times respect the authored timezone and reject ambiguous DST" classname="" time="0.003948" file="apps/admin/lib/builder-state.test.ts" line="79" assertions="5" />
+    <testcase name="every supported reference section uses the canonical builder schema" classname="" time="0.000572" file="apps/admin/lib/builder-state.test.ts" line="86" assertions="3" />
+    <testcase name="save captures the observed legacy state and never changes it during retry" classname="" time="0.000452" file="apps/admin/lib/builder-state.test.ts" line="94" assertions="2" />
+    <testcase name="does not require version comparison for an explicit quota denial" classname="" time="0.00007" file="apps/admin/lib/builder-state.test.ts" line="102" assertions="4" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/content-permission-refresh.test.ts" file="apps/admin/lib/content-permission-refresh.test.ts" tests="2" assertions="6" failures="0" skipped="0" time="0.005057" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="permission refresh takes current publication metadata without a page reload" classname="" time="0.000163" file="apps/admin/lib/content-permission-refresh.test.ts" line="7" assertions="3" />
+    <testcase name="a late canonical refresh preserves input typed during the request" classname="" time="0.000059" file="apps/admin/lib/content-permission-refresh.test.ts" line="12" assertions="3" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/service-input.test.ts" file="apps/admin/lib/service-input.test.ts" tests="2" assertions="10" failures="0" skipped="0" time="0.000961" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="suggests a stable Vietnamese service slug without reserving platform names" classname="" time="0.000159" file="apps/admin/lib/service-input.test.ts" line="3" assertions="7" />
+    <testcase name="validates service content independently of title-derived routes" classname="" time="0.000085" file="apps/admin/lib/service-input.test.ts" line="9" assertions="3" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/access.test.ts" file="apps/admin/lib/access.test.ts" tests="3" assertions="12" failures="0" skipped="0" time="0.001335" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="tab tenant context" file="apps/admin/lib/access.test.ts" line="6" tests="2" assertions="6" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="requires an explicit, current membership" classname="tab tenant context" time="0.00011" file="apps/admin/lib/access.test.ts" line="7" assertions="4" />
+      <testcase name="keeps the tenant in each navigation URL without shared selection state" classname="tab tenant context" time="0.000101" file="apps/admin/lib/access.test.ts" line="13" assertions="2" />
+    </testsuite>
+    <testsuite name="private API destination" file="apps/admin/lib/access.test.ts" line="19" tests="1" assertions="6" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="permits only the fixed local API and a local API path" classname="private API destination" time="0.00023" file="apps/admin/lib/access.test.ts" line="20" assertions="6" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/admin/lib/decimal-price.test.ts" file="apps/admin/lib/decimal-price.test.ts" tests="4" assertions="15" failures="0" skipped="0" time="0.001393" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="exact decimal price input" file="apps/admin/lib/decimal-price.test.ts" line="4" tests="4" assertions="15" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="preserves amounts beyond JS safe integer precision" classname="exact decimal price input" time="0.000323" file="apps/admin/lib/decimal-price.test.ts" line="5" assertions="3" />
+      <testcase name="accepts equal range boundaries and explicit zero" classname="exact decimal price input" time="0.000135" file="apps/admin/lib/decimal-price.test.ts" line="10" assertions="2" />
+      <testcase name="rejects missing, negative, exponent and reversed amounts" classname="exact decimal price input" time="0.000065" file="apps/admin/lib/decimal-price.test.ts" line="14" assertions="7" />
+      <testcase name="requires currency and unit for every price type" classname="exact decimal price input" time="0.000044" file="apps/admin/lib/decimal-price.test.ts" line="19" assertions="3" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/admin/lib/editorial-state.test.ts" file="apps/admin/lib/editorial-state.test.ts" tests="4" assertions="13" failures="0" skipped="0" time="0.001678" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M2 editorial and media UI rules" file="apps/admin/lib/editorial-state.test.ts" line="4" tests="4" assertions="13" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="treats an inactive publication head as Draft while preserving its historical counter" classname="M2 editorial and media UI rules" time="0.000276" file="apps/admin/lib/editorial-state.test.ts" line="5" assertions="1" />
+      <testcase name="shows pending only when the draft or site differs from an active publication" classname="M2 editorial and media UI rules" time="0.000098" file="apps/admin/lib/editorial-state.test.ts" line="8" assertions="3" />
+      <testcase name="rejects empty, oversize and unsupported local files without claiming a full decode" classname="M2 editorial and media UI rules" time="0.000121" file="apps/admin/lib/editorial-state.test.ts" line="14" assertions="4" />
+      <testcase name="allows signed media only through the configured API gateway" classname="M2 editorial and media UI rules" time="0.00026" file="apps/admin/lib/editorial-state.test.ts" line="20" assertions="5" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/admin/lib/rich-text.test.ts" file="apps/admin/lib/rich-text.test.ts" tests="4" assertions="15" failures="0" skipped="0" time="0.002681" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="bounded rich text editing" file="apps/admin/lib/rich-text.test.ts" line="5" tests="4" assertions="15" failures="0" skipped="0" time="0.001" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="preserves legacy literal markup, Markdown, backslashes and line breaks" classname="bounded rich text editing" time="0.000138" file="apps/admin/lib/rich-text.test.ts" line="6" assertions="1" />
+      <testcase name="round trips heading, list and safe link nodes" classname="bounded rich text editing" time="0.000281" file="apps/admin/lib/rich-text.test.ts" line="11" assertions="2" />
+      <testcase name="rejects unsafe links instead of silently turning them into active nodes" classname="bounded rich text editing" time="0.0001" file="apps/admin/lib/rich-text.test.ts" line="20" assertions="9" />
+      <testcase name="bounds visible text and document structure before transport" classname="bounded rich text editing" time="0.00126" file="apps/admin/lib/rich-text.test.ts" line="24" assertions="3" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/admin/lib/builder-permission-pages.test.ts" file="apps/admin/lib/builder-permission-pages.test.ts" tests="3" assertions="8" failures="0" skipped="0" time="0.001" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="permission updates retain older loaded pages and their cursor" classname="" time="0.000216" file="apps/admin/lib/builder-permission-pages.test.ts" line="5" assertions="3" />
+    <testcase name="stale reads cannot restore a withdrawn grant or completed purge" classname="" time="0.000026" file="apps/admin/lib/builder-permission-pages.test.ts" line="12" assertions="2" />
+    <testcase name="a confirmed purge retry can reset attempts while preserving other loaded rights" classname="" time="0.000053" file="apps/admin/lib/builder-permission-pages.test.ts" line="17" assertions="3" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/content-permission.test.ts" file="apps/admin/lib/content-permission.test.ts" tests="6" assertions="29" failures="0" skipped="0" time="0.001409" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="permission status matches the exact resource and saved revision" classname="" time="0.000058" file="apps/admin/lib/content-permission.test.ts" line="7" assertions="4" />
+    <testcase name="asset permission does not cover text or a different asset revision" classname="" time="0.000031" file="apps/admin/lib/content-permission.test.ts" line="13" assertions="3" />
+    <testcase name="S11 scopes always include text and each chosen image without a classifier bypass" classname="" time="0.000136" file="apps/admin/lib/content-permission.test.ts" line="19" assertions="2" />
+    <testcase name="permission-capable content keeps historical controls when the current image is removed" classname="" time="0.000082" file="apps/admin/lib/content-permission.test.ts" line="26" assertions="11" />
+    <testcase name="removing a doctor or article image leaves no selectable current grant scope" classname="" time="0.000184" file="apps/admin/lib/content-permission.test.ts" line="34" assertions="6" />
+    <testcase name="a stale scope selection never falls back to another image or text scope" classname="" time="0.000032" file="apps/admin/lib/content-permission.test.ts" line="46" assertions="3" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/lead-input.test.ts" file="apps/admin/lib/lead-input.test.ts" tests="4" assertions="15" failures="0" skipped="0" time="0.002301" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="lead input boundaries" file="apps/admin/lib/lead-input.test.ts" line="4" tests="4" assertions="15" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="normalizes text in NFC and counts code points while retaining literal markup" classname="lead input boundaries" time="0.000281" file="apps/admin/lib/lead-input.test.ts" line="5" assertions="4" />
+      <testcase name="bounds name search without discarding accents or literal wildcard characters" classname="lead input boundaries" time="0.000311" file="apps/admin/lib/lead-input.test.ts" line="11" assertions="3" />
+      <testcase name="rejects an inverted date range and impossible calendar dates" classname="lead input boundaries" time="0.000106" file="apps/admin/lib/lead-input.test.ts" line="16" assertions="2" />
+      <testcase name="binds list paging to the applied filters and omits pagination for count" classname="lead input boundaries" time="0.000137" file="apps/admin/lib/lead-input.test.ts" line="20" assertions="6" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/admin/lib/request.test.ts" file="apps/admin/lib/request.test.ts" tests="7" assertions="21" failures="0" skipped="0" time="0.002978" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="private request transport" file="apps/admin/lib/request.test.ts" line="5" tests="6" assertions="17" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="keeps the browser multipart boundary and CSRF header for bounded media uploads" classname="private request transport" time="0.000806" file="apps/admin/lib/request.test.ts" line="6" assertions="3" />
+      <testcase name="sends cookie credentials only to the fixed API with no cache and CSRF for mutations" classname="private request transport" time="0.000247" file="apps/admin/lib/request.test.ts" line="15" assertions="6" />
+      <testcase name="retains the HTTP conflict status without exposing server error text" classname="private request transport" time="0.000202" file="apps/admin/lib/request.test.ts" line="27" assertions="3" />
+      <testcase name="exposes only the approved reauthentication code from redacted denial responses" classname="private request transport" time="0.000151" file="apps/admin/lib/request.test.ts" line="32" assertions="2" />
+      <testcase name="retains approved S05 conflict codes without exposing server details" classname="private request transport" time="0.000194" file="apps/admin/lib/request.test.ts" line="37" assertions="2" />
+      <testcase name="discards unrecognized server codes" classname="private request transport" time="0.000064" file="apps/admin/lib/request.test.ts" line="42" assertions="1" />
+    </testsuite>
+    <testcase name="exposes quota denial with only validated dimension and numeric usage" classname="" time="0.000102" file="apps/admin/lib/request.test.ts" line="49" assertions="4" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/primary-url.test.ts" file="apps/admin/lib/primary-url.test.ts" tests="1" assertions="3" failures="0" skipped="0" time="0.001021" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="projects admin links from current server primary and explicit tenant identity" classname="" time="0.000078" file="apps/admin/lib/primary-url.test.ts" line="3" assertions="3" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/lead-source.test.ts" file="apps/admin/lib/lead-source.test.ts" tests="1" assertions="4" failures="0" skipped="0" time="0.000809" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="legacy service and landing sources retain their own identity labels" classname="" time="0.000113" file="apps/admin/lib/lead-source.test.ts" line="3" assertions="4" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/versioned-operation.test.ts" file="apps/admin/lib/versioned-operation.test.ts" tests="5" assertions="15" failures="0" skipped="0" time="0.000692" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="versioned operation retry identity" file="apps/admin/lib/versioned-operation.test.ts" line="4" tests="5" assertions="15" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="captures an independent payload and its expected version" classname="versioned operation retry identity" time="0.000092" file="apps/admin/lib/versioned-operation.test.ts" line="5" assertions="1" />
+      <testcase name="reuses the original payload, version and operation ID until its result is known" classname="versioned operation retry identity" time="0.000024" file="apps/admin/lib/versioned-operation.test.ts" line="11" assertions="4" />
+      <testcase name="starts a new identity only after the preceding attempt is resolved" classname="versioned operation retry identity" time="0.000015" file="apps/admin/lib/versioned-operation.test.ts" line="20" assertions="2" />
+      <testcase name="retains an unknown operation across reauthentication and retries its original receipt" classname="versioned operation retry identity" time="0.000043" file="apps/admin/lib/versioned-operation.test.ts" line="25" assertions="6" />
+      <testcase name="distinguishes an initial reauthentication denial and a definitive version conflict" classname="versioned operation retry identity" time="0.00001" file="apps/admin/lib/versioned-operation.test.ts" line="34" assertions="2" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/admin/lib/draft-input.test.ts" file="apps/admin/lib/draft-input.test.ts" tests="2" assertions="6" failures="0" skipped="0" time="0.000845" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="accepts the title and body contract boundaries" classname="" time="0.000049" file="apps/admin/lib/draft-input.test.ts" line="4" assertions="2" />
+    <testcase name="rejects oversize or empty drafts before transport" classname="" time="0.000238" file="apps/admin/lib/draft-input.test.ts" line="8" assertions="4" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/content-input.test.ts" file="apps/admin/lib/content-input.test.ts" tests="3" assertions="10" failures="0" skipped="0" time="0.001779" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="starts new price empty and requires an explicit amount and one service" classname="" time="0.000666" file="apps/admin/lib/content-input.test.ts" line="5" assertions="4" />
+    <testcase name="checks location intervals, breaks and closed days before sending" classname="" time="0.000265" file="apps/admin/lib/content-input.test.ts" line="13" assertions="3" />
+    <testcase name="gallery cannot save an incomplete pair or duplicate image" classname="" time="0.000244" file="apps/admin/lib/content-input.test.ts" line="20" assertions="3" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/lead-response.test.ts" file="apps/admin/lib/lead-response.test.ts" tests="8" assertions="21" failures="0" skipped="0" time="0.003587" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="lead response privacy windows" file="apps/admin/lib/lead-response.test.ts" line="14" tests="5" assertions="12" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="rejects a delayed command response spanning its server deadline despite a client clock behind the server" classname="lead response privacy windows" time="0.000605" file="apps/admin/lib/lead-response.test.ts" line="16" assertions="2" />
+      <testcase name="rejects a delayed extension response spanning its server deadline despite a client clock behind the server" classname="lead response privacy windows" time="0.000026" file="apps/admin/lib/lead-response.test.ts" line="16" assertions="2" />
+      <testcase name="rejects a delayed compare response spanning its server deadline despite a client clock behind the server" classname="lead response privacy windows" time="0.000011" file="apps/admin/lib/lead-response.test.ts" line="16" assertions="2" />
+      <testcase name="keeps an early comparison only until its original deadline and rejects delayed Use current" classname="lead response privacy windows" time="0.000095" file="apps/admin/lib/lead-response.test.ts" line="27" assertions="4" />
+      <testcase name="fails closed when a private detail has no bounded or valid server timing" classname="lead response privacy windows" time="0.000208" file="apps/admin/lib/lead-response.test.ts" line="37" assertions="2" />
+    </testsuite>
+    <testsuite name="lead history privacy windows" file="apps/admin/lib/lead-response.test.ts" line="50" tests="3" assertions="9" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="rejects history delayed beyond A2&apos;s shortened expiry while the old detail still appears current" classname="lead history privacy windows" time="0.000343" file="apps/admin/lib/lead-response.test.ts" line="51" assertions="2" />
+      <testcase name="expires an early history page at its fresh deadline rather than the stale parent deadline" classname="lead history privacy windows" time="0.000186" file="apps/admin/lib/lead-response.test.ts" line="61" assertions="3" />
+      <testcase name="bounds accumulated pages by the earliest captured deadline and discards expired prior history" classname="lead history privacy windows" time="0.000112" file="apps/admin/lib/lead-response.test.ts" line="68" assertions="4" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/admin/lib/content-navigation.test.ts" file="apps/admin/lib/content-navigation.test.ts" tests="2" assertions="8" failures="0" skipped="0" time="0.001833" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="resolves nested taxonomy and article sections before the parent section" classname="" time="0.000196" file="apps/admin/lib/content-navigation.test.ts" line="4" assertions="4" />
+    <testcase name="rejects unknown paths and extra lifecycle segments" classname="" time="0.000039" file="apps/admin/lib/content-navigation.test.ts" line="10" assertions="4" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/builder-preview-state.test.ts" file="apps/admin/lib/builder-preview-state.test.ts" tests="1" assertions="4" failures="0" skipped="0" time="0.007253" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="private gallery preview cannot leave half a pair, caption or duplicate image" classname="" time="0.000245" file="apps/admin/lib/builder-preview-state.test.ts" line="5" assertions="4" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/retention-input.test.ts" file="apps/admin/lib/retention-input.test.ts" tests="4" assertions="13" failures="0" skipped="0" time="0.00282" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="retention UI boundaries" file="apps/admin/lib/retention-input.test.ts" line="4" tests="4" assertions="13" failures="0" skipped="0" time="0.001" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="uses the request start to conservatively account for response latency and client clock skew" classname="retention UI boundaries" time="0.000043" file="apps/admin/lib/retention-input.test.ts" line="5" assertions="4" />
+      <testcase name="fails closed for malformed server timing but permits explicitly unbounded empty results" classname="retention UI boundaries" time="0.000108" file="apps/admin/lib/retention-input.test.ts" line="11" assertions="3" />
+      <testcase name="requires an explicit reason and finite future expiry beyond the effective deadline" classname="retention UI boundaries" time="0.001796" file="apps/admin/lib/retention-input.test.ts" line="16" assertions="5" />
+      <testcase name="rejects an extension after the currently displayed lead has expired" classname="retention UI boundaries" time="0.000086" file="apps/admin/lib/retention-input.test.ts" line="24" assertions="1" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/admin/lib/invitation-input.test.ts" file="apps/admin/lib/invitation-input.test.ts" tests="1" assertions="4" failures="0" skipped="0" time="0.007634" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="enforces invitation registration name boundaries before credential creation" classname="" time="0.00005" file="apps/admin/lib/invitation-input.test.ts" line="3" assertions="4" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/m5-input.test.ts" file="apps/admin/lib/m5-input.test.ts" tests="4" assertions="17" failures="0" skipped="0" time="0.000867" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 administrative inputs" file="apps/admin/lib/m5-input.test.ts" line="5" tests="3" assertions="13" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="keeps unset, monitor and enforced distinct without implicit quota values" classname="M5 administrative inputs" time="0.000219" file="apps/admin/lib/m5-input.test.ts" line="6" assertions="4" />
+      <testcase name="rejects fractions, negative, exponent and unsafe integer limits" classname="M5 administrative inputs" time="0.000037" file="apps/admin/lib/m5-input.test.ts" line="12" assertions="4" />
+      <testcase name="requires an explicit deletion instant without an invented grace default" classname="M5 administrative inputs" time="0.000056" file="apps/admin/lib/m5-input.test.ts" line="15" assertions="5" />
+    </testsuite>
+    <testcase name="requires an explicit initial quota choice and preserves an enforced zero" classname="" time="0.000066" file="apps/admin/lib/m5-input.test.ts" line="23" assertions="4" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/permission-pages.test.ts" file="apps/admin/lib/permission-pages.test.ts" tests="5" assertions="16" failures="0" skipped="0" time="0.010581" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="older pages remain reachable and deduplicate an overlapping row" classname="" time="0.00093" file="apps/admin/lib/permission-pages.test.ts" line="5" assertions="5" />
+    <testcase name="a withdrawal beyond the first 200 rows updates that row and preserves continuation" classname="" time="0.000332" file="apps/admin/lib/permission-pages.test.ts" line="11" assertions="4" />
+    <testcase name="new grants prepend without sorting away PostgreSQL microsecond order" classname="" time="0.000067" file="apps/admin/lib/permission-pages.test.ts" line="17" assertions="2" />
+    <testcase name="a stale poll cannot replace an authoritative withdrawal or its pending purge" classname="" time="0.000307" file="apps/admin/lib/permission-pages.test.ts" line="22" assertions="3" />
+    <testcase name="refreshing the newest page retains older loaded rows" classname="" time="0.000102" file="apps/admin/lib/permission-pages.test.ts" line="30" assertions="2" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/content-operation.test.ts" file="apps/admin/lib/content-operation.test.ts" tests="3" assertions="7" failures="0" skipped="0" time="0.009283" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="a rejected create stays editable and discards its known failed command" classname="" time="0.000042" file="apps/admin/lib/content-operation.test.ts" line="3" assertions="1" />
+    <testcase name="an existing version conflict requires comparison and a transport failure keeps its command" classname="" time="0.000015" file="apps/admin/lib/content-operation.test.ts" line="6" assertions="3" />
+    <testcase name="keeps quota capacity denial distinct from a saved-version conflict" classname="" time="0.000013" file="apps/admin/lib/content-operation.test.ts" line="12" assertions="3" />
+  </testsuite>
+  <testsuite name="apps/admin/lib/content-references.test.ts" file="apps/admin/lib/content-references.test.ts" tests="2" assertions="5" failures="0" skipped="0" time="0.004883" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="selecting a newer publication replaces only the chosen reference in place" classname="" time="0.000252" file="apps/admin/lib/content-references.test.ts" line="4" assertions="2" />
+    <testcase name="preserves ordered references and rejects self links" classname="" time="0.000118" file="apps/admin/lib/content-references.test.ts" line="8" assertions="3" />
+  </testsuite>
+</testsuites>

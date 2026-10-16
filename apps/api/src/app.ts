@@ -31,6 +31,14 @@ import {ContentService} from './modules/content.service';
 import {createContentModule} from './modules/content.module';
 import {BuilderService} from './modules/builder.service';
 import {createBuilderModule} from './modules/builder.module';
+import { M5DomainsService } from './modules/m5-domains.service';
+import { createM5DomainsModule } from './modules/m5-domains.module';
+import { SyntheticLocalDomainVerifier } from './modules/m5-domains-input';
+import type { M5LocalVerifierConfig } from './contracts/m5-domains';
+import { configurePublicIntakeOrigins } from './modules/intake-security';
+import { M5PlatformService } from './modules/m5-platform.service';
+import { M5PlatformExport } from './modules/m5-platform-export';
+import { createM5PlatformModule } from './modules/m5-platform.module';
 
 class EchoQuery {
   @IsString()
@@ -60,12 +68,17 @@ export async function createApp() {
   readConfig();
   const database = createS02Database();
   const identity = createS02Auth(database);
+  const localDomains = process.env.GCMS_M5_LOCAL_DOMAINS;
+  const domains = new M5DomainsService(database, identity, localDomains ? new SyntheticLocalDomainVerifier(JSON.parse(localDomains) as M5LocalVerifierConfig) : undefined);
+  configurePublicIntakeOrigins((origin, path) => domains.acceptsIntakeOrigin(origin, path));
   const leads = new LeadsService(database,identity);
   const mediaStorage = new MediaStorage(readMediaStorageConfig());
   const media=new MediaService(database,identity,mediaStorage,new MediaSigner(process.env.S07_MEDIA_SIGNING_SECRET??''));
+  const platform = new M5PlatformService(database, identity);
   @Module({ controllers: [DiagnosticsController], imports: [createDomainModule(new DomainService(database, identity)),
     createPublicationModule(new PublicationServiceOperations(database, identity)),createContentModule(new ContentService(database,identity)),createBuilderModule(new BuilderService(database,identity,media)),createIntakeModule(new IntakeService(database,identity),new BuilderIntakeService(database)),createLeadsModule(leads),
-    createRetentionModule(new RetentionService(database,identity,leads)),createMediaModule(media)],
+    createRetentionModule(new RetentionService(database,identity,leads)),createMediaModule(media),
+    createM5DomainsModule(domains), createM5PlatformModule(platform, new M5PlatformExport(platform, mediaStorage))],
     providers: [{ provide: 'DATABASE_LIFECYCLE', useValue: { onApplicationShutdown: async () => {mediaStorage.close();await database.close();} } }] })
   class AppModule {}
   const app = await NestFactory.create<NestExpressApplication>(AppModule, { logger: false, bodyParser: false });

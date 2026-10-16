@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="2" assertions="51" failures="0" skipped="0" time="2.526735">
+  <testsuite name="apps/api/test/m5-media-local.test.ts" file="apps/api/test/m5-media-local.test.ts" tests="2" assertions="51" failures="0" skipped="0" time="2.518466" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 actual media reservation, storage and scoped worker" file="apps/api/test/m5-media-local.test.ts" line="16" tests="2" assertions="51" failures="0" skipped="0" time="1.62" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="concurrent uploads reserve once; retry does not grow usage; withdrawal frees only confirmed derivative bytes" classname="M5 actual media reservation, storage and scoped worker" time="1.0081" file="apps/api/test/m5-media-local.test.ts" line="21" assertions="39" />
+      <testcase name="lost PUT acknowledgement keeps reservation until idempotent retry confirms storage" classname="M5 actual media reservation, storage and scoped worker" time="0.612233" file="apps/api/test/m5-media-local.test.ts" line="29" assertions="12" />
+    </testsuite>
+  </testsuite>
+</testsuites>

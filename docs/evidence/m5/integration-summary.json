@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "uniqueSelectedCases": 29,
+  "assertions": 987,
+  "runs": [
+    {
+      "file": "api-local-challenge.xml",
+      "passed": 7,
+      "assertions": 108,
+      "sha256": "0fa1ab62bbb8be7ccdd713ed718ef458e0f945db61b3a75d6896278ad0965eea"
+    },
+    {
+      "file": "domain-attestation-sql.xml",
+      "passed": 4,
+      "assertions": 5,
+      "sha256": "5b1eddc9a8443b429d7d8eaf90f64d65d399213f75b3bc62395f29ce691fd91c"
+    },
+    {
+      "file": "media-local-first.xml",
+      "passed": 2,
+      "assertions": 51,
+      "sha256": "8a516aa370aadf1dd555a808577667f7959d28d20d0e7237e32cbfa6c82b1435"
+    },
+    {
+      "file": "website-http-root-routing-repairs.xml",
+      "passed": 6,
+      "assertions": 110,
+      "sha256": "52638f15e8f3b37a00718db18b137d67b4a1480ca9b55546f7cba27e6bb694a8"
+    },
+    {
+      "file": "export-authority-local.xml",
+      "passed": 1,
+      "assertions": 7,
+      "sha256": "02a6a2d255bce28cd7f2ab689961f7088d9664edfdd05e7c4a2732f20432fb8c"
+    },
+    {
+      "file": "provision-local.xml",
+      "passed": 1,
+      "assertions": 6,
+      "sha256": "6dc117605b82cb7e6697ce59eda237d1a15bdd4ce83ab0ded42aa2cce5ac47a3"
+    },
+    {
+      "file": "deletion-local-first.xml",
+      "passed": 1,
+      "assertions": 333,
+      "sha256": "dbd856a13fa3920b74d8e227ea4856939578ded47bad5188b661c8c3b28a7aff"
+    },
+    {
+      "file": "mvp-local-first.xml",
+      "passed": 3,
+      "assertions": 307,
+      "sha256": "317340837cbee115757d7b6221f37d3f96353e432b03c3729aab308fb7ccdeee"
+    },
+    {
+      "file": "domain-lifecycle-readiness-repair.xml",
+      "selectedCaseNames": [
+        "www is a distinct exact binding; another tenant cannot claim the registered host",
+        "replacement sends both previous entries directly to the new primary; deactivation denies only the old alias",
+        "remove and re-register allocate a new identity/generation; old receipts cannot resurrect the removed binding"
+      ],
+      "passed": 3,
+      "assertions": 43,
+      "sha256": "ae1ef7bf81c5e0ee8b800f08000793ffe94560509850f28e3ca7fdf2c38a355b",
+      "limit": "Only listed successful cases reused; original failed/filtered records remain unchanged."
+    },
+    {
+      "file": "domain-verification-response-configured.xml",
+      "selectedCaseNames": [
+        "primary reverify keeps its identity while denying stale entry pins until explicit fresh verification"
+      ],
+      "passed": 1,
+      "assertions": 17,
+      "sha256": "e09deeca9f61d13ffb879f337c122f796fc90b6aa88cbd53b1410f9e145a1655",
+      "limit": "Only listed successful cases reused; original failed/filtered records remain unchanged."
+    }
+  ],
+  "limits": "Latest matching successful case evidence; no relabelling of an entire historical failed suite and no sum of overlapping reruns."
+}

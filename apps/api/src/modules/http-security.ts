@@ -3,7 +3,7 @@ import type { IncomingMessage, ServerResponse } from 'node:http';
 import { ADMIN_ORIGIN } from '../contracts/s02';
 import { safeError } from '../errors';
 import { assertApiHost, assertMutationRequest, isMutation } from './request-security';
-import { assertPublicIntakeRequest, isPublicIntakeRoute } from './intake-security';
+import { assertPublicIntakeRequest, isPublicIntakeRoute, resolvePublicIntakeOrigin } from './intake-security';
 import { PUBLIC_SITE_ORIGIN } from '../contracts/s03';
 
 export function apiSecurity(request: IncomingMessage, response: ServerResponse, next: (error?: unknown) => void) {
@@ -19,15 +19,22 @@ export function apiSecurity(request: IncomingMessage, response: ServerResponse, 
     assertApiHost(request.headers);
     const originalUrl=(request as IncomingMessage&{originalUrl?:string}).originalUrl??request.url??'';
     if(isPublicIntakeRoute(originalUrl)) {
-      assertPublicIntakeRequest(request.headers,request.method??'');
-      response.setHeader('Access-Control-Allow-Origin',PUBLIC_SITE_ORIGIN);
-      if(request.method==='OPTIONS') {
-        const headers=String(request.headers['access-control-request-headers']??'').toLowerCase().split(',').map(v=>v.trim()).filter(Boolean);
-        if(request.headers['access-control-request-method']!=='POST'||headers.some(value=>value!=='content-type')) throw new ForbiddenException();
-        response.setHeader('Access-Control-Allow-Methods','POST');response.setHeader('Access-Control-Allow-Headers','Content-Type');
-        response.statusCode=204;response.end();return;
-      }
-      next();return;
+      const origin=request.headers.origin;if(typeof origin!=='string')throw new ForbiddenException();
+      assertPublicIntakeRequest(request.headers,request.method??'',origin);
+      const accept=()=>{
+        response.setHeader('Access-Control-Allow-Origin',origin);
+        if(request.method==='OPTIONS') {
+          const headers=String(request.headers['access-control-request-headers']??'').toLowerCase().split(',').map(v=>v.trim()).filter(Boolean);
+          if(request.headers['access-control-request-method']!=='POST'||headers.some(value=>value!=='content-type')) throw new ForbiddenException();
+          response.setHeader('Access-Control-Allow-Methods','POST');response.setHeader('Access-Control-Allow-Headers','Content-Type');
+          response.statusCode=204;response.end();return;
+        }
+        next();
+      };
+      if(origin===PUBLIC_SITE_ORIGIN){accept();return;}
+      void resolvePublicIntakeOrigin(origin,originalUrl).then(allowed=>{if(!allowed)throw new ForbiddenException();accept();}).catch(error=>{
+        const body=safeError(error);response.statusCode=body.statusCode;response.setHeader('Content-Type','application/json');response.end(JSON.stringify(body));
+      });return;
     }
     const origin = request.headers.origin;
     if (origin !== undefined && origin !== ADMIN_ORIGIN) throw new ForbiddenException();

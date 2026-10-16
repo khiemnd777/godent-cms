@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="6" assertions="26" failures="3" skipped="0" time="1.317487">
+  <testsuite name="apps/api/test/m5-http-local.test.ts" file="apps/api/test/m5-http-local.test.ts" tests="6" assertions="26" failures="3" skipped="0" time="1.309658" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 actual built website HTTP and SEO entry contracts" file="apps/api/test/m5-http-local.test.ts" line="8" tests="6" assertions="26" failures="3" skipped="0" time="0.678" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="GET/HEAD Godent aliases directly 301 to the same published page and actual language" classname="M5 actual built website HTTP and SEO entry contracts" time="0.211408" file="apps/api/test/m5-http-local.test.ts" line="15" assertions="3">
+        <failure type="AssertionError" message="expect(received).toBe(expected)&#10;&#10;Expected: 301&#10;Received: 503&#10;">AssertionError: expect(received).toBe(expected)&#10;&#10;Expected: 301&#10;Received: 503&#10;&#10;      at apps/api/test/m5-http-local.test.ts:18:109&#10;</failure>
+      </testcase>
+      <testcase name="missing EN directly302 to primaryVI, absent pages404, methods/intake keep dedicated contracts" classname="M5 actual built website HTTP and SEO entry contracts" time="0.12288" file="apps/api/test/m5-http-local.test.ts" line="22" assertions="9" />
+      <testcase name="tracking allowlist and functional listing query survive a direct redirect" classname="M5 actual built website HTTP and SEO entry contracts" time="0.023296" file="apps/api/test/m5-http-local.test.ts" line="30" assertions="4" />
+      <testcase name="sitemap and robots pass exact metadata routes on each valid entry" classname="M5 actual built website HTTP and SEO entry contracts" time="0.051097" file="apps/api/test/m5-http-local.test.ts" line="33" assertions="1">
+        <failure type="AssertionError" message="expect(received).toBe(expected)&#10;&#10;Expected: 200&#10;Received: 503&#10;">AssertionError: expect(received).toBe(expected)&#10;&#10;Expected: 200&#10;Received: 503&#10;&#10;      at apps/api/test/m5-http-local.test.ts:34:163&#10;</failure>
+      </testcase>
+      <testcase name="return to Godent keeps old custom200 with correct canonical and working absolute navigation" classname="M5 actual built website HTTP and SEO entry contracts" time="0.236642" file="apps/api/test/m5-http-local.test.ts" line="37" assertions="8" />
+      <testcase name="untrusted forwarded context and credentials cannot change tenant, language or publication" classname="M5 actual built website HTTP and SEO entry contracts" time="0.035278" file="apps/api/test/m5-http-local.test.ts" line="41" assertions="1">
+        <failure type="AssertionError" message="expect(received).toBe(expected)&#10;&#10;Expected: 200&#10;Received: 301&#10;">AssertionError: expect(received).toBe(expected)&#10;&#10;Expected: 200&#10;Received: 301&#10;&#10;      at apps/api/test/m5-http-local.test.ts:42:371&#10;</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>

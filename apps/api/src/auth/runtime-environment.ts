@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs/promises';
+import { lstat, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { validateDatabaseUrl } from './policy';
 
@@ -13,7 +13,31 @@ export async function loadRuntimeEnvironment() {
   let mediaConfig:Record<string,string>|undefined;
   try {mediaConfig=Object.fromEntries((await readFile(resolve(process.cwd(),'.local/m2.env'),'utf8')).trim().split('\n').map(line=>{const at=line.indexOf('=');return[line.slice(0,at),line.slice(at+1)];}));}
   catch(error) {if(!(error&&typeof error==='object'&&'code'in error&&error.code==='ENOENT')) throw error;}
-  return selectRuntimeEnvironment(privateConfig, process.env, intakeConfig,mediaConfig);
+  const selected = selectRuntimeEnvironment(privateConfig, process.env, intakeConfig,mediaConfig);
+  try {
+    const path = resolve(process.cwd(), '.local/m5-fixtures.json'), meta = await lstat(path);
+    if (!meta.isFile() || meta.isSymbolicLink() || (meta.mode & 0o777) !== 0o600 || meta.uid !== process.getuid?.() || meta.size > 262144) throw new Error('Unsafe M5 local scope');
+    const domains = selectM5LocalDomains(JSON.parse(await readFile(path, 'utf8')));
+    selected.api.GCMS_M5_LOCAL_DOMAINS = JSON.stringify(domains);
+    selected.web.GCMS_M5_LOCAL_HOSTS = JSON.stringify(domains.bindings.map(binding => binding.host));
+  } catch (error) { if (!(error && typeof error === 'object' && 'code' in error && error.code === 'ENOENT')) throw error; }
+  return selected;
+}
+
+/** Only the private, owned fixture scope may enable the synthetic verifier. */
+export function selectM5LocalDomains(input: unknown) {
+  const value = input as { owner?: string; runId?: string; status?: string; tenants?: { id: string; slug: string; name: string; label: string }[] };
+  const uuid = (id: unknown) => typeof id === 'string' && /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(id);
+  if (!value || value.owner !== 'GCMS-M5-v1' || !uuid(value.runId) || !['provisioning', 'complete'].includes(value.status ?? '') || !Array.isArray(value.tenants) || value.tenants.length !== 3) throw new Error('Invalid local M5 scope');
+  const run = value.runId!, seen = new Set<string>();
+  const bindings = value.tenants.map(tenant => {
+    if (!['A', 'B', 'Deletion'].includes(tenant.label) || !uuid(tenant.id) || seen.has(tenant.label) || tenant.slug !== `m5-${run.slice(0, 8)}-${tenant.label.toLowerCase()}` || tenant.name !== `M5 Synthetic ${tenant.label} ${run}`) throw new Error('Invalid owned M5 tenant');
+    seen.add(tenant.label);
+    return { tenantId: tenant.id, host: `${tenant.slug}.localhost` };
+  });
+  const primary = bindings.find(binding => binding.host.endsWith('-a.localhost'));
+  if (primary) bindings.push({ tenantId: primary.tenantId, host: `www.${primary.host}` });
+  return { mode: 'local-m5', bindings };
 }
 
 export function selectRuntimeEnvironment(privateConfig: Record<string, string>, source: Record<string, string | undefined>,intakeConfig?:Record<string,string>,mediaConfig?:Record<string,string>) {

@@ -45,3 +45,11 @@ describe("private request transport", () => {
     catch (error) { expect((error as ApiError).code).toBeUndefined(); }
   });
 });
+
+it("exposes quota denial with only validated dimension and numeric usage", async () => {
+  spyOn(globalThis, "fetch").mockResolvedValue(Response.json({ code: "QUOTA_EXCEEDED", dimension: "content_items", usage: 10, limit: 10, message: "private server detail" }, { status: 409 }));
+  try { await apiRequest("/api/tenants/a/services", { method: "POST", body: {} }); throw new Error("Expected denial"); }
+  catch (error) { expect((error as ApiError).code).toBe("QUOTA_EXCEEDED"); expect((error as ApiError).quota).toEqual({ dimension: "content_items", usage: 10, limit: 10 }); expect((error as Error).message).not.toContain("private server detail"); }
+  spyOn(globalThis, "fetch").mockResolvedValue(Response.json({ code: "QUOTA_EXCEEDED", dimension: "private", usage: -1, limit: "secret" }, { status: 409 }));
+  try { await apiRequest("/api/tenants/a/services"); } catch (error) { expect((error as ApiError).quota).toBeUndefined(); }
+});

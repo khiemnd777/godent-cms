@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="33" assertions="267" failures="0" skipped="0" time="0.175556">
+  <testsuite name="apps/api/test/m5-platform-unit.test.ts" file="apps/api/test/m5-platform-unit.test.ts" tests="7" assertions="26" failures="0" skipped="0" time="0.005962" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 platform admission contracts" file="apps/api/test/m5-platform-unit.test.ts" line="5" tests="4" assertions="17" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="unset and explicit zero differ; no implicit commercial limit" classname="M5 platform admission contracts" time="0.00036" file="apps/api/test/m5-platform-unit.test.ts" line="6" assertions="6" />
+      <testcase name="suspension keeps read/export/safety only; deletion removes all capabilities" classname="M5 platform admission contracts" time="0.00007" file="apps/api/test/m5-platform-unit.test.ts" line="7" assertions="3" />
+      <testcase name="new tenant handoff requires an explicit monitor or enforced policy" classname="M5 platform admission contracts" time="0.000053" file="apps/api/test/m5-platform-unit.test.ts" line="8" assertions="3" />
+      <testcase name="confirmation binds exact tenant, scope, request and explicit instant" classname="M5 platform admission contracts" time="0.000156" file="apps/api/test/m5-platform-unit.test.ts" line="9" assertions="5" />
+    </testsuite>
+    <testsuite name="M5 streaming ZIP" file="apps/api/test/m5-platform-unit.test.ts" line="11" tests="3" assertions="9" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="emits CRC data descriptors, central directory and completion only after entries" classname="M5 streaming ZIP" time="0.000851" file="apps/api/test/m5-platform-unit.test.ts" line="12" assertions="5" />
+      <testcase name="a failed dataset never emits a complete ZIP directory or completion manifest" classname="M5 streaming ZIP" time="0.000179" file="apps/api/test/m5-platform-unit.test.ts" line="13" assertions="3" />
+      <testcase name="rejects path traversal before output" classname="M5 streaming ZIP" time="0.00007" file="apps/api/test/m5-platform-unit.test.ts" line="14" assertions="1" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/api/test/m5-domains-safety.test.ts" file="apps/api/test/m5-domains-safety.test.ts" tests="4" assertions="42" failures="0" skipped="0" time="0.002981" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 suspended safety classification" file="apps/api/test/m5-domains-safety.test.ts" line="7" tests="4" assertions="42" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="admits only complete unpublish and withdrawal shapes" classname="M5 suspended safety classification" time="0.000085" file="apps/api/test/m5-domains-safety.test.ts" line="8" assertions="3" />
+      <testcase name="spoofed selectors, nested commands, extra writes and malformed versions stay denied" classname="M5 suspended safety classification" time="0.000081" file="apps/api/test/m5-domains-safety.test.ts" line="13" assertions="33" />
+      <testcase name="HTTP command parser owns type; caller cannot relabel a save as safety" classname="M5 suspended safety classification" time="0.000153" file="apps/api/test/m5-domains-safety.test.ts" line="16" assertions="3" />
+      <testcase name="private referenced images use read capabilities and incomplete gallery pairs disappear together" classname="M5 suspended safety classification" time="0.000243" file="apps/api/test/m5-domains-safety.test.ts" line="22" assertions="3" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/api/test/m5-root.test.ts" file="apps/api/test/m5-root.test.ts" tests="2" assertions="5" failures="0" skipped="0" time="0.128974" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="quota failure exposes only bounded public admission facts" classname="" time="0.000199" file="apps/api/test/m5-root.test.ts" line="5" assertions="2" />
+    <testcase name="M5 command failures and recent-auth requirements retain known codes without messages" classname="" time="0.00014" file="apps/api/test/m5-root.test.ts" line="11" assertions="3" />
+  </testsuite>
+  <testsuite name="apps/api/test/m5-domains.test.ts" file="apps/api/test/m5-domains.test.ts" tests="7" assertions="59" failures="0" skipped="0" time="0.010288" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 exact domain boundary" file="apps/api/test/m5-domains.test.ts" line="8" tests="7" assertions="59" failures="0" skipped="0" time="0.001" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="normalizes ASCII case while www remains a different exact host" classname="M5 exact domain boundary" time="0.000634" file="apps/api/test/m5-domains.test.ts" line="9" assertions="2" />
+      <testcase name="rejects schemes, ports, credentials, IPs, encoded hosts and internal/reserved names" classname="M5 exact domain boundary" time="0.00011" file="apps/api/test/m5-domains.test.ts" line="13" assertions="16" />
+      <testcase name="rejects client verification and stale command fields" classname="M5 exact domain boundary" time="0.000307" file="apps/api/test/m5-domains.test.ts" line="16" assertions="4" />
+      <testcase name="validates local entry authority and does not decode ambiguous paths" classname="M5 exact domain boundary" time="0.000837" file="apps/api/test/m5-domains.test.ts" line="21" assertions="11" />
+      <testcase name="admits only the declared sitemap and robots metadata paths" classname="M5 exact domain boundary" time="0.000264" file="apps/api/test/m5-domains.test.ts" line="29" assertions="12" />
+      <testcase name="synthetic verification requires an exact server-owned manifest and local mode" classname="M5 exact domain boundary" time="0.000392" file="apps/api/test/m5-domains.test.ts" line="34" assertions="5" />
+      <testcase name="custom intake CORS uses exact origin and routed tenant without admin credentials" classname="M5 exact domain boundary" time="0.001049" file="apps/api/test/m5-domains.test.ts" line="44" assertions="9" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/api/test/domain-input.test.ts" file="apps/api/test/domain-input.test.ts" tests="5" assertions="33" failures="0" skipped="0" time="0.003085" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="draft boundary accepts plain VI text and refuses publication or tenant substitution" classname="" time="0.0002" file="apps/api/test/domain-input.test.ts" line="4" assertions="6" />
+    <testcase name="save requires an explicit bounded expected version" classname="" time="0.000121" file="apps/api/test/domain-input.test.ts" line="12" assertions="7" />
+    <testcase name="invitations fix the email and cannot add a tenant or platform role" classname="" time="0.000445" file="apps/api/test/domain-input.test.ts" line="18" assertions="6" />
+    <testcase name="new tenant handoff requires an explicit monitor or enforced quota policy" classname="" time="0.00031" file="apps/api/test/domain-input.test.ts" line="26" assertions="7" />
+    <testcase name="reauthentication accepts only a bounded password and rejects obsolete factor fields" classname="" time="0.000076" file="apps/api/test/domain-input.test.ts" line="37" assertions="7" />
+  </testsuite>
+  <testsuite name="apps/api/test/m5-platform-worker.test.ts" file="apps/api/test/m5-platform-worker.test.ts" tests="3" assertions="6" failures="0" skipped="0" time="0.003108" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 irreversible object deletion checkpoints" file="apps/api/test/m5-platform-worker.test.ts" line="3" tests="3" assertions="6" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="only a verified physical delete advances checkpoint" classname="M5 irreversible object deletion checkpoints" time="0.000422" file="apps/api/test/m5-platform-worker.test.ts" line="4" assertions="2" />
+      <testcase name="failed or uncertain DELETE leaves checkpoint unadvanced" classname="M5 irreversible object deletion checkpoints" time="0.00018" file="apps/api/test/m5-platform-worker.test.ts" line="5" assertions="2" />
+      <testcase name="checkpoint failure is observable and prevents later objects" classname="M5 irreversible object deletion checkpoints" time="0.000083" file="apps/api/test/m5-platform-worker.test.ts" line="6" assertions="2" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/api/test/m5-platform-export.test.ts" file="apps/api/test/m5-platform-export.test.ts" tests="5" assertions="96" failures="0" skipped="0" time="0.013444" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 export current-authority streaming" file="apps/api/test/m5-platform-export.test.ts" line="12" tests="5" assertions="96" failures="0" skipped="0" time="0.009" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="includes all declared datasets with record versions and honest completion semantics" classname="M5 export current-authority streaming" time="0.00442" file="apps/api/test/m5-platform-export.test.ts" line="13" assertions="58" />
+      <testcase name="membership revocation between batches aborts without completion manifest" classname="M5 export current-authority streaming" time="0.000242" file="apps/api/test/m5-platform-export.test.ts" line="14" assertions="2" />
+      <testcase name="dataset read failure stays an incomplete download" classname="M5 export current-authority streaming" time="0.000351" file="apps/api/test/m5-platform-export.test.ts" line="15" assertions="2" />
+      <testcase name="media withdrawal during storage read omits bytes and records the exclusion" classname="M5 export current-authority streaming" time="0.003291" file="apps/api/test/m5-platform-export.test.ts" line="16" assertions="32" />
+      <testcase name="storage failure cannot become a completed export" classname="M5 export current-authority streaming" time="0.002978" file="apps/api/test/m5-platform-export.test.ts" line="17" assertions="2" />
+    </testsuite>
+  </testsuite>
+</testsuites>

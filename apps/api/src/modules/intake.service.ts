@@ -33,17 +33,17 @@ export class IntakeService {
   }
   private digest(purpose:string,value:string) {return createHmac('sha256',this.secret!).update(`${purpose}:${value}`).digest('hex');}
   private context(request:IntakeRequest,tenant:string,service:string,challenge=false) {
-    assertPublicIntakeRequest(request.headers,request.method);
+    assertPublicIntakeRequest(request.headers,request.method,typeof request.headers.origin==='string'?request.headers.origin:undefined);
     let tenantSlug:string,serviceSlug:string;
     try {tenantSlug=intakeSlug(tenant);serviceSlug=intakeSlug(service);} catch {throw new IntakeFailure('SOURCE_UNAVAILABLE');}
     if(request.originalUrl!==(challenge?S04_ROUTES.challenge(tenantSlug,serviceSlug):S04_ROUTES.intake(tenantSlug,serviceSlug))) throw new IntakeFailure('INVALID_INPUT');
-    return {tenantSlug,serviceSlug,ipHash:this.digest('ip-v1',peerIp(request))};
+    return {tenantSlug,serviceSlug,entryOrigin:request.headers.origin,ipHash:this.digest('ip-v1',peerIp(request))};
   }
   private async command(value:Record<string,unknown>):Promise<Record<string,unknown>> {
     await this.db.verifyRoles();
     const result=await this.db.intakeSql!.begin(async tx=>{
       await tx.unsafe("SET LOCAL statement_timeout='5s'; SET LOCAL lock_timeout='3s'");
-      const result=await tx`SELECT gcms_s04.intake(${JSON.stringify(value)}::text::jsonb) AS result`;
+      const result=await tx`SELECT gcms_m5.intake(${JSON.stringify(value)}::text::jsonb,false) AS result`;
       return result[0]?.result as Record<string,unknown>;
     });
     if(!result||typeof result!=='object') throw new Error('Invalid intake result');

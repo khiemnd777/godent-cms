@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="1" assertions="7" failures="0" skipped="0" time="1.351406">
+  <testsuite name="apps/api/test/m5-export-authority-local.test.ts" file="apps/api/test/m5-export-authority-local.test.ts" tests="1" assertions="7" failures="0" skipped="0" time="1.343113" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 actual SQL export authority across streamed batches" file="apps/api/test/m5-export-authority-local.test.ts" line="8" tests="1" assertions="7" failures="0" skipped="0" time="0.209" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="revoking the current exporter between datasets aborts without completion; regrant does not resume the old download" classname="M5 actual SQL export authority across streamed batches" time="0.20924" file="apps/api/test/m5-export-authority-local.test.ts" line="12" assertions="7" />
+    </testsuite>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,380 @@
+{
+  "schemaVersion": 1,
+  "owner": "GCMS-M5-UI-v1",
+  "runId": "ff9fbb73-62e5-4749-bf32-5fa419e7bf8e",
+  "fixtureRun": "6c18ade7-1f3e-4d80-9931-e4e02b4243b7",
+  "demoRun": "bbe2ca3e-edd5-461e-a6f6-16a2a4ef8477",
+  "status": "FAIL",
+  "fatalErrorName": "Error",
+  "plannedCases": 31,
+  "completedCases": 20,
+  "sourceSha256": "45cb911a40e493556fc62674a7a4aa2e7afb1ef007976f92537464ddd7cb4479",
+  "cases": [
+    {
+      "id": "a1_password_login",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:42.660Z",
+      "facts": {
+        "ordinaryPasswordLogin": true,
+        "originalCustomPrimary": true
+      },
+      "durationMs": 628
+    },
+    {
+      "id": "domains_geometry_1440",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:43.288Z",
+      "facts": {
+        "viewportWidth": 1440,
+        "documentWidth": 1440,
+        "visibleControls": 29,
+        "outsideControls": 0
+      },
+      "durationMs": 242
+    },
+    {
+      "id": "domains_geometry_390",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:43.530Z",
+      "facts": {
+        "viewportWidth": 390,
+        "documentWidth": 390,
+        "visibleControls": 12,
+        "outsideControls": 0
+      },
+      "durationMs": 195
+    },
+    {
+      "id": "domains_geometry_320",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:43.725Z",
+      "facts": {
+        "viewportWidth": 320,
+        "documentWidth": 320,
+        "visibleControls": 12,
+        "outsideControls": 0
+      },
+      "durationMs": 183
+    },
+    {
+      "id": "data_geometry_1440",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:43.908Z",
+      "facts": {
+        "viewportWidth": 1440,
+        "documentWidth": 1440,
+        "visibleControls": 32,
+        "outsideControls": 0
+      },
+      "durationMs": 221
+    },
+    {
+      "id": "data_geometry_390",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:44.129Z",
+      "facts": {
+        "viewportWidth": 390,
+        "documentWidth": 390,
+        "visibleControls": 15,
+        "outsideControls": 0
+      },
+      "durationMs": 192
+    },
+    {
+      "id": "data_geometry_320",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:44.321Z",
+      "facts": {
+        "viewportWidth": 320,
+        "documentWidth": 320,
+        "visibleControls": 15,
+        "outsideControls": 0
+      },
+      "durationMs": 184
+    },
+    {
+      "id": "custom_home_vi",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:44.631Z",
+      "facts": {
+        "images": 1,
+        "publication": "92c7f06c-466a-4535-bc77-c6f256c67ede",
+        "configPublication": "23b57a47-9ab8-43d7-9c3c-0dd4252672d0"
+      },
+      "durationMs": 277
+    },
+    {
+      "id": "custom_home_en",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:44.908Z",
+      "facts": {
+        "images": 1,
+        "publication": "75e9992c-4a02-4277-8aa4-bbc81687d498",
+        "configPublication": "a07b3d5d-9601-4676-a4e9-54ae4ee58dcb"
+      },
+      "durationMs": 115
+    },
+    {
+      "id": "custom_page_vi",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:45.023Z",
+      "facts": {
+        "images": 1,
+        "publication": "03ca7bac-7fd7-49b4-ae3b-acfa35672a9a",
+        "configPublication": "23b57a47-9ab8-43d7-9c3c-0dd4252672d0"
+      },
+      "durationMs": 133
+    },
+    {
+      "id": "custom_page_en",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:45.156Z",
+      "facts": {
+        "images": 1,
+        "publication": "cb056c92-21d4-4cd7-9dc6-f6525ce139ad",
+        "configPublication": "a07b3d5d-9601-4676-a4e9-54ae4ee58dcb"
+      },
+      "durationMs": 132
+    },
+    {
+      "id": "custom_service_vi",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:45.288Z",
+      "facts": {
+        "images": 1,
+        "publication": "1405cb2f-8652-450c-b417-7676d32948fa",
+        "configPublication": "23b57a47-9ab8-43d7-9c3c-0dd4252672d0"
+      },
+      "durationMs": 177
+    },
+    {
+      "id": "custom_service_en",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:45.465Z",
+      "facts": {
+        "images": 1,
+        "publication": "b29323b5-93b0-4e56-8add-aa2d243eaf97",
+        "configPublication": "a07b3d5d-9601-4676-a4e9-54ae4ee58dcb"
+      },
+      "durationMs": 160
+    },
+    {
+      "id": "custom_navigation_click",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:45.625Z",
+      "facts": {
+        "actualMenuClick": true
+      },
+      "durationMs": 219
+    },
+    {
+      "id": "godent_direct_301_arrival",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:45.844Z",
+      "facts": {
+        "redirects": 1,
+        "status": 301,
+        "actualLocale": "en"
+      },
+      "durationMs": 252
+    },
+    {
+      "id": "missing_en_direct_302_vi",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:46.096Z",
+      "facts": {
+        "redirects": 1,
+        "status": 302,
+        "actualLocale": "vi"
+      },
+      "durationMs": 237
+    },
+    {
+      "id": "custom_service_consultation",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:46.334Z",
+      "facts": {
+        "accepted": true,
+        "captchaSolvedWhenRequested": false,
+        "counterReset": false
+      },
+      "durationMs": 334
+    },
+    {
+      "id": "shared_cms_lead_note",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:46.668Z",
+      "facts": {
+        "sameTenantSharedLead": true,
+        "noteInHistory": true
+      },
+      "durationMs": 434
+    },
+    {
+      "id": "tenant_zip_active",
+      "status": "PASS",
+      "startedAt": "2026-10-16T17:06:47.102Z",
+      "facts": {
+        "bytes": 185456,
+        "zipEntries": 32,
+        "datasets": 25,
+        "includedMedia": 4,
+        "manifestComplete": true,
+        "restoreBackup": false,
+        "sha256": "5e0f0e9157a54ac983a5963a67c8e226b4e637304e5d010850938420a8cc100a"
+      },
+      "durationMs": 411
+    },
+    {
+      "id": "platform_password_login_monitor",
+      "status": "FAIL",
+      "startedAt": "2026-10-16T17:06:47.645Z",
+      "errorName": "Error",
+      "durationMs": 5456
+    },
+    {
+      "id": "platform_suspend",
+      "status": "NOT_RUN",
+      "reason": "Earlier prerequisite has not completed."
+    },
+    {
+      "id": "suspended_private_editor",
+      "status": "NOT_RUN",
+      "reason": "Earlier prerequisite has not completed."
+    },
+    {
+      "id": "suspended_signed_media",
+      "status": "NOT_RUN",
+      "reason": "Earlier prerequisite has not completed."
+    },
+    {
+      "id": "suspended_zip",
+      "status": "NOT_RUN",
+      "reason": "Earlier prerequisite has not completed."
+    },
+    {
+      "id": "platform_reactivate",
+      "status": "NOT_RUN",
+      "reason": "Earlier prerequisite has not completed."
+    },
+    {
+      "id": "reactivated_controls_publication",
+      "status": "NOT_RUN",
+      "reason": "Earlier prerequisite has not completed."
+    },
+    {
+      "id": "primary_reverify_outage",
+      "status": "NOT_RUN",
+      "reason": "Earlier prerequisite has not completed."
+    },
+    {
+      "id": "primary_verify_local_recovery",
+      "status": "NOT_RUN",
+      "reason": "Earlier prerequisite has not completed."
+    },
+    {
+      "id": "return_godent_fresh_visitor",
+      "status": "NOT_RUN",
+      "reason": "Earlier prerequisite has not completed."
+    },
+    {
+      "id": "restore_original_custom_primary",
+      "status": "NOT_RUN",
+      "reason": "Earlier prerequisite has not completed."
+    },
+    {
+      "id": "browser_page_errors",
+      "status": "NOT_RUN",
+      "reason": "Earlier prerequisite has not completed."
+    }
+  ],
+  "recoveries": [
+    {
+      "action": "restore_active_tenant",
+      "status": "NOT_NEEDED"
+    },
+    {
+      "action": "restore_original_custom_primary",
+      "status": "NOT_NEEDED"
+    }
+  ],
+  "browserEvents": [
+    {
+      "case": "a1_password_login",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "a1_password_login",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "custom_home_vi",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "custom_home_en",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "custom_page_vi",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "custom_page_en",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "custom_service_vi",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "custom_service_en",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "custom_navigation_click",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "custom_navigation_click",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "missing_en_direct_302_vi",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "missing_en_direct_302_vi",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "custom_service_consultation",
+      "kind": "console-error",
+      "name": "error"
+    },
+    {
+      "case": "platform_password_login_monitor",
+      "kind": "console-error",
+      "name": "error"
+    }
+  ],
+  "limits": [
+    "Local synthetic UAT only; no live DNS or TLS verification.",
+    "Exports are business data, not restore backups; private ZIP files remain in .local.",
+    "Screenshots mask editable values; console and page errors retain names/types only.",
+    "No assertion about previously cached 301 recovery; return-to-Godent uses a fresh visitor context.",
+    "No new tenant or deletion execution is performed."
+  ]
+}

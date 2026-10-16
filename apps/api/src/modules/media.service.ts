@@ -42,7 +42,7 @@ export class MediaService {
     const t=parseIdentifier(tenant),scope=`${t}:s07-media`,actor=await this.actor(request);
     if(Object.keys(query).some(k=>k!=='cursor')) throw new BadRequestException();
     const after=decodePageCursor(query.cursor,scope);
-    return this.db.withTenant(actor,t,async tx=>{
+    return this.db.withReadTenant(actor,t,async tx=>{
       const rows=await tx.execute(sql`SELECT ${assetView} FROM gcms_s07.asset a WHERE a.tenant_id=${t} AND (${after}::text IS NULL OR a.id>${after}) ORDER BY a.id LIMIT 26`);
       const items=(rows as unknown as MediaAsset[]).slice(0,25);
       return {items,nextCursor:rows.length>25?encodePageCursor(scope,items[items.length-1].id):null};
@@ -50,7 +50,7 @@ export class MediaService {
   }
   async read(request:PrivateRequest,tenant:string,id:string) {
     const t=parseIdentifier(tenant),a=parseIdentifier(id),actor=await this.actor(request);
-    return this.db.withTenant(actor,t,tx=>this.asset(tx,t,a));
+    return this.db.withReadTenant(actor,t,tx=>this.asset(tx,t,a));
   }
   async upload(request:PrivateRequest&IncomingMessage,tenant:string):Promise<MediaAsset> {
     const t=parseIdentifier(tenant),actor=await this.actor(request,true);
@@ -75,12 +75,25 @@ export class MediaService {
       return this.asset(tx,t,String(rows[0].id));
     });
     if(reserved.state!=='uploading') return reserved;
-    try {await this.storage.put(`original/${t}/${reserved.id}`,bytes,'application/octet-stream');}
-    catch {throw new ServiceUnavailableException();}
-    return this.db.withTenant(actor,t,async tx=>{
-      await tx.execute(sql`SELECT gcms_s07.finish_upload(${t},${reserved.id},${checksum})`);
-      return this.asset(tx,t,reserved.id);
-    });
+    // Share the existing asset I/O lock with process/purge and tenant deletion.
+    // A deletion may fence the tenant while PUT is in flight, but cannot finish
+    // deleting this object until the writer has settled and released this lock.
+    const connection=await this.db.tenantDb.$client.reserve(),lockIdentity=`${t}/${reserved.id}`;
+    let locked=false;
+    try {
+      await connection`SELECT pg_advisory_lock(hashtextextended(${lockIdentity},7517))`;locked=true;
+      await this.db.withTenant(actor,t,async()=>{});
+      try {await this.storage.put(`original/${t}/${reserved.id}`,bytes,'application/octet-stream');}
+      catch {throw new ServiceUnavailableException();}
+      return await this.db.withTenant(actor,t,async tx=>{
+        await tx.execute(sql`SELECT gcms_m5.media_original_stored(${t},${reserved.id},${bytes.byteLength})`);
+        await tx.execute(sql`SELECT gcms_s07.finish_upload(${t},${reserved.id},${checksum})`);
+        return this.asset(tx,t,reserved.id);
+      });
+    } finally {
+      try {if(locked)await connection`SELECT pg_advisory_unlock(hashtextextended(${lockIdentity},7517))`;}
+      finally {connection.release();}
+    }
   }
   async permission(request:PrivateRequest,tenant:string,id:string,input:unknown) {
     const t=parseIdentifier(tenant),a=parseIdentifier(id),value=mediaPermission(input),actor=await this.actor(request);
@@ -91,7 +104,7 @@ export class MediaService {
   }
   async withdraw(request:PrivateRequest,tenant:string,id:string,input:unknown) {
     const t=parseIdentifier(tenant),a=parseIdentifier(id),value=mediaWithdrawal(input),actor=await this.actor(request);
-    return this.db.withTenant(actor,t,async tx=>{
+    return this.db.withSafetyTenant(actor,t,async tx=>{
       const result=await tx.execute(sql`SELECT gcms_s07.command(${t},${a},${value.operationId},${value.expectedVersion},${JSON.stringify({type:'withdrawal',reason:value.reason})}::text::jsonb) AS result`);
       if(!result[0]?.result) throw new NotFoundException();return this.asset(tx,t,a);
     });
@@ -106,7 +119,7 @@ export class MediaService {
   }
   async access(request:PrivateRequest,tenant:string,id:string,input:unknown):Promise<MediaAccessResult> {
     const t=parseIdentifier(tenant),a=parseIdentifier(id),value=mediaAccess(input),actor=await this.actor(request);
-    return this.db.withTenant(actor,t,async tx=>{
+    return this.db.withReadTenant(actor,t,async tx=>{
       const rows=await tx.execute(sql`SELECT gcms_s07.private_target(${t},${a},${value.revision},${value.variant}) AS target`);
       if(!rows[0]?.target) throw new NotFoundException();
       const signed=this.signer.issue({tenantId:t,assetId:a,revision:value.revision,variant:value.variant,purpose:value.purpose,userId:actor.userId,sessionId:actor.sessionId});
@@ -116,7 +129,7 @@ export class MediaService {
   async privateRead(request:PrivateRequest,token:unknown):Promise<MediaBinary> {
     const claims=this.signer.verify(token),actor=await this.actor(request);
     if(actor.userId!==claims.userId || actor.sessionId!==claims.sessionId) throw new ForbiddenException();
-    const getTarget=()=>this.db.withTenant(actor,claims.tenantId,async tx=>{
+    const getTarget=()=>this.db.withReadTenant(actor,claims.tenantId,async tx=>{
       const rows=await tx.execute(sql`SELECT gcms_s07.private_target(${claims.tenantId},${claims.assetId},${claims.revision},${claims.variant}) AS target`);
       if(!rows[0]?.target) throw new NotFoundException();return rows[0].target as Target;
     });

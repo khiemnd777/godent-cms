@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="4" assertions="55" failures="1" skipped="0" time="1.227107">
+  <testsuite name="apps/api/test/m5-domain-lifecycle-local.test.ts" file="apps/api/test/m5-domain-lifecycle-local.test.ts" tests="4" assertions="55" failures="1" skipped="0" time="1.22021" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 controlled domain lifecycle and URL-context races" file="apps/api/test/m5-domain-lifecycle-local.test.ts" line="7" tests="4" assertions="55" failures="1" skipped="0" time="0.522" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="www is a distinct exact binding; another tenant cannot claim the registered host" classname="M5 controlled domain lifecycle and URL-context races" time="0.142861" file="apps/api/test/m5-domain-lifecycle-local.test.ts" line="16" assertions="7" />
+      <testcase name="replacement sends both previous entries directly to the new primary; deactivation denies only the old alias" classname="M5 controlled domain lifecycle and URL-context races" time="0.249697" file="apps/api/test/m5-domain-lifecycle-local.test.ts" line="19" assertions="18" />
+      <testcase name="remove and re-register allocate a new identity/generation; old receipts cannot resurrect the removed binding" classname="M5 controlled domain lifecycle and URL-context races" time="0.075599" file="apps/api/test/m5-domain-lifecycle-local.test.ts" line="24" assertions="18" />
+      <testcase name="primary reverify keeps its identity while denying stale entry pins until explicit fresh verification" classname="M5 controlled domain lifecycle and URL-context races" time="0.056548" file="apps/api/test/m5-domain-lifecycle-local.test.ts" line="28" assertions="12">
+        <failure type="AssertionError" message="expect(received).toBe(expected)&#10;&#10;Expected: 404&#10;Received: 409&#10;">AssertionError: expect(received).toBe(expected)&#10;&#10;Expected: 404&#10;Received: 409&#10;&#10;      at apps/api/test/m5-domain-lifecycle-local.test.ts:32:332&#10;</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>

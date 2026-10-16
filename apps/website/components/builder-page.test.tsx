@@ -19,7 +19,7 @@ test("representative homepage renders only projected saved sections and escapes 
     config: { publicationId: configId, publicationVersion: 1, locale: "vi", content: presentation, menu: [], logoMedia: null }, site: { name: presentation.name, footer }, content, references: [], media: [], sections: content.sections.filter(section => !section.hidden).map(section => ({ section, references: [], media: null, promotion: null, form: null, action: null })), form: null, promotionState: null, alternates: [{ locale: "vi", url: canonicalUrl, publicationId }], legacy: false,
   } }, "clinic-a", "vi", "home", "home");
   if (result.resolution !== "page") throw new Error("Expected page");
-  const html = renderToStaticMarkup(createElement(BuilderPage, { page: result.page }));
+  const html = renderToStaticMarkup(createElement(BuilderPage, { page: result.page, tenant: "clinic-a" }));
   expect(html).toContain("Published clinic information"); expect(html).toContain("&lt;script&gt;unsafe&lt;/script&gt;"); expect(html).not.toContain("<script>");
   expect(html).not.toContain("Hidden copy"); expect(html).not.toContain("Hidden title"); expect(html).not.toContain("/_next/image");
   expect(html).toContain(`data-publication="${publicationId}"`); expect(html).toContain(`data-config-publication="${configId}"`); expect(html).toContain('href="#main-content"');

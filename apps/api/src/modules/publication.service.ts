@@ -1,3 +1,4 @@
+import {withM5PublicContext} from './m5-domains-public';
 import { createHash, randomUUID } from 'node:crypto';
 import { BadRequestException, ConflictException, ForbiddenException, NotFoundException, UnauthorizedException } from '@nestjs/common';
 import { sql } from 'drizzle-orm';
@@ -56,7 +57,7 @@ export class PublicationServiceOperations {
   }
   async getSite(request: PrivateRequest, tenant: string) {
     const tenantId=parseIdentifier(tenant); const actor=await this.actor(request);
-    return this.db.withTenant(actor,tenantId,tx=>this.site(tx,tenantId));
+    return this.db.withReadTenant(actor,tenantId,tx=>this.site(tx,tenantId));
   }
   async saveSite(request: PrivateRequest, tenant: string, input: unknown) {
     const tenantId=parseIdentifier(tenant); const actor=await this.actor(request);
@@ -84,7 +85,7 @@ export class PublicationServiceOperations {
       if(pageSize!==undefined){if(typeof pageSize!=='string'||!/^[1-9][0-9]?$/.test(pageSize)||Number(pageSize)>50)throw new TypeError();limit=Number(pageSize);}return {q,limit};
     });
     const scope=search===undefined&&pageSize===undefined?`${tenantId}:publication-services`:`${tenantId}:publication-services:${createHash('sha256').update(JSON.stringify(query)).digest('hex')}`; const after=decodePageCursor(cursor,scope); const actor=await this.actor(request);
-    return this.db.withTenant(actor,tenantId,async tx=>{
+    return this.db.withReadTenant(actor,tenantId,async tx=>{
       const rows=await tx.execute(sql`SELECT ${draftColumns} FROM gcms_s02.service_draft d ${draftJoins}
         WHERE d.tenant_id=${tenantId} AND (${after}::text IS NULL OR d.id>${after})
         AND (${query.q}='' OR position(${query.q} IN lower(d.title))>0 OR position(${query.q} IN lower(d.slug))>0)
@@ -95,11 +96,11 @@ export class PublicationServiceOperations {
   }
   async read(request: PrivateRequest, tenant: string, id: string): Promise<PublicationService> {
     const tenantId=parseIdentifier(tenant); const serviceId=parseIdentifier(id); const actor=await this.actor(request);
-    return this.db.withTenant(actor,tenantId,tx=>this.get(tx,tenantId,serviceId));
+    return this.db.withReadTenant(actor,tenantId,tx=>this.get(tx,tenantId,serviceId));
   }
   async preview(request: PrivateRequest, tenant: string, id: string): Promise<ServicePreview> {
     const tenantId=parseIdentifier(tenant); const serviceId=parseIdentifier(id); const actor=await this.actor(request);
-    return this.db.withTenant(actor,tenantId,async tx=>{
+    return this.db.withReadTenant(actor,tenantId,async tx=>{
       const draft=await this.get(tx,tenantId,serviceId); const site=await this.site(tx,tenantId);
       return {service:draft,site,canonicalUrl:site.slug&&draft.slug?canonicalServiceUrl(site.slug,draft.slug):null};
     });
@@ -188,16 +189,16 @@ export class PublicationServiceOperations {
     await this.db.verifyRoles();
     // Both STABLE public contracts share one PostgreSQL statement snapshot.
     // A concurrent publish cannot pair an old immutable page with a newer cover.
-    const result=await this.db.tenantDb.execute(sql`WITH source AS MATERIALIZED (
+    const result=await withM5PublicContext(this.db,request,tx=>tx.execute(sql`WITH source AS MATERIALIZED (
       SELECT gcms_s02.read_public_service(${tenantSlug},${serviceSlug}) AS page,
         gcms_s08.read_public_service_cover(${tenantSlug},${serviceSlug}) AS cover)
-      SELECT page||CASE WHEN cover IS NULL THEN '{}'::jsonb ELSE jsonb_build_object('coverMedia',cover) END AS page FROM source`);
+      SELECT gcms_m5.project_public(${tenantSlug},page||CASE WHEN cover IS NULL THEN '{}'::jsonb ELSE jsonb_build_object('coverMedia',cover) END) AS page FROM source`));
     if(!result[0]?.page) throw new NotFoundException();
     const page=result[0].page as PublicServicePage;
     // Validate the published read contract before server rendering; never render unknown sections.
     parsed(()=>{parseServiceInput(page.service);parseRichText(page.site.footer.body,S03_LIMITS.footerText);
       boundedText(page.site.name,160,true);boundedText(page.site.footer.intro,S03_LIMITS.footerIntro);});
-    if(page.canonicalUrl!==canonicalServiceUrl(tenantSlug,serviceSlug)||page.locale!=='vi'||![1,2].includes(page.schemaVersion)) throw new NotFoundException();
+    if(page.locale!=='vi'||![1,2].includes(page.schemaVersion)) throw new NotFoundException();
     return page;
   }
   private async assertMedia(tx:S02Transaction,tenantId:string,reference:PublicationService['coverImage']) {
@@ -207,7 +208,7 @@ export class PublicationServiceOperations {
   }
   async live(request:PrivateRequest,tenant:string,id:string) {
     const tenantId=parseIdentifier(tenant),serviceId=parseIdentifier(id),actor=await this.actor(request);
-    return this.db.withTenant(actor,tenantId,async tx=>{
+    return this.db.withReadTenant(actor,tenantId,async tx=>{
       const draft=await this.get(tx,tenantId,serviceId),site=await this.site(tx,tenantId);
       if(!draft.activePublication) return {page:null,publicationRevision:draft.publicationRevision};
       const rows=await tx.execute(sql`SELECT gcms_s08.eligible_closure(p.tenant_id,s.closure)||jsonb_build_object('publicationId',s.id,
@@ -221,7 +222,7 @@ export class PublicationServiceOperations {
     const tenantId=parseIdentifier(tenant),resourceId=parseIdentifier(id),actor=await this.actor(request);
     const scope=`${tenantId}:${resource}:${resourceId}:editorial-history`,after=decodePageCursor(cursor,scope);
     if(after!==null&&!/^[1-9][0-9]{0,8}$/.test(after)) throw new BadRequestException('Invalid history cursor');
-    return this.db.withTenant(actor,tenantId,async tx=>{
+    return this.db.withReadTenant(actor,tenantId,async tx=>{
       if(resource==='service') await this.get(tx,tenantId,resourceId);else if((await this.site(tx,tenantId)).version===0) throw new NotFoundException();
       const rows=await tx.execute(sql`SELECT id,resource,resource_id AS "resourceId",version,kind,content,restored_from AS "restoredFrom",created_at AS "createdAt",
         CASE WHEN actor_id IS NULL THEN NULL ELSE jsonb_build_object('userId',actor_id,'name',actor_name) END AS actor
@@ -280,7 +281,7 @@ export class PublicationServiceOperations {
     const tenantId=parseIdentifier(tenant),serviceId=parseIdentifier(id),actor=await this.actor(request);
     const c=parsed(()=>{const v=exactObject(input,['operationId','expectedDraftVersion','expectedPublicationVersion','expectedPublicationRevision']);return {
       operationId:parseIdentifier(v.operationId),expectedDraftVersion:version(v.expectedDraftVersion),expectedPublicationVersion:version(v.expectedPublicationVersion),expectedPublicationRevision:version(v.expectedPublicationRevision)};});
-    return this.db.withTenant(actor,tenantId,async tx=>{
+    return this.db.withSafetyTenant(actor,tenantId,async tx=>{
       const result=(await tx.execute(sql`SELECT gcms_s08.unpublish(${tenantId},${serviceId},${JSON.stringify(c)}::text::jsonb) AS result`))[0].result as Record<string,unknown>;
       if(result?.code==='REAUTH_REQUIRED') throw new ReauthenticationRequired();
       if(result?.code==='NOT_FOUND') throw new NotFoundException();if(result?.code) throw new ConflictException();

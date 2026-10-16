@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "purpose": "explicit synthetic-local domain attestation",
+  "bindingCount": 4,
+  "expiresAt": "2026-10-16T17:48:00.000Z",
+  "liveDnsTlsVerified": false,
+  "retainedBindingsChanged": false,
+  "dispatchStarted": false
+}
