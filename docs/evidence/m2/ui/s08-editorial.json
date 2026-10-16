@@ -1,0 +1,628 @@
+{
+  "runId": "9b4aeade-d69e-4655-b293-6b349d2233ac",
+  "phase": "complete",
+  "checks": {
+    "editor1440": {
+      "width": 1440,
+      "scroll": 1440,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Lưu bản nháp",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Xem trước",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Cập nhật website",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Lịch sử phiên bản",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ngừng xuất bản",
+          "inside": true
+        },
+        {
+          "tag": "A",
+          "label": "Xem bản đã xuất bản",
+          "inside": true
+        }
+      ]
+    },
+    "editor390": {
+      "width": 390,
+      "scroll": 390,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Lưu bản nháp",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Xem trước",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Cập nhật website",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Lịch sử phiên bản",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ngừng xuất bản",
+          "inside": true
+        },
+        {
+          "tag": "A",
+          "label": "Xem bản đã xuất bản",
+          "inside": true
+        }
+      ]
+    },
+    "editor320": {
+      "width": 320,
+      "scroll": 320,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Lưu bản nháp",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Xem trước",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Cập nhật website",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Lịch sử phiên bản",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ngừng xuất bản",
+          "inside": true
+        },
+        {
+          "tag": "A",
+          "label": "Xem bản đã xuất bản",
+          "inside": true
+        }
+      ]
+    },
+    "editor768": {
+      "width": 768,
+      "scroll": 768,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Lưu bản nháp",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Xem trước",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Cập nhật website",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Lịch sử phiên bản",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ngừng xuất bản",
+          "inside": true
+        },
+        {
+          "tag": "A",
+          "label": "Xem bản đã xuất bản",
+          "inside": true
+        }
+      ]
+    },
+    "editor1024": {
+      "width": 1024,
+      "scroll": 1024,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Lưu bản nháp",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Xem trước",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Cập nhật website",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Lịch sử phiên bản",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ngừng xuất bản",
+          "inside": true
+        },
+        {
+          "tag": "A",
+          "label": "Xem bản đã xuất bản",
+          "inside": true
+        }
+      ]
+    },
+    "history1440": {
+      "width": 1440,
+      "scroll": 1440,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Đóng lịch sử",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bản nháp 3Đã khôi phục từ lịch sử14:48:24 16/10/2026 · M2 Synthetic A1",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bản nháp 2Đã lưu14:39:30 16/10/2026 · S02 A1",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bản nháp 1Đã lưu14:39:29 16/10/2026 · S02 A1",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Với bản nháp hiện tại",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Với website đang chạy",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Khôi phục thành bản nháp",
+          "inside": true
+        }
+      ]
+    },
+    "history390": {
+      "width": 390,
+      "scroll": 390,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Đóng lịch sử",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bản nháp 3Đã khôi phục từ lịch sử14:48:24 16/10/2026 · M2 Synthetic A1",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bản nháp 2Đã lưu14:39:30 16/10/2026 · S02 A1",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bản nháp 1Đã lưu14:39:29 16/10/2026 · S02 A1",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Với bản nháp hiện tại",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Với website đang chạy",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Khôi phục thành bản nháp",
+          "inside": true
+        }
+      ]
+    },
+    "history320": {
+      "width": 320,
+      "scroll": 320,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Đóng lịch sử",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bản nháp 3Đã khôi phục từ lịch sử14:48:24 16/10/2026 · M2 Synthetic A1",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bản nháp 2Đã lưu14:39:30 16/10/2026 · S02 A1",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bản nháp 1Đã lưu14:39:29 16/10/2026 · S02 A1",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Với bản nháp hiện tại",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Với website đang chạy",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Khôi phục thành bản nháp",
+          "inside": true
+        }
+      ]
+    },
+    "history768": {
+      "width": 768,
+      "scroll": 768,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Đóng lịch sử",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bản nháp 3Đã khôi phục từ lịch sử14:48:24 16/10/2026 · M2 Synthetic A1",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bản nháp 2Đã lưu14:39:30 16/10/2026 · S02 A1",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bản nháp 1Đã lưu14:39:29 16/10/2026 · S02 A1",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Với bản nháp hiện tại",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Với website đang chạy",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Khôi phục thành bản nháp",
+          "inside": true
+        }
+      ]
+    },
+    "history1024": {
+      "width": 1024,
+      "scroll": 1024,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Đóng lịch sử",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bản nháp 3Đã khôi phục từ lịch sử14:48:24 16/10/2026 · M2 Synthetic A1",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bản nháp 2Đã lưu14:39:30 16/10/2026 · S02 A1",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bản nháp 1Đã lưu14:39:29 16/10/2026 · S02 A1",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Với bản nháp hiện tại",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Với website đang chạy",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Khôi phục thành bản nháp",
+          "inside": true
+        }
+      ]
+    },
+    "restore": {
+      "status": "PASS",
+      "newDraftVersion": 4,
+      "liveUnchanged": true
+    },
+    "explicitPublish": {
+      "status": "PASS",
+      "version": 3
+    },
+    "unpublish": {
+      "status": "PASS",
+      "counterPreserved": true,
+      "anonymous404": true
+    },
+    "republish": {
+      "status": "PASS",
+      "version": 4
+    },
+    "conflictAndDirty": {
+      "status": "PASS",
+      "twoActors": true,
+      "inputPreserved": true,
+      "cancelPreserves": true,
+      "discardNavigates": true
+    },
+    "siteHistoryRestore": {
+      "status": "PASS",
+      "draftOnly": true
+    }
+  },
+  "errors": [],
+  "statuses": [
+    {
+      "path": "/api/session",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/leads/count",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/site",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/site",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/site",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6/preview",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/site",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/site",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6/live",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6/history",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6/restore",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6/publish",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/site",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/site",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6/unpublish",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/site",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6/publish",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/site",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/site",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/session",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/site",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/site",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/leads/count",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/services/a8c049c1-6aae-4d53-890e-a86e8b21ddf6",
+      "status": 409,
+      "method": "PUT"
+    },
+    {
+      "path": "/api/session",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/site",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/leads/count",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/site/history",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/publication/site/restore",
+      "status": 200,
+      "method": "POST"
+    }
+  ]
+}

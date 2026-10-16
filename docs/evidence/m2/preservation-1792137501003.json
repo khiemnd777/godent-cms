@@ -1,0 +1,3026 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T07:58:21.003Z",
+  "tables": [
+    {
+      "table": "gcms_s02.audit_event",
+      "baselineRows": 801,
+      "currentRows": 1566,
+      "retainedSame": 801,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s02.invitation",
+      "baselineRows": 63,
+      "currentRows": 63,
+      "retainedSame": 63,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s02.membership",
+      "baselineRows": 390,
+      "currentRows": 740,
+      "retainedSame": 390,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s02.publication_intent",
+      "baselineRows": 177,
+      "currentRows": 356,
+      "retainedSame": 177,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s02.publication_pointer",
+      "baselineRows": 169,
+      "currentRows": 322,
+      "retainedSame": 169,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s02.publication_snapshot",
+      "baselineRows": 177,
+      "currentRows": 356,
+      "retainedSame": 177,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s02.schema_migration",
+      "baselineRows": 14,
+      "currentRows": 23,
+      "retainedSame": 14,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s02.service_draft",
+      "baselineRows": 198,
+      "currentRows": 361,
+      "retainedSame": 198,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [
+        "cover_image"
+      ],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s02.site_draft",
+      "baselineRows": 164,
+      "currentRows": 336,
+      "retainedSame": 164,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s02.tenant",
+      "baselineRows": 193,
+      "currentRows": 365,
+      "retainedSame": 193,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s02_auth.account",
+      "baselineRows": 16,
+      "currentRows": 19,
+      "retainedSame": 16,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": true,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s02_auth.reauth_grant",
+      "baselineRows": 11,
+      "currentRows": 17,
+      "retainedSame": 11,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s02_auth.session",
+      "baselineRows": 27,
+      "currentRows": 112,
+      "retainedSame": 27,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s02_auth.two_factor",
+      "baselineRows": 8,
+      "currentRows": 8,
+      "retainedSame": 8,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": true,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s02_auth.user",
+      "baselineRows": 20,
+      "currentRows": 27,
+      "retainedSame": 20,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": true,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s02_auth.verification",
+      "baselineRows": 0,
+      "currentRows": 0,
+      "retainedSame": 0,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s04.accepted_request",
+      "baselineRows": 30285,
+      "currentRows": 50395,
+      "retainedSame": 30285,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s04.audit_event",
+      "baselineRows": 30287,
+      "currentRows": 50398,
+      "retainedSame": 30287,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s04.challenge",
+      "baselineRows": 16,
+      "currentRows": 16,
+      "retainedSame": 16,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s04.intake_activity",
+      "baselineRows": 176,
+      "currentRows": 266,
+      "retainedSame": 176,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s04.lead",
+      "baselineRows": 30287,
+      "currentRows": 50397,
+      "retainedSame": 30287,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [
+        "normal_expires_at",
+        "extension_expires_at",
+        "retention_revision"
+      ],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s04.notification_intent",
+      "baselineRows": 30287,
+      "currentRows": 50397,
+      "retainedSame": 30287,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s04.request_event",
+      "baselineRows": 510,
+      "currentRows": 608,
+      "retainedSame": 510,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s04.secret",
+      "baselineRows": 1,
+      "currentRows": 1,
+      "retainedSame": 1,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s05.delivery",
+      "baselineRows": 108,
+      "currentRows": 142,
+      "retainedSame": 108,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s05.lead_event",
+      "baselineRows": 61,
+      "currentRows": 126,
+      "retainedSame": 61,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s05.lead_sequence",
+      "baselineRows": 147,
+      "currentRows": 240,
+      "retainedSame": 147,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s05.operation_receipt",
+      "baselineRows": 61,
+      "currentRows": 114,
+      "retainedSame": 61,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s05.recipient_settings",
+      "baselineRows": 193,
+      "currentRows": 365,
+      "retainedSame": 193,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s05.settings_receipt",
+      "baselineRows": 33,
+      "currentRows": 44,
+      "retainedSame": 33,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    },
+    {
+      "table": "gcms_s05.worker_scope",
+      "baselineRows": 61,
+      "currentRows": 80,
+      "retainedSame": 61,
+      "removedVolatile": 0,
+      "unexpected": 0,
+      "additiveColumns": [],
+      "credentialInvariant": false,
+      "status": "PASS"
+    }
+  ],
+  "privateFiles": [
+    {
+      "path": ".local/s04-rows-before.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-t07-dom.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-preservation-final.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-onboarding.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-operations-sql-resume.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s03-process-before.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-data-ui-lifecycle-resources.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-closure-preservation.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-preservation.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-db-baseline.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-dependency-audit.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-data-ui-lifecycle.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-provision-proof.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-intake-operations.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-before.sql",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-intake-diagnostic.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-handoff.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-assignment-diagnostic.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-visual-recapture.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-before-pg.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-closure-db-baseline.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-t07-resources.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-onboarding-resume.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-closure-resources.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s05-rows-before.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s03-fixtures.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-peerB-resume.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-secret-scan.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s05-before.sql",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-data-cutover-proof.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-operations-resume.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-intake-resume.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-merge-lifecycle.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-t07-capability.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s04-fixtures.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-data-pure.log",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-login.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-t08-correlation.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-driver.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-closure-secret-scan-final.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s03-before.sql",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s05-fixtures.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/processes.json",
+      "status": "EXPECTED_LAUNCHER_METADATA_CHANGE"
+    },
+    {
+      "path": ".local/s02.env",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-preservation-postgrant.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-closure-final-files.py",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-closure-last-admin-race.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-resources.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s3.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-login-handoff.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-onboarding-diagnostic.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-publish.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s05-ui-pagination.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-login-handoff.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-closure-secret-scan.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s03-drafts-before-full.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-final-visual.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-data-assignment-diagnostic.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s05.env",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s04.env",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-closure-t07-resources.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-closure-browser-boundaries.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s03-drafts-before.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-data-fixtures.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-db-baseline.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s03-dependency-audit.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-fixtures.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-data-fixture-diagnostic.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-data-cutover-cookie.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-private-baseline.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-closure-document-finalize.py",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-secret-scan.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-t07-run-attempt2.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/dependency-audit.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-login-handoff.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-closure-t07.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-closure-files-baseline.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-t07-capability.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-t07-run.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-closure-paging-loading.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-data-owned-baseline.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-closure-baseline.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-tenants-peer.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-baseline.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-t07-resources-attempt2.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-closure-runtime.log",
+      "status": "EXPECTED_LIVE_LOG_APPEND"
+    },
+    {
+      "path": ".local/lock-before-trust.lock",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-ui-invitation-negatives.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-root-audit-diagnostic.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-resources.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-closure-paging-loading-attempt2.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/m1-uat-baseline.ts",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s04-before.sql",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-lifecycle/58ddb279-8267-4d4c-a619-54754f0d3b7c.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-lifecycle/05a975f5-2521-48f5-aca2-00ddbfacecb2.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-data-worker-mail/d1490516-b852-488c-869b-e558c7c673ba.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-data-worker-mail/a54e43da-6426-4c89-afa0-ced41762278d.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/auth-001-data-worker-mail/fd9564e2-d234-4b20-b911-93d318a081e4.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792084643185-13fb8420-ae30-4f64-b0f9-d4fe5cb92449.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792125875863-6586c2ab-8902-442a-856b-c3de1dfedf3c.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792126527479-f3366e74-4e45-4e1a-bd87-c8b1588ae395.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792113900935-13846bbe-4603-45e5-af4b-efa14e0cf5b8.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792109423822-05618684-b16a-4fe9-8e95-97883d5d3000.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792113900907-295d7acf-ad34-496c-b461-c0d5f41e7ece.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792129086896-ad967b22-14f8-42a9-a293-be9f4560ffa2.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083864598-e15555e8-2e8e-46d5-a2be-5a89a3a38c22.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792129064716-2e4c124b-215e-443c-826c-c124a22054a9.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083601400-f599f079-88ab-4376-8659-be63c7472d7d.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792084643781-8bd1f1da-24e0-47c9-ab67-0ec1f41e7e56.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083601449-b59c95af-4369-4bae-acf2-fc3dc416b4d2.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792126528507-b749d7cc-b47e-4fb8-b6db-ee9da85b4aa2.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083790087-5817b3fd-5335-4937-a220-51b3a555b50d.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083989992-0a760ac7-b6ed-4796-82db-d47b5c39c2e7.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083789996-10aab8b9-53f0-4bc5-97ae-1a9392bfe26a.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083601427-8a5957b4-712d-4d9a-bffc-e4ed92961674.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792113900842-789cdb0c-102b-4625-8e21-432c10b4c859.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792128416649-2478e926-f470-4c30-b14a-04ee8a836b97.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083601418-a127aadc-c9df-4afc-839a-b7b9832e39c3.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792128020548-b8b66402-b4a1-45e0-b261-a597785284c8.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792113900888-fbd12ac9-af52-406f-a461-ec6550c27307.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083790041-51c51b56-7f62-4f3b-8d5c-62aeacf1b482.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792113900997-dad9022a-c688-4fe7-bebc-3706201b8f02.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792084643272-5ffe14b1-e262-47db-9829-db2e378fb7f5.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792084643146-fa445a9c-c0e0-4dd4-8257-952f7d8ce7e2.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083790005-69702ca0-6b4f-4f7f-89fa-dfeb446cb076.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792084643198-4c5236a0-99a7-486a-b0b9-f63d88b821cc.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792109423775-bc0288d9-4d31-406f-a39e-b3f0694a3f30.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083817225-43081d8f-4aa0-4857-ae74-22c554752f73.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083790052-185ee31a-eee7-4924-b165-deedd7472373.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792109423691-e46b3c6a-1626-4302-ac7f-76fd21fc221d.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792128021888-a6548f78-12ef-4e3a-8d63-0b16184e8362.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792128415420-7b005d70-e0ac-4ee1-b821-4a45f44b5921.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792131188947-fb824970-6031-4f9a-b361-dbf4210a7463.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792084654953-a72adb59-16df-49c9-ba00-b4f38c972432.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083790024-e5cfc155-9d61-49a8-94c6-8af41792c5a8.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083790097-511e7ca4-1c31-4dc0-8034-5de0f5b8bbe1.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792123045542-bf8743ed-e04c-4e77-a8c9-ba5265d73c32.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792084643134-4aba9787-7aa8-40c1-9009-e3de144bf274.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792113900881-bece0d6e-e8b6-4fb2-a62e-3f1c6fd91ca3.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792084643093-3546d4c7-3a95-4f8d-90cf-a672e03687ea.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792109423812-28237095-786b-405f-84d5-24112fbed337.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792128440878-59b65d0a-cf4d-4332-a271-2f51006a225c.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792084643165-0de9a621-c41d-4456-92cf-190efb5abc53.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792109423731-abec3c4a-b3b3-4ff6-b548-e62a47743071.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083601382-8a95d93b-18b4-4aa6-8f09-c729320fc297.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792128886494-f621f532-9d92-40f6-91b7-d02ae0fc52b5.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083601460-48be90f7-3ff1-43c0-b5d3-16a58b85e6a6.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083789948-0055b84e-571c-45fd-9226-ab852de7e32f.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792128440724-acb0e429-0fed-4666-9783-35a7555d2840.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792084286900-e06678b1-a268-4005-9612-51befa63f427.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792113900925-380fdef4-dd4a-458a-a651-0c721be4fe9b.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792128020817-3a9c7398-6591-4505-b912-404b53e42670.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792128440838-90f29684-5842-4c49-bac6-529309728d97.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792128415283-ccf4f572-9acc-4773-a0cd-135d3555a756.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792128440682-52210cf0-d34d-41ed-906e-f9287da79641.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792126527785-59151ca5-3aae-47cd-aa79-5602d00127e2.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792126526670-78209b34-d5de-4675-872a-2d3ed0bde9e9.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792084690037-84ef3879-6eca-45a4-99b8-3bbb0cd8426f.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792109423748-8c249d4e-02c5-4d89-af92-7435180a393f.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083601376-33d0b386-e204-43b5-a79d-be32d201b97a.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083806087-bbdb5f26-9552-4d38-9fd2-56dc8006373d.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792109423724-ba9bc204-22a4-4f8c-a037-3523887f15c4.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792084689425-fdb75fa0-8b59-4546-b95a-c4bbe3378380.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792083601340-e4a35dfd-6bd4-4092-a210-792cb7a33710.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792109423765-30d2a013-6920-4111-b9a5-8d008849a938.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792113900986-b6523f34-32c9-48ed-a7a9-8b702313afaf.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792084643261-57a72332-4e4b-4fa0-9022-786065b58a68.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s02-mail/1792131075377-1a612b7d-3558-4955-9852-61cf8d9af90f.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s05-mail/4d954214-5f9f-405e-9fca-a43bdf4afe46.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s05-mail/a72e9392-ecae-4d84-8932-0229ae5bc4b2.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s05-mail/2b1ec46e-e09d-4e8a-8e81-56ac792de05a.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s05-mail/a4e631ac-7fa7-4dca-8afd-644d8446d433.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s05-mail/5a009a0b-b1ac-4cae-903d-174d3443631d.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s05-mail/eb9543a6-e943-4cb4-aefb-c8875146b0be.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s05-mail/073b790f-7796-4252-a119-e2c4ca61c0e5.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s05-mail/9a0ca6da-d02b-44fb-bb6f-52c48ddba9b7.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s05-mail/735f1639-06a5-4e2b-9c5d-50185ca877ea.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s05-mail/0447c2aa-7886-4e64-ade1-f75fabe44a3a.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".local/s05-mail/6aea5235-791e-4f45-9d07-4abe6209fe23.json",
+      "status": "PASS"
+    },
+    {
+      "path": ".env",
+      "status": "PASS"
+    }
+  ],
+  "protectedFiles": [
+    {
+      "path": ".agents/ADDY-AGENT-SKILLS-LICENSE",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/references/accessibility-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/references/definition-of-done.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/references/observability-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/references/orchestration-patterns.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/references/performance-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/references/security-checklist.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/references/template-application.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/references/testing-patterns.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/api-and-interface-design/SKILL.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/code-review-and-quality/SKILL.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/code-simplification/SKILL.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/context-engineering/SKILL.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/debugging-and-error-recovery/SKILL.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/documentation-and-adrs/SKILL.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/frontend-ui-engineering/SKILL.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/incremental-implementation/SKILL.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/observability-and-instrumentation/SKILL.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/performance-optimization/SKILL.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/performance-optimization/references/optimization-patterns.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/planning-and-task-breakdown/SKILL.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/security-and-hardening/SKILL.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/security-and-hardening/references/hardening-patterns.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/source-driven-development/SKILL.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/spec-driven-development/SKILL.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/technote/SKILL.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/test-driven-development/SKILL.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".agents/skills/using-agent-skills/SKILL.md",
+      "status": "PASS"
+    },
+    {
+      "path": ".codex/agents/kit-explorer.toml",
+      "status": "PASS"
+    },
+    {
+      "path": ".codex/agents/kit-implementer.toml",
+      "status": "PASS"
+    },
+    {
+      "path": ".codex/agents/kit-reviewer.toml",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/LUCIDE-LICENSE.txt",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/README.md",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/approved-baseline.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/index.html",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/lucide-review-results.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/mockup.css",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/mockup.html",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/mockup.js",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/review-results.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/01-platform-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/01-platform-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/02-cms-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/02-cms-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/03-editor-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/03-editor-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/04-lead-detail-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/04-leads-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/04-leads-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/05-mobile-navigation.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/06-state-denied-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/06-state-empty-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/06-state-error-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/06-state-loading-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/07-editor-conflict-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/08-editor-320.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/lucide/01-platform-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/lucide/01-platform-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/lucide/02-cms-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/lucide/02-cms-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/lucide/03-editor-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/lucide/03-editor-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/lucide/04-leads-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-mockup/screenshots/lucide/04-leads-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/design/admin-ui-ux.md",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/assignment-exact-replay.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/assignment-proof-helper-repair.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/bounded-checks-attempt1.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/bounded-checks.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/fixture-setup-resume.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/fixture-setup.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/implementation-handoff.md",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/source-checks.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/api/worker-local-capture.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/cutover-checks.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/catalog-before-helper-repair.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/catalog-helper-repair.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/catalog-initial.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/catalog.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/cutover-preservation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/last-admin-race-reuse.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/owned-global-audit-diagnostic.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/preservation-before-global-audit-rule.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/data/preservation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/final-build-runtime.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/final-build-stop.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/final-file-preservation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/final-integration.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/final-source-checks.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/knownsecret-scan-final.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/runtime-after.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/runtime-before.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/runtime-cutover.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/runtime-id-contract-repair.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/runtime-user-id-sql-repair.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/secret-scan-final.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/secret-scan.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/security/core-review.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/security/final-review.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/security/final-test-ui-delta-review.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/security/forward-0014-review.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/security/frontend-test-review.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/security/review.md",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/security/runtime-repair-review.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/security/user-identifier-review.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/a2-password-only-leads.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/account-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/account-final-1024.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/account-final-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/account-final-320.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/account-final-390.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/account-final-768.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/account-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/account-settled-1024-bottom.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/account-settled-1024-top.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/account-settled-768-bottom.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/account-settled-768-top.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/assignment-diagnostic.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/assignment-diagnostic.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/captcha-invalid.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/captcha-valid-accepted.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/final-desktop-1440x1080.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/final-visual-result.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/intake-diagnostic-L1.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/intake-diagnostic.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/intake-operations-result.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/intake-operations-resume-result.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/invitation-negatives-result.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/invitation-resend-new-link-accepted.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/invitation-resend-old-link-denied.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/invitation-revoked-registration-denied.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/invitation-used-link-denied.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/invitation-wrong-actor-denied.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/lifecycle/Peer-A-denied.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/lifecycle/Peer-B-session-revoked.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/lifecycle/Peer-disabled-login-denied-empty.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/lifecycle/Recovery-old-password-continuation-denied-empty.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/lifecycle/Recovery-reset-success-cleared.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/lifecycle/Recovery-token-replay-denied-empty.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/lifecycle/final-result.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/lifecycle/password-login-continuation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/lifecycle/preparation.md",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/lifecycle/result.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/login-empty.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/login-result.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/members-A-owner-peer-resume.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/members-B-owner-peer-resume.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/new-B-public-page.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/new-no-factor-Peer-assigned.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/new-no-factor-recipient-settings.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/new-owner-publication.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/onboarding-accepted-resume.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/onboarding-diagnostic.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/onboarding-diagnostic.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/onboarding-owner-cms-resume.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/onboarding-owner-result.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/onboarding-owner-resume-result.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/onboarding-registration-empty.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/onboarding-unverified-denied-resume.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/onboarding-unverified.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/operations-resume-result.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/operations-sql-resume-result.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/owner-acceptedB.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/peer-B-accepted-resume.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/peer-B-ready-resume.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/platform-password-only.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/platform-private-denied.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/progress.md",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/publication-result.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/tenantB-created.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/tenants-peer-result.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/tenants-peer-resume-result.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/auth-001/ui/visual-recapture-result.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/effort-runtime-002.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/browser-boundaries.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/cursor-detail.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/file-preservation-final.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/file-preservation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/final-static.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/invitation-expired-denied.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/knownsecret-scan-final.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/knownsecret-scan.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/last-admin-race-denied.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/last-admin-race.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/paging-loading-attempt2.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/paging-loading.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/preservation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/race-revoked-access-denied.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/service-loading-ax.txt",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/service-loading.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/service-recovered-ax.txt",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/service-recovered.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/session-absolute-expired.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/session-relogin-private-restored.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/t07-accepted.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/t07-result.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/t07-unknown.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-closure/tenant-switch-cleared.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/final-integration.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/runtime-preflight.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/runtime-recovery.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/security/audit-attempt-sandbox.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/security/audit-network.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/security/exposure-snapshot.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/security/official-advisory-refresh.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/security/review.md",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/security/security-review.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/t09-runtime-fault.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/checkpoint-preservation-postgrant.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/checkpoint-preservation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/final-a2-review.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/final-preservation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/final-review-state.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/progress.md",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/secret-scan.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/source-hashes.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t02-forged-context-denied.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t02-multiAB-A.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t02-multiAB-B.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t02-multiAB.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t02-platform-editor-denied.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t02-platform-leads-denied.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t02-platform-private-denial.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t02-platform-read.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t03-grant-diagnostic.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t03-provision-proof.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t03-provision-staged.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t03-provision-success.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t03-registration-handoff.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t03-registration-handoff.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t07-accepted-attempt2.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t07-diagnostic.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t07-diagnostic.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t07-result-attempt2.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t07-result.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t07-unknown-attempt2.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t08-correlation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t08-current-a2.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t08-current-detail.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t08-tenant-cleared.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t09-loading-ax.txt",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t09-loading.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t09-loading.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t09-recovery-ax.txt",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/m1-uat/ui/t09-recovery.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01-api.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01-dependency-audit.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01-docker.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01-install-policy.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01-install-runtime.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01-launcher.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01-preservation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01-runtime.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01/cms-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01/cms-final-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01/cms-final-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01/cms-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01/cms-navigation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01/cms-observations.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01/component-states-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01/component-states-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01/component-states.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01/platform-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01/platform-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01/platform-observations.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01/public-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01/public-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s01/public-observations.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02-diagnostics.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/agent-runtime.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/check-results.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/combined-api-checks.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/dependency-audit.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/initial-checks.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/install.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/migration-final.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/migration.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/preflight.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/preservation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/runtime.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/secret-scan.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/drawer-focus-cause.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/drawer-keyboard-final.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/drawer-keyboard.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/drawer-opening-focus.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/editor-1024-initial.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/editor-1024.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/editor-1440-before-breadcrumb-repair.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/editor-1440-initial.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/editor-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/editor-320-initial.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/editor-320.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/editor-390-initial.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/editor-390.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/editor-768-initial.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/editor-768.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/final-observations.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/initial-observations.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/login-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/members-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/members-390.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/no-platform-role-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/preview-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/responsive-final.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/source-handoff.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s02/ui/wrong-tenant-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/agent-runtime.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/check-results.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/combined-api-checks.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/database-final.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/dependency-audit.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/diagnostics.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/draft-preservation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/initial-checks.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/install.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/preflight.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/preservation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/process-durability.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/resources-final.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/runtime-before.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/runtime.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/secret-scan.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ssr-http.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui-published-ssr.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/actual-flow.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/conflict-390.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/container-geometry.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/denied-390.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/editor-badges-390.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/editor-final-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/editor-final-390.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/empty-390.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/error-390.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/handoff.md",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/pending-draft-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/preflight.md",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/private-preview-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/public-service-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/public-service-390.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/reauth-required-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/representative-editor-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/representative-editor-390.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/representative-flow.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/site-settings-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/stale-confirmation-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s03/ui/unsaved-dialog-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/agent-runtime.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/check-results.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/combined-api-checks.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/database-final.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/dependency-audit.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/diagnostics.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/initial-checks.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/install.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/migration.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/pgcrypto-before.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/preflight.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/preservation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/public-http.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/retained-rows.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/review.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/runtime-before.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/runtime-final.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/s03-ssr-regression.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/schema-privilege-before.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/secret-scan.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui-fault-control.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-1024.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-320.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-768.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-a1-first-lead-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-a1-two-leads-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-a2-first-lead-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-detail-320.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-detail-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-empty-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-empty-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-final-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-first-flow-403-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-list-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-loading-recovered-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-menu-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-outage-recovered-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-outage-retry-focus.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-real-loading-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-real-outage-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-two-leads-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-wrong-tenant-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/cms-wrong-tenant-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/fault-baseline-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/final-email-validation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/geometry.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/implementation.md",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/public-1024.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/public-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/public-320.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/public-501-validation-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/public-768.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/public-accepted-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/public-challenge-mobile.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/public-challenge-required-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/public-consent-validation-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/public-contact-validation-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/public-email-accepted-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/public-final-email-validation.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s04/ui/public-form-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/agent-runtime.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/combined-api-checks-initial-failure.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/combined-api-checks-response-loss-fixture-failure.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/combined-api-checks.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/database-final.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/dependency-audit.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/diagnostics.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/final-checks.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/final-static.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/independent-review.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/initial-checks.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/lead-checks.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/migration.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/preflight.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/preservation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/public-http.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/retained-rows.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/retained-s03-ui-published-ssr.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/retained-s04-public-http.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/runtime-before.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/runtime-final.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/secret-scan.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/selected-regressions.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui-runtime-fault.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/count-cap.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/count-cap.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/cursor-sequence.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/daily-workflow-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/daily-workflow.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/denied.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/denied.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/dirty-navigation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/filtered-empty.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/final-desktop-1440x1080.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/final-detail-320.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/final-detail-390.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/final-filtered-empty.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/final-leads-1024.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/final-leads-768.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/final-list-320.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/final-list-390.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/final-state.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/get-loading.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/get-outage.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/get-recovery.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/implementation.md",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/lead-conflict.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/lead-conflict.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/leads-1440-before-textarea.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/left-filter.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/recipient-settings.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/responsive-geometry.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/server-query.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/settings-1024.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/settings-1440.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/settings-320.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/settings-390.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/settings-768.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/settings-conflict.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/settings-conflict.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/settings-unknown-reauth.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/settings-unknown.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/suspended-readonly.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/suspended-readonly.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/t03-a1-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/t03-a1-initial-unmatched-viewport.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/t03-a1-mobile-detail.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/t03-a1-mobile-list.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/t03-a2-desktop-transition-crop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/t03-a2-desktop.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/t03-a2-mobile-detail.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/t03-desktop-geometry.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/t03-list-invalid-input.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/t03-mobile-geometry.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/t03-public-accepted.jpg",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/t03-representative.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/textarea-final-geometry.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/ui/unknown-reauth.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/worker-checks.json",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/evidence/s05/worker-cli.json",
+      "status": "PASS"
+    }
+  ],
+  "limits": "Readonly before/after hashes of pre-M2 rows projected onto original columns. New additive M2 rows/columns are separate. Only expired volatile-state removals permitted. Launcher metadata intentionally replaced; original live launcher log prefix hash preserved with shutdown append. No backup/restore claim; no raw rows or credentials emitted."
+}

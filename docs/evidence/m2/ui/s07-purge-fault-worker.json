@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "runId": "9b4aeade-d69e-4655-b293-6b349d2233ac",
+  "tenantId": "88cfcbbb-8425-4647-aa06-428cef3c5197",
+  "assetId": "6c3a593c-c763-4942-a27e-5d18be6d0fa1",
+  "worker": {
+    "claimed": 1,
+    "completed": 0,
+    "failed": 1,
+    "skipped": 0
+  },
+  "outcome": {
+    "status": "failed",
+    "failure_code": "storage_failure",
+    "state": "withdrawn"
+  },
+  "scope": "Only new owned purge job attempt counter; real closed-loopback storage fault adapter. Existing storage/container/config unchanged."
+}

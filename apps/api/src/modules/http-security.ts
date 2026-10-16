@@ -46,7 +46,10 @@ export function apiSecurity(request: IncomingMessage, response: ServerResponse, 
       response.statusCode = 204; response.end(); return;
     }
     // Better Auth retains its own CSRF checks. This also rejects unsafe missing-Origin requests early.
-    if (isMutation(request.method ?? '')) assertMutationRequest(request.headers);
+    const mediaUpload=request.method==='POST' && /^\/api\/tenants\/[a-f0-9-]{36}\/media$/.test(originalUrl) &&
+      typeof request.headers['content-type']==='string' && /^multipart\/form-data;\s*boundary=[A-Za-z0-9'()+_,./:=?-]{1,200}$/i.test(request.headers['content-type']);
+    if (isMutation(request.method ?? '') && !mediaUpload) assertMutationRequest(request.headers);
+    if(mediaUpload && origin!==ADMIN_ORIGIN) throw new ForbiddenException();
     next();
   } catch (error) {
     const body = safeError(error);

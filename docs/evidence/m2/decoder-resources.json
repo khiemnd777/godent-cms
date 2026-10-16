@@ -1,0 +1,41 @@
+{
+  "originalObservedAt": "2026-10-16T07:30:28.283Z",
+  "result": {
+    "status": "PASS",
+    "scope": "actual local cgroup memory/CPU/pids/network/read-only and actual process kill, new owned containers only",
+    "image": "sha256:7b9130222040cc07f8e7ca13e3eb104e45b4e0dc3888cc81e565dbd816531dd6",
+    "results": [
+      {
+        "mode": "memory",
+        "exit": 137,
+        "containerExit": 137,
+        "oomKilled": true,
+        "elapsedMs": 346,
+        "memoryBytes": 402653184,
+        "memorySwapBytes": 402653184,
+        "nanoCpus": 1000000000,
+        "pids": 64,
+        "network": "none",
+        "readOnly": true,
+        "user": "10000:10000",
+        "mounts": 0
+      },
+      {
+        "mode": "deadline",
+        "exit": 137,
+        "containerExit": 137,
+        "oomKilled": false,
+        "elapsedMs": 2097,
+        "memoryBytes": 402653184,
+        "memorySwapBytes": 402653184,
+        "nanoCpus": 1000000000,
+        "pids": 64,
+        "network": "none",
+        "readOnly": true,
+        "user": "10000:10000",
+        "mounts": 0
+      }
+    ]
+  },
+  "source": "Original current-thread tool result; no rerun inferred."
+}

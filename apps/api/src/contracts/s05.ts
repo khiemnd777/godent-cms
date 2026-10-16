@@ -1,4 +1,5 @@
 import type { LeadDetail as S04Detail, LeadListItem as S04Item, PreferredChannel } from './s04';
+import type { RetentionNotice, RetentionTiming } from './s06';
 
 /** S05 canonical contract. Assignment records responsibility; all tenant administrators retain access. */
 export const S05_LIMITS = { text: 2000, searchMin: 2, searchMax: 80, pageSize: 20, maxPageSize: 50, countCap: 10000,
@@ -11,15 +12,17 @@ export interface LeadCapabilities { canWrite: boolean; reason: 'tenant_suspended
 export interface LeadListItem extends Omit<S04Item, 'status'> {
   code: string; version: number; status: LeadStatus; assignee: LeadAssignee | null;
   interest: { serviceSlug: string; serviceTitle: string } | null;
+  expiresAt: string; normalExpiresAt: string; extensionExpiresAt: string | null; retentionRevision: number;
 }
 export type NotificationState = 'pending' | 'processing' | 'blocked' | 'captured' | 'failed' | 'cancelled';
 export interface LeadNotification { transport: 'local_capture'; status: NotificationState; blockedReason: string | null }
-export interface LeadDetail extends Omit<S04Detail, 'status' | 'interest'>, LeadListItem {
+export interface LeadDetail extends Omit<S04Detail, 'status' | 'interest'>, LeadListItem, RetentionTiming {
   closedAt: string | null; closureReason: ClosureReason | null; hasContactAttempt: boolean; hasTwoWayContact: boolean;
   capabilities: LeadCapabilities; notification: LeadNotification;
+  retentionNotice: RetentionNotice;
 }
-export interface LeadPage { items: LeadListItem[]; nextCursor: string | null }
-export interface LeadCount { count: number; capped: boolean; newCount: number; newCapped: boolean }
+export interface LeadPage extends RetentionTiming { items: LeadListItem[]; nextCursor: string | null }
+export interface LeadCount extends RetentionTiming { count: number; capped: boolean; newCount: number; newCapped: boolean }
 export interface LeadQuery { q?: string; status?: LeadStatus; assignee?: 'me' | 'unassigned' | string; from?: string; to?: string; pageSize: number }
 interface CommandBase { operationId: string; expectedVersion: number }
 export type LeadCommand = CommandBase & (
@@ -36,9 +39,10 @@ export type LeadHistoryEvent = HistoryBase & (
   { kind: 'note'; payload: { text: string } } |
   { kind: 'contact'; payload: { channel: PreferredChannel; outcome: ContactOutcome; summary: string; status: LeadStatus } } |
   { kind: 'close'; payload: { reason: ClosureReason; status: 'closed' } } |
-  { kind: 'reopen'; payload: { reason: string; status: LeadStatus } }
+  { kind: 'reopen'; payload: { reason: string; status: LeadStatus } } |
+  { kind: 'retention_extended'; payload: { reason: string; before: string; expiresAt: string } }
 );
-export interface LeadHistoryPage { items: LeadHistoryEvent[]; nextCursor: string | null }
+export interface LeadHistoryPage extends RetentionTiming { items: LeadHistoryEvent[]; nextCursor: string | null }
 export interface LeadAssigneeOption { userId: string; name: string; email: string }
 export interface LeadAssigneePage { items: LeadAssigneeOption[]; nextCursor: string | null }
 export interface RecipientSettings {

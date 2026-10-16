@@ -1,0 +1,18 @@
+{
+  "phase": "complete",
+  "runId": "9b4aeade-d69e-4655-b293-6b349d2233ac",
+  "checks": {
+    "expiry": {
+      "status": "PASS",
+      "dirtyModalClosed": true,
+      "selectedRowRemoved": true,
+      "lateHistory": "delivered-and-not-applied"
+    },
+    "enterRecovery": {
+      "status": "PASS",
+      "automaticRecoveryBeforeEnter": false,
+      "newRequestAfterEnter": true
+    }
+  },
+  "errors": []
+}

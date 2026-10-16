@@ -18,6 +18,12 @@ import { IntakeService } from './modules/intake.service';
 import { createIntakeModule } from './modules/intake.module';
 import { LeadsService } from './modules/leads.service';
 import { createLeadsModule } from './modules/leads.module';
+import { RetentionService } from './modules/retention.service';
+import { createRetentionModule } from './modules/retention.module';
+import { MediaService } from './modules/media.service';
+import { createMediaModule } from './modules/media.module';
+import { MediaStorage, readMediaStorageConfig } from './media/storage';
+import { MediaSigner } from './media/signing';
 
 class EchoQuery {
   @IsString()
@@ -47,9 +53,12 @@ export async function createApp() {
   readConfig();
   const database = createS02Database();
   const identity = createS02Auth(database);
+  const leads = new LeadsService(database,identity);
+  const mediaStorage = new MediaStorage(readMediaStorageConfig());
   @Module({ controllers: [DiagnosticsController], imports: [createDomainModule(new DomainService(database, identity)),
-    createPublicationModule(new PublicationServiceOperations(database, identity)),createIntakeModule(new IntakeService(database,identity)),createLeadsModule(new LeadsService(database,identity))],
-    providers: [{ provide: 'DATABASE_LIFECYCLE', useValue: { onApplicationShutdown: () => database.close() } }] })
+    createPublicationModule(new PublicationServiceOperations(database, identity)),createIntakeModule(new IntakeService(database,identity)),createLeadsModule(leads),
+    createRetentionModule(new RetentionService(database,identity,leads)),createMediaModule(new MediaService(database,identity,mediaStorage,new MediaSigner(process.env.S07_MEDIA_SIGNING_SECRET??'')))],
+    providers: [{ provide: 'DATABASE_LIFECYCLE', useValue: { onApplicationShutdown: async () => {mediaStorage.close();await database.close();} } }] })
   class AppModule {}
   const app = await NestFactory.create<NestExpressApplication>(AppModule, { logger: false, bodyParser: false });
   const express = app.getHttpAdapter().getInstance();

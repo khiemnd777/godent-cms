@@ -11,7 +11,10 @@ export class LeadFailure extends HttpException {
   constructor(readonly code: S05ErrorCode) { super({ code }, code === 'INVALID_INPUT' ? 400 : code === 'REAUTH_REQUIRED' ? 403 : code === 'LEAD_UNAVAILABLE' ? 404 : 409); }
 }
 function parsed<T>(action: () => T): T { try { return action(); } catch { throw new LeadFailure('INVALID_INPUT'); } }
+// Bun.SQL returns Date values. String(Date) drops fractional seconds.
+function isoTimestamp(value: unknown): string { return value instanceof Date ? value.toISOString() : new Date(String(value)).toISOString(); }
 const columns = sql`l.id,l.name,'YC-'||lpad(l.code_number::text,greatest(6,length(l.code_number::text)),'0') AS code,l.version,l.status,
+  l.expires_at AS "expiresAt",l.normal_expires_at AS "normalExpiresAt",l.extension_expires_at AS "extensionExpiresAt",l.retention_revision AS "retentionRevision",
   gcms_s05.assignee(l.tenant_id,l.assignee_user_id) AS assignee,
   CASE WHEN l.phone IS NULL THEN NULL ELSE repeat('•',greatest(length(l.phone)-3,0))||right(l.phone,3) END AS "phoneMasked",
   CASE WHEN l.email IS NULL THEN NULL ELSE left(l.email,1)||'***@'||split_part(l.email,'@',2) END AS "emailMasked",
@@ -22,7 +25,8 @@ const columns = sql`l.id,l.name,'YC-'||lpad(l.code_number::text,greatest(6,lengt
   CASE WHEN l.interest_service_id IS NULL THEN NULL ELSE jsonb_build_object('serviceSlug',l.interest_service_slug,'serviceTitle',l.interest_service_title) END AS interest`;
 function item(row: Record<string, unknown>): LeadListItem {
   const { cursorTime, ...value } = row; void cursorTime;
-  return { ...value, createdAt: new Date(String(value.createdAt)).toISOString() } as unknown as LeadListItem;
+  return { ...value, createdAt: isoTimestamp(value.createdAt), expiresAt: isoTimestamp(value.expiresAt),
+    normalExpiresAt: isoTimestamp(value.normalExpiresAt), extensionExpiresAt: value.extensionExpiresAt ? isoTimestamp(value.extensionExpiresAt) : null } as unknown as LeadListItem;
 }
 function filters(tenant: string, q: LeadQuery, actor: SessionActor) {
   const assignee = q.assignee === 'me' ? actor.userId : q.assignee;
@@ -47,20 +51,24 @@ export class LeadsService {
     const context = { tenant: tenantId, purpose: 'leads', query: q, ...(q.assignee === 'me' ? { actorUserId: actor.userId } : {}) };
     const cursor = parsed(() => decodeS05Cursor((input as Record<string, unknown>).cursor, context));
     return this.db.withLeadTenant(actor, tenantId, async (tx, fresh) => {
+      const timing = (await tx.execute(sql`SELECT clock_timestamp() AS stamp,min(l.expires_at) AS deadline FROM gcms_s04.lead l WHERE ${filters(tenantId, q, fresh)}`))[0];
       const rows = await tx.execute(sql`SELECT ${columns} FROM gcms_s04.lead l WHERE ${filters(tenantId, q, fresh)}
         ${cursor ? sql`AND (l.created_at,l.id)<(${cursor.createdAt}::timestamptz,${cursor.id})` : sql``}
         ORDER BY l.created_at DESC,l.id DESC LIMIT ${q.pageSize + 1}`);
       const selected = rows.slice(0, q.pageSize), last = selected.at(-1);
-      return { items: selected.map(row => item(row)), nextCursor: rows.length > q.pageSize && last ? encodeS05Cursor(context, { createdAt: String(last.cursorTime), id: String(last.id) }) : null };
+      return { items: selected.map(row => item(row)), nextCursor: rows.length > q.pageSize && last ? encodeS05Cursor(context, { createdAt: String(last.cursorTime), id: String(last.id) }) : null,
+        serverTime: isoTimestamp(timing.stamp), validUntil: timing.deadline ? isoTimestamp(timing.deadline) : null };
     });
   }
   async count(request: PrivateRequest, tenant: string, input: unknown): Promise<LeadCount> {
     const tenantId = parseIdentifier(tenant), q = parsed(() => normalizeLeadQuery(input, true)), actor = await this.actor(request);
     return this.db.withLeadTenant(actor, tenantId, async (tx, fresh) => {
+      const timing = (await tx.execute(sql`SELECT clock_timestamp() AS stamp,min(l.expires_at) AS deadline FROM gcms_s04.lead l WHERE (${filters(tenantId, q, fresh)}) OR (l.tenant_id=${tenantId} AND l.status='new' AND l.expires_at>clock_timestamp())`))[0];
       const rows = await tx.execute(sql`SELECT (SELECT count(*)::integer FROM (SELECT 1 FROM gcms_s04.lead l WHERE ${filters(tenantId, q, fresh)} LIMIT ${S05_LIMITS.countCap + 1}) limited) AS total,
         (SELECT count(*)::integer FROM (SELECT 1 FROM gcms_s04.lead l WHERE l.tenant_id=${tenantId} AND l.expires_at>clock_timestamp() AND l.status='new' LIMIT ${S05_LIMITS.countCap + 1}) new_rows) AS "newTotal"`);
       const total = Number(rows[0].total), newTotal = Number(rows[0].newTotal);
-      return { count: Math.min(total, S05_LIMITS.countCap), capped: total > S05_LIMITS.countCap, newCount: Math.min(newTotal, S05_LIMITS.countCap), newCapped: newTotal > S05_LIMITS.countCap };
+      return { count: Math.min(total, S05_LIMITS.countCap), capped: total > S05_LIMITS.countCap, newCount: Math.min(newTotal, S05_LIMITS.countCap), newCapped: newTotal > S05_LIMITS.countCap,
+        serverTime: isoTimestamp(timing.stamp), validUntil: timing.deadline ? isoTimestamp(timing.deadline) : null };
     });
   }
   private async get(tx: S02Transaction, tenant: string, id: string): Promise<LeadDetail> {
@@ -70,10 +78,12 @@ export class LeadsService {
       l.has_contact_attempt AS "hasContactAttempt",l.has_two_way_contact AS "hasTwoWayContact",
       jsonb_build_object('canWrite',t.status='active','reason',CASE WHEN t.status='suspended' THEN 'tenant_suspended' END) AS capabilities,
       gcms_s05.lead_notification(l.tenant_id,l.id) AS notification
+      ,gcms_s06.notice_state(l.tenant_id,l.id) AS "retentionNotice",clock_timestamp() AS "serverTime"
       FROM gcms_s04.lead l JOIN gcms_s02.tenant t ON t.id=l.tenant_id WHERE l.tenant_id=${tenant} AND l.id=${id} AND l.expires_at>clock_timestamp()`);
     if (!rows[0]) throw new LeadFailure('LEAD_UNAVAILABLE'); const row = rows[0];
-    return { ...item(row), lastActivityAt: new Date(String(row.lastActivityAt)).toISOString(), expiresAt: new Date(String(row.expiresAt)).toISOString(),
-      closedAt: row.closedAt ? new Date(String(row.closedAt)).toISOString() : null } as LeadDetail;
+    return { ...item(row), lastActivityAt: isoTimestamp(row.lastActivityAt), expiresAt: isoTimestamp(row.expiresAt),
+      closedAt: row.closedAt ? isoTimestamp(row.closedAt) : null,
+      serverTime: isoTimestamp(row.serverTime), validUntil: isoTimestamp(row.expiresAt) } as LeadDetail;
   }
   async detail(request: PrivateRequest, tenant: string, id: string): Promise<LeadDetail> {
     const tenantId = parseIdentifier(tenant), leadId = parseIdentifier(id), actor = await this.actor(request);
@@ -100,13 +110,14 @@ export class LeadsService {
     if (Object.keys(input).some(k => !['cursor', 'pageSize'].includes(k))) throw new BadRequestException();
     const context = { tenant: tenantId, purpose: 'history', lead: leadId, pageSize: size }, cursor = parsed(() => decodeS05Cursor(input.cursor, context)), actor = await this.actor(request);
     return this.db.withLeadTenant(actor, tenantId, async tx => {
-      await this.get(tx, tenantId, leadId);
+      const lead = await this.get(tx, tenantId, leadId);
       const rows = await tx.execute(sql`SELECT id,version,kind,payload,created_at AS "createdAt",to_char(created_at AT TIME ZONE 'UTC','YYYY-MM-DD"T"HH24:MI:SS.US"Z"') AS "cursorTime",
         jsonb_build_object('userId',actor_id,'name',actor_name) AS actor FROM gcms_s05.lead_event WHERE tenant_id=${tenantId} AND lead_id=${leadId}
         ${cursor ? sql`AND (created_at,id)<(${cursor.createdAt}::timestamptz,${cursor.id})` : sql``} ORDER BY created_at DESC,id DESC LIMIT ${size + 1}`);
       const selected = rows.slice(0, size), last = selected.at(-1);
-      return { items: selected.map(row => { const { cursorTime, ...value } = row; void cursorTime; return { ...value, createdAt: new Date(String(row.createdAt)).toISOString() }; }),
-        nextCursor: rows.length > size && last ? encodeS05Cursor(context, { createdAt: String(last.cursorTime), id: String(last.id) }) : null } as LeadHistoryPage;
+      return { items: selected.map(row => { const { cursorTime, ...value } = row; void cursorTime; return { ...value, createdAt: isoTimestamp(row.createdAt) }; }),
+        nextCursor: rows.length > size && last ? encodeS05Cursor(context, { createdAt: String(last.cursorTime), id: String(last.id) }) : null,
+        serverTime: lead.serverTime, validUntil: lead.expiresAt } as LeadHistoryPage;
     });
   }
   async assignees(request: PrivateRequest, tenant: string, input: Record<string, unknown>): Promise<LeadAssigneePage> {

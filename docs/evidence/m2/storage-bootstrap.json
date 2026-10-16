@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "bucket": "gcms-m2-media-582cd905-710d-484f-8549-12b34ed801bd",
+  "existingContainerPreserved": true,
+  "existingStaticConfigPreserved": true,
+  "newScopedIdentity": true,
+  "ownObjectReadWrite": true,
+  "unscopedBucketEnumerationDenied": true,
+  "crossBucketRequestDenied": true,
+  "controlObjectCreated": false,
+  "controlWriteLimit": "Existing local volume capacity exhausted; no old container/config/capacity changed.",
+  "unsignedReadDenied": true,
+  "source": "https://github.com/seaweedfs/seaweedfs/blob/4.48/weed/shell/command_s3_configure.go",
+  "scope": "New M2 bucket and dynamic identity only; original identity remains usable."
+}

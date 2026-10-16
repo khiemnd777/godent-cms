@@ -59,11 +59,19 @@ export function richTextPlain(document: RichTextDocument): string {
     block.children.map(item => item.text).join('')).join('\n');
 }
 export function parseServiceInput(input: unknown): ServiceContent {
-  const value = exactObject(input, ['slug', 'title', 'summary', 'body', 'seo']);
+  const value = exactObject(input, ['slug', 'title', 'summary', 'body', 'seo', 'coverImage']);
   const seo = exactObject(value.seo, ['title', 'description']);
+  let coverImage: ServiceContent['coverImage'];
+  if (value.coverImage !== undefined && value.coverImage !== null) {
+    const ref = exactObject(value.coverImage, ['assetId', 'revision', 'alt']);
+    if (typeof ref.assetId !== 'string' || !/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(ref.assetId) ||
+      !Number.isSafeInteger(ref.revision) || Number(ref.revision) < 1 || Number(ref.revision) >= 2147483647) throw new TypeError('Invalid image reference');
+    coverImage = { assetId: ref.assetId, revision: Number(ref.revision), alt: boundedText(ref.alt, 500, true).normalize('NFC').trim() };
+  } else coverImage = value.coverImage;
   return { slug: parseSlug(value.slug), title: boundedText(value.title, S03_LIMITS.title, true).trim(),
     summary: boundedText(value.summary, S03_LIMITS.summary), body: parseRichText(value.body),
-    seo: { title: boundedText(seo.title, S03_LIMITS.seoTitle), description: boundedText(seo.description, S03_LIMITS.seoDescription) } };
+    seo: { title: boundedText(seo.title, S03_LIMITS.seoTitle), description: boundedText(seo.description, S03_LIMITS.seoDescription) },
+    ...(coverImage === undefined ? {} : { coverImage }) };
 }
 export function canonicalServiceUrl(tenantSlug: string, serviceSlug: string): string {
   return `${PUBLIC_SITE_ORIGIN}/${parseSlug(tenantSlug)}/dich-vu/${parseSlug(serviceSlug)}`;

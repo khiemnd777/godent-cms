@@ -1,0 +1,40 @@
+{
+  "recordedAt": "2026-10-16T07:40:11.794Z",
+  "slice": "s06",
+  "status": "PASS",
+  "suites": [
+    {
+      "file": "s06-input.test.ts",
+      "exitCode": 0,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 18
+    },
+    {
+      "file": "s06-capture.test.ts",
+      "exitCode": 0,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 9
+    },
+    {
+      "file": "s06-service.test.ts",
+      "exitCode": 0,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 19
+    },
+    {
+      "file": "s06-retention-integration.test.ts",
+      "exitCode": 0,
+      "passed": 12,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 236
+    }
+  ],
+  "limits": "New owned local synthetic unit/API/PostgreSQL/storage/worker proof. Browser, human acceptance and production are separate."
+}

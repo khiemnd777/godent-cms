@@ -10,10 +10,13 @@ export async function loadRuntimeEnvironment() {
   const intakeConfig = Object.fromEntries((await readFile(resolve(process.cwd(),'.local/s04.env'),'utf8')).trim().split('\n').map(line=>{
     const index=line.indexOf('=');return [line.slice(0,index),line.slice(index+1)];
   }));
-  return selectRuntimeEnvironment(privateConfig, process.env, intakeConfig);
+  let mediaConfig:Record<string,string>|undefined;
+  try {mediaConfig=Object.fromEntries((await readFile(resolve(process.cwd(),'.local/m2.env'),'utf8')).trim().split('\n').map(line=>{const at=line.indexOf('=');return[line.slice(0,at),line.slice(at+1)];}));}
+  catch(error) {if(!(error&&typeof error==='object'&&'code'in error&&error.code==='ENOENT')) throw error;}
+  return selectRuntimeEnvironment(privateConfig, process.env, intakeConfig,mediaConfig);
 }
 
-export function selectRuntimeEnvironment(privateConfig: Record<string, string>, source: Record<string, string | undefined>,intakeConfig?:Record<string,string>) {
+export function selectRuntimeEnvironment(privateConfig: Record<string, string>, source: Record<string, string | undefined>,intakeConfig?:Record<string,string>,mediaConfig?:Record<string,string>) {
   const common: Record<string, string> = { NEXT_TELEMETRY_DISABLED: '1' };
   for (const name of ['PATH', 'HOME', 'TMPDIR', 'NODE_ENV']) if (source[name]) common[name] = source[name]!;
   const api = { ...common };
@@ -31,5 +34,8 @@ export function selectRuntimeEnvironment(privateConfig: Record<string, string>, 
     api[name] = source[name]!;
   }
   api.DATABASE_URL = api.S02_TENANT_DATABASE_URL;
+  if(mediaConfig) for(const name of ['S07_MEDIA_BUCKET','S07_MEDIA_SIGNING_SECRET','S07_STORAGE_ACCESS_KEY_ID','S07_STORAGE_SECRET_ACCESS_KEY']) {
+    if(!mediaConfig[name]) throw new Error('Incomplete M2 media configuration');api[name]=mediaConfig[name];
+  }
   return { api, web: { ...common } };
 }

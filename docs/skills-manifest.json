@@ -965,7 +965,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "3cf5c8c0f0497200f5fc11d514aca053abeda97de708f69c8d7c1453d5f77480",
+      "sha256": "6c420e86bfd506fdee020534b46f222d39ccc22ef67a520e029a181e81eece94",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1059,7 +1059,7 @@
           {
             "task": "docs/tasks/GCMS-S03-001.md",
             "previous_sha256": "0df7392f6057d041764249ab602461af1cef4cfbbb6a61ea6927508810dc4ded",
-            "reason": "Record direct human Nghi\u1ec7m thu S03 acceptance on 2026-10-16; preserve historical technical proof, audit FAIL/local deferral, NOT_RUN limits and no S04/Git/deploy authority"
+            "reason": "Record direct human Nghiệm thu S03 acceptance on 2026-10-16; preserve historical technical proof, audit FAIL/local deferral, NOT_RUN limits and no S04/Git/deploy authority"
           },
           {
             "task": "docs/tasks/GCMS-S04-001.md",
@@ -1074,7 +1074,7 @@
           {
             "task": "docs/tasks/GCMS-S04-001.md",
             "previous_sha256": "9405b2d871ff984f6f984f70816be72aca90816a8f82fb593a2f9fb7e62411ab",
-            "reason": "Record direct human Nghi\u1ec7m thu S04. acceptance on 2026-10-16; preserve historical technical results, browser NOT_RUN/audit FAIL limits and no S05/Git/deploy authority"
+            "reason": "Record direct human Nghiệm thu S04. acceptance on 2026-10-16; preserve historical technical results, browser NOT_RUN/audit FAIL limits and no S05/Git/deploy authority"
           },
           {
             "task": "docs/tasks/GCMS-S05-001.md",
@@ -1168,7 +1168,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "5ebea9320652f11833ce3b0de017139dde9c89d1021447245f71ff97890c98a9",
+      "sha256": "1fcb6543ce49a72e4b4758494fd4c48f8a11dd244bf512b744bf83807ae5ac33",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1247,7 +1247,7 @@
           {
             "task": "docs/tasks/GCMS-S03-001.md",
             "previous_sha256": "b29e2336089314b5a10b90eb0ec4df55116469eb451511b87ce0a068642c4295",
-            "reason": "Record direct human Nghi\u1ec7m thu S03 acceptance on 2026-10-16; preserve historical technical proof, audit FAIL/local deferral, NOT_RUN limits and no S04/Git/deploy authority"
+            "reason": "Record direct human Nghiệm thu S03 acceptance on 2026-10-16; preserve historical technical proof, audit FAIL/local deferral, NOT_RUN limits and no S04/Git/deploy authority"
           },
           {
             "task": "docs/tasks/GCMS-S04-001.md",
@@ -1262,7 +1262,7 @@
           {
             "task": "docs/tasks/GCMS-S04-001.md",
             "previous_sha256": "dec983595a33533e89a47b0ef0ba03a1d164d91e491e46c85ccace621d452c55",
-            "reason": "Record direct human Nghi\u1ec7m thu S04. acceptance on 2026-10-16; preserve historical technical results, browser NOT_RUN/audit FAIL limits and no S05/Git/deploy authority"
+            "reason": "Record direct human Nghiệm thu S04. acceptance on 2026-10-16; preserve historical technical results, browser NOT_RUN/audit FAIL limits and no S05/Git/deploy authority"
           },
           {
             "task": "docs/tasks/GCMS-S05-001.md",
@@ -1559,7 +1559,7 @@
     {
       "task": "GCMS-DELIVERY-001 v0.1",
       "record": "docs/tasks/GCMS-DELIVERY-001.md",
-      "authority": "Direct human \u201cDuy\u1ec7t v\u00e0 l\u01b0u quy tr\u00ecnh tri\u1ec3n khai\u201d approving the preceding staged-delivery workflow proposal",
+      "authority": "Direct human “Duyệt và lưu quy trình triển khai” approving the preceding staged-delivery workflow proposal",
       "scope": "Project delivery workflow/task, entrypoint/current records/provenance and static checks only; no application package, matrix/mockup/generic Kit change or Git delivery",
       "maintained_paths": [
         "AGENTS.md"
@@ -1568,7 +1568,7 @@
     {
       "task": "GCMS-MASTER-PLAN-001 v0.2",
       "record": "docs/tasks/GCMS-MASTER-PLAN-001.md",
-      "authority": "Direct human \u201cDuy\u1ec7t Approve GCMS-MASTER-PLAN-001\u201d on 2026-10-15 Asia/Ho_Chi_Minh, desktop-verified thread01a13e59-fa91-7cb1-a156-5361bb21ca58; accepts saved v0.2 planning baseline",
+      "authority": "Direct human “Duyệt Approve GCMS-MASTER-PLAN-001” on 2026-10-15 Asia/Ho_Chi_Minh, desktop-verified thread01a13e59-fa91-7cb1-a156-5361bb21ca58; accepts saved v0.2 planning baseline",
       "scope": "Approval bookkeeping/current records/provenance and static checks only; desktop accountable, sole bounded writer; no implementation package, detailed S01 saved plan, new agents or Git delivery",
       "maintained_paths": [
         "AGENTS.md"
@@ -1577,7 +1577,7 @@
     {
       "task": "GCMS-S01-001 v0.1",
       "record": "docs/tasks/GCMS-S01-001.md",
-      "authority": "Direct human \u201cDuy\u1ec7t S01 v0.1. L\u01b0u k\u1ebf ho\u1ea1ch r\u1ed3i tri\u1ec3n khai trong ph\u1ea1m vi local \u0111\u00e3 \u0111\u1ec1 xu\u1ea5t, g\u1ed3m c\u00e0i dependencies, ch\u1ea1y Docker, t\u1ea1o t\u00e0i nguy\u00ean th\u1eed k\u1ef9 thu\u1eadt v\u00e0 ki\u1ec3m ch\u1ee9ng. Ch\u01b0a commit/push ho\u1eb7c deploy.\u201d on 2026-10-15 Asia/Ho_Chi_Minh, desktop thread `01a1402c-3c81-7933-9927-d974f70c9fbc`.",
+      "authority": "Direct human “Duyệt S01 v0.1. Lưu kế hoạch rồi triển khai trong phạm vi local đã đề xuất, gồm cài dependencies, chạy Docker, tạo tài nguyên thử kỹ thuật và kiểm chứng. Chưa commit/push hoặc deploy.” on 2026-10-15 Asia/Ho_Chi_Minh, desktop thread `01a1402c-3c81-7933-9927-d974f70c9fbc`.",
       "scope": "Approved S01 local scaffold/dependencies/Docker/technical trials/build/tests/browser, routine repairs and current evidence/docs; no commit/push/deploy/global or common-policy change",
       "maintained_paths": [
         "AGENTS.md",
@@ -1588,7 +1588,7 @@
     {
       "task": "GCMS-S02-001 v0.1",
       "record": "docs/tasks/GCMS-S02-001.md",
-      "authority": "Duy\u1ec7t S02 v0.1 v\u00e0 D01\u2013D10. L\u01b0u k\u1ebf ho\u1ea1ch, c\u1eadp nh\u1eadt nghi\u1ec7m thu S01 r\u1ed3i tri\u1ec3n khai S02a/S02b trong ph\u1ea1m vi local \u0111\u00e3 \u0111\u1ec1 xu\u1ea5t, g\u1ed3m migrations, fixtures v\u00e0 ki\u1ec3m ch\u1ee9ng. Ch\u01b0a commit/push ho\u1eb7c deploy. Direct human source verified by desktop on 2026-10-15 Asia/Ho_Chi_Minh, thread 01a1402c-3c81-7933-9927-d974f70c9fbc.",
+      "authority": "Duyệt S02 v0.1 và D01–D10. Lưu kế hoạch, cập nhật nghiệm thu S01 rồi triển khai S02a/S02b trong phạm vi local đã đề xuất, gồm migrations, fixtures và kiểm chứng. Chưa commit/push hoặc deploy. Direct human source verified by desktop on 2026-10-15 Asia/Ho_Chi_Minh, thread 01a1402c-3c81-7933-9927-d974f70c9fbc.",
       "scope": "Save S02 approved plan/D01-D10, S01 acceptance and current pointers/provenance before local implementation; no Git/deploy/global/paid/real data or destruction",
       "maintained_paths": [
         "AGENTS.md",
@@ -1628,7 +1628,7 @@
     {
       "task": "GCMS-S03-001 human acceptance bookkeeping",
       "record": "docs/tasks/GCMS-S03-001.md",
-      "authority": "Khi\u00eam direct Nghi\u1ec7m thu S03. on 2026-10-16 Asia/Ho_Chi_Minh, verified by desktop",
+      "authority": "Khiêm direct Nghiệm thu S03. on 2026-10-16 Asia/Ho_Chi_Minh, verified by desktop",
       "scope": "Acceptance append and exact current-status pointers only; AGENTS/README maintained hashes with appended provenance; no new implementation/runtime/evidence/Git authority",
       "maintained_paths": [
         "AGENTS.md",
@@ -1638,7 +1638,7 @@
     {
       "task": "GCMS-S04-001 approved plan save",
       "record": "docs/tasks/GCMS-S04-001.md",
-      "authority": "Khi\u00eam direct Approve. \u0110\u1ed3ng \u00fd tri\u1ec3n khai S04 v0.1 trong ph\u1ea1m vi \u0111\u00e3 planned. on 2026-10-16 Asia/Ho_Chi_Minh, verified by desktop",
+      "authority": "Khiêm direct Approve. Đồng ý triển khai S04 v0.1 trong phạm vi đã planned. on 2026-10-16 Asia/Ho_Chi_Minh, verified by desktop",
       "scope": "Approved source-complete S04 plan and current pointers; AGENTS/README maintained digests with appended provenance only; documentation writer performs no application/runtime/DB/Git action",
       "maintained_paths": [
         "AGENTS.md",
@@ -1658,7 +1658,7 @@
     {
       "task": "GCMS-S04-001 human acceptance bookkeeping",
       "record": "docs/tasks/GCMS-S04-001.md",
-      "authority": "Khi\u00eam direct Nghi\u1ec7m thu S04. on 2026-10-16 Asia/Ho_Chi_Minh, verified by desktop",
+      "authority": "Khiêm direct Nghiệm thu S04. on 2026-10-16 Asia/Ho_Chi_Minh, verified by desktop",
       "scope": "Current acceptance pointers/append only; AGENTS/README maintained digests with appended existing-format provenance; no new implementation/runtime/evidence/Git authority",
       "maintained_paths": [
         "AGENTS.md",
@@ -1708,7 +1708,7 @@
     {
       "task": "GCMS-S05-001 human acceptance bookkeeping",
       "record": "docs/tasks/GCMS-S05-001.md",
-      "authority": "Khi\u00eam direct \u201cNghi\u1ec7m thu S05.\u201d2026-10-16 Asia/Ho_Chi_Minh, verified desktop source",
+      "authority": "Khiêm direct “Nghiệm thu S05.”2026-10-16 Asia/Ho_Chi_Minh, verified desktop source",
       "scope": "Only S05 acceptance/current documentation pointers; historical technical evidence unchanged; AGENTS/README maintained hashes and appended provenance only",
       "maintained_paths": [
         "AGENTS.md",
@@ -1718,7 +1718,7 @@
     {
       "task": "GCMS-M1-UAT-001 approved v0.1 plan save",
       "record": "docs/tasks/GCMS-M1-UAT-001.md",
-      "authority": "Khi\u00eam direct GCMS-M1-UAT-001 v0.1 local UAT approval2026-10-16 Asia/Ho_Chi_Minh, verified desktop source",
+      "authority": "Khiêm direct GCMS-M1-UAT-001 v0.1 local UAT approval2026-10-16 Asia/Ho_Chi_Minh, verified desktop source",
       "scope": "Full approved UAT plan/current pointers; AGENTS/README maintained hashes and appended provenance only; no app/runtime/DB/browser/evidence JSON/Git writes by writer",
       "maintained_paths": [
         "AGENTS.md",
@@ -1738,7 +1738,7 @@
     {
       "task": "GCMS-AUTH-001 approved v0.1 plan/current-policy save",
       "record": "docs/tasks/GCMS-AUTH-001.md",
-      "authority": "Khi\u00eam direct approved AUTH local UI/API/DB+automatic UAT2026-10-16 Asia/Ho_Chi_Minh; verified desktop source",
+      "authority": "Khiêm direct approved AUTH local UI/API/DB+automatic UAT2026-10-16 Asia/Ho_Chi_Minh; verified desktop source",
       "scope": "Full approved AUTH plan/M1 current criteria revision/current pointers; AGENTS/README maintained hashes+appended provenance only; no app/runtime/private/DB/evidence JSON/Git writes by writer",
       "maintained_paths": [
         "AGENTS.md",
@@ -1780,6 +1780,36 @@
       "record": "docs/tasks/GCMS-M1-UAT-001.md",
       "authority": "Direct human M1 acceptance and future separate M2 planning-thread direction,2026-10-16; desktop verified source",
       "scope": "Assigned acceptance/current pointers and maintained AGENTS/README digest provenance only; no runtime/app/Git/deploy or S06-S18 execution",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-M2-001 local execution",
+      "record": "docs/tasks/GCMS-M2-001.md",
+      "authority": "Direct human M2 v0.1 and S06-D01-D04/S07-D01-D06/S08-D01-D04 local execution approval,2026-10-16,desktop01a1437b-7cd2-7b23-92ef-70226da96f3f",
+      "scope": "M2 local approved implementation/current documentation; maintained AGENTS/README hashes and append provenance only in this manifest; original kit/mirrors/pins unchanged",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-M2-001 final local handoff",
+      "record": "docs/tasks/GCMS-M2-001.md",
+      "authority": "Same direct human M2 v0.1 local execution approval,2026-10-16,desktop01a1437b-7cd2-7b23-92ef-70226da96f3f",
+      "scope": "Final settled local result/current pointers and maintained AGENTS/README digest provenance; original Kit files/mirrors and immutable pins unchanged; M2 human acceptance pending; no Git/deploy",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-M2-001 human M2 acceptance",
+      "record": "docs/tasks/GCMS-M2-001.md",
+      "authority": "Direct human M2 acceptance/documentation update,2026-10-16 Asia/Ho_Chi_Minh,desktop01a1437b-7cd2-7b23-92ef-70226da96f3f,turn01a14424-fabd-7d43-8fa6-800dad9fc40c; desktop verified source",
+      "scope": "Assigned acceptance/current pointers and maintained AGENTS/README digest provenance only; technical limits/historical evidence and original Kit/mirror/adaptation pins unchanged; no runtime/app/Git/deploy or S09-S18 execution",
       "maintained_paths": [
         "AGENTS.md",
         "README.md"

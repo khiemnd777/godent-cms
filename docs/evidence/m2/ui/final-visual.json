@@ -1,0 +1,422 @@
+{
+  "phase": "complete",
+  "runId": "9b4aeade-d69e-4655-b293-6b349d2233ac",
+  "checks": {
+    "lead1440": {
+      "width": 1440,
+      "height": 1050,
+      "scroll": 1440,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Gia hạn thời gian lưu",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Lưu ghi chú",
+          "inside": true
+        }
+      ]
+    },
+    "lead390": {
+      "width": 390,
+      "height": 844,
+      "scroll": 390,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Gia hạn thời gian lưu",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Lưu ghi chú",
+          "inside": true
+        }
+      ]
+    },
+    "lead320": {
+      "width": 320,
+      "height": 844,
+      "scroll": 320,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Gia hạn thời gian lưu",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Lưu ghi chú",
+          "inside": true
+        }
+      ]
+    },
+    "lead768": {
+      "width": 768,
+      "height": 1050,
+      "scroll": 768,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Gia hạn thời gian lưu",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Lưu ghi chú",
+          "inside": true
+        }
+      ]
+    },
+    "lead1024": {
+      "width": 1024,
+      "height": 1050,
+      "scroll": 1024,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Gia hạn thời gian lưu",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Lưu ghi chú",
+          "inside": true
+        }
+      ]
+    },
+    "editor1440": {
+      "width": 1440,
+      "height": 1050,
+      "scroll": 1440,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Lưu bản nháp",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Xem trước",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Cập nhật website",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Lịch sử phiên bản",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ngừng xuất bản",
+          "inside": true
+        },
+        {
+          "tag": "A",
+          "label": "Xem bản đã xuất bản",
+          "inside": true
+        }
+      ]
+    },
+    "editor390": {
+      "width": 390,
+      "height": 844,
+      "scroll": 390,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Lưu bản nháp",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Xem trước",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Cập nhật website",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Lịch sử phiên bản",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ngừng xuất bản",
+          "inside": true
+        },
+        {
+          "tag": "A",
+          "label": "Xem bản đã xuất bản",
+          "inside": true
+        }
+      ]
+    },
+    "editor320": {
+      "width": 320,
+      "height": 844,
+      "scroll": 320,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Lưu bản nháp",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Xem trước",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Cập nhật website",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Lịch sử phiên bản",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ngừng xuất bản",
+          "inside": true
+        },
+        {
+          "tag": "A",
+          "label": "Xem bản đã xuất bản",
+          "inside": true
+        }
+      ]
+    },
+    "editor768": {
+      "width": 768,
+      "height": 1050,
+      "scroll": 768,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Lưu bản nháp",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Xem trước",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Cập nhật website",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Lịch sử phiên bản",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ngừng xuất bản",
+          "inside": true
+        },
+        {
+          "tag": "A",
+          "label": "Xem bản đã xuất bản",
+          "inside": true
+        }
+      ]
+    },
+    "editor1024": {
+      "width": 1024,
+      "height": 1050,
+      "scroll": 1024,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Lưu bản nháp",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Xem trước",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Cập nhật website",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Lịch sử phiên bản",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ngừng xuất bản",
+          "inside": true
+        },
+        {
+          "tag": "A",
+          "label": "Xem bản đã xuất bản",
+          "inside": true
+        }
+      ]
+    },
+    "media1440": {
+      "width": 1440,
+      "height": 1050,
+      "scroll": 1440,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Tải ảnh lên",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Làm mới ảnh",
+          "inside": true
+        }
+      ]
+    },
+    "media390": {
+      "width": 390,
+      "height": 844,
+      "scroll": 390,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Tải ảnh lên",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Làm mới ảnh",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 6c3a593cPNG · 3 KiB · 480 × 300Sẵn sàng",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 95798cb1PNG · 3 KiB · 480 × 300Đã thu hồi",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh dcae5b06Đang kiểm tra · 1 KiBBị từ chối",
+          "inside": true
+        }
+      ]
+    },
+    "media320": {
+      "width": 320,
+      "height": 844,
+      "scroll": 320,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Tải ảnh lên",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Làm mới ảnh",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 6c3a593cPNG · 3 KiB · 480 × 300Sẵn sàng",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 95798cb1PNG · 3 KiB · 480 × 300Đã thu hồi",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh dcae5b06Đang kiểm tra · 1 KiBBị từ chối",
+          "inside": true
+        }
+      ]
+    },
+    "media768": {
+      "width": 768,
+      "height": 1050,
+      "scroll": 768,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Tải ảnh lên",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Làm mới ảnh",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 6c3a593cPNG · 3 KiB · 480 × 300Sẵn sàng",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 95798cb1PNG · 3 KiB · 480 × 300Đã thu hồi",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh dcae5b06Đang kiểm tra · 1 KiBBị từ chối",
+          "inside": true
+        }
+      ]
+    },
+    "media1024": {
+      "width": 1024,
+      "height": 1050,
+      "scroll": 1024,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Tải ảnh lên",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Làm mới ảnh",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 6c3a593cPNG · 3 KiB · 480 × 300Sẵn sàng",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 95798cb1PNG · 3 KiB · 480 × 300Đã thu hồi",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh dcae5b06Đang kiểm tra · 1 KiBBị từ chối",
+          "inside": true
+        }
+      ]
+    }
+  },
+  "errors": []
+}

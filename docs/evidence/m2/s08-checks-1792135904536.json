@@ -1,0 +1,24 @@
+{
+  "recordedAt": "2026-10-16T07:31:44.536Z",
+  "slice": "s08",
+  "status": "PASS",
+  "suites": [
+    {
+      "file": "s08-input.test.ts",
+      "exitCode": 0,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 7
+    },
+    {
+      "file": "s08-editorial-integration.test.ts",
+      "exitCode": 0,
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 276
+    }
+  ],
+  "limits": "New owned local synthetic unit/API/PostgreSQL/storage/worker proof. Browser, human acceptance and production are separate."
+}

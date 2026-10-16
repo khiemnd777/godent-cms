@@ -1,0 +1,142 @@
+{
+  "runId": "9b4aeade-d69e-4655-b293-6b349d2233ac",
+  "phase": "complete",
+  "checks": {
+    "width1440": {
+      "page": 1440,
+      "viewport": 1440,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "width": 287,
+          "inside": true
+        },
+        {
+          "tag": "TEXTAREA",
+          "width": 287,
+          "inside": true
+        },
+        {
+          "tag": "INPUT",
+          "width": 287,
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "width": 287,
+          "inside": true
+        }
+      ]
+    },
+    "width390": {
+      "page": 390,
+      "viewport": 390,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "width": 314,
+          "inside": true
+        },
+        {
+          "tag": "TEXTAREA",
+          "width": 314,
+          "inside": true
+        },
+        {
+          "tag": "INPUT",
+          "width": 314,
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "width": 314,
+          "inside": true
+        }
+      ]
+    },
+    "width320": {
+      "page": 320,
+      "viewport": 320,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "width": 254,
+          "inside": true
+        },
+        {
+          "tag": "TEXTAREA",
+          "width": 254,
+          "inside": true
+        },
+        {
+          "tag": "INPUT",
+          "width": 254,
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "width": 254,
+          "inside": true
+        }
+      ]
+    },
+    "width768": {
+      "page": 768,
+      "viewport": 768,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "width": 252,
+          "inside": true
+        },
+        {
+          "tag": "TEXTAREA",
+          "width": 252,
+          "inside": true
+        },
+        {
+          "tag": "INPUT",
+          "width": 252,
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "width": 252,
+          "inside": true
+        }
+      ]
+    },
+    "width1024": {
+      "page": 1024,
+      "viewport": 1024,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "width": 252,
+          "inside": true
+        },
+        {
+          "tag": "TEXTAREA",
+          "width": 252,
+          "inside": true
+        },
+        {
+          "tag": "INPUT",
+          "width": 252,
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "width": 252,
+          "inside": true
+        }
+      ]
+    },
+    "extension": {
+      "status": "PASS",
+      "normalPasswordReauth": true,
+      "keyboardEnter": true
+    }
+  },
+  "errors": []
+}

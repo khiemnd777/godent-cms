@@ -1,0 +1,48 @@
+{
+  "originalObservedAt": "2026-10-16T07:23:56.969Z",
+  "result": {
+    "scope": "S07 isolated decoder real input/output",
+    "bun": "1.4.3",
+    "sharp": "0.35.5",
+    "image": "sha256:7b9130222040cc07f8e7ca13e3eb104e45b4e0dc3888cc81e565dbd816531dd6",
+    "results": [
+      {
+        "type": "jpeg",
+        "bytes": 277,
+        "outputBytes": 80,
+        "width": 48,
+        "height": 32,
+        "metadataStripped": true
+      },
+      {
+        "type": "png",
+        "bytes": 151,
+        "outputBytes": 80,
+        "width": 48,
+        "height": 32,
+        "metadataStripped": true
+      },
+      {
+        "type": "webp",
+        "bytes": 82,
+        "outputBytes": 82,
+        "width": 48,
+        "height": 32,
+        "metadataStripped": true
+      },
+      {
+        "label": "malformed",
+        "rejected": true
+      },
+      {
+        "label": "edge_limit",
+        "rejected": true
+      },
+      {
+        "label": "pixel_limit",
+        "rejected": true
+      }
+    ]
+  },
+  "source": "Original current-thread tool result; no rerun inferred."
+}

@@ -1,0 +1,8 @@
+{
+  "runId": "9b4aeade-d69e-4655-b293-6b349d2233ac",
+  "workerRequest": "media-purge-retry",
+  "tenantId": "88cfcbbb-8425-4647-aa06-428cef3c5197",
+  "assetIds": [
+    "6c3a593c-c763-4942-a27e-5d18be6d0fa1"
+  ]
+}

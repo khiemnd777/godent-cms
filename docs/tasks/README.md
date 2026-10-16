@@ -1,5 +1,7 @@
 # Task records
 
+**Current M2 result — HUMAN_ACCEPTED — 2026-10-16.** Khiêm accepted M2, including inherited S05 and newly implemented S06–S08; [exact human source](GCMS-M2-001.md#human-m2-acceptance--2026-10-16) and [final technical ledger](GCMS-M2-001.md#final-local-handoff--2026-10-16) retain CODE_INTEGRATED + VERIFIED_LOCAL and every historical FAIL/Unknown/NOT_RUN limit. Audit braces remains FAIL/open under the existing local-M2 deferral/reassessment2026-10-22 or earlier stated triggers and before production. Earlier pending/unapproved statements below are historical checkpoints. S09–S18 execution unapproved; no commit/push/deploy or new runtime/full-MVP/Production proof.
+
 **Current AUTH result — CODE_INTEGRATED / VERIFIED_LOCAL within recorded scope / READY_FOR_USER_REVIEW; HUMAN_ACCEPTANCE_PENDING.** Password-only UI/API/DB cutover and0014opaque-user-ID repair are verified. Actual bounded API9tests/79assertions, fulltype/lint/latest applicable appbuilds, browser lifecycle/invitation/operations/CAPTCHA/rendering, worker3captures/exact replay, DB31table preservation and protected-file/private-data checks PASS within the [final ledger](GCMS-AUTH-001.md#final-local-handoff--2026-10-16). Fresh browser invitation-expiry/natural8-hour wait NOT_RUN; API/historical expiry/race reuse is separate. Audit braces FAIL/open under local deferral/reassess2026-10-22 or earlier triggers. S01–S05 HUMAN_ACCEPTED unchanged; no automatic M1 closure/full-MVP/production/dependency-upgrade/Git/deploy/S06+ claim. Coordinator post-document exact-value scan/static receipt is the ordered final mechanical step; no extra human prompt.
 
 **M1 UAT prior checkpoint — PARTIAL_VERIFIED_LOCAL_UAT.** Historical scoped autonomous proof/manual NOT_RUN remains intact. [Current authentication-policy revision](GCMS-M1-UAT-001.md#authentication-policy-revision--2026-10-16) supersedes TOTP/MFA/backup-only criteria without converting them to PASS; AUTH implementation/UAT is a separate package and does not close M1 automatically.
@@ -92,3 +94,5 @@ A task record contains:
 - Separate code/document integration, behavior verification and human delivery acceptance.
 
 [Project plan](../project-plan.md) indexes tasks; [project state](../project-state.md) summarizes current integration. Records preserve authority; they cannot create it or silently resume stopped application work.
+
+- [GCMS-M2-001 — Approved M2 v0.1](GCMS-M2-001.md): local S06–S08 execution and inherited S05; plan saved before implementation; evidence initially NOT_RUN; no Git delivery/deploy.

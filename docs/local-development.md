@@ -1,5 +1,34 @@
 # Local development and verification
 
+## Current M2 local operation
+
+M2 v0.1/S06–S08 has direct local execution approval; see [the complete task and evidence limits](tasks/GCMS-M2-001.md) and [ADR-011](decisions/011-local-m2-retention-media-editorial.md). No Git delivery, deployment, external provider or production action is authorized. Earlier S06+ restrictions below describe historical checkpoints.
+
+The API reads only the selected media signing/bucket/scoped storage fields from ignored `.local/m2.env`0600. It does not inherit S06/S07 worker or migration credentials. The decoder image has no private mounts/network/credentials. The workspace lock preserves its package-version set; Sharp0.35.5 is now a direct API edge. API readiness never dispatches jobs.
+
+Existing PostgreSQL/Redis/SeaweedFS services retain their containers/configuration and credentials. The new M2 media bucket has its own dynamically loaded scoped identity; original static storage configuration is unchanged. Bootstrap verifies an owned marker, filtered enumeration, cross-bucket request403 and unsigned403. The denial-control collection cannot allocate a volume in the retained local topology; its object write is NOT_RUN/failed capacity, not successful storage proof. No capacity/configuration expansion was performed.
+
+| Command from repository root, pinned Bun1.4.3 | Local scope |
+| --- | --- |
+| `./node_modules/.bin/bun run m2:bootstrap` | New narrow worker identities and private config; explicit local identity checks; preserve existing credentials |
+| `./node_modules/.bin/bun run m2:migrate` | Apply only approved forward migrations; verify every retained checksum; no dispatch |
+| `./node_modules/.bin/bun run m2:storage` | New bucket/dynamic scoped identity and boundary checks; no service restart/static config rewrite |
+| `./node_modules/.bin/bun run m2:fixtures` | Two new owned UI tenants/initial synthetic data; complete rerun refuses to reset browser changes or deleted leads |
+| `./node_modules/.bin/bun run test:s06` | Input/capture/worker-environment/service and actual retention API/SQL cases; new M2 evidence |
+| `./node_modules/.bin/bun run test:s07` | Input/security/native decoder, actual Docker lifecycle, API/private storage/worker/fault/race cases |
+| `./node_modules/.bin/bun run test:s08` | Editorial input and actual history/restore/publish/unpublish/replay/transaction/race cases |
+| `./node_modules/.bin/bun run start:m2-worker s06 --tenant <selected-new-tenant-id> --once` | Explicit manifest tenant and per-lead allowlist, restricted execute-only role; private generic retention capture/audit expiry |
+| `./node_modules/.bin/bun run start:m2-worker s07 --tenant <selected-new-tenant-id> --once` | Explicit manifest media tenant, restricted role, bounded process/purge batch; no old backlog enrollment |
+
+Aliases map to the verified scripts; task/evidence records the exact invocations. New synthetic browser identities are stored privately in `.local/m2-browser-identities.json`0600. This avoids the existing session response's100-membership cap on heavily reused test identities; old users/passwords and the AUTH product contract are unchanged. Synthetic verified accounts are fixture-only; normal invitation/onboarding remains the existing workflow. No credentials belong in chat or screenshots.
+
+Retention capture uses `.local/m2-retention-mail`0700 and0600files. It contains generic subject/sign-in notice and recipient delivery identity, with no private lead payload. S06 deletion only processes explicitly enrolled new lead IDs. Audit expiry includes selected365day synthetic cases; it does not sweep historical global authentication records. Operational backup restore and natural180/365day waiting are not claimed.
+
+If native decoder settlement is unknown, the media worker first durably marks the job failed and tenant native processing blocked. It then writes/fsyncs an exclusive0600 `.local/s07-recovery-<error-id>.json` mapping job/tenant/asset/fence/worker to exact container ID/name/nonce, without bytes/object keys/secrets. A receipt-write error does not clear the DB latch or continue the batch. The CLI reports only blocked state and the private receipt path. Generic API retry cannot unblock it. Resolve the exact recorded labelled container and verify real termination/removal before an authorized owner clears the latch; never kill all decoders or infer termination from CLI timeout. Manual operator unblock remains NOT_RUN; actual lifecycle mapping, durable block, receipt failure and continued withdrawal/purge have separate tests.
+
+Independent M2 audit is FAIL/open for the known high braces advisory. Reassess2026-10-22 or earlier patch/dependency/exposure change and before production. Source/trace exposure evidence and the bounded local-only deferral are in [the independent review](evidence/m2/review.md); no production waiver applies.
+
+
 **M1 result — HUMAN_ACCEPTED — 2026-10-16.** Khiêm directly stated “Nghiệm thu Chặng 1.”; [full acceptance and next-stage direction](tasks/GCMS-M1-UAT-001.md#human-m1-acceptance-and-next-stage-direction--2026-10-16) record the source. Technical status remains VERIFIED_LOCAL_UAT_COMPLETE with the existing scoped local evidence and historical FAIL/NOT_RUN limits. S01–S05 and AUTH remain HUMAN_ACCEPTED. Khiêm will create a separate thread to plan each slice of all M2; M2 as a whole is not accepted, and S06–S18 execution remains unapproved. Acceptance adds no runtime proof, Git delivery or deployment authority.
 
 **AUTH result — HUMAN_ACCEPTED.** Khiêm directly stated “Nghiệm thu AUTH.” in the latest [approval](tasks/GCMS-AUTH-001.md#human-acceptance-and-m1-closure--2026-10-16). Password-only implementation and prior scoped API9tests/79assertions/build/type/lint/browser/worker evidence remain valid. Historical failed/NOT_RUN records are preserved; MFA-only cases are SUPERSEDED, not PASS. Natural eight-hour waiting and the exact unavailable historical c300/tenant navigation remain NOT_RUN as execution modes; controlled boundary and accessible equivalent-component proof satisfy the criteria. `braces` audit stays FAIL/open under the bounded local deferral, reassessment2026-10-22 or earlier patch/dependency/exposure/before production. No dependency upgrade, Git delivery, deployment, full-MVP/production or S06+ authority follows.

@@ -1,0 +1,105 @@
+CHĂM SÓC KHÁCH HÀNG
+Yêu cầu tư vấn
+
+Một nơi để tiếp nhận và phản hồi các yêu cầu từ website.
+
+Danh sách yêu cầu
+Làm mới
+Tất cả trạng thái
+Mới
+Đã phân công
+Đã liên hệ
+Đã đóng
+Áp dụng
+Bộ lọc thêm
+Khách hàng	Quan tâm	Trạng thái	Tiếp nhận
+
+Khách minh họa M2 1
+•••••••101
+YC-000001
+	Chưa chọn dịch vụ	Mới	14:39 16/10/26
+
+Khách riêng kiểm tra hết hạn M2
+•••••••199
+YC-000003
+	Chưa chọn dịch vụ	Mới	14:59 19/4/26
+2 yêu cầu phù hợp · 2 trên trang này
+Chi tiết yêu cầu
+YC-000001
+Khách minh họa M2 1
+14:39 16/10/26
+0900000101
+Quan tâm
+Chưa chọn dịch vụ
+Trang nguồn
+Tư vấn nha khoa
+Đường dẫn nguồn
+/m2-ui-9b4aeade-a/dich-vu/tu-van-nha-khoa
+Ngôn ngữ / Kênh
+VI / Điện thoại
+
+Lời nhắn
+
+Yêu cầu minh họa tổng hợp, không có dữ liệu khách hàng thật.
+Đã đồng ý để phòng khám liên hệ
+14:39 16/10/26
+Người phụ trách
+Chưa phân công
+S02 A1
+S02 A2
+M2 Synthetic A1
+M2 Synthetic A2
+Trạng thái
+Mới
+Đã phân công
+Đã liên hệ
+Đã đóng
+Lưu cập nhật
+
+Phiên bản 2. Ghi nhận trao đổi thực tế ở phần Thêm hoạt động để chuyển sang Đã liên hệ. Lưu riêng từng thao tác để giữ nội dung đang soạn.
+
+Thêm hoạt động
+Loại hoạt động
+Ghi chú nội bộ
+Ghi nhận liên hệ
+Nội dung ghi chú
+
+0 / 2.000 ký tự · Văn bản thuần, không đính kèm. Ghi chú không kéo dài thời hạn lưu.
+
+Lưu ghi chú
+Lịch sử hoạt động
+Gia hạn thời gian lưu
+
+M2 synthetic agreed follow-up
+Thời hạn mới: 12:00 20/10/27
+
+14:48 16/10/26 · M2 Synthetic A1 · Phiên bản 2
+Tiếp nhận từ website
+14:39 16/10/26 · Website
+Thời hạn lưu
+Thời hạn hiện tại
+12:00 20/10/27
+Thời hạn theo hoạt động
+14:39 14/4/27
+Đã gia hạn đến
+12:00 20/10/27
+
+Xem, ghi chú, phân công hoặc mở lại không kéo dài thời hạn lưu. Dữ liệu đang soạn sẽ đóng khi yêu cầu hết hạn.
+
+Chưa đến lịch cảnh báo · 12:00 13/10/27
+
+Ẩn gia hạn
+Lý do gia hạn
+Thời hạn mới
+Giờ trên thiết bị của bạn. Chọn thời điểm sau thời hạn hiện tại.
+
+Yêu cầu đã được cập nhật. Thông tin bạn đang soạn được giữ lại. Đối chiếu bản hiện tại trước khi lưu lại.
+
+Xác nhận gia hạn
+Đối chiếu thời hạn hiện tại
+
+Thông báo thử: Đang chờ. Chỉ ghi nhận tại máy thử, chưa gửi email thật.
+
+Tất cả quản trị viên của nha khoa đều thấy danh sách này. Phân công để xác định người phụ trách.
+Được xây dựng cùng Godent
+Website nha khoa · Nội dung của bạn, thương hiệu của bạn

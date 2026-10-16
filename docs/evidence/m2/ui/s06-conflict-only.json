@@ -1,0 +1,191 @@
+{
+  "phase": "tenant-denied",
+  "runId": "9b4aeade-d69e-4655-b293-6b349d2233ac",
+  "checks": {
+    "conflictInput": {
+      "status": "PASS",
+      "reasonPreserved": true
+    },
+    "conflict1440": {
+      "width": 1440,
+      "height": 1050,
+      "scroll": 1440,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Ẩn gia hạn",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Xác nhận gia hạn",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Đối chiếu thời hạn hiện tại",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Dùng bản hiện tại",
+          "inside": true
+        },
+        {
+          "tag": "INPUT",
+          "label": "",
+          "inside": true
+        },
+        {
+          "tag": "TEXTAREA",
+          "label": "M2 A1 retained extension conflict reason",
+          "inside": true
+        }
+      ]
+    },
+    "conflict390": {
+      "width": 390,
+      "height": 844,
+      "scroll": 390,
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "Ẩn gia hạn",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Xác nhận gia hạn",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Đối chiếu thời hạn hiện tại",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Dùng bản hiện tại",
+          "inside": true
+        },
+        {
+          "tag": "INPUT",
+          "label": "",
+          "inside": true
+        },
+        {
+          "tag": "TEXTAREA",
+          "label": "M2 A1 retained extension conflict reason",
+          "inside": true
+        }
+      ]
+    },
+    "conflict": {
+      "status": "PASS",
+      "reasonPreserved": true,
+      "compareCancelPreserved": true,
+      "explicitUseCurrent": true
+    },
+    "denied1440": {
+      "width": 1440,
+      "height": 1050,
+      "scroll": 1440,
+      "controls": []
+    },
+    "failureButtons": [
+      {
+        "label": "Gia hạn thời gian lưu",
+        "disabled": false,
+        "visible": true
+      }
+    ]
+  },
+  "errors": [
+    {
+      "phase": "tenant-denied",
+      "name": "Error",
+      "assertion": "PAGE_OVERFLOW_s06-denied_390",
+      "strict": false,
+      "detached": false,
+      "timeout": false,
+      "rawDetailsRedacted": true
+    }
+  ],
+  "statuses": [
+    {
+      "path": "/api/session",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/leads/count",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/lead-assignees",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/leads",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/leads/count",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/leads/cff867a6-3714-44ab-8c1a-1c20c2ded321",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/lead-assignees",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/leads/cff867a6-3714-44ab-8c1a-1c20c2ded321/history",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/leads/cff867a6-3714-44ab-8c1a-1c20c2ded321/retention-extension",
+      "status": 409,
+      "method": "POST"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/leads/cff867a6-3714-44ab-8c1a-1c20c2ded321",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/leads/count",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/leads",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/leads/count",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/lead-assignees",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/leads/cff867a6-3714-44ab-8c1a-1c20c2ded321/history",
+      "status": 200,
+      "method": "GET"
+    }
+  ]
+}

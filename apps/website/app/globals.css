@@ -113,3 +113,5 @@ button:focus-visible { outline:3px solid #146b53; outline-offset:4px; }
 .consultation-verification button { margin-top:14px; }
 .visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 @media(max-width:600px) { .consultation { padding:22px 18px; margin-top:36px; } .consultation h2 { font-size:25px; } .consultation-grid { grid-template-columns:minmax(0,1fr); gap:18px; } .consultation-actions { display:block; } .consultation-submit { width:100%; } .consultation-actions>span { display:block; margin-top:12px; } .consultation input,.consultation select,.consultation textarea { font-size:16px; } }
+
+.service-cover{display:block;max-width:100%;height:auto;margin:1.5rem 0;border-radius:0.75rem;}

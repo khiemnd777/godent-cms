@@ -43,10 +43,11 @@ export function errorText(error: unknown) {
   return "Yêu cầu chưa hoàn tất. Kiểm tra thông tin rồi thử lại.";
 }
 export async function apiRequest<T>(path: string, options: { method?: "GET" | "POST" | "PUT" | "DELETE"; body?: unknown; csrf?: string; signal?: AbortSignal; sessionCheck?: boolean } = {}): Promise<T> {
+  const multipart = typeof FormData !== "undefined" && options.body instanceof FormData;
   const response = await fetch(apiUrl(path), {
     method: options.method ?? "GET", credentials: "include", cache: "no-store", redirect: "error",
-    headers: { Accept: "application/json", ...(options.method && options.method !== "GET" ? { "Content-Type": "application/json" } : {}), ...(options.csrf ? { "X-CSRF-Token": options.csrf } : {}) },
-    ...(options.body !== undefined ? { body: JSON.stringify(options.body) } : {}), signal: options.signal,
+    headers: { Accept: "application/json", ...(options.method && options.method !== "GET" && !multipart ? { "Content-Type": "application/json" } : {}), ...(options.csrf ? { "X-CSRF-Token": options.csrf } : {}) },
+    ...(options.body !== undefined ? { body: multipart ? options.body as FormData : JSON.stringify(options.body) } : {}), signal: options.signal,
   });
   if (!response.ok) {
     let code: S05ErrorCode | undefined;

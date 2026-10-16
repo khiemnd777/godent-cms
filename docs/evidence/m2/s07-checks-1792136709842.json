@@ -1,0 +1,48 @@
+{
+  "recordedAt": "2026-10-16T07:45:09.841Z",
+  "slice": "s07",
+  "status": "PASS",
+  "suites": [
+    {
+      "file": "m2-worker-environment.test.ts",
+      "exitCode": 0,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 3
+    },
+    {
+      "file": "s07-security.test.ts",
+      "exitCode": 0,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 23
+    },
+    {
+      "file": "s07-decoder.test.ts",
+      "exitCode": 0,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 39
+    },
+    {
+      "file": "s07-container-lifecycle.test.ts",
+      "exitCode": 0,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 17
+    },
+    {
+      "file": "s07-media-integration.test.ts",
+      "exitCode": 0,
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 302
+    }
+  ],
+  "limits": "New owned local synthetic unit/API/PostgreSQL/storage/worker proof. Browser, human acceptance and production are separate."
+}

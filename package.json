@@ -38,7 +38,15 @@
     "s05:fixtures": "bun --env-file=.env --env-file=.local/s02.env --env-file=.local/s04.env --env-file=.local/s05.env scripts/s05-fixtures.ts --local-s05 --synthetic-fixtures",
     "start:s05-worker": "bun scripts/start-s05-worker.ts",
     "test:s05": "bun scripts/check-s05.ts",
-    "check:api:s05": "bun scripts/check-api.ts --s05"
+    "check:api:s05": "bun scripts/check-api.ts --s05",
+    "m2:bootstrap": "bun --env-file=.env scripts/m2-bootstrap.ts --local-m2",
+    "m2:migrate": "bun --env-file=.local/s02.env scripts/m2-migrate.ts --local-m2",
+    "m2:storage": "bun --env-file=.env --env-file=.local/m2.env scripts/m2-storage-bootstrap.ts --local-m2",
+    "m2:fixtures": "bun --env-file=.env --env-file=.local/s02.env --env-file=.local/s04.env --env-file=.local/m2.env scripts/m2-ui-fixtures.ts --local-m2 --synthetic-fixtures",
+    "start:m2-worker": "bun --env-file=.env scripts/start-m2-worker.ts",
+    "test:s06": "bun scripts/check-m2.ts s06",
+    "test:s07": "bun scripts/check-m2.ts s07",
+    "test:s08": "bun scripts/check-m2.ts s08"
   },
   "devDependencies": {
     "@playwright/test": "1.64.1",

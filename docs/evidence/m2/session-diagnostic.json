@@ -1,0 +1,21 @@
+{
+  "observations": [
+    {
+      "rawSession": true,
+      "strictActor": true
+    },
+    {
+      "label": "A1",
+      "login": "PASS"
+    },
+    {
+      "rawSession": true,
+      "strictActor": true
+    },
+    {
+      "label": "A2",
+      "login": "PASS"
+    }
+  ],
+  "scope": "Redacted actual HTTP sign-in/sessiondiagnostic, retained credentials unchanged."
+}

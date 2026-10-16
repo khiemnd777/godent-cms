@@ -1,0 +1,57 @@
+{
+  "phase": "s06-extension-conflict",
+  "runId": "9b4aeade-d69e-4655-b293-6b349d2233ac",
+  "checks": {
+    "loading1440": {
+      "width": 1440,
+      "height": 1050,
+      "scroll": 1440,
+      "controls": []
+    },
+    "loading390": {
+      "width": 390,
+      "height": 844,
+      "scroll": 390,
+      "controls": []
+    },
+    "error1440": {
+      "width": 1440,
+      "height": 1050,
+      "scroll": 1440,
+      "controls": []
+    },
+    "error390": {
+      "width": 390,
+      "height": 844,
+      "scroll": 390,
+      "controls": []
+    },
+    "enterRecovery": {
+      "status": "PASS",
+      "explicitEnterNewRequest": true,
+      "noAutomaticRecovery": true
+    },
+    "empty1440": {
+      "width": 1440,
+      "height": 1050,
+      "scroll": 1440,
+      "controls": []
+    },
+    "empty390": {
+      "width": 390,
+      "height": 844,
+      "scroll": 390,
+      "controls": []
+    }
+  },
+  "errors": [
+    {
+      "phase": "s06-extension-conflict",
+      "name": "TimeoutError",
+      "strict": false,
+      "detached": false,
+      "timeout": true,
+      "rawDetailsRedacted": true
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # Project context
 
+**M2 current result — HUMAN_ACCEPTED — 2026-10-16.** Khiêm directly accepted M2 (inherited S05 and newly implemented S06–S08); [full human acceptance](tasks/GCMS-M2-001.md#human-m2-acceptance--2026-10-16) records the exact instruction and provenance. Technical status remains CODE_INTEGRATED + VERIFIED_LOCAL within the [final local handoff](tasks/GCMS-M2-001.md#final-local-handoff--2026-10-16): API/SQL39tests/852assertions, admin51/168 and the recorded bounded local journeys/checks. Historical FAIL/Unknown/NOT_RUN remain unchanged; acceptance adds no runtime or full-MVP/Production proof. Audit braces stays FAIL/open under the existing local-M2 deferral, reassess2026-10-22 or earlier patch/dependency/exposure change and before production. S01–S05/AUTH/M1 acceptance is unchanged; S09–S18 execution is unapproved. No commit/push/deploy. Desktop `/root` in thread01a1437b-7cd2-7b23-92ef-70226da96f3f retains accountability. Earlier pending/unapproved statements below are historical checkpoints, superseded by this header only within the approved local M2 scope.
+
 **M1 result — HUMAN_ACCEPTED — 2026-10-16.** Khiêm directly stated “Nghiệm thu Chặng 1.”; [full acceptance and next-stage direction](tasks/GCMS-M1-UAT-001.md#human-m1-acceptance-and-next-stage-direction--2026-10-16) record the source. Technical status remains VERIFIED_LOCAL_UAT_COMPLETE with the existing scoped local evidence and historical FAIL/NOT_RUN limits. S01–S05 and AUTH remain HUMAN_ACCEPTED. Khiêm will create a separate thread to plan each slice of all M2; M2 as a whole is not accepted, and S06–S18 execution remains unapproved. Acceptance adds no runtime proof, Git delivery or deployment authority.
 
 **AUTH result — HUMAN_ACCEPTED.** Khiêm directly stated “Nghiệm thu AUTH.” in the latest [approval](tasks/GCMS-AUTH-001.md#human-acceptance-and-m1-closure--2026-10-16). Password-only implementation and prior scoped API9tests/79assertions/build/type/lint/browser/worker evidence remain valid. Historical failed/NOT_RUN records are preserved; MFA-only cases are SUPERSEDED, not PASS. Natural eight-hour waiting and the exact unavailable historical c300/tenant navigation remain NOT_RUN as execution modes; controlled boundary and accessible equivalent-component proof satisfy the criteria. `braces` audit stays FAIL/open under the bounded local deferral, reassessment2026-10-22 or earlier patch/dependency/exposure/before production. No dependency upgrade, Git delivery, deployment, full-MVP/production or S06+ authority follows.
@@ -8,8 +10,8 @@
 | --- | --- |
 | Project | godent-cms |
 | Project Lead | Khiêm |
-| Accountable Project Coordinator | Desktop `/root`; shared contracts/runtime/final integration and requested M1 technical closure |
-| Documentation execution writer | Bounded `/root/m1_acceptance_record` native kit-implementer/medium acceptance-record writer; desktop retains accountability |
+| Accountable Project Coordinator | Desktop `/root`; shared contracts/runtime/final integration and M2 acceptance-record integration |
+| Documentation execution writer | Bounded `/root/m2_acceptance_record` native kit-implementer/medium acceptance-record writer; desktop retains accountability |
 | Goal | Secure, maintainable, extensible, cost-efficient SaaS dental websites, publishing, SEO and consultation leads |
 | Users | Platform administrators; clinic owners/managers, marketing, dental professionals and reception using tenant administration; visitors and international visitors |
 | Organization model | One organization tenant / one branded website; locations are ordinary tenant-owned address/contact/opening rows |
@@ -20,18 +22,18 @@
 | Editorial workflow | Draft → Published by the same tenant administrator; active pointer defines Published, pending draft may coexist; save does not change live |
 | Local MVP decisions | VI+EN with eligible Published VI fallback; two-theme/shared-schema section builder, full Web Builder later; JPEG/PNG/WebP ≤5 MiB/no SVG/remote imports; approved lead abuse/email, manual growth-only quota and controlled lifecycle directions |
 | Local services | Admin 5891, website 5892, API 5890, Redis 5889, PostgreSQL 5888, S3 API 5887, optional console 5886; loopback host bindings; architecture table canonical; locally verified; see dated S01 evidence; no console5886 |
-| Master plan | [Approved v0.2](project-plan.md),18 unchanged slices/five milestones; S01–S05 HUMAN_ACCEPTED; S05 v0.1 separately approved local; S06–S18 unapproved |
+| Master plan | [Approved v0.2](project-plan.md),18 unchanged slices/five milestones; S01–S08/AUTH/M1 and M2 HUMAN_ACCEPTED within recorded local scope; S09–S18 execution unapproved |
 | Administration application | Approved shared Next5891: Platform Admin `/platform` and Tenant CMS `/cms`, distinct layouts/navigation/shared components/API5890; public Next5892 separate; backend permission boundary unchanged |
 | S01 boundary | Both admin shells/header/sidebar/content/navigation/responsive/states + public shell/Bun/connectivity; no real login/tenant selection/CMS CRUD/tenant schema or two-tenant fixtures; S02 access/private draft, S03 editor/publish |
 | Remaining product choices | S03-D01–D06 settle minimum layout/slug/safe text/explicit publish/SSR/SEO; full themes/catalog/localization/domain choices stay later scope |
 | Stack baseline | Bun, TypeScript, Bun workspaces; Next.js public/admin; NestJS/Express; PostgreSQL 18 and Drizzle; Better Auth adapter baseline |
 | D5 direction only | Moderate VPS Docker + S3-compatible storage in Vietnam only; production operating choices/AC-09 deferred beyond local MVP, not local security/functional/D4 proof |
-| Current authority | Direct human M1 acceptance2026-10-16; future separate M2 slice-planning thread will be created by Khiêm; S06–S18 execution unapproved |
+| Current authority | Direct human M2 acceptance and documentation/status update2026-10-16; exact source in M2 task acceptance append; S09–S18 execution unapproved |
 | Design artifact | [Administration v0.1+Lucide](design/admin-ui-ux.md), [approved baseline](design/admin-mockup/approved-baseline.json); APPROVED_UI_UX for four representative screens and shared delivered patterns |
 | Delivery workflow | [GCMS-DELIVERY-001 v0.1](delivery-workflow.md), APPROVED_WORKFLOW; apply before planning/executing staged delivery. Saving it does not authorize app work |
-| Application status | M1/S01–S05/AUTH HUMAN_ACCEPTED; M1 technical VERIFIED_LOCAL_UAT_COMPLETE unchanged; M2 as a whole not accepted |
+| Application status | M1/S01–S08/AUTH/M2 HUMAN_ACCEPTED; M2 technical CODE_INTEGRATED + VERIFIED_LOCAL and historical limits unchanged |
 | Historical environment | Local Bun 1.3.1, Python 3.13.3 and Git 2.50.1 observed during setup; not a production compatibility selection |
-| Current bookkeeping effort | AUTH settled writer medium PASS; sensitive auth/database/FE/testing+review native xhigh; desktop coordinator owns contracts/runtime/integration |
+| Current bookkeeping effort | M2 acceptance writer required/requested/observed medium PASS, independently verified by parent; desktop xhigh coordinator owns final integration |
 | Commands and proof | [S02 ledger](tasks/GCMS-S02-001.md#actual-execution-and-handoff--2026-10-16), [runbook](local-development.md), [verification results](verification-results.md); historical S01 retained |
 
 ## Current S05 approved execution

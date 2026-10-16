@@ -117,7 +117,7 @@ describe.skipIf(process.env.S05_INTEGRATION !== '1')('S05 actual restricted work
       const s = await source(`worker-${action}`), w = make({ async capture() { throw new Error('Must never start'); } }), [claim] = await w.claim(s.tenantId);
       if (action === 'suspend') await h.owned(tx => tx`UPDATE gcms_s02.tenant SET status='suspended' WHERE id=${s.tenantId}`);
       if (action === 'revoke') await h.owned(tx => tx`UPDATE gcms_s02.membership SET status='revoked' WHERE tenant_id=${s.tenantId} AND user_id=${h.user('A1')}`);
-      if (action === 'expire') await h.owned(tx => tx`UPDATE gcms_s04.lead SET expires_at=clock_timestamp()-interval '1 second' WHERE tenant_id=${s.tenantId}`);
+      if (action === 'expire') await h.owned(tx => tx`UPDATE gcms_s04.lead SET created_at=now()-interval '181 days',consent_at=now()-interval '181 days',last_activity_at=now()-interval '181 days' WHERE tenant_id=${s.tenantId}`);
       if (action === 'close') { const lead = (await h.page(s)).value.items[0]; expect((await h.command(s, await h.detail(s, lead.id), { kind: 'close', reason: 'spam' })).status).toBe(200); }
       expect(await w.process(claim)).toBe('skipped');
       const row = (await state(s))[0], deliveries = row.deliveries as Array<{ attempts: number }>;

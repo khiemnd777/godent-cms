@@ -1,0 +1,271 @@
+{
+  "runId": "9b4aeade-d69e-4655-b293-6b349d2233ac",
+  "phase": "complete",
+  "checks": {
+    "localFormat": {
+      "status": "PASS",
+      "svgRejectedBeforeUpload": true
+    },
+    "processing": {
+      "status": "PASS",
+      "ordinaryReady": true,
+      "patientReady": true,
+      "malformedRejected": true
+    },
+    "permission": {
+      "status": "PASS",
+      "scope": "service_cover"
+    },
+    "media1440": {
+      "width": 1440,
+      "height": 1050,
+      "scroll": 1440,
+      "controls": [
+        {
+          "tag": "INPUT",
+          "label": "",
+          "inside": true
+        },
+        {
+          "tag": "SELECT",
+          "label": "Ảnh thông thườngTài liệu có nguồn gốc bệnh nhân",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tải ảnh lên",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Làm mới ảnh",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 6c3a593cPNG · 3 KiB · 480 × 300Sẵn sàng",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 95798cb1PNG · 3 KiB · 480 × 300Sẵn sàng",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh dcae5b06Đang kiểm tra · 1 KiBBị từ chối",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Thu hồi quyền truy cập",
+          "inside": true
+        }
+      ]
+    },
+    "media390": {
+      "width": 390,
+      "height": 844,
+      "scroll": 390,
+      "controls": [
+        {
+          "tag": "INPUT",
+          "label": "",
+          "inside": true
+        },
+        {
+          "tag": "SELECT",
+          "label": "Ảnh thông thườngTài liệu có nguồn gốc bệnh nhân",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tải ảnh lên",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Làm mới ảnh",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 6c3a593cPNG · 3 KiB · 480 × 300Sẵn sàng",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 95798cb1PNG · 3 KiB · 480 × 300Sẵn sàng",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh dcae5b06Đang kiểm tra · 1 KiBBị từ chối",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Thu hồi quyền truy cập",
+          "inside": true
+        }
+      ]
+    },
+    "media320": {
+      "width": 320,
+      "height": 844,
+      "scroll": 320,
+      "controls": [
+        {
+          "tag": "INPUT",
+          "label": "",
+          "inside": true
+        },
+        {
+          "tag": "SELECT",
+          "label": "Ảnh thông thườngTài liệu có nguồn gốc bệnh nhân",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tải ảnh lên",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Làm mới ảnh",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 6c3a593cPNG · 3 KiB · 480 × 300Sẵn sàng",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 95798cb1PNG · 3 KiB · 480 × 300Sẵn sàng",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh dcae5b06Đang kiểm tra · 1 KiBBị từ chối",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Thu hồi quyền truy cập",
+          "inside": true
+        }
+      ]
+    },
+    "media768": {
+      "width": 768,
+      "height": 1050,
+      "scroll": 768,
+      "controls": [
+        {
+          "tag": "INPUT",
+          "label": "",
+          "inside": true
+        },
+        {
+          "tag": "SELECT",
+          "label": "Ảnh thông thườngTài liệu có nguồn gốc bệnh nhân",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tải ảnh lên",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Làm mới ảnh",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 6c3a593cPNG · 3 KiB · 480 × 300Sẵn sàng",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 95798cb1PNG · 3 KiB · 480 × 300Sẵn sàng",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh dcae5b06Đang kiểm tra · 1 KiBBị từ chối",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Thu hồi quyền truy cập",
+          "inside": true
+        }
+      ]
+    },
+    "media1024": {
+      "width": 1024,
+      "height": 1050,
+      "scroll": 1024,
+      "controls": [
+        {
+          "tag": "INPUT",
+          "label": "",
+          "inside": true
+        },
+        {
+          "tag": "SELECT",
+          "label": "Ảnh thông thườngTài liệu có nguồn gốc bệnh nhân",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tải ảnh lên",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Làm mới ảnh",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 6c3a593cPNG · 3 KiB · 480 × 300Sẵn sàng",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh 95798cb1PNG · 3 KiB · 480 × 300Sẵn sàng",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Ảnh dcae5b06Đang kiểm tra · 1 KiBBị từ chối",
+          "inside": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Thu hồi quyền truy cập",
+          "inside": true
+        }
+      ]
+    },
+    "coverPublication": {
+      "status": "PASS",
+      "privateDecoded": true,
+      "anonymousDecoded": true
+    },
+    "withdrawal": {
+      "status": "PASS",
+      "derivativeDenied": true,
+      "publicBlockRedacted": true
+    }
+  },
+  "errors": [],
+  "assets": [
+    "95798cb1-94ff-481d-b417-2a12ed6d5b88",
+    "6c3a593c-c763-4942-a27e-5d18be6d0fa1",
+    "dcae5b06-fc2f-4f1c-8f55-3c41a4afcc04"
+  ]
+}

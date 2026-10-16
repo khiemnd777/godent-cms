@@ -1,0 +1,201 @@
+{
+  "owner": "GCMS-M2-LEAD-JOURNEY-v1",
+  "schemaVersion": 1,
+  "runId": "213a09f7-e52c-40d6-849c-111db50d01fe",
+  "fixtureRunId": "9b4aeade-d69e-4655-b293-6b349d2233ac",
+  "tenantId": "88cfcbbb-8425-4647-aa06-428cef3c5197",
+  "serviceId": "a8c049c1-6aae-4d53-890e-a86e8b21ddf6",
+  "sourcePublicationId": "19cc34e6-2237-49b8-bac1-2181775760e6",
+  "leadId": "f2838c34-554d-4c5c-9e33-a07255d984fc",
+  "status": "PASS",
+  "stage": "complete",
+  "createdAt": "2026-10-16T08:11:39.347Z",
+  "updatedAt": "2026-10-16T08:11:39.809Z",
+  "checks": [
+    {
+      "stage": "current_fixture_scope",
+      "status": "PASS",
+      "counts": {
+        "previouslySelectedSyntheticLeads": 3
+      }
+    },
+    {
+      "stage": "normal_http_password_login",
+      "status": "PASS",
+      "httpStatuses": [
+        200
+      ],
+      "flags": {
+        "passwordHttpLogin": true,
+        "currentSession": true,
+        "csrfFromSession": true
+      }
+    },
+    {
+      "stage": "public_source_and_actual_intake",
+      "status": "PASS",
+      "httpStatuses": [
+        200,
+        200
+      ],
+      "counts": {
+        "newlyAcceptedLeads": 1
+      },
+      "flags": {
+        "captchaUsed": false
+      }
+    },
+    {
+      "stage": "s05_assignment_note_and_two_way_contact",
+      "status": "PASS",
+      "counts": {
+        "appliedCommands": 3,
+        "resultingVersion": 4
+      },
+      "flags": {
+        "selfAssigned": true,
+        "noteSaved": true,
+        "twoWayContact": true
+      }
+    },
+    {
+      "stage": "owned_notice_clock_and_positive_scope",
+      "status": "PASS",
+      "counts": {
+        "retentionRevision": 3
+      },
+      "flags": {
+        "onlyOwnedLeadClockChanged": true,
+        "positiveLeadScopeRecorded": true
+      }
+    },
+    {
+      "stage": "actual_s06_notice_cli_and_private_capture",
+      "status": "PASS",
+      "counts": {
+        "eligibleAdministrators": 4,
+        "ownedLeadCaptures": 4
+      },
+      "flags": {
+        "captureDirectory0700": true,
+        "captureFiles0600": true,
+        "genericContentOnly": true,
+        "actualCliEntry": true
+      }
+    },
+    {
+      "stage": "explicit_api_retention_extension",
+      "status": "PASS",
+      "httpStatuses": [
+        200
+      ],
+      "counts": {
+        "resultingVersion": 5
+      },
+      "flags": {
+        "explicitExpiryPreserved": true,
+        "normalDeadlinePreserved": true
+      }
+    },
+    {
+      "stage": "owned_expiry_clock_and_access_denial",
+      "status": "PASS",
+      "httpStatuses": [
+        404,
+        404
+      ],
+      "flags": {
+        "onlyOwnedLeadClockChanged": true,
+        "detailDenied": true,
+        "historyDenied": true
+      }
+    },
+    {
+      "stage": "actual_s06_delete_cli_and_physical_graph",
+      "status": "PASS",
+      "counts": {
+        "zeroRowGraphTables": 10,
+        "deletionDecisions": 1,
+        "redactedDeletionEvents": 1
+      },
+      "flags": {
+        "physicalDeletionVerified": true,
+        "minimalIdentityRetained": true,
+        "noAutomaticCleanup": true
+      }
+    }
+  ],
+  "workerRuns": [
+    {
+      "stage": "actual_s06_notice_cli_and_private_capture",
+      "exitCode": 0,
+      "launch": {
+        "kind": "M2_WORKER_LAUNCH",
+        "slice": "s06",
+        "tenantId": "88cfcbbb-8425-4647-aa06-428cef3c5197",
+        "selectedEnvironmentKeys": [
+          "HOME",
+          "PATH",
+          "S06_WORKER_DATABASE_URL",
+          "TMPDIR"
+        ],
+        "runtime": "1.4.3",
+        "credentialsPrinted": false
+      },
+      "result": {
+        "status": "completed",
+        "transport": "local_capture",
+        "claimed": 6,
+        "captured": 4,
+        "deleted": 2,
+        "failed": 0,
+        "skipped": 0,
+        "audit": {
+          "system": 0,
+          "anonymous": 0,
+          "authenticated": 0
+        }
+      }
+    },
+    {
+      "stage": "actual_s06_delete_cli_and_physical_graph",
+      "exitCode": 0,
+      "launch": {
+        "kind": "M2_WORKER_LAUNCH",
+        "slice": "s06",
+        "tenantId": "88cfcbbb-8425-4647-aa06-428cef3c5197",
+        "selectedEnvironmentKeys": [
+          "HOME",
+          "PATH",
+          "S06_WORKER_DATABASE_URL",
+          "TMPDIR"
+        ],
+        "runtime": "1.4.3",
+        "credentialsPrinted": false
+      },
+      "result": {
+        "status": "completed",
+        "transport": "local_capture",
+        "claimed": 1,
+        "captured": 0,
+        "deleted": 1,
+        "failed": 0,
+        "skipped": 0,
+        "audit": {
+          "system": 0,
+          "anonymous": 0,
+          "authenticated": 0
+        }
+      }
+    }
+  ],
+  "selectedEnvironmentKeys": [
+    "HOME",
+    "PATH",
+    "S06_WORKER_DATABASE_URL",
+    "TMPDIR"
+  ],
+  "cleanupPerformed": false,
+  "privateManifestSha256": "5715df1ea7f71a47e27d3b84a7a4c3f588180ba009a86f1e2648937b8cf6bb0a",
+  "scope": "One newly accepted synthetic lead; normal HTTP password/CSRF/intake/commands/extension, controlled owned-row clock only, actual restricted S06 entry twice, generic private capture, ten-table graph deletion. No retained backlog dispatch or old credential changes."
+}

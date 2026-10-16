@@ -1,0 +1,93 @@
+CHĂM SÓC KHÁCH HÀNG
+Yêu cầu tư vấn
+
+Một nơi để tiếp nhận và phản hồi các yêu cầu từ website.
+
+Đã tải bản đã lưu · YC-000001 · Phiên bản 5.
+
+Chi tiết yêu cầu
+YC-000001
+Danh sách yêu cầu
+Khách minh họa M2 1
+14:39 16/10/26
+0900000101
+Quan tâm
+Chưa chọn dịch vụ
+Trang nguồn
+Tư vấn nha khoa
+Đường dẫn nguồn
+/m2-ui-9b4aeade-a/dich-vu/tu-van-nha-khoa
+Ngôn ngữ / Kênh
+VI / Điện thoại
+
+Lời nhắn
+
+Yêu cầu minh họa tổng hợp, không có dữ liệu khách hàng thật.
+Đã đồng ý để phòng khám liên hệ
+14:39 16/10/26
+Người phụ trách
+Chưa phân công
+S02 A1
+S02 A2
+M2 Synthetic A1
+M2 Synthetic A2
+Trạng thái
+Mới
+Đã phân công
+Đã liên hệ
+Đã đóng
+Lưu cập nhật
+
+Phiên bản 5. Ghi nhận trao đổi thực tế ở phần Thêm hoạt động để chuyển sang Đã liên hệ. Lưu riêng từng thao tác để giữ nội dung đang soạn.
+
+Thêm hoạt động
+Loại hoạt động
+Ghi chú nội bộ
+Ghi nhận liên hệ
+Nội dung ghi chú
+
+0 / 2.000 ký tự · Văn bản thuần, không đính kèm. Ghi chú không kéo dài thời hạn lưu.
+
+Lưu ghi chú
+Lịch sử hoạt động
+Ghi chú nội bộ
+
+M2 A2 version-conflict note
+
+15:07 16/10/26 · M2 Synthetic A2 · Phiên bản 5
+Ghi chú nội bộ
+
+M2 A2 version-conflict note
+
+15:05 16/10/26 · M2 Synthetic A2 · Phiên bản 4
+Ghi chú nội bộ
+
+M2 A2 version-conflict note
+
+14:58 16/10/26 · M2 Synthetic A2 · Phiên bản 3
+Gia hạn thời gian lưu
+
+M2 synthetic agreed follow-up
+Thời hạn mới: 12:00 20/10/27
+
+14:48 16/10/26 · M2 Synthetic A1 · Phiên bản 2
+Tiếp nhận từ website
+14:39 16/10/26 · Website
+Thời hạn lưu
+Thời hạn hiện tại
+12:00 20/10/27
+Thời hạn theo hoạt động
+14:39 14/4/27
+Đã gia hạn đến
+12:00 20/10/27
+
+Xem, ghi chú, phân công hoặc mở lại không kéo dài thời hạn lưu. Dữ liệu đang soạn sẽ đóng khi yêu cầu hết hạn.
+
+Chưa đến lịch cảnh báo · 12:00 13/10/27
+
+Gia hạn thời gian lưu
+
+Thông báo thử: Đang chờ. Chỉ ghi nhận tại máy thử, chưa gửi email thật.
+
+Tất cả quản trị viên của nha khoa đều thấy danh sách này. Phân công để xác định người phụ trách.
+Được xây dựng cùng Godent

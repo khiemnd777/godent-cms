@@ -1,0 +1,16 @@
+{
+  "recordedAt": "2026-10-16T07:52:35.371Z",
+  "slice": "s05races",
+  "status": "FAIL",
+  "suites": [
+    {
+      "file": "s05-races-integration.test.ts",
+      "exitCode": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "assertions": 1
+    }
+  ],
+  "limits": "New owned local synthetic unit/API/PostgreSQL/storage/worker proof. Browser, human acceptance and production are separate."
+}

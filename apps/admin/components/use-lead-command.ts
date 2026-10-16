@@ -1,30 +1,36 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { S05_ROUTES, type LeadCommand, type LeadCommandResult, type LeadDetail } from "../../api/src/contracts/s05";
-import { ApiError, apiRequest } from "../lib/access";
+import { S05_ROUTES, type LeadCommand, type LeadDetail } from "../../api/src/contracts/s05";
+import { ApiError } from "../lib/access";
+import { leadFromSnapshot, requestLeadSnapshot, type LeadSnapshot } from "../lib/lead-response";
 import { leadDenied, leadError } from "../lib/lead-presentation";
 import { prepareVersionedOperation, versionedFailure } from "../lib/versioned-operation";
 import { useSession } from "./session-provider";
+import { useRetentionDeadline } from "./use-retention-deadline";
 
 type CommandInput<T = LeadCommand> = T extends LeadCommand ? Omit<T, "operationId" | "expectedVersion"> : never;
 export function useLeadCommand({ tenantId, lead, onChanged, onUnavailable }: {
-  tenantId: string; lead: LeadDetail; onChanged: (lead: LeadDetail) => void; onUnavailable: () => void;
+  tenantId: string; lead: LeadDetail; onChanged: (snapshot: LeadSnapshot) => void; onUnavailable: (reason?: "expired") => void;
 }) {
   const { data } = useSession();
   const [busy, setBusy] = useState(false); const [error, setError] = useState("");
   const [unknown, setUnknown] = useState(false); const [conflict, setConflict] = useState(false);
-  const [latest, setLatest] = useState<LeadDetail | null>(null);
+  const [latestSnapshot, setLatestSnapshot] = useState<LeadSnapshot | null>(null);
+  const latest = leadFromSnapshot(latestSnapshot);
   const attempt = useRef<LeadCommand | null>(null); const pending = useRef<AbortController | null>(null); const alive = useRef(true);
   useEffect(() => { alive.current = true; return () => { alive.current = false; pending.current?.abort(); }; }, []);
+  useRetentionDeadline(latestSnapshot?.deadline ?? Infinity, () => { setLatestSnapshot(null); onUnavailable("expired"); });
   async function submit(input?: CommandInput) {
     if (busy || conflict || !data || !lead.capabilities.canWrite || (!input && !attempt.current)) return;
     const command = prepareVersionedOperation(attempt.current, input ?? attempt.current!, lead.version) as LeadCommand;
     attempt.current = command; const controller = new AbortController(); pending.current = controller;
     const timer = setTimeout(() => controller.abort(), 15_000); setBusy(true); setError("");
     try {
-      const result = await apiRequest<LeadCommandResult>(S05_ROUTES.commands(tenantId, lead.id), { method: "POST", csrf: data.csrfToken, body: command, signal: controller.signal });
+      const snapshot = await requestLeadSnapshot(S05_ROUTES.commands(tenantId, lead.id), { method: "POST", csrf: data.csrfToken, body: command, signal: controller.signal });
       if (!alive.current) return;
-      attempt.current = null; setUnknown(false); setConflict(false); onChanged(result.lead);
+      attempt.current = null; setUnknown(false); setConflict(false);
+      if (!snapshot) { onUnavailable("expired"); return; }
+      onChanged(snapshot);
     } catch (error) {
       if (!alive.current) return;
       if (leadDenied(error)) { attempt.current = null; onUnavailable(); return; }
@@ -36,10 +42,12 @@ export function useLeadCommand({ tenantId, lead, onChanged, onUnavailable }: {
     } finally { clearTimeout(timer); if (alive.current) setBusy(false); }
   }
   async function compare() {
-    if (busy) return; setBusy(true);
-    try { const current = await apiRequest<LeadDetail>(S05_ROUTES.lead(tenantId, lead.id)); if (alive.current) setLatest(current); }
+    if (busy) return; setBusy(true); setLatestSnapshot(null);
+    const controller = new AbortController(); pending.current = controller;
+    try { const snapshot = await requestLeadSnapshot(S05_ROUTES.lead(tenantId, lead.id), { signal: controller.signal }); if (alive.current) { if (!snapshot) { onUnavailable("expired"); return; } setLatestSnapshot(snapshot); } }
     catch (error) { if (alive.current) { setError(leadError(error)); if (leadDenied(error)) onUnavailable(); } }
     finally { if (alive.current) setBusy(false); }
   }
-  return { busy, error, unknown, conflict, latest, submit, compare };
+  function applyLatest() { if (!alive.current) return; if (!leadFromSnapshot(latestSnapshot)) { setLatestSnapshot(null); onUnavailable("expired"); return; } onChanged(latestSnapshot!); }
+  return { busy, error, unknown, conflict, latest, submit, compare, applyLatest };
 }

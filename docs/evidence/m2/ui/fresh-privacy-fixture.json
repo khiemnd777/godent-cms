@@ -1,0 +1,8 @@
+{
+  "runId": "9b4aeade-d69e-4655-b293-6b349d2233ac",
+  "leadId": "fbbe4732-6ca5-4a15-a38b-485de3b4d402",
+  "tenantId": "88cfcbbb-8425-4647-aa06-428cef3c5197",
+  "expiresAt": "2026-10-16T07:59:24.747Z",
+  "priorExpiredLeadRetained": true,
+  "scope": "One new owned synthetic lead, original expired record unchanged; controlled timestamp only, no system clock change."
+}

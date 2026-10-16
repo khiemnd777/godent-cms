@@ -72,7 +72,7 @@ describe.skipIf(process.env.S05_INTEGRATION !== '1')('S05 actual HTTP/PostgreSQL
   test('expiry/current rights precede replay, and all reads deny expired leads', async () => {
     const s = await h.source('expired'), lead = await h.intake(s), body = { kind: 'note', text: 'one', operationId: randomUUID(), expectedVersion: 1 };
     expect((await h.call(S05_ROUTES.commands(s.tenantId, lead.id), 'POST', body)).status).toBe(200);
-    await h.owned(tx => tx`UPDATE gcms_s04.lead SET expires_at=clock_timestamp()-interval '1 second' WHERE tenant_id=${s.tenantId}`);
+    await h.owned(tx => tx`UPDATE gcms_s04.lead SET created_at=now()-interval '181 days',consent_at=now()-interval '181 days',last_activity_at=now()-interval '181 days' WHERE tenant_id=${s.tenantId}`);
     expect((await h.call(S05_ROUTES.commands(s.tenantId, lead.id), 'POST', body)).status).toBe(404);
     expect((await h.call(S05_ROUTES.lead(s.tenantId, lead.id))).status).toBe(404);
     expect((await h.call(S05_ROUTES.history(s.tenantId, lead.id))).status).toBe(404);
@@ -94,7 +94,10 @@ describe.skipIf(process.env.S05_INTEGRATION !== '1')('S05 actual HTTP/PostgreSQL
   });
   test('search is literal substring with diacritics, and stable cursor/count stay tenant scoped at 10000 rows', async () => {
     const s = await h.source('query'), lead = await h.intake(s); await h.bulk(s, 10000);
-    const count = await h.call<LeadCount>(S05_ROUTES.count(s.tenantId)); expect(count.value).toEqual({ count: 10000, capped: true, newCount: 10000, newCapped: true });
+    const count = await h.call<LeadCount>(S05_ROUTES.count(s.tenantId));
+    const { serverTime, validUntil, ...businessCount } = count.value;
+    expect(businessCount).toEqual({ count: 10000, capped: true, newCount: 10000, newCapped: true });
+    expect(Number.isFinite(Date.parse(serverTime))).toBe(true); expect(validUntil === null || Date.parse(validUntil) > Date.parse(serverTime)).toBe(true);
     expect((await h.page(s, '?q=H%E1%BA%ACu&pageSize=50')).value.items).toHaveLength(50);
     expect((await h.page(s, '?q=%25_&pageSize=50')).value.items).toHaveLength(50);
     const exact = await h.page(s, `?q=${lead.code}`); expect(exact.value.items.map(i => i.id)).toEqual([lead.id]);

@@ -1,0 +1,81 @@
+{
+  "recordedAt": "2026-10-16T08:25:20.121412+00:00",
+  "status": "VERIFIED_LOCAL_READY_FOR_USER_REVIEW",
+  "approval": "M2 v0.1, S06-D01-D04/S07-D01-D06/S08-D01-D04 direct human local scope",
+  "humanM2Acceptance": "PENDING",
+  "checks": {
+    "build": {
+      "status": "PASS",
+      "exitCode": 0,
+      "command": "./node_modules/.bin/bun run build",
+      "provenance": "Actual root final full build after scoped denied CSS repair; reused while app source unchanged"
+    },
+    "typecheck": {
+      "status": "PASS",
+      "exitCode": 0,
+      "command": "./node_modules/.bin/bun run typecheck",
+      "provenance": "Actual root final refresh after harness allowlist literal correction"
+    },
+    "lint": {
+      "status": "PASS",
+      "exitCode": 0,
+      "command": "./node_modules/.bin/bun run lint",
+      "provenance": "Actual root final refresh after harness allowlist literal correction"
+    },
+    "static": {
+      "status": "PASS",
+      "exitCode": 0,
+      "command": "python3 -B scripts/verify_agent_setup.py",
+      "maintainedHashes": 81,
+      "adaptations": 9,
+      "markdownFiles": 133,
+      "localLinks": 1504
+    },
+    "apiSql": {
+      "status": "PASS",
+      "tests": 39,
+      "assertions": 852,
+      "scope": "S06/S07/S08 actual local API/SQL suites only"
+    },
+    "admin": {
+      "status": "PASS",
+      "tests": 51,
+      "assertions": 168
+    },
+    "review": "CLOSED",
+    "preservation": "PASS",
+    "audit": "FAIL_OPEN_LOCAL_DEFERRAL"
+  },
+  "git": {
+    "head": "06d729f30f532db5679b6dfd4de349e9875f4b77",
+    "localOriginMainRef": "06d729f30f532db5679b6dfd4de349e9875f4b77",
+    "liveRemoteFetch": false,
+    "stagedEmpty": true,
+    "worktreeEntries": 248,
+    "expectedUncommittedApprovedM2Work": true,
+    "noGitMutation": true
+  },
+  "evidenceSha256": {
+    "s06-checks-1792136411794.json": "68d613a2f92596caf9cd069c96ae789d5f1f820b309713252b187932c823dc31",
+    "s07-checks-1792137448381.json": "1efeabd054a1aaa50b04ea60a70fa20186dfd5a1fb779c3332153f234a4d9c9c",
+    "s08-checks-1792137528582.json": "6a02ea07d15f14cef31eccd0a320c07270fe7d0b1c25b6cf3dab493a0bd8195e",
+    "lead-journey.json": "d448fa482cb69ab23554646bd7b2d94c245603f3b4e8e2627360878636017a89",
+    "final-diagnostics.json": "ac70705352e29a5c21c20fbeb368539ef7fac906a275746225d76cc466e9dfc3",
+    "root-final-runtime.json": "4c8b94662f6ed3c28fbb982a31a8e1883e88b89c8e2a68de23f8d986c24539de",
+    "preservation-1792138948113.json": "26044e2d465c3a678309b2e5c393e4de039f08a8fccff7056858aaf8c2872e70",
+    "review.md": "c2bbae549fce972e558f16f171ca65574e02f44d576aff003ac4d950efc504fa",
+    "ui/frontend-handoff.md": "560da9c847ca4e8e529721904f1cfe58890358fb87638ec9b3fccb7a5f8b1e4a",
+    "ui/s06-denied-final.json": "ddc8e2b3f553c3d5d1e39d762dd048effebbcdc47b1a6b3e58046197d72cc408",
+    "ui/s06-password-reauth.json": "b827ad691a03688bd0d200a49fbba78339202543625ffeba112ec282db4a9695",
+    "ui/s06-privacy.json": "4d1b1a6912c02f889497e59ac044bce187717792ffddb042addef1e8570d44ab",
+    "ui/s07-media.json": "dd18d4530a4d37a405c881071f3f6c238a284245f9096b15cbb821f63ca6508b",
+    "ui/s07-media-retry.json": "3a9374859f2858064e2aabf9b9e803b572862d4b29517e7a1c9f0c7a940b4133",
+    "ui/s08-editorial.json": "8f0164186a45960bc302993568979e40c80c91dcc07a5f1a603c51e7fb836d9e",
+    "ui/final-visual.json": "43b5bc929d19bf5175410e1bc55588efdaeb5b1911bd87556085eb4dbf72bb7a"
+  },
+  "limits": [
+    "Detailed retained historical FAIL/Unknown/NOT_RUN in final task ledger",
+    "Known-secret scan separately recorded and refreshed after this summary",
+    "No production, deployment, external delivery, human acceptance or full-MVP claim"
+  ]
+}

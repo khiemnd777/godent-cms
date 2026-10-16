@@ -1,0 +1,207 @@
+{
+  "phase": "tenant-denied",
+  "runId": "9b4aeade-d69e-4655-b293-6b349d2233ac",
+  "checks": {
+    "width320": {
+      "width": 320,
+      "height": 844,
+      "scroll": 360,
+      "elements": [
+        {
+          "tag": "DIV",
+          "className": "state-panel",
+          "left": 12,
+          "right": 308,
+          "width": 296,
+          "whiteSpace": "normal",
+          "overflowWrap": "normal",
+          "inside": true
+        },
+        {
+          "tag": "DIV",
+          "className": "workspace-options",
+          "left": 32,
+          "right": 288,
+          "width": 256,
+          "whiteSpace": "normal",
+          "overflowWrap": "normal",
+          "inside": true
+        },
+        {
+          "tag": "A",
+          "className": "btn",
+          "label": "M2 Synthetic UI B 9b4aeade-d69e-4655-b293-6b349d2233ac",
+          "left": -40.375,
+          "right": 360.390625,
+          "width": 400.765625,
+          "whiteSpace": "nowrap",
+          "overflowWrap": "normal",
+          "inside": false
+        }
+      ]
+    },
+    "width390": {
+      "width": 390,
+      "height": 844,
+      "scroll": 395,
+      "elements": [
+        {
+          "tag": "DIV",
+          "className": "state-panel",
+          "left": 17,
+          "right": 373,
+          "width": 356,
+          "whiteSpace": "normal",
+          "overflowWrap": "normal",
+          "inside": true
+        },
+        {
+          "tag": "DIV",
+          "className": "workspace-options",
+          "left": 37,
+          "right": 353,
+          "width": 316,
+          "whiteSpace": "normal",
+          "overflowWrap": "normal",
+          "inside": true
+        },
+        {
+          "tag": "A",
+          "className": "btn",
+          "label": "M2 Synthetic UI B 9b4aeade-d69e-4655-b293-6b349d2233ac",
+          "left": -5.375,
+          "right": 395.390625,
+          "width": 400.765625,
+          "whiteSpace": "nowrap",
+          "overflowWrap": "normal",
+          "inside": false
+        }
+      ]
+    },
+    "width768": {
+      "width": 768,
+      "height": 1050,
+      "scroll": 768,
+      "elements": [
+        {
+          "tag": "DIV",
+          "className": "state-panel",
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "whiteSpace": "normal",
+          "overflowWrap": "normal",
+          "inside": true
+        },
+        {
+          "tag": "DIV",
+          "className": "workspace-options",
+          "left": 46,
+          "right": 722,
+          "width": 676,
+          "whiteSpace": "normal",
+          "overflowWrap": "normal",
+          "inside": true
+        },
+        {
+          "tag": "A",
+          "className": "btn",
+          "label": "M2 Synthetic UI B 9b4aeade-d69e-4655-b293-6b349d2233ac",
+          "left": 183.609375,
+          "right": 584.375,
+          "width": 400.765625,
+          "whiteSpace": "nowrap",
+          "overflowWrap": "normal",
+          "inside": true
+        }
+      ]
+    },
+    "width1024": {
+      "width": 1024,
+      "height": 1050,
+      "scroll": 1024,
+      "elements": [
+        {
+          "tag": "DIV",
+          "className": "state-panel",
+          "left": 238,
+          "right": 996,
+          "width": 758,
+          "whiteSpace": "normal",
+          "overflowWrap": "normal",
+          "inside": true
+        },
+        {
+          "tag": "DIV",
+          "className": "workspace-options",
+          "left": 260,
+          "right": 974,
+          "width": 714,
+          "whiteSpace": "normal",
+          "overflowWrap": "normal",
+          "inside": true
+        },
+        {
+          "tag": "A",
+          "className": "btn",
+          "label": "M2 Synthetic UI B 9b4aeade-d69e-4655-b293-6b349d2233ac",
+          "left": 416.609375,
+          "right": 817.375,
+          "width": 400.765625,
+          "whiteSpace": "nowrap",
+          "overflowWrap": "normal",
+          "inside": true
+        }
+      ]
+    },
+    "width1440": {
+      "width": 1440,
+      "height": 1050,
+      "scroll": 1440,
+      "elements": [
+        {
+          "tag": "DIV",
+          "className": "state-panel",
+          "left": 268,
+          "right": 1404,
+          "width": 1136,
+          "whiteSpace": "normal",
+          "overflowWrap": "normal",
+          "inside": true
+        },
+        {
+          "tag": "DIV",
+          "className": "workspace-options",
+          "left": 290,
+          "right": 1382,
+          "width": 1092,
+          "whiteSpace": "normal",
+          "overflowWrap": "normal",
+          "inside": true
+        },
+        {
+          "tag": "A",
+          "className": "btn",
+          "label": "M2 Synthetic UI B 9b4aeade-d69e-4655-b293-6b349d2233ac",
+          "left": 635.609375,
+          "right": 1036.375,
+          "width": 400.765625,
+          "whiteSpace": "nowrap",
+          "overflowWrap": "normal",
+          "inside": true
+        }
+      ]
+    }
+  },
+  "errors": [
+    {
+      "phase": "tenant-denied",
+      "name": "Error",
+      "assertion": "DENIED_PAGE_OVERFLOW",
+      "strict": false,
+      "detached": false,
+      "timeout": false,
+      "rawDetailsRedacted": true
+    }
+  ]
+}

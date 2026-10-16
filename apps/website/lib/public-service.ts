@@ -9,8 +9,14 @@ export async function readPublicService(tenantSlug: string, serviceSlug: string)
   if (!response.ok) throw new Error("Public content is temporarily unavailable");
   const page = await response.json() as PublicServicePage;
   try {
-    if (page.schemaVersion !== 1 || page.locale !== "vi" || !Number.isSafeInteger(page.publicationVersion) || page.publicationVersion < 1 || !Number.isFinite(Date.parse(page.publishedAt)) || page.service.slug !== serviceSlug || page.canonicalUrl !== `${PUBLIC_SITE_ORIGIN}/${tenantSlug}/dich-vu/${serviceSlug}`) throw new Error();
+    if (![1,2].includes(page.schemaVersion) || page.locale !== "vi" || !Number.isSafeInteger(page.publicationVersion) || page.publicationVersion < 1 || !Number.isFinite(Date.parse(page.publishedAt)) || page.service.slug !== serviceSlug || page.canonicalUrl !== `${PUBLIC_SITE_ORIGIN}/${tenantSlug}/dich-vu/${serviceSlug}`) throw new Error();
     parseServiceInput(page.service); boundedText(page.site.name, 160, true); boundedText(page.site.footer.intro, 500); parseRichText(page.site.footer.body, 2000);
+    if(page.coverMedia) {
+      const media=page.coverMedia,ref=page.service.coverImage;
+      if(!ref||media.assetId!==ref.assetId||media.revision!==ref.revision||media.alt!==ref.alt||media.profile!=='cover'||
+        !Number.isSafeInteger(media.width)||!Number.isSafeInteger(media.height)||media.width<1||media.height<1||media.width>1600||media.height>1600||
+        !/^\/api\/public\/media\/[a-f0-9-]{36}\/[a-f0-9-]{36}\/[1-9][0-9]*\/cover$/.test(media.path)||!media.path.includes(`/${ref.assetId}/${ref.revision}/`)) throw new Error();
+    }
   } catch { throw new Error("Invalid public publication"); }
   return page;
 }

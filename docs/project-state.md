@@ -1,5 +1,7 @@
 # Project state
 
+**M2 current result — HUMAN_ACCEPTED — 2026-10-16.** Khiêm directly accepted M2 (inherited S05 and newly implemented S06–S08); [full human acceptance](tasks/GCMS-M2-001.md#human-m2-acceptance--2026-10-16) records the exact instruction and provenance. Technical status remains CODE_INTEGRATED + VERIFIED_LOCAL within the [final local handoff](tasks/GCMS-M2-001.md#final-local-handoff--2026-10-16): API/SQL39tests/852assertions, admin51/168 and the recorded bounded local journeys/checks. Historical FAIL/Unknown/NOT_RUN remain unchanged; acceptance adds no runtime or full-MVP/Production proof. Audit braces stays FAIL/open under the existing local-M2 deferral, reassess2026-10-22 or earlier patch/dependency/exposure change and before production. S01–S05/AUTH/M1 acceptance is unchanged; S09–S18 execution is unapproved. No commit/push/deploy. Desktop `/root` in thread01a1437b-7cd2-7b23-92ef-70226da96f3f retains accountability. Earlier pending/unapproved statements below are historical checkpoints, superseded by this header only within the approved local M2 scope.
+
 **M1 result — HUMAN_ACCEPTED — 2026-10-16.** Khiêm directly stated “Nghiệm thu Chặng 1.”; [full acceptance and next-stage direction](tasks/GCMS-M1-UAT-001.md#human-m1-acceptance-and-next-stage-direction--2026-10-16) record the source. Technical status remains VERIFIED_LOCAL_UAT_COMPLETE with the existing scoped local evidence and historical FAIL/NOT_RUN limits. S01–S05 and AUTH remain HUMAN_ACCEPTED. Khiêm will create a separate thread to plan each slice of all M2; M2 as a whole is not accepted, and S06–S18 execution remains unapproved. Acceptance adds no runtime proof, Git delivery or deployment authority.
 
 **AUTH result — HUMAN_ACCEPTED.** Khiêm directly stated “Nghiệm thu AUTH.” in the latest [approval](tasks/GCMS-AUTH-001.md#human-acceptance-and-m1-closure--2026-10-16). Password-only implementation and prior scoped API9tests/79assertions/build/type/lint/browser/worker evidence remain valid. Historical failed/NOT_RUN records are preserved; MFA-only cases are SUPERSEDED, not PASS. Natural eight-hour waiting and the exact unavailable historical c300/tenant navigation remain NOT_RUN as execution modes; controlled boundary and accessible equivalent-component proof satisfy the criteria. `braces` audit stays FAIL/open under the bounded local deferral, reassessment2026-10-22 or earlier patch/dependency/exposure/before production. No dependency upgrade, Git delivery, deployment, full-MVP/production or S06+ authority follows.
@@ -8,12 +10,12 @@
 | --- | --- |
 | Updated | 2026-10-16, Asia/Ho_Chi_Minh |
 | Accountable owner | Desktop main / accountable Project Coordinator and shared-document owner |
-| Execution writer | Bounded `/root/m1_acceptance_record`, native kit-implementer/medium, acceptance/current-pointer documentation only; desktop retains accountability |
-| Plan revision | Master APPROVED_PLAN v0.2/18 unchanged rows/five milestones; S01–S05 HUMAN_ACCEPTED; [S05 v0.1](tasks/GCMS-S05-001.md) separately approved local execution; S06–S18 unapproved |
-| Mode / state | M1 HUMAN_ACCEPTED; technical VERIFIED_LOCAL_UAT_COMPLETE unchanged; S01–S05 and AUTH HUMAN_ACCEPTED; M2 as a whole not accepted |
-| Current authority | Direct human “Nghiệm thu Chặng 1.” and future separate M2 planning-thread direction,2026-10-16; [full provenance](tasks/GCMS-M1-UAT-001.md#human-m1-acceptance-and-next-stage-direction--2026-10-16) |
-| Authorized actions | Record settled M1 acceptance/current pointers only; no new runtime or later-slice execution |
-| Latest restriction | No dependency install/upgrade/external mail/production/global/paid/real data/destructive reset/Git/commit/push/deploy/S06+; overall new UAT≤2tenants/8accounts/minimumleads; old credentials unchanged |
+| Execution writer | Bounded `/root/m2_acceptance_record` native kit-implementer/medium for acceptance documentation; desktop `/root` retains accountability and final integration |
+| Plan revision | Master APPROVED_PLAN v0.2/18 unchanged planning rows/five milestones; S01–S08/AUTH/M1 and M2 HUMAN_ACCEPTED within recorded local scope |
+| Mode / state | M2 HUMAN_ACCEPTED; technical CODE_INTEGRATED + VERIFIED_LOCAL and all recorded proof limits unchanged |
+| Current authority | Direct human M2 acceptance and documentation/status update,2026-10-16 Asia/Ho_Chi_Minh; full quote/provenance in GCMS-M2-001 acceptance append |
+| Authorized actions | Record settled M2 acceptance/current pointers and maintained hashes only; no new runtime or implementation work follows acceptance |
+| Latest restriction | No Git/commit/push/deploy/external delivery/production/DNS/TLS/global/paid/real data/destructive reset; preserve old data/credentials/backlog/evidence; S09–S18 execution unapproved |
 | Local endpoints | Admin 5891, website 5892, API 5890, Redis 5889, PostgreSQL 5888, S3 API 5887, optional console 5886; host bindings 127.0.0.1; architecture table canonical; locally verified; see dated S01 evidence; no console5886 |
 | Shared admin app | One Next5891 with Platform Admin `/platform` and Tenant CMS `/cms`, distinct layouts/navigation and shared UI/API5890; separate public Next5892; backend actor/tenant/resource/action checks, no platform-private-lead access |
 | S01 pack | Runnable both admin layouts/header/sidebar/content/navigation/responsive/basic states + public shell and bounded Bun/runtime/connectivity proof; no real auth/tenant selection/CMS CRUD or tenant data/schema/two-tenant fixtures; S02 access/private draft, S03 service editor/publish |
@@ -30,12 +32,12 @@
 | Remaining product decisions | S04 D01–D10 approved; detailed contracts settle T01; later themes/catalog/localization/custom domains remain separate scope |
 | Production / AC-09 | Deferred beyond local setup/development/MVP acceptance; direction only moderate VPS Docker + S3-compatible storage in Vietnam; provider/SKU/DB placement/budget/HA/workload/recovery/backup/ops unselected; no launch claim |
 | Local proof still required | Applicable functional/security/tenant-isolation/publication/fallback/media/leads/quotas/lifecycle/D4 criteria; local AC-07 resolver proof separate from later authorized live DNS/TLS; full MVP breadth retained |
-| Current effort | Acceptance writer medium required/requested/observed PASS; native kit-implementer/inherited gpt-6.1-sol; desktop accountable |
-| Current verification | M1 VERIFIED_LOCAL_UAT_COMPLETE within existing ledger scope; acceptance adds no runtime proof; historical FAIL/NOT_RUN and audit FAIL/open retained |
+| Current effort | Root gpt-6.1-sol/xhigh observed; sensitive native S06/S07/FE/reviewer xhigh role/parent/model/effort PASS |
+| Current verification | API/SQL39tests/852assertions; admin51/168; actual isolated decoder/storage/worker and authenticated browser/five-width proof PASS; independent review CLOSED; build/type/lint/preservation/known-secret/static checks PASS; audit FAIL/open |
 | Historical evidence | GCMS-DOCS-001–004 desktop static/source integration PASS; v0.1 three native planning handoffs high/xhigh/xhigh completed; no new independent review of saved v0.2 or app |
-| Application / owners | S05 API+Data+worker/FE/reviewer native xhigh per actual task/runtime; desktop root/runtime/integration; settled docs medium |
+| Application / owners | Root shared contracts/S08/runtime/lockfile/final integration; native xhigh S06 retention, S07 media, FE and independent reviewer; exact provenance in task |
 | Git | No Git writes/commit/push/delivery authorized; ordinary verifier may read repository metadata |
-| Next action | Khiêm will create a separate thread to plan each slice of all M2; S05 stays accepted; S06–S18 execution unapproved; no thread creation or M2 execution now |
+| Next action | M2 acceptance recorded; desktop `/root` owns documentation integration. Await separate direct scope for S09–S18 or Git/deployment; no further action is implied |
 
 ## Current S05 approved execution
 

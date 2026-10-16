@@ -13,5 +13,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 export default async function ServicePage({ params }: Props) {
   const { tenant, slug } = await params; const page = await loadPage(tenant, slug); if (!page) notFound();
-  return <><a className="skip" href="#main-content">Đến nội dung chính</a><header><span className="site-name">{page.site.name}</span></header><main id="main-content" className="service-page"><article><p className="eyebrow">Dịch vụ</p><h1>{page.service.title}</h1>{page.service.summary && <p className="service-summary">{page.service.summary}</p>}<RichText document={page.service.body}/></article><ConsultationForm tenantSlug={tenant} serviceSlug={slug} publicationId={page.publicationId}/></main><footer className="site-footer">{page.site.footer.intro && <p>{page.site.footer.intro}</p>}<RichText document={page.site.footer.body}/></footer></>;
+  return <><a className="skip" href="#main-content">Đến nội dung chính</a><header><span className="site-name">{page.site.name}</span></header><main id="main-content" className="service-page"><article><p className="eyebrow">Dịch vụ</p><h1>{page.service.title}</h1>{page.service.summary && <p className="service-summary">{page.service.summary}</p>}{page.coverMedia &&
+    // The eligibility gateway must handle each image request; no framework image cache may bypass revocation.
+    // eslint-disable-next-line @next/next/no-img-element
+    <img className="service-cover" src={`http://127.0.0.1:5890${page.coverMedia.path}`} alt={page.coverMedia.alt} width={page.coverMedia.width} height={page.coverMedia.height}/>}
+    <RichText document={page.service.body}/></article><ConsultationForm tenantSlug={tenant} serviceSlug={slug} publicationId={page.publicationId}/></main><footer className="site-footer">{page.site.footer.intro && <p>{page.site.footer.intro}</p>}<RichText document={page.site.footer.body}/></footer></>;
 }

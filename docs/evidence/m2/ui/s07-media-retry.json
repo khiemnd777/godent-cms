@@ -1,0 +1,23 @@
+{
+  "phase": "complete",
+  "runId": "9b4aeade-d69e-4655-b293-6b349d2233ac",
+  "assetId": "6c3a593c-c763-4942-a27e-5d18be6d0fa1",
+  "checks": {
+    "failed": {
+      "status": "PASS",
+      "actualWorkerFault": true,
+      "rightsDenied": true
+    },
+    "pending": {
+      "status": "PASS",
+      "normalUIKeyboardEnter": true,
+      "rightsDenied": true
+    },
+    "completed": {
+      "status": "PASS",
+      "rightsDenied": true,
+      "noRegrant": true
+    }
+  },
+  "errors": []
+}

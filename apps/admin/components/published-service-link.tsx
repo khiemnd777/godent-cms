@@ -9,7 +9,7 @@ export function PublishedServiceLink({ tenantId }: { tenantId: string | null }) 
   useEffect(() => { const refresh = () => setRevision(value => value + 1); window.addEventListener("godent:publication-updated", refresh); return () => window.removeEventListener("godent:publication-updated", refresh); }, []);
   useEffect(() => {
     const match = /^\/cms\/services\/([0-9a-f-]{36})(?:\/preview)?$/.exec(pathname); const controller = new AbortController();
-    if (tenantId && match) Promise.all([apiRequest<PublicationService>(S03_ROUTES.service(tenantId, match[1]), { signal: controller.signal }), apiRequest<SiteDraft>(S03_ROUTES.site(tenantId), { signal: controller.signal })]).then(([service, site]) => { if (!controller.signal.aborted) setDestination(service.publicationVersion && service.slug && site.slug ? `${PUBLIC_SITE_ORIGIN}/${site.slug}/dich-vu/${service.slug}` : null); }).catch(() => { if (!controller.signal.aborted) setDestination(null); });
+    if (tenantId && match) Promise.all([apiRequest<PublicationService>(S03_ROUTES.service(tenantId, match[1]), { signal: controller.signal }), apiRequest<SiteDraft>(S03_ROUTES.site(tenantId), { signal: controller.signal })]).then(([service, site]) => { if (!controller.signal.aborted) setDestination(service.activePublication && service.slug && site.slug ? `${PUBLIC_SITE_ORIGIN}/${site.slug}/dich-vu/${service.slug}` : null); }).catch(() => { if (!controller.signal.aborted) setDestination(null); });
     return () => controller.abort();
   }, [pathname, tenantId, revision]);
   const onService = /^\/cms\/services\/[0-9a-f-]{36}(?:\/preview)?$/.test(pathname);

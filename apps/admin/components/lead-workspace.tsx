@@ -3,6 +3,9 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowLeft, RefreshCw, Users } from "lucide-react";
 import { S05_ROUTES, type LeadCount, type LeadDetail as Detail, type LeadListItem, type LeadPage, type LeadQuery } from "../../api/src/contracts/s05";
 import { ApiError, apiRequest } from "../lib/access";
+import { leadFromSnapshot, requestLeadSnapshot, type LeadSnapshot } from "../lib/lead-response";
+import { deadlineFromResponse, isCurrentResponse } from "../lib/retention-input";
+import { useRetentionDeadline } from "./use-retention-deadline";
 import { leadDate, leadDenied, leadError, leadStatus } from "../lib/lead-presentation";
 import { countLabel, queryParameters } from "../lib/lead-input";
 import { useWorkspace } from "./workspace";
@@ -13,7 +16,7 @@ import { requestGuardedAction, UnsavedChanges } from "./unsaved-changes";
 
 export function LeadWorkspace() {
   const { membership } = useWorkspace(); const tenantId = membership!.tenantId;
-  const [page, setPage] = useState<LeadPage>({ items: [], nextCursor: null });
+  const [page, setPage] = useState<LeadPage>({ items: [], nextCursor: null, serverTime: new Date().toISOString(), validUntil: null });
   const [cursor, setCursor] = useState<string | null>(null); const [previousCursors, setPreviousCursors] = useState<(string | null)[]>([]);
   const [selected, setSelected] = useState<string | null>(null); const [detail, setDetail] = useState<Detail | null>(null);
   const [listBusy, setListBusy] = useState(true); const [detailBusy, setDetailBusy] = useState(false);
@@ -24,59 +27,68 @@ export function LeadWorkspace() {
   const [filtered, setFiltered] = useState(false);
   const listRequest = useRef<AbortController | null>(null); const detailRequest = useRef<AbortController | null>(null);
   const countRequest = useRef<AbortController | null>(null); const appliedQuery = useRef<LeadQuery>({ pageSize: 20 });
+  const [pageDeadline, setPageDeadline] = useState(Infinity); const [countDeadline, setCountDeadline] = useState(Infinity); const [privacyRevision, setPrivacyRevision] = useState(0);
+  const [detailDeadline, setDetailDeadline] = useState(Infinity); const [expiryRevision, setExpiryRevision] = useState(0);
   const rows = useRef(new Map<string, HTMLButtonElement>());
-  const unavailable = useCallback(() => {
+  const unavailable = useCallback((reason?: "expired") => {
     listRequest.current?.abort(); detailRequest.current?.abort(); countRequest.current?.abort();
-    setPage({ items: [], nextCursor: null }); setDetail(null); setSelected(null); setDirty(false); setNotice("");
-    setCount(null); setCountError("");
+    setPage({ items: [], nextCursor: null, serverTime: new Date().toISOString(), validUntil: null }); setDetail(null); setDetailDeadline(Infinity); setSelected(null); setDirty(false); setNotice(reason === "expired" ? "Yêu cầu đã hết thời hạn truy cập. Thông tin và nội dung đang soạn đã được đóng." : "");
+    setCount(null); setCountError(""); setPageDeadline(Infinity); setCountDeadline(Infinity); setPrivacyRevision(value => value + 1);
     setListBusy(false); setDetailBusy(false); setListError(new ApiError(404)); setDetailError(null);
+    if (reason === "expired") { setExpiryRevision(value => value + 1); window.dispatchEvent(new Event("godent:leads-updated")); }
   }, []);
   const loadCount = useCallback(async () => {
-    countRequest.current?.abort(); const controller = new AbortController(); countRequest.current = controller; setCount(null); setCountError("");
-    try { const next = await apiRequest<LeadCount>(`${S05_ROUTES.count(tenantId)}?${queryParameters(appliedQuery.current, null, true)}`, { signal: controller.signal }); if (!controller.signal.aborted) setCount(next); }
+    countRequest.current?.abort(); const controller = new AbortController(); countRequest.current = controller; setCount(null); setCountError(""); const started = Date.now();
+    try { const next = await apiRequest<LeadCount>(`${S05_ROUTES.count(tenantId)}?${queryParameters(appliedQuery.current, null, true)}`, { signal: controller.signal }); if (!controller.signal.aborted) { const deadline = deadlineFromResponse(next.serverTime, next.validUntil, started); if (isCurrentResponse(deadline)) { setCount(next); setCountDeadline(deadline); } else setCountError("Thời hạn truy cập đã thay đổi. Thử lại số lượng."); } }
     catch (error) { if (!controller.signal.aborted) { setCountError(leadError(error)); if (leadDenied(error)) unavailable(); } }
   }, [tenantId, unavailable]);
   const load = useCallback(async (after: string | null, preserve?: Detail) => {
     listRequest.current?.abort(); detailRequest.current?.abort();
     const controller = new AbortController(); listRequest.current = controller;
-    setListBusy(true); setListError(null); setPage({ items: [], nextCursor: null });
-    if (!preserve) { setDetail(null); setSelected(null); setDetailOpen(false); setDirty(false); }
+    const started = Date.now(); setListBusy(true); setListError(null); setPage({ items: [], nextCursor: null, serverTime: new Date().toISOString(), validUntil: null });
+    if (!preserve) { setDetail(null); setDetailDeadline(Infinity); setSelected(null); setDetailOpen(false); setDirty(false); }
     try {
       const next = await apiRequest<LeadPage>(`${S05_ROUTES.leads(tenantId)}?${queryParameters(appliedQuery.current, after)}`, { signal: controller.signal });
-      if (!controller.signal.aborted) { setPage(next); if (!preserve) setSelected(next.items[0]?.id ?? null); else if (!next.items.some(item => item.id === preserve.id)) setNotice(`Đã lưu ${preserve.code}. Yêu cầu không còn trong trang hoặc bộ lọc hiện tại. Chi tiết yêu cầu vừa lưu vẫn đang mở.`); }
-    } catch (error) { if (!controller.signal.aborted) { setListError(error); setDetail(null); if (leadDenied(error)) unavailable(); } }
+      if (!controller.signal.aborted) { const deadline = deadlineFromResponse(next.serverTime, next.validUntil, started); if (!isCurrentResponse(deadline)) { setListError(new ApiError(410)); return; } setPageDeadline(deadline); setPage(next); if (!preserve) setSelected(next.items[0]?.id ?? null); else if (!next.items.some(item => item.id === preserve.id)) setNotice(`Đã lưu ${preserve.code}. Yêu cầu không còn trong trang hoặc bộ lọc hiện tại. Chi tiết yêu cầu vừa lưu vẫn đang mở.`); }
+    } catch (error) { if (!controller.signal.aborted) { setListError(error); setDetail(null); setDetailDeadline(Infinity); if (leadDenied(error)) unavailable(); } }
     finally { if (!controller.signal.aborted) setListBusy(false); }
   }, [tenantId, unavailable]);
-  useEffect(() => { let active = true; void Promise.resolve().then(() => { if (active) return Promise.all([load(null), loadCount()]); }); return () => { active = false; listRequest.current?.abort(); detailRequest.current?.abort(); countRequest.current?.abort(); }; }, [load, loadCount]);
+  useEffect(() => { let active = true; void Promise.resolve().then(() => { if (active) return Promise.all([load(null), loadCount()]); }); return () => { active = false; listRequest.current?.abort(); detailRequest.current?.abort(); countRequest.current?.abort(); }; }, [load, loadCount, expiryRevision]);
   useEffect(() => {
     if (!selected) return;
     const controller = new AbortController(); detailRequest.current?.abort(); detailRequest.current = controller;
     void Promise.resolve().then(async () => {
       if (controller.signal.aborted) return;
-      setDetail(null); setDetailBusy(true); setDetailError(null); setDirty(false);
-      try { const next = await apiRequest<Detail>(S05_ROUTES.lead(tenantId, selected), { signal: controller.signal }); if (!controller.signal.aborted) setDetail(next); }
+      setDetail(null); setDetailDeadline(Infinity); setDetailBusy(true); setDetailError(null); setDirty(false);
+      try { const snapshot = await requestLeadSnapshot(S05_ROUTES.lead(tenantId, selected), { signal: controller.signal }); if (!controller.signal.aborted) { if (snapshot) { setDetail(snapshot.lead); setDetailDeadline(snapshot.deadline); } else unavailable("expired"); } }
       catch (error) { if (!controller.signal.aborted) { if (leadDenied(error)) unavailable(); else setDetailError(error); } }
       finally { if (!controller.signal.aborted) setDetailBusy(false); }
     });
     return () => controller.abort();
   }, [selected, tenantId, revision, unavailable]);
-  useEffect(() => {
-    if (!detail) return; let timer: ReturnType<typeof setTimeout>;
-    const check = () => { const remaining = Date.parse(detail.expiresAt) - Date.now(); if (remaining <= 0) unavailable(); else timer = setTimeout(check, Math.min(remaining, 2_147_483_647)); };
-    check(); return () => clearTimeout(timer);
-  }, [detail, unavailable]);
-  const changed = useCallback((lead: Detail) => {
-    setDetail(lead); setEditorRevision(value => value + 1); setDirty(false); setNotice(`Đã tải bản đã lưu · ${lead.code} · Phiên bản ${lead.version}.`);
+  useRetentionDeadline(Math.min(pageDeadline, countDeadline, detailDeadline), () => {
+    listRequest.current?.abort(); countRequest.current?.abort(); detailRequest.current?.abort();
+    setPageDeadline(Infinity); setCountDeadline(Infinity); setCount(null);
+    setPage({ items: [], nextCursor: null, serverTime: new Date().toISOString(), validUntil: null });
+    const expired = !!detail && !isCurrentResponse(detailDeadline);
+    if (expired) { setDetail(null); setDetailDeadline(Infinity); setSelected(null); setDetailOpen(false); setDirty(false); setDetailError(null); setPrivacyRevision(value => value + 1); setNotice("Yêu cầu đã hết thời hạn truy cập. Thông tin và nội dung đang soạn đã được đóng."); }
+    void load(cursor, !expired && detail ? detail : undefined); void loadCount();
+    window.dispatchEvent(new Event("godent:leads-updated"));
+  });
+  const changed = useCallback((snapshot: LeadSnapshot) => {
+    const lead = leadFromSnapshot(snapshot);
+    if (!lead) { unavailable("expired"); return; }
+    setDetailDeadline(snapshot.deadline); setDetail(lead); setEditorRevision(value => value + 1); setDirty(false); setNotice(`Đã tải bản đã lưu · ${lead.code} · Phiên bản ${lead.version}.`);
     void load(cursor, lead); void loadCount(); window.dispatchEvent(new Event("godent:leads-updated"));
-  }, [load, loadCount, cursor]);
+  }, [load, loadCount, cursor, unavailable]);
   function select(item: LeadListItem) { if (item.id === selected) { setDetailOpen(true); return; } requestGuardedAction(() => { setNotice(""); setSelected(item.id); setDetailOpen(true); }); }
-  function back() { requestGuardedAction(() => { setDetailOpen(false); setDetail(null); setRevision(value => value + 1); requestAnimationFrame(() => { if (selected) rows.current.get(selected)?.focus(); }); }); }
+  function back() { requestGuardedAction(() => { setDetailOpen(false); setDetail(null); setDetailDeadline(Infinity); setRevision(value => value + 1); requestAnimationFrame(() => { if (selected) rows.current.get(selected)?.focus(); }); }); }
   function refresh() { requestGuardedAction(() => { setNotice(""); setCursor(null); setPreviousCursors([]); void load(null); void loadCount(); }); }
   function apply(query: LeadQuery, confirmed?: () => void) { requestGuardedAction(() => { confirmed?.(); appliedQuery.current = query; setFiltered(!!(query.q || query.status || query.assignee || query.from || query.to)); setNotice(""); setCursor(null); setPreviousCursors([]); void load(null); void loadCount(); }); }
   function nextPage() { if (page.nextCursor) requestGuardedAction(() => { setPreviousCursors(history => [...history, cursor]); setCursor(page.nextCursor); void load(page.nextCursor); }); }
   function previousPage() { requestGuardedAction(() => { const previous = previousCursors.at(-1) ?? null; setPreviousCursors(history => history.slice(0, -1)); setCursor(previous); void load(previous); }); }
   const currentDetail = detail?.id === selected ? detail : null;
-  return <><UnsavedChanges dirty={dirty} description="Nội dung đang soạn hoặc thao tác chưa xác định kết quả sẽ không được giữ trên trang mới. Kiểm tra bản đã lưu trước khi gửi lại." continueLabel="Tiếp tục chỉnh sửa"/>
+  return <><UnsavedChanges key={privacyRevision} dirty={dirty} description="Nội dung đang soạn hoặc thao tác chưa xác định kết quả sẽ không được giữ trên trang mới. Kiểm tra bản đã lưu trước khi gửi lại." continueLabel="Tiếp tục chỉnh sửa"/>
     <div className="page-head"><div><div className="eyebrow">Chăm sóc khách hàng</div><h1>Yêu cầu tư vấn</h1><p>Một nơi để tiếp nhận và phản hồi các yêu cầu từ website.</p></div></div>
     {notice && <p className="notice" role="status">{notice}</p>}
     <div className={`leads-layout${detailOpen ? " detail-open" : ""}`}>

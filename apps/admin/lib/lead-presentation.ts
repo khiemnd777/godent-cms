@@ -24,6 +24,7 @@ export function historySummary(event: LeadHistoryEvent): string {
     case "note": return "Ghi chú nội bộ";
     case "contact": return `${event.payload.channel === "phone" ? "Điện thoại" : "Email"} · ${contactOutcome[event.payload.outcome]}`;
     case "close": return `Đóng yêu cầu · ${closureReason[event.payload.reason]}`;
+    case "retention_extended": return "Gia hạn thời gian lưu";
     case "reopen": return `Mở lại · ${leadStatus[event.payload.status].label}`;
   }
 }

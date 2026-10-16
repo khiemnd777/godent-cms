@@ -3,6 +3,15 @@ import { apiRequest, ApiError } from "./access";
 const originalFetch = globalThis.fetch;
 afterEach(() => { globalThis.fetch = originalFetch; });
 describe("private request transport", () => {
+  it("keeps the browser multipart boundary and CSRF header for bounded media uploads", async () => {
+    const body = new FormData(); body.set("file", new File(["synthetic"], "test.png", { type: "image/png" }));
+    let options: RequestInit | undefined;
+    spyOn(globalThis, "fetch").mockImplementation(Object.assign(async (...[, init]: Parameters<typeof fetch>) => { options = init; return Response.json({ state: "processing" }); }, { preconnect: originalFetch.preconnect }));
+    await apiRequest("/api/tenants/a/media", { method: "POST", body, csrf: "test-csrf" });
+    expect(options?.body).toBe(body);
+    expect(new Headers(options?.headers).has("Content-Type")).toBe(false);
+    expect(new Headers(options?.headers).get("X-CSRF-Token")).toBe("test-csrf");
+  });
   it("sends cookie credentials only to the fixed API with no cache and CSRF for mutations", async () => {
     let destination: string | undefined;
     let options: RequestInit | undefined;

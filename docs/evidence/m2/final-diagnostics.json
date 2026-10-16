@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T08:18:42.541Z",
+  "checks": [
+    {
+      "url": "http://127.0.0.1:5890/health",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5890/ready",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5890/diagnostics/echo?value=m2-final",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5890/diagnostics/echo?value=",
+      "status": 400
+    },
+    {
+      "url": "http://127.0.0.1:5890/api/session",
+      "status": 401
+    },
+    {
+      "url": "http://127.0.0.1:5890/api/tenants/88cfcbbb-8425-4647-aa06-428cef3c5197/leads",
+      "status": 401
+    },
+    {
+      "url": "http://127.0.0.1:5891/login",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:5892/m2-ui-9b4aeade-a/dich-vu/tu-van-nha-khoa",
+      "status": 200
+    }
+  ],
+  "limits": "Current owned local listeners and bounded health/readiness/validation/auth/anonymousSSR probes. No production, persistent availability or new broad S01 diagnostic outage/shutdown rerun claimed."
+}
