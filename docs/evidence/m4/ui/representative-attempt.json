@@ -1,0 +1,12 @@
+{
+  "status": "FAIL",
+  "recordedAt": "2026-10-16T13:29:09.519Z",
+  "stage": "home_create",
+  "completed": [
+    {
+      "case": "config_save_explicit_publish",
+      "status": "PASS"
+    }
+  ],
+  "details": "Private failure details retained without exporting credentials; affected criterion remains open."
+}

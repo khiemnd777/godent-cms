@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "stage": "lifecycle_create",
+  "recordedAt": "2026-10-16T14:55:05.235Z",
+  "completed": [
+    {
+      "case": "ordinary_password_login",
+      "status": "PASS"
+    },
+    {
+      "case": "real_en_form_unknown_ack_same_request_retry_to_shared_cms_source_contact_vi",
+      "status": "PASS",
+      "droppedAccepted": true,
+      "submissionPosts": 2,
+      "frozenSemantic": true
+    }
+  ],
+  "details": "Private error retained; affected criteria remain open."
+}

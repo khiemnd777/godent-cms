@@ -1,0 +1,12 @@
+{
+  "status": "FAIL",
+  "stage": "theme_clarity_vi",
+  "recordedAt": "2026-10-16T14:37:51.662Z",
+  "completed": [
+    {
+      "case": "ordinary_password_login",
+      "status": "PASS"
+    }
+  ],
+  "details": "Private error retained; affected criteria remain open."
+}

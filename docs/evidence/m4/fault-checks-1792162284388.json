@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T14:51:24.388Z",
+  "scope": "positively identified owned local API process paused, EN website fails503 withoutfallback, exactAPI resumed and bothhealth/page recover200",
+  "pausedRequestMs": 5002,
+  "maxPauseMs": 10000,
+  "credentialsChanged": false,
+  "fixtureWrites": false,
+  "limits": "Bounded local transport outage; not every backend error, Production recovery/SLO or operational backup/restore."
+}

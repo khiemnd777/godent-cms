@@ -965,7 +965,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "11507b01954ba2deb6cd312df93056fcd860efb083a9110f6480ebea8676a137",
+      "sha256": "f3155cc3f4c9888ba44e35333ffe1d5c57ae92a09d4df33726d0c02c4f118750",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1105,6 +1105,21 @@
             "task": "docs/tasks/GCMS-M3-001.md",
             "previous_sha256": "8427ae4fdb1df56353de319c83316edda3e8461b66a2d1e5fc5cc257ecac7761",
             "reason": "Record direct human local M3 S09-S12 acceptance and documentation-only authority; preserve historical evidence, audit FAIL, Kit/mirror/adaptation pins and no S13-S18/Git/deploy boundary"
+          },
+          {
+            "task": "docs/tasks/GCMS-M4-001.md",
+            "previous_sha256": "11507b01954ba2deb6cd312df93056fcd860efb083a9110f6480ebea8676a137",
+            "reason": "Direct approved M4 plan save/local implementation and final scoped result; human acceptance pending, old proof/audit limits preserved; maintained pointers only"
+          },
+          {
+            "task": "docs/tasks/GCMS-M4-001.md#delegated-m4-acceptance--2026-10-16",
+            "previous_sha256": "301fa85b84bfe46c6bce547c921e25b332ce1a6d454858ecd6508e48a45f2ebc",
+            "reason": "Current M4 local acceptance by /root under direct human review/acceptance delegation; original final snapshot PENDING/history and all limits preserved; no app/Git/deploy authority expansion"
+          },
+          {
+            "task": "docs/tasks/GCMS-M4-001.md#m4-git-delivery-authority--2026-10-16",
+            "previous_sha256": "3c654f31d3bf5c83fa4543688d0842b3c8642b7fe74a200876e7b0aac2fcd2c0",
+            "reason": "Direct user M4 commit/push authority supersedes earlier no-Git checkpoint only; acceptance/runtime/evidence and no-deploy limits unchanged"
           }
         ]
       }
@@ -1178,7 +1193,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "eb514363b84b473a1569ba2f85769b2cf2e4b400189f6bdbb3ffbf9367809162",
+      "sha256": "1e32d344e745b2fb4ebce09a7d709cc1a8b6861912f83bde191733db197812bb",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1303,6 +1318,21 @@
             "task": "docs/tasks/GCMS-M3-001.md",
             "previous_sha256": "651eaec4f7dbdcff82279fb7e4d1bfde2c7467a680dc12cd805e5c3ddd000149",
             "reason": "Record direct human local M3 S09-S12 acceptance and documentation-only authority; preserve historical evidence, audit FAIL, Kit/mirror/adaptation pins and no S13-S18/Git/deploy boundary"
+          },
+          {
+            "task": "docs/tasks/GCMS-M4-001.md",
+            "previous_sha256": "eb514363b84b473a1569ba2f85769b2cf2e4b400189f6bdbb3ffbf9367809162",
+            "reason": "Direct approved M4 plan save/local implementation and final scoped result; human acceptance pending, old proof/audit limits preserved; maintained pointers only"
+          },
+          {
+            "task": "docs/tasks/GCMS-M4-001.md#delegated-m4-acceptance--2026-10-16",
+            "previous_sha256": "d1ec0beae9723b058afc5d4a23724b6499d6cf01e5ff16a072408bcb994e4c4c",
+            "reason": "Current M4 local acceptance by /root under direct human review/acceptance delegation; original final snapshot PENDING/history and all limits preserved; no app/Git/deploy authority expansion"
+          },
+          {
+            "task": "docs/tasks/GCMS-M4-001.md#m4-git-delivery-authority--2026-10-16",
+            "previous_sha256": "2bec369c8ffbaa4859025168aec556b6008d07f69b1f08c1c98df4ff236a6dc6",
+            "reason": "Direct user M4 commit/push authority supersedes earlier no-Git checkpoint only; acceptance/runtime/evidence and no-deploy limits unchanged"
           }
         ]
       }
@@ -1850,6 +1880,36 @@
       "record": "docs/tasks/GCMS-M3-001.md",
       "authority": "Direct human M3 acceptance/documentation-status update2026-10-16 Asia/Saigon,desktop01a1442c-b412-7f63-b03f-b23c76825bf2,turn01a144a4-a9a9-7271-9b3c-4c4da88c4854; desktop verified source",
       "scope": "Settled acceptance/current pointers and maintained AGENTS/README hashes/provenance only; technical proof and historical evidence/audit FAIL preserved; original Kit/mirror/adaptation pins unchanged; no new runtime/app/DB/browser/dependency/Git/deploy or S13-S18 execution",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-M4-001 local implementation/final handoff",
+      "record": "docs/tasks/GCMS-M4-001.md",
+      "authority": "Direct human M4 v0.1/all S13-S15 decisions/local migrations-fixtures-verification approval2026-10-16 Asia/Ho_Chi_Minh, desktop01a144ca-5b34-7a52-b1f7-2a36f6c206f1,turn01a144d4-e576-7152-a79f-3b22f3e04258",
+      "scope": "Current approved M4 local result pointers and maintained AGENTS/README hashes; historical evidence/Kit/mirrors/upstream pins unchanged; human acceptance pending; no Git/deploy/Production/S16-S18 authority",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-M4-001 delegated local acceptance",
+      "record": "docs/tasks/GCMS-M4-001.md#delegated-m4-acceptance--2026-10-16",
+      "authority": "Khiêm direct review và nghiệm thu cho tôi. in desktop01a144ca-5b34-7a52-b1f7-2a36f6c206f1,turn01a1454c-5a1c-7b71-8788-069f60950e46; /root decision recorded separately from human delegation",
+      "scope": "Local M4 delegated review/acceptance evidence/current pointers and maintained hashes only. Historical technical snapshot/evidence/Kit/mirrors preserved. No app/schema/Git/deploy/Production/S16-S18 execution.",
+      "maintained_paths": [
+        "AGENTS.md",
+        "README.md"
+      ]
+    },
+    {
+      "task": "GCMS-M4-001 Git delivery authority",
+      "record": "docs/tasks/GCMS-M4-001.md#m4-git-delivery-authority--2026-10-16",
+      "authority": "Khiêm direct commit, push gói M4; desktop01a144ca-5b34-7a52-b1f7-2a36f6c206f1,turn01a14551-f345-7aa1-9d01-4413d8a79c18",
+      "scope": "Normal M4 commit/push on current main and current authority/maintained hashes only; no deploy/Production/S16-S18 or proof expansion; original Kit/mirror/upstream pins unchanged",
       "maintained_paths": [
         "AGENTS.md",
         "README.md"

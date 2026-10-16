@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T15:03:09.059Z",
+  "privateHelperExecuteDenied": 2,
+  "limitControls": {
+    "null_limit": true,
+    "zero_limit": true,
+    "over_limit": true
+  },
+  "readOnly": true
+}

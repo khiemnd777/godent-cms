@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "source": "Root native SEO integration stdout diagnostic records; filtered without credentials/contact",
+  "measurements": [
+    {
+      "diagnostic": "m4-seo-deadline",
+      "pageSizes": [
+        50,
+        4
+      ],
+      "maximumMs": 18
+    },
+    {
+      "diagnostic": "m4-seo-deadline",
+      "pageSizes": [
+        28
+      ],
+      "maximumMs": 9
+    },
+    {
+      "diagnostic": "m4-seo-deadline",
+      "pageSizes": [
+        50,
+        3
+      ],
+      "maximumMs": 14
+    },
+    {
+      "diagnostic": "m4-seo-deadline",
+      "pageSizes": [
+        50,
+        4
+      ],
+      "maximumMs": 13
+    },
+    {
+      "diagnostic": "m4-seo-deadline",
+      "pageSizes": [
+        50,
+        7
+      ],
+      "maximumMs": 17
+    },
+    {
+      "diagnostic": "m4-seo-deadline",
+      "pageSizes": [
+        50,
+        5
+      ],
+      "maximumMs": 14
+    },
+    {
+      "diagnostic": "m4-seo-deadline",
+      "pageSizes": [
+        50,
+        7
+      ],
+      "maximumMs": 16
+    },
+    {
+      "diagnostic": "m4-seo-deadline",
+      "pageSizes": [
+        50,
+        7
+      ],
+      "maximumMs": 17
+    }
+  ],
+  "limits": "Owned small synthetic fixtures under existing 5s deadline; no production scale or SLO claim."
+}

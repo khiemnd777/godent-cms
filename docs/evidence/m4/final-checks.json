@@ -1,0 +1,314 @@
+{
+  "technicalStatus": "CODE_INTEGRATED + VERIFIED_LOCAL",
+  "handoffStatus": "READY_FOR_USER_REVIEW",
+  "humanAcceptance": "PENDING",
+  "recordedAt": "2026-10-16T15:18:26.484677+00:00",
+  "approval": {
+    "thread": "01a144ca-5b34-7a52-b1f7-2a36f6c206f1",
+    "turn": "01a144d4-e576-7152-a79f-3b22f3e04258",
+    "scope": "M4 v0.1 S13-S15 local migrations, new owned synthetic fixtures and verification; plan saved before dependent writes"
+  },
+  "baselineHead": "813a8c90952348a5f46e6d5ac1e398096dfe6a1f",
+  "git": {
+    "headUnchanged": true,
+    "stagedChanges": false,
+    "dependencyLockUnchanged": true,
+    "commitPushDeployPerformed": false,
+    "worktree": "Approved uncommitted M4 implementation/docs/evidence"
+  },
+  "apiSql": {
+    "status": "PASS",
+    "files": 11,
+    "tests": 32,
+    "assertions": 4946,
+    "failed": 0,
+    "skipped": 0,
+    "selectedSuites": [
+      {
+        "file": "apps/api/test/m4-integration.test.ts",
+        "exitCode": 0,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "assertions": 52,
+        "evidence": "docs/evidence/m4/integration-checks-1792159451795.json",
+        "containingReportStatus": "FAIL",
+        "recordedAt": "2026-10-16T14:04:11.795Z"
+      },
+      {
+        "file": "apps/api/test/m4-intake-integration.test.ts",
+        "exitCode": 0,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "assertions": 54,
+        "evidence": "docs/evidence/m4/integration-checks-1792159451795.json",
+        "containingReportStatus": "FAIL",
+        "recordedAt": "2026-10-16T14:04:11.795Z"
+      },
+      {
+        "file": "apps/api/test/m4-boundary-integration.test.ts",
+        "exitCode": 0,
+        "passed": 7,
+        "failed": 0,
+        "skipped": 0,
+        "assertions": 321,
+        "evidence": "docs/evidence/m4/integration-checks-1792160201567.json",
+        "containingReportStatus": "PASS",
+        "recordedAt": "2026-10-16T14:16:41.567Z"
+      },
+      {
+        "file": "apps/api/test/m4-media-integration.test.ts",
+        "exitCode": 0,
+        "passed": 5,
+        "failed": 0,
+        "skipped": 0,
+        "assertions": 184,
+        "evidence": "docs/evidence/m4/integration-checks-1792161200871.json",
+        "containingReportStatus": "FAIL",
+        "recordedAt": "2026-10-16T14:33:20.871Z"
+      },
+      {
+        "file": "apps/api/test/m4-lifecycle-integration.test.ts",
+        "exitCode": 0,
+        "passed": 4,
+        "failed": 0,
+        "skipped": 0,
+        "assertions": 46,
+        "evidence": "docs/evidence/m4/integration-checks-1792161200871.json",
+        "containingReportStatus": "FAIL",
+        "recordedAt": "2026-10-16T14:33:20.871Z"
+      },
+      {
+        "file": "apps/api/test/m4-graph-integration.test.ts",
+        "exitCode": 0,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "assertions": 186,
+        "evidence": "docs/evidence/m4/integration-checks-1792161705420.json",
+        "containingReportStatus": "PASS",
+        "recordedAt": "2026-10-16T14:41:45.420Z"
+      },
+      {
+        "file": "apps/api/test/m4-promotion-scope-integration.test.ts",
+        "exitCode": 0,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "assertions": 34,
+        "evidence": "docs/evidence/m4/integration-checks-1792161705420.json",
+        "containingReportStatus": "PASS",
+        "recordedAt": "2026-10-16T14:41:45.420Z"
+      },
+      {
+        "file": "apps/api/test/m4-restoration-integration.test.ts",
+        "exitCode": 0,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "assertions": 43,
+        "evidence": "docs/evidence/m4/integration-checks-1792161705420.json",
+        "containingReportStatus": "PASS",
+        "recordedAt": "2026-10-16T14:41:45.420Z"
+      },
+      {
+        "file": "apps/api/test/m4-asset-locale-integration.test.ts",
+        "exitCode": 0,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "assertions": 44,
+        "evidence": "docs/evidence/m4/integration-checks-1792161705420.json",
+        "containingReportStatus": "PASS",
+        "recordedAt": "2026-10-16T14:41:45.420Z"
+      },
+      {
+        "file": "apps/api/test/m4-locale-integration.test.ts",
+        "exitCode": 0,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "assertions": 41,
+        "evidence": "docs/evidence/m4/integration-checks-1792162444167.json",
+        "containingReportStatus": "PASS",
+        "recordedAt": "2026-10-16T14:54:04.167Z"
+      },
+      {
+        "file": "apps/api/test/m4-seo-integration.test.ts",
+        "exitCode": 0,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "assertions": 3941,
+        "evidence": "docs/evidence/m4/integration-checks-1792163336362.json",
+        "containingReportStatus": "PASS",
+        "recordedAt": "2026-10-16T15:08:56.362Z"
+      }
+    ],
+    "limits": "Use only matching individual PASS suites from dated reports, including where a containing historical report failed on a different suite. No claim that those whole historical reports passed. New fixtures; no blanket mutating old suite run."
+  },
+  "frontend": {
+    "status": "PASS",
+    "tests": 161,
+    "assertions": 934,
+    "files": 42,
+    "admin": {
+      "tests": 98,
+      "assertions": 343
+    },
+    "website": {
+      "tests": 63,
+      "assertions": 591
+    },
+    "limits": "Distinct from API/native. Do not add overlapping pure subsets."
+  },
+  "browser": {
+    "status": "SCOPED_PASS",
+    "breadth": {
+      "evidence": "docs/evidence/m4/ui/full-afbf6b99-1cc5-43ab-98fd-5878f4ac44d2/results.json",
+      "containingRunStatus": "FAIL",
+      "completedPassedCases": 256,
+      "detail": 184,
+      "listing": 56,
+      "publicWidth": 10,
+      "authenticatedEditorWidth": 5,
+      "login": 1,
+      "limits": "Historical entire run FAIL at later relative-Location tooling assertion; reuse completed cases only. Unchanged renderer pins."
+    },
+    "form": {
+      "evidence": "docs/evidence/m4/ui/full-1bbf2a71-d8a0-4002-9d3d-597bb90ebfc2/results.json",
+      "containingRunStatus": "FAIL",
+      "case": "real_en_form_unknown_ack_same_request_retry_to_shared_cms_source_contact_vi",
+      "result": "PASS",
+      "limit": "Later lifecycle selector failed; no overall pass claim."
+    },
+    "lifecycle": "docs/evidence/m4/ui/full-876a69e4-ad44-4e03-b206-d383fb0cfc9e/results.json",
+    "states": "docs/evidence/m4/ui/states-0587a50b-4b6d-4bdc-ae0a-9b66c20788ae/results.json",
+    "editorControls": "docs/evidence/m4/ui/editor-516d54d0-3b02-4474-8bc0-7d03c13e271d/results.json",
+    "httpFinal": "docs/evidence/m4/ui/full-7b976684-eea2-4b5e-b84a-b369e5d461ff/results.json",
+    "limits": "Actual owned local UI; loading/503/403 presentation cases controlled HTTP only. Actual membership denial/transport outage have separate native/fault proof. Not every family/state/width Cartesian combination."
+  },
+  "seo": {
+    "status": "PASS",
+    "nativeTimings": "docs/evidence/m4/seo-native-timings.json",
+    "runtimeRoleControls": "docs/evidence/m4/seo-sql-role-controls.json",
+    "demoHttp": "docs/evidence/m4/seo-http-final.json",
+    "deadlineMs": 5000
+  },
+  "fault": "docs/evidence/m4/fault-checks-1792162284388.json",
+  "runtime": "docs/evidence/m4/final-diagnostics.json",
+  "preservation": {
+    "status": "PASS",
+    "evidence": "docs/evidence/m4/preservation-1792163809038.json",
+    "tables": 63,
+    "baselineRows": 226905,
+    "protectedFiles": 1048,
+    "unexpectedChanges": 0,
+    "limits": "Retained row hashes projected onto original columns and protected file hashes/modes. New resources separately owned. Only named volatile row expiry, launcher metadata and original log-prefix-preserving append allowed. No raw rows, credentials or backup/restore proof."
+  },
+  "knownValues": {
+    "status": "PASS",
+    "evidence": "docs/evidence/m4/secret-check-1792163876358.json",
+    "limits": "Exact known named values/URI/base64 in checked source+serving text; no OCR/runtime-memory/comprehensive discovery."
+  },
+  "buildTypeLint": {
+    "status": "PASS",
+    "logs": {
+      "m4-final-fe-tests.log": {
+        "privatePath": ".local/m4-final-fe-tests.log",
+        "sha256": "d6723f5b0674c6a33b19db1e92a70c5b3d47a8b863b83c111b2cdc4b5e8ce0f6",
+        "result": "PASS",
+        "exitCode": 0,
+        "provenance": "Actual root-run command result recorded in this approval turn; not inferred solely from log existence."
+      },
+      "m4-admin-full-build.log": {
+        "privatePath": ".local/m4-admin-full-build.log",
+        "sha256": "72a188d2c60c9443e23662c3cb50728145c85063a067ca26098b76ed94e42808",
+        "result": "PASS",
+        "exitCode": 0,
+        "provenance": "Actual root-run command result recorded in this approval turn; not inferred solely from log existence."
+      },
+      "m4-website-full-build.log": {
+        "privatePath": ".local/m4-website-full-build.log",
+        "sha256": "73d362491bda73bb97d88df0ef9970344a1a0819746c75caf02c51b8ccd2e9e3",
+        "result": "PASS",
+        "exitCode": 0,
+        "provenance": "Actual root-run command result recorded in this approval turn; not inferred solely from log existence."
+      },
+      "m4-final-api-build.log": {
+        "privatePath": ".local/m4-final-api-build.log",
+        "sha256": "b8b1483e2d6bb4ce81d02095ef145c7c690f6663f1aee43f51d22d7adde7ec1c",
+        "result": "PASS",
+        "exitCode": 0,
+        "provenance": "Actual root-run command result recorded in this approval turn; not inferred solely from log existence."
+      },
+      "m4-final-typecheck-2.log": {
+        "privatePath": ".local/m4-final-typecheck-2.log",
+        "sha256": "5b4e245b2468e2c2c8ae753279b6ee1d44a8ba70151027c6b8fe6d3554d34d36",
+        "result": "PASS",
+        "exitCode": 0,
+        "provenance": "Actual root-run command result recorded in this approval turn; not inferred solely from log existence."
+      },
+      "m4-final-lint-3.log": {
+        "privatePath": ".local/m4-final-lint-3.log",
+        "sha256": "dee4ed27004c3ac7c6715d0ba4a97bdbd2c55c7238b4a9b5b2745e176d575ff5",
+        "result": "PASS",
+        "exitCode": 0,
+        "provenance": "Actual root-run command result recorded in this approval turn; not inferred solely from log existence."
+      }
+    },
+    "additionalRootVerifier": "Focused eslint and root tsc PASS for m4-editor-controls.ts after final full type/lint."
+  },
+  "independentReview": {
+    "status": "CLOSED R1-R13",
+    "report": "docs/evidence/m4/review.md",
+    "sourcePins": "docs/evidence/m4/review-sourcepins.json",
+    "exposure": "docs/evidence/m4/review-exposure.json",
+    "execution": "Independent source/artifact/filtered-result review; pure34/187 then4/124 separate runs. DB/browser/worker/root builds are coordinator-run."
+  },
+  "audit": {
+    "status": "FAIL",
+    "open": true,
+    "advisory": "GHSA-vfj7-8cjw-p6xm",
+    "package": "braces3.0.3",
+    "localDeferral": "Fresh bounded local-M4 source/serving exposure assessment at pinned builds only",
+    "reassessBy": "2026-10-22",
+    "earlierTriggers": [
+      "available patch",
+      "dependency change",
+      "serving exposure change",
+      "before Production"
+    ],
+    "productionWaiver": false
+  },
+  "documentationStatic": {
+    "status": "PASS",
+    "agentKitCommand": "python3 -B scripts/verify_agent_setup.py",
+    "privateLog": ".local/m4-final-agent-static-3.log",
+    "maintainedHashes": 81,
+    "declaredAdaptations": 9,
+    "mirrorPairs": 28,
+    "skillsPerRoot": 17,
+    "nativeDefinitionsPerClient": 3,
+    "markdownFiles": 139,
+    "linksAndAnchors": 1702,
+    "changedSourceStatic": "docs/evidence/m4/final-source-static.json",
+    "gitDiffCheck": "PASS",
+    "historicalFailure": "First checker failed only the two final-checks.json links before the planned snapshot existed; initial private log retained, second run PASS. No gate weakened.",
+    "limit": "Static integrity does not prove native discovery or application behavior."
+  },
+  "notRunOrOutsideScope": [
+    "Human M4 acceptance",
+    "Operational backup/restore",
+    "Natural-duration waiting",
+    "Every browser/state/family/width combination",
+    "Production workload/scale/SLO",
+    "Live DNS/TLS/custom-domain activation/indexing",
+    "External delivery/provider",
+    "Full local MVP/S18 acceptance",
+    "S16-S18 execution",
+    "Commit/push/deploy"
+  ],
+  "historicalEvidencePolicy": "Keep all original FAIL/Unknown/NOT_RUN and previous scoped human acceptance unchanged; later repaired proof supersedes only active matching outcomes."
+}

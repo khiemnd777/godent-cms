@@ -1,0 +1,84 @@
+{
+  "scope": "Approved M4 v0.1 S13-S15 package normal Git delivery",
+  "authority": {
+    "quote": "commit, push gói M4",
+    "thread": "01a144ca-5b34-7a52-b1f7-2a36f6c206f1",
+    "turn": "01a14551-f345-7aa1-9d01-4413d8a79c18"
+  },
+  "recordedAt": "2026-10-16T15:28:14.288051+00:00",
+  "status": "READY_WITH_RECORDED_COSMETIC_WHITESPACE_FAILURE",
+  "branch": "main",
+  "target": "origin/main",
+  "remoteRepository": "khiemnd777/godent-cms",
+  "initialHeadAndObservedLiveRemote": "813a8c90952348a5f46e6d5ac1e398096dfe6a1f",
+  "initialIndexEmpty": true,
+  "scopeInspection": "All Git-visible changes belong to this approved M4 package; source/migrations/tests/scripts/docs/evidence. No unrelated change identified. No .github deploy workflow.",
+  "reviewReuse": {
+    "status": "PASS",
+    "applicationPinsMatched": 52,
+    "independentReview": "CLOSED R1-R13",
+    "acceptance": "ACCEPTED_UNDER_DELEGATED_AUTHORITY",
+    "nativeApi": [
+      32,
+      4946
+    ],
+    "frontend": [
+      161,
+      934
+    ],
+    "newRuntimeProof": false
+  },
+  "exclusions": [
+    ".env",
+    ".local",
+    "credentials",
+    "database/storage data",
+    "dependencies",
+    "build outputs"
+  ],
+  "audit": {
+    "status": "FAIL/open",
+    "localM4Deferral": "Pinned bounded local assessment only",
+    "reassessBy": "2026-10-22 or earlier stated triggers and before Production",
+    "productionWaiver": false
+  },
+  "checks": {
+    "knownValues": {
+      "status": "PASS",
+      "evidence": "docs/evidence/m4/secret-check-1792164473241.json",
+      "values": 57,
+      "forms": 123,
+      "findings": 0,
+      "limits": "Exact known private named values and URI/base64 forms in Git-visible and current serving output text files. No secret values or hashes exported. No OCR, runtime-memory scan or comprehensive secret discovery."
+    },
+    "staticInventoryLinks": {
+      "status": "PASS",
+      "privateLog": ".local/m4-git-static.log"
+    },
+    "unstagedWhitespace": "PASS git diff --check",
+    "scopeAndIgnoredBoundaries": "PASS exact intended path inventory; no private/config/build/dependency outputs",
+    "stagedChecks": "Executed exact scope/inventory PASS; whitespace FAIL as explicitly recorded. Verify scope again after this documentation-only append.",
+    "stagedWhitespace": {
+      "status": "FAIL",
+      "command": "git diff --cached --check",
+      "exitCode": 2,
+      "diagnostic": "apps/api/migrations/0035_m4_intake_sources.sql:166: new blank line at EOF.",
+      "boundedAssessment": "One extra final LF, no SQL semantic change. Source/staged bytes match the reviewed applied migration pin. Preserve applied immutable SQL/checksum; no database or migration rewrite, no checker configuration/attribute change. Deliver the already accepted package under direct commit/push authority; retain this actual check failure."
+    },
+    "stagedScope": {
+      "status": "PASS",
+      "files": 456,
+      "modified": 50,
+      "added": 406,
+      "pathSetMatchesExactInventory": true,
+      "unstagedChangesAtCheck": false,
+      "retainedMigrationsUnchanged": true,
+      "dependenciesUnchanged": true
+    }
+  },
+  "executionBoundary": "This record is pre-commit evidence, not a claim that future commit/push succeeded. Actual resulting SHA/remote equality/final status are checked after commands and reported in chat/Git history. No deploy or S16-S18 execution.",
+  "intendedFiles": 456,
+  "intendedBytesBeforeThisRecordUpdate": 58146543,
+  "intendedManifestExcludingThisSelfRecordSHA256": "5e2831b27d69b2f45536d1941b4d36bf31422ad9527338bf04e55bb0342840cd",
+  "manifestCapturedAfterCosmeticAssessment": true
+}

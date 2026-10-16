@@ -1,5 +1,24 @@
 # godent-cms verification results
 
+## Current M4 local result — 2026-10-16
+
+**ACCEPTED_UNDER_DELEGATED_AUTHORITY; technical CODE_INTEGRATED + VERIFIED_LOCAL.** [Khiêm’s direct delegation and /root’s local acceptance decision](tasks/GCMS-M4-001.md#delegated-m4-acceptance--2026-10-16) are separately recorded. Fresh acceptance checks: source/serving pins unchanged,12pure/199assertions and10read-only browser cases PASS; existing original final snapshot remains historical PENDING. [Approved plan/final handoff](tasks/GCMS-M4-001.md#final-local-handoff--2026-10-16), [ADR-013](decisions/013-local-m4-builder-campaigns-locales.md), [review](evidence/m4/review.md) and [final snapshot](evidence/m4/final-checks.json) retain the exact boundaries. M3 and earlier acceptance remain unchanged; earlier no-S13/current-owner statements below are historical. M4 implementation baseline is813a8c9. Later direct M4 commit/push authority is recorded separately in the task; delivery does not add runtime/Production proof or authorize deploy/S16–S18.
+
+| Check | Actual result | Scope |
+| --- | --- | --- |
+| API/SQL | PASS32tests/4946assertions/11files | Unique latest matching scoped runs; actual roles, publication/locale, source/intake, media/worker/fence, budgets, retention and SEO; final snapshot maps filtered files |
+| CMS + website | PASS161/934/42files | Admin98/343; website63/591; separate from API/native and overlapping pure subsets |
+| Actual rendered breadth |184detail,56listing,10public-width,5authenticated-editor checks +login completed | Both themes/VI–EN;320/390/768/1024/1440; exact publication/config identity, metadata and loaded images. Historical overall run FAIL at a later tooling assertion; only completed cases reused |
+| Actual form/lifecycle/UI | Scoped PASS | Real EN intake with dropped ACK/exact retry/CMS source; publish/pending/history/restore/unpublish;8state cases distinguish real behavior from controlled HTTP;3actual add/move/hide/picker/remove controls |
+| Actual SEO/HTTP | PASS59URLs/API50+9/XML200 | [Measured demo](evidence/m4/seo-http-final.json), [native timings](evidence/m4/seo-native-timings.json), [role controls](evidence/m4/seo-sql-role-controls.json); preserved5s deadline; no Production SLO claim |
+| Outage / runtime | PASS within bounds | Actual owned API pause gives EN503/no fallback and recovery; final3Bun loopback listeners/6diagnostics; current availability only |
+| Build/type/lint | PASS exit0 | Admin/website production builds, final API build, full root type/lint; root-only new verifier has additional focused type/lint PASS |
+| Preservation / known values | PASS within bounds |63tables/226905baseline rows/1048protected files; exact known values/URI/base64 in source+serving text; neither backup/restore nor comprehensive secret discovery |
+| Independent review | CLOSED R1–R13 | Matching source and coordinator-run native/browser proof; reviewer pure34/187 then4/124 are separate affected runs; final68API JS and unchanged45Next traces/8665references show0chain matches |
+| Dependency audit | **FAIL/open** | Fresh bounded local-M4 deferral; reassess2026-10-22/earlier patch/dependency/exposure/before Production; no Production waiver |
+
+Operational backup/restore, natural waiting, every browser/state/width combination, production scale/SLO, live DNS/TLS/custom-domain activation/indexing/external delivery/fullMVP remain NOT_RUN/outside M4. Controlled clocks/faults are scoped evidence; invalidation is distinct from physical media purge. Current local acceptance is the coordinator decision under Khiêm’s explicit delegation; it grants no Git/deployment or later-stage authority.
+
 ## Current M3 local result — 2026-10-16
 
 **HUMAN_ACCEPTED for local M3 S09–S12.** [Direct human acceptance](tasks/GCMS-M3-001.md#human-m3-acceptance--2026-10-16) records the exact source and documentation-only authority. Technical CODE_INTEGRATED + VERIFIED_LOCAL and all historical FAIL/Unknown/NOT_RUN remain unchanged. The original final-checks.json pending field is immutable historical evidence. Acceptance adds no runtime/full-MVP/Production proof. [Acceptance bookkeeping/static results](evidence/m3/acceptance-record.json) are separate from runtime evidence. [Complete plan/final handoff](tasks/GCMS-M3-001.md#final-local-handoff--2026-10-16), [ADR-012](decisions/012-local-m3-dental-content.md), [local commands](local-development.md#current-m3-local-operation), [independent review](evidence/m3/review.md) and [final snapshot](evidence/m3/final-checks.json) record exact boundaries. Inherited M1/AUTH/S01–S08/M2 acceptance and historical FAIL/Unknown/NOT_RUN are unchanged. No Git/deploy/Production/S13–S18 execution.

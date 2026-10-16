@@ -20,8 +20,8 @@ const listColumns=sql`id,name,CASE WHEN phone IS NULL THEN NULL ELSE repeat('•
   CASE WHEN email IS NULL THEN NULL ELSE left(email,1)||'***@'||split_part(email,'@',2) END AS "emailMasked",
   preferred_language AS "preferredLanguage",preferred_channel AS "preferredChannel",status,created_at AS "createdAt",
   to_char(created_at AT TIME ZONE 'UTC','YYYY-MM-DD"T"HH24:MI:SS.US"Z"') AS "cursorTime",
-  jsonb_build_object('tenantSlug',source_tenant_slug,'serviceSlug',source_service_slug,'serviceTitle',source_service_title,
-    'publicationId',source_publication_id,'path',source_path) AS source`;
+  coalesce(source_snapshot,jsonb_build_object('tenantSlug',source_tenant_slug,'serviceSlug',source_service_slug,'serviceTitle',source_service_title,
+    'publicationId',source_publication_id,'path',source_path)) AS source`;
 function listItem(row:Record<string,unknown>):LeadListItem {
   const {cursorTime:_cursor,...value}=row;void _cursor;
   return {...value,createdAt:new Date(String(value.createdAt)).toISOString()} as unknown as LeadListItem;

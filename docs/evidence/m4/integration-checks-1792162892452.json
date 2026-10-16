@@ -1,0 +1,16 @@
+{
+  "recordedAt": "2026-10-16T15:01:32.452Z",
+  "mode": "integration",
+  "status": "FAIL",
+  "suites": [
+    {
+      "file": "apps/api/test/m4-seo-integration.test.ts",
+      "exitCode": 1,
+      "passed": 1,
+      "failed": 1,
+      "skipped": 0,
+      "assertions": 116
+    }
+  ],
+  "limits": "Scoped actual tests; API/database/browser/media/worker and human acceptance remain distinct. Private raw output retained without exporting credentials."
+}

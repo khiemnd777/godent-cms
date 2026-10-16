@@ -1,0 +1,32 @@
+{
+  "recordedAt": "2026-10-16T14:33:20.871Z",
+  "mode": "integration",
+  "status": "FAIL",
+  "suites": [
+    {
+      "file": "apps/api/test/m4-media-integration.test.ts",
+      "exitCode": 0,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 184
+    },
+    {
+      "file": "apps/api/test/m4-lifecycle-integration.test.ts",
+      "exitCode": 0,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 46
+    },
+    {
+      "file": "apps/api/test/m4-graph-integration.test.ts",
+      "exitCode": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "assertions": 168
+    }
+  ],
+  "limits": "Scoped actual tests; API/database/browser/media/worker and human acceptance remain distinct. Private raw output retained without exporting credentials."
+}

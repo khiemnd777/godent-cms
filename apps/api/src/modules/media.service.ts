@@ -5,6 +5,7 @@ import type { IncomingMessage } from 'node:http';
 import type { S02Database, S02Transaction } from '../database';
 import type { createS02Auth } from '../auth';
 import { ADMIN_ORIGIN } from '../contracts/s02';
+import {parseM4Kind,parseM4Locale} from '../contracts/m4-validation';
 import { MEDIA_LIMITS, type MediaAsset, type MediaPage, type MediaAccessResult } from '../contracts/s07';
 import { boundedUpload, detectImage, mediaAccess, mediaObject, mediaPermission, mediaVersion, mediaWithdrawal } from '../media/input';
 import { MediaSigner } from '../media/signing';
@@ -146,4 +147,11 @@ export class MediaService {
     const initial=await target();let body:Buffer;try{body=await this.storage.get(initial.key,initial.bytes);}catch{throw new ServiceUnavailableException();}
     const current=await target();if(current.key!==initial.key)throw new NotFoundException();return {body,type:'image/webp',attachment:false};
   }
+  async builderPublicRead(request:PrivateRequest,tenant:string,kind:string,resource:string,locale:string,publication:string,id:string,revision:string):Promise<MediaBinary>{
+    assertApiHost(request.headers);await this.db.verifyRoles();const t=parseIdentifier(tenant),r=parseIdentifier(resource),p=parseIdentifier(publication),a=parseIdentifier(id),v=mediaVersion(Number(revision));
+    let k:string,l:string;try{k=kind==='config'?'config':parseM4Kind(kind);l=parseM4Locale(locale);}catch{throw new BadRequestException();}if(String(v)!==revision)throw new BadRequestException();
+    const target=async()=>{const rows=await this.db.tenantDb.transaction(async tx=>{await tx.execute(sql`SELECT set_config('statement_timeout','5s',true),set_config('lock_timeout','3s',true)`);return tx.execute(sql`SELECT gcms_m4.media_target(${t},${k},${r},${l},${p},${a},${v}) AS target`);});if(!rows[0]?.target)throw new NotFoundException();return rows[0].target as Target;};
+    const initial=await target();let body:Buffer;try{body=await this.storage.get(initial.key,initial.bytes);}catch{throw new ServiceUnavailableException();}const current=await target();if(current.key!==initial.key)throw new NotFoundException();return {body,type:'image/webp',attachment:false};
+  }
+
 }

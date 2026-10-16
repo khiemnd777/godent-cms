@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T14:58:47.032Z",
+  "run": "876a69e4-ad44-4e03-b206-d383fb0cfc9e",
+  "mode": "lifecycle_only",
+  "results": [
+    {
+      "case": "ordinary_password_login",
+      "status": "PASS"
+    },
+    {
+      "case": "actual_cms_history_restore_draft_unpublish",
+      "status": "PASS"
+    }
+  ],
+  "browserErrors": [],
+  "limits": "Actual owned synthetic local browser/HTTP journeys. No Production, natural expiry waiting, operational backup/restore or human acceptance."
+}

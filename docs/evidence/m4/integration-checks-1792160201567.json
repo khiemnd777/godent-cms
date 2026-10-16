@@ -1,0 +1,16 @@
+{
+  "recordedAt": "2026-10-16T14:16:41.567Z",
+  "mode": "integration",
+  "status": "PASS",
+  "suites": [
+    {
+      "file": "apps/api/test/m4-boundary-integration.test.ts",
+      "exitCode": 0,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 321
+    }
+  ],
+  "limits": "Scoped actual tests; API/database/browser/media/worker and human acceptance remain distinct. Private raw output retained without exporting credentials."
+}

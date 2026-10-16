@@ -1,0 +1,366 @@
+{
+  "scope": "M4 affected source review; inspected portions, not blanket full-file behavioral verification",
+  "thread": "01a144e9-273c-7cc1-b99e-f5c01f4c33e6",
+  "turn": "01a14509-6671-7fe3-a7ae-1566e15c7cef",
+  "recordedAt": "2026-10-16T14:13:55.805168+00:00",
+  "files": {
+    "apps/admin/components/builder-permissions.tsx": "77d4260f6702533519b4f542a8cb413b851b22d0ac16ad60ffaf5343b7b08f06",
+    "apps/admin/components/builder-preview-media.tsx": "162f7a930c52b5e550dbd090e24ff3a66503f106e24427f63f1f3596812e46c5",
+    "apps/admin/components/builder-preview.tsx": "a619912cd49592ae3144b8bb1609d0522c47db05ac9f708c27ccf4325335d3d4",
+    "apps/admin/components/builder-private-copy.tsx": "afb73500cc9849df48c21a56196e3ec802c88f024bd80e04e0fb9cafe1d832ef",
+    "apps/admin/components/lead-detail.tsx": "20b7e5e20d0410be91bfeba2b5a8a29a383a3b2eff1e7bb00b732a54507b11bd",
+    "apps/admin/components/lead-workspace.tsx": "0de9876e8d0b7f828ef30e4b8da4408c37b5cabeb64c4284e9afe93815d61c34",
+    "apps/admin/lib/builder-permission-pages.ts": "a816528734b6f2fc843d5bf60dfbdac6b6a9c988c795874718cf6356d3fbe558",
+    "apps/admin/lib/builder-preview-state.ts": "2ea25f573cfdb450712bcb13bb445b1f2339917c8fce44b9909f93807689f449",
+    "apps/admin/lib/lead-source.ts": "bccbdbdf46c82d7581b9b257fa0ece97f0fa3b31853475d19adc0c9f4ba13cfa",
+    "apps/api/migrations/0032_m4_publication.sql": "afdb288824bd046e4ced3674af653e7b0bebded003798462470eada0c714ca66",
+    "apps/api/migrations/0033_m4_public_reads.sql": "73e07da949c97ddcd77e65d3aa929157d5f1b6be52edffcecda117ce73e60256",
+    "apps/api/migrations/0034_m4_projection_integrity.sql": "595463df6c58200b2cae916e2e3911637cb30364bbd9ef8d27f335f7443b837b",
+    "apps/api/migrations/0035_m4_intake_sources.sql": "ff7dce23dde0dfb485d12858573a7e70575f0363cac54e7a7006f7571b00ae84",
+    "apps/api/migrations/0036_m4_scope_integrity.sql": "cb7782214a676a7e526db3e6db8397754dff1f3c17f223a1cf45d2563b19f520",
+    "apps/api/migrations/0037_m4_legacy_conflicts.sql": "b589dafd38e4b9855afb499e5045b8fdd0a633c927884454ba17299da4bc04e3",
+    "apps/api/migrations/0038_m4_reference_resolution.sql": "017c9f671bc708015ce8841d1cbaa6c4ebfc3a0f6929b2f2fe81a8ceeea078c8",
+    "apps/api/migrations/0039_m4_boundary_repairs.sql": "98fa1720a03961f166813f95c35dc50df5a1bdce9e119fb26e2102fee072384e",
+    "apps/api/migrations/0040_m4_private_preview.sql": "51400fad92ac7c5767bc36e174081652261ef071ed67e6ed251d2caa4be3f500",
+    "apps/api/migrations/0041_m4_intake_and_permission_lifecycle.sql": "149277a2831505df55890a0ce3ffbe9df3b3607e81bec15db3feb73319b78d87",
+    "apps/api/migrations/0042_m4_draft_slug_identity.sql": "eb2dd90501e967b12496c7e451e2e7e1c197c01b1d82f72ca3802e914a8f26c6",
+    "apps/api/migrations/0043_m4_post_lock_promotion_clock.sql": "74074574b9f083e7cc228cff3bf0f4a3c7ccc9db25af7c0d613925c65509d62d",
+    "apps/api/migrations/0044_m4_legacy_budget_alias.sql": "d069862b74a08d48e8b1eb125adb5a50b2d2580d3c13f70c31fb651eebf6d2e5",
+    "apps/api/migrations/0045_m4_locale_view_eligibility.sql": "7577156197317e2922eadd98842ed26809152bf47ec7151cbf57af62db051548",
+    "apps/api/migrations/0046_m4_serialized_scope_budget.sql": "b9a4cf2805dfb2c5decc38fa45dcb99b63cfa6a5a2331d96c1fdfc13248b79b6",
+    "apps/api/src/contracts/m4-validation.ts": "90bfdbe808b5a9a97c77a52dfe5968fb981f53683056ae2ed6f31bbea29fdbcb",
+    "apps/api/src/contracts/m4.ts": "21ea700e634f1451d2c14390dcad642114bf17102f0502799680008e20cd9a36",
+    "apps/api/src/modules/builder.service.ts": "bf1cb6bccc9652813fad12e85d6b66240117c5d5e8dfc7288bddcfa4eb64e74a",
+    "apps/api/src/modules/content.service.ts": "7ae7d0d17b6c791475355175510ce3c093ba19e64815e4a9a7c93c0daec2e02e",
+    "apps/website/app/layout.tsx": "a9177dad99201475300958ec890e756e4319c9fadc4bb6fe0aa0074c8bc19104",
+    "apps/website/components/builder-consultation-form.tsx": "9c5d7d25be04d9700cff2a561c7453e202be90b7828ec40a96e517d1a0c10398",
+    "apps/website/components/builder-route.tsx": "569970e7c1f43586cd93247bada85db9e61984e6ec8dc36ad1de96ebb9cc6e88",
+    "apps/website/components/builder-shell.tsx": "f6b4da4e32e07e1beeddd3302ac315725db8fde0d039f2c0961e2ac46daa4df2",
+    "apps/website/lib/builder-consultation.ts": "3c275e715dfff78a4c1ba26bdb1960cd06a4037fd4d1620992bfa3b8fcd1db83",
+    "apps/website/lib/builder-routing.ts": "368f175a2f0c1fa28b318a19137d7f74c02f2fd20f48e1ad506973258f1f26a4",
+    "apps/website/lib/builder-seo.ts": "a3ed537151692c74fa92e22342a08a5f187126f0d861e715ec5a9ef75dab87f5",
+    "apps/website/lib/public-builder-validation.ts": "a4d2ab734dd3066cf4a70ec5dd4c4b1c506e8c8047f4a7f75a669703298bc7c8",
+    "apps/website/lib/public-builder.ts": "95473fb2d89b5fde2160c318a26db62f21ce1965a7dfe35ecaa62af3289a3765",
+    "apps/website/proxy.ts": "7e5e56b412c75e8e84af8018a0e913665c5eeed2d78422119dc87e51cdb1db31"
+  },
+  "pureTests": {
+    "status": "PASS",
+    "files": 8,
+    "tests": 34,
+    "assertions": 187,
+    "failed": 0
+  },
+  "R7PureDtoProbe": [
+    {
+      "options": 80,
+      "schemaAccepted": true,
+      "projectedReferenceOccurrences": 240,
+      "bytes": 159087,
+      "publicDto": "PASS"
+    },
+    {
+      "options": 100,
+      "schemaAccepted": true,
+      "projectedReferenceOccurrences": 300,
+      "bytes": 198267,
+      "publicDto": "Public graph too large"
+    }
+  ],
+  "limits": [
+    "No DB, credential, fixture, browser or worker mutation by reviewer",
+    "Actual DB/browser regression results remain coordinator evidence",
+    "Source pins alone do not prove runtime or human acceptance"
+  ],
+  "followups": [
+    {
+      "turn": "01a14519-6455-7283-b48a-0ec0dd7d351c",
+      "recordedAt": "2026-10-16T14:28:28.995995+00:00",
+      "scope": "Affected SQL0046/0047; ready SQL0048 restore identity; fresh serving exposure",
+      "files": {
+        "apps/api/migrations/0046_m4_serialized_scope_budget.sql": "b334a35ae8a7d897a11c42de8e9a2dcb6e70243492b6a9fa075d7a5f8bfa89dd",
+        "apps/api/migrations/0047_m4_asset_scope_expression.sql": "500d65edd0b3a48118ca3faee1303c0412b3552fdb4cef0dfb61670099779cb7",
+        "apps/api/migrations/0048_m4_restore_locked_identity.sql": "ed2444f80120a3d62de15cd511057b03ac9c88a00dbb172b08696a5b1ebd4cf4"
+      },
+      "status": {
+        "0046": "SOURCE_REPAIRED; all authored form options conservatively reserved",
+        "0047": "SOURCE_REPAIRED; JSON scope subtraction parenthesized",
+        "0048": "SOURCE_ACCEPTABLE; ready, apply and native restore regression pending coordinator evidence"
+      },
+      "exposureEvidence": "docs/evidence/m4/review-exposure.json"
+    },
+    {
+      "turn": "01a14532-fb57-7c10-b0ff-89ebfc8d4bba",
+      "recordedAt": "2026-10-16T14:54:50.914947+00:00",
+      "scope": "Applied SQL0048/0049; explicit preview request adapter; coordinator-owned native regression evidence; SEO hold remains",
+      "files": {
+        "apps/api/migrations/0048_m4_restore_locked_identity.sql": "ed2444f80120a3d62de15cd511057b03ac9c88a00dbb172b08696a5b1ebd4cf4",
+        "apps/api/migrations/0049_m4_locale_asset_use_withdrawal.sql": "16f2414604ed9ad1dd44c99816c342b0845a72fba1bce00e12589c21aa58d892",
+        "apps/api/src/modules/builder.service.ts": "64d11b94e4ea2153e8dfcf3999655236cb65ebd7cc1a495ae19a1101088e6f42",
+        "apps/api/test/m4-media-integration.test.ts": "3fff37cf5d8e038022201af20588b74bb5b617b4f74bbfabe3b9f2b95b91703b",
+        "apps/api/test/m4-lifecycle-integration.test.ts": "5588d046fabf67cd59e59db6fd7c78589b0cb78032c3a3518291c9377eff4f1e",
+        "apps/api/test/m4-graph-integration.test.ts": "deeb9c3c185b00ecfd249b90c2b1e2247d301df81b820251ada73e29b9864bd2",
+        "apps/api/test/m4-promotion-scope-integration.test.ts": "f68a0ba1eb286d34a9e64d8e8144b29dc61e6e0623d8038b636604b0f0f1f79b",
+        "apps/api/test/m4-restoration-integration.test.ts": "ebfe9e10f857740b65296a59177e49bf360a086eedccf7e6d7992f50fd06d008",
+        "apps/api/test/m4-asset-locale-integration.test.ts": "d2f8fe951c715001b47b0ba202e755710f5a8f24c842aa2d95a57a699d038e3f"
+      },
+      "nativeEvidenceInspected": {
+        "apps/api/test/m4-integration.test.ts": {
+          "record": "docs/evidence/m4/integration-checks-1792159451795.json",
+          "sha256": "904997ec6d7fa93859844d534b88e29b978763ad4d56ec7557204e7af4d0d47f",
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0,
+          "assertions": 52,
+          "exitCode": 0
+        },
+        "apps/api/test/m4-intake-integration.test.ts": {
+          "record": "docs/evidence/m4/integration-checks-1792159451795.json",
+          "sha256": "904997ec6d7fa93859844d534b88e29b978763ad4d56ec7557204e7af4d0d47f",
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0,
+          "assertions": 54,
+          "exitCode": 0
+        },
+        "apps/api/test/m4-boundary-integration.test.ts": {
+          "record": "docs/evidence/m4/integration-checks-1792160201567.json",
+          "sha256": "aaa54a0592e505d22677b381c42e8d4a23d405877391c6fdbbe0c1aade03517d",
+          "passed": 7,
+          "failed": 0,
+          "skipped": 0,
+          "assertions": 321,
+          "exitCode": 0
+        },
+        "apps/api/test/m4-media-integration.test.ts": {
+          "record": "docs/evidence/m4/integration-checks-1792161200871.json",
+          "sha256": "f0295feb7520e54bdc45a5929de5ab1bfed9cbba3efd6ad8f61ce08a0732cac0",
+          "passed": 5,
+          "failed": 0,
+          "skipped": 0,
+          "assertions": 184,
+          "exitCode": 0
+        },
+        "apps/api/test/m4-lifecycle-integration.test.ts": {
+          "record": "docs/evidence/m4/integration-checks-1792161200871.json",
+          "sha256": "f0295feb7520e54bdc45a5929de5ab1bfed9cbba3efd6ad8f61ce08a0732cac0",
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0,
+          "assertions": 46,
+          "exitCode": 0
+        },
+        "apps/api/test/m4-graph-integration.test.ts": {
+          "record": "docs/evidence/m4/integration-checks-1792161705420.json",
+          "sha256": "fb3b378c50ff0303fa5819532e2fde9b0fb03f62bfbba1829184cb5720868a54",
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0,
+          "assertions": 186,
+          "exitCode": 0
+        },
+        "apps/api/test/m4-promotion-scope-integration.test.ts": {
+          "record": "docs/evidence/m4/integration-checks-1792161705420.json",
+          "sha256": "fb3b378c50ff0303fa5819532e2fde9b0fb03f62bfbba1829184cb5720868a54",
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0,
+          "assertions": 34,
+          "exitCode": 0
+        },
+        "apps/api/test/m4-restoration-integration.test.ts": {
+          "record": "docs/evidence/m4/integration-checks-1792161705420.json",
+          "sha256": "fb3b378c50ff0303fa5819532e2fde9b0fb03f62bfbba1829184cb5720868a54",
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0,
+          "assertions": 43,
+          "exitCode": 0
+        },
+        "apps/api/test/m4-asset-locale-integration.test.ts": {
+          "record": "docs/evidence/m4/integration-checks-1792161705420.json",
+          "sha256": "fb3b378c50ff0303fa5819532e2fde9b0fb03f62bfbba1829184cb5720868a54",
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0,
+          "assertions": 44,
+          "exitCode": 0
+        },
+        "apps/api/test/m4-locale-integration.test.ts": {
+          "record": "docs/evidence/m4/integration-checks-1792162444167.json",
+          "sha256": "f956f089619b3e09316feb7a722916a4901d5a95df6a0561f3046baf047e6ca0",
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0,
+          "assertions": 41,
+          "exitCode": 0
+        }
+      },
+      "coordinatorReportedAggregate": {
+        "files": 10,
+        "tests": 30,
+        "assertions": 1005,
+        "status": "PASS",
+        "localeSuite": "3/41 PASS reported by coordinator/task; filtered matching record pending at this checkpoint"
+      },
+      "limits": [
+        "Reviewer did not run DB/browser/worker or inspect private fixtures/logs.",
+        "Historical failed runs retained; later successful suite results supersede only rerun affected cases.",
+        "SEO timeout repair and final serving build review remain pending."
+      ]
+    },
+    {
+      "turn": "01a14532-fb57-7c10-b0ff-89ebfc8d4bba",
+      "recordedAt": "2026-10-16T14:56:04.108552+00:00",
+      "scope": "Filtered standalone locale native evidence closes prior artifact pin gap",
+      "record": "docs/evidence/m4/integration-checks-1792162444167.json",
+      "sha256": "f956f089619b3e09316feb7a722916a4901d5a95df6a0561f3046baf047e6ca0",
+      "suite": {
+        "file": "apps/api/test/m4-locale-integration.test.ts",
+        "exitCode": 0,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "assertions": 41
+      },
+      "aggregateMatchingFilteredEvidence": {
+        "files": 10,
+        "tests": 30,
+        "assertions": 1005,
+        "status": "PASS"
+      },
+      "historicalLimit": "Prior failed and combined runner records are retained; reviewer did not inspect private raw output or execute this suite."
+    },
+    {
+      "turn": "01a14532-fb57-7c10-b0ff-89ebfc8d4bba",
+      "recordedAt": "2026-10-16T15:00:44.523674+00:00",
+      "scope": "Frozen SQL0050 affected source equivalence and direct-SQL NULL limit repair",
+      "files": {
+        "apps/api/migrations/0050_m4_seo_eligibility.sql": "ade84e01a91f65d0d93588093d4da5dbeacc683ef9d3dfddd78fcbcd0c3ed451"
+      },
+      "initialFrozenSHA256": "5666d194e6169aabc46df84f00b6442502f4a0743a88be764afbb9637d88f871",
+      "singleChangeVerified": "Reconstructing the corrected file without lim IS NULL OR yields the initial frozen SHA256 exactly.",
+      "sourceStatus": "SOURCE_ACCEPTABLE; no remaining actionable source defect in inspected bounded SEO change",
+      "findings": {
+        "R11": "SOURCE_REPAIRED; native deadline/pagination/revocation demonstration pending",
+        "R12": "SOURCE_REPAIRED before migration application; native NULL/0/52 plus helper execute-denial pending"
+      },
+      "limits": [
+        "No reviewer DB call, migration, credential or fixture access.",
+        "Source acceptance is not runtime closure, human acceptance or Production clearance."
+      ]
+    },
+    {
+      "turn": "01a14532-fb57-7c10-b0ff-89ebfc8d4bba",
+      "recordedAt": "2026-10-16T15:02:40.691696+00:00",
+      "scope": "Filtered actual browser/intake/lifecycle and bounded transport evidence; no independent visual approval",
+      "files": {
+        "docs/evidence/m4/ui/full-1bbf2a71-d8a0-4002-9d3d-597bb90ebfc2/results.json": "2730ee131199b77e443894ebb534dbc2af24935b0606986fea087b87de1800f5",
+        "docs/evidence/m4/ui/full-876a69e4-ad44-4e03-b206-d383fb0cfc9e/results.json": "76fd8ea13853d4175f07b043a81689072dcb1bf94c13c53d30046aa7087a2164",
+        "docs/evidence/m4/fault-checks-1792162284388.json": "464a018f16ffb3b2c4d7d970fb6efc80ed741621044718fcef8ff42e4f3da702"
+      },
+      "limits": [
+        "Read filtered result fields only; no private raw output, credentials or contact-bearing fixtures inspected.",
+        "Form result is completed PASS inside a historical overall FAIL; lifecycle_only is a separate successful run."
+      ]
+    },
+    {
+      "turn": "01a14532-fb57-7c10-b0ff-89ebfc8d4bba",
+      "recordedAt": "2026-10-16T15:04:11.596589+00:00",
+      "scope": "R12 native controls closed; R11 SQL timing observed but R13 public API continuation remains open",
+      "files": {
+        "docs/evidence/m4/seo-sql-role-controls.json": "66b51b53f62c15e8d0b21ab6c42b27ab11749f9f9ec8bd2fd235a5c10be0c852",
+        "docs/evidence/m4/integration-checks-1792162892452.json": "17b4b743c280f5984d390c8f5ee3de9b42cab7660322abbd5b4d573dfe4568fa",
+        "docs/evidence/m4/ui/states-0587a50b-4b6d-4bdc-ae0a-9b66c20788ae/results.json": "961768b3a2b78e7f72409c776419f2d84cd93687b2889a011dd87437076d65e6",
+        "apps/api/src/modules/request-security.ts": "3c735f6bc43345186df5848ebc067fd9c7051a306581bf27850e521b59b40329"
+      },
+      "status": {
+        "R12": "CLOSED scoped source+coordinator runtime",
+        "R11": "PARTIAL SQL51/133ms coordinator reported; end-to-end pending",
+        "R13": "OPEN API generated colon key rejected by generic decoder"
+      },
+      "limits": [
+        "No reviewer DB/browser execution.",
+        "No application, generic helper or test was changed by reviewer."
+      ]
+    },
+    {
+      "turn": "01a14532-fb57-7c10-b0ff-89ebfc8d4bba",
+      "recordedAt": "2026-10-16T15:06:35.959516+00:00",
+      "scope": "Frozen SEO-specific canonical opaque cursor adapter and BuilderService consumer",
+      "files": {
+        "apps/api/src/modules/builder-seo-cursor.ts": "2ca3ad0f2fbe54d0bfb336a6cb32941a8a6ef566e4df8fad4977639eda018773",
+        "apps/api/src/modules/builder.service.ts": "6b93111581714dc04f580f24add6f13ac38d2b691cfde7f81047325b2d5feb53",
+        "apps/api/src/modules/request-security.ts": "3c735f6bc43345186df5848ebc067fd9c7051a306581bf27850e521b59b40329",
+        "apps/api/test/m4-seo-cursor.test.ts": "34a939aabe67dd864c838d0c1451d66e0c4b254d8e4e0b1930b44b862b37724f",
+        "apps/api/test/m4-seo-integration.test.ts": "3d3ce5eba5841771f3502692420a5f895bef30ae57936d5fa63ebba9bc8a8ca5",
+        "apps/api/migrations/0050_m4_seo_eligibility.sql": "ade84e01a91f65d0d93588093d4da5dbeacc683ef9d3dfddd78fcbcd0c3ed451"
+      },
+      "independentPureTests": {
+        "command": "./node_modules/.bin/bun --no-env-file test apps/api/test/m4-seo-cursor.test.ts",
+        "bun": "1.4.3",
+        "status": "PASS",
+        "tests": 4,
+        "assertions": 124,
+        "failed": 0,
+        "files": 1
+      },
+      "sourceStatus": "R13 SOURCE_REPAIRED; no new actionable source defect",
+      "limits": [
+        "Actual API continuation and full sitemap remain coordinator-run pending evidence.",
+        "Generic request-security helper is unchanged; cursor encoding does not replace authorization."
+      ],
+      "BuilderServiceDifferentialProof": {
+        "priorSHA256": "64d11b94e4ea2153e8dfcf3999655236cb65ebd7cc1a495ae19a1101088e6f42",
+        "verified": true,
+        "method": "Reconstruct prior file by removing only the new codec import and restoring the prior SEO method; SHA256 exactly matches reviewed prior snapshot. Other methods, including preview adapter, are unchanged."
+      }
+    },
+    {
+      "turn": "01a14532-fb57-7c10-b0ff-89ebfc8d4bba",
+      "recordedAt": "2026-10-16T15:14:04.447555+00:00",
+      "scope": "Final affected native SEO and public continuation closure plus final API serving exposure",
+      "files": {
+        "apps/api/src/modules/builder-seo-cursor.ts": "2ca3ad0f2fbe54d0bfb336a6cb32941a8a6ef566e4df8fad4977639eda018773",
+        "apps/api/src/modules/builder.service.ts": "6b93111581714dc04f580f24add6f13ac38d2b691cfde7f81047325b2d5feb53",
+        "apps/api/src/modules/request-security.ts": "3c735f6bc43345186df5848ebc067fd9c7051a306581bf27850e521b59b40329",
+        "apps/api/migrations/0050_m4_seo_eligibility.sql": "ade84e01a91f65d0d93588093d4da5dbeacc683ef9d3dfddd78fcbcd0c3ed451",
+        "docs/evidence/m4/integration-checks-1792163336362.json": "1b2e7b903cb6e1d9ba756497ccd4c02e11eefe4b2803d27c5e83b95153f2619c",
+        "docs/evidence/m4/seo-sql-role-controls.json": "66b51b53f62c15e8d0b21ab6c42b27ab11749f9f9ec8bd2fd235a5c10be0c852",
+        "docs/evidence/m4/seo-native-timings.json": "71f83983826ac404f6960aaf9710698f6751ae39f6030884a28411ed3a2ccc73",
+        "docs/evidence/m4/seo-http-final.json": "6246d0efa959615a3a1db524086d8013ac273dedcf79602ee049c5208b709e12",
+        "docs/evidence/m4/ui/full-7b976684-eea2-4b5e-b84a-b369e5d461ff/results.json": "285b983cf4683a9138ddbeda7f86024d1aacd7758ad1bf0ec05a548083ea8691"
+      },
+      "status": {
+        "R1_R13": "CLOSED within reviewed source and scoped coordinator-run regression evidence",
+        "nativeUniqueAggregate": {
+          "files": 11,
+          "tests": 32,
+          "assertions": 4946,
+          "status": "PASS"
+        },
+        "finalSEO": {
+          "tests": 2,
+          "assertions": 3941,
+          "status": "PASS"
+        },
+        "actualDemo": {
+          "apiPageSizes": [
+            50,
+            9
+          ],
+          "entries": 59,
+          "consumerTotalMs": 408,
+          "sitemapMs": 117,
+          "sitemapStatus": 200
+        }
+      },
+      "finalApiArtifactManifestSHA256": "4b9a2d75dee39892604f53ed35ef9f1281ebaca401b882bc5999501ef985d72c",
+      "audit": "FAIL_OPEN; bounded local M4 deferral supported, no Production waiver",
+      "limits": [
+        "Reviewer independently ran pure cursor4/124 and prior pure34/187; native DB/browser tests are coordinator-run.",
+        "Historical FAIL/NOT_RUN records remain unchanged.",
+        "Full M4 integration/human acceptance belongs to coordinator and Project Lead."
+      ]
+    }
+  ]
+}

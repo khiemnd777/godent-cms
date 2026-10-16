@@ -1,0 +1,3604 @@
+{
+  "status": "FAIL",
+  "stage": "fallback_http",
+  "recordedAt": "2026-10-16T14:42:10.506Z",
+  "completed": [
+    {
+      "case": "ordinary_password_login",
+      "status": "PASS"
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "home",
+      "key": "home",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "b28d05fa-9489-494d-aeee-02c7977a51c9",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "home",
+      "key": "home",
+      "width": 390,
+      "status": "PASS",
+      "publication": "b28d05fa-9489-494d-aeee-02c7977a51c9",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "specialty",
+      "key": "specialty",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "bfd2ef93-d85d-457e-8df6-5d6b6869ca0c",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "specialty",
+      "key": "specialty",
+      "width": 390,
+      "status": "PASS",
+      "publication": "bfd2ef93-d85d-457e-8df6-5d6b6869ca0c",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "service_group",
+      "key": "service_group",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "bc9152e9-6ef3-4701-b8d4-dfcd944144d3",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "service_group",
+      "key": "service_group",
+      "width": 390,
+      "status": "PASS",
+      "publication": "bc9152e9-6ef3-4701-b8d4-dfcd944144d3",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "location",
+      "key": "location",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "d9052d55-4840-4fde-b764-2c938ff4467f",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "location",
+      "key": "location",
+      "width": 390,
+      "status": "PASS",
+      "publication": "d9052d55-4840-4fde-b764-2c938ff4467f",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "doctor",
+      "key": "doctor",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "0b89625f-7ce3-4e62-aa7c-732428a2d3c2",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "doctor",
+      "key": "doctor",
+      "width": 390,
+      "status": "PASS",
+      "publication": "0b89625f-7ce3-4e62-aa7c-732428a2d3c2",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "price",
+      "key": "price",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "81a5631c-0a3c-4142-98fa-563e2b0f3ad4",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "price",
+      "key": "price",
+      "width": 390,
+      "status": "PASS",
+      "publication": "81a5631c-0a3c-4142-98fa-563e2b0f3ad4",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "case",
+      "key": "case",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "99a43167-eb1d-4e9a-9da7-552279fb5e68",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "case",
+      "key": "case",
+      "width": 390,
+      "status": "PASS",
+      "publication": "99a43167-eb1d-4e9a-9da7-552279fb5e68",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "gallery",
+      "key": "gallery",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "08021462-9295-4ccc-8db2-5546c789fd39",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "gallery",
+      "key": "gallery",
+      "width": 390,
+      "status": "PASS",
+      "publication": "08021462-9295-4ccc-8db2-5546c789fd39",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "testimonial",
+      "key": "testimonial",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "6bc8cf2e-3ac9-42dc-bd30-a5038bea0ec4",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "testimonial",
+      "key": "testimonial",
+      "width": 390,
+      "status": "PASS",
+      "publication": "6bc8cf2e-3ac9-42dc-bd30-a5038bea0ec4",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "article",
+      "key": "article",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "f8f7ce80-247f-403f-83a3-5dc787d12df4",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "article",
+      "key": "article",
+      "width": 390,
+      "status": "PASS",
+      "publication": "f8f7ce80-247f-403f-83a3-5dc787d12df4",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "category",
+      "key": "category",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "ccd74154-173a-4045-8d8f-1b9f28c78ab4",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "category",
+      "key": "category",
+      "width": 390,
+      "status": "PASS",
+      "publication": "ccd74154-173a-4045-8d8f-1b9f28c78ab4",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "faq",
+      "key": "faq",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "347f2b22-11d6-49c8-a759-0b0391707028",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "faq",
+      "key": "faq",
+      "width": 390,
+      "status": "PASS",
+      "publication": "347f2b22-11d6-49c8-a759-0b0391707028",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "service",
+      "key": "service",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "82bb2f38-4d82-4984-af14-9eb1895db758",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "service",
+      "key": "service",
+      "width": 390,
+      "status": "PASS",
+      "publication": "82bb2f38-4d82-4984-af14-9eb1895db758",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "price",
+      "key": "priceRange",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "040ea21e-4cc4-4482-96db-559282fd1e5b",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "price",
+      "key": "priceRange",
+      "width": 390,
+      "status": "PASS",
+      "publication": "040ea21e-4cc4-4482-96db-559282fd1e5b",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "price",
+      "key": "priceFrom",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "9bb98061-b2ca-4741-bb12-4d01d2d0bb0d",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "price",
+      "key": "priceFrom",
+      "width": 390,
+      "status": "PASS",
+      "publication": "9bb98061-b2ca-4741-bb12-4d01d2d0bb0d",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "page",
+      "key": "catalog",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "3e05b0b7-95e4-4780-b573-62f7f31e8b5e",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "page",
+      "key": "catalog",
+      "width": 390,
+      "status": "PASS",
+      "publication": "3e05b0b7-95e4-4780-b573-62f7f31e8b5e",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "page",
+      "key": "viOnly",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "add82fcf-02b8-4de4-807b-46a575cebee9",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "page",
+      "key": "viOnly",
+      "width": 390,
+      "status": "PASS",
+      "publication": "add82fcf-02b8-4de4-807b-46a575cebee9",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "promotion",
+      "key": "promotion",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "a7be44f5-8ca4-4eec-9544-6ea9469adc26",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "promotion",
+      "key": "promotion",
+      "width": 390,
+      "status": "PASS",
+      "publication": "a7be44f5-8ca4-4eec-9544-6ea9469adc26",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "promotion",
+      "key": "promotionUpcoming",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "51945543-d28f-4fe6-99c4-bd43d6e68134",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "promotion",
+      "key": "promotionUpcoming",
+      "width": 390,
+      "status": "PASS",
+      "publication": "51945543-d28f-4fe6-99c4-bd43d6e68134",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "promotion",
+      "key": "promotionExpired",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "e929c648-d755-4dc0-bcda-82e4545ffb52",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "promotion",
+      "key": "promotionExpired",
+      "width": 390,
+      "status": "PASS",
+      "publication": "e929c648-d755-4dc0-bcda-82e4545ffb52",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "landing",
+      "key": "landing",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "a3594ab6-9807-4e8d-a600-1d1800818b19",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "landing",
+      "key": "landing",
+      "width": 390,
+      "status": "PASS",
+      "publication": "a3594ab6-9807-4e8d-a600-1d1800818b19",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "landing",
+      "key": "landingUpcoming",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "3ecb9a12-8572-42d3-b237-639b05246dbc",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "landing",
+      "key": "landingUpcoming",
+      "width": 390,
+      "status": "PASS",
+      "publication": "3ecb9a12-8572-42d3-b237-639b05246dbc",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "landing",
+      "key": "landingExpired",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "418b7edd-06be-4fcd-8c5c-caa68b69b58a",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "landing",
+      "key": "landingExpired",
+      "width": 390,
+      "status": "PASS",
+      "publication": "418b7edd-06be-4fcd-8c5c-caa68b69b58a",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "service",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "specialty",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "service_group",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "location",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "doctor",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "price",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "case",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "gallery",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "testimonial",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "article",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "category",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "faq",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "promotion",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "vi",
+      "kind": "landing",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "home",
+      "key": "home",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "a4063414-c88d-4659-bea7-984252a6fc48",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "home",
+      "key": "home",
+      "width": 390,
+      "status": "PASS",
+      "publication": "a4063414-c88d-4659-bea7-984252a6fc48",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "specialty",
+      "key": "specialty",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "5eaf2659-a73c-45c9-910e-45dba9b2b177",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "specialty",
+      "key": "specialty",
+      "width": 390,
+      "status": "PASS",
+      "publication": "5eaf2659-a73c-45c9-910e-45dba9b2b177",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "service_group",
+      "key": "service_group",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "ded594fa-0f23-4524-9369-2ae7b5b6c420",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "service_group",
+      "key": "service_group",
+      "width": 390,
+      "status": "PASS",
+      "publication": "ded594fa-0f23-4524-9369-2ae7b5b6c420",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "location",
+      "key": "location",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "e32345e6-9530-4ab9-af84-879884779ce3",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "location",
+      "key": "location",
+      "width": 390,
+      "status": "PASS",
+      "publication": "e32345e6-9530-4ab9-af84-879884779ce3",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "doctor",
+      "key": "doctor",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "c3db1407-512e-40d8-a8ce-c78e0c31d5dc",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "doctor",
+      "key": "doctor",
+      "width": 390,
+      "status": "PASS",
+      "publication": "c3db1407-512e-40d8-a8ce-c78e0c31d5dc",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "price",
+      "key": "price",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "275313d3-4452-40ee-979b-51389cbbae33",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "price",
+      "key": "price",
+      "width": 390,
+      "status": "PASS",
+      "publication": "275313d3-4452-40ee-979b-51389cbbae33",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "case",
+      "key": "case",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "59aa0a1d-5f66-466e-8c9a-ed562a4e7363",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "case",
+      "key": "case",
+      "width": 390,
+      "status": "PASS",
+      "publication": "59aa0a1d-5f66-466e-8c9a-ed562a4e7363",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "gallery",
+      "key": "gallery",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "068c0d1b-48f9-4f8f-bb4b-ef6954cbb6a1",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "gallery",
+      "key": "gallery",
+      "width": 390,
+      "status": "PASS",
+      "publication": "068c0d1b-48f9-4f8f-bb4b-ef6954cbb6a1",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "testimonial",
+      "key": "testimonial",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "69563d77-60e0-40dd-8d59-697ce4a8bc10",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "testimonial",
+      "key": "testimonial",
+      "width": 390,
+      "status": "PASS",
+      "publication": "69563d77-60e0-40dd-8d59-697ce4a8bc10",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "article",
+      "key": "article",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "9f0ac902-4288-4d08-bcd9-455a982e9856",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "article",
+      "key": "article",
+      "width": 390,
+      "status": "PASS",
+      "publication": "9f0ac902-4288-4d08-bcd9-455a982e9856",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "category",
+      "key": "category",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "5bc90f25-52f4-4911-99be-3cc0e344e54a",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "category",
+      "key": "category",
+      "width": 390,
+      "status": "PASS",
+      "publication": "5bc90f25-52f4-4911-99be-3cc0e344e54a",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "faq",
+      "key": "faq",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "f7e7fe96-2488-4829-a223-d31b35528b44",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "faq",
+      "key": "faq",
+      "width": 390,
+      "status": "PASS",
+      "publication": "f7e7fe96-2488-4829-a223-d31b35528b44",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "service",
+      "key": "service",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "1b863a97-2d76-4ba8-9baa-e7464ec45358",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "service",
+      "key": "service",
+      "width": 390,
+      "status": "PASS",
+      "publication": "1b863a97-2d76-4ba8-9baa-e7464ec45358",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "price",
+      "key": "priceRange",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "81de05ba-f51d-4639-be79-3b9ca1852891",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "price",
+      "key": "priceRange",
+      "width": 390,
+      "status": "PASS",
+      "publication": "81de05ba-f51d-4639-be79-3b9ca1852891",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "price",
+      "key": "priceFrom",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "f42b5abc-d42e-4066-8ddb-b0b49a8b77ae",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "price",
+      "key": "priceFrom",
+      "width": 390,
+      "status": "PASS",
+      "publication": "f42b5abc-d42e-4066-8ddb-b0b49a8b77ae",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "page",
+      "key": "catalog",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "aa1f8afa-c0e2-4ee5-97df-6d87e798305e",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "page",
+      "key": "catalog",
+      "width": 390,
+      "status": "PASS",
+      "publication": "aa1f8afa-c0e2-4ee5-97df-6d87e798305e",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "page",
+      "key": "enOnly",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "56a386fd-1741-43f7-a78e-27865b910b6a",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "page",
+      "key": "enOnly",
+      "width": 390,
+      "status": "PASS",
+      "publication": "56a386fd-1741-43f7-a78e-27865b910b6a",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "promotion",
+      "key": "promotion",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "6bfe780c-9ae3-4762-b5a6-a0a565485008",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "promotion",
+      "key": "promotion",
+      "width": 390,
+      "status": "PASS",
+      "publication": "6bfe780c-9ae3-4762-b5a6-a0a565485008",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "promotion",
+      "key": "promotionUpcoming",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "3a220223-e3dc-4fcd-8020-5d6fc74312ef",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "promotion",
+      "key": "promotionUpcoming",
+      "width": 390,
+      "status": "PASS",
+      "publication": "3a220223-e3dc-4fcd-8020-5d6fc74312ef",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "promotion",
+      "key": "promotionExpired",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "146494ac-d071-492a-98cf-55dc6646c763",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "promotion",
+      "key": "promotionExpired",
+      "width": 390,
+      "status": "PASS",
+      "publication": "146494ac-d071-492a-98cf-55dc6646c763",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "landing",
+      "key": "landing",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "b93ad123-8626-45dc-9483-4055257dd649",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "landing",
+      "key": "landing",
+      "width": 390,
+      "status": "PASS",
+      "publication": "b93ad123-8626-45dc-9483-4055257dd649",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "landing",
+      "key": "landingUpcoming",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "4258e978-6c86-4db7-8b81-df92e26bd244",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "landing",
+      "key": "landingUpcoming",
+      "width": 390,
+      "status": "PASS",
+      "publication": "4258e978-6c86-4db7-8b81-df92e26bd244",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "landing",
+      "key": "landingExpired",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "0e06b1a0-1816-4be3-b4c0-231595c8cda5",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "landing",
+      "key": "landingExpired",
+      "width": 390,
+      "status": "PASS",
+      "publication": "0e06b1a0-1816-4be3-b4c0-231595c8cda5",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "service",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "specialty",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "service_group",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "location",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "doctor",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "price",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "case",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "gallery",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "testimonial",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "article",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "category",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "faq",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "promotion",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "clarity",
+      "locale": "en",
+      "kind": "landing",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "home",
+      "key": "home",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "b28d05fa-9489-494d-aeee-02c7977a51c9",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "home",
+      "key": "home",
+      "width": 390,
+      "status": "PASS",
+      "publication": "b28d05fa-9489-494d-aeee-02c7977a51c9",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "specialty",
+      "key": "specialty",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "bfd2ef93-d85d-457e-8df6-5d6b6869ca0c",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "specialty",
+      "key": "specialty",
+      "width": 390,
+      "status": "PASS",
+      "publication": "bfd2ef93-d85d-457e-8df6-5d6b6869ca0c",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "service_group",
+      "key": "service_group",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "bc9152e9-6ef3-4701-b8d4-dfcd944144d3",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "service_group",
+      "key": "service_group",
+      "width": 390,
+      "status": "PASS",
+      "publication": "bc9152e9-6ef3-4701-b8d4-dfcd944144d3",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "location",
+      "key": "location",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "d9052d55-4840-4fde-b764-2c938ff4467f",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "location",
+      "key": "location",
+      "width": 390,
+      "status": "PASS",
+      "publication": "d9052d55-4840-4fde-b764-2c938ff4467f",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "doctor",
+      "key": "doctor",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "0b89625f-7ce3-4e62-aa7c-732428a2d3c2",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "doctor",
+      "key": "doctor",
+      "width": 390,
+      "status": "PASS",
+      "publication": "0b89625f-7ce3-4e62-aa7c-732428a2d3c2",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "price",
+      "key": "price",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "81a5631c-0a3c-4142-98fa-563e2b0f3ad4",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "price",
+      "key": "price",
+      "width": 390,
+      "status": "PASS",
+      "publication": "81a5631c-0a3c-4142-98fa-563e2b0f3ad4",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "case",
+      "key": "case",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "99a43167-eb1d-4e9a-9da7-552279fb5e68",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "case",
+      "key": "case",
+      "width": 390,
+      "status": "PASS",
+      "publication": "99a43167-eb1d-4e9a-9da7-552279fb5e68",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "gallery",
+      "key": "gallery",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "08021462-9295-4ccc-8db2-5546c789fd39",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "gallery",
+      "key": "gallery",
+      "width": 390,
+      "status": "PASS",
+      "publication": "08021462-9295-4ccc-8db2-5546c789fd39",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "testimonial",
+      "key": "testimonial",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "6bc8cf2e-3ac9-42dc-bd30-a5038bea0ec4",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "testimonial",
+      "key": "testimonial",
+      "width": 390,
+      "status": "PASS",
+      "publication": "6bc8cf2e-3ac9-42dc-bd30-a5038bea0ec4",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "article",
+      "key": "article",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "f8f7ce80-247f-403f-83a3-5dc787d12df4",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "article",
+      "key": "article",
+      "width": 390,
+      "status": "PASS",
+      "publication": "f8f7ce80-247f-403f-83a3-5dc787d12df4",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "category",
+      "key": "category",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "ccd74154-173a-4045-8d8f-1b9f28c78ab4",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "category",
+      "key": "category",
+      "width": 390,
+      "status": "PASS",
+      "publication": "ccd74154-173a-4045-8d8f-1b9f28c78ab4",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "faq",
+      "key": "faq",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "347f2b22-11d6-49c8-a759-0b0391707028",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "faq",
+      "key": "faq",
+      "width": 390,
+      "status": "PASS",
+      "publication": "347f2b22-11d6-49c8-a759-0b0391707028",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "service",
+      "key": "service",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "82bb2f38-4d82-4984-af14-9eb1895db758",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "service",
+      "key": "service",
+      "width": 390,
+      "status": "PASS",
+      "publication": "82bb2f38-4d82-4984-af14-9eb1895db758",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "price",
+      "key": "priceRange",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "040ea21e-4cc4-4482-96db-559282fd1e5b",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "price",
+      "key": "priceRange",
+      "width": 390,
+      "status": "PASS",
+      "publication": "040ea21e-4cc4-4482-96db-559282fd1e5b",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "price",
+      "key": "priceFrom",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "9bb98061-b2ca-4741-bb12-4d01d2d0bb0d",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "price",
+      "key": "priceFrom",
+      "width": 390,
+      "status": "PASS",
+      "publication": "9bb98061-b2ca-4741-bb12-4d01d2d0bb0d",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "page",
+      "key": "catalog",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "3e05b0b7-95e4-4780-b573-62f7f31e8b5e",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "page",
+      "key": "catalog",
+      "width": 390,
+      "status": "PASS",
+      "publication": "3e05b0b7-95e4-4780-b573-62f7f31e8b5e",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "page",
+      "key": "viOnly",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "add82fcf-02b8-4de4-807b-46a575cebee9",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "page",
+      "key": "viOnly",
+      "width": 390,
+      "status": "PASS",
+      "publication": "add82fcf-02b8-4de4-807b-46a575cebee9",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "promotion",
+      "key": "promotion",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "a7be44f5-8ca4-4eec-9544-6ea9469adc26",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "promotion",
+      "key": "promotion",
+      "width": 390,
+      "status": "PASS",
+      "publication": "a7be44f5-8ca4-4eec-9544-6ea9469adc26",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "promotion",
+      "key": "promotionUpcoming",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "51945543-d28f-4fe6-99c4-bd43d6e68134",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "promotion",
+      "key": "promotionUpcoming",
+      "width": 390,
+      "status": "PASS",
+      "publication": "51945543-d28f-4fe6-99c4-bd43d6e68134",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "promotion",
+      "key": "promotionExpired",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "e929c648-d755-4dc0-bcda-82e4545ffb52",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "promotion",
+      "key": "promotionExpired",
+      "width": 390,
+      "status": "PASS",
+      "publication": "e929c648-d755-4dc0-bcda-82e4545ffb52",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "landing",
+      "key": "landing",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "a3594ab6-9807-4e8d-a600-1d1800818b19",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "landing",
+      "key": "landing",
+      "width": 390,
+      "status": "PASS",
+      "publication": "a3594ab6-9807-4e8d-a600-1d1800818b19",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "landing",
+      "key": "landingUpcoming",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "3ecb9a12-8572-42d3-b237-639b05246dbc",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "landing",
+      "key": "landingUpcoming",
+      "width": 390,
+      "status": "PASS",
+      "publication": "3ecb9a12-8572-42d3-b237-639b05246dbc",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "landing",
+      "key": "landingExpired",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "418b7edd-06be-4fcd-8c5c-caa68b69b58a",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "landing",
+      "key": "landingExpired",
+      "width": 390,
+      "status": "PASS",
+      "publication": "418b7edd-06be-4fcd-8c5c-caa68b69b58a",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "service",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "specialty",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "service_group",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "location",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "doctor",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "price",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "case",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "gallery",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "testimonial",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "article",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "category",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "faq",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "promotion",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "vi",
+      "kind": "landing",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "home",
+      "key": "home",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "a4063414-c88d-4659-bea7-984252a6fc48",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "home",
+      "key": "home",
+      "width": 390,
+      "status": "PASS",
+      "publication": "a4063414-c88d-4659-bea7-984252a6fc48",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "specialty",
+      "key": "specialty",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "5eaf2659-a73c-45c9-910e-45dba9b2b177",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "specialty",
+      "key": "specialty",
+      "width": 390,
+      "status": "PASS",
+      "publication": "5eaf2659-a73c-45c9-910e-45dba9b2b177",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "service_group",
+      "key": "service_group",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "ded594fa-0f23-4524-9369-2ae7b5b6c420",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "service_group",
+      "key": "service_group",
+      "width": 390,
+      "status": "PASS",
+      "publication": "ded594fa-0f23-4524-9369-2ae7b5b6c420",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "location",
+      "key": "location",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "e32345e6-9530-4ab9-af84-879884779ce3",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "location",
+      "key": "location",
+      "width": 390,
+      "status": "PASS",
+      "publication": "e32345e6-9530-4ab9-af84-879884779ce3",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "doctor",
+      "key": "doctor",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "c3db1407-512e-40d8-a8ce-c78e0c31d5dc",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "doctor",
+      "key": "doctor",
+      "width": 390,
+      "status": "PASS",
+      "publication": "c3db1407-512e-40d8-a8ce-c78e0c31d5dc",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "price",
+      "key": "price",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "275313d3-4452-40ee-979b-51389cbbae33",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "price",
+      "key": "price",
+      "width": 390,
+      "status": "PASS",
+      "publication": "275313d3-4452-40ee-979b-51389cbbae33",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "case",
+      "key": "case",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "59aa0a1d-5f66-466e-8c9a-ed562a4e7363",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "case",
+      "key": "case",
+      "width": 390,
+      "status": "PASS",
+      "publication": "59aa0a1d-5f66-466e-8c9a-ed562a4e7363",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "gallery",
+      "key": "gallery",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "068c0d1b-48f9-4f8f-bb4b-ef6954cbb6a1",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "gallery",
+      "key": "gallery",
+      "width": 390,
+      "status": "PASS",
+      "publication": "068c0d1b-48f9-4f8f-bb4b-ef6954cbb6a1",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "testimonial",
+      "key": "testimonial",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "69563d77-60e0-40dd-8d59-697ce4a8bc10",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "testimonial",
+      "key": "testimonial",
+      "width": 390,
+      "status": "PASS",
+      "publication": "69563d77-60e0-40dd-8d59-697ce4a8bc10",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "article",
+      "key": "article",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "9f0ac902-4288-4d08-bcd9-455a982e9856",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "article",
+      "key": "article",
+      "width": 390,
+      "status": "PASS",
+      "publication": "9f0ac902-4288-4d08-bcd9-455a982e9856",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "category",
+      "key": "category",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "5bc90f25-52f4-4911-99be-3cc0e344e54a",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "category",
+      "key": "category",
+      "width": 390,
+      "status": "PASS",
+      "publication": "5bc90f25-52f4-4911-99be-3cc0e344e54a",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "faq",
+      "key": "faq",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "f7e7fe96-2488-4829-a223-d31b35528b44",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "faq",
+      "key": "faq",
+      "width": 390,
+      "status": "PASS",
+      "publication": "f7e7fe96-2488-4829-a223-d31b35528b44",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "service",
+      "key": "service",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "1b863a97-2d76-4ba8-9baa-e7464ec45358",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "service",
+      "key": "service",
+      "width": 390,
+      "status": "PASS",
+      "publication": "1b863a97-2d76-4ba8-9baa-e7464ec45358",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "price",
+      "key": "priceRange",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "81de05ba-f51d-4639-be79-3b9ca1852891",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "price",
+      "key": "priceRange",
+      "width": 390,
+      "status": "PASS",
+      "publication": "81de05ba-f51d-4639-be79-3b9ca1852891",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "price",
+      "key": "priceFrom",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "f42b5abc-d42e-4066-8ddb-b0b49a8b77ae",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "price",
+      "key": "priceFrom",
+      "width": 390,
+      "status": "PASS",
+      "publication": "f42b5abc-d42e-4066-8ddb-b0b49a8b77ae",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "page",
+      "key": "catalog",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "aa1f8afa-c0e2-4ee5-97df-6d87e798305e",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "page",
+      "key": "catalog",
+      "width": 390,
+      "status": "PASS",
+      "publication": "aa1f8afa-c0e2-4ee5-97df-6d87e798305e",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "page",
+      "key": "enOnly",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "56a386fd-1741-43f7-a78e-27865b910b6a",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "page",
+      "key": "enOnly",
+      "width": 390,
+      "status": "PASS",
+      "publication": "56a386fd-1741-43f7-a78e-27865b910b6a",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "promotion",
+      "key": "promotion",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "6bfe780c-9ae3-4762-b5a6-a0a565485008",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "promotion",
+      "key": "promotion",
+      "width": 390,
+      "status": "PASS",
+      "publication": "6bfe780c-9ae3-4762-b5a6-a0a565485008",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "promotion",
+      "key": "promotionUpcoming",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "3a220223-e3dc-4fcd-8020-5d6fc74312ef",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "promotion",
+      "key": "promotionUpcoming",
+      "width": 390,
+      "status": "PASS",
+      "publication": "3a220223-e3dc-4fcd-8020-5d6fc74312ef",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "promotion",
+      "key": "promotionExpired",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "146494ac-d071-492a-98cf-55dc6646c763",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "promotion",
+      "key": "promotionExpired",
+      "width": 390,
+      "status": "PASS",
+      "publication": "146494ac-d071-492a-98cf-55dc6646c763",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "landing",
+      "key": "landing",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "b93ad123-8626-45dc-9483-4055257dd649",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "landing",
+      "key": "landing",
+      "width": 390,
+      "status": "PASS",
+      "publication": "b93ad123-8626-45dc-9483-4055257dd649",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "landing",
+      "key": "landingUpcoming",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "4258e978-6c86-4db7-8b81-df92e26bd244",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "landing",
+      "key": "landingUpcoming",
+      "width": 390,
+      "status": "PASS",
+      "publication": "4258e978-6c86-4db7-8b81-df92e26bd244",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "landing",
+      "key": "landingExpired",
+      "width": 1440,
+      "status": "PASS",
+      "publication": "0e06b1a0-1816-4be3-b4c0-231595c8cda5",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_detail",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "landing",
+      "key": "landingExpired",
+      "width": 390,
+      "status": "PASS",
+      "publication": "0e06b1a0-1816-4be3-b4c0-231595c8cda5",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "service",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "specialty",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "service_group",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "location",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "doctor",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "price",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "case",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "gallery",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "testimonial",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "article",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "category",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "faq",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "promotion",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "rendered_listing",
+      "theme": "showcase",
+      "locale": "en",
+      "kind": "landing",
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "five_width_public",
+      "kind": "page",
+      "width": 320,
+      "status": "PASS",
+      "layout": {
+        "width": 320,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "five_width_public",
+      "kind": "landing",
+      "width": 320,
+      "status": "PASS",
+      "layout": {
+        "width": 320,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "five_width_authenticated_editor",
+      "width": 320,
+      "status": "PASS",
+      "layout": {
+        "width": 320,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "five_width_public",
+      "kind": "page",
+      "width": 390,
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "five_width_public",
+      "kind": "landing",
+      "width": 390,
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "five_width_authenticated_editor",
+      "width": 390,
+      "status": "PASS",
+      "layout": {
+        "width": 390,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "five_width_public",
+      "kind": "page",
+      "width": 768,
+      "status": "PASS",
+      "layout": {
+        "width": 768,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "five_width_public",
+      "kind": "landing",
+      "width": 768,
+      "status": "PASS",
+      "layout": {
+        "width": 768,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "five_width_authenticated_editor",
+      "width": 768,
+      "status": "PASS",
+      "layout": {
+        "width": 768,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "five_width_public",
+      "kind": "page",
+      "width": 1024,
+      "status": "PASS",
+      "layout": {
+        "width": 1024,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "five_width_public",
+      "kind": "landing",
+      "width": 1024,
+      "status": "PASS",
+      "layout": {
+        "width": 1024,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "five_width_authenticated_editor",
+      "width": 1024,
+      "status": "PASS",
+      "layout": {
+        "width": 1024,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "five_width_public",
+      "kind": "page",
+      "width": 1440,
+      "status": "PASS",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "five_width_public",
+      "kind": "landing",
+      "width": 1440,
+      "status": "PASS",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    },
+    {
+      "case": "five_width_authenticated_editor",
+      "width": 1440,
+      "status": "PASS",
+      "layout": {
+        "width": 1440,
+        "overflow": false,
+        "outsideControls": 0
+      }
+    }
+  ],
+  "details": "Private error retained; affected criteria remain open."
+}

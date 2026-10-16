@@ -20,8 +20,8 @@ const columns = sql`l.id,l.name,'YC-'||lpad(l.code_number::text,greatest(6,lengt
   CASE WHEN l.email IS NULL THEN NULL ELSE left(l.email,1)||'***@'||split_part(l.email,'@',2) END AS "emailMasked",
   l.preferred_language AS "preferredLanguage",l.preferred_channel AS "preferredChannel",l.created_at AS "createdAt",
   to_char(l.created_at AT TIME ZONE 'UTC','YYYY-MM-DD"T"HH24:MI:SS.US"Z"') AS "cursorTime",
-  jsonb_build_object('tenantSlug',l.source_tenant_slug,'serviceSlug',l.source_service_slug,'serviceTitle',l.source_service_title,
-    'publicationId',l.source_publication_id,'path',l.source_path) AS source,
+  coalesce(l.source_snapshot,jsonb_build_object('tenantSlug',l.source_tenant_slug,'serviceSlug',l.source_service_slug,'serviceTitle',l.source_service_title,
+    'publicationId',l.source_publication_id,'path',l.source_path)) AS source,
   CASE WHEN l.interest_service_id IS NULL THEN NULL ELSE jsonb_build_object('serviceSlug',l.interest_service_slug,'serviceTitle',l.interest_service_title) END AS interest`;
 function item(row: Record<string, unknown>): LeadListItem {
   const { cursorTime, ...value } = row; void cursorTime;

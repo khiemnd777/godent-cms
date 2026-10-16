@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T15:14:37.779Z",
+  "cases": [
+    "actual_add_move_hide_save_reload_private_preview",
+    "actual_published_reference_picker_pin_save_reload_preview",
+    "actual_remove_save_reload_unpublished_stays404"
+  ],
+  "limits": "Only the existing owned M4 workflow Draft; no publish/config/old-fixture changes."
+}

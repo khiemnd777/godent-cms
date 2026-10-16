@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T13:29:43.602Z",
+  "stage": "pending_draft",
+  "results": [
+    {
+      "case": "config_save_explicit_publish",
+      "status": "PASS"
+    },
+    {
+      "case": "saved_reload_and_anonymous_draft_denial",
+      "status": "PASS"
+    },
+    {
+      "case": "private_saved_preview",
+      "status": "PASS",
+      "desktop": {
+        "width": 1440,
+        "overflow": false,
+        "controls": 0
+      },
+      "mobile": {
+        "width": 390,
+        "overflow": false,
+        "controls": 0
+      }
+    },
+    {
+      "case": "public_published_home",
+      "status": "PASS",
+      "desktop": {
+        "width": 1440,
+        "overflow": false,
+        "controls": 0
+      },
+      "mobile": {
+        "width": 390,
+        "overflow": false,
+        "controls": 0
+      }
+    },
+    {
+      "case": "pending_v2_preserves_live_v1",
+      "status": "PASS"
+    }
+  ],
+  "limits": "Actual new owned tenantA normal-login UI/API/DB/SSR flow, saved private preview and two widths. Not full M4/two-theme/EN/campaign/all-state coverage or human acceptance."
+}

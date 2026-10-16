@@ -28,13 +28,15 @@ export interface IntakeChallenge { token: string; prompt: string; expiresAt: str
 export type IntakeErrorCode = 'INVALID_INPUT' | 'SOURCE_UNAVAILABLE' | 'REQUEST_CONFLICT' | 'RATE_LIMITED' |
   'CAPTCHA_REQUIRED' | 'CAPTCHA_INVALID' | 'CAPTCHA_UNAVAILABLE';
 export interface IntakeErrorResponse { statusCode: number; error: string; code?: IntakeErrorCode }
-export interface LeadSource {
+export interface LegacyLeadSource {
+  type?:'service';
   tenantSlug: string;
   serviceSlug: string;
   serviceTitle: string;
   publicationId: string;
   path: string;
 }
+export type LeadSource=LegacyLeadSource|import('./m4').M4LeadSource;
 export interface LeadListItem {
   id: string;
   name: string | null;

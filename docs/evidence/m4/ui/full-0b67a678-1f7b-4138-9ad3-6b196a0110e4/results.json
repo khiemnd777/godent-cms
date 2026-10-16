@@ -1,0 +1,16 @@
+{
+  "status": "FAIL",
+  "stage": "sitemap",
+  "recordedAt": "2026-10-16T14:47:30.950Z",
+  "completed": [
+    {
+      "case": "ordinary_password_login",
+      "status": "PASS"
+    },
+    {
+      "case": "real_http_en_fallback_missing_listing_method_and_header_overwrite",
+      "status": "PASS"
+    }
+  ],
+  "details": "Private error retained; affected criteria remain open."
+}

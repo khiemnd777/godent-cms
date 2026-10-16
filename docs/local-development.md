@@ -382,3 +382,32 @@ Use `.local/auth-001-ui-login-handoff.md` privately for current email/password-o
 ### M1 closure verification — 2026-10-16
 
 [Automated M1 closure](tasks/GCMS-M1-UAT-001.md#automated-local-closure-results--2026-10-16) is technically complete with current password-only browser/API/DB evidence; AUTH is HUMAN_ACCEPTED. All owned helper commands and exact results/limits are in that ledger. Existing `.local/auth-001-ui-login-handoff.md` remains the private current password-only handoff; the closure did not change retained credentials or add accounts. Fresh A1 browser login is now proved by the current paging/loading execution. Do not rerun helper mutations or broad fixture wrappers merely to inspect evidence. One new owned pending intent remains undispatched, with old backlog unchanged. `braces` remains FAIL under its current local-only deferral; no upgrade/deploy/production/backup-restore claim.
+
+
+## M4 local package — S13–S15
+
+[GCMS-M4-001](tasks/GCMS-M4-001.md) holds direct approval, complete plan, current execution status and evidence. [ADR-013](decisions/013-local-m4-builder-campaigns-locales.md) records settled builder/campaign/locale decisions. M3 acceptance and its historical proof limits remain unchanged. These commands are scoped to new, positively owned M4 fixtures; they do not authorize Production, Git delivery, reset or retained-backlog dispatch.
+
+Use project-local Bun1.4.3. The root aliases encode explicit flags and private environment order:
+
+| Command | Scope |
+| --- | --- |
+| `bun run m4:bootstrap` | Create the additive M4 namespace under the existing owner; no credential replacement. |
+| `bun run m4:migrate` | Apply only allowlisted forward M4 migrations with checksum verification and transaction/advisory lock. Use explicit `--through=NNNN` for a released boundary; `--compile-only --probe-content` intentionally rolls back after SQL checks. |
+| `bun run m4:fixtures` | New M4 synthetic tenants/actors and baseline services; private0600manifest. A complete rerun preserves records and reportsresetfalse. |
+| `bun run m4:demo` | Resumable owned catalog/media/VI–EN/campaign fixtures for local review; refuses ownership mismatch and preserves the representative VI home live/pending drafts. |
+| `bun run test:m4:unit` / `bun run test:m4` | Explicit pure or isolated SQL/API suites. The runner stops at the first failure; later suites remain NOT_RUN. Raw logs stay private; filtered evidence goes to docs/evidence/m4. |
+| `bun run m4:worker-scope` | Explicitly enroll only the two M4 fixture tenants for M4 delivery-invalidation work; does not start dispatch. |
+| `bun run start:m4-worker -- content --tenant <owned-id> --once` | Run the narrow M4 content-invalidation worker for one owned tenant. Media and S06 lead retention keep their separate worker contracts. |
+| `bun run m4:preserve` | Compare the exclusive M4 baseline's original-column row hashes and protected file hashes/modes. This is not backup/restore. |
+| `bun run check:runtime:m4` | Inspect current owned listener executables/ancestry/loopback and six diagnostic requests. Availability is point-in-time. |
+| `bun run check:ui:m4` | Actual installed Chrome in a fresh Playwright context; normal own-fixture login, public themes/locales, forms and lifecycle. This is a mutating synthetic journey, not a read-only health check. |
+| `bun run check:ui:m4 -- --http-only` | Scoped own-fixture login plus HTTP fallback/sitemap/robots; no new lead/content writes. `--workflow-only` and `--lifecycle-only` are separate mutating synthetic scopes, not proof of omitted checks. |
+| `bun --no-env-file scripts/m4-ui-states.ts --local-m4` | Requires an owned saved workflow manifest; actual conflict/save-replay plus explicitly controlled loading/503/403 and real preview/menu checks. Mutates only that owned Draft. |
+| `bun --no-env-file scripts/m4-editor-controls.ts --local-m4` | Requires the owned two-section unpublished workflow Draft; actual add/move/hide/picker/remove persistence. Refuses a different starting shape rather than resetting it. |
+
+Use `http://127.0.0.1:5891/login` with the private `.local/m4-fixtures.json` values. Do not publish those values. CMS uses `?tenant=<owned-id>`; `/cms/pages`, `/cms/website`, `/cms/promotions` and `/cms/variants/<kind>/<id>/<vi|en>` use the shared authenticated shell. Public entry is `http://localhost:5892/<owned-tenant-slug>`; EN adds `/en` after the tenant. API remains127.0.0.1:5890. No DNS/TLS or custom-domain activation is involved.
+
+Save and restore change drafts only. Explicit publish changes the selected locale; config publish changes adopted presentation without publishing content drafts. Unpublish/withdrawal overrides saved public URLs. A missing EN variant redirects302 only when eligibleVI exists. Backend errors remain errors. Local responses stayno-store/noindex.
+
+Read current execution evidence before rerunning fixtures or synthetic journeys. Preserve all earlier manifests, credentials, media and failed records; do not use fixture tools as automatic recovery. Start/stop only the positively identified repository launcher and its owned three apps. Never drain old S04/S05/M2/M3 jobs. The braces audit remainsFAIL/open; the [fresh final M4 assessment](evidence/m4/review.md#final-bounded-handoff--r1r13-closed-audit-failopen-retained) supports only the pinned local builds. Reassess2026-10-22 or earlier stated trigger and before Production; no Production waiver.

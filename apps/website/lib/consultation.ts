@@ -13,7 +13,7 @@ export class IntakeFailure extends Error {
   }
 }
 const knownCodes: IntakeErrorCode[] = ["INVALID_INPUT", "SOURCE_UNAVAILABLE", "REQUEST_CONFLICT", "RATE_LIMITED", "CAPTCHA_REQUIRED", "CAPTCHA_INVALID", "CAPTCHA_UNAVAILABLE"];
-async function publicRequest(path: string, body: unknown): Promise<unknown> {
+export async function publicRequest(path: string, body: unknown): Promise<unknown> {
   try {
     const response = await fetch(`http://127.0.0.1:5890${path}`, { method: "POST", credentials: "omit", cache: "no-store", redirect: "error", headers: { Accept: "application/json", "Content-Type": "application/json" }, body: JSON.stringify(body), signal: AbortSignal.timeout(12_000) });
     if (!response.ok) {

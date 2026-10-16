@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T14:59:04.862Z",
+  "results": [
+    {
+      "case": "actual_backend_conflict_two_tabs_input_preserved_explicit_rebase",
+      "status": "PASS"
+    },
+    {
+      "case": "actual_committed_save_unknown_ack_exact_operation_replay_no_extra_version",
+      "status": "PASS"
+    },
+    {
+      "case": "controlled_private_get_loading_then_real_response",
+      "status": "PASS"
+    },
+    {
+      "case": "controlled503_ui_real_get_retry",
+      "status": "PASS"
+    },
+    {
+      "case": "controlled403_ui_private_input_closed",
+      "status": "PASS",
+      "limit": "UI response handling only; actual revoked membership is independently covered by API tests."
+    },
+    {
+      "case": "real_source_filtered_empty_state",
+      "status": "PASS"
+    },
+    {
+      "case": "actual_private_preview_all_reference_and_signed_images_loaded",
+      "status": "PASS",
+      "privateImages": 10
+    },
+    {
+      "case": "actual_mobile_menu_keyboard_open_first_link_close",
+      "status": "PASS"
+    }
+  ],
+  "limits": "Actual owned local UI. Conflict/save retry use real writes+receipts; loading/503/403 use explicitly controlled HTTP responses and do not prove a real outage/revoked actor."
+}

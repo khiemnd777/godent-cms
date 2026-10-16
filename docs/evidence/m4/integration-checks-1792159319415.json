@@ -1,0 +1,24 @@
+{
+  "recordedAt": "2026-10-16T14:01:59.415Z",
+  "mode": "integration",
+  "status": "FAIL",
+  "suites": [
+    {
+      "file": "apps/api/test/m4-integration.test.ts",
+      "exitCode": 0,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 52
+    },
+    {
+      "file": "apps/api/test/m4-intake-integration.test.ts",
+      "exitCode": 1,
+      "passed": 2,
+      "failed": 1,
+      "skipped": 0,
+      "assertions": 51
+    }
+  ],
+  "limits": "Scoped actual tests; API/database/browser/media/worker and human acceptance remain distinct. Private raw output retained without exporting credentials."
+}

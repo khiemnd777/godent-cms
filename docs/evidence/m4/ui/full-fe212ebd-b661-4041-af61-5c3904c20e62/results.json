@@ -1,0 +1,12 @@
+{
+  "status": "FAIL",
+  "stage": "lifecycle_create",
+  "recordedAt": "2026-10-16T14:55:28.064Z",
+  "completed": [
+    {
+      "case": "ordinary_password_login",
+      "status": "PASS"
+    }
+  ],
+  "details": "Private error retained; affected criteria remain open."
+}

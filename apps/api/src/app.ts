@@ -14,6 +14,7 @@ import { createDomainModule } from './modules/domain.module';
 import { PublicationServiceOperations } from './modules/publication.service';
 import { createPublicationModule } from './modules/publication.module';
 import { apiSecurity, bodyParserError } from './modules/http-security';
+import {BuilderIntakeService} from './modules/builder-intake.service';
 import { IntakeService } from './modules/intake.service';
 import { createIntakeModule } from './modules/intake.module';
 import { LeadsService } from './modules/leads.service';
@@ -28,6 +29,8 @@ import {M3_LIMITS} from './contracts/m3';
 import {isContentJsonRequest} from './modules/content-request';
 import {ContentService} from './modules/content.service';
 import {createContentModule} from './modules/content.module';
+import {BuilderService} from './modules/builder.service';
+import {createBuilderModule} from './modules/builder.module';
 
 class EchoQuery {
   @IsString()
@@ -59,9 +62,10 @@ export async function createApp() {
   const identity = createS02Auth(database);
   const leads = new LeadsService(database,identity);
   const mediaStorage = new MediaStorage(readMediaStorageConfig());
+  const media=new MediaService(database,identity,mediaStorage,new MediaSigner(process.env.S07_MEDIA_SIGNING_SECRET??''));
   @Module({ controllers: [DiagnosticsController], imports: [createDomainModule(new DomainService(database, identity)),
-    createPublicationModule(new PublicationServiceOperations(database, identity)),createContentModule(new ContentService(database,identity)),createIntakeModule(new IntakeService(database,identity)),createLeadsModule(leads),
-    createRetentionModule(new RetentionService(database,identity,leads)),createMediaModule(new MediaService(database,identity,mediaStorage,new MediaSigner(process.env.S07_MEDIA_SIGNING_SECRET??'')))],
+    createPublicationModule(new PublicationServiceOperations(database, identity)),createContentModule(new ContentService(database,identity)),createBuilderModule(new BuilderService(database,identity,media)),createIntakeModule(new IntakeService(database,identity),new BuilderIntakeService(database)),createLeadsModule(leads),
+    createRetentionModule(new RetentionService(database,identity,leads)),createMediaModule(media)],
     providers: [{ provide: 'DATABASE_LIFECYCLE', useValue: { onApplicationShutdown: async () => {mediaStorage.close();await database.close();} } }] })
   class AppModule {}
   const app = await NestFactory.create<NestExpressApplication>(AppModule, { logger: false, bodyParser: false });

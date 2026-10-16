@@ -1,0 +1,40 @@
+{
+  "recordedAt": "2026-10-16T14:41:45.420Z",
+  "mode": "integration",
+  "status": "PASS",
+  "suites": [
+    {
+      "file": "apps/api/test/m4-graph-integration.test.ts",
+      "exitCode": 0,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 186
+    },
+    {
+      "file": "apps/api/test/m4-promotion-scope-integration.test.ts",
+      "exitCode": 0,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 34
+    },
+    {
+      "file": "apps/api/test/m4-restoration-integration.test.ts",
+      "exitCode": 0,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 43
+    },
+    {
+      "file": "apps/api/test/m4-asset-locale-integration.test.ts",
+      "exitCode": 0,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "assertions": 44
+    }
+  ],
+  "limits": "Scoped actual tests; API/database/browser/media/worker and human acceptance remain distinct. Private raw output retained without exporting credentials."
+}

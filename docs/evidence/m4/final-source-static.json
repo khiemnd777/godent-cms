@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "changedTextFiles": 198,
+  "binaryFilesExcluded": 240,
+  "validJsonFiles": 41,
+  "whitespaceIssues": [],
+  "scope": "Git-visible modified/untracked text only; no Git/index mutation."
+}

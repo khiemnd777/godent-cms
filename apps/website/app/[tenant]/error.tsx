@@ -1,5 +1,7 @@
 "use client";
+import { usePathname } from "next/navigation";
 
 export default function PublicContentError({ reset }: { reset: () => void }) {
-  return <main className="content-page"><h1>Chưa thể tải nội dung</h1><p>Nội dung hiện chưa tải được. Vui lòng thử lại.</p><button type="button" onClick={reset}>Thử lại</button></main>;
+  const en = /^\/[^/]+\/en(?:\/|$)/.test(usePathname());
+  return <main className="content-page"><h1>{en ? "Content temporarily unavailable" : "Chưa thể tải nội dung"}</h1><p>{en ? "Please reload this page to try again." : "Nội dung hiện chưa tải được. Vui lòng thử lại."}</p><button type="button" onClick={reset}>{en ? "Try again" : "Thử lại"}</button></main>;
 }

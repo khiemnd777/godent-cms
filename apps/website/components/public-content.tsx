@@ -4,8 +4,9 @@ import { CONTENT_LABELS, publicListingPath } from "../lib/public-content";
 import { formatDecimalAmount } from "../lib/price";
 import { RichText } from "./rich-text";
 
-export function PriceDisplay({ price }: { price: ContentPrice }) {
-  const amount = price.type === "range" ? `${formatDecimalAmount(price.minimum)} – ${formatDecimalAmount(price.maximum)}` : `${price.type === "from" ? "Từ " : ""}${formatDecimalAmount(price.amount)}`;
+export function PriceDisplay({ price, locale = "vi" }: { price: ContentPrice; locale?: "vi" | "en" }) {
+  const format = (value: string) => locale === "vi" ? formatDecimalAmount(value) : formatDecimalAmount(value).replace(/\./g, "_").replace(/,/g, ".").replace(/_/g, ",");
+  const amount = price.type === "range" ? `${format(price.minimum)} – ${format(price.maximum)}` : `${price.type === "from" ? (locale === "en" ? "From " : "Từ ") : ""}${format(price.amount)}`;
   return <p className="price-amount">{amount} {price.currency} / {price.unit}</p>;
 }
 
@@ -14,37 +15,38 @@ export function PublicImage({ item }: { item: ContentPublicMedia }) {
   // eslint-disable-next-line @next/next/no-img-element
   return <img className="public-image" src={`http://127.0.0.1:5890${item.media.path}`} alt={item.media.alt} width={item.media.width} height={item.media.height} loading="lazy"/>;
 }
-export function PublicMedia({ kind, media }: { kind: ReferenceKind; media: ContentPublicMedia[] }) {
+export function PublicMedia({ kind, media, locale = "vi" }: { kind: ReferenceKind; media: ContentPublicMedia[]; locale?: "vi" | "en" }) {
   if (kind === "gallery") {
     const indices = [...new Set(media.flatMap(item => item.pairIndex === undefined ? [] : [item.pairIndex]))].sort((a, b) => a - b);
     return <>{indices.map(index => {
       const before = media.filter(item => item.pairIndex === index && item.slot === "before"), after = media.filter(item => item.pairIndex === index && item.slot === "after");
       // A single image, caption or alt must never survive an incomplete pair.
       if (before.length !== 1 || after.length !== 1 || before[0].media.assetId === after[0].media.assetId) return null;
-      return <div className="gallery-pair" key={index}>{[{ item: before[0], label: "Trước" }, { item: after[0], label: "Sau" }].map(({ item, label }) => <figure key={label}><PublicImage item={item}/><figcaption><strong>{label}</strong>{item.caption && <span> — {item.caption}</span>}</figcaption></figure>)}</div>;
+      return <div className="gallery-pair" key={index}>{[{ item: before[0], label: locale === "en" ? "Before" : "Trước" }, { item: after[0], label: locale === "en" ? "After" : "Sau" }].map(({ item, label }) => <figure key={label}><PublicImage item={item}/><figcaption><strong>{label}</strong>{item.caption && <span> — {item.caption}</span>}</figcaption></figure>)}</div>;
     })}</>;
   }
   const item = media.find(item => item.slot === "image");
   return item ? <figure className="public-figure"><PublicImage item={item}/>{item.caption && <figcaption>{item.caption}</figcaption>}</figure> : null;
 }
 const dayNames = ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"];
-export function ContentBody({ content, media }: { content: DentalContent; media: ContentPublicMedia[] }) {
+export function ContentBody({ content, media, locale = "vi" }: { content: DentalContent; media: ContentPublicMedia[]; locale?: "vi" | "en" }) {
+  const t = (vi: string, en: string) => locale === "en" ? en : vi;
   return <>
     {content.summary && <p className="content-intro">{content.summary}</p>}
-    <PublicMedia kind={content.kind} media={media}/>
+    <PublicMedia kind={content.kind} media={media} locale={locale}/>
     {content.kind === "location" && <dl className="public-details">
-      <dt>Địa chỉ</dt><dd>{content.address}</dd>
-      {content.phone && <><dt>Điện thoại</dt><dd>{content.phone}</dd></>}
+      <dt>{t("Địa chỉ", "Address")}</dt><dd>{content.address}</dd>
+      {content.phone && <><dt>{t("Điện thoại", "Phone")}</dt><dd>{content.phone}</dd></>}
       {content.email && <><dt>Email</dt><dd>{content.email}</dd></>}
-      {content.mapUrl && <><dt>Bản đồ</dt><dd><a href={content.mapUrl} rel="noopener noreferrer">Xem bản đồ</a></dd></>}
-      {content.openingHours.length > 0 && <><dt>Giờ mở cửa</dt><dd>{content.openingHours.map(day => <div key={day.day}><strong>{dayNames[day.day]}</strong>: {day.closed ? "Nghỉ" : day.intervals.length ? day.intervals.map(interval => `${interval.opens}–${interval.closes}`).join(", ") : "Chưa nêu giờ mở cửa"}</div>)}</dd></>}
+      {content.mapUrl && <><dt>{t("Bản đồ", "Map")}</dt><dd><a href={content.mapUrl} rel="noopener noreferrer">{t("Xem bản đồ", "View map")}</a></dd></>}
+      {content.openingHours.length > 0 && <><dt>{t("Giờ mở cửa", "Opening hours")}</dt><dd>{content.openingHours.map(day => <div key={day.day}><strong>{locale === "en" ? ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][day.day] : dayNames[day.day]}</strong>: {day.closed ? t("Nghỉ", "Closed") : day.intervals.length ? day.intervals.map(interval => `${interval.opens}–${interval.closes}`).join(", ") : t("Chưa nêu giờ mở cửa", "Opening hours not specified")}</div>)}</dd></>}
     </dl>}
     {content.kind === "doctor" && <dl className="public-details">
-      {content.professionalTitle && <><dt>Chức danh</dt><dd>{content.professionalTitle}</dd></>}
-      {content.credentials.length > 0 && <><dt>Bằng cấp, chứng chỉ</dt><dd><ul>{content.credentials.map((item, index) => <li key={index}>{item}</li>)}</ul></dd></>}
-      {content.languages.length > 0 && <><dt>Ngôn ngữ</dt><dd>{content.languages.join(", ")}</dd></>}
+      {content.professionalTitle && <><dt>{t("Chức danh", "Professional title")}</dt><dd>{content.professionalTitle}</dd></>}
+      {content.credentials.length > 0 && <><dt>{t("Bằng cấp, chứng chỉ", "Qualifications")}</dt><dd><ul>{content.credentials.map((item, index) => <li key={index}>{item}</li>)}</ul></dd></>}
+      {content.languages.length > 0 && <><dt>{t("Ngôn ngữ", "Languages")}</dt><dd>{content.languages.join(", ")}</dd></>}
     </dl>}
-    {content.kind === "price" && <><PriceDisplay price={content.price}/>{content.inclusions && <p><strong>Phần bao gồm:</strong> {content.inclusions}</p>}{content.notes && <p><strong>Điều kiện và ghi chú:</strong> {content.notes}</p>}</>}
+    {content.kind === "price" && <><PriceDisplay price={content.price} locale={locale}/>{content.inclusions && <p><strong>{t("Phần bao gồm:", "Included:")}</strong> {content.inclusions}</p>}{content.notes && <p><strong>{t("Điều kiện và ghi chú:", "Conditions and notes:")}</strong> {content.notes}</p>}</>}
     {content.kind === "testimonial" && <blockquote className="testimonial-quote"><p>{content.quote}</p><cite>{content.displayName}{content.attribution && ` — ${content.attribution}`}</cite></blockquote>}
     {content.kind === "article" && content.attribution && <p className="content-attribution">{content.attribution}</p>}
     <RichText document={content.body}/>

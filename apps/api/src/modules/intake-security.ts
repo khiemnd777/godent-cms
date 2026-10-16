@@ -4,7 +4,7 @@ import { PUBLIC_SITE_ORIGIN } from '../contracts/s03';
 import type { RequestHeaders } from './request-security';
 
 export function isPublicIntakeRoute(path: string) {
-  return /^\/api\/public\/intake\/sites\/[a-z0-9]+(?:-[a-z0-9]+)*\/services\/[a-z0-9]+(?:-[a-z0-9]+)*(?:\/challenge)?$/.test(path);
+  return /^\/api\/public\/intake\/builder\/[a-z0-9]+(?:-[a-z0-9]+)*\/(?:vi|en)\/(?:service|landing)\/[a-z0-9]+(?:-[a-z0-9]+)*(?:\/challenge)?$/.test(path)||/^\/api\/public\/intake\/sites\/[a-z0-9]+(?:-[a-z0-9]+)*\/services\/[a-z0-9]+(?:-[a-z0-9]+)*(?:\/challenge)?$/.test(path);
 }
 export function assertPublicIntakeRequest(headers: RequestHeaders,method:string) {
   if(headers.origin!==PUBLIC_SITE_ORIGIN||headers.cookie!==undefined||headers.authorization!==undefined||!['POST','OPTIONS'].includes(method)) throw new ForbiddenException();

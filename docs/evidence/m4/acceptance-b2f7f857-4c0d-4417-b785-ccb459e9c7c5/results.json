@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T15:21:50.539Z",
+  "results": [
+    {
+      "case": "current_render",
+      "locale": "vi",
+      "kind": "home",
+      "width": 1440,
+      "status": "PASS",
+      "publicationId": "b28d05fa-9489-494d-aeee-02c7977a51c9",
+      "configPublicationId": "f21df4d2-ab74-49c6-b316-818cc46bf54f"
+    },
+    {
+      "case": "current_render",
+      "locale": "en",
+      "kind": "home",
+      "width": 390,
+      "status": "PASS",
+      "publicationId": "a4063414-c88d-4659-bea7-984252a6fc48",
+      "configPublicationId": "1adeca86-bf4a-4511-b3bd-543719be0e3a"
+    },
+    {
+      "case": "current_render",
+      "locale": "en",
+      "kind": "page",
+      "width": 1440,
+      "status": "PASS",
+      "publicationId": "aa1f8afa-c0e2-4ee5-97df-6d87e798305e",
+      "configPublicationId": "1adeca86-bf4a-4511-b3bd-543719be0e3a"
+    },
+    {
+      "case": "current_render",
+      "locale": "en",
+      "kind": "page",
+      "width": 390,
+      "status": "PASS",
+      "publicationId": "aa1f8afa-c0e2-4ee5-97df-6d87e798305e",
+      "configPublicationId": "1adeca86-bf4a-4511-b3bd-543719be0e3a"
+    },
+    {
+      "case": "current_render",
+      "locale": "en",
+      "kind": "landing",
+      "width": 1440,
+      "status": "PASS",
+      "publicationId": "b93ad123-8626-45dc-9483-4055257dd649",
+      "configPublicationId": "1adeca86-bf4a-4511-b3bd-543719be0e3a"
+    },
+    {
+      "case": "current_render",
+      "locale": "en",
+      "kind": "landing",
+      "width": 390,
+      "status": "PASS",
+      "publicationId": "b93ad123-8626-45dc-9483-4055257dd649",
+      "configPublicationId": "1adeca86-bf4a-4511-b3bd-543719be0e3a"
+    },
+    {
+      "case": "current_fallback_and_sitemap",
+      "status": "PASS",
+      "entries": 59
+    },
+    {
+      "case": "current_authenticated_shared_lead_source",
+      "actor": "A1",
+      "status": "PASS"
+    },
+    {
+      "case": "current_saved_private_reference_media_preview",
+      "status": "PASS"
+    },
+    {
+      "case": "current_authenticated_shared_lead_source",
+      "actor": "A2",
+      "status": "PASS"
+    }
+  ],
+  "browserErrors": [],
+  "publicationsUnchanged": true,
+  "scope": "Delegated local acceptance review. Authenticated read/browser/HTTP only; no content/config/intake/worker writes. Login creates normal sessions. Historical matching native/theme/state proof reused, not rerun or widened."
+}

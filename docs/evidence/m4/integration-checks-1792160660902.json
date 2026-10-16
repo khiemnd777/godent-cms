@@ -1,0 +1,16 @@
+{
+  "recordedAt": "2026-10-16T14:24:20.902Z",
+  "mode": "integration",
+  "status": "FAIL",
+  "suites": [
+    {
+      "file": "apps/api/test/m4-media-integration.test.ts",
+      "exitCode": 1,
+      "passed": 4,
+      "failed": 1,
+      "skipped": 0,
+      "assertions": 150
+    }
+  ],
+  "limits": "Scoped actual tests; API/database/browser/media/worker and human acceptance remain distinct. Private raw output retained without exporting credentials."
+}

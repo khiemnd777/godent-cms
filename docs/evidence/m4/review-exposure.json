@@ -1,0 +1,159 @@
+{
+  "scope": "Fresh independent bounded local M4 dependency serving-exposure source/artifact review; no Production waiver",
+  "reviewerThread": "01a144e9-273c-7cc1-b99e-f5c01f4c33e6",
+  "reviewerTurn": "01a14519-6455-7283-b48a-0ec0dd7d351c",
+  "recordedAt": "2026-10-16T14:28:28.995995+00:00",
+  "audit": {
+    "status": "FAIL_OPEN",
+    "file": ".local/m4-dependency-audit.json",
+    "sha256": "5a9adf8fbbd2a854066d8ebb81515723fc033927c4bcee0f7ed3ea13b300efba",
+    "advisories": {
+      "braces": [
+        {
+          "id": 1240992,
+          "url": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+          "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+          "severity": "high",
+          "vulnerable_versions": "<=3.0.3",
+          "cwe": [
+            "CWE-674"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        }
+      ]
+    }
+  },
+  "packagesChecked": [
+    "braces",
+    "micromatch",
+    "fast-glob",
+    "@next/eslint-plugin-next",
+    "eslint-config-next",
+    "eslint"
+  ],
+  "builds": {
+    "admin": {
+      "buildId": "XMsSHmxA-tjDWpXLtllwY",
+      "traceFiles": 29,
+      "listedReferences": 5491,
+      "chainMatches": [],
+      "traceDigest": "c5aba9510d7945ee9f9e40b892b6fecef937e16898fc98c0b60cdd489796b2fd",
+      "digestMethod": "SHA256 of sorted workspace-relative trace path + colon + raw trace SHA256, one per LF-terminated line"
+    },
+    "website": {
+      "buildId": "EGARJ64aBgOHEXvG8XTn9",
+      "traceFiles": 16,
+      "listedReferences": 3174,
+      "chainMatches": [],
+      "traceDigest": "1f1169a4215d54a01a06c4f3f4dc92b07a90a32de23043cfe3c73dee65fcc64b",
+      "digestMethod": "SHA256 of sorted workspace-relative trace path + colon + raw trace SHA256, one per LF-terminated line"
+    }
+  },
+  "imports": {
+    "api-dist": {
+      "javascriptFiles": 67,
+      "literalImportMatches": []
+    },
+    "admin-server": {
+      "javascriptFiles": 221,
+      "literalImportMatches": []
+    },
+    "website-server": {
+      "javascriptFiles": 106,
+      "literalImportMatches": []
+    }
+  },
+  "dependencyGraph": {
+    "observedBy": "reviewer native bun pm why braces, previous command in same affected follow-up",
+    "exitCode": 0,
+    "chain": [
+      "braces@3.0.3",
+      "micromatch@4.0.8",
+      "fast-glob@3.3.1",
+      "@next/eslint-plugin-next@16.4.1",
+      "eslint-config-next@16.4.1",
+      "root devDependency"
+    ],
+    "notice": "Bun printed an .env auto-load notice; no environment values or credentials were returned or examined. No DB command was made."
+  },
+  "conclusion": "No advisory-chain reference found by these fresh serving-artifact checks. Source/artifact evidence supports a bounded local M4 deferral, separately assessed from M3. Audit remains FAIL/open.",
+  "reassessment": "2026-10-22 or earlier on patch availability, dependency change, serving exposure change, and before Production",
+  "limits": [
+    "Static trace and literal-import checks are not dynamic proof for every runtime path.",
+    "No dependency upgrade, current patch-availability claim, network vulnerability probe or Production assessment.",
+    "Dev-only advisory tools remain installed; serving-artifact absence does not remove toolchain risk.",
+    "Parent-reported fresh successful builds are separate coordinator evidence; reviewer inspected the resulting artifacts.",
+    "No application, scripts, shared coordination record, DB, fixtures or credentials were modified."
+  ],
+  "followups": [
+    {
+      "recordedAt": "2026-10-16T15:14:04.447555+00:00",
+      "reviewerTurn": "01a14532-fb57-7c10-b0ff-89ebfc8d4bba",
+      "scope": "Final root API build after SEO cursor repair; unchanged admin/website serving traces reused",
+      "coordinatorBuildResult": {
+        "command": "Final API build, root-reported; private exact shell invocation/log not read by reviewer",
+        "status": "PASS",
+        "exitCode": 0,
+        "logReadByReviewer": false,
+        "provenance": "Root final build completion message; private build log not read",
+        "packageBuildScript": "bun --bun tsc --project tsconfig.build.json"
+      },
+      "api": {
+        "javascriptFiles": 68,
+        "literalImportMatches": [],
+        "manifestSHA256": "4b9a2d75dee39892604f53ed35ef9f1281ebaca401b882bc5999501ef985d72c",
+        "manifestMethod": "SHA256 of sorted workspace-relative JS path + colon + raw file SHA256, one per LF-terminated line",
+        "importantFiles": {
+          "apps/api/dist/main.js": "c51b737b2b45d8a931d434ac2ead14bfb9e693e4ea36c9937ce3b25f7ed128ac",
+          "apps/api/dist/modules/builder.service.js": "548875d81f5abd0822ebbdff5232a5211dd0cd16f03c1bfe01fbf6a6fb83a01b",
+          "apps/api/dist/modules/builder-seo-cursor.js": "75fb28da15c1bd4b378dd8a99db3567765c76f0d9941182a3bfe0d10fcfb7cd5"
+        }
+      },
+      "nextBuildReuse": {
+        "admin": {
+          "buildId": "XMsSHmxA-tjDWpXLtllwY",
+          "traceDigest": "c5aba9510d7945ee9f9e40b892b6fecef937e16898fc98c0b60cdd489796b2fd",
+          "unchangedMatchesPriorPinnedAssessment": true
+        },
+        "website": {
+          "buildId": "EGARJ64aBgOHEXvG8XTn9",
+          "traceDigest": "1f1169a4215d54a01a06c4f3f4dc92b07a90a32de23043cfe3c73dee65fcc64b",
+          "unchangedMatchesPriorPinnedAssessment": true
+        }
+      },
+      "sourcePins": {
+        "apps/api/src/modules/builder-seo-cursor.ts": "2ca3ad0f2fbe54d0bfb336a6cb32941a8a6ef566e4df8fad4977639eda018773",
+        "apps/api/src/modules/builder.service.ts": "6b93111581714dc04f580f24add6f13ac38d2b691cfde7f81047325b2d5feb53",
+        "apps/api/src/modules/request-security.ts": "3c735f6bc43345186df5848ebc067fd9c7051a306581bf27850e521b59b40329",
+        "apps/api/migrations/0050_m4_seo_eligibility.sql": "ade84e01a91f65d0d93588093d4da5dbeacc683ef9d3dfddd78fcbcd0c3ed451"
+      },
+      "packagePins": {
+        "package.json": "b707906dc79cedc1c7f3d1d3aa69bedd9e719c81cadf084f4183df02e2a2b948",
+        "apps/api/package.json": "11401517c2fe1c55fbf40ceb4bb0d919f51355dc1c1ff7442be333d0ca03a556",
+        "bun.lock": "b7c7780fda50d2b148437bd3d89f5078f94c0d08c194f04a94b60e4d582b6553"
+      },
+      "auditInputUnchanged": true,
+      "auditStatus": "FAIL_OPEN",
+      "conclusion": "Fresh final API artifact scan finds no advisory-chain literal imports. Prior exact unchanged Next trace assessment remains valid. Bounded local M4 deferral remains supported; audit stays FAIL/open and no Production waiver is granted.",
+      "limits": [
+        "No current patch-availability or Production SLO/scale claim.",
+        "Static artifact/import checks do not prove every dynamic code path.",
+        "No private raw build/contact logs or credentials were read."
+      ]
+    }
+  ],
+  "latestAssessment": {
+    "recordedAt": "2026-10-16T15:14:04.447555+00:00",
+    "apiManifestSHA256": "4b9a2d75dee39892604f53ed35ef9f1281ebaca401b882bc5999501ef985d72c",
+    "apiJavascriptFiles": 68,
+    "nextTraces": 45,
+    "nextListedReferences": 8665,
+    "advisoryChainMatches": 0,
+    "auditStatus": "FAIL_OPEN",
+    "localM4Deferral": "SUPPORTED_WITH_RECORDED_LIMITS",
+    "productionWaiver": false
+  }
+}

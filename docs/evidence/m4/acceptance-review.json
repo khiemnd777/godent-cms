@@ -1,0 +1,143 @@
+{
+  "status": "ACCEPTED_UNDER_DELEGATED_AUTHORITY",
+  "scope": "M4 v0.1 S13-S15 approved local package only",
+  "recordedAt": "2026-10-16T15:23:34.447755+00:00",
+  "delegation": {
+    "by": "Khiêm",
+    "quote": "review và nghiệm thu cho tôi.",
+    "source": "Direct user message in current desktop thread",
+    "thread": "01a144ca-5b34-7a52-b1f7-2a36f6c206f1",
+    "turn": "01a1454c-5a1c-7b71-8788-069f60950e46",
+    "decisionBy": "/root",
+    "meaning": "Human delegated local review and acceptance; the acceptance decision below is the coordinator decision under that delegation, not a direct HUMAN_ACCEPTED quote."
+  },
+  "verdict": {
+    "result": "PASS_LOCAL_M4_SCOPE",
+    "newBlockingFindings": [],
+    "technicalStatus": "CODE_INTEGRATED + VERIFIED_LOCAL",
+    "unchangedIndependentReview": "CLOSED R1-R13",
+    "newIndependentAgentRun": false,
+    "reviewReuseReason": "Actual application source and serving build/trace pins match the reviewed snapshots. No stage-only duplicate review or blanket mutating suite rerun."
+  },
+  "evidence": {
+    "historicalFinalSnapshot": {
+      "path": "docs/evidence/m4/final-checks.json",
+      "sha256": "3908af024be6720db200fce07a6e2c723b6f9d5850cd24c1a799a887d87cd315",
+      "preservedHumanAcceptanceField": "PENDING historical implementation handoff; this separate later delegated acceptance supersedes active status only"
+    },
+    "applicationPins": {
+      "status": "PASS",
+      "checked": 52,
+      "mismatches": [],
+      "source": "review-sourcepins.json overlaid by dated followups"
+    },
+    "servingPins": {
+      "status": "PASS",
+      "apiJavascriptFiles": 68,
+      "apiManifestSHA256": "4b9a2d75dee39892604f53ed35ef9f1281ebaca401b882bc5999501ef985d72c",
+      "next": {
+        "admin": {
+          "buildId": "XMsSHmxA-tjDWpXLtllwY",
+          "traceDigest": "c5aba9510d7945ee9f9e40b892b6fecef937e16898fc98c0b60cdd489796b2fd",
+          "traceFiles": 29,
+          "matchesReviewedSnapshot": true
+        },
+        "website": {
+          "buildId": "EGARJ64aBgOHEXvG8XTn9",
+          "traceDigest": "1f1169a4215d54a01a06c4f3f4dc92b07a90a32de23043cfe3c73dee65fcc64b",
+          "traceFiles": 16,
+          "matchesReviewedSnapshot": true
+        }
+      }
+    },
+    "freshPure": {
+      "status": "PASS",
+      "tests": 12,
+      "assertions": 199,
+      "files": 3,
+      "privateLog": ".local/m4-acceptance-pure.log",
+      "command": "bun --no-env-file test apps/api/test/m4-seo-cursor.test.ts apps/api/test/m4-validation.test.ts apps/api/test/m4-security.test.ts",
+      "limit": "Separate focused repeat, not added to unique original API32/4946 or FE161/934 totals"
+    },
+    "freshBrowser": {
+      "status": "PASS",
+      "cases": 10,
+      "evidence": "docs/evidence/m4/acceptance-b2f7f857-4c0d-4417-b785-ccb459e9c7c5/results.json",
+      "visualInspection": "Root viewed fresh EN mobile landing, loaded private gallery/reference preview and A2 shared-lead source screenshots",
+      "limit": "Read-only content/config/intake/worker flow; ordinary logins create sessions. No fresh theme switch or publication/lead mutation."
+    },
+    "runtime": {
+      "status": "PASS",
+      "listeners": 3,
+      "diagnosticCases": 6,
+      "evidence": "docs/evidence/m4/final-diagnostics.json",
+      "limit": "Current point-in-time loopback only"
+    },
+    "preservation": {
+      "status": "PASS",
+      "path": "docs/evidence/m4/preservation-1792164109732.json",
+      "tables": 63,
+      "baselineRows": 226905,
+      "protectedFiles": 1048,
+      "limit": "Original-column/file-hash comparison, not backup/restore"
+    },
+    "reused": {
+      "apiSql": {
+        "tests": 32,
+        "assertions": 4946,
+        "files": 11
+      },
+      "frontend": {
+        "tests": 161,
+        "assertions": 934,
+        "files": 42
+      },
+      "browserWorkerMediaRetentionAndRaces": "Exact scoped final snapshot and closed independent source/evidence review reused, limits unchanged"
+    }
+  },
+  "knownOpen": {
+    "audit": "FAIL/open braces3.0.3 GHSA-vfj7-8cjw-p6xm",
+    "localDeferral": "Fresh pinned local-M4 assessment remains valid; no Production waiver",
+    "reassessBy": "2026-10-22",
+    "earlierTriggers": [
+      "available patch",
+      "dependency change",
+      "serving exposure change",
+      "before Production"
+    ]
+  },
+  "notRunOrOutsideScope": [
+    "Natural-duration waiting",
+    "Operational backup/restore",
+    "Every browser/state/family/width combination",
+    "Production scale/SLO",
+    "Live DNS/TLS/custom domains/indexing",
+    "External delivery",
+    "Full MVP/S18 acceptance",
+    "S16-S18 execution",
+    "Commit/push/deploy"
+  ],
+  "writes": "Review/acceptance evidence and current status documentation only; no application code/schema/config changes. Normal authentication sessions allowed for browser review.",
+  "bookkeepingChecks": {
+    "status": "PASS",
+    "recordedAt": "2026-10-16T15:25:17.503899+00:00",
+    "agentKitStatic": {
+      "command": "python3 -B scripts/verify_agent_setup.py",
+      "exitCode": 0,
+      "privateLog": ".local/m4-acceptance-static-after.log",
+      "limit": "Hashes/mirrors/Markdown links and anchors/frontmatter/TOML, not native discovery/runtime."
+    },
+    "evidenceJson": "PASS all M4 evidence JSON parsed",
+    "whitespace": "PASS git diff --check and Markdown checker",
+    "knownValues": {
+      "status": "PASS",
+      "evidence": "docs/evidence/m4/secret-check-1792164292163.json",
+      "knownValues": 57,
+      "forms": 123,
+      "textFiles": 2071,
+      "findings": 0,
+      "limits": "Exact known private named values and URI/base64 forms in Git-visible and current serving output text files. No secret values or hashes exported. No OCR, runtime-memory scan or comprehensive secret discovery."
+    },
+    "historicalSnapshotUnchanged": true
+  }
+}
