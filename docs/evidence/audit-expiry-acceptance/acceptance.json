@@ -1,0 +1,705 @@
+{
+  "recordedAt": "2026-10-17T00:45:11.733107+00:00",
+  "status": "ACCEPTED_UNDER_DELEGATED_AUTHORITY",
+  "technicalStatus": "CODE_INTEGRATED + VERIFIED_LOCAL",
+  "scope": "GCMS-AUDIT-EXPIRY-001 v0.1; local only",
+  "authority": {
+    "human": "Khiêm",
+    "quote": "Review và nghiệm thu gói GCMS-AUDIT-EXPIRY-001 trong phạm vi local cho tôi. Bảo toàn dữ liệu cũ, giữ nguyên các giới hạn đã duyệt; chưa commit/push/deploy.",
+    "thread": "01a146ff-66a1-7c73-a60d-1ac38e25e73d",
+    "turn": "01a1474e-c1f5-74c3-b7e2-9a4bf33c7f15",
+    "directHumanAcceptance": false
+  },
+  "decision": {
+    "owner": "desktop /root in the delegating thread",
+    "result": "Accepted within delegated local scope; no blocking finding",
+    "independentReview": "docs/evidence/audit-expiry-acceptance/review.md",
+    "reviewerRanRuntime": false
+  },
+  "sourceHead": "340ec16fdbb70b4945bb64e824d13b7adc37d75b",
+  "originalCheckpoint": {
+    "path": "docs/evidence/audit-expiry/final-checks.json",
+    "sha256": "70ec2b65dd7cd63d872bdb2cfb7f67508076a4ffcf3120f72b1163255d8c2cdc",
+    "humanAcceptance": "PENDING preserved as historical",
+    "inputPins": "docs/evidence/audit-expiry-acceptance/input-pins.json"
+  },
+  "freshChecks": "docs/evidence/audit-expiry-acceptance/checks.json",
+  "checks": {
+    "pure": {
+      "status": "PASS",
+      "command": "./node_modules/.bin/bun --no-env-file test --reporter=junit --reporter-outfile=docs/evidence/audit-expiry-acceptance/pure.xml apps/api/test/audit-expiry-worker.test.ts apps/api/test/m2-worker-environment.test.ts apps/api/test/s06-input.test.ts apps/api/test/s06-capture.test.ts apps/api/test/s06-service.test.ts apps/api/test/m5-platform-worker.test.ts apps/api/test/m5-platform-unit.test.ts",
+      "tests": 21,
+      "assertions": 108,
+      "files": 7,
+      "exitCode": 0
+    },
+    "preservation": {
+      "status": "PASS",
+      "command": "./node_modules/.bin/bun --env-file=.env scripts/audit-expiry-preservation.ts --local-audit-expiry compare",
+      "databaseMode": "default_transaction_read_only=on",
+      "tables": 86,
+      "unchangedOldRows": 236619,
+      "volatileRemoved": 0,
+      "unexpected": 0,
+      "unchangedProtectedFiles": 1599,
+      "exitCode": 0
+    },
+    "migrationCheckOnly": {
+      "status": "PASS",
+      "command": "./node_modules/.bin/bun --env-file=.env --env-file=.local/s02.env scripts/audit-expiry-migrate.ts --local-audit-expiry --check-only",
+      "appliedChecksums": 58,
+      "priorMigrationBytesUnchanged": 57,
+      "applied": false,
+      "committed": false,
+      "dispatchStarted": false,
+      "exitCode": 0
+    },
+    "reused": {
+      "apiBuild": "PASS at unchanged15source/84compiled pins",
+      "typecheck": "PASS at unchanged affected application/test/script source",
+      "lint": "PASS at unchanged affected application/test/script source",
+      "integration": "7unique successful cases:1valid earlier deletion-prefix +6fresh final cases/42assertions from implementation; no repetition during acceptance",
+      "originalFailures": "Original22P02, expectedRED42501, build/type errors and timeout/exit130 records remain immutable"
+    },
+    "notRun": [
+      "Fresh valid cleanup overlapping expiry",
+      "Natural365-day waiting",
+      "Backup/restore",
+      "Browser/full-MVP rerun",
+      "External provider/live DNS/TLS/Production/AC-09"
+    ],
+    "actions": {
+      "applicationCodeChanged": false,
+      "dbDataWritten": false,
+      "migrationApplied": false,
+      "workerDispatched": false,
+      "fixtureDeletedOrReset": false,
+      "commitPushDeploy": false
+    }
+  },
+  "inputDocumentationChangesForAcceptance": [
+    "docs/tasks/GCMS-AUDIT-EXPIRY-001.md",
+    "docs/project-state.md",
+    "docs/project-context.md",
+    "docs/project-plan.md",
+    "docs/tasks/README.md",
+    "docs/verification-results.md"
+  ],
+  "sourcePins": [
+    {
+      "path": "apps/api/migrations/0059_s06_audit_retention_scope.sql",
+      "sha256": "b85d34c15a0ac81b930df0487263e2ebcaab04a7844f2d3dc4a711dcf41fa130"
+    },
+    {
+      "path": "apps/api/src/worker/audit-expiry-environment.ts",
+      "sha256": "d47f5303e32c151a30e1122776553bc153d0e83eccbce64e37306ac1f9415608"
+    },
+    {
+      "path": "apps/api/src/worker/audit-expiry-main.ts",
+      "sha256": "637c7154b6a716281d5c7a132fb4040c11f539bef337b28b8fe1c7b18423373a"
+    },
+    {
+      "path": "apps/api/src/worker/retention-worker.ts",
+      "sha256": "b1546db690db1e3c8789298c583d54f7bf9da6fdb898b8e76088f689ad4c1370"
+    },
+    {
+      "path": "apps/api/test/audit-expiry-integration.test.ts",
+      "sha256": "d9eb1eb03c6f005dd28102bbb5587d308f08a2d338a0472cb981c1086bd713b8"
+    },
+    {
+      "path": "apps/api/test/audit-expiry-worker.test.ts",
+      "sha256": "ec81b9c1745a309350b757f82c28e413d0dc56acd9fe37c4eca7959ac2c20098"
+    },
+    {
+      "path": "apps/api/test/m3-integration.test.ts",
+      "sha256": "af00b5eecc414f5b8835cfc9d2b40cd1a2f3fb2e7fa69ec84d1db70b3cd66f32"
+    },
+    {
+      "path": "apps/api/test/m4-lifecycle-integration.test.ts",
+      "sha256": "d99fae5e9b25d6c282f207f78525876f821670148ba3fc44a4ceea4af4932c43"
+    },
+    {
+      "path": "apps/api/test/s06-retention-integration.test.ts",
+      "sha256": "1cb6308b3e56f76fbb407f3fd37f251f0d27db07412eba5df86b5700b395e070"
+    },
+    {
+      "path": "package.json",
+      "sha256": "e64f99663c19c6370533120eb72833399ce0a63d5b44f6c258de114257f74bef"
+    },
+    {
+      "path": "scripts/audit-expiry-fixtures.ts",
+      "sha256": "1dc8ed00c9ba6015961ceba01c5aeb1e299b2df1fba5af76a80aae29b8c467a2"
+    },
+    {
+      "path": "scripts/audit-expiry-migrate.ts",
+      "sha256": "af48b38642486413ec736b320e564236b136cdd2200cfa10e88ab48e77d78f16"
+    },
+    {
+      "path": "scripts/audit-expiry-preservation.ts",
+      "sha256": "f5eb1f77dbd09cb4c82b2498d525e7f2f20ff1b86d317927b507c0e5f17ec3cc"
+    },
+    {
+      "path": "scripts/m2-ui-fixtures.ts",
+      "sha256": "291065f52d68128baf2c7d13e2f43553ae02ce7cec037895a101f21ea48b73de"
+    },
+    {
+      "path": "scripts/start-audit-expiry-worker.ts",
+      "sha256": "9d5c59f604250bd88eca8e5dd65f747cdbc1e096cefe8c5a9fac9911fe166923"
+    }
+  ],
+  "compiledPins": [
+    {
+      "path": "apps/api/dist/adapter-trial.js",
+      "sha256": "2b0d94bcc49b1ebf69c221c4892101b35ee245fa4b8f479f2a1bc8006ba8f473"
+    },
+    {
+      "path": "apps/api/dist/app.js",
+      "sha256": "cfc1e29c87c2fba37ecdb9ced5837e38c4f419e319a4033658c71837ffea0039"
+    },
+    {
+      "path": "apps/api/dist/auth/index.js",
+      "sha256": "238ae430138a486a5a17df6fdb29d731874b86c274d6fe2e3e8f8e6410dc013f"
+    },
+    {
+      "path": "apps/api/dist/auth/mail.js",
+      "sha256": "e0051a0b90a257305df493c1dbb86d0ff90ebe3ec15d2ea42612e44e1679a16d"
+    },
+    {
+      "path": "apps/api/dist/auth/policy.js",
+      "sha256": "007dc9602b61fd81a7486c764de3bf0922b8556ea4b25b42ddc13f1ea13cd07b"
+    },
+    {
+      "path": "apps/api/dist/auth/runtime-environment.js",
+      "sha256": "c08ee86d0599958c86cdf53a9b9acb23a56eff293d68dfb0242412342ae488b0"
+    },
+    {
+      "path": "apps/api/dist/config.js",
+      "sha256": "85a1bc2de2ed3c190732ff3a996ce5e19c926eb06a75b5d415ae8f649940d96f"
+    },
+    {
+      "path": "apps/api/dist/contracts/content.js",
+      "sha256": "f782bc0d959f779e3e613d702e4c7980542057854147cfc0b59f8268c2697a6f"
+    },
+    {
+      "path": "apps/api/dist/contracts/intake.js",
+      "sha256": "8496b8ef8e28635b0b07de82fcd510cfa2dba8e86a031919a76c04d4165cad41"
+    },
+    {
+      "path": "apps/api/dist/contracts/lead-operations.js",
+      "sha256": "9afffa5f216e6dfa8c21d8cd0e41558e0abebd904dd46e5ce91acd6d5bd9c7bf"
+    },
+    {
+      "path": "apps/api/dist/contracts/m3-validation.js",
+      "sha256": "68591499e38f592a7b9d14904001c79984d0a3cb0ba6d693fec5295667e57174"
+    },
+    {
+      "path": "apps/api/dist/contracts/m3.js",
+      "sha256": "142863c8e86ad3aab51543e1e897321ae49ce146c481863148d00e3096411f51"
+    },
+    {
+      "path": "apps/api/dist/contracts/m4-validation.js",
+      "sha256": "8506e454f449d4caaa1cb3dda87d77823529b32aae6697c90176953ffd334a66"
+    },
+    {
+      "path": "apps/api/dist/contracts/m4.js",
+      "sha256": "c1e7699dbfb872c4ca2c95ec8abdf55a9c33e092864ba576a721aa06da851d3e"
+    },
+    {
+      "path": "apps/api/dist/contracts/m5-domains.js",
+      "sha256": "25c61d63216f0f2ba90be85a307f099759c79d36e9256d8944e4abe745a11914"
+    },
+    {
+      "path": "apps/api/dist/contracts/m5-platform.js",
+      "sha256": "b39d7a830f077c2339bf7d1cf98dbd8c0da2d71ff6a12dc76d321c786d1cac05"
+    },
+    {
+      "path": "apps/api/dist/contracts/s02.js",
+      "sha256": "5f4a9135ca4ec4e0ef8d0df5588eec5340c45eca6604d47e845196c68c57de21"
+    },
+    {
+      "path": "apps/api/dist/contracts/s03.js",
+      "sha256": "274f28a7f1bbaf8621aed473e6c76dadba71ff06607f312aabc18c888fdd2f53"
+    },
+    {
+      "path": "apps/api/dist/contracts/s04.js",
+      "sha256": "d5336c9b2f871866c49c150e38e9a85ac8d0ecf981a16b6e8cdcecd4728fefae"
+    },
+    {
+      "path": "apps/api/dist/contracts/s05.js",
+      "sha256": "71e489aaf82a02103f3f66bf73a6d67ad015c6dbdc77d480f70e263aca15298d"
+    },
+    {
+      "path": "apps/api/dist/contracts/s06.js",
+      "sha256": "fad7aed48af6c48ec198f49d95e58b91bdffc4477476d956ac36757b143777a5"
+    },
+    {
+      "path": "apps/api/dist/contracts/s07.js",
+      "sha256": "6ecf8acd080a6afbaadf30188e7b819ac64222aaae763aa381b9217ec218a07c"
+    },
+    {
+      "path": "apps/api/dist/contracts/user-identifier.js",
+      "sha256": "5c1f4a6f032917a833120e245d9e13fabefa3f1a7c0c5405a49edea5b840178a"
+    },
+    {
+      "path": "apps/api/dist/database/index.js",
+      "sha256": "a8301f502b61ced184f6bbddb089cdf421fcb08ec13b4e3abdd186aaf7fff5da"
+    },
+    {
+      "path": "apps/api/dist/database/schema.js",
+      "sha256": "525a521ed20c4f1910d6af4f994b4e10c4c0741dab51017318498b16c6806fe2"
+    },
+    {
+      "path": "apps/api/dist/errors.js",
+      "sha256": "0165f4f6e5e9b8b3cd97715b08f90c480f9ddbf323791567b6dcd00fda11fb8c"
+    },
+    {
+      "path": "apps/api/dist/main.js",
+      "sha256": "c51b737b2b45d8a931d434ac2ead14bfb9e693e4ea36c9937ce3b25f7ed128ac"
+    },
+    {
+      "path": "apps/api/dist/media/decoder.js",
+      "sha256": "37ad857d618a1ba7c949304075fd7d1c33b2f79c7c9dc0204505e436bb47c44d"
+    },
+    {
+      "path": "apps/api/dist/media/input.js",
+      "sha256": "6118f98da658b8c4fef871b5e8a66477454428006b125c7758fde6bcf38910be"
+    },
+    {
+      "path": "apps/api/dist/media/processor.js",
+      "sha256": "29c9d510701effacfe779f89a0825eab1f7afe6c287e362694b956188901e5f2"
+    },
+    {
+      "path": "apps/api/dist/media/signing.js",
+      "sha256": "d7507edab5d586be478a9d5b64d33900d7661f6f7aa704eb7bd4adc00c89ec6e"
+    },
+    {
+      "path": "apps/api/dist/media/storage.js",
+      "sha256": "7da5357e814db0b9baa14f6b7c20b83b910f2540ff4fb45ecc54048f6aa7a072"
+    },
+    {
+      "path": "apps/api/dist/modules/builder-intake.service.js",
+      "sha256": "754d8a27a0aeed7199a35f5012525b05e0e92a6bd87f1664fa0da4b8d92e3172"
+    },
+    {
+      "path": "apps/api/dist/modules/builder-seo-cursor.js",
+      "sha256": "75fb28da15c1bd4b378dd8a99db3567765c76f0d9941182a3bfe0d10fcfb7cd5"
+    },
+    {
+      "path": "apps/api/dist/modules/builder.module.js",
+      "sha256": "3a0578f8bb7b02c0b75f2ecd961f6e4c3b7fb0bbcbf9e0d24094a9b4651c456f"
+    },
+    {
+      "path": "apps/api/dist/modules/builder.service.js",
+      "sha256": "ba81c213cde7589069e4f3c39b3e7b44f054ad95bc23ee44bcaaf7667a54449e"
+    },
+    {
+      "path": "apps/api/dist/modules/content-request.js",
+      "sha256": "c4d990cf04a68ccd644765bf36e4a10cb45cba093a00e6c50c85273c7991df19"
+    },
+    {
+      "path": "apps/api/dist/modules/content.module.js",
+      "sha256": "159e2d723dc7df5370133c83a29fb5e582180c8f6cd8d599d797d76e6f92023a"
+    },
+    {
+      "path": "apps/api/dist/modules/content.service.js",
+      "sha256": "22a38199e3ebc1b494651b64b14369a913e7034da3b18b6b6b1e6de2dc0d24d5"
+    },
+    {
+      "path": "apps/api/dist/modules/domain.module.js",
+      "sha256": "5ed25d194396fec82dbe16f0d6d8a6016cd414a01bae0b1e4081484bbb522c1f"
+    },
+    {
+      "path": "apps/api/dist/modules/domain.service.js",
+      "sha256": "537816112befab8c8dda913e019df5e01e934fa3b306b40a8514e06ad0ee5cbc"
+    },
+    {
+      "path": "apps/api/dist/modules/http-security.js",
+      "sha256": "0bf0f59cbac1c57f9943787ff6445973f99a549cba1d244e975e97525bdbdf29"
+    },
+    {
+      "path": "apps/api/dist/modules/input.js",
+      "sha256": "42c77e9351f3ffc57bdfd3a7fc3b9fbdbfde3df5807167b6d40a87613434fa4d"
+    },
+    {
+      "path": "apps/api/dist/modules/intake-security.js",
+      "sha256": "465f0d0661f50faeaaae16b6bcb8f13d54ae356404489ba334b0dd06fe53d09a"
+    },
+    {
+      "path": "apps/api/dist/modules/intake.module.js",
+      "sha256": "78e4d832793d03b1289b1e9917555a6d29a450052f2d4c7e28b7b8eb15e7f6c5"
+    },
+    {
+      "path": "apps/api/dist/modules/intake.service.js",
+      "sha256": "8d2ca317c745e26db3ec91dfcb28da2f4e9c096d6db9233ae4bc1bc1cc3def07"
+    },
+    {
+      "path": "apps/api/dist/modules/leads.module.js",
+      "sha256": "ec9c1151242e608d48718b02f4cfb4f9576b02eb2b25c90fdfb18d8c23526da3"
+    },
+    {
+      "path": "apps/api/dist/modules/leads.service.js",
+      "sha256": "c7adbb2c6d5afe5b113ec73c87cd7f02019d248571afa3cfee38aefbd77a4964"
+    },
+    {
+      "path": "apps/api/dist/modules/m5-domains-input.js",
+      "sha256": "f4804079daaff20ed25bccad32cdb622a7e752659b77be3cdd340307180df06c"
+    },
+    {
+      "path": "apps/api/dist/modules/m5-domains-preview.js",
+      "sha256": "9303785ce7fd0c27821df0e28e2f52a8d0090fe5f577965b2c7714cfdd57e75d"
+    },
+    {
+      "path": "apps/api/dist/modules/m5-domains-public.js",
+      "sha256": "aa2eb1e39741d9b77a6f4cf5feafd9e44bbb9fe7e96912ba8735b320cfe7025a"
+    },
+    {
+      "path": "apps/api/dist/modules/m5-domains-safety.js",
+      "sha256": "b39544dc646a185e08ce8dc2b06d95bd9e858addac9867a9d0d7eca99b4d2be8"
+    },
+    {
+      "path": "apps/api/dist/modules/m5-domains.module.js",
+      "sha256": "79ed2b7aef022582f0ab4e4d0afb24866eba5ae3b61743cb2c67657f5ccd059f"
+    },
+    {
+      "path": "apps/api/dist/modules/m5-domains.service.js",
+      "sha256": "2c9c046821bd2661a1a7caa65e85ecabff67abbb3e69f0ee3448832c8a5699bd"
+    },
+    {
+      "path": "apps/api/dist/modules/m5-platform-export.js",
+      "sha256": "62097a123b4b1aafa2ebbf1d1c2906326da411b71d5e1f50d9e610183233c5f5"
+    },
+    {
+      "path": "apps/api/dist/modules/m5-platform-zip.js",
+      "sha256": "8c7ca875a35a416c295044c2a51da650da77a21e3a7c8b5cd1ba3763145bab38"
+    },
+    {
+      "path": "apps/api/dist/modules/m5-platform.module.js",
+      "sha256": "4755453a81b6c41eca19789db27bb6022b0d99c20fa9ba924e86c4ddce058358"
+    },
+    {
+      "path": "apps/api/dist/modules/m5-platform.service.js",
+      "sha256": "d09b6a0c5cc31ad7d038d190b4092e654dc7e11a921e4dd4e5bc949f670c6807"
+    },
+    {
+      "path": "apps/api/dist/modules/media.module.js",
+      "sha256": "c4802e7035b18c163b5bc09a329370fec563889945564ee78d01bf0b4cc12b01"
+    },
+    {
+      "path": "apps/api/dist/modules/media.service.js",
+      "sha256": "4131f2e346e899a6cdf7db396cc8e33e5e20f50dd5015149e5b22216e36ec850"
+    },
+    {
+      "path": "apps/api/dist/modules/publication.module.js",
+      "sha256": "c5f84e0e247c77bfb34d152c9776f135fb364f715f8d2d8ccc56850377896b65"
+    },
+    {
+      "path": "apps/api/dist/modules/publication.service.js",
+      "sha256": "c0a86bfda708154dcb143aff6cb49a7310f3bf6fce09700da7d1f5a08f57f7ef"
+    },
+    {
+      "path": "apps/api/dist/modules/request-security.js",
+      "sha256": "1b62110985de55f9508119a9b040886d8db391a0eb93126ff7a677a9b77a97ed"
+    },
+    {
+      "path": "apps/api/dist/modules/retention.module.js",
+      "sha256": "aee3d37d4989a1d17484f72f20cb80200789ed15d5c94bad0abb960b6963f58c"
+    },
+    {
+      "path": "apps/api/dist/modules/retention.service.js",
+      "sha256": "4b085435be7700744739ee3f5b63fd85b976ef91391cf1896bf1bc4f2d2b007e"
+    },
+    {
+      "path": "apps/api/dist/service-trial.js",
+      "sha256": "8e7940c475fd43c92f62570e45a2aee6dd9bac8833da6e3f0e73d72a76ca6347"
+    },
+    {
+      "path": "apps/api/dist/services.js",
+      "sha256": "4673740a94996ee50a24e9dbf5664afce33199ee8c389708a6d51d7b76907415"
+    },
+    {
+      "path": "apps/api/dist/worker/audit-expiry-environment.js",
+      "sha256": "c32c85ac15c9107fa76a96c502e4ff10172722558d628061b8a447fbd0fcb4c9"
+    },
+    {
+      "path": "apps/api/dist/worker/audit-expiry-main.js",
+      "sha256": "f167c6f85ad1cf868a0769d5fe8b533d4e262ea96fbb21b982de5625821b9375"
+    },
+    {
+      "path": "apps/api/dist/worker/content-purge-main.js",
+      "sha256": "9daca5d3923cc2a8b25d96b9103a299b20e2a05bf645e43622d44ecbd92017df"
+    },
+    {
+      "path": "apps/api/dist/worker/content-purge-worker.js",
+      "sha256": "7c7ce859e23baafadb59e450c21d02dd2f889049c47963c12b15662271175e48"
+    },
+    {
+      "path": "apps/api/dist/worker/lead-worker.js",
+      "sha256": "36ea60c3cdc58e21a0712e323388203f6846f1e1535f973f3280f67164173105"
+    },
+    {
+      "path": "apps/api/dist/worker/local-capture.js",
+      "sha256": "783cce9ec2653941b8dee6a8a314a9785a2cd5e400359045efa80c02c6a48c49"
+    },
+    {
+      "path": "apps/api/dist/worker/m4-content-purge-main.js",
+      "sha256": "0566240fd0cb015f8ddd534092e4d6d325118430e1898ee7ca3db48717ee757b"
+    },
+    {
+      "path": "apps/api/dist/worker/m5-lifecycle-main.js",
+      "sha256": "e165bf4cbcd143be664a67198b243c3dfcd93be13df1470fb5cf59c3e70b7bd7"
+    },
+    {
+      "path": "apps/api/dist/worker/m5-lifecycle-worker.js",
+      "sha256": "cc862f6a443318e79b420a84112852fff8925e21d0d75c4f3220c489f451785d"
+    },
+    {
+      "path": "apps/api/dist/worker/main.js",
+      "sha256": "3c58769345c4148e8fd6e76f7d6f4b7fbcafaec3d4907044d7e77c7166c07356"
+    },
+    {
+      "path": "apps/api/dist/worker/media-environment.js",
+      "sha256": "320fdb36ba3687f04f9ba85e09208d9c5ba9288b34757b1515aec3782b43724c"
+    },
+    {
+      "path": "apps/api/dist/worker/media-main.js",
+      "sha256": "2d13e11bb596c2255808447431c1554aa405c298a4b5c6c64db9aae6879bf33c"
+    },
+    {
+      "path": "apps/api/dist/worker/media-recovery.js",
+      "sha256": "7818a6b415cbf46c5337d105ea874611434e8ba6b517fadf82a2214b722ca3a9"
+    },
+    {
+      "path": "apps/api/dist/worker/media-worker.js",
+      "sha256": "3eabb2296d971b20f9addd169709d89835b26885734129a2ef0dca8f6218d22f"
+    },
+    {
+      "path": "apps/api/dist/worker/retention-capture.js",
+      "sha256": "fa351ad1c88d0e33c05fae92e79d9470598656a51c68bd555faa944b61b8bc95"
+    },
+    {
+      "path": "apps/api/dist/worker/retention-main.js",
+      "sha256": "9977735c85eeb3a3261aa3b23bab19c6a41d0c4b589196386ede8535c75f1a36"
+    },
+    {
+      "path": "apps/api/dist/worker/retention-worker.js",
+      "sha256": "34d97b28908d41fcdbef5566b6392f140aeb90a4b3666ef52ee79af6a522458d"
+    }
+  ],
+  "originalEvidencePins": [
+    {
+      "path": "docs/evidence/audit-expiry/changed-text-static.json",
+      "sha256": "43ea4b87cd068a369a58d8872ce0037f8e912f4927b5f446ab55c31b647b03b2"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/commands.json",
+      "sha256": "821ba2be3ab3f0bd35abc8b42026d11d9356b2844af2a8b9a8d832ecb25bb5cf"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/exposure.json",
+      "sha256": "1cb4f734e683ac7d1a064113cfc8f0b2e2e2e4af9b9b40fd4a388748f5e912a5"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/green-final-business-denial.xml",
+      "sha256": "c39c5810d2eb407abc6aa20e3b1a5e662bfe97e905df3de76d5ab79bd7929ead"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/green-final-focused.xml",
+      "sha256": "af6124dda1ef3bd0756df1c2e2e8965f96bb102a964e2ff53a7e224c16b8a27d"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/green-focused-postgresql.xml",
+      "sha256": "ebe859714aad2248f43116cc9e9851256630a24826022e60c9ef0abd786c8a43"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/green-initial-partial.json",
+      "sha256": "e0eafac0f89ceed2a7b2f715610006ae32fe6cd9ae7e97678af02a29ad62c6a9"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/green-lock-state.xml",
+      "sha256": "d785f152b9177a6182301dffa28333c44cf7c8778b839d58a368e203ce6ccadd"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/known-value-scan.json",
+      "sha256": "1367ba89eb7aefb25a86d8d0cf1c64442000471bee825455a529f1912f8551e0"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/migration-1792193384641.json",
+      "sha256": "45dd264ed791ace952195826616653079d43ea3c57b316c36c1978b37b5ae0d0"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/migration-1792193476319.json",
+      "sha256": "5ee9b90758580aa07d6233b6c8a2ce8c24c844442e149e5c4c98c5d46aa51e47"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/migration-1792193510813.json",
+      "sha256": "7c6edff6235d980c0401dfdda57afaddcfc6fdd9471e777847612d544306fdd4"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/migration-1792193959484.json",
+      "sha256": "0d41bd8c01e023cf454ab37849c99b1b735a84028f0143c2425a045c12bda0dc"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/native-runtime.json",
+      "sha256": "45cb38cadcb44fb7583b12a2b69738cd92e48bb84930552ee893fda55b1a2b3b"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/preservation-1792193510262.json",
+      "sha256": "715be54b624059106cdf5e83ccc8f47de61f335ae918eb7bb4f4b3467a8da09d"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/preservation-1792193959428.json",
+      "sha256": "2d33c94ead66b9dc1a926ff7b5df61ffd37015a69c32266985d007a1ab4f6a51"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/red-postgresql.xml",
+      "sha256": "ab335b1fe98b633eb453d52890c60be8b08c4f29038fef1ba4d63350d6045cc9"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/red.xml",
+      "sha256": "049ed298be4f5c5917ca1c77294cef0b854c0d8c9e41dbb1b295267ac15c5bfd"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/regression-green-1792193747132.json",
+      "sha256": "dca447d91c0671bc204161d306fae447c75659a23e5ffb536ce41dfa10c19041"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/regression-green-1792193791922.json",
+      "sha256": "cb5718b3a401ca71b8a662640269d175220616e5c35796d4efa89a8076a37af8"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/regression-green-1792193912346.json",
+      "sha256": "3f754807bbb2749820e497c66abfbf5a56d327e06540b727cfed6fc8ee03b5bc"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/regression-green-1792193956823.json",
+      "sha256": "c3751d75989cb61591121d3b5232ef1c4cd5df63dc5f37961a38bf4be6c7c603"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/regression-red-1792193398173.json",
+      "sha256": "b83bb197dc5582c1f8769f9edf92531300f9b3449b1aebecf6133cdd77df7b39"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/regression-red-1792193428554.json",
+      "sha256": "a72db7d73e4e5600c644eab8e3ff9600218f6f27d3af676f8d049b88fcb9fe8e"
+    },
+    {
+      "path": "docs/evidence/audit-expiry/review.md",
+      "sha256": "db0c7b39a39d76ceeb4474689eec3cade87396599ed11da970b3d3cd8be212d4"
+    }
+  ],
+  "documentationPins": [
+    {
+      "path": "docs/tasks/GCMS-AUDIT-EXPIRY-001.md",
+      "sha256": "4c53360be559ff9183aa44bb6f5f6fce0cbcd556378053c39b609ba4572808c4"
+    },
+    {
+      "path": "docs/project-state.md",
+      "sha256": "ec24b3d8d458888944bd3b186eff5b67e3ed8c24e6ffd61418b2958781532f66"
+    },
+    {
+      "path": "docs/project-context.md",
+      "sha256": "ffabd2e311f99a294daba4626592d732ddbd95d6c92f68e7fb2994db2c7ef8ee"
+    },
+    {
+      "path": "docs/project-plan.md",
+      "sha256": "4cb16201ab12153601a37ed25f977a4c1e3d152ef23e21f46884c43ac49f38c4"
+    },
+    {
+      "path": "docs/tasks/README.md",
+      "sha256": "38bc9152a22f81b4d1f18551e22c56bf9288f65c2c886a3aa791b817a0916582"
+    },
+    {
+      "path": "docs/local-development.md",
+      "sha256": "fc3e7b6dc63a3ef738d4cfe3f4cdd3c0651c0f3f2d8ce6ef01bf87da74fbfe48"
+    },
+    {
+      "path": "docs/workflows.md",
+      "sha256": "92a4d009232a78148fb361e6c4c2b1a0a161143adcd8f9fe71ec7ea5b55b1e67"
+    },
+    {
+      "path": "docs/verification-results.md",
+      "sha256": "d43a62205ef3ed43caac285f17609156bd986628ce16a9f54a62865832cdfaff"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "7753ac1a394743b35dfa04ee4abbf7e573b55aa0414d6e5a5e8075a09d1aa7da"
+    },
+    {
+      "path": "docs/skills-manifest.json",
+      "sha256": "a854fd42f2927039584f2761f6197d294e96b1707a4620c35db01d22c50fb55c"
+    }
+  ],
+  "acceptanceEvidencePins": [
+    {
+      "path": "docs/evidence/audit-expiry-acceptance/checks.json",
+      "sha256": "b018d78c680568cead89d3aff687737ca76e1eeadd3f36c9736a767912ae87db"
+    },
+    {
+      "path": "docs/evidence/audit-expiry-acceptance/coordinator-runtime.json",
+      "sha256": "aec75c68bfdded9ece596bf697bd7047c60e690c1ddc2d9b5e4372a0fbeba011"
+    },
+    {
+      "path": "docs/evidence/audit-expiry-acceptance/input-pins.json",
+      "sha256": "e834e5aaf9fbf7340d7000a9506062edb55ea0e7de4209325d3a0e7d1a998280"
+    },
+    {
+      "path": "docs/evidence/audit-expiry-acceptance/migration-check-only.json",
+      "sha256": "f0d40eb0559724ec463aefddc86fb3308630e2e5d2d32c8e26154ddd0c5eea8f"
+    },
+    {
+      "path": "docs/evidence/audit-expiry-acceptance/preservation.json",
+      "sha256": "81f8612931695217f62a95fccf5aebe84a7399a89a81fee663d1fff00c027e03"
+    },
+    {
+      "path": "docs/evidence/audit-expiry-acceptance/pure.xml",
+      "sha256": "ec97f4e4903cb2eefe324a7c61633a1ddabf39b7fc72e10045fe3b1d012e8151"
+    },
+    {
+      "path": "docs/evidence/audit-expiry-acceptance/review.md",
+      "sha256": "9a273f89085b3a19613484efcd5024d5b0576642568349883e7f53831d8ba5c3"
+    },
+    {
+      "path": "docs/evidence/audit-expiry-acceptance/reviewer-runtime.json",
+      "sha256": "c0c9eb76b182c929d036a854f37df09193916fa24ac893b08ee1f75b71a086ea"
+    },
+    {
+      "path": "docs/evidence/audit-expiry-acceptance/static-checks.json",
+      "sha256": "2788d0c340aa0b078118ab0a8a548e01debc3fc08811a5135c9cb2d33c7d5b2f"
+    }
+  ],
+  "audit": {
+    "status": "FAIL/open/high",
+    "reassessBy": "2026-10-22",
+    "earlierTriggers": [
+      "patch",
+      "dependency",
+      "exposure",
+      "before Production"
+    ],
+    "productionWaiver": false
+  },
+  "limits": [
+    "Fresh valid cleanup overlap NOT_RUN; source/shared-lock/stale retry runtime and sequential deletion proof are separate.",
+    "No old completed tenant re-enrollment without proof.",
+    "No backup/restore/natural waiting/browser/full-MVP/Production claim.",
+    "No commit/push/deploy."
+  ],
+  "git": {
+    "headUnchanged": true,
+    "stagedPaths": [],
+    "commitPushDeploy": false
+  },
+  "staticChecks": {
+    "status": "PASS",
+    "record": "docs/evidence/audit-expiry-acceptance/static-checks.json",
+    "maintainedHashes": 81,
+    "mirrorPairs": 28,
+    "skillsPerRoot": 17,
+    "nativeDefinitionsPerClient": 3,
+    "markdownFiles": 146,
+    "localLinks": 1809,
+    "changedTextFilesAtCheck": 60,
+    "gitDiffCheck": "PASS"
+  },
+  "finalRecordedAt": "2026-10-17T00:45:35.944047+00:00"
+}

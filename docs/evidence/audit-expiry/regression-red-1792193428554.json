@@ -1,0 +1,15 @@
+{
+  "recordedAt": "2026-10-16T23:30:28.554Z",
+  "phase": "red",
+  "receipts": [
+    {
+      "kind": "confirmed-new-tenant-deleted",
+      "tenantId": "c6475758-9870-453e-8d05-c56fe015b65c",
+      "requestId": "fe06d4c2-016f-4493-9a1e-ef1552cd0b1e",
+      "businessScopeRemoved": true,
+      "auditsPreservedBeforeExpiry": true
+    }
+  ],
+  "mutations": "Only manifest-owned new fixtures",
+  "natural365DayWaiting": "NOT_RUN"
+}

@@ -118,6 +118,8 @@ One bounded local Bun/PG worker claims10/concurrency2/lease30s, max5attempts wit
 | Spam | Retain for **30 days**, subject to an already earlier deadline |
 | Redacted audit | Retain for **365 days**; do not retain contact/message content as audit payload |
 
+[Audit-expiry repair](tasks/GCMS-AUDIT-EXPIRY-001.md) separates audit retention authorization from business-worker enrollment. Confirmed tenant cleanup retains the independent audit scope and exact selected tenant-less audit IDs; the audit-only worker can expire due rows without restoring lead processing or tenant access. The original365-day deadline and explicit local enrollment boundary remain unchanged.
+
 Measure inactivity from the last substantive human contact/activity, using creation only when none exists. Real substantive activity updates that reference and the normal inactivity deadline. Views, polling, notification/job retries, synthetic timestamp touches or assignment/status toggles alone do not count. A still-open lead's normal deadline is that reference + 180 days. For a closed lead, use the earlier of closure + 90 days and that reference + 180 days. There is no immutable lifetime cap calculated from creation. An explicit extension beyond the applicable normal policy deadline requires an authorized tenant administrator, a recorded reason and expiry. The storage/calculation representation remains an implementation detail; no separate expiry ledger is required.
 
 Documentation example only: created day 0, substantive human contact day 150, still open → inactivity deadline day 330. A view on day 170 does not move that deadline. If closed on day 160 → the earlier deadline is day 250, not day 330. This example is not an application fixture or runtime test.

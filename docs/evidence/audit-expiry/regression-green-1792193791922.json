@@ -1,0 +1,38 @@
+{
+  "recordedAt": "2026-10-16T23:36:31.922Z",
+  "phase": "green",
+  "receipts": [
+    {
+      "kind": "active-suspended-audit-sql-rollback",
+      "controlUnchanged": true,
+      "outcomes": [
+        {
+          "status": "active",
+          "counts": {
+            "system": 1,
+            "anonymous": 1,
+            "authenticated": 2
+          }
+        },
+        {
+          "status": "suspended",
+          "counts": {
+            "system": 1,
+            "anonymous": 1,
+            "authenticated": 2
+          }
+        }
+      ],
+      "executedAs": "fixture-owner; restricted worker authorization tested separately"
+    },
+    {
+      "kind": "audit-vs-stale-cleanup-tenant-lock",
+      "auditWaited": true,
+      "staleCleanupWaited": true,
+      "staleCleanupCode": "42501",
+      "validFreshCleanupOverlap": "NOT_RUN; actual fresh deletion->expiry is a separate case"
+    }
+  ],
+  "mutations": "Only manifest-owned new fixtures",
+  "natural365DayWaiting": "NOT_RUN"
+}

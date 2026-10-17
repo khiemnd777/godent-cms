@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "knownValues": 26,
+  "representations": 34,
+  "textFiles": 1165,
+  "findingPaths": [],
+  "limits": "Exact selected local configuration and newly created fixture secrets only; no OCR/runtime memory/comprehensive discovery guarantee."
+}

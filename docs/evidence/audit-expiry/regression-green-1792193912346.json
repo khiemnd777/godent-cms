@@ -1,0 +1,70 @@
+{
+  "recordedAt": "2026-10-16T23:38:32.346Z",
+  "phase": "green",
+  "receipts": [
+    {
+      "kind": "concurrent-audit-expiry",
+      "tenantId": "08c8cdc8-7f47-4884-851d-56cdaef89304",
+      "results": [
+        {
+          "system": 0,
+          "anonymous": 0,
+          "authenticated": 0
+        },
+        {
+          "system": 0,
+          "anonymous": 0,
+          "authenticated": 5
+        }
+      ],
+      "repeatedCount": 0
+    },
+    {
+      "kind": "active-suspended-audit-sql-rollback",
+      "controlUnchanged": true,
+      "outcomes": [
+        {
+          "status": "active",
+          "counts": {
+            "system": 1,
+            "anonymous": 1,
+            "authenticated": 2
+          }
+        },
+        {
+          "status": "suspended",
+          "counts": {
+            "system": 1,
+            "anonymous": 1,
+            "authenticated": 2
+          }
+        }
+      ],
+      "executedAs": "fixture-owner; restricted worker authorization tested separately"
+    },
+    {
+      "kind": "audit-vs-stale-cleanup-tenant-lock",
+      "auditWaited": true,
+      "staleCleanupWaited": true,
+      "staleCleanupCode": "42501",
+      "validFreshCleanupOverlap": "NOT_RUN; actual fresh deletion->expiry is a separate case"
+    },
+    {
+      "kind": "actual-built-audit-only-cli",
+      "result": {
+        "status": "completed",
+        "mode": "audit-only",
+        "tenantId": "08c8cdc8-7f47-4884-851d-56cdaef89304",
+        "audit": {
+          "system": 0,
+          "anonymous": 0,
+          "authenticated": 0
+        }
+      },
+      "wrongTenantExit": 1,
+      "controlUnchanged": true
+    }
+  ],
+  "mutations": "Only manifest-owned new fixtures",
+  "natural365DayWaiting": "NOT_RUN"
+}

@@ -94,6 +94,7 @@ async function seedLeads(client:SQL,value:M2UiFixtures) {
   }
   const a=value.tenants[0];
   await tx`INSERT INTO gcms_s06.worker_scope(tenant_id,enabled) VALUES(${a.id},true) ON CONFLICT(tenant_id) DO NOTHING`;
+  await tx`INSERT INTO gcms_s06.audit_retention_scope(tenant_id,enabled) VALUES(${a.id},true) ON CONFLICT(tenant_id) DO NOTHING`;
   for(const l of value.leads.filter(l=>l.tenantId===a.id)) await tx`INSERT INTO gcms_s06.lead_scope(tenant_id,lead_id) VALUES(${a.id},${l.id}) ON CONFLICT DO NOTHING`;
   for(const t of value.tenants)await tx`INSERT INTO gcms_s07.worker_scope(tenant_id,enabled) VALUES(${t.id},true) ON CONFLICT(tenant_id) DO NOTHING`;
  });

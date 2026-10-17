@@ -1,5 +1,26 @@
 # Local development and verification
 
+## Audit expiry after tenant deletion
+
+[GCMS-AUDIT-EXPIRY-001](tasks/GCMS-AUDIT-EXPIRY-001.md) is the separately approved local repair. Forward0059 preserves existing enabled/disabled audit enrollment, transfers selected tenant-less audit mappings to the independent audit-retention scope and retains them through tenant deletion. Existing business-worker scopes are still removed. No migration dispatch or automatic tombstone-based re-enrollment occurs.
+
+Use project-local Bun1.4.3:
+
+| Command | Scope |
+| --- | --- |
+| `bun run audit-expiry:migrate -- --check-only` | Verify all applied checksums without dispatch. |
+| `bun run audit-expiry:migrate -- --compile-only` | Before application, compile only the allowlisted0059 in an intentional rollback. An already-applied migration is checked, not recompiled. |
+| `bun run audit-expiry:migrate -- --apply` | Transactional allowlisted0059; no audit deletion or worker dispatch. |
+| `bun run start:audit-expiry-worker --tenant <selected-id> --once` | Selected private `.local/audit-expiry-worker.json` tenant, execute-only S06 role, audit-only batch,5s statement/3s lock bound. Never claims leads or sends captures. |
+| `bun run audit-expiry:preserve` | Compare protected original row/file hashes with the pre-repair baseline. No backup/restore claim. |
+
+The dedicated launcher reads only the required scoped credential into its child environment. Its private allowlist contains no fixture passwords. The full fixture manifest and old credential files remain private0600; `.local` stays0700. Wrong/unselected tenant, unsafe manifest or ambient worker secrets are denied.
+
+The ordinary S06 `runOnce` still claims business work first and is expected to fail after deletion. Use the audit-only command for an already-deleted, explicitly audit-enrolled tenant. Do not recreate business worker enrollment. Previously deleted tenants lacking saved enrollment/mapping proof remain unresolved and must not be inferred from a tombstone or a global audit search.
+
+The repair's Red and Green synthetic targets have both completed one-shot deletion. **Do not rerun the deletion test or fixture bootstrap as a reset.** Focused non-deletion cases used explicit name selectors. New future S06 fixture enrollment callers establish the independent audit capability explicitly; old mutating M2/M3/M4 suites were not rerun. The remaining Control tenant and prior resources are preserved.
+
+
 ## Current M5 local operation
 
 The [saved approved M5 plan and execution ledger](tasks/GCMS-M5-001.md) governs S16–S18 from base49f2a1a. Use project-local Bun1.4.3 and the existing127.0.0.1ports5890API/5891admin/5892website. No retained credentials, dependencies, global Bun or ports were reset. `.local/m5-fixtures.json`, `.local/m5-demo.json` and `.local/m5.env` are private owned0600 inputs. Do not print them or run earlier fixture suites as reset/cleanup.

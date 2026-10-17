@@ -1,0 +1,21 @@
+{
+  "recordedAt": "2026-10-17T00:45:35.832Z",
+  "status": "PASS",
+  "setup": {
+    "command": "python3 -B scripts/verify_agent_setup.py",
+    "chunk_id": "706467",
+    "wall_time_seconds": 0.165926666,
+    "exit_code": 0,
+    "original_token_count": 116,
+    "output": "PASS: 81 maintained kit hashes; 9 declared local adaptations\nPASS: 28 mirror pairs; 17 skills per root; 3 native definitions per client\nPASS: 20 original / 6 adapted upstream canonical files\nPASS: 146 Markdown files; 1809 local links/anchors; plain frontmatter and TOML syntax\nPASS: setup approval provenance and Bun documentation baseline\nLIMIT: this command checks static package integrity; it does not test native discovery, invocation or application behavior\n"
+  },
+  "whitespace": {
+    "command": "git diff --check plus changed/untracked UTF-8 whitespace scan",
+    "chunk_id": "974b0a",
+    "wall_time_seconds": 0.000019792,
+    "exit_code": 0,
+    "original_token_count": 17,
+    "output": "{\n  \"status\": \"PASS\",\n  \"changedTextFiles\": 60,\n  \"findings\": []\n}\n"
+  },
+  "limits": "Static integrity and whitespace only; no added runtime claim."
+}

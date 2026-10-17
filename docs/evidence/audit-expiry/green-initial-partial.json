@@ -1,0 +1,13 @@
+{
+  "status": "PARTIAL",
+  "passedCases": [
+    "confirmed deletion then audit expiry",
+    "deleted business read/export/claim denial"
+  ],
+  "failedCase": "rights test timeout from lazy Bun.SQL query assertion",
+  "remainingCases": "NOT_RUN in this attempt",
+  "testProcessExit": 130,
+  "termination": "native exec session Ctrl-C after read-only DB check showed no blocked/inflight SQL",
+  "repair": "Promise.resolve drives lazy query; assertions unchanged",
+  "deletionRerun": false
+}

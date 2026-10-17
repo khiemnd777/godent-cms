@@ -47,7 +47,11 @@ export class RetentionWorker {
     }
   }
   async expireAudit(tenant: string) {
-    return (await this.client`SELECT gcms_s06.worker_expire_audit(${tenant},100) AS result`)[0].result as { authenticated: number; anonymous: number; system: number };
+    if (!/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(tenant)) throw new Error('Explicit audit tenant required');
+    return this.client.begin(async tx => {
+      await tx.unsafe("SET LOCAL statement_timeout='5s'; SET LOCAL lock_timeout='3s'");
+      return (await tx`SELECT gcms_s06.worker_expire_audit(${tenant},100) AS result`)[0].result as { authenticated: number; anonymous: number; system: number };
+    });
   }
   async runOnce(tenant: string) {
     await this.verifyRole(); const claims = await this.claim(tenant), outcomes: string[] = [];

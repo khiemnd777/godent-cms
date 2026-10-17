@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-16T23:31:50.813Z",
+  "phase": "--apply",
+  "retainedChecksums": 57,
+  "migration": "0059_s06_audit_retention_scope.sql",
+  "committed": true,
+  "applied": true,
+  "compiledThenRolledBack": false,
+  "dispatchStarted": false
+}

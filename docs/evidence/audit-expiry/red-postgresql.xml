@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="1" assertions="8" failures="1" skipped="0" time="2.834102">
+  <testsuite name="apps/api/test/audit-expiry-integration.test.ts" file="apps/api/test/audit-expiry-integration.test.ts" tests="1" assertions="8" failures="1" skipped="0" time="2.808081" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="Audit expiry actual PostgreSQL after confirmed tenant deletion" file="apps/api/test/audit-expiry-integration.test.ts" line="18" tests="1" assertions="8" failures="1" skipped="0" time="1.289" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="retained due audit expires after real request confirmation execution and cleanup" classname="Audit expiry actual PostgreSQL after confirmed tenant deletion" time="1.289791" file="apps/api/test/audit-expiry-integration.test.ts" line="57" assertions="8">
+        <failure type="PostgresError" message="Retention scope denied">PostgresError: Retention scope denied&#10;      at wrapPostgresError (internal:sql/postgres:176:27)&#10;      at onRejectPostgresQuery (internal:sql/postgres:205:31)&#10;</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>

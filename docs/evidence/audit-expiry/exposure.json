@@ -1,0 +1,7 @@
+{
+  "compiledJs": 84,
+  "advisoryChainLiteralReferences": [],
+  "status": "unchanged-dev-advisory-FAIL-open",
+  "scope": "Static compiled-code literal scan plus unchanged dependency/lock inputs; not dynamic absence or Production waiver",
+  "reassess": "2026-10-22 or earlier stated triggers/before Production"
+}

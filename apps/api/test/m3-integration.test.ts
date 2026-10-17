@@ -193,7 +193,7 @@ describe.skipIf(process.env.M3_INTEGRATION!=='1')('M3 owned local API / restrict
   const delivery=randomUUID(),capture=resolve('.local',`m3-retention-${h.run}`);await h.recordOwned({kind:'retention_scope',tenantId:tenant.id,leadIds:[selected],deliveryId:delivery,capture});
   await h.owned(async tx=>{
    await tx`INSERT INTO gcms_s05.delivery(id,tenant_id,lead_id,recipient_user_id) VALUES(${delivery},${tenant.id},${selected},${h.fixtures.identities.find(i=>i.label==='A1')!.userId})`;
-   await tx`INSERT INTO gcms_s06.worker_scope(tenant_id,enabled) VALUES(${tenant.id},true)`;await tx`INSERT INTO gcms_s06.lead_scope(tenant_id,lead_id) VALUES(${tenant.id},${selected})`;
+   await tx`INSERT INTO gcms_s06.worker_scope(tenant_id,enabled) VALUES(${tenant.id},true)`;await tx`INSERT INTO gcms_s06.audit_retention_scope(tenant_id,enabled) VALUES(${tenant.id},true)`;await tx`INSERT INTO gcms_s06.lead_scope(tenant_id,lead_id) VALUES(${tenant.id},${selected})`;
    await tx`WITH instant AS(SELECT clock_timestamp() AS at) UPDATE gcms_s04.lead l SET created_at=i.at-interval '200 days',consent_at=i.at-interval '200 days',last_activity_at=i.at-interval '174 days',extension_expires_at=NULL FROM instant i WHERE l.tenant_id=${tenant.id} AND l.id=${selected}`;
   });
   const worker=new RetentionWorker(process.env.S06_WORKER_DATABASE_URL!,new RetentionCapture(capture));

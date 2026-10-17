@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="7" assertions="5" failures="0" skipped="6" time="0.964688">
+  <testsuite name="apps/api/test/audit-expiry-integration.test.ts" file="apps/api/test/audit-expiry-integration.test.ts" tests="7" assertions="5" failures="0" skipped="6" time="0.940798" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="Audit expiry actual PostgreSQL after confirmed tenant deletion" file="apps/api/test/audit-expiry-integration.test.ts" line="18" tests="7" assertions="5" failures="0" skipped="6" time="0.079" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="retained due audit expires after real request confirmation execution and cleanup" classname="Audit expiry actual PostgreSQL after confirmed tenant deletion" time="0" file="apps/api/test/audit-expiry-integration.test.ts" line="57" assertions="0">
+        <skipped />
+      </testcase>
+      <testcase name="deleted tenant cannot read/export, claim leads or run the mixed worker" classname="Audit expiry actual PostgreSQL after confirmed tenant deletion" time="0.079995" file="apps/api/test/audit-expiry-integration.test.ts" line="88" assertions="5" />
+      <testcase name="disabled or absent audit scope and non-worker roles stay denied" classname="Audit expiry actual PostgreSQL after confirmed tenant deletion" time="0" file="apps/api/test/audit-expiry-integration.test.ts" line="96" assertions="0">
+        <skipped />
+      </testcase>
+      <testcase name="audit batch validates limits, serializes concurrent expiry and repeats safely" classname="Audit expiry actual PostgreSQL after confirmed tenant deletion" time="0" file="apps/api/test/audit-expiry-integration.test.ts" line="111" assertions="0">
+        <skipped />
+      </testcase>
+      <testcase name="active and suspended audit predicates work in rollback without changing control data" classname="Audit expiry actual PostgreSQL after confirmed tenant deletion" time="0" file="apps/api/test/audit-expiry-integration.test.ts" line="121" assertions="0">
+        <skipped />
+      </testcase>
+      <testcase name="audit expiry and stale cleanup serialize on the tenant lock without business reactivation" classname="Audit expiry actual PostgreSQL after confirmed tenant deletion" time="0" file="apps/api/test/audit-expiry-integration.test.ts" line="139" assertions="0">
+        <skipped />
+      </testcase>
+      <testcase name="audit-only built CLI succeeds after mixed worker is denied and rejects unselected tenant" classname="Audit expiry actual PostgreSQL after confirmed tenant deletion" time="0" file="apps/api/test/audit-expiry-integration.test.ts" line="158" assertions="0">
+        <skipped />
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="21" assertions="108" failures="0" skipped="0" time="0.169996">
+  <testsuite name="apps/api/test/s06-input.test.ts" file="apps/api/test/s06-input.test.ts" tests="3" assertions="18" failures="0" skipped="0" time="0.027358" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="S06 retention extension boundary" file="apps/api/test/s06-input.test.ts" line="5" tests="3" assertions="18" failures="0" skipped="0" time="0.003" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="normalizes the explicit reason and preserves the chosen finite expiry" classname="S06 retention extension boundary" time="0.003957" file="apps/api/test/s06-input.test.ts" line="7" assertions="2" />
+      <testcase name="rejects unknown shape, invalid operation and unsafe versions" classname="S06 retention extension boundary" time="0.0008" file="apps/api/test/s06-input.test.ts" line="11" assertions="6" />
+      <testcase name="requires canonical UTC calendar time and nonempty bounded plain reason" classname="S06 retention extension boundary" time="0.00027" file="apps/api/test/s06-input.test.ts" line="15" assertions="10" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/api/test/m5-platform-unit.test.ts" file="apps/api/test/m5-platform-unit.test.ts" tests="7" assertions="26" failures="0" skipped="0" time="0.008406" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 platform admission contracts" file="apps/api/test/m5-platform-unit.test.ts" line="5" tests="4" assertions="17" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="unset and explicit zero differ; no implicit commercial limit" classname="M5 platform admission contracts" time="0.000183" file="apps/api/test/m5-platform-unit.test.ts" line="6" assertions="6" />
+      <testcase name="suspension keeps read/export/safety only; deletion removes all capabilities" classname="M5 platform admission contracts" time="0.000046" file="apps/api/test/m5-platform-unit.test.ts" line="7" assertions="3" />
+      <testcase name="new tenant handoff requires an explicit monitor or enforced policy" classname="M5 platform admission contracts" time="0.000452" file="apps/api/test/m5-platform-unit.test.ts" line="8" assertions="3" />
+      <testcase name="confirmation binds exact tenant, scope, request and explicit instant" classname="M5 platform admission contracts" time="0.000078" file="apps/api/test/m5-platform-unit.test.ts" line="9" assertions="5" />
+    </testsuite>
+    <testsuite name="M5 streaming ZIP" file="apps/api/test/m5-platform-unit.test.ts" line="11" tests="3" assertions="9" failures="0" skipped="0" time="0.003" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="emits CRC data descriptors, central directory and completion only after entries" classname="M5 streaming ZIP" time="0.003011" file="apps/api/test/m5-platform-unit.test.ts" line="12" assertions="5" />
+      <testcase name="a failed dataset never emits a complete ZIP directory or completion manifest" classname="M5 streaming ZIP" time="0.000915" file="apps/api/test/m5-platform-unit.test.ts" line="13" assertions="3" />
+      <testcase name="rejects path traversal before output" classname="M5 streaming ZIP" time="0.000056" file="apps/api/test/m5-platform-unit.test.ts" line="14" assertions="1" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/api/test/s06-capture.test.ts" file="apps/api/test/s06-capture.test.ts" tests="2" assertions="9" failures="0" skipped="0" time="0.009769" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="S06 private local retention capture" file="apps/api/test/s06-capture.test.ts" line="7" tests="2" assertions="9" failures="0" skipped="0" time="0.006" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="captures once with private permissions and generic content" classname="S06 private local retention capture" time="0.005719" file="apps/api/test/s06-capture.test.ts" line="8" assertions="5" />
+      <testcase name="rejects a substituted recipient, unsafe directory and symlink" classname="S06 private local retention capture" time="0.001726" file="apps/api/test/s06-capture.test.ts" line="20" assertions="4" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/api/test/s06-service.test.ts" file="apps/api/test/s06-service.test.ts" tests="2" assertions="19" failures="0" skipped="0" time="0.094288" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="post-commit lead read preserves inherited HTTP headers when changing the method" classname="" time="0.00073" file="apps/api/test/s06-service.test.ts" line="9" assertions="3" />
+    <testcase name="lead detail, list, count and history preserve driver Date milliseconds in expiry and server timing" classname="" time="0.000816" file="apps/api/test/s06-service.test.ts" line="23" assertions="16" />
+  </testsuite>
+  <testsuite name="apps/api/test/m2-worker-environment.test.ts" file="apps/api/test/m2-worker-environment.test.ts" tests="1" assertions="3" failures="0" skipped="0" time="0.002171" hostname="Khiems-MacBook-Pro.local">
+    <testcase name="worker environments do not inherit API, migration, other worker, signing or global credentials" classname="" time="0.000579" file="apps/api/test/m2-worker-environment.test.ts" line="3" assertions="3" />
+  </testsuite>
+  <testsuite name="apps/api/test/m5-platform-worker.test.ts" file="apps/api/test/m5-platform-worker.test.ts" tests="3" assertions="6" failures="0" skipped="0" time="0.00414" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="M5 irreversible object deletion checkpoints" file="apps/api/test/m5-platform-worker.test.ts" line="3" tests="3" assertions="6" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="only a verified physical delete advances checkpoint" classname="M5 irreversible object deletion checkpoints" time="0.000123" file="apps/api/test/m5-platform-worker.test.ts" line="4" assertions="2" />
+      <testcase name="failed or uncertain DELETE leaves checkpoint unadvanced" classname="M5 irreversible object deletion checkpoints" time="0.000168" file="apps/api/test/m5-platform-worker.test.ts" line="5" assertions="2" />
+      <testcase name="checkpoint failure is observable and prevents later objects" classname="M5 irreversible object deletion checkpoints" time="0.000042" file="apps/api/test/m5-platform-worker.test.ts" line="6" assertions="2" />
+    </testsuite>
+  </testsuite>
+  <testsuite name="apps/api/test/audit-expiry-worker.test.ts" file="apps/api/test/audit-expiry-worker.test.ts" tests="3" assertions="27" failures="0" skipped="0" time="0.001134" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="bounded audit-only invocation" file="apps/api/test/audit-expiry-worker.test.ts" line="5" tests="3" assertions="27" failures="0" skipped="0" time="0" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="requires one explicit valid tenant and one bounded run" classname="bounded audit-only invocation" time="0.000055" file="apps/api/test/audit-expiry-worker.test.ts" line="6" assertions="7" />
+      <testcase name="rejects another tenant, duplicate scopes and malformed or extra scope facts" classname="bounded audit-only invocation" time="0.000573" file="apps/api/test/audit-expiry-worker.test.ts" line="10" assertions="9" />
+      <testcase name="launcher selects only S06 worker credentials and runtime rejects ambient secrets" classname="bounded audit-only invocation" time="0.000113" file="apps/api/test/audit-expiry-worker.test.ts" line="16" assertions="11" />
+    </testsuite>
+  </testsuite>
+</testsuites>

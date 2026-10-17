@@ -1,0 +1,27 @@
+{
+  "recordedAt": "2026-10-17T00:42:48.206175+00:00",
+  "status": "PASS",
+  "reviewedRecord": "docs/evidence/audit-expiry/final-checks.json",
+  "reviewedRecordSha256": "70ec2b65dd7cd63d872bdb2cfb7f67508076a4ffcf3120f72b1163255d8c2cdc",
+  "pins": {
+    "sourcePins": {
+      "checked": 15,
+      "mismatches": []
+    },
+    "compiledPins": {
+      "checked": 84,
+      "mismatches": []
+    },
+    "evidencePins": {
+      "checked": 25,
+      "mismatches": []
+    },
+    "documentationPins": {
+      "checked": 8,
+      "mismatches": []
+    }
+  },
+  "head": "340ec16fdbb70b4945bb64e824d13b7adc37d75b",
+  "headMatches": true,
+  "stagedPaths": []
+}

@@ -1,0 +1,27 @@
+{
+  "pure": [
+    "./node_modules/.bin/bun",
+    "--no-env-file",
+    "test",
+    "apps/api/test/audit-expiry-worker.test.ts",
+    "apps/api/test/m2-worker-environment.test.ts",
+    "apps/api/test/s06-input.test.ts",
+    "apps/api/test/s06-capture.test.ts",
+    "apps/api/test/s06-service.test.ts",
+    "apps/api/test/m5-platform-worker.test.ts",
+    "apps/api/test/m5-platform-unit.test.ts"
+  ],
+  "integrationOptIn": {
+    "AUDIT_EXPIRY_INTEGRATION": "1",
+    "AUDIT_EXPIRY_PHASE": "green"
+  },
+  "integrationSafeContinuation": [
+    "./node_modules/.bin/bun",
+    "--env-file=.env",
+    "--env-file=.local/s02.env",
+    "test",
+    "apps/api/test/audit-expiry-integration.test.ts",
+    "--test-name-pattern=disabled|audit batch|active and suspended|stale cleanup|built CLI|deleted tenant cannot"
+  ],
+  "warning": "Do not rerun the successful deletion prefix or bootstrap completed fixtures."
+}

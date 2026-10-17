@@ -1,0 +1,53 @@
+{
+  "pure": {
+    "status": "PASS",
+    "command": "./node_modules/.bin/bun --no-env-file test --reporter=junit --reporter-outfile=docs/evidence/audit-expiry-acceptance/pure.xml apps/api/test/audit-expiry-worker.test.ts apps/api/test/m2-worker-environment.test.ts apps/api/test/s06-input.test.ts apps/api/test/s06-capture.test.ts apps/api/test/s06-service.test.ts apps/api/test/m5-platform-worker.test.ts apps/api/test/m5-platform-unit.test.ts",
+    "tests": 21,
+    "assertions": 108,
+    "files": 7,
+    "exitCode": 0
+  },
+  "preservation": {
+    "status": "PASS",
+    "command": "./node_modules/.bin/bun --env-file=.env scripts/audit-expiry-preservation.ts --local-audit-expiry compare",
+    "databaseMode": "default_transaction_read_only=on",
+    "tables": 86,
+    "unchangedOldRows": 236619,
+    "volatileRemoved": 0,
+    "unexpected": 0,
+    "unchangedProtectedFiles": 1599,
+    "exitCode": 0
+  },
+  "migrationCheckOnly": {
+    "status": "PASS",
+    "command": "./node_modules/.bin/bun --env-file=.env --env-file=.local/s02.env scripts/audit-expiry-migrate.ts --local-audit-expiry --check-only",
+    "appliedChecksums": 58,
+    "priorMigrationBytesUnchanged": 57,
+    "applied": false,
+    "committed": false,
+    "dispatchStarted": false,
+    "exitCode": 0
+  },
+  "reused": {
+    "apiBuild": "PASS at unchanged15source/84compiled pins",
+    "typecheck": "PASS at unchanged affected application/test/script source",
+    "lint": "PASS at unchanged affected application/test/script source",
+    "integration": "7unique successful cases:1valid earlier deletion-prefix +6fresh final cases/42assertions from implementation; no repetition during acceptance",
+    "originalFailures": "Original22P02, expectedRED42501, build/type errors and timeout/exit130 records remain immutable"
+  },
+  "notRun": [
+    "Fresh valid cleanup overlapping expiry",
+    "Natural365-day waiting",
+    "Backup/restore",
+    "Browser/full-MVP rerun",
+    "External provider/live DNS/TLS/Production/AC-09"
+  ],
+  "actions": {
+    "applicationCodeChanged": false,
+    "dbDataWritten": false,
+    "migrationApplied": false,
+    "workerDispatched": false,
+    "fixtureDeletedOrReset": false,
+    "commitPushDeploy": false
+  }
+}

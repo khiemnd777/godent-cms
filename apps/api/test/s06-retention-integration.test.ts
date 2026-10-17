@@ -20,6 +20,7 @@ async function source(label: string, seconds = 6 * 86400) {
   ownedTenants.push(s.tenantId); console.info(JSON.stringify({ scope: 'S06_NEW_OWNED_FIXTURE', run: h.run, tenantId: s.tenantId }));
   await h.owned(async tx => {
     await tx`INSERT INTO gcms_s06.worker_scope(tenant_id,enabled) VALUES(${s.tenantId},true)`;
+    await tx`INSERT INTO gcms_s06.audit_retention_scope(tenant_id,enabled) VALUES(${s.tenantId},true)`;
     await tx`INSERT INTO gcms_s06.lead_scope VALUES(${s.tenantId},${lead.id})`;
   });
   await expireIn(s.tenantId, lead.id, seconds);

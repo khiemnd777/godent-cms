@@ -1,5 +1,9 @@
 # godent-cms verification results
 
+**Audit-expiry Git delivery authority — 2026-10-17.** Khiêm separately authorized normal commit/push of the accepted GCMS-AUDIT-EXPIRY-001 package to current main. [Direct instruction and bounded scope](tasks/GCMS-AUDIT-EXPIRY-001.md#git-delivery-authority--2026-10-17) supersede earlier no-Git statements only within this package. Local acceptance, original data/evidence and all FAIL/Unknown/NOT_RUN limits are unchanged. Audit braces stays FAIL/open/high; reassess2026-10-22 or earlier triggers/before Production, no Production waiver. No deploy/Production/configuration action.
+
+**Current audit-expiry repair — ACCEPTED_UNDER_DELEGATED_AUTHORITY, local only.** [Direct delegation, coordinator decision and fresh checks](tasks/GCMS-AUDIT-EXPIRY-001.md#delegated-local-acceptance--2026-10-17) retain technical CODE_INTEGRATED + VERIFIED_LOCAL and original7unique PostgreSQL/CLI cases. Fresh input pins15source/84compiled/25evidence/8entry-doc,21pure/108assertions,58applied checksum checks and86table/236619row/1599file preservation PASS. Independent source/evidence review no blocker; coordinator owns acceptance. Original final-checks.json PENDING and helper failures are preserved. Fresh-valid-cleanup overlap remains NOT_RUN; no full-suite/browser/Production claim. Braces stays FAIL/open/high, reassess2026-10-22/earlier triggers/before Production, no Production waiver. No commit/push/deploy.
+
 ## Current M5 local result — 2026-10-17
 
 **Later Git-delivery format finding:** full staged whitespace check FAIL at applied0053 EOF blank line; accepted SQL bytes/checksum are preserved. Other staged paths PASS. Prior0035 whitespace FAIL and braces FAIL/open remain. [Exact finding/disposition](evidence/m5/git-staged-whitespace.json); no runtime or acceptance result is relabelled.

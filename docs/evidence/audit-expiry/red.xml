@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="1" assertions="0" failures="1" skipped="0" time="1.269057">
+  <testsuite name="apps/api/test/audit-expiry-integration.test.ts" file="apps/api/test/audit-expiry-integration.test.ts" tests="1" assertions="0" failures="1" skipped="0" time="1.242287" hostname="Khiems-MacBook-Pro.local">
+    <testsuite name="Audit expiry actual PostgreSQL after confirmed tenant deletion" file="apps/api/test/audit-expiry-integration.test.ts" line="18" tests="1" assertions="0" failures="1" skipped="0" time="0.01" hostname="Khiems-MacBook-Pro.local">
+      <testcase name="retained due audit expires after real request confirmation execution and cleanup" classname="Audit expiry actual PostgreSQL after confirmed tenant deletion" time="0.010689" file="apps/api/test/audit-expiry-integration.test.ts" line="57" assertions="0">
+        <failure type="PostgresError" message="malformed array literal: &quot;350f87d5-6b96-4b46-a299-a743eab47d9c,c939967d-a629-48bc-a486-fcdc336a44fc&quot;">PostgresError: malformed array literal: &quot;350f87d5-6b96-4b46-a299-a743eab47d9c,c939967d-a629-48bc-a486-fcdc336a44fc&quot;&#10;      at wrapPostgresError (internal:sql/postgres:176:27)&#10;      at onRejectPostgresQuery (internal:sql/postgres:205:31)&#10;</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>
