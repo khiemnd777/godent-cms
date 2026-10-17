@@ -1,0 +1,9 @@
+{
+  "finding": "R13",
+  "status": "CLOSED",
+  "reviewer": "/root/lacvan_review",
+  "turn": "01a147ca-c57c-7fa1-a257-5b27f084e771",
+  "source": "apps/website/app/signature.css",
+  "sha256": "7d81018bdb789a0a07a7d6661b1b4fe3ce213dc277fb82c64829b6231f6a1250",
+  "limit": "Source only. R1-R12 remain in independent-review.json; its pre-tablet CSS pin is historical."
+}

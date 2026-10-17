@@ -4,8 +4,10 @@ import { BUILDER_LABELS } from "../lib/builder-routing";
 import { builderListSearch, type BuilderListQuery } from "../lib/public-builder";
 import { BuilderCards } from "./builder-content";
 import { PresentationShell } from "./builder-shell";
+import { SignatureListing } from "./signature-listing";
 
 export function BuilderListing({ page, tenant, kind, locale, query, alternates = [] }: { page: M4PublicList; tenant: string; kind: M4Kind; locale: M4Locale; query: BuilderListQuery; alternates?: { locale: M4Locale; url: string }[] }) {
+  if (page.config?.content.theme === "signature") return <SignatureListing page={page} tenant={tenant} kind={kind} locale={locale} query={query} alternates={alternates}/>;
   const en = locale === "en", name = page.config?.content.name ?? BUILDER_LABELS[locale][kind], path = publicPath(tenant, locale, kind, undefined, publicUrlBase(page));
   const references = page.items, href = navigationHref(path, publicUrlBase(page));
   return <PresentationShell urlBase={publicUrlBase(page)} config={page.config} site={{ name, footer: page.config?.content.footer ?? { intro: "", body: { type: "doc", version: 1, blocks: [] } } }} tenant={tenant} locale={locale} currentPath={path} alternates={alternates}>

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-17T02:00:43.706Z",
+  "phase": "--compile-only",
+  "slice": "--search",
+  "priorChecksums": 62,
+  "compiled": [
+    "0064_signature_search_budget.sql"
+  ],
+  "sourceChecksums": {
+    "0064_signature_search_budget.sql": "e20ffb9bf95baaffacdb502ba819599621bdec32dc7e9ba9fe9c15ab6309d775"
+  },
+  "committed": false,
+  "intentionallyRolledBack": true,
+  "dispatchStarted": false
+}

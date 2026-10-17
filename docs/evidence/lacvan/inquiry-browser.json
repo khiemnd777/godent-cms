@@ -1,0 +1,34 @@
+{
+  "task": "GCMS-LACVAN-001",
+  "status": "PASS",
+  "scope": "Home consultation via actual browser and authenticated CMS",
+  "transport": {
+    "source": "home",
+    "preflight": 204,
+    "origin": "http://localhost:5892",
+    "credentialedCors": false
+  },
+  "browser": {
+    "accepted": true,
+    "confirmation": "Đã tiếp nhận yêu cầu tư vấn",
+    "appointmentConfirmed": false
+  },
+  "cms": {
+    "leadCount": 1,
+    "code": "YC-000001",
+    "sourceType": "home",
+    "sourcePath": "/lac-van",
+    "formLocale": "vi",
+    "consentVersion": "consultation-vi-v1"
+  },
+  "screenshots": [
+    "home-inquiry-received.png",
+    "cms-home-inquiry-source.png"
+  ],
+  "limits": [
+    "The original preflight-blocked browser attempt was lost during a development refresh while API restart was in progress. Same-key retention across that refresh is NOT_RUN.",
+    "The successful submission used a new request after reloading. Independent same-key HTTP regression is separate.",
+    "Initial CMS detail loading returned its error state; the existing retry loaded the correct detail without code changes."
+  ],
+  "recordedAt": "2026-10-17T02:21:51.328443+00:00"
+}

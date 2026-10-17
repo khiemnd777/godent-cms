@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-17T01:34:01.557Z",
+  "phase": "--compile-only",
+  "priorChecksums": 58,
+  "compiled": [
+    "0060_signature_template.sql",
+    "0061_signature_intake_sources.sql",
+    "0062_signature_search.sql"
+  ],
+  "committed": false,
+  "intentionallyRolledBack": true,
+  "dispatchStarted": false
+}

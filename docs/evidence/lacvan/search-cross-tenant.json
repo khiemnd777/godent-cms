@@ -1,0 +1,11 @@
+{
+  "task": "GCMS-LACVAN-001",
+  "status": "PASS",
+  "scope": "Actual cross-tenant search cursor replay",
+  "ownResponse": 200,
+  "otherTenantReplay": 400,
+  "code": null,
+  "anonymous": true,
+  "readOnly": true,
+  "recordedAt": "2026-10-17T02:30:54.060Z"
+}

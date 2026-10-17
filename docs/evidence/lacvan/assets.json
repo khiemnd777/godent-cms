@@ -1,0 +1,479 @@
+{
+  "task": "GCMS-LACVAN-001",
+  "generator": "builtin image_gen",
+  "modelMetadata": "Unknown: not supplied by tool",
+  "notes": [
+    "Original generated fictional people and spaces; no protected source photos supplied.",
+    "No format conversion or image editing performed.",
+    "Clinical efficacy and actual patient outcomes are not represented.",
+    "Application Media Library upload and rendered publication are owned by coordinator, NOT_RUN by asset worker."
+  ],
+  "assets": [
+    {
+      "id": "hero-family",
+      "path": "assets/lacvan/hero-family.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-6859934c-352d-414e-ad7d-66229a4f3eb8.png",
+      "prompt": "Wide 16:9 premium editorial photograph for an original Vietnamese dental clinic website hero. A fictional Vietnamese family: mother and father around 35 and their daughter around 9, joyful understated natural smiles, ivory and soft lavender clothing. Subjects together on right half, left half airy pale warm-white clinic wall with very subtle orchid accent and plentiful clean negative space for CSS headline. Elegant bright clinic lounge, natural daylight, authentic skin texture, realistic normal teeth. No text, no logo, no watermarks, no recognizable real people. Professional aspirational healthcare photography, polished but human.",
+      "alt": {
+        "vi": "Gia đình cùng chia sẻ nụ cười trong không gian phòng khám",
+        "en": "A family sharing a smile in a welcoming clinic lounge"
+      },
+      "intendedSlot": "hero-carousel",
+      "fictional": true,
+      "bytes": 1903194,
+      "sha256": "f966bb75e09be61f1ae8f240c86cb778d7c63d1c6b4217329934db31da276507",
+      "width": 1672,
+      "height": 941,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "facility-reception",
+      "path": "assets/lacvan/facility-reception.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-825de0f6-1f7c-4632-be73-3a19468d5c6a.png",
+      "prompt": "Wide 16:9 architectural editorial photograph of an original boutique Vietnamese dental clinic reception. Bright premium white travertine desk, warm oak details, muted orchid upholstery, fresh white orchids, softly curved walls, daylight from tall windows, spacious clean hospitality atmosphere. No people, no branding, no text or signage, no watermarks. Photorealistic architectural photography, balanced composition, plausible real clinic, no exaggerated futuristic technology.",
+      "alt": {
+        "vi": "Không gian lễ tân với hoa lan và ánh sáng tự nhiên",
+        "en": "Reception lounge with orchids and natural light"
+      },
+      "intendedSlot": "clinic-facility-gallery",
+      "fictional": true,
+      "bytes": 2520665,
+      "sha256": "5f0c7e30da53b3513616718c3e5b0870de35e7a2e86dd60c7b3fc81fc3be3007",
+      "width": 1672,
+      "height": 941,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "service-implant-consultation",
+      "path": "assets/lacvan/service-implant-consultation.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-257b8b6d-4544-4e54-aebe-08c260191bd1.png",
+      "prompt": "Wide 16:9 photorealistic editorial scene in an original premium Vietnamese dental clinic. Fictional Vietnamese male dentist around 45 in clean white coat explaining a simple tooth model to a fictional Vietnamese woman around 55 seated upright at a consultation desk. Both engaged naturally, reassuring conversation, no procedure. White and warm oak interior with subtle muted orchid accents, natural daylight, realistic hands and normal teeth. No text, logo, watermark, graphic medical details, before-after comparison or treatment-outcome claims.",
+      "alt": {
+        "vi": "Bác sĩ tư vấn kế hoạch phục hồi răng với mô hình nha khoa",
+        "en": "Dentist discussing tooth restoration with a dental model"
+      },
+      "intendedSlot": "service-card-and-detail",
+      "fictional": true,
+      "bytes": 2017786,
+      "sha256": "12a0ba4d2e132cd05e451cd9dbef777bd0554889aef21a8ddeef1ac3e0406278",
+      "width": 1672,
+      "height": 941,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "service-orthodontic-consultation",
+      "path": "assets/lacvan/service-orthodontic-consultation.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-61e32f3e-f5e7-4e7f-9cbe-e83c82ca16a8.png",
+      "prompt": "Wide 16:9 photorealistic editorial scene for an original Vietnamese dental clinic. Fictional Vietnamese female orthodontist around 36 with tied-back dark hair wearing white coat, consulting a fictional Vietnamese woman around 28 at an elegant desk, holding a clear orthodontic aligner case and discussing a clean unlabelled dental model. Warm approachable expressions, bright white clinic with understated orchid accent, realistic skin and hands, no active procedure. No text, logos, watermarks, real-person likeness request, before-after comparison or promises.",
+      "alt": {
+        "vi": "Bác sĩ trao đổi về khay chỉnh nha trong buổi tư vấn",
+        "en": "Dentist discussing aligners during a consultation"
+      },
+      "intendedSlot": "service-card-and-detail",
+      "fictional": true,
+      "bytes": 2075467,
+      "sha256": "98b26a36531f3c668b782ff8139fcf25328f11e40bc9972e96f4f701d1ccd6ca",
+      "width": 1672,
+      "height": 941,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "doctor-minh-an",
+      "path": "assets/lacvan/doctor-minh-an.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-8b3218db-e368-416a-a0ac-bdc935f57cc4.png",
+      "prompt": "Vertical 3:4 professional studio portrait, fictional Vietnamese female dentist age 37, shoulder-length softly waved dark hair, oval face, warm understated smile, white medical coat over pale orchid blouse, arms naturally relaxed cropped at waist. Light warm gray seamless background, soft even daylight-style lighting, premium authentic healthcare portrait, photorealistic skin texture and ordinary teeth, distinct original person. No text, logo, badge writing, watermark or real-person resemblance.",
+      "alt": {
+        "vi": "Chân dung bác sĩ Minh An",
+        "en": "Portrait of Dr Minh An"
+      },
+      "intendedSlot": "doctor-directory-and-profile",
+      "fictional": true,
+      "bytes": 1927640,
+      "sha256": "41971b0159211f71edc6820dbbe266934b4b87bf513c63da8dc01c1eef92258d",
+      "width": 1086,
+      "height": 1448,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "doctor-thanh-ha",
+      "path": "assets/lacvan/doctor-thanh-ha.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-81193fef-a427-4f43-9b49-2e222ef57494.png",
+      "prompt": "Vertical 3:4 professional studio portrait, fictional Vietnamese female dentist age 46, dark hair neatly in low bun, slightly angular face, thin understated round glasses, confident gentle smile, white medical coat over ivory blouse, waist-up with naturally folded hands. Light warm gray seamless background, soft even lighting, premium authentic healthcare portrait, realistic skin texture and normal teeth, distinct original person. No text, logo, badge writing, watermark or real-person resemblance.",
+      "alt": {
+        "vi": "Chân dung bác sĩ Thanh Hà",
+        "en": "Portrait of Dr Thanh Ha"
+      },
+      "intendedSlot": "doctor-directory-and-profile",
+      "fictional": true,
+      "bytes": 1804841,
+      "sha256": "2a359e701c6ed6bd47af9fb651bb435f14e606a69634dd131fd22f752eb3d0de",
+      "width": 1086,
+      "height": 1448,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "doctor-quang-huy",
+      "path": "assets/lacvan/doctor-quang-huy.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-2f6abc6a-15a1-4217-b60b-5efdb73efcaa.png",
+      "prompt": "Vertical 3:4 professional studio portrait, fictional Vietnamese male dentist age 43, short neatly side-parted dark hair, rectangular face, clean shaven, calm warm smile, white medical coat over pale orchid shirt without tie, waist-up relaxed posture. Light warm gray seamless background, soft even lighting, premium authentic healthcare portrait, realistic skin texture and normal teeth, distinct original person. No text, logo, badge writing, watermark or real-person resemblance.",
+      "alt": {
+        "vi": "Chân dung bác sĩ Quang Huy",
+        "en": "Portrait of Dr Quang Huy"
+      },
+      "intendedSlot": "doctor-directory-and-profile",
+      "fictional": true,
+      "bytes": 1736612,
+      "sha256": "6528c2fc3de0d153aa51034efdbb53da760f59a2910472ebfa1f664fc504c8cf",
+      "width": 1086,
+      "height": 1448,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "doctor-duc-minh",
+      "path": "assets/lacvan/doctor-duc-minh.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-173301ed-5fd3-42df-ab08-4430cf5b183c.png",
+      "prompt": "Vertical 3:4 professional studio portrait, fictional Vietnamese male dentist age 51, short dark hair with slight silver at temples, rounded face, no glasses, clean shaven, welcoming gentle smile, white medical coat over white shirt and muted lavender tie, waist-up relaxed posture. Light warm gray seamless background, soft even lighting, premium authentic healthcare portrait, realistic skin texture and normal teeth, distinct original person. No text, logo, badge writing, watermark or real-person resemblance.",
+      "alt": {
+        "vi": "Chân dung bác sĩ Đức Minh",
+        "en": "Portrait of Dr Duc Minh"
+      },
+      "intendedSlot": "doctor-directory-and-profile",
+      "fictional": true,
+      "bytes": 1759051,
+      "sha256": "fbf29cf1f7b1fd0da18a0a751ba97d5feae5f8b38c850951c6cf85e1f0947fd2",
+      "width": 1086,
+      "height": 1448,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "doctor-bao-tram",
+      "path": "assets/lacvan/doctor-bao-tram.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-17c06768-be98-4772-9ee7-f09055d17463.png",
+      "prompt": "Vertical 3:4 studio portrait of a wholly fictional Vietnamese female dentist age32, short straight dark bob with side fringe, round face, no glasses, natural friendly smile, white medical coat over lilac blouse. Premium photorealistic original Vietnamese dental brand editorial aesthetic: white, warm oak and very subtle muted orchid accents, authentic skin texture, soft natural lighting. No text, logo, watermark, badge writing, real-person likeness request, before-after comparison, artificial perfect teeth or outcome promises. Portraits use clean light warm gray seamless background for doctors, waist-up professional relaxed posture.",
+      "alt": {
+        "vi": "Chân dung bác sĩ Bảo Trâm",
+        "en": "Portrait of Dr Bao Tram"
+      },
+      "intendedSlot": "doctor-directory-and-profile",
+      "fictional": true,
+      "bytes": 1758998,
+      "sha256": "e55be4f5a8805dc5174eb5bcff6bd463a642acabdb3be250241ba6c0956d1187",
+      "width": 1086,
+      "height": 1448,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "doctor-ngoc-lan",
+      "path": "assets/lacvan/doctor-ngoc-lan.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-68806297-8348-4574-8c0a-a7638d1beaa4.png",
+      "prompt": "Vertical 3:4 studio portrait of a wholly fictional Vietnamese female dentist age50, shoulder-length swept-back dark hair, narrow oval face, subtle silver-rim glasses, composed gentle smile, white medical coat over ivory blouse. Premium photorealistic original Vietnamese dental brand editorial aesthetic: white, warm oak and very subtle muted orchid accents, authentic skin texture, soft natural lighting. No text, logo, watermark, badge writing, real-person likeness request, before-after comparison, artificial perfect teeth or outcome promises. Portraits use clean light warm gray seamless background for doctors, waist-up professional relaxed posture.",
+      "alt": {
+        "vi": "Chân dung bác sĩ Ngọc Lan",
+        "en": "Portrait of Dr Ngoc Lan"
+      },
+      "intendedSlot": "doctor-directory-and-profile",
+      "fictional": true,
+      "bytes": 1790381,
+      "sha256": "e288ab3ebdef04537ee66645a030cb7a3c1c29e6e9c0be8bc26ecf0f6e528cd5",
+      "width": 1086,
+      "height": 1448,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "doctor-gia-khang",
+      "path": "assets/lacvan/doctor-gia-khang.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-28b1ba87-670f-41de-a367-a9a26e21fd13.png",
+      "prompt": "Vertical 3:4 studio portrait of a wholly fictional Vietnamese male dentist age35, short textured dark hair, lean oval face, no glasses, clean shaven, warm smile, white medical coat over pale lavender shirt. Premium photorealistic original Vietnamese dental brand editorial aesthetic: white, warm oak and very subtle muted orchid accents, authentic skin texture, soft natural lighting. No text, logo, watermark, badge writing, real-person likeness request, before-after comparison, artificial perfect teeth or outcome promises. Portraits use clean light warm gray seamless background for doctors, waist-up professional relaxed posture.",
+      "alt": {
+        "vi": "Chân dung bác sĩ Gia Khang",
+        "en": "Portrait of Dr Gia Khang"
+      },
+      "intendedSlot": "doctor-directory-and-profile",
+      "fictional": true,
+      "bytes": 1685464,
+      "sha256": "ec03bb9397e29fd507f33f3d67363bdb31038588a78286dfc81ec27b4e31f54c",
+      "width": 1086,
+      "height": 1448,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "doctor-hoang-nam",
+      "path": "assets/lacvan/doctor-hoang-nam.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-2e464b47-de87-44c3-bb6b-966b05c0408d.png",
+      "prompt": "Vertical 3:4 studio portrait of a wholly fictional Vietnamese male dentist age47, short black crew cut, broad face, subtle rectangular glasses, clean shaven, calm smile, white medical coat over light blue-gray shirt. Premium photorealistic original Vietnamese dental brand editorial aesthetic: white, warm oak and very subtle muted orchid accents, authentic skin texture, soft natural lighting. No text, logo, watermark, badge writing, real-person likeness request, before-after comparison, artificial perfect teeth or outcome promises. Portraits use clean light warm gray seamless background for doctors, waist-up professional relaxed posture.",
+      "alt": {
+        "vi": "Chân dung bác sĩ Hoàng Nam",
+        "en": "Portrait of Dr Hoang Nam"
+      },
+      "intendedSlot": "doctor-directory-and-profile",
+      "fictional": true,
+      "bytes": 1763981,
+      "sha256": "5e4df532f22a166890aef09bce9ad1cdfaabbef6aa259a7c285e06bd12ed6f19",
+      "width": 1086,
+      "height": 1448,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "service-restorative-consultation",
+      "path": "assets/lacvan/service-restorative-consultation.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-19c68558-ab3c-4753-828d-7ce67417e40f.png",
+      "prompt": "Wide16:9 scene: wholly fictional Vietnamese woman dentist age40 in white coat explaining a ceramic tooth shade guide to an adult Vietnamese man age38 at a consultation desk. Reassuring discussion, no procedure, no treatment claims. Premium photorealistic original Vietnamese dental brand editorial aesthetic: white, warm oak and very subtle muted orchid accents, authentic skin texture, soft natural lighting. No text, logo, watermark, badge writing, real-person likeness request, before-after comparison, artificial perfect teeth or outcome promises. Portraits use clean light warm gray seamless background for doctors, waist-up professional relaxed posture.",
+      "alt": {
+        "vi": "Bác sĩ trao đổi về màu răng trong buổi tư vấn phục hình",
+        "en": "Dentist discussing tooth shades during a restorative consultation"
+      },
+      "intendedSlot": "service-card-and-detail",
+      "fictional": true,
+      "bytes": 1936737,
+      "sha256": "4ab0bdbaef0afbba7e8ea0068c08a2b61b8953975d738fe98e6f4b719c78ef0b",
+      "width": 1672,
+      "height": 941,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "service-preventive-care",
+      "path": "assets/lacvan/service-preventive-care.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-7bf9e2b7-80d4-4949-9089-cd32ea496503.png",
+      "prompt": "Wide16:9 scene: wholly fictional Vietnamese woman hygienist age34 in white coat demonstrates gentle brushing on a large tooth model for a Vietnamese woman age42. Both seated at bright clinic desk, hands anatomically plausible, no procedure. Premium photorealistic original Vietnamese dental brand editorial aesthetic: white, warm oak and very subtle muted orchid accents, authentic skin texture, soft natural lighting. No text, logo, watermark, badge writing, real-person likeness request, before-after comparison, artificial perfect teeth or outcome promises. Portraits use clean light warm gray seamless background for doctors, waist-up professional relaxed posture.",
+      "alt": {
+        "vi": "Hướng dẫn chải răng bằng mô hình nha khoa",
+        "en": "Toothbrushing guidance using a dental model"
+      },
+      "intendedSlot": "service-card-and-detail",
+      "fictional": true,
+      "bytes": 2028906,
+      "sha256": "1e545c1554a3aabb4d8491f1b0ebf9c6156f2be4e24b1a7fb5370b6c2eed0548",
+      "width": 1672,
+      "height": 941,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "service-endodontic-consultation",
+      "path": "assets/lacvan/service-endodontic-consultation.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-f1df483c-6183-4822-9f42-7e8d2417f4fb.png",
+      "prompt": "Wide16:9 scene: wholly fictional Vietnamese male dentist age44 in white coat explains a simple unlabelled tooth cross-section model to a Vietnamese adult man age50, friendly discussion in private consultation room, no exposed surgery, no procedure. Premium photorealistic original Vietnamese dental brand editorial aesthetic: white, warm oak and very subtle muted orchid accents, authentic skin texture, soft natural lighting. No text, logo, watermark, badge writing, real-person likeness request, before-after comparison, artificial perfect teeth or outcome promises. Portraits use clean light warm gray seamless background for doctors, waist-up professional relaxed posture.",
+      "alt": {
+        "vi": "Bác sĩ giải thích cấu trúc răng bằng mô hình",
+        "en": "Dentist explaining tooth structure with a model"
+      },
+      "intendedSlot": "service-card-and-detail",
+      "fictional": true,
+      "bytes": 1977545,
+      "sha256": "dfda3571c3bd8ede2817eeb6160426401aa76afb5e7007cb5184711bd8f2815c",
+      "width": 1672,
+      "height": 941,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "service-digital-planning",
+      "path": "assets/lacvan/service-digital-planning.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-ede5f464-30ab-4ccd-8a59-2e7d5fb7567c.png",
+      "prompt": "Wide16:9 scene: wholly fictional Vietnamese female dentist age38 and Vietnamese woman age30 review a softly out-of-focus unlabelled abstract dental3D image on a monitor, viewed from a natural three-quarter angle. Quiet clinical consultation, no diagnosis text, no procedure. Premium photorealistic original Vietnamese dental brand editorial aesthetic: white, warm oak and very subtle muted orchid accents, authentic skin texture, soft natural lighting. No text, logo, watermark, badge writing, real-person likeness request, before-after comparison, artificial perfect teeth or outcome promises. Portraits use clean light warm gray seamless background for doctors, waist-up professional relaxed posture.",
+      "alt": {
+        "vi": "Bác sĩ và khách hàng trao đổi hình ảnh nha khoa trên màn hình",
+        "en": "Dentist and visitor reviewing dental imagery on a monitor"
+      },
+      "intendedSlot": "service-card-and-detail",
+      "fictional": true,
+      "bytes": 1925109,
+      "sha256": "38e8582dc107ca74f2c6a54c04e55f3ff81c51a26a5b605b1694c4f342e4537a",
+      "width": 1672,
+      "height": 941,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "facility-treatment-room",
+      "path": "assets/lacvan/facility-treatment-room.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-1b06bf55-1dad-4308-9555-8591f57ce0c6.png",
+      "prompt": "Wide16:9 architectural photography of an original immaculate boutique dental treatment room with one modern dental chair, natural window daylight, privacy screen, practical neatly arranged equipment, no people. Premium photorealistic original Vietnamese dental brand editorial aesthetic: white, warm oak and very subtle muted orchid accents, authentic skin texture, soft natural lighting. No text, logo, watermark, badge writing, real-person likeness request, before-after comparison, artificial perfect teeth or outcome promises. Portraits use clean light warm gray seamless background for doctors, waist-up professional relaxed posture.",
+      "alt": {
+        "vi": "Phòng chăm sóc nha khoa ngập ánh sáng tự nhiên",
+        "en": "Dental treatment room filled with natural light"
+      },
+      "intendedSlot": "clinic-facility-gallery",
+      "fictional": true,
+      "bytes": 2098355,
+      "sha256": "929fe786399f2bccf51362101f48a310b75010d7e184bbb9d2940368bed24316",
+      "width": 1672,
+      "height": 941,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "facility-consultation-lounge",
+      "path": "assets/lacvan/facility-consultation-lounge.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-ba60857f-893f-44ea-9e38-0b99751677a9.png",
+      "prompt": "Wide16:9 architectural photography of an original premium dental clinic consultation lounge: softly curved ivory sofas, warm oak table, one elegant vase of orchids, glass-partition meeting room behind, broad windows, no people. Premium photorealistic original Vietnamese dental brand editorial aesthetic: white, warm oak and very subtle muted orchid accents, authentic skin texture, soft natural lighting. No text, logo, watermark, badge writing, real-person likeness request, before-after comparison, artificial perfect teeth or outcome promises. Portraits use clean light warm gray seamless background for doctors, waist-up professional relaxed posture.",
+      "alt": {
+        "vi": "Phòng chờ và không gian tư vấn với nội thất sáng màu",
+        "en": "Bright lounge and private consultation space"
+      },
+      "intendedSlot": "clinic-facility-gallery",
+      "fictional": true,
+      "bytes": 2629140,
+      "sha256": "2ec9fda31a595f8e78448951e1bb5f105cd51f21190ec9a1c3e3e0f3c89d14c2",
+      "width": 1672,
+      "height": 941,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "hero-couple",
+      "path": "assets/lacvan/hero-couple.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-a8a4e8df-dd39-46ca-ac60-e1a2d9e4d571.png",
+      "prompt": "Wide16:9 aspirational lifestyle editorial photo: a wholly fictional Vietnamese couple around45 walking together on a softly landscaped urban terrace in morning light, relaxed natural smiles, pale cream and muted lavender clothes. Subjects in right half; left half clear softly blurred airy light background for CSS text. Premium photorealistic original Vietnamese dental brand editorial aesthetic: white, warm oak and very subtle muted orchid accents, authentic skin texture, soft natural lighting. No text, logo, watermark, badge writing, real-person likeness request, before-after comparison, artificial perfect teeth or outcome promises. Portraits use clean light warm gray seamless background for doctors, waist-up professional relaxed posture.",
+      "alt": {
+        "vi": "Hai người cùng tận hưởng buổi sáng ngoài trời",
+        "en": "A couple enjoying a relaxed morning outdoors"
+      },
+      "intendedSlot": "hero-carousel",
+      "fictional": true,
+      "bytes": 2051060,
+      "sha256": "5515ed8b7301fe9ce096f1909357cd8ece22dd813ece17ed3dc3a9212e8fd990",
+      "width": 1672,
+      "height": 941,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "hero-wellbeing",
+      "path": "assets/lacvan/hero-wellbeing.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-78154661-fcd4-499d-ac31-d403f7f4dc22.png",
+      "prompt": "Wide16:9 editorial lifestyle portrait of a wholly fictional Vietnamese woman age34 wearing a flowing ivory blouse, relaxed natural smile, clean ordinary teeth, beautiful soft window light, neutral premium lounge. Subject on right half with broad uncluttered pale negative space on left for CSS text. Premium photorealistic original Vietnamese dental brand editorial aesthetic: white, warm oak and very subtle muted orchid accents, authentic skin texture, soft natural lighting. No text, logo, watermark, badge writing, real-person likeness request, before-after comparison, artificial perfect teeth or outcome promises. Portraits use clean light warm gray seamless background for doctors, waist-up professional relaxed posture.",
+      "alt": {
+        "vi": "Nụ cười tự nhiên trong không gian sáng dịu",
+        "en": "A natural smile in a softly lit lounge"
+      },
+      "intendedSlot": "hero-carousel",
+      "fictional": true,
+      "bytes": 1800589,
+      "sha256": "459f80e6b908133b8d2bdab9f66712a7ee16d72fa99aa4d559d89b02242e5079",
+      "width": 1672,
+      "height": 941,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "patient-mai-phuong",
+      "path": "assets/lacvan/patient-mai-phuong.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-a9a315ef-eff4-417e-af93-e067796feeec.png",
+      "prompt": "Vertical3:4 editorial lifestyle portrait of a wholly fictional Vietnamese woman age29, straight shoulder-length dark hair, warm natural smile, white linen blouse, pale orchid softly blurred lounge background, no coat. Premium photorealistic original Vietnamese dental brand editorial aesthetic: white, warm oak and very subtle muted orchid accents, authentic skin texture, soft natural lighting. No text, logo, watermark, badge writing, real-person likeness request, before-after comparison, artificial perfect teeth or outcome promises. Portraits use clean light warm gray seamless background for doctors, waist-up professional relaxed posture.",
+      "alt": {
+        "vi": "Chân dung Mai Phương với nụ cười tự nhiên",
+        "en": "Portrait of Mai Phuong with a natural smile"
+      },
+      "intendedSlot": "story-card-and-detail",
+      "fictional": true,
+      "bytes": 1953879,
+      "sha256": "df5dff46fd05ff42682eec1b53dafddedc04a9ee52a26461cabfc4ab37481e45",
+      "width": 1086,
+      "height": 1448,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "patient-tuan-kiet",
+      "path": "assets/lacvan/patient-tuan-kiet.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-7d0bc035-e73f-49ab-96f5-a8d65db855e8.png",
+      "prompt": "Vertical3:4 editorial lifestyle portrait of a wholly fictional Vietnamese man age40, short neat dark hair, natural relaxed smile, pale blue linen shirt, sunlit warm neutral lounge background. Premium photorealistic original Vietnamese dental brand editorial aesthetic: white, warm oak and very subtle muted orchid accents, authentic skin texture, soft natural lighting. No text, logo, watermark, badge writing, real-person likeness request, before-after comparison, artificial perfect teeth or outcome promises. Portraits use clean light warm gray seamless background for doctors, waist-up professional relaxed posture.",
+      "alt": {
+        "vi": "Chân dung Tuấn Kiệt trong không gian sáng",
+        "en": "Portrait of Tuan Kiet in a bright lounge"
+      },
+      "intendedSlot": "story-card-and-detail",
+      "fictional": true,
+      "bytes": 2083239,
+      "sha256": "22445ea9fafdadec0519d5db6c2b2b59353d45777b059982cb6a529d75c49596",
+      "width": 1086,
+      "height": 1448,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "patient-thu-huong",
+      "path": "assets/lacvan/patient-thu-huong.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-5ef66ddc-0af6-456a-be81-6d8e366116e8.png",
+      "prompt": "Vertical3:4 editorial lifestyle portrait of a wholly fictional Vietnamese woman age57, short wavy dark hair with subtle silver strands, warm expressive eyes, natural gentle smile, ivory blouse, light neutral lounge background. Premium photorealistic original Vietnamese dental brand editorial aesthetic: white, warm oak and very subtle muted orchid accents, authentic skin texture, soft natural lighting. No text, logo, watermark, badge writing, real-person likeness request, before-after comparison, artificial perfect teeth or outcome promises. Portraits use clean light warm gray seamless background for doctors, waist-up professional relaxed posture.",
+      "alt": {
+        "vi": "Chân dung Thu Hương với nụ cười nhẹ nhàng",
+        "en": "Portrait of Thu Huong with a gentle smile"
+      },
+      "intendedSlot": "story-card-and-detail",
+      "fictional": true,
+      "bytes": 2005538,
+      "sha256": "97bf817462953076461960e3fa367618e02aeba254e0b1c7e6cd20d66f61a12f",
+      "width": 1086,
+      "height": 1448,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    },
+    {
+      "id": "patient-minh-triet",
+      "path": "assets/lacvan/patient-minh-triet.png",
+      "source": "/Users/khiemnguyen/.codex/generated_images/01a14779-2723-7d01-8aed-74474356af5e/exec-cd077712-cf3b-4e32-8f46-b866db02e615.png",
+      "prompt": "Vertical3:4 editorial lifestyle portrait of a wholly fictional Vietnamese man age60, short salt-and-pepper hair, friendly natural smile, cream collared shirt, soft neutral green garden bokeh background. Premium photorealistic original Vietnamese dental brand editorial aesthetic: white, warm oak and very subtle muted orchid accents, authentic skin texture, soft natural lighting. No text, logo, watermark, badge writing, real-person likeness request, before-after comparison, artificial perfect teeth or outcome promises. Portraits use clean light warm gray seamless background for doctors, waist-up professional relaxed posture.",
+      "alt": {
+        "vi": "Chân dung Minh Triết trong ánh sáng tự nhiên",
+        "en": "Portrait of Minh Triet in natural light"
+      },
+      "intendedSlot": "story-card-and-detail",
+      "fictional": true,
+      "bytes": 1998388,
+      "sha256": "780bccbc0cd3f74ffb80745342e8f359837b992fa7933011ca93c9ca149e30e9",
+      "width": 1086,
+      "height": 1448,
+      "mimeType": "image/png",
+      "sizeValidation": "PASS",
+      "visualInspection": "PASS"
+    }
+  ],
+  "verification": {
+    "count": 24,
+    "visualInspections": "24/24 PASS",
+    "sha256SourceEquality": "24/24 PASS",
+    "pngHeadersAndDimensions": "24/24 PASS",
+    "maxFiveMiB": "24/24 PASS",
+    "bilingualAltAndPrompt": "24/24 PASS",
+    "mediaLibraryUpload": "NOT_RUN by asset worker: coordinator owns integration",
+    "renderedResponsiveCrop": "NOT_RUN by asset worker: coordinator owns integration"
+  }
+}

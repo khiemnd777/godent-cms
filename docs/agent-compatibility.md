@@ -16,7 +16,7 @@ The literal import in CLAUDE.md is outside a code block. Claude's current AGENTS
 
 Codex project-layer loading depends on project trust and client support. Managed settings and live parent permissions can affect the result. Codex inherits omitted sandbox settings; Claude inherits available subagent tools and the parent permission mode when the corresponding fields are omitted. The kit does not force a permission profile by role. Runtime filtering and the approved task scope still govern tool use. Authorized checks and evidence capture do not grant application code changes, implementation or deployment. Observe effective permissions and role behavior separately.
 
-A written role playbook is not a native registered agent. Coordinator is the main session role and does not automatically become a native subagent or replace the client's main system prompt.
+A written role playbook is not a native registered agent. The main session normally owns task delivery; a separate Coordinator is optional unless the project has designated one for the scope. Roles/skills follow the same team workflow and do not replace the client's system prompt or add approval phases. Godent CMS retains its named integration owners and project effort controls.
 
 ## Discovery and overrides
 

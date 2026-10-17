@@ -11,7 +11,16 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-PIN = "919ce6b8d84c8ac5ad4ce473ad6e6c2c9973d2ac"
+PIN = "4f5c3bc7dcb2d052e8fd28699f118a22eb1f82c5"
+HISTORY_ROOT = "docs/agent-kit/history/919ce6b8d84c8ac5ad4ce473ad6e6c2c9973d2ac/"
+HISTORY_PINS = {
+    HISTORY_ROOT + "template-source.json":
+        "bc6b855dad3a42803a67100397c9d477b59af4699c8f66c54a985e7c602526f0",
+    HISTORY_ROOT + "upstream-skills-manifest.json":
+        "bc1074b5121407325292dade47644950c08d4f20235ed040537ea8903f14e0f4",
+    HISTORY_ROOT + "skills-manifest.json":
+        "e6e535a5072147277956a217773abef8ee2c93b323d945a868acdeff8b115478",
+}
 ERRORS = []
 
 
@@ -107,7 +116,16 @@ def verify(setup_only=False):
     check(git_blob((ROOT / "docs/agent-kit/upstream-skills-manifest.json").read_bytes())
           == source["manifest_git_blob_sha"], "Upstream manifest snapshot changed")
     check(manifest["project_adoption"]["template_commit"] == PIN, "Adoption pin mismatch")
-    check(manifest["project_adoption"]["approval"] == "GCMS-SETUP-001 v2", "Approval mismatch")
+    check(manifest["project_adoption"]["approval"] == "GCMS-KIT-UPDATE-001 v1", "Update approval mismatch")
+    check(manifest["project_adoption"]["initial_approval"] == "GCMS-SETUP-001 v2", "Initial approval mismatch")
+    check(manifest["project_adoption"]["history_snapshots"] == HISTORY_PINS, "History pin inventory mismatch")
+    for name, expected in HISTORY_PINS.items():
+        archive = scoped(name)
+        if archive:
+            check(digest(archive.read_bytes()) == expected, "Archived adoption snapshot changed: " + name)
+    update = (ROOT / "docs/tasks/GCMS-KIT-UPDATE-001.md").read_text()
+    check("Approved. Cập nhật Agent Kit trong repo theo phạm vi đề xuất" in update
+          and "chưa commit/push/deploy" in update, "Missing direct kit-update approval or restriction")
     baseline_files = {item["path"]: item for item in baseline["files"]}
     check(len(baseline_files) == 81, "Unexpected pinned template inventory")
     check({i["path"] for i in manifest["files"]} == set(baseline_files),

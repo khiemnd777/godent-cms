@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "pageSize": [
+        "invalid"
+      ],
+      "status": 400,
+      "exactBoundaryBody": true,
+      "noStore": true,
+      "noIndex": true,
+      "noSniff": true
+    },
+    {
+      "pageSize": [
+        "6",
+        "12"
+      ],
+      "status": 400,
+      "exactBoundaryBody": true,
+      "noStore": true,
+      "noIndex": true,
+      "noSniff": true
+    }
+  ],
+  "readOnly": true,
+  "priorEvidence": "invalid-paging-http.json",
+  "correction": "The website proxy rejects malformed listing queries before the component. The prior helper incorrectly expected the component invalid-filter UI and status200; no application change or guard weakening."
+}

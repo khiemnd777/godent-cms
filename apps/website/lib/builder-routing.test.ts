@@ -29,3 +29,11 @@ test("fallback forwards only bounded tracking tokens and registered list semanti
   expect(list).toContain("q=care"); expect(list).not.toContain("cursor");
   expect(safeTracking(new URLSearchParams("utm_source=a&utm_source=b&utm_campaign=unsafe%20token"))).toEqual({});
 });
+test("collection page size stays bounded and travels with filters through cursor links and fallback", () => {
+  const query = parseBuilderQuery({ q: "care", pageSize: "6", cursor: "opaque_123", referenceKind: "service", referenceId: ids.resource });
+  expect(query.pageSize).toBe(6); expect(builderListSearch(query)).toContain("pageSize=6"); expect(builderListSearch(query)).toContain("cursor=opaque_123");
+  const fallback = fallbackLocation("http://localhost:5892/clinic-a/bac-si", new URLSearchParams(builderListSearch(query)), { tenant: "clinic-a", locale: "en", kind: "doctor" });
+  expect(fallback).toContain("pageSize=6"); expect(fallback).not.toContain("cursor");
+  for (const pageSize of ["0", "51", "-1", "1.5", "06", "", ["6", "12"]]) expect(() => parseBuilderQuery({ pageSize })).toThrow();
+  expect(parseBuilderQuery({ pageSize: "50" }).pageSize).toBe(50); expect(parseBuilderQuery({})).not.toHaveProperty("pageSize");
+});

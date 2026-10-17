@@ -4,6 +4,18 @@ import { type M4Locale, type M4PublicConfig, type PublicM4Page } from "../../api
 import type { PublicMediaBlock } from "../../api/src/contracts/s07";
 import type { SiteFooter } from "../../api/src/contracts/s03";
 import { RichText } from "./rich-text";
+import { SignatureFrame, type SignatureContact, type SignatureNavigation } from "./signature-ui";
+import type { M4PublicReference, M4ResolvedNavigationNode } from "../../api/src/contracts/m4";
+
+export function signatureNavigation(nodes: M4ResolvedNavigationNode[], urlBase?: PublicUrlBase): SignatureNavigation[] { return nodes.map(node => ({ id: node.id, label: node.label, ...(node.path ? { href: navigationHref(node.path, urlBase) } : {}), locale: node.actualLocale, children: signatureNavigation(node.children, urlBase) })); }
+export function signatureContact(reference: M4PublicReference | null | undefined, urlBase?: PublicUrlBase): SignatureContact | undefined {
+  if (!reference || !("kind" in reference.content) || reference.content.kind !== "location") return undefined;
+  const content = reference.content, en = reference.locale === "en";
+  const schedules = new Map<string, number[]>(); content.openingHours.forEach(day => { const schedule = day.closed ? en ? "Closed" : "Nghỉ" : day.intervals.map(interval => `${interval.opens}–${interval.closes}`).join(", "); if (schedule) schedules.set(schedule, [...(schedules.get(schedule) ?? []), day.day]); });
+  const days = en ? ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"] : ["CN", "T2", "T3", "T4", "T5", "T6", "T7"];
+  return { id: reference.id, title: reference.title, address: content.address, phone: content.phone, email: content.email, href: navigationHref(reference.path, urlBase), hours: schedules.size > 0 ? <div>{[...schedules].map(([hours, weekday]) => <p key={hours}>{weekday.map(day => days[day]).join(", ")}: {hours}</p>)}</div> : undefined };
+}
+export function signatureNewsNode(nodes: M4ResolvedNavigationNode[]): M4ResolvedNavigationNode | undefined { for (const node of nodes) { if (node.type === "listing" && node.path?.endsWith("/bai-viet")) return node; const child = signatureNewsNode(node.children); if (child) return child; } return undefined; }
 
 export function BuilderImage({ image, eager = false, className = "public-image" }: { image: PublicMediaBlock; eager?: boolean; className?: string }) {
   // Direct current-eligibility gateway. A Next image cache must not serve withdrawn bytes.
@@ -14,6 +26,8 @@ export function PresentationShell({ config, site, tenant, locale, currentPath, a
   const presentation = config?.content, en = locale === "en";
   const homePath = publicPath(tenant, locale, "home", undefined, urlBase), homeEligible = currentPath === homePath || config?.menu.some(item => item.target.kind === "home" && item.path === homePath);
   const brand = <>{config?.logoMedia && <BuilderImage image={config.logoMedia} eager className="builder-logo"/>}<span>{site.name}</span></>;
+  const news = signatureNewsNode(config?.signature?.navigation ?? []);
+  if (presentation?.theme === "signature") return <SignatureFrame palette={presentation.palette} font={presentation.font} layout={presentation.layout} name={site.name} locale={locale} logo={config?.logoMedia ? <BuilderImage image={config.logoMedia} eager className="builder-logo"/> : undefined} homeHref={navigationHref(homePath, urlBase)} currentPath={navigationHref(currentPath, urlBase)} newsLink={news?.path ? { label: en ? "News & knowledge" : "Tin tức & kiến thức", href: navigationHref(news.path, urlBase) } : undefined} menu={signatureNavigation(config?.signature?.navigation ?? [], urlBase)} headerContact={signatureContact(config?.signature?.headerLocation, urlBase)} contacts={(config?.signature?.footerLocations ?? []).flatMap(reference => { const contact = signatureContact(reference, urlBase); return contact ? [contact] : []; })} languages={alternates.map(item => ({ locale: item.locale, href: item.url }))} searchHref={navigationHref(homePath, urlBase)} consultationHref={navigationHref(`${homePath}#consultation`, urlBase)} footer={<>{site.footer.intro && <p>{site.footer.intro}</p>}<RichText document={site.footer.body}/></>} publicationId={publicationId} configPublicationId={config?.publicationId}>{children}</SignatureFrame>;
   return <div className={`builder-site theme-${presentation?.theme ?? "clarity"} palette-${presentation?.palette ?? "teal"} font-${presentation?.font ?? "system"} layout-${presentation?.layout ?? "comfortable"}`} data-publication={publicationId} data-config-publication={config?.publicationId}>
     <a className="skip" href="#main-content">{en ? "Skip to content" : "Đến nội dung chính"}</a>
     <header className="builder-header">{homeEligible ? <a className="builder-brand" href={navigationHref(homePath, urlBase)}>{brand}</a> : <span className="builder-brand">{brand}</span>}

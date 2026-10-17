@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "phase": "actual-post-lock-start-and-end",
+  "recordedAt": "2026-10-17T02:16:25.776Z",
+  "passed": 2,
+  "assertions": 7,
+  "childExit": 0,
+  "newlyOwnedPromotionUnpublished": true,
+  "existingDataMutated": false,
+  "rawLogSha256": "215a90805d8bd7e28bebb7436f4f6c0985c71bd4dfbc670b3b7290d60eadd8d6"
+}

@@ -64,6 +64,16 @@ describe("local public entry and credential boundary", () => {
     const response = await proxy(request("http://localhost:5892/clinic-a/en?utm_source=search&phone=private"));
     expect(response.status).toBe(302); expect(response.headers.get("location")).toBe("http://clinic-a.test:5892/?utm_source=search");
   });
+  it("preserves Signature homepage search text and kind across locale fallback, but clears the old locale cursor", async () => {
+    for (const fallback of [false, true]) {
+      const locale = fallback ? "vi" : "en", home = projectedHome(locale, true);
+      home.page.config.content.theme = "signature"; const signature = { navigation: [], headerLocation: null, footerLocations: [] }; Object.assign(home.page.config.content, { signature }); Object.assign(home.page.config, { signature });
+      const fetcher = publicMock(context("localhost:5892", "/en", true), url => fallback && url.pathname.includes("/en/") ? Response.json({ resolution: "fallback", requestedLocale: "en", actualLocale: "vi", canonicalUrl: home.canonicalUrl, fallbackPublicationId: ids.publication, page: null }) : Response.json(home));
+      fetcher.mockClear();
+      const result = await proxy(request("http://localhost:5892/clinic-a/en?q=care&kind=doctor&cursor=old_EN.123&phone=private")), location = new URL(result.headers.get("location")!);
+      expect(result.status).toBe(fallback ? 302 : 301); expect(location.searchParams.get("q")).toBe("care"); expect(location.searchParams.get("kind")).toBe("doctor"); expect(location.searchParams.get("cursor")).toBe(fallback ? null : "old_EN.123"); expect(location.searchParams.has("phone")).toBe(false); expect(fetcher.mock.calls).toHaveLength(fallback ? 3 : 2);
+    }
+  });
   it("preserves a same-language listing cursor and resets it for locale fallback", async () => {
     for (const fallback of [false, true]) {
       const entry = context("localhost:5892", "/en/dich-vu", true);

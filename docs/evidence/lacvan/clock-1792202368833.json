@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "phase": "actual-post-lock-start-and-end",
+  "recordedAt": "2026-10-17T01:59:28.833Z",
+  "passed": 2,
+  "assertions": 6,
+  "childExit": 0,
+  "newlyOwnedPromotionUnpublished": true,
+  "cleanupRecovery": "Semantic JSON equality preserves the exact owned content despite PostgreSQL JSONB key order.",
+  "existingDataMutated": false,
+  "rawLogSha256": "93d7e03884bdb1b527ac4998da838f7fda1399f21cda2faeb3f5b4e2a7820a0d"
+}

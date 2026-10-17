@@ -1,0 +1,70 @@
+{
+  "task": "GCMS-LACVAN-001",
+  "owner": "GCMS-LACVAN-SEARCH-PROOF-v1",
+  "status": "FAIL",
+  "sql": {
+    "status": "PASS",
+    "exitCode": 0,
+    "tests": 5,
+    "assertions": 66
+  },
+  "http": {
+    "status": "FAIL",
+    "maximumSearchRequests": 16,
+    "samples": [
+      {
+        "label": "missing-query",
+        "status": 400,
+        "milliseconds": 0.71,
+        "items": null,
+        "continued": null
+      },
+      {
+        "label": "absent-query",
+        "status": 200,
+        "milliseconds": 184.12,
+        "items": 0,
+        "continued": true
+      },
+      {
+        "label": "absent-query",
+        "status": 200,
+        "milliseconds": 162.48,
+        "items": 0,
+        "continued": false
+      },
+      {
+        "label": "matching-query",
+        "status": 200,
+        "milliseconds": 281.14,
+        "items": 13,
+        "continued": true
+      }
+    ],
+    "latency": {
+      "n": 4,
+      "min": 0.71,
+      "max": 281.14,
+      "p95": 281.14,
+      "scope": "Observed local HTTP search requests in this bounded proof, including rejection checks"
+    }
+  },
+  "sourceGate": "PASS: read-only SQL definition assertions",
+  "witness": "Published wrapper has a required reference to the normally text-withdrawn case; case head is revoked, wrapper head stays active only during proof",
+  "cleanup": {
+    "status": "PASS",
+    "wrapper": "ordinary CMS unpublish if still active",
+    "case": "normal withdrawal revokes head; unpublish only if an interrupted preparation left it active",
+    "draft": "retained privately and never published"
+  },
+  "error": {
+    "stage": "http-search-proof",
+    "code": "PRIVATE_OR_WRONG_TENANT_SEARCH_ITEM"
+  },
+  "endedAt": "2026-10-17T02:17:34.662Z",
+  "limits": [
+    "Measurements cover only these owned local requests.",
+    "No full endpoint performance bound is claimed.",
+    "Mutation routes are restricted to the three new owned identities; catalog, home, configuration and worker routes are outside the allowlist."
+  ]
+}

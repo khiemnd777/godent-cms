@@ -1,0 +1,9 @@
+import type { M4Locale, M4PublicReference } from "../../api/src/contracts/m4";
+import { navigationHref, type PublicUrlBase } from "../lib/public-url-context";
+import { signaturePriceGroups } from "../lib/signature-presentation";
+import { PriceDisplay } from "./public-content";
+export function SignaturePrices({ references, locale, urlBase, nested = true }: { references: M4PublicReference[]; locale: M4Locale; urlBase?: PublicUrlBase; nested?: boolean }) {
+  const en = locale === "en", Heading = nested ? "h3" : "h2", groups = signaturePriceGroups(references);
+  if (!groups.length) return <p className="public-empty" role="status">{en ? "Fees will be updated when available." : "Chi phí sẽ được cập nhật khi có thông tin."}</p>;
+  return <div className="signature-price-groups">{groups.map(group => <section key={group.id}>{group.title && <Heading>{group.title}</Heading>}<table className="signature-price-table"><thead><tr><th scope="col">{en ? "Care item" : "Hạng mục"}</th><th scope="col">{en ? "Indicative fee" : "Chi phí tham khảo"}</th></tr></thead><tbody>{group.items.map(reference => { const content = reference.content; if (!("kind" in content) || content.kind !== "price") return null; return <tr key={reference.publicationId}><th scope="row"><a href={navigationHref(reference.path, urlBase)}>{reference.title}</a>{content.inclusions && <p>{content.inclusions}</p>}{reference.references.some(item => item.kind === "location") && <p className="signature-price-locations">{reference.references.filter(item => item.kind === "location").map(item => <a key={item.id} href={navigationHref(item.path, urlBase)}>{item.title}</a>)}</p>}</th><td><PriceDisplay price={content.price} locale={locale}/>{content.notes && <details><summary>{en ? "Conditions" : "Điều kiện"}</summary><p>{content.notes}</p></details>}</td></tr>; })}</tbody></table></section>)}</div>;
+}

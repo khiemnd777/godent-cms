@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "required_effort": "xhigh",
+  "observed": {
+    "thread_id": "01a146ff-66a1-7c73-a60d-1ac38e25e73d",
+    "cli_version": "0.163.0-alpha.10.2",
+    "cwd": "/Users/khiemnguyen/Works/godent-cms/godent-cms",
+    "role": null,
+    "parent_thread_id": null,
+    "source_kind": "vscode",
+    "turn_id": "01a14770-533e-7fa0-9256-8b4d0ca5d56a",
+    "timestamp": "2026-10-17T01:18:26.155Z",
+    "model": "gpt-6.1-sol",
+    "effort": "xhigh",
+    "evidence_kind": "runtime_written_turn_context"
+  },
+  "errors": [],
+  "limit": "Recorded runtime configuration; not an internal reasoning trace or quality guarantee",
+  "route": {
+    "policy_id": "GCMS-EFFORT-001 v1",
+    "task_types": [
+      "implementation"
+    ],
+    "risk_signals": [
+      "authorization",
+      "publication-integrity",
+      "sensitive-data",
+      "tenant-isolation",
+      "transaction-concurrency"
+    ],
+    "routing": "PROJECT_MATRIX",
+    "fallback_reason": null,
+    "role": "coordinator"
+  },
+  "policy_sha256": "a75d33f9599567cd7385b9b35fba9ef4b9c92ff453899b82311261744b6ee6e9"
+}

@@ -1,0 +1,1168 @@
+{
+  "task": "GCMS-LACVAN-001",
+  "status": "PASS",
+  "mode": "read-only-public-API",
+  "resources": 71,
+  "variants": 142,
+  "families": [
+    "article",
+    "case",
+    "category",
+    "doctor",
+    "faq",
+    "gallery",
+    "home",
+    "landing",
+    "location",
+    "page",
+    "price",
+    "promotion",
+    "service",
+    "service_group",
+    "specialty",
+    "testimonial"
+  ],
+  "results": [
+    {
+      "key": "article-cau-hoi-ve-noi-nha",
+      "kind": "article",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "460a6e1e-5242-44a2-8b69-3a701c5b316e"
+    },
+    {
+      "key": "article-cau-hoi-ve-noi-nha",
+      "kind": "article",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "5f09be87-3fb8-4baa-8461-358d4d36a8b2"
+    },
+    {
+      "key": "article-chi-phi-minh-bach",
+      "kind": "article",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "69a0a16b-0961-430d-8f60-6810f903bb35"
+    },
+    {
+      "key": "article-chi-phi-minh-bach",
+      "kind": "article",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "f69f1bef-50c4-41f0-9270-693bd7ac3274"
+    },
+    {
+      "key": "article-dong-hanh-tung-buoc",
+      "kind": "article",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "23ac49e1-cdf0-44b2-b5f4-8d7a324a5ce5"
+    },
+    {
+      "key": "article-dong-hanh-tung-buoc",
+      "kind": "article",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "879f11b6-638a-4145-898f-fceb523e2746"
+    },
+    {
+      "key": "article-gia-dinh-cung-quan-tam",
+      "kind": "article",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "f09fca6e-3df2-49dd-814f-61dcc2112334"
+    },
+    {
+      "key": "article-gia-dinh-cung-quan-tam",
+      "kind": "article",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "9dad0848-a959-4c2a-9fd0-95457a5f8491"
+    },
+    {
+      "key": "article-hanh-trinh-chinh-nha",
+      "kind": "article",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "b9defac6-8efe-43ea-9327-1bca1a0c1dd1"
+    },
+    {
+      "key": "article-hanh-trinh-chinh-nha",
+      "kind": "article",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "d0d7c14a-dbfe-4fb2-8fbf-16de90ff54ca"
+    },
+    {
+      "key": "article-ke-hoach-ro-rang",
+      "kind": "article",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "485a656c-2b54-4c3c-923c-0547ce7adaff"
+    },
+    {
+      "key": "article-ke-hoach-ro-rang",
+      "kind": "article",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "680e2fbd-4da9-40ca-a711-784549d4c3a5"
+    },
+    {
+      "key": "article-khong-gian-lang-nghe",
+      "kind": "article",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "ebbebf7f-341c-458e-ab45-97869b3a8b47"
+    },
+    {
+      "key": "article-khong-gian-lang-nghe",
+      "kind": "article",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "29fac1aa-8eb5-4fd8-affb-6f859e1920a4"
+    },
+    {
+      "key": "article-lan-kham-dau",
+      "kind": "article",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "a231ea0c-2b10-4600-9a49-d02fcecdc48e"
+    },
+    {
+      "key": "article-lan-kham-dau",
+      "kind": "article",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "253103f7-46f2-4bcc-ade8-a8831db73919"
+    },
+    {
+      "key": "article-lich-hen-phu-hop",
+      "kind": "article",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "12d3bc70-fb86-4468-acf5-7a75ec50a623"
+    },
+    {
+      "key": "article-lich-hen-phu-hop",
+      "kind": "article",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "f5468e03-47a3-447f-b953-e241a38c30d0"
+    },
+    {
+      "key": "article-luu-thong-tin-cham-soc",
+      "kind": "article",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "14f36ab7-a092-4200-8d65-833a1e88acb8"
+    },
+    {
+      "key": "article-luu-thong-tin-cham-soc",
+      "kind": "article",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "6b7899b1-e0f4-46f9-8f84-4719a51c2b6e"
+    },
+    {
+      "key": "article-mau-rang-tu-nhien",
+      "kind": "article",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "455c9696-cbd2-46b0-93ae-bb4ceaa1dda3"
+    },
+    {
+      "key": "article-mau-rang-tu-nhien",
+      "kind": "article",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "406c191f-3e54-418a-a5c2-6ec38125d498"
+    },
+    {
+      "key": "article-ngay-moi-lac-van",
+      "kind": "article",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "92cde443-e7cc-4d9c-b9f2-72eb9718ce1f"
+    },
+    {
+      "key": "article-ngay-moi-lac-van",
+      "kind": "article",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "eae77ce5-6637-47d1-88bb-6479d20e1547"
+    },
+    {
+      "key": "article-tim-hieu-implant",
+      "kind": "article",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "540836eb-3ceb-4691-b0e2-ebc37287920b"
+    },
+    {
+      "key": "article-tim-hieu-implant",
+      "kind": "article",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "c59c7cdb-717d-47ec-ae26-c5e58a5a26c7"
+    },
+    {
+      "key": "case-mai-phuong",
+      "kind": "case",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "b9bcae21-5fe9-4dab-8812-6dbe00c36959"
+    },
+    {
+      "key": "case-mai-phuong",
+      "kind": "case",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "25e932fa-79f0-42d1-b767-bf30fd260f7f"
+    },
+    {
+      "key": "case-minh-triet",
+      "kind": "case",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "1be5a0ae-fe2a-42f7-bbdb-037a10b9dd6a"
+    },
+    {
+      "key": "case-minh-triet",
+      "kind": "case",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "965cf6a1-b4c1-41d4-8ba7-3021bb61bf12"
+    },
+    {
+      "key": "case-thu-huong",
+      "kind": "case",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "df678dc0-4dbf-4c70-91c8-39652af69179"
+    },
+    {
+      "key": "case-thu-huong",
+      "kind": "case",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "51dee835-eb8a-4355-bf0a-fd6137d8817f"
+    },
+    {
+      "key": "case-tuan-kiet",
+      "kind": "case",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "b3b50bac-7699-4ee9-9769-3733254082d1"
+    },
+    {
+      "key": "case-tuan-kiet",
+      "kind": "case",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "9e465d74-3517-4cfa-b9b5-44424cd48783"
+    },
+    {
+      "key": "category-everyday",
+      "kind": "category",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "0afce34e-9327-4ed4-b0be-74c65c39e619"
+    },
+    {
+      "key": "category-everyday",
+      "kind": "category",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "6772f2bb-1838-4022-a200-3683151b1370"
+    },
+    {
+      "key": "category-news",
+      "kind": "category",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "cbd6e4ae-046a-4416-b304-7f06afdb4205"
+    },
+    {
+      "key": "category-news",
+      "kind": "category",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "c007cb3a-2d3f-419d-b62d-8e18f35b1ce7"
+    },
+    {
+      "key": "category-treatment",
+      "kind": "category",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "ba616528-1d6e-43d5-a104-7f26101a1143"
+    },
+    {
+      "key": "category-treatment",
+      "kind": "category",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "c48ecdf8-e652-4141-bf43-846f73addfc3"
+    },
+    {
+      "key": "doctor-bao-tram",
+      "kind": "doctor",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "ee07119d-fe92-4015-b220-557fc9d06823"
+    },
+    {
+      "key": "doctor-bao-tram",
+      "kind": "doctor",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "c1b3344b-ab5a-4d7e-b0d8-da84c4ee7e32"
+    },
+    {
+      "key": "doctor-duc-minh",
+      "kind": "doctor",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "45e93329-57c8-481d-8ad1-8a5642c23a23"
+    },
+    {
+      "key": "doctor-duc-minh",
+      "kind": "doctor",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "0fe4814b-0eb4-42af-96ed-1bee034e1d90"
+    },
+    {
+      "key": "doctor-gia-khang",
+      "kind": "doctor",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "9a97e613-1da1-46d5-b6b2-4ad9a2753c4b"
+    },
+    {
+      "key": "doctor-gia-khang",
+      "kind": "doctor",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "82b979f3-c7db-4b5d-80d1-e04cebd8a6b3"
+    },
+    {
+      "key": "doctor-hoang-nam",
+      "kind": "doctor",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "cdc47274-db77-42d6-a139-ad0de880523e"
+    },
+    {
+      "key": "doctor-hoang-nam",
+      "kind": "doctor",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "00aa0027-3ea6-4ec1-8b90-897cf22f7252"
+    },
+    {
+      "key": "doctor-minh-an",
+      "kind": "doctor",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "aedda6dc-b2b4-4a8f-b391-d9465606969b"
+    },
+    {
+      "key": "doctor-minh-an",
+      "kind": "doctor",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "cffeeb91-cb8c-4ca3-8f7d-054ad4cec809"
+    },
+    {
+      "key": "doctor-ngoc-lan",
+      "kind": "doctor",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "4da2996d-b296-4e6a-9a0e-c97b3cadb15e"
+    },
+    {
+      "key": "doctor-ngoc-lan",
+      "kind": "doctor",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "54bf7856-8fa0-45bd-95d2-e81c1709e6fb"
+    },
+    {
+      "key": "doctor-quang-huy",
+      "kind": "doctor",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "11306904-2fc8-4236-a744-ff41ec54c337"
+    },
+    {
+      "key": "doctor-quang-huy",
+      "kind": "doctor",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "b6567136-242a-4275-8c4b-736f754ef1f7"
+    },
+    {
+      "key": "doctor-thanh-ha",
+      "kind": "doctor",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "045f6e67-3216-4a00-8dcd-07ab2dec1d34"
+    },
+    {
+      "key": "doctor-thanh-ha",
+      "kind": "doctor",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "ecb5f5c4-8027-4cc0-a151-254b7b34a8f0"
+    },
+    {
+      "key": "faq-appointment",
+      "kind": "faq",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "6175254d-9075-4636-8d16-764d2e016d00"
+    },
+    {
+      "key": "faq-appointment",
+      "kind": "faq",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "18b4b92b-6541-4c1c-b1e6-46b0b18b947a"
+    },
+    {
+      "key": "faq-cost",
+      "kind": "faq",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "30d807ee-f45a-42ce-97cf-0de02200b744"
+    },
+    {
+      "key": "faq-cost",
+      "kind": "faq",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "ea150a8a-35f2-493e-8c1b-31b9b33927d0"
+    },
+    {
+      "key": "faq-first-visit",
+      "kind": "faq",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "6255279e-16f0-4176-acf2-38f6dfba26c6"
+    },
+    {
+      "key": "faq-first-visit",
+      "kind": "faq",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "a9beb103-135d-4610-be23-4bcb335bf858"
+    },
+    {
+      "key": "faq-language",
+      "kind": "faq",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "29f72254-1467-495b-b978-2e83270de49c"
+    },
+    {
+      "key": "faq-language",
+      "kind": "faq",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "78847e7b-7d3c-4da7-ae91-cd219771cea2"
+    },
+    {
+      "key": "gallery-spaces",
+      "kind": "gallery",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "28d7be90-5750-402d-9742-d0a03805c044"
+    },
+    {
+      "key": "gallery-spaces",
+      "kind": "gallery",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "77bba301-e64b-412c-a065-a7eb08f16767"
+    },
+    {
+      "key": "gallery-welcome",
+      "kind": "gallery",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "e7373d59-8a0f-48dc-a063-9444b391d3d8"
+    },
+    {
+      "key": "gallery-welcome",
+      "kind": "gallery",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "af78332f-6604-4fcf-9cd3-b2de9fbb80eb"
+    },
+    {
+      "key": "group-care",
+      "kind": "service_group",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "d1f4b3c6-6c8c-467d-a9b8-fe71b93353ca"
+    },
+    {
+      "key": "group-care",
+      "kind": "service_group",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "a5eb35c6-550e-4348-a3b5-2fef979cba69"
+    },
+    {
+      "key": "home",
+      "kind": "home",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "aaee971e-cda3-4dbd-bf64-2a0175872dbb"
+    },
+    {
+      "key": "home",
+      "kind": "home",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "77f65be8-c4f8-4d0e-b8ff-241b5c7a83dc"
+    },
+    {
+      "key": "landing",
+      "kind": "landing",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "c206aee5-e1e1-4d88-a2b6-2b832f9f5391"
+    },
+    {
+      "key": "landing",
+      "kind": "landing",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "ed76b7d0-5b36-4bf8-9bd4-eb1ba07f0e6f"
+    },
+    {
+      "key": "location-an-nhien",
+      "kind": "location",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "44b455bf-2aca-489b-966b-66270be7013a"
+    },
+    {
+      "key": "location-an-nhien",
+      "kind": "location",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "4f9edbe4-8c4d-484a-ad63-e3cd37cd8795"
+    },
+    {
+      "key": "location-ho-sen",
+      "kind": "location",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "e23895d0-4fd8-49c5-a4d1-f4bdf30c3b59"
+    },
+    {
+      "key": "location-ho-sen",
+      "kind": "location",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "f7c45781-a929-4445-9e66-d7e746b8f162"
+    },
+    {
+      "key": "location-vuon-may",
+      "kind": "location",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "fb8df688-1da6-41a0-9f47-0b57453bcab8"
+    },
+    {
+      "key": "location-vuon-may",
+      "kind": "location",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "4cbedf21-0365-4f4b-ab84-21cc053c745f"
+    },
+    {
+      "key": "page-about",
+      "kind": "page",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "1f97a07e-a8b1-492b-805e-cd978e2c68ee"
+    },
+    {
+      "key": "page-about",
+      "kind": "page",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "6cdb5104-000f-46aa-88f0-2c15c5411376"
+    },
+    {
+      "key": "page-aftercare",
+      "kind": "page",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "8fa99253-eb72-4b9e-a84d-fa78fcfa32be"
+    },
+    {
+      "key": "page-aftercare",
+      "kind": "page",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "3ef1c519-a161-42f9-a053-802cc9274dba"
+    },
+    {
+      "key": "page-contact",
+      "kind": "page",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "b532d1ee-266c-46ff-928f-6523ab739dba"
+    },
+    {
+      "key": "page-contact",
+      "kind": "page",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "4b85132a-a2e3-4e7d-9d52-de1d96c78c4b"
+    },
+    {
+      "key": "page-prices",
+      "kind": "page",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "49d99770-38f2-4dfe-9034-c5fb49966670"
+    },
+    {
+      "key": "page-prices",
+      "kind": "page",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "5dca1998-a7e0-4227-9b13-0eb544b4174f"
+    },
+    {
+      "key": "page-privacy",
+      "kind": "page",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "cb47d404-40b4-45eb-b565-043d7d0d1f8f"
+    },
+    {
+      "key": "page-privacy",
+      "kind": "page",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "81674fd5-6706-4ebc-ac1f-988409029222"
+    },
+    {
+      "key": "page-services",
+      "kind": "page",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "c59be3f4-8e0a-4d82-9bd5-f0bde7ea717e"
+    },
+    {
+      "key": "page-services",
+      "kind": "page",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "d3980b44-eb31-4a6f-aedc-aa4dc7f64588"
+    },
+    {
+      "key": "page-spaces",
+      "kind": "page",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "efd53a94-1a5c-4efa-ac52-800a2a81bc25"
+    },
+    {
+      "key": "page-spaces",
+      "kind": "page",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "0e927d01-1c0e-4494-8c10-1e6e86da8c1d"
+    },
+    {
+      "key": "page-visit",
+      "kind": "page",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "1d3909df-39ee-4703-a518-2cc77a68f6a5"
+    },
+    {
+      "key": "page-visit",
+      "kind": "page",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "a9201647-caee-41b3-83e1-770aaf008479"
+    },
+    {
+      "key": "price-children",
+      "kind": "price",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "14274ba3-f509-410a-b6c5-1492e8053d6f"
+    },
+    {
+      "key": "price-children",
+      "kind": "price",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "9d5b985a-ba64-42e7-91f9-26271c9ab37b"
+    },
+    {
+      "key": "price-implant",
+      "kind": "price",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "95ef65a5-c9e0-432c-aeb7-6871e93c6198"
+    },
+    {
+      "key": "price-implant",
+      "kind": "price",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "a5479432-340e-4153-ad47-6e3ae8692c41"
+    },
+    {
+      "key": "price-orthodontics",
+      "kind": "price",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "9b84fd97-cbb9-43f8-b237-a5e10aec91ed"
+    },
+    {
+      "key": "price-orthodontics",
+      "kind": "price",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "87110263-2738-43eb-b0ea-9d4b9d83dac3"
+    },
+    {
+      "key": "price-preventive",
+      "kind": "price",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "3167299f-0751-438c-9538-5f8776c93dca"
+    },
+    {
+      "key": "price-preventive",
+      "kind": "price",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "70708991-08bb-4c6f-a47d-38dbb21b1a7d"
+    },
+    {
+      "key": "price-restorative",
+      "kind": "price",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "7eae80ca-c7ad-4589-a78f-e4eae5ec07b1"
+    },
+    {
+      "key": "price-restorative",
+      "kind": "price",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "4a77fbcd-7ceb-4c45-a36b-49813cd2ceb4"
+    },
+    {
+      "key": "price-wisdom",
+      "kind": "price",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "a846717f-6004-403b-ab37-31f7242dcafb"
+    },
+    {
+      "key": "price-wisdom",
+      "kind": "price",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "02230f8f-9def-4926-8320-8961edf32a91"
+    },
+    {
+      "key": "promotion",
+      "kind": "promotion",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "398d27b9-b093-46b2-87f9-0188f7fc556f"
+    },
+    {
+      "key": "promotion",
+      "kind": "promotion",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "48a83722-fe7e-4806-9047-fb4e2994f095"
+    },
+    {
+      "key": "service-children",
+      "kind": "service",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "af6367ac-1d7f-4dd9-baa0-bda339a5b4c0"
+    },
+    {
+      "key": "service-children",
+      "kind": "service",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "e5cb5654-25b4-497d-9895-3dfaa7b55a3e"
+    },
+    {
+      "key": "service-implant",
+      "kind": "service",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "98d311cd-0b7e-47af-864e-764890cebfc1"
+    },
+    {
+      "key": "service-implant",
+      "kind": "service",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "aad7ad96-86f0-40cd-ac15-81c496b59da0"
+    },
+    {
+      "key": "service-orthodontics",
+      "kind": "service",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "acc2692e-197b-4ef0-adba-7eecb8c850a5"
+    },
+    {
+      "key": "service-orthodontics",
+      "kind": "service",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "bfdf97f0-8d5f-4abb-b067-70470d3f82ea"
+    },
+    {
+      "key": "service-preventive",
+      "kind": "service",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "c2da8801-671a-4c19-bb52-28965deca69a"
+    },
+    {
+      "key": "service-preventive",
+      "kind": "service",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "8adccd8d-51d9-43e1-a454-d8f626abcb8e"
+    },
+    {
+      "key": "service-restorative",
+      "kind": "service",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "497c5457-9b74-417b-b664-76ce2586acff"
+    },
+    {
+      "key": "service-restorative",
+      "kind": "service",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "f7d74e0a-57e8-4ca8-8df5-f7cb94c5e195"
+    },
+    {
+      "key": "service-wisdom",
+      "kind": "service",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "1a90bd14-6c45-4183-b0fc-5eb9c552117b"
+    },
+    {
+      "key": "service-wisdom",
+      "kind": "service",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "f8970142-342c-4489-8e04-5ed833d93632"
+    },
+    {
+      "key": "specialty-children",
+      "kind": "specialty",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "7044e8a6-62f0-4e4a-bb73-acba5b7ac540"
+    },
+    {
+      "key": "specialty-children",
+      "kind": "specialty",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "860fee9d-ff67-44de-9a8d-ce6eb0dd1b7f"
+    },
+    {
+      "key": "specialty-implant",
+      "kind": "specialty",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "3c111e52-5c88-4a73-aaa8-81f093a8150b"
+    },
+    {
+      "key": "specialty-implant",
+      "kind": "specialty",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "4436a5f5-c506-43ac-be48-b160cc32e9a2"
+    },
+    {
+      "key": "specialty-orthodontics",
+      "kind": "specialty",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "001de73b-d04e-4cd7-993f-eef6fba1a846"
+    },
+    {
+      "key": "specialty-orthodontics",
+      "kind": "specialty",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "38f2c657-2b9d-4eec-8803-45ca94c324d8"
+    },
+    {
+      "key": "specialty-preventive",
+      "kind": "specialty",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "df879bc0-6437-4560-b16f-c3f98d131fa2"
+    },
+    {
+      "key": "specialty-preventive",
+      "kind": "specialty",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "eda17a11-a8cb-44f7-a5a7-28117172e7d7"
+    },
+    {
+      "key": "specialty-restorative",
+      "kind": "specialty",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "9de319ee-0728-4eab-b808-04502d2c1347"
+    },
+    {
+      "key": "specialty-restorative",
+      "kind": "specialty",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "e8bcf683-6a70-4f8b-9fe4-d85106db1f00"
+    },
+    {
+      "key": "specialty-wisdom",
+      "kind": "specialty",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "a3eceddf-cbc6-42af-8986-46f5b88e5fb8"
+    },
+    {
+      "key": "specialty-wisdom",
+      "kind": "specialty",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "03e558f4-a7f1-48a7-905c-d26a24eb1eef"
+    },
+    {
+      "key": "testimonial-mai-phuong",
+      "kind": "testimonial",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "b54196ef-a5cd-41a3-89e2-f6fd3b552c26"
+    },
+    {
+      "key": "testimonial-mai-phuong",
+      "kind": "testimonial",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "4b768210-c6a9-489d-b285-3d9dcc560fb2"
+    },
+    {
+      "key": "testimonial-minh-triet",
+      "kind": "testimonial",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "ea168ca9-8408-40e0-b65c-3df6a0a5a54c"
+    },
+    {
+      "key": "testimonial-minh-triet",
+      "kind": "testimonial",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "09d2bcc7-1813-41b4-9891-15bf6f35753a"
+    },
+    {
+      "key": "testimonial-thu-huong",
+      "kind": "testimonial",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "b8e639bf-ddc5-4afc-9337-f3552d09e6fd"
+    },
+    {
+      "key": "testimonial-thu-huong",
+      "kind": "testimonial",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "fb4ed861-03c8-4c57-98ba-d3080e5bcb25"
+    },
+    {
+      "key": "testimonial-tuan-kiet",
+      "kind": "testimonial",
+      "locale": "en",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "d39145d5-1914-4a4d-a4cc-786c47eb69c6"
+    },
+    {
+      "key": "testimonial-tuan-kiet",
+      "kind": "testimonial",
+      "locale": "vi",
+      "status": 200,
+      "eligible": true,
+      "publicationId": "5b8aa019-21e7-463f-9952-d07a36e8b198"
+    }
+  ],
+  "recordedAt": "2026-10-17T02:46:51.231Z",
+  "limits": [
+    "API eligibility and identity checks do not replace rendered family checks.",
+    "No content commands, worker dispatch or old fixture changes occur."
+  ]
+}

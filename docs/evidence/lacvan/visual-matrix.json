@@ -1,0 +1,748 @@
+{
+  "status": "SCOPED_RENDERED_CHECKS_COMPLETE",
+  "checks": [
+    {
+      "label": "prices-final",
+      "url": "http://localhost:5892/lac-van/chi-phi-dieu-tri",
+      "activeNav": [
+        "Bảng giá"
+      ],
+      "forms": 0,
+      "h1": [
+        "Chi phí điều trị"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 6,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "prices-final-1280.png"
+    },
+    {
+      "label": "prices-final",
+      "url": "http://localhost:5892/lac-van/chi-phi-dieu-tri",
+      "activeNav": [
+        "Bảng giá"
+      ],
+      "forms": 0,
+      "h1": [
+        "Chi phí điều trị"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 6,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "prices-final-390.png"
+    },
+    {
+      "label": "dentist-directory",
+      "url": "http://localhost:5892/lac-van/bac-si",
+      "activeNav": [
+        "Đội ngũ bác sĩ"
+      ],
+      "forms": 1,
+      "h1": [
+        "Đội ngũ bác sĩ"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 0,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "dentist-directory-1280.png"
+    },
+    {
+      "label": "dentist-directory",
+      "url": "http://localhost:5892/lac-van/bac-si",
+      "activeNav": [
+        "Đội ngũ bác sĩ"
+      ],
+      "forms": 1,
+      "h1": [
+        "Đội ngũ bác sĩ"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 0,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "dentist-directory-390.png"
+    },
+    {
+      "label": "service-implant",
+      "url": "http://localhost:5892/lac-van/dich-vu/implant",
+      "activeNav": [
+        "Trồng răng Implant"
+      ],
+      "forms": 2,
+      "h1": [
+        "Trồng răng Implant"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 1,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "service-implant-1280.png"
+    },
+    {
+      "label": "service-implant",
+      "url": "http://localhost:5892/lac-van/dich-vu/implant",
+      "activeNav": [
+        "Trồng răng Implant"
+      ],
+      "forms": 2,
+      "h1": [
+        "Trồng răng Implant"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 1,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "service-implant-390.png"
+    },
+    {
+      "label": "doctor-profile",
+      "url": "http://localhost:5892/lac-van/bac-si/minh-an",
+      "activeNav": [],
+      "forms": 0,
+      "h1": [
+        "Bác sĩ Lê Minh An"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 0,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "doctor-profile-1280.png"
+    },
+    {
+      "label": "doctor-profile-en",
+      "url": "http://localhost:5892/lac-van/en/bac-si/minh-an",
+      "activeNav": [],
+      "forms": 0,
+      "h1": [
+        "Dr Le Minh An"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 0,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "doctor-profile-en-390.png"
+    },
+    {
+      "label": "article-detail",
+      "url": "http://localhost:5892/lac-van/bai-viet/lan-kham-dau",
+      "activeNav": [],
+      "forms": 0,
+      "h1": [
+        "Chuẩn bị cho lần thăm khám đầu tiên"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 0,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "article-detail-1280.png"
+    },
+    {
+      "label": "article-detail",
+      "url": "http://localhost:5892/lac-van/bai-viet/lan-kham-dau",
+      "activeNav": [],
+      "forms": 0,
+      "h1": [
+        "Chuẩn bị cho lần thăm khám đầu tiên"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 0,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "article-detail-390.png"
+    },
+    {
+      "label": "gallery-detail",
+      "url": "http://localhost:5892/lac-van/truoc-sau/khong-gian-tu-van-va-cham-soc",
+      "activeNav": [],
+      "forms": 0,
+      "h1": [
+        "Từ trao đổi đến chăm sóc"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 0,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "gallery-detail-1280.png"
+    },
+    {
+      "label": "gallery-detail",
+      "url": "http://localhost:5892/lac-van/truoc-sau/khong-gian-tu-van-va-cham-soc",
+      "activeNav": [],
+      "forms": 0,
+      "h1": [
+        "Từ trao đổi đến chăm sóc"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 0,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "gallery-detail-390.png"
+    },
+    {
+      "label": "faq-expanded",
+      "url": "http://localhost:5892/lac-van/hoi-dap",
+      "activeNav": [
+        "Hỏi đáp"
+      ],
+      "forms": 1,
+      "h1": [
+        "Hỏi đáp"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 0,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "faq-expanded-390.png"
+    },
+    {
+      "label": "doctor-page-six-final",
+      "url": "http://localhost:5892/lac-van/hoi-dap",
+      "activeNav": [
+        "Hỏi đáp"
+      ],
+      "forms": 1,
+      "h1": [
+        "Hỏi đáp"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 0,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "doctor-page-six-final-390.png"
+    },
+    {
+      "label": "doctor-paging-final",
+      "url": "http://localhost:5892/lac-van/bac-si?pageSize=6",
+      "activeNav": [
+        "Đội ngũ bác sĩ"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 1,
+      "h1": [
+        "Đội ngũ bác sĩ"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 0,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "doctor-paging-final-390.png"
+    },
+    {
+      "label": "home-final",
+      "url": "http://localhost:5892/lac-van",
+      "activeNav": [
+        "Trang chủ"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 1,
+      "h1": [
+        "An tâm cho từng nụ cười"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 0,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "home-final-1280.png"
+    },
+    {
+      "label": "home-final",
+      "url": "http://localhost:5892/lac-van",
+      "activeNav": [
+        "Trang chủ"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 1,
+      "h1": [
+        "An tâm cho từng nụ cười"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 0,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "home-final-390.png"
+    },
+    {
+      "label": "about-final",
+      "url": "http://localhost:5892/lac-van/gioi-thieu",
+      "activeNav": [
+        "Về Lạc Vân"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 0,
+      "h1": [
+        "Về Nha khoa Lạc Vân"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 0,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "about-final-1280.png"
+    },
+    {
+      "label": "about-en-final",
+      "url": "http://localhost:5892/lac-van/en/gioi-thieu",
+      "activeNav": [
+        "About us"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 0,
+      "h1": [
+        "About Lac Van Dental"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 0,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "about-en-final-390.png"
+    },
+    {
+      "label": "prices-updated-final",
+      "url": "http://localhost:5892/lac-van/chi-phi-dieu-tri",
+      "activeNav": [
+        "Bảng giá"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 0,
+      "h1": [
+        "Chi phí điều trị"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 6,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "prices-updated-final-1280.png"
+    },
+    {
+      "label": "prices-table-updated",
+      "url": "http://localhost:5892/lac-van/chi-phi-dieu-tri",
+      "activeNav": [
+        "Bảng giá"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 0,
+      "h1": [
+        "Chi phí điều trị"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 6,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "prices-table-updated-390.png"
+    },
+    {
+      "label": "story-final",
+      "url": "http://localhost:5892/lac-van/ca-dieu-tri/minh-triet",
+      "activeNav": [],
+      "brokenVisibleImages": [],
+      "forms": 0,
+      "h1": [
+        "Trao đổi để có kế hoạch rõ ràng"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 0,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "story-final-1280.png"
+    },
+    {
+      "label": "story-en-final",
+      "url": "http://localhost:5892/lac-van/en/ca-dieu-tri/minh-triet",
+      "activeNav": [],
+      "brokenVisibleImages": [],
+      "forms": 0,
+      "h1": [
+        "A conversation for a clearer plan"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 0,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "story-en-final-390.png"
+    },
+    {
+      "label": "testimonial-final",
+      "url": "http://localhost:5892/lac-van/danh-gia/loi-chia-se-mai-phuong",
+      "activeNav": [],
+      "brokenVisibleImages": [],
+      "forms": 0,
+      "h1": [
+        "Chia sẻ cùng Mai Phương"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 0,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "testimonial-final-1280.png"
+    },
+    {
+      "label": "testimonial-en-final",
+      "url": "http://localhost:5892/lac-van/en/danh-gia/loi-chia-se-mai-phuong",
+      "activeNav": [],
+      "brokenVisibleImages": [],
+      "forms": 0,
+      "h1": [
+        "A conversation with Mai Phuong"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 0,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "testimonial-en-final-390.png"
+    },
+    {
+      "label": "contact-final",
+      "url": "http://localhost:5892/lac-van/lien-he",
+      "activeNav": [
+        "Liên hệ"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 1,
+      "h1": [
+        "Kết nối với Lạc Vân"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 0,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "contact-final-1280.png"
+    },
+    {
+      "label": "contact-en-final",
+      "url": "http://localhost:5892/lac-van/en/lien-he",
+      "activeNav": [
+        "Contact"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 1,
+      "h1": [
+        "Connect with Lac Van"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 0,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "contact-en-final-390.png"
+    },
+    {
+      "label": "location-final",
+      "url": "http://localhost:5892/lac-van/co-so/an-nhien",
+      "activeNav": [],
+      "brokenVisibleImages": [],
+      "forms": 0,
+      "h1": [
+        "Lạc Vân An Nhiên"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 6,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "location-final-1280.png"
+    },
+    {
+      "label": "location-en-final",
+      "url": "http://localhost:5892/lac-van/en/co-so/an-nhien",
+      "activeNav": [],
+      "brokenVisibleImages": [],
+      "forms": 0,
+      "h1": [
+        "Lac Van An Nhien"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 6,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "location-en-final-390.png"
+    },
+    {
+      "label": "promotion-final",
+      "url": "http://localhost:5892/lac-van/khuyen-mai/hen-ban-mot-nu-cuoi",
+      "activeNav": [],
+      "brokenVisibleImages": [],
+      "forms": 0,
+      "h1": [
+        "Hẹn bạn một nụ cười"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 1,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "promotion-final-1280.png"
+    },
+    {
+      "label": "promotion-en-final",
+      "url": "http://localhost:5892/lac-van/en/khuyen-mai/hen-ban-mot-nu-cuoi",
+      "activeNav": [],
+      "brokenVisibleImages": [],
+      "forms": 0,
+      "h1": [
+        "Make time for your smile"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 1,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "promotion-en-final-390.png"
+    },
+    {
+      "label": "landing-final",
+      "url": "http://localhost:5892/lac-van/landing/bat-dau-cung-lac-van",
+      "activeNav": [
+        "Hẹn một cuộc trò chuyện"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 1,
+      "h1": [
+        "Bắt đầu cùng Lạc Vân"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 0,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "landing-final-1280.png"
+    },
+    {
+      "label": "landing-en-final",
+      "url": "http://localhost:5892/lac-van/en/landing/bat-dau-cung-lac-van",
+      "activeNav": [
+        "Make time for a conversation"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 1,
+      "h1": [
+        "Begin with Lac Van"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 0,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "landing-en-final-390.png"
+    },
+    {
+      "label": "privacy-final",
+      "url": "http://localhost:5892/lac-van/chinh-sach-bao-mat",
+      "activeNav": [
+        "Thông tin riêng tư"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 0,
+      "h1": [
+        "Thông tin riêng tư"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 0,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "privacy-final-390.png"
+    },
+    {
+      "label": "articles-six-final",
+      "url": "http://localhost:5892/lac-van/bai-viet?q=&pageSize=6",
+      "activeNav": [
+        "Kiến thức"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 1,
+      "h1": [
+        "Kiến thức & tin tức"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 0,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "articles-six-final-1280.png"
+    },
+    {
+      "label": "collection-empty-final",
+      "url": "http://localhost:5892/lac-van/bai-viet?q=khongtimthaylacvan&pageSize=6",
+      "activeNav": [
+        "Kiến thức"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 1,
+      "h1": [
+        "Kiến thức & tin tức"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 0,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "collection-empty-final-390.png"
+    },
+    {
+      "label": "category-final",
+      "url": "http://localhost:5892/lac-van/chuyen-muc/everyday",
+      "activeNav": [
+        "Chăm sóc mỗi ngày"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 0,
+      "h1": [
+        "Chăm sóc mỗi ngày"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 0,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "category-final-1280.png"
+    },
+    {
+      "label": "home-tablet-final",
+      "url": "http://localhost:5892/lac-van",
+      "activeNav": [
+        "Trang chủ"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 1,
+      "h1": [
+        "An tâm cho từng nụ cười"
+      ],
+      "height": 1024,
+      "scrollWidth": 768,
+      "tables": 0,
+      "width": 768,
+      "noHorizontalOverflow": true,
+      "screenshot": "home-tablet-final-768.png"
+    },
+    {
+      "label": "home-small-final",
+      "url": "http://localhost:5892/lac-van",
+      "activeNav": [
+        "Trang chủ"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 1,
+      "h1": [
+        "An tâm cho từng nụ cười"
+      ],
+      "height": 740,
+      "scrollWidth": 320,
+      "tables": 0,
+      "width": 320,
+      "noHorizontalOverflow": true,
+      "screenshot": "home-small-final-320.png"
+    },
+    {
+      "label": "home-tablet-repaired",
+      "url": "http://localhost:5892/lac-van",
+      "activeNav": [
+        "Trang chủ"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 1,
+      "h1": [
+        "An tâm cho từng nụ cười"
+      ],
+      "height": 1024,
+      "scrollWidth": 768,
+      "tables": 0,
+      "width": 768,
+      "noHorizontalOverflow": true,
+      "screenshot": "home-tablet-repaired-768.png"
+    },
+    {
+      "label": "home-en-handoff",
+      "url": "http://localhost:5892/lac-van/en",
+      "activeNav": [
+        "Home"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 1,
+      "h1": [
+        "Care for every smile"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 0,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "home-en-handoff-390.png"
+    },
+    {
+      "label": "service-en-handoff",
+      "url": "http://localhost:5892/lac-van/en/dich-vu/implant",
+      "activeNav": [
+        "Dental implants"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 2,
+      "h1": [
+        "Dental implants"
+      ],
+      "height": 844,
+      "scrollWidth": 390,
+      "tables": 1,
+      "width": 390,
+      "noHorizontalOverflow": true,
+      "screenshot": "service-en-handoff-390.png"
+    },
+    {
+      "label": "home-handoff",
+      "url": "http://localhost:5892/lac-van",
+      "activeNav": [
+        "Trang chủ"
+      ],
+      "brokenVisibleImages": [],
+      "forms": 1,
+      "h1": [
+        "An tâm cho từng nụ cười"
+      ],
+      "height": 720,
+      "scrollWidth": 1280,
+      "tables": 0,
+      "width": 1280,
+      "noHorizontalOverflow": true,
+      "screenshot": "home-handoff-1280.png"
+    }
+  ],
+  "excludedFinalClaims": [
+    {
+      "label": "doctor-page-six-final",
+      "reason": "Capture helper retained the old FAQ tab; not doctor evidence. Replaced by explicit-tab doctor-paging-final capture and actual6+2 traversal."
+    },
+    {
+      "label": "home-tablet-final",
+      "reason": "Historical before R13 form repair; final768proof is home-tablet-repaired."
+    }
+  ],
+  "limits": "Representative family layouts and viewports, not an exhaustive pixel-by-pixel comparison of every URL."
+}

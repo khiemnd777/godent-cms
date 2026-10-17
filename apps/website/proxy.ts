@@ -3,6 +3,7 @@ import { InvalidBuilderQuery, parseBuilderQuery, parseBuilderRoute } from "./lib
 import { readPublicEntry } from "./lib/public-entry";
 import { readPublicBuilderList, readPublicBuilderPage } from "./lib/public-builder";
 import { redirectQuery } from "./lib/public-url-context";
+import { parsePublicSearchQuery, publicSearchQueryString } from "./lib/public-search";
 
 function protect(response: NextResponse) {
   response.headers.set("Cache-Control", "no-store");
@@ -38,12 +39,16 @@ export async function proxy(request: NextRequest) {
     if (route) {
       const listing = !route.slug;
       const query = listing ? parseBuilderQuery(Object.fromEntries([...request.nextUrl.searchParams.keys()].map(key => [key, request.nextUrl.searchParams.getAll(key).length > 1 ? request.nextUrl.searchParams.getAll(key) : request.nextUrl.searchParams.get(key)!]))) : {};
-      let canonical: string | undefined, fallback = false;
+      let canonical: string | undefined, fallback = false, signatureSearch = false;
       if (route.slug) {
         const resolution = await readPublicBuilderPage(route.tenant, route.locale, route.kind, route.slug, context);
         if (!resolution) return protect(new NextResponse("Not found", { status: 404 }));
         canonical = resolution.canonicalUrl; fallback = resolution.resolution === "fallback";
-        if (resolution.resolution === "page") { headers.set("x-gcms-expected-publication", resolution.page.publicationId); headers.set("x-gcms-expected-config", resolution.page.configPublicationId ?? "none"); }
+        if (resolution.resolution === "page") { headers.set("x-gcms-expected-publication", resolution.page.publicationId); headers.set("x-gcms-expected-config", resolution.page.configPublicationId ?? "none"); signatureSearch = route.kind === "home" && resolution.page.config?.content.theme === "signature" && request.nextUrl.searchParams.has("q"); }
+        else if (route.kind === "home" && request.nextUrl.searchParams.has("q")) {
+          const vi = await readPublicBuilderPage(route.tenant, "vi", "home", "home", context);
+          signatureSearch = vi?.resolution === "page" && vi.canonicalUrl === canonical && vi.page.config?.content.theme === "signature";
+        }
       } else {
         const page = await readPublicBuilderList(route.tenant, route.locale, route.kind, query, context);
         if (!page && route.locale === "en") {
@@ -53,7 +58,12 @@ export async function proxy(request: NextRequest) {
         if (!canonical) return protect(new NextResponse("Not found", { status: 404 }));
       }
       const sameLanguageAlias = context.primary.mode === "custom" && (context.entry.mode === "platform" || context.entry.bindingId !== context.primary.bindingId);
-      if (fallback || sameLanguageAlias) return protect(NextResponse.redirect(redirectQuery(canonical!, request.nextUrl.searchParams, fallback, listing), fallback ? 302 : 301));
+      if (fallback || sameLanguageAlias) {
+        const search = signatureSearch ? parsePublicSearchQuery(Object.fromEntries([...request.nextUrl.searchParams.keys()].map(key => [key, request.nextUrl.searchParams.getAll(key).length > 1 ? request.nextUrl.searchParams.getAll(key) : request.nextUrl.searchParams.get(key)!]))) : null;
+        if (search && fallback) delete search.cursor;
+        const destination = search ? canonical! + publicSearchQueryString(search) : redirectQuery(canonical!, request.nextUrl.searchParams, fallback, listing);
+        return protect(NextResponse.redirect(destination, fallback ? 302 : 301));
+      }
     }
     if (context.sitePagePath === "/robots.txt" && pathname !== "/robots.txt") {
       return internalRewrite("/robots.txt", request.nextUrl.search, headers);

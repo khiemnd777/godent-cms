@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "check": "doctor-six-then-two",
+      "status": "PASS",
+      "firstCount": 6,
+      "secondCount": 2,
+      "terminalNextAbsent": true
+    },
+    {
+      "check": "carousel-next-stable-h1",
+      "status": "PASS",
+      "h1": [
+        "An tâm cho từng nụ cười"
+      ],
+      "visibleSlide": "3/3",
+      "paused": true
+    },
+    {
+      "check": "mobile-search-escape-focus",
+      "closed": true,
+      "focus": "Tìm trên website"
+    },
+    {
+      "check": "articles-six-six-one",
+      "status": "PASS",
+      "counts": [
+        6,
+        6,
+        1
+      ],
+      "unique": 13
+    },
+    {
+      "check": "tablet-compact-form-repaired",
+      "status": "PASS",
+      "grid": "317px 317px",
+      "primaryWidths": [
+        317,
+        317
+      ],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "check": "service-two-forms-before-breadcrumb",
+      "status": "PASS",
+      "formBeforeBreadcrumb": true,
+      "formCount": 2,
+      "idsUnique": true
+    }
+  ],
+  "additionalObservedChecks": [
+    {
+      "check": "doctor-image-dialog-Escape",
+      "status": "PASS",
+      "focus": "Enlarge image: Portrait of Dr Minh An"
+    },
+    {
+      "check": "article-contents-anchor",
+      "status": "PASS",
+      "hash": "#body-article-2"
+    },
+    {
+      "check": "gallery-keyboard-slider-and-dialog",
+      "status": "PASS",
+      "before": 50,
+      "after": 51
+    },
+    {
+      "check": "faq-expansion",
+      "status": "PASS"
+    },
+    {
+      "check": "collection-empty-message",
+      "status": "PASS",
+      "copy": "Chưa có nội dung phù hợp ở trang này"
+    }
+  ]
+}

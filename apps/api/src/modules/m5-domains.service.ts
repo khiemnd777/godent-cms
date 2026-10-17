@@ -1,3 +1,4 @@
+import {isPublicIntakeRoute} from './intake-security';
 import {BadRequestException,ConflictException,ForbiddenException,NotFoundException,UnauthorizedException} from '@nestjs/common';
 import {sql} from 'drizzle-orm';
 import type {S02Auth} from '../auth';
@@ -42,6 +43,7 @@ export class M5DomainsService {
   await this.db.verifyRoles();const rows=await this.db.tenantDb.execute(sql`SELECT gcms_m5.resolve_entry(${value.host},${value.path}) AS result`);if(!rows[0]?.result)throw new NotFoundException();return rows[0].result as M5EntryContext;
  }
  async acceptsIntakeOrigin(origin:string,path:string):Promise<boolean>{
+  if(!isPublicIntakeRoute(path))return false;
   const match=/^\/api\/public\/intake\/(?:builder\/|sites\/)([a-z0-9]+(?:-[a-z0-9]+)*)\//.exec(path);if(!match)return false;
   await this.db.verifyRoles();const rows=await this.db.tenantDb.execute(sql`SELECT gcms_m5.intake_origin_allowed(${origin},${match[1]}) AS allowed`);return rows[0]?.allowed===true;
  }

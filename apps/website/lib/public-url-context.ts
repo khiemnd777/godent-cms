@@ -19,7 +19,7 @@ export function redirectQuery(canonical: string, params: URLSearchParams, fallba
     const query = parseBuilderQuery(values);
     if (fallback) delete query.cursor;
     url.search = "";
-    for (const [key, value] of Object.entries(query)) if (value) url.searchParams.set(key, value);
+    for (const [key, value] of Object.entries(query)) if (value) url.searchParams.set(key, String(value));
   }
   for (const [key, value] of Object.entries(safeTracking(params))) url.searchParams.set(`utm_${key}`, value);
   return url.toString();

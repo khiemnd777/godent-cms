@@ -13,6 +13,10 @@ import type { PublicSearchParams } from "../lib/public-content";
 import { BuilderPage } from "./builder-page";
 import { BuilderListing } from "./builder-listing";
 import { BuilderCards } from "./builder-content";
+import { SignatureSearch } from "./signature-search";
+import { SignatureCollections } from "./signature-collections";
+import { signatureKindLabel } from "../lib/signature-presentation";
+import { signatureRelatedQueries } from "../lib/signature-related";
 
 // Request-limited memoization makes metadata and body use the same parsed publication.
 // Proxy is a separate preflight; expected identifiers fail closed if publication/config changes.
@@ -39,10 +43,20 @@ export async function BuilderDetail({ tenant, locale, kind, slug, searchParams =
   return <ResolvedBuilderDetail page={page} tenant={tenant} searchParams={searchParams}/>;
 }
 export function ResolvedBuilderDetail({ page, tenant, searchParams = {} }: { page: PublicM4Page; tenant: string; searchParams?: PublicSearchParams }) {
+  if (page.kind === "home" && page.config?.content.theme === "signature" && searchParams.q !== undefined) return <SignatureSearch page={page} tenant={tenant} params={searchParams}/>;
   const tracking = safeTracking(new URLSearchParams(Object.entries(searchParams).flatMap(([key, value]) => typeof value === "string" ? [[key, value]] : [])));
   return <><BuilderPage page={page} tenant={tenant} tracking={tracking} related={<BuilderRelated page={page} tenant={tenant}/>}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(pageStructuredData(page, tenant)) }}/></>;
 }
 async function BuilderRelated({ page, tenant }: { page: PublicM4Page; tenant: string }) {
+  if (page.config?.content.theme === "signature") {
+    const queries = signatureRelatedQueries(page), locale = page.actualLocale, base = publicUrlBase(page);
+    const lists = await Promise.all(queries.map(({ kind, query }) => loadBuilderList(tenant, locale, kind, builderListSearch(query))));
+    return <>{lists.map((list, index) => {
+      if (!list || (!list.items.length && !list.nextCursor)) return null;
+      const { kind, query } = queries[index], href = publicHref(tenant, locale, kind, undefined, base);
+      return <section className={`builder-section section-related-${kind}`} key={kind}><h2>{signatureKindLabel(locale, kind)}</h2>{list.items.length > 0 && <SignatureCollections references={list.items} locale={locale} urlBase={base}/>}<nav className="public-pagination" aria-label={locale === "en" ? "Related pages" : "Danh sách liên quan"}><a href={href + builderListSearch(query)}>{locale === "en" ? "View the full list" : "Xem danh sách đầy đủ"}</a>{list.nextCursor && <a href={href + builderListSearch({ ...query, cursor: list.nextCursor })}>{locale === "en" ? "Next page" : "Trang tiếp"}</a>}</nav></section>;
+    })}</>;
+  }
   const kinds: M4Kind[] = page.kind === "service" ? ["price", "doctor", "case", "article"] : page.kind === "specialty" ? ["service", "doctor"] : page.kind === "service_group" ? ["service"] : page.kind === "category" ? ["article"] : page.kind === "location" ? ["service", "doctor", "price"] : [];
   const locale = page.actualLocale, query = { referenceKind: page.kind as ReferenceKind, referenceId: page.id }, search = builderListSearch(query);
   const lists = await Promise.all(kinds.map(kind => loadBuilderList(tenant, locale, kind, search)));
@@ -53,7 +67,7 @@ export const listingAlternates = cache(async (tenant: string, locale: M4Locale, 
   return [{ locale, url: canonical }, ...(other ? [{ locale: otherLocale as M4Locale, url: other.canonicalUrl }] : [])];
 });
 export async function listingPageMetadata(page: M4PublicList, tenant: string, locale: M4Locale, kind: M4Kind): Promise<Metadata> {
-  const alternates = await listingAlternates(tenant, locale, kind, page.canonicalUrl), title = `${BUILDER_LABELS[locale][kind]}${page.config ? ` | ${page.config.content.name}` : ""}`;
+  const alternates = await listingAlternates(tenant, locale, kind, page.canonicalUrl), title = `${page.config?.content.theme === "signature" ? signatureKindLabel(locale, kind) : BUILDER_LABELS[locale][kind]}${page.config ? ` | ${page.config.content.name}` : ""}`;
   return { title, alternates: { canonical: page.canonicalUrl, languages: Object.fromEntries(alternates.map(item => [item.locale, item.url])) }, robots: { index: false, follow: false }, openGraph: { title, url: page.canonicalUrl, type: "website" } };
 }
 export async function builderListingMetadata(tenant: string, locale: M4Locale, kind: M4Kind, params: PublicSearchParams): Promise<Metadata> {

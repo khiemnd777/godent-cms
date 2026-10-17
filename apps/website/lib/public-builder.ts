@@ -4,7 +4,8 @@ import { parseSlug } from "../../api/src/contracts/content";
 import { M4_LIMITS, M4_ROUTES, type M4Kind, type M4Locale, type M4Resolution } from "../../api/src/contracts/m4";
 import { parseM4Kind, parseM4Locale } from "../../api/src/contracts/m4-validation";
 import { exactObject } from "../../api/src/contracts/content";
-import { parsePublicBuilderConfig, parsePublicBuilderList, parsePublicBuilderResolution, parsePublicBuilderSeo } from "./public-builder-validation";
+import { parsePublicBuilderConfig, parsePublicBuilderList, parsePublicBuilderResolution, parsePublicBuilderSearch, parsePublicBuilderSeo } from "./public-builder-validation";
+import { publicSearchQueryString, type PublicSearchQuery } from "./public-search";
 export { parsePublicBuilderResolution } from "./public-builder-validation";
 
 async function anonymousRead(path: string, timeout = 5_000, context?: M5EntryContext): Promise<unknown | null> {
@@ -20,8 +21,8 @@ export async function readPublicBuilderPage(tenant: string, locale: M4Locale, ki
   const value = await anonymousRead(M4_ROUTES.publicPage(tenant, locale, kind, slug), 5_000, context); if (value === null) return null;
   try { return parsePublicBuilderResolution(value, tenant, locale, kind, slug, context?.primary); } catch { throw new Error("Invalid public publication"); }
 }
-export type BuilderListQuery = Pick<import("../../api/src/contracts/m3").ContentListQuery, "q" | "cursor" | "referenceKind" | "referenceId" | "referencePublicationId">;
-export function builderListSearch(query: BuilderListQuery): string { const params = new URLSearchParams(); if (query.q) params.set("q", query.q); if (query.cursor) params.set("cursor", query.cursor); if (query.referenceKind && query.referenceId) { params.set("referenceKind", query.referenceKind); params.set("referenceId", query.referenceId); if (query.referencePublicationId) params.set("referencePublicationId", query.referencePublicationId); } return params.size ? `?${params}` : ""; }
+export type BuilderListQuery = Pick<import("../../api/src/contracts/m3").ContentListQuery, "q" | "cursor" | "pageSize" | "referenceKind" | "referenceId" | "referencePublicationId">;
+export function builderListSearch(query: BuilderListQuery): string { const params = new URLSearchParams(); if (query.q) params.set("q", query.q); if (query.cursor) params.set("cursor", query.cursor); if (query.pageSize !== undefined) params.set("pageSize", String(query.pageSize)); if (query.referenceKind && query.referenceId) { params.set("referenceKind", query.referenceKind); params.set("referenceId", query.referenceId); if (query.referencePublicationId) params.set("referencePublicationId", query.referencePublicationId); } return params.size ? `?${params}` : ""; }
 export async function readPublicBuilderList(tenant: string, locale: M4Locale, kind: M4Kind, query: BuilderListQuery = {}, context?: M5EntryContext) {
   try { parseSlug(tenant); parseM4Locale(locale); parseM4Kind(kind); } catch { return null; }
   const value = await anonymousRead(M4_ROUTES.publicList(tenant, locale, kind) + builderListSearch(query), 5_000, context); if (value === null) return null;
@@ -31,6 +32,11 @@ export async function readPublicBuilderConfig(tenant: string, locale: M4Locale, 
   try { parseSlug(tenant); parseM4Locale(locale); } catch { return null; }
   const value = await anonymousRead(M4_ROUTES.publicConfig(tenant, locale), 5_000, context); if (value === null) return null;
   try { return parsePublicBuilderConfig(value, tenant, locale, context?.primary); } catch { throw new Error("Invalid public presentation"); }
+}
+export async function readPublicBuilderSearch(tenant: string, locale: M4Locale, query: PublicSearchQuery, context?: M5EntryContext) {
+  parseSlug(tenant); parseM4Locale(locale); if ([...query.q].length < 2 || [...query.q].length > 160) throw new TypeError("Invalid search query");
+  const value = await anonymousRead(M4_ROUTES.search(tenant, locale) + publicSearchQueryString(query), 5_000, context); if (value === null) return null;
+  return parsePublicBuilderSearch(value, tenant, locale, query, context?.primary);
 }
 /** Paginated source reads have one overall deadline. An incomplete sitemap is an error. */
 export async function readPublicBuilderSeo(tenant: string, context?: M5EntryContext) {

@@ -8,7 +8,8 @@ import { ContentBody, ListingFilters, ListingPagination, PublicCards, RelatedCon
 import { PublicShell } from "./public-shell";
 import { listingAlternates, listingPageMetadata, loadBuilderList, loadBuilderPage, ResolvedBuilderDetail, usesBuilderPresentation } from "./builder-route";
 import { BuilderListing } from "./builder-listing";
-import { builderListSearch } from "../lib/public-builder";
+import { builderListSearch, type BuilderListQuery } from "../lib/public-builder";
+import { InvalidBuilderQuery, parseBuilderQuery } from "../lib/builder-routing";
 import { publicPageMetadata } from "../lib/builder-seo";
 
 export type ContentListProps = { params: Promise<{ tenant: string; section: string }>; searchParams: Promise<PublicSearchParams> };
@@ -22,26 +23,39 @@ function metadata(title: string, description?: string, canonical?: string): Meta
   return { title, ...(description ? { description } : {}), ...(canonical ? { alternates: { canonical } } : {}), robots: noindex };
 }
 function resolveKind(section: string) { const kind = kindFromSection(section); if (!kind) notFound(); return kind; }
+async function resolveListing(tenant: string, kind: ReferenceKind, params: PublicSearchParams) {
+  const legacyQuery = parsePublicQuery(params);
+  let builderQuery: BuilderListQuery | null = null;
+  try { builderQuery = parseBuilderQuery(params); }
+  catch (error) { if (!(error instanceof InvalidBuilderQuery)) throw error; }
+  // Invalid M4 parameters must not replay a cursor outside its page-size/filter context.
+  const adopted = await loadBuilderList(tenant, "vi", kind, builderListSearch(builderQuery ?? {}));
+  if (adopted && (adopted.config || publicUrlBase(adopted))) {
+    if (!builderQuery) throw new InvalidPublicQuery();
+    return { mode: "builder" as const, page: adopted, query: builderQuery };
+  }
+  return { mode: "legacy" as const, query: legacyQuery };
+}
 
 export async function listingMetadata({ params, searchParams }: ContentListProps): Promise<Metadata> {
   const { tenant, section } = await params, kind = resolveKind(section);
   try {
-    const query = parsePublicQuery(await searchParams), adopted = await loadBuilderList(tenant, "vi", kind, builderListSearch(query));
-    if (adopted && (adopted.config || publicUrlBase(adopted))) return listingPageMetadata(adopted, tenant, "vi", kind);
-    const page = await loadList(tenant, kind, publicQueryString(query));
+    const resolved = await resolveListing(tenant, kind, await searchParams);
+    if (resolved.mode === "builder") return listingPageMetadata(resolved.page, tenant, "vi", kind);
+    const page = await loadList(tenant, kind, publicQueryString(resolved.query));
     return page ? metadata(`${CONTENT_LABELS[kind].plural} | ${page.site.name}`, undefined, page.canonicalUrl) : metadata("Không tìm thấy trang");
   } catch (error) { if (error instanceof InvalidPublicQuery) return metadata("Bộ lọc không hợp lệ"); throw error; }
 }
 export async function ContentListing({ params, searchParams }: ContentListProps) {
   const { tenant, section } = await params, kind = resolveKind(section);
-  let query;
-  try { query = parsePublicQuery(await searchParams); }
+  let resolved: Awaited<ReturnType<typeof resolveListing>>;
+  try { resolved = await resolveListing(tenant, kind, await searchParams); }
   catch (error) {
     if (!(error instanceof InvalidPublicQuery)) throw error;
     return <main className="content-page"><h1>Bộ lọc không hợp lệ</h1><p>Vui lòng mở lại danh sách và chọn bộ lọc.</p><a href={contentPublicPath(tenant, kind)}>Mở danh sách</a></main>;
   }
-  const adopted = await loadBuilderList(tenant, "vi", kind, builderListSearch(query));
-  if (adopted && (adopted.config || publicUrlBase(adopted))) return <BuilderListing page={adopted} tenant={tenant} kind={kind} locale="vi" query={query} alternates={await listingAlternates(tenant, "vi", kind, adopted.canonicalUrl)}/>;
+  if (resolved.mode === "builder") return <BuilderListing page={resolved.page} tenant={tenant} kind={kind} locale="vi" query={resolved.query} alternates={await listingAlternates(tenant, "vi", kind, resolved.page.canonicalUrl)}/>;
+  const query = resolved.query;
   const page = await loadList(tenant, kind, publicQueryString(query)); if (!page) notFound();
   return <PublicShell site={page.site} navigation={publicNavigation(tenant, kind)}>
     <p className="eyebrow">{page.site.name}</p><h1>{CONTENT_LABELS[kind].plural}</h1>

@@ -1,0 +1,462 @@
+{
+  "task": "GCMS-LACVAN-001",
+  "owner": "GCMS-LACVAN-INTAKE-PROOF-v1",
+  "status": "PASS",
+  "createdAt": "2026-10-17T02:27:28.487Z",
+  "counts": [
+    {
+      "label": "browser-baseline",
+      "count": 1,
+      "delta": 0
+    },
+    {
+      "label": "accepted-home",
+      "count": 2,
+      "delta": 1
+    },
+    {
+      "label": "after-denials-home",
+      "count": 2,
+      "delta": 1
+    },
+    {
+      "label": "accepted-page",
+      "count": 3,
+      "delta": 2
+    },
+    {
+      "label": "after-denials-page",
+      "count": 3,
+      "delta": 2
+    },
+    {
+      "label": "accepted-service",
+      "count": 4,
+      "delta": 3
+    },
+    {
+      "label": "after-denials-service",
+      "count": 4,
+      "delta": 3
+    },
+    {
+      "label": "accepted-landing",
+      "count": 5,
+      "delta": 4
+    },
+    {
+      "label": "after-denials-landing",
+      "count": 5,
+      "delta": 4
+    },
+    {
+      "label": "before-final-replay",
+      "count": 5,
+      "delta": 4
+    },
+    {
+      "label": "after-final-replay",
+      "count": 5,
+      "delta": 4
+    }
+  ],
+  "maximumNewLeads": 4,
+  "anonymousRequests": 49,
+  "maximumAnonymousRequests": 52,
+  "concurrentAcceptedPairs": 4,
+  "samples": [
+    {
+      "label": "draft-public-unavailable",
+      "source": "page",
+      "method": "GET",
+      "status": 404,
+      "code": null
+    },
+    {
+      "label": "unpublished-public-unavailable",
+      "source": "page",
+      "method": "GET",
+      "status": 404,
+      "code": null
+    },
+    {
+      "label": "discover-home",
+      "source": "home",
+      "method": "GET",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "discover-page",
+      "source": "page",
+      "method": "GET",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "discover-service",
+      "source": "service",
+      "method": "GET",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "discover-landing",
+      "source": "landing",
+      "method": "GET",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "preflight-home",
+      "source": "home",
+      "method": "OPTIONS",
+      "status": 204,
+      "code": null
+    },
+    {
+      "label": "challenge-home",
+      "source": "home",
+      "method": "POST",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "accept-home",
+      "source": "home",
+      "method": "POST",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "identical-replay-home",
+      "source": "home",
+      "method": "POST",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "changed-payload-after-accept-home",
+      "source": "home",
+      "method": "POST",
+      "status": 409,
+      "code": "REQUEST_CONFLICT"
+    },
+    {
+      "label": "missing-consent-after-accept-home",
+      "source": "home",
+      "method": "POST",
+      "status": 400,
+      "code": "INVALID_INPUT"
+    },
+    {
+      "label": "false-consent-after-accept-home",
+      "source": "home",
+      "method": "POST",
+      "status": 400,
+      "code": "INVALID_INPUT"
+    },
+    {
+      "label": "wrong-publication-after-accept-home",
+      "source": "home",
+      "method": "POST",
+      "status": 409,
+      "code": "REQUEST_CONFLICT"
+    },
+    {
+      "label": "preflight-page",
+      "source": "page",
+      "method": "OPTIONS",
+      "status": 204,
+      "code": null
+    },
+    {
+      "label": "challenge-page",
+      "source": "page",
+      "method": "POST",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "accept-page",
+      "source": "page",
+      "method": "POST",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "identical-replay-page",
+      "source": "page",
+      "method": "POST",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "changed-payload-after-accept-page",
+      "source": "page",
+      "method": "POST",
+      "status": 409,
+      "code": "REQUEST_CONFLICT"
+    },
+    {
+      "label": "missing-consent-after-accept-page",
+      "source": "page",
+      "method": "POST",
+      "status": 400,
+      "code": "INVALID_INPUT"
+    },
+    {
+      "label": "false-consent-after-accept-page",
+      "source": "page",
+      "method": "POST",
+      "status": 400,
+      "code": "INVALID_INPUT"
+    },
+    {
+      "label": "wrong-publication-after-accept-page",
+      "source": "page",
+      "method": "POST",
+      "status": 409,
+      "code": "REQUEST_CONFLICT"
+    },
+    {
+      "label": "preflight-service",
+      "source": "service",
+      "method": "OPTIONS",
+      "status": 204,
+      "code": null
+    },
+    {
+      "label": "challenge-service",
+      "source": "service",
+      "method": "POST",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "accept-service",
+      "source": "service",
+      "method": "POST",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "identical-replay-service",
+      "source": "service",
+      "method": "POST",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "changed-payload-after-accept-service",
+      "source": "service",
+      "method": "POST",
+      "status": 409,
+      "code": "REQUEST_CONFLICT"
+    },
+    {
+      "label": "missing-consent-after-accept-service",
+      "source": "service",
+      "method": "POST",
+      "status": 400,
+      "code": "INVALID_INPUT"
+    },
+    {
+      "label": "false-consent-after-accept-service",
+      "source": "service",
+      "method": "POST",
+      "status": 400,
+      "code": "INVALID_INPUT"
+    },
+    {
+      "label": "wrong-publication-after-accept-service",
+      "source": "service",
+      "method": "POST",
+      "status": 409,
+      "code": "REQUEST_CONFLICT"
+    },
+    {
+      "label": "preflight-landing",
+      "source": "landing",
+      "method": "OPTIONS",
+      "status": 204,
+      "code": null
+    },
+    {
+      "label": "challenge-landing",
+      "source": "landing",
+      "method": "POST",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "accept-landing",
+      "source": "landing",
+      "method": "POST",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "identical-replay-landing",
+      "source": "landing",
+      "method": "POST",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "changed-payload-after-accept-landing",
+      "source": "landing",
+      "method": "POST",
+      "status": 409,
+      "code": "REQUEST_CONFLICT"
+    },
+    {
+      "label": "missing-consent-after-accept-landing",
+      "source": "landing",
+      "method": "POST",
+      "status": 400,
+      "code": "INVALID_INPUT"
+    },
+    {
+      "label": "false-consent-after-accept-landing",
+      "source": "landing",
+      "method": "POST",
+      "status": 400,
+      "code": "INVALID_INPUT"
+    },
+    {
+      "label": "wrong-publication-after-accept-landing",
+      "source": "landing",
+      "method": "POST",
+      "status": 409,
+      "code": "REQUEST_CONFLICT"
+    },
+    {
+      "label": "different-source-after-accept-home",
+      "source": "home",
+      "method": "POST",
+      "status": 409,
+      "code": "REQUEST_CONFLICT"
+    },
+    {
+      "label": "different-source-after-accept-page",
+      "source": "page",
+      "method": "POST",
+      "status": 409,
+      "code": "REQUEST_CONFLICT"
+    },
+    {
+      "label": "different-source-after-accept-service",
+      "source": "service",
+      "method": "POST",
+      "status": 409,
+      "code": "REQUEST_CONFLICT"
+    },
+    {
+      "label": "different-source-after-accept-landing",
+      "source": "landing",
+      "method": "POST",
+      "status": 409,
+      "code": "REQUEST_CONFLICT"
+    },
+    {
+      "label": "draft-route-after-accepted-key",
+      "source": "page",
+      "method": "POST",
+      "status": 409,
+      "code": "REQUEST_CONFLICT"
+    },
+    {
+      "label": "unpublished-route-after-accepted-key",
+      "source": "page",
+      "method": "POST",
+      "status": 409,
+      "code": "REQUEST_CONFLICT"
+    },
+    {
+      "label": "nonexistent-route-after-accepted-key",
+      "source": "page",
+      "method": "POST",
+      "status": 404,
+      "code": "SOURCE_UNAVAILABLE"
+    },
+    {
+      "label": "final-identical-replay-home",
+      "source": "home",
+      "method": "POST",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "final-identical-replay-page",
+      "source": "page",
+      "method": "POST",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "final-identical-replay-service",
+      "source": "service",
+      "method": "POST",
+      "status": 200,
+      "code": null
+    },
+    {
+      "label": "final-identical-replay-landing",
+      "source": "landing",
+      "method": "POST",
+      "status": 200,
+      "code": null
+    }
+  ],
+  "sources": [
+    {
+      "sourceType": "home",
+      "locale": "vi",
+      "sourceId": "215f3a13-b2d3-4d3f-b0a9-cb3bb78eb564",
+      "publicationId": "1f611280-7a7a-4ba2-9607-781a7edb5ae4",
+      "configPublicationId": "c38cb4b1-8f82-4a7d-bcd7-0c64c704ce0a",
+      "path": "/lac-van",
+      "consentVersion": "consultation-vi-v1",
+      "cmsSourceAndConsentVerified": true
+    },
+    {
+      "sourceType": "page",
+      "locale": "vi",
+      "sourceId": "182d2a08-e527-403a-bc64-a03df0e72cbc",
+      "publicationId": "4b85132a-a2e3-4e7d-9d52-de1d96c78c4b",
+      "configPublicationId": "c38cb4b1-8f82-4a7d-bcd7-0c64c704ce0a",
+      "path": "/lac-van/lien-he",
+      "consentVersion": "consultation-vi-v1",
+      "cmsSourceAndConsentVerified": true
+    },
+    {
+      "sourceType": "service",
+      "locale": "vi",
+      "sourceId": "6d9b4b85-cbfd-449f-9485-7ccfc033f1c9",
+      "publicationId": "aad7ad96-86f0-40cd-ac15-81c496b59da0",
+      "configPublicationId": "c38cb4b1-8f82-4a7d-bcd7-0c64c704ce0a",
+      "path": "/lac-van/dich-vu/implant",
+      "consentVersion": "consultation-vi-v1",
+      "cmsSourceAndConsentVerified": true
+    },
+    {
+      "sourceType": "landing",
+      "locale": "vi",
+      "sourceId": "673732ec-adf5-4ba2-8920-c2800ab7f762",
+      "publicationId": "ed76b7d0-5b36-4bf8-9bd4-eb1ba07f0e6f",
+      "configPublicationId": "c38cb4b1-8f82-4a7d-bcd7-0c64c704ce0a",
+      "path": "/lac-van/landing/bat-dau-cung-lac-van",
+      "consentVersion": "consultation-vi-v1",
+      "cmsSourceAndConsentVerified": true
+    }
+  ],
+  "uncertain": false,
+  "failures": [],
+  "limits": [
+    "All requests are local and limited to the owned clinic.",
+    "Denial probes reuse accepted keys; statuses show the observed key/source validation order.",
+    "Draft and unpublished public GET denial is checked separately from intake replay binding.",
+    "The same reserved synthetic contacts are retained privately; this report contains no contact fields."
+  ]
+}

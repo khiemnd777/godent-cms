@@ -1,331 +1,331 @@
 {
   "repository": "https://github.com/khiemnd777/agent-kit",
-  "commit": "919ce6b8d84c8ac5ad4ce473ad6e6c2c9973d2ac",
+  "commit": "4f5c3bc7dcb2d052e8fd28699f118a22eb1f82c5",
   "files": {
     ".agents/ADDY-AGENT-SKILLS-LICENSE": {
       "git_blob_sha": "d67778ada6b9cda6227e9130da182c13e73c8b2e",
       "bytes": 1068
     },
     ".agents/references/accessibility-checklist.md": {
-      "git_blob_sha": "c8c61e5f3d5a010a0d0ecb918bfaffe6c76fca78",
-      "bytes": 5206
+      "git_blob_sha": "9b10a474a6cda275befaede11858f0e2345c2d05",
+      "bytes": 5445
     },
     ".agents/references/definition-of-done.md": {
-      "git_blob_sha": "8d4cb8461da02e60c803c999d95860b41e6d2dab",
-      "bytes": 4918
+      "git_blob_sha": "0121fa459456522f3f8403e542d0f1c34d78f540",
+      "bytes": 2021
     },
     ".agents/references/observability-checklist.md": {
-      "git_blob_sha": "ad40d7aa3fca5d2091fa45be234c14aee22c3588",
-      "bytes": 5129
+      "git_blob_sha": "65f80e44058dcd0ee1755bac73cfed1de6b35c01",
+      "bytes": 6234
     },
     ".agents/references/orchestration-patterns.md": {
-      "git_blob_sha": "09cddd31d52a95be1d9bca814547d184b9945e44",
-      "bytes": 18201
+      "git_blob_sha": "a49b4b0a84468701193f129f6acd753e20ff8343",
+      "bytes": 1775
     },
     ".agents/references/performance-checklist.md": {
-      "git_blob_sha": "ba9744fe60dbe4f04f3f907029638d923158d7a2",
-      "bytes": 13139
+      "git_blob_sha": "23b9db62f4117b68dbdd834680a4b91445ab747e",
+      "bytes": 13492
     },
     ".agents/references/security-checklist.md": {
-      "git_blob_sha": "fc5e29b92c183fa69e0952b61a99761dc48b4c0b",
-      "bytes": 14360
+      "git_blob_sha": "803999795bddc17041ca38fde708cb1c19209d81",
+      "bytes": 14787
     },
     ".agents/references/template-application.md": {
-      "git_blob_sha": "814418a0c87005acccd68d7e2471ccff5c25ee0f",
-      "bytes": 4229
+      "git_blob_sha": "82d89ebb50d387ce1220d652ab0cbfe995d009f7",
+      "bytes": 2205
     },
     ".agents/references/testing-patterns.md": {
-      "git_blob_sha": "bc96e271ad241ca567f06d21c6ecc001455b80f1",
-      "bytes": 7460
+      "git_blob_sha": "7f00a644c74ae8ca43ae2ab4f36516732b8da323",
+      "bytes": 8071
     },
     ".agents/skills/api-and-interface-design/SKILL.md": {
-      "git_blob_sha": "3e2e37f8f4fba2c66f9f1599eaf01a55ae3f3e33",
-      "bytes": 14886
+      "git_blob_sha": "a737722a48048c896841a4f6a7e003d503ae5d6e",
+      "bytes": 15342
     },
     ".agents/skills/code-review-and-quality/SKILL.md": {
-      "git_blob_sha": "c3b0bf8a8b86656771da16b8b11e2aa7efd4dba1",
-      "bytes": 22200
+      "git_blob_sha": "97b4573e10a7bb2a7326986c7e77a42c3910b545",
+      "bytes": 3135
     },
     ".agents/skills/code-simplification/SKILL.md": {
-      "git_blob_sha": "239b2848489511de30d9e63b0bd183adc4b01347",
-      "bytes": 13545
+      "git_blob_sha": "337630655eaec54f484bebfe2963b353ae9b1ec2",
+      "bytes": 2175
     },
     ".agents/skills/context-engineering/SKILL.md": {
-      "git_blob_sha": "fb8bb5f85128302b231d301c1201da1e223f6869",
-      "bytes": 15486
+      "git_blob_sha": "74c40ab70a50a78a0f403c6476b57a0d33d69ebc",
+      "bytes": 2027
     },
     ".agents/skills/debugging-and-error-recovery/SKILL.md": {
-      "git_blob_sha": "356da20365a7cd6825b4ffad14be39280c92cdfc",
-      "bytes": 10913
+      "git_blob_sha": "64f471d3bb625f82d2ab4a93a0ddd935f4592003",
+      "bytes": 3819
     },
     ".agents/skills/documentation-and-adrs/SKILL.md": {
-      "git_blob_sha": "e37c38f30d76263c77aacdb7dcbacceb1218bc80",
-      "bytes": 9859
+      "git_blob_sha": "e862e8f5ff7073df6aaa9301490b42caddfb55f1",
+      "bytes": 10628
     },
     ".agents/skills/frontend-ui-engineering/SKILL.md": {
-      "git_blob_sha": "864bea089904a19c42ee15457d0c2392aa4a99fd",
-      "bytes": 13219
+      "git_blob_sha": "3526ec9dc497b427521238476908f9dbe3fef1b8",
+      "bytes": 14859
     },
     ".agents/skills/incremental-implementation/SKILL.md": {
-      "git_blob_sha": "b3a2f2de90bc43affea9b33c491eeb48f62b98b8",
-      "bytes": 11144
+      "git_blob_sha": "9f18af06f69a1fd38e18ff27c1adcd91d4776922",
+      "bytes": 2932
     },
     ".agents/skills/observability-and-instrumentation/SKILL.md": {
-      "git_blob_sha": "84d9cb373467fe0e15236e190833ecc90f840c38",
-      "bytes": 13948
+      "git_blob_sha": "3040687faaf6ead2bf33b34e7e39bf57a6d1b2c5",
+      "bytes": 14884
     },
     ".agents/skills/performance-optimization/SKILL.md": {
-      "git_blob_sha": "498735724035f468737bd118f9c60676a013d544",
-      "bytes": 16678
+      "git_blob_sha": "f8be354bb5840d28dc3fe4a436812a85079fc754",
+      "bytes": 18750
     },
     ".agents/skills/performance-optimization/references/optimization-patterns.md": {
       "git_blob_sha": "63e27bcc7a051c3dc23c164f146f374e119874cc",
       "bytes": 9692
     },
     ".agents/skills/planning-and-task-breakdown/SKILL.md": {
-      "git_blob_sha": "dabefdc7e71c10298e670e48c4a6cd9d01255e7b",
-      "bytes": 13350
+      "git_blob_sha": "665999e32667f358e544fb7736dae17791e8d287",
+      "bytes": 2464
     },
     ".agents/skills/security-and-hardening/SKILL.md": {
-      "git_blob_sha": "e80e1e9a4f5b2989308c376d4ea0d333fe2c26ef",
-      "bytes": 17559
+      "git_blob_sha": "71dd23316cbe24fbd1f5cdf93d2e2aedbc62a2ec",
+      "bytes": 19409
     },
     ".agents/skills/security-and-hardening/references/hardening-patterns.md": {
       "git_blob_sha": "9af2604409af9a085bad0b14a269a89a74d34084",
       "bytes": 13036
     },
     ".agents/skills/source-driven-development/SKILL.md": {
-      "git_blob_sha": "2704f0e130bc4659951aa552373914b2d63d18c9",
-      "bytes": 10038
+      "git_blob_sha": "20c8d79ad97129e4ee5efae3cf1a0de580a61061",
+      "bytes": 10585
     },
     ".agents/skills/spec-driven-development/SKILL.md": {
-      "git_blob_sha": "f54426bec00bcda5f700ab3368eed7203306830f",
-      "bytes": 13096
+      "git_blob_sha": "26523c42e0fd782393b9d54e44d9a730c8144bcc",
+      "bytes": 2676
     },
     ".agents/skills/technote/SKILL.md": {
       "git_blob_sha": "da6a44a8379e8f8971430699cde7c8b9843e37e9",
       "bytes": 1096
     },
     ".agents/skills/test-driven-development/SKILL.md": {
-      "git_blob_sha": "8898bcbba4c4f6acca473ece95e82105bd9cfea0",
-      "bytes": 16517
+      "git_blob_sha": "b9685261e763d0ddfc4131558960b1437a8bc3e8",
+      "bytes": 3450
     },
     ".agents/skills/using-agent-skills/SKILL.md": {
-      "git_blob_sha": "7b9effcc6a48b12a4d2b7e2baa4eb3a9a00c0c07",
-      "bytes": 11850
+      "git_blob_sha": "24fa3273187e4019f79d59c07327942a89044f71",
+      "bytes": 2235
     },
     ".claude/ADDY-AGENT-SKILLS-LICENSE": {
       "git_blob_sha": "d67778ada6b9cda6227e9130da182c13e73c8b2e",
       "bytes": 1068
     },
     ".claude/agents/kit-explorer.md": {
-      "git_blob_sha": "7b981060db63dc30325f703b0e10879d7afb2d6f",
-      "bytes": 1575
+      "git_blob_sha": "3911ae85b87a8a732e0ca8d54f0bd970baca6e3d",
+      "bytes": 1555
     },
     ".claude/agents/kit-implementer.md": {
-      "git_blob_sha": "53feb922b2873bc0906889395661d76d151fd5d9",
-      "bytes": 1281
+      "git_blob_sha": "2b98ee0259261c7c40e5309ee18bfb1946a5e3e7",
+      "bytes": 1593
     },
     ".claude/agents/kit-reviewer.md": {
-      "git_blob_sha": "c458dfb71ae212905e668b5a78cb40517ec1ebb4",
-      "bytes": 1574
+      "git_blob_sha": "34903ee9503039f8ae112e5cb0b41e1fc02b165e",
+      "bytes": 1559
     },
     ".claude/references/accessibility-checklist.md": {
-      "git_blob_sha": "c8c61e5f3d5a010a0d0ecb918bfaffe6c76fca78",
-      "bytes": 5206
+      "git_blob_sha": "9b10a474a6cda275befaede11858f0e2345c2d05",
+      "bytes": 5445
     },
     ".claude/references/definition-of-done.md": {
-      "git_blob_sha": "8d4cb8461da02e60c803c999d95860b41e6d2dab",
-      "bytes": 4918
+      "git_blob_sha": "0121fa459456522f3f8403e542d0f1c34d78f540",
+      "bytes": 2021
     },
     ".claude/references/observability-checklist.md": {
-      "git_blob_sha": "ad40d7aa3fca5d2091fa45be234c14aee22c3588",
-      "bytes": 5129
+      "git_blob_sha": "65f80e44058dcd0ee1755bac73cfed1de6b35c01",
+      "bytes": 6234
     },
     ".claude/references/orchestration-patterns.md": {
-      "git_blob_sha": "09cddd31d52a95be1d9bca814547d184b9945e44",
-      "bytes": 18201
+      "git_blob_sha": "a49b4b0a84468701193f129f6acd753e20ff8343",
+      "bytes": 1775
     },
     ".claude/references/performance-checklist.md": {
-      "git_blob_sha": "ba9744fe60dbe4f04f3f907029638d923158d7a2",
-      "bytes": 13139
+      "git_blob_sha": "23b9db62f4117b68dbdd834680a4b91445ab747e",
+      "bytes": 13492
     },
     ".claude/references/security-checklist.md": {
-      "git_blob_sha": "fc5e29b92c183fa69e0952b61a99761dc48b4c0b",
-      "bytes": 14360
+      "git_blob_sha": "803999795bddc17041ca38fde708cb1c19209d81",
+      "bytes": 14787
     },
     ".claude/references/template-application.md": {
-      "git_blob_sha": "814418a0c87005acccd68d7e2471ccff5c25ee0f",
-      "bytes": 4229
+      "git_blob_sha": "82d89ebb50d387ce1220d652ab0cbfe995d009f7",
+      "bytes": 2205
     },
     ".claude/references/testing-patterns.md": {
-      "git_blob_sha": "bc96e271ad241ca567f06d21c6ecc001455b80f1",
-      "bytes": 7460
+      "git_blob_sha": "7f00a644c74ae8ca43ae2ab4f36516732b8da323",
+      "bytes": 8071
     },
     ".claude/skills/api-and-interface-design/SKILL.md": {
-      "git_blob_sha": "3e2e37f8f4fba2c66f9f1599eaf01a55ae3f3e33",
-      "bytes": 14886
+      "git_blob_sha": "a737722a48048c896841a4f6a7e003d503ae5d6e",
+      "bytes": 15342
     },
     ".claude/skills/code-review-and-quality/SKILL.md": {
-      "git_blob_sha": "c3b0bf8a8b86656771da16b8b11e2aa7efd4dba1",
-      "bytes": 22200
+      "git_blob_sha": "97b4573e10a7bb2a7326986c7e77a42c3910b545",
+      "bytes": 3135
     },
     ".claude/skills/code-simplification/SKILL.md": {
-      "git_blob_sha": "239b2848489511de30d9e63b0bd183adc4b01347",
-      "bytes": 13545
+      "git_blob_sha": "337630655eaec54f484bebfe2963b353ae9b1ec2",
+      "bytes": 2175
     },
     ".claude/skills/context-engineering/SKILL.md": {
-      "git_blob_sha": "fb8bb5f85128302b231d301c1201da1e223f6869",
-      "bytes": 15486
+      "git_blob_sha": "74c40ab70a50a78a0f403c6476b57a0d33d69ebc",
+      "bytes": 2027
     },
     ".claude/skills/debugging-and-error-recovery/SKILL.md": {
-      "git_blob_sha": "356da20365a7cd6825b4ffad14be39280c92cdfc",
-      "bytes": 10913
+      "git_blob_sha": "64f471d3bb625f82d2ab4a93a0ddd935f4592003",
+      "bytes": 3819
     },
     ".claude/skills/documentation-and-adrs/SKILL.md": {
-      "git_blob_sha": "e37c38f30d76263c77aacdb7dcbacceb1218bc80",
-      "bytes": 9859
+      "git_blob_sha": "e862e8f5ff7073df6aaa9301490b42caddfb55f1",
+      "bytes": 10628
     },
     ".claude/skills/frontend-ui-engineering/SKILL.md": {
-      "git_blob_sha": "864bea089904a19c42ee15457d0c2392aa4a99fd",
-      "bytes": 13219
+      "git_blob_sha": "3526ec9dc497b427521238476908f9dbe3fef1b8",
+      "bytes": 14859
     },
     ".claude/skills/incremental-implementation/SKILL.md": {
-      "git_blob_sha": "b3a2f2de90bc43affea9b33c491eeb48f62b98b8",
-      "bytes": 11144
+      "git_blob_sha": "9f18af06f69a1fd38e18ff27c1adcd91d4776922",
+      "bytes": 2932
     },
     ".claude/skills/observability-and-instrumentation/SKILL.md": {
-      "git_blob_sha": "84d9cb373467fe0e15236e190833ecc90f840c38",
-      "bytes": 13948
+      "git_blob_sha": "3040687faaf6ead2bf33b34e7e39bf57a6d1b2c5",
+      "bytes": 14884
     },
     ".claude/skills/performance-optimization/SKILL.md": {
-      "git_blob_sha": "498735724035f468737bd118f9c60676a013d544",
-      "bytes": 16678
+      "git_blob_sha": "f8be354bb5840d28dc3fe4a436812a85079fc754",
+      "bytes": 18750
     },
     ".claude/skills/performance-optimization/references/optimization-patterns.md": {
       "git_blob_sha": "63e27bcc7a051c3dc23c164f146f374e119874cc",
       "bytes": 9692
     },
     ".claude/skills/planning-and-task-breakdown/SKILL.md": {
-      "git_blob_sha": "dabefdc7e71c10298e670e48c4a6cd9d01255e7b",
-      "bytes": 13350
+      "git_blob_sha": "665999e32667f358e544fb7736dae17791e8d287",
+      "bytes": 2464
     },
     ".claude/skills/security-and-hardening/SKILL.md": {
-      "git_blob_sha": "e80e1e9a4f5b2989308c376d4ea0d333fe2c26ef",
-      "bytes": 17559
+      "git_blob_sha": "71dd23316cbe24fbd1f5cdf93d2e2aedbc62a2ec",
+      "bytes": 19409
     },
     ".claude/skills/security-and-hardening/references/hardening-patterns.md": {
       "git_blob_sha": "9af2604409af9a085bad0b14a269a89a74d34084",
       "bytes": 13036
     },
     ".claude/skills/source-driven-development/SKILL.md": {
-      "git_blob_sha": "2704f0e130bc4659951aa552373914b2d63d18c9",
-      "bytes": 10038
+      "git_blob_sha": "20c8d79ad97129e4ee5efae3cf1a0de580a61061",
+      "bytes": 10585
     },
     ".claude/skills/spec-driven-development/SKILL.md": {
-      "git_blob_sha": "f54426bec00bcda5f700ab3368eed7203306830f",
-      "bytes": 13096
+      "git_blob_sha": "26523c42e0fd782393b9d54e44d9a730c8144bcc",
+      "bytes": 2676
     },
     ".claude/skills/technote/SKILL.md": {
       "git_blob_sha": "da6a44a8379e8f8971430699cde7c8b9843e37e9",
       "bytes": 1096
     },
     ".claude/skills/test-driven-development/SKILL.md": {
-      "git_blob_sha": "8898bcbba4c4f6acca473ece95e82105bd9cfea0",
-      "bytes": 16517
+      "git_blob_sha": "b9685261e763d0ddfc4131558960b1437a8bc3e8",
+      "bytes": 3450
     },
     ".claude/skills/using-agent-skills/SKILL.md": {
-      "git_blob_sha": "7b9effcc6a48b12a4d2b7e2baa4eb3a9a00c0c07",
-      "bytes": 11850
+      "git_blob_sha": "24fa3273187e4019f79d59c07327942a89044f71",
+      "bytes": 2235
     },
     ".codex/agents/kit-explorer.toml": {
-      "git_blob_sha": "48c9b4ed684c618b22c96b63c02c87c035a42ddf",
-      "bytes": 1590
+      "git_blob_sha": "c3b51aba7ec08f6bba906ec0a44045bcba5b9d26",
+      "bytes": 1570
     },
     ".codex/agents/kit-implementer.toml": {
-      "git_blob_sha": "2e0efdaae009149851d755f6c8d7c289e068c68a",
-      "bytes": 1296
+      "git_blob_sha": "555154dd2ae806d556c66edcf05699804a5ccc19",
+      "bytes": 1608
     },
     ".codex/agents/kit-reviewer.toml": {
-      "git_blob_sha": "f8d2a2457c0463a7291631aa57d7f92bb31799ff",
-      "bytes": 1589
+      "git_blob_sha": "dfd7b7000a375eea9b52a7e96e0751dde8aa6759",
+      "bytes": 1574
     },
     ".gitignore": {
       "git_blob_sha": "f8fff6515f392dc04a107f998322a0bfc53ec79c",
       "bytes": 255
     },
     "AGENTS.md": {
-      "git_blob_sha": "c0ca319942614e2141ef87ebdc7a459c797d4038",
-      "bytes": 4524
+      "git_blob_sha": "eb1cf37a8c4c2915e1d2f0faaef276745534da02",
+      "bytes": 3580
     },
     "CLAUDE.md": {
       "git_blob_sha": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
       "bytes": 11
     },
     "CONTRIBUTING.md": {
-      "git_blob_sha": "aab29642c25d24c0148e3ebc7cfcd261ec0a7897",
-      "bytes": 3246
+      "git_blob_sha": "c8048e95f8a73305300836750325855a4c201caf",
+      "bytes": 2036
     },
     "LICENSE": {
       "git_blob_sha": "8dcb6505c15c7b1ae6e51702dcf82174b07fa7fc",
       "bytes": 1079
     },
     "README.md": {
-      "git_blob_sha": "50192e980cf64b8a063f3c620c9a9a7e0b1a89b3",
-      "bytes": 7534
+      "git_blob_sha": "ed74b3c0abb676c65725e4a818dcd22ca73e9552",
+      "bytes": 7447
     },
     "docs/agent-compatibility.md": {
-      "git_blob_sha": "73205e01c3744fde1a9c913e464ef947ff506880",
-      "bytes": 3949
+      "git_blob_sha": "bd9b7ab1372086a7b984555855124c9d0d3d2c2c",
+      "bytes": 4026
     },
     "docs/agent-coordination-templates.md": {
-      "git_blob_sha": "b4c3f7a6c3cd24be36692ae3bafc5da4862fce3b",
-      "bytes": 9309
+      "git_blob_sha": "60f584cf4c19591a88794a23d6fdc59d5e360ce7",
+      "bytes": 2363
     },
     "docs/model-routing.md": {
-      "git_blob_sha": "0df223c66abeb436c57ba00af2149b6d6add9b65",
-      "bytes": 4691
+      "git_blob_sha": "ca0b454d154efc4aed47d7bc2932ef32b7dccf70",
+      "bytes": 4868
     },
     "docs/roles/coordinator.md": {
-      "git_blob_sha": "219207c41dfb6d305c4f02346c1fff9a227ef7a1",
-      "bytes": 5335
+      "git_blob_sha": "4aa93105a19d5090f50a82a976e63d58bb546668",
+      "bytes": 2270
     },
     "docs/roles/explorer.md": {
-      "git_blob_sha": "1cbb932b0fce87275782b589d1d6125d42735bd7",
-      "bytes": 3178
+      "git_blob_sha": "e5aa1e79eeebfa9963dab402067a559b68fcabad",
+      "bytes": 1380
     },
     "docs/roles/implementer.md": {
-      "git_blob_sha": "eb61fc342765df4be3de003f7954672c0f745465",
-      "bytes": 4284
+      "git_blob_sha": "e30fb716c7cc69242e77d2a271ccac4ff634676e",
+      "bytes": 2176
     },
     "docs/roles/reviewer.md": {
-      "git_blob_sha": "dfc3c234e217555692dc647fa6ff924e046f9b70",
-      "bytes": 4677
+      "git_blob_sha": "255ae83d8f2de3366e74221294eac0900101d4d4",
+      "bytes": 2073
     },
     "docs/skills-catalog.md": {
-      "git_blob_sha": "efc83600fdbfade45c1b44625e64286a7fa6c5c1",
-      "bytes": 4942
+      "git_blob_sha": "075683478c5dcb4b7bdbf86f70714ba2bd973754",
+      "bytes": 5712
     },
     "docs/team-policy.md": {
-      "git_blob_sha": "878e60ea5e83758c2340ca2fc3965b4a478b5642",
-      "bytes": 14105
+      "git_blob_sha": "0b1e3411293f6eacf65f96c2b86d4e2a3fb51346",
+      "bytes": 5262
     },
     "docs/team-workflow.md": {
-      "git_blob_sha": "a4659b280bb47c595830da8ccce818dca6edd5dc",
-      "bytes": 12535
+      "git_blob_sha": "f97d33e2fe439e7de0fe98126f1d7ee05b86ed4a",
+      "bytes": 13514
     },
     "docs/technote.md": {
-      "git_blob_sha": "3d7f8f85f0ed765ba570f83111fb5db5cb10730e",
-      "bytes": 12395
+      "git_blob_sha": "44312e1f3280c20acf674cacf8f4ddd06e5dfd55",
+      "bytes": 12522
     },
     "docs/template-application-acceptance.md": {
-      "git_blob_sha": "11f3cb932aec8cb4d36a0cba71c07480b9bef5a7",
-      "bytes": 4607
+      "git_blob_sha": "27c8b6558787885ae0a21d3e1b2800f60fdb5595",
+      "bytes": 4748
     },
     "docs/verification-guide.md": {
-      "git_blob_sha": "038f9b28c9905f68fe32b1d0f83f967b4598c19e",
-      "bytes": 26150
+      "git_blob_sha": "cf7e8efe5474530f58b1ae8f48b1dbc5b21d8f99",
+      "bytes": 8901
     }
   },
-  "manifest_git_blob_sha": "77363d6ea1dc77277ae4adfca204ecce928befd0"
+  "manifest_git_blob_sha": "f717abac5dcf7856851c751e8e24c7b198317fbd"
 }

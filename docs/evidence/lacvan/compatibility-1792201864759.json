@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "phase": "retained-theme-compare",
+  "recordedAt": "2026-10-17T01:51:04.758Z",
+  "witnesses": 4,
+  "themes": [
+    "clarity",
+    "showcase"
+  ],
+  "publicProjectionHashes": 24,
+  "failures": [],
+  "readOnly": true
+}

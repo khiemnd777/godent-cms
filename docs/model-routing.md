@@ -1,6 +1,6 @@
 # Model routing and native adapters
 
-The Project Coordinator is the main session using the developer's selected model. Start the main session normally. Do not force a main-session `--agent` flag or replace the default system prompt to use this kit. The role documents describe responsibilities; native adapters configure optional subagents.
+The task delivery owner is normally the main session using the developer's selected model. Existing named Godent CMS coordinators retain their assigned integration and shared-record accountability; a separate Coordinator is not required for each task. Start the main session normally. Do not force a main-session `--agent` flag or replace the default system prompt to use this kit. The role documents describe responsibilities; native adapters configure optional subagents.
 
 ## Project task routing first
 
@@ -14,7 +14,7 @@ Use inheritance only after no matrix task category and no risk floor matches. Re
 
 The Claude adapters use `model: inherit` and omit effort. Their effort mechanism/equivalence has not been verified for the installed client. Do not map Codex labels into unsupported Claude fields or claim the task's required effort was applied merely from prose.
 
-For each delegated task, report the requested route and the runtime-observed model when the tool exposes it. If the runtime does not expose the resolved model or effort, mark the value **Unknown**. Do not claim inheritance was verified from a successful configuration parse.
+For each delegated task, keep requested and runtime-observed routing evidence in its existing record under the project effort policy. Reuse valid observations instead of repeating model reports per phase; the meaningful-boundary check and mismatch rule remain binding. If the runtime does not expose the resolved model or effort, mark the value **Unknown**. Do not claim inheritance was verified from a successful configuration parse.
 
 ## Deliberate project customization
 
@@ -28,7 +28,7 @@ Explorer and reviewer roles do not change application code, implement features o
 
 Authorized checks, application/browser inspection and evidence capture may use inherited tools when the task covers their side effects, fixtures and destinations. Available tools do not authorize application edits or out-of-scope actions. Implementer writes remain limited to approved ownership. Follow runtime approval mechanisms and report restrictions without bypassing them. Static parsing verifies omitted fields and role text; effective access and role behavior require separate native observations.
 
-The adapters use their platform's schema and explicit instructions to read common role documents. Paths in prose are instructions to read files; they are not an automatic import mechanism. No child may recursively spawn agents. The Project Coordinator alone assigns delegated work and updates shared coordination documents.
+The adapters use their platform's schema and explicit instructions to read common role documents. Paths in prose are instructions to read files; they are not an automatic import mechanism. No child may recursively spawn agents. The assigning delivery owner integrates authorized delegated work. Existing designated Project Coordinators or directly human-authorized bounded writers retain shared-record authority. No default Supervisor or additional approval hierarchy is added.
 
 ## Evidence status
 

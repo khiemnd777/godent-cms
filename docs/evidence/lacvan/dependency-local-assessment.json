@@ -1,0 +1,197 @@
+{
+  "status": "PASS",
+  "scope": "Final admin and website Next trace closure and unchanged dependency files",
+  "traces": [
+    {
+      "path": "apps/admin/.next/next-server.js.nft.json",
+      "sha256": "16c6d9043e0903fa5ad3e95a98c6ae991d77f05f3d71fc4f284fde3c20d98acc"
+    },
+    {
+      "path": "apps/admin/.next/next-minimal-server.js.nft.json",
+      "sha256": "554468d19cd58853361a108ff270c10625ca4eec6d92a280a917b4fc37e1f333"
+    },
+    {
+      "path": "apps/admin/.next/server/middleware.js.nft.json",
+      "sha256": "2983414cfe98cd2701d97e7c4ab942a6607adce1a35176499dd9521fc04ad54f"
+    },
+    {
+      "path": "apps/admin/.next/server/app/page.js.nft.json",
+      "sha256": "07c261f2034c0440e6d3a1904723baea427415162214c9dc0dee4a43493ea063"
+    },
+    {
+      "path": "apps/admin/.next/server/app/platform/page.js.nft.json",
+      "sha256": "09cd9faac7bba5ccd6dcc51bc56ff06600b878627bd8b0f972937ed4891e4940"
+    },
+    {
+      "path": "apps/admin/.next/server/app/verify-email/page.js.nft.json",
+      "sha256": "43ec93ae645e2647ca97809bd644df95f363c8be7841f0aa0d5a70dd613e1af9"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/page.js.nft.json",
+      "sha256": "8e9ab57e8eaa02b64b45716a8248dabee035db77bfe416bdb65959bd05b56250"
+    },
+    {
+      "path": "apps/admin/.next/server/app/forgot-password/page.js.nft.json",
+      "sha256": "dc5a0c69813086aae18a90e1ca0268153ab2b13d30e03c6e5c44cc3b137c1e28"
+    },
+    {
+      "path": "apps/admin/.next/server/app/reset-password/page.js.nft.json",
+      "sha256": "bae3c19e42d87dfe542946a1b639a1c0df05929f0905ea58930952f5da5d6536"
+    },
+    {
+      "path": "apps/admin/.next/server/app/_not-found/page.js.nft.json",
+      "sha256": "21b02679eb44279c264a7040c77b6a730fc0863cb018f04eb9c62798dd52d3a1"
+    },
+    {
+      "path": "apps/admin/.next/server/app/account/page.js.nft.json",
+      "sha256": "2f1a5503f1d3e13f0a74878fd5ded5b530ea550049ed5393cea654672a03988c"
+    },
+    {
+      "path": "apps/admin/.next/server/app/login/page.js.nft.json",
+      "sha256": "949c78f5e1583f9588807a695b41f4003015a53c3954369cbb9210ddc29e691f"
+    },
+    {
+      "path": "apps/admin/.next/server/app/_global-error/page.js.nft.json",
+      "sha256": "db05be9d7b79e6f762f272b0a1486ffb3fec18b37f32dd0704c813d00fa00849"
+    },
+    {
+      "path": "apps/admin/.next/server/app/invitations/page.js.nft.json",
+      "sha256": "9ecee2fa458bdd8f7b9c142fbba03785f38ebc595cc7dcaa887f30841d1ddb16"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/settings/page.js.nft.json",
+      "sha256": "ec5f1ee71116c54f5c9b521dc66589304d5c7f85945b284747ba9a165d59427d"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/leads/page.js.nft.json",
+      "sha256": "ac32bd8eacda3e72d4b66358044c7ded00702e53a5372038d4e06f6c76c5d0a6"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/[...path]/page.js.nft.json",
+      "sha256": "c086d3a0100545e3dba1934bef5df34182b35d1f5b00ca92ca990e7ced15e9d5"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/services/page.js.nft.json",
+      "sha256": "5c48f07c84197036ec38ae5b4fb1220aa76703ccc13c7fe55bb753495ba5649a"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/media/page.js.nft.json",
+      "sha256": "66805e94dfdb5d65e24dadb796244f9a12e1f9839fdaa97a7e8e53e8c687b588"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/services/new/page.js.nft.json",
+      "sha256": "55778f476b1431c0e71dce5b38a133c08259e437cb5cf7f92fe4c058cb760fc5"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/services/[id]/page.js.nft.json",
+      "sha256": "9dafc948d05d3b2db3bd65a899a2577edc2040de1cdef74dc5ea22c06740bfe6"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/services/[id]/preview/page.js.nft.json",
+      "sha256": "22ee6f67330d8f4a77b3762f6715800b4ee24c55fdf7629358f52e9fecc10028"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/services/groups/[[...content]]/page.js.nft.json",
+      "sha256": "2181aee16c97a0093cc89ba772bc696b067270cbe08e615cb4f394a2ab7ec37d"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/services/specialties/[[...content]]/page.js.nft.json",
+      "sha256": "a170d5bca73146c4204158330c8a9f85163a2e8ea486609500e57c22d6f1a545"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/settings/site/page.js.nft.json",
+      "sha256": "77671d774ec9b0accd4b88186962b1e08dac8c93faed84f098720c0c95597399"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/settings/members/page.js.nft.json",
+      "sha256": "07fa7eb1c893bb46ba3436c7854a96728df1b21b738557a2458dfef40472a2b0"
+    },
+    {
+      "path": "apps/admin/.next/server/app/cms/settings/notifications/page.js.nft.json",
+      "sha256": "68e374cea74855a155ae7a12c740ee5848905b6f3ec4722a9943225d7864b6a3"
+    },
+    {
+      "path": "apps/admin/.next/server/app/platform/[...path]/page.js.nft.json",
+      "sha256": "480c4b3782f6b40627e0ada4031d07c3e1afbd2ebe92be108c828d6985c1f73e"
+    },
+    {
+      "path": "apps/admin/.next/server/app/platform/accounts/page.js.nft.json",
+      "sha256": "01ab7e47add33db1e054759b746aa80db430a1c36742ddc6119e413c214aa240"
+    },
+    {
+      "path": "apps/website/.next/next-server.js.nft.json",
+      "sha256": "16c6d9043e0903fa5ad3e95a98c6ae991d77f05f3d71fc4f284fde3c20d98acc"
+    },
+    {
+      "path": "apps/website/.next/next-minimal-server.js.nft.json",
+      "sha256": "554468d19cd58853361a108ff270c10625ca4eec6d92a280a917b4fc37e1f333"
+    },
+    {
+      "path": "apps/website/.next/server/middleware.js.nft.json",
+      "sha256": "eb752424ed3e85ce7bd3cbf172214d25fa65f7142db9ab8d185d5e60fe485f10"
+    },
+    {
+      "path": "apps/website/.next/server/app/page.js.nft.json",
+      "sha256": "3dc5073f13a17aa7213f76a78363311d95b3891cb3023a721e4df68599c7bc66"
+    },
+    {
+      "path": "apps/website/.next/server/app/[tenant]/page.js.nft.json",
+      "sha256": "b044af763e31863c69148cdafb1e0f892b6946016d9064b6feb3205f51f544b7"
+    },
+    {
+      "path": "apps/website/.next/server/app/_not-found/page.js.nft.json",
+      "sha256": "419ae9c44566886ec8c1c2c9eae5a2b4cc7de138e5f59823fff0cecb8d603ee1"
+    },
+    {
+      "path": "apps/website/.next/server/app/robots.txt/route.js.nft.json",
+      "sha256": "9fbe8fd824e767ab2f8a8c37061313f240b51acd7f7477fc52ff82c3bce98e73"
+    },
+    {
+      "path": "apps/website/.next/server/app/_global-error/page.js.nft.json",
+      "sha256": "54bd17bfe3a72ade8b4caa229a3d150bbd4e4c71e823ce32760906a430fb0a7b"
+    },
+    {
+      "path": "apps/website/.next/server/app/[tenant]/[section]/page.js.nft.json",
+      "sha256": "e73c61c1773d98c29344bf4e802357eeb2dcb1e240a48fe5c6df9455658b5907"
+    },
+    {
+      "path": "apps/website/.next/server/app/[tenant]/dich-vu/page.js.nft.json",
+      "sha256": "4d296e2a837ce40db6c3980f352cb174766732c0c94eeb8f79a571d4bdd0f113"
+    },
+    {
+      "path": "apps/website/.next/server/app/[tenant]/sitemap.xml/route.js.nft.json",
+      "sha256": "d8dc41efc45d2c55d42068ccddeaa41648772a10440980204a3674af6ae92335"
+    },
+    {
+      "path": "apps/website/.next/server/app/[tenant]/en/page.js.nft.json",
+      "sha256": "ab7755c75bf6449e6c297c162051e534b3f35941c5c26a87de20909c5139d997"
+    },
+    {
+      "path": "apps/website/.next/server/app/[tenant]/en/[section]/page.js.nft.json",
+      "sha256": "b4b353e86ed658d10ad2555e9e89bd3fb3e4d10101c1c992e9b23d354b216b1e"
+    },
+    {
+      "path": "apps/website/.next/server/app/[tenant]/en/[section]/[slug]/page.js.nft.json",
+      "sha256": "cc6534c10c5449a2da48524ad6b60d8fcd55b2429a5abee8a21cd3048384c04a"
+    },
+    {
+      "path": "apps/website/.next/server/app/[tenant]/dich-vu/[slug]/page.js.nft.json",
+      "sha256": "11b7333121cf8c468767241a24893d174d542fb4434b1c1e4e1480aa20dbe1ae"
+    },
+    {
+      "path": "apps/website/.next/server/app/[tenant]/[section]/[slug]/page.js.nft.json",
+      "sha256": "7e4a073c4e93001ba7f0a028728f426f4207b7b2cc9301f44ed7725cf900da6b"
+    }
+  ],
+  "advisoryChainReferences": [],
+  "dependencyFileChanges": [],
+  "auditStatus": "FAIL/open",
+  "advisory": "braces dev-only existing advisory",
+  "reassessBy": "2026-10-22",
+  "earlierTriggers": [
+    "patch availability",
+    "dependency change",
+    "exposure change"
+  ],
+  "limit": "Bounded local trace assessment only; no new dependency audit or advisory fix claimed."
+}

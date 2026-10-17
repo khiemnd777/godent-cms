@@ -88,8 +88,16 @@ test("every supported reference section uses the canonical builder schema", () =
   page.sections = Object.keys(sectionKinds).map(type => newSection(type as keyof typeof sectionKinds));
   expect(parseBuilderContent(page).sections.map(section => section.type)).toEqual(Object.keys(sectionKinds) as (keyof typeof sectionKinds)[]);
   page.sections.push(newSection("consultation"));
-  expect(() => parseBuilderContent(page)).toThrow();
+  expect(parseBuilderContent(page).sections.at(-1)?.type).toBe("consultation");
   expect(parseBuilderContent({ ...page, kind: "landing" }).sections.at(-1)?.type).toBe("consultation");
+  page.sections.push(newSection("consultation"));
+  expect(() => parseBuilderContent(page)).toThrow();
+});
+test("carousel authoring keeps every saved slide image in its hero permission scope", () => {
+  const page = emptyBuilder("home");
+  page.sections = [{ id: "campaign", type: "hero_carousel", hidden: false, autoplay: false, intervalMs: 7000, slides: [{ id: "one", title: "First", text: "", action: null, image: { assetId: id, revision: 2, alt: "First image" } }, { id: "two", title: "Second", text: "", action: null, image: { assetId: id, revision: 3, alt: "Second image" } }] }];
+  const scopes = permissionScopes("home", page);
+  expect(scopes.map(item => item.scope)).toEqual([{ type: "asset", usage: "hero", assetId: id, assetRevision: 2 }, { type: "asset", usage: "hero", assetId: id, assetRevision: 3 }]);
 });
 test("save captures the observed legacy state and never changes it during retry", () => {
   const state = { version: 3, publicationVersion: 2, publicationRevision: 4, pointer: id, generation: 8 };

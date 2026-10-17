@@ -1,0 +1,98 @@
+{
+  "recordedAt": "2026-10-17T03:03:08.526948+00:00",
+  "technicalResult": "CODE_INTEGRATED + VERIFIED_LOCAL",
+  "handoff": "READY_FOR_USER_REVIEW",
+  "humanAcceptance": "PENDING",
+  "localOnly": true,
+  "gitMutationPerformed": false,
+  "sourcePins": 640,
+  "compiledPins": 1662,
+  "evidencePins": 107,
+  "originalAiAssets": 24,
+  "gates": {
+    "frontend": {
+      "status": "PASS",
+      "tests": 241,
+      "assertions": 1824,
+      "files": 59
+    },
+    "apiPure": {
+      "status": "PASS",
+      "tests": 27,
+      "assertions": 483,
+      "files": 7
+    },
+    "helpers": {
+      "status": "PASS",
+      "tests": 35,
+      "assertions": 958,
+      "files": 5
+    },
+    "typecheck": "PASS",
+    "eslint": "PASS",
+    "adminWebsiteBuilds": "PASS",
+    "clockSql": {
+      "status": "PASS",
+      "tests": 2,
+      "assertions": 7
+    },
+    "searchSql": {
+      "status": "PASS",
+      "tests": 5,
+      "assertions": 66
+    },
+    "catalogPublicVariants": {
+      "status": "PASS",
+      "resources": 71,
+      "variants": 142
+    },
+    "retainedThemes": {
+      "status": "PASS",
+      "witnesses": 4,
+      "hashes": 24
+    },
+    "appliedMigrationChecksums": {
+      "status": "PASS",
+      "count": 63
+    },
+    "preservation": {
+      "status": "PASS",
+      "tables": 87,
+      "baselineRows": 236741,
+      "protectedFiles": 1639,
+      "volatileAuthRowsRemoved": 2,
+      "unexpectedDifferences": 0
+    },
+    "independentSourceReview": {
+      "status": "NO_REMAINING_BLOCKER",
+      "closedFindings": "R1-R13"
+    },
+    "kitStatic": "PASS",
+    "whitespace": "PASS",
+    "ownedSecretArtifactScan": "PASS",
+    "dependencyAudit": "FAIL/open",
+    "dependencyLocalTraceAssessment": {
+      "status": "PASS",
+      "traces": 45,
+      "chainReferences": 0,
+      "reassessBy": "2026-10-22"
+    }
+  },
+  "limits": [
+    "Representative rendered page families and viewports, not exhaustive pixel equality of every URL.",
+    "Original interrupted intake-refresh retry remains NOT_RUN.",
+    "Malformed-query direct browser navigation was blocked; exact actual proxy400 boundary and component regression checked separately.",
+    "No latency benchmark, all-assistive-technology audit or backup/restore proof.",
+    "Earlier failures and unexecuted modes remain in the task ledger."
+  ],
+  "listeners": {
+    "api": "127.0.0.1:5890",
+    "admin": "127.0.0.1:5891",
+    "website": "127.0.0.1:5892"
+  },
+  "urls": {
+    "vi": "http://localhost:5892/lac-van",
+    "en": "http://localhost:5892/lac-van/en",
+    "cms": "http://127.0.0.1:5891/cms?tenant=4f056fcc-208d-47ae-9dc5-952a7986e137"
+  }
+}

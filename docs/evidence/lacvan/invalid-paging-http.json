@@ -1,0 +1,24 @@
+{
+  "status": "FAIL",
+  "checks": [
+    {
+      "pageSize": [
+        "invalid"
+      ],
+      "status": 400,
+      "invalidFilterUi": false,
+      "unavailableUi": false
+    },
+    {
+      "pageSize": [
+        "6",
+        "12"
+      ],
+      "status": 400,
+      "invalidFilterUi": false,
+      "unavailableUi": false
+    }
+  ],
+  "readOnly": true,
+  "browserAttempt": "Blocked by browser client; separate actual HTTP rendered-response check"
+}

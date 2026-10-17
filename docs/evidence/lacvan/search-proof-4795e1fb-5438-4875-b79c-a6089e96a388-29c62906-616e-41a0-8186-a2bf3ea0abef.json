@@ -1,0 +1,133 @@
+{
+  "task": "GCMS-LACVAN-001",
+  "owner": "GCMS-LACVAN-SEARCH-PROOF-v1",
+  "mode": "http-only",
+  "status": "PASS",
+  "sql": {
+    "status": "PASS",
+    "exitCode": 0,
+    "tests": 5,
+    "assertions": 66,
+    "execution": "REUSED_NOT_RERUN",
+    "sourceAttemptId": "4041b343-f4c6-4dbd-9dc7-40d8c1bd3273",
+    "testSha256": "495925a3c248f3e629337ae67858ee8f5e369d9f5abbcb07d4595829f83bc520"
+  },
+  "http": {
+    "status": "PASS",
+    "maximumSearchRequests": 16,
+    "samples": [
+      {
+        "label": "missing-query",
+        "status": 400,
+        "milliseconds": 1.16,
+        "items": null,
+        "continued": null
+      },
+      {
+        "label": "absent-query",
+        "status": 200,
+        "milliseconds": 225.38,
+        "items": 0,
+        "continued": true
+      },
+      {
+        "label": "absent-query",
+        "status": 200,
+        "milliseconds": 205.06,
+        "items": 0,
+        "continued": false
+      },
+      {
+        "label": "matching-query",
+        "status": 200,
+        "milliseconds": 338.52,
+        "items": 14,
+        "continued": true
+      },
+      {
+        "label": "matching-query",
+        "status": 200,
+        "milliseconds": 161.14,
+        "items": 3,
+        "continued": false
+      },
+      {
+        "label": "draft-title",
+        "status": 200,
+        "milliseconds": 161.96,
+        "items": 0,
+        "continued": true
+      },
+      {
+        "label": "draft-title",
+        "status": 200,
+        "milliseconds": 160.26,
+        "items": 0,
+        "continued": false
+      },
+      {
+        "label": "withdrawal-dependent-title",
+        "status": 200,
+        "milliseconds": 136.94,
+        "items": 0,
+        "continued": true
+      },
+      {
+        "label": "withdrawal-dependent-title",
+        "status": 200,
+        "milliseconds": 142.99,
+        "items": 0,
+        "continued": false
+      },
+      {
+        "label": "tampered-cursor",
+        "status": 400,
+        "milliseconds": 0.57,
+        "items": null,
+        "continued": null
+      },
+      {
+        "label": "cross-query-cursor",
+        "status": 400,
+        "milliseconds": 0.69,
+        "items": null,
+        "continued": null
+      },
+      {
+        "label": "cross-size-cursor",
+        "status": 400,
+        "milliseconds": 0.94,
+        "items": null,
+        "continued": null
+      },
+      {
+        "label": "cross-locale-cursor",
+        "status": 400,
+        "milliseconds": 1.12,
+        "items": null,
+        "continued": null
+      }
+    ],
+    "latency": {
+      "n": 13,
+      "min": 0.57,
+      "max": 338.52,
+      "p95": 338.52,
+      "scope": "Observed local HTTP search requests in this bounded proof, including rejection checks"
+    }
+  },
+  "sourceGate": "PASS: reused prior SQL definition assertions with the exact test source SHA; not rerun",
+  "witness": "All three witnesses remain inactive. The prior SQL attempt checked the required-reference wrapper while its head was still active.",
+  "cleanup": {
+    "status": "PASS",
+    "mode": "read-only-existing-inactive-head-verification",
+    "contentCommands": 0
+  },
+  "error": null,
+  "endedAt": "2026-10-17T02:22:36.703Z",
+  "limits": [
+    "Measurements cover only these owned local requests.",
+    "No full endpoint performance bound is claimed.",
+    "The HTTP-only run executes no SQL tests or content commands. Previous attempts and command bytes remain unchanged."
+  ]
+}

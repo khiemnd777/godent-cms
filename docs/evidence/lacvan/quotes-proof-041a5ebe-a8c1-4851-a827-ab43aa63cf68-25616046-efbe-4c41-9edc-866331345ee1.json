@@ -1,0 +1,156 @@
+{
+  "owner": "GCMS-LACVAN-QUOTES-v1",
+  "runId": "041a5ebe-a8c1-4851-a827-ab43aa63cf68",
+  "attemptId": "25616046-efbe-4c41-9edc-866331345ee1",
+  "status": "PASS",
+  "code": null,
+  "stage": "quotes-and-home-pins-verified",
+  "tenantSlug": "lac-van",
+  "fixtureRun": "c61d1ebc-568c-4256-89fa-d920231cf3c1",
+  "catalogRun": "3b257dcb-4933-4a42-bed1-4a1abd9bdbcd",
+  "catalogUnchanged": true,
+  "baselineHash": "3ddae0616ac93477069ef6f2275c4d90abccc2a60f6fc42a27bf81f8669345f8",
+  "configs": [
+    {
+      "locale": "vi",
+      "version": 3,
+      "publicationId": "c38cb4b1-8f82-4a7d-bcd7-0c64c704ce0a",
+      "contentHash": "67c779a89b0bd722cce710f4f59161c1cc1b60ebb7e9fffd89085b7752017266",
+      "unchanged": true
+    },
+    {
+      "locale": "en",
+      "version": 3,
+      "publicationId": "a03efa3f-3948-435f-a876-4d8fce26794a",
+      "contentHash": "a095fcc37a2e3990d8e8c645bd9ab7af0994e992e527bd8665e8b06d9f739380",
+      "unchanged": true
+    }
+  ],
+  "quotes": [
+    {
+      "person": "mai-phuong",
+      "locale": "vi",
+      "id": "a25af75f-3a8d-44fb-93e1-bcf2717b72c6",
+      "beforeVersion": 2,
+      "version": 3,
+      "beforePublicationId": "0525e25a-d9ab-408d-913e-2bd56258d1d6",
+      "publicationId": "4b768210-c6a9-489d-b285-3d9dcc560fb2",
+      "beforeContentHash": "7d05263d56f7b4b1bf9ed315263e726ff53e1603ddaa0339e5cfbe6ac57573f5",
+      "contentHash": "a9736cf6a22357d192debe258fb1dee26d3590dea03ba23dc752f692db40c8c3",
+      "quote": "Tôi muốn bắt đầu từ những câu hỏi nhỏ: lịch hẹn ra sao, sinh hoạt có gì cần lưu ý và từng bước sẽ được giải thích như thế nào."
+    },
+    {
+      "person": "mai-phuong",
+      "locale": "en",
+      "id": "a25af75f-3a8d-44fb-93e1-bcf2717b72c6",
+      "beforeVersion": 2,
+      "version": 3,
+      "beforePublicationId": "779895ed-40ab-405c-99fb-8dd7b47790c0",
+      "publicationId": "b54196ef-a5cd-41a3-89e2-f6fd3b552c26",
+      "beforeContentHash": "7d2424dba0b40a0d4a691d529bd0bcbf0d63a3aedf03474e74ea5ba937f16f87",
+      "contentHash": "260ae9f618453621952c19ec94fb4281f26f7303d673ae5c300beb02af2c6b92",
+      "quote": "I would start with the small questions: how visits fit my routine, what everyday care involves and how each step will be explained."
+    },
+    {
+      "person": "tuan-kiet",
+      "locale": "vi",
+      "id": "2ed367df-990d-47e0-b09f-cb37959ccde5",
+      "beforeVersion": 2,
+      "version": 3,
+      "beforePublicationId": "36eebdc7-7c70-4b1e-aadf-4ab60c6ef4b7",
+      "publicationId": "5b8aa019-21e7-463f-9952-d07a36e8b198",
+      "beforeContentHash": "3c9ed117327fbde5168cb2dca6dca61da9b21174be92d9db4a5b52a454c8a3fa",
+      "contentHash": "74094db687c93ec8d5ee8a00e000823ca88c4e39e89c7fdcd18bafbfb053c588",
+      "quote": "Khi cân nhắc phục hình, tôi quan tâm đến vẻ tự nhiên và phạm vi chi phí. Tôi muốn hiểu từng lựa chọn trước khi quyết định."
+    },
+    {
+      "person": "tuan-kiet",
+      "locale": "en",
+      "id": "2ed367df-990d-47e0-b09f-cb37959ccde5",
+      "beforeVersion": 2,
+      "version": 3,
+      "beforePublicationId": "afc13853-85a0-45a0-88a4-ab0049a36d20",
+      "publicationId": "d39145d5-1914-4a4d-a4cc-786c47eb69c6",
+      "beforeContentHash": "6693454c9046bca896275614bbcd79c48a1dadce48affa6f19fdb92c44c3e2f0",
+      "contentHash": "374741be4fb3d85d915c05e9826ce7f9ade4c0f50c135155eb33325ca21a598c",
+      "quote": "When considering a restoration, I care about a natural appearance and a clear cost breakdown. I want to understand each option before deciding."
+    },
+    {
+      "person": "thu-huong",
+      "locale": "vi",
+      "id": "182a8c58-3c48-41eb-b7d1-15a55b0c7b66",
+      "beforeVersion": 2,
+      "version": 3,
+      "beforePublicationId": "2bf776c0-dae3-4d2e-af6e-dca278c04561",
+      "publicationId": "fb4ed861-03c8-4c57-98ba-d3080e5bcb25",
+      "beforeContentHash": "913d3826652b77754a26b18c2441fc4d6881eabd740e4de4f9b58c74ecef4596",
+      "contentHash": "a4e86dd671aac83acda679cb3abb8ba9e01581907dfe4d96b0e06e8499a5dd6c",
+      "quote": "Giữa những việc của gia đình, tôi muốn dành một buổi hẹn cho bản thân. Một cuộc trò chuyện nhẹ nhàng sẽ giúp tôi nói ra những điều còn băn khoăn."
+    },
+    {
+      "person": "thu-huong",
+      "locale": "en",
+      "id": "182a8c58-3c48-41eb-b7d1-15a55b0c7b66",
+      "beforeVersion": 2,
+      "version": 3,
+      "beforePublicationId": "33bd938e-a684-477e-a428-609803d779c4",
+      "publicationId": "b8e639bf-ddc5-4afc-9337-f3552d09e6fd",
+      "beforeContentHash": "41f31ac8198f9041911d723fbd6737b04953999b53237fc5bdcfa6536ea0945b",
+      "contentHash": "a1481e8cce563f44f19677752466c54550886cd78368b32a5924e0228c105f73",
+      "quote": "Between family commitments, I want to make time for my own care. A calm conversation would give me room to share the questions I have put aside."
+    },
+    {
+      "person": "minh-triet",
+      "locale": "vi",
+      "id": "07fbe90e-1573-4a4c-9e1d-ecadb73a72e4",
+      "beforeVersion": 2,
+      "version": 3,
+      "beforePublicationId": "0716c68e-8508-476d-ba14-98fe1fec79d4",
+      "publicationId": "09d2bcc7-1813-41b4-9891-15bf6f35753a",
+      "beforeContentHash": "cbc2c72ce9b4cdc0ccfe225b79c6a56f2efaf60db2b301c00ee404dc8f79c71c",
+      "contentHash": "29a885f03a0c141ea188280ae91e8643283b955a2803e40d2037a20ffe3dd87e",
+      "quote": "Với tôi, kế hoạch cần dễ theo dõi: bước nào trước, cần chuẩn bị gì và khi nào hỏi lại. Hiểu rõ những điều đó giúp tôi chủ động sắp xếp thời gian."
+    },
+    {
+      "person": "minh-triet",
+      "locale": "en",
+      "id": "07fbe90e-1573-4a4c-9e1d-ecadb73a72e4",
+      "beforeVersion": 2,
+      "version": 3,
+      "beforePublicationId": "b846e835-091a-4280-bfcd-1541c130bbe1",
+      "publicationId": "ea168ca9-8408-40e0-b65c-3df6a0a5a54c",
+      "beforeContentHash": "6de730d1367e636b2478d92246028978b038f0d6f3dfc881191f2af9ddf00199",
+      "contentHash": "af61bfea1885bdb5e4bbaf998548433b54623979cfae7f97e31c639699eef9fe",
+      "quote": "I look for a plan I can follow: what comes first, what to prepare and when to ask more questions. Clear information would help me organise my time."
+    }
+  ],
+  "homes": [
+    {
+      "locale": "vi",
+      "id": "215f3a13-b2d3-4d3f-b0a9-cb3bb78eb564",
+      "beforeVersion": 3,
+      "version": 4,
+      "beforeContentHash": "36a0d0e470d85a9ecefa4f0a12ab743e1d9c40f0f905aa4605c70af7251c2b26",
+      "contentHash": "abd22cc23c74e26f95007bb60d162a5fc289e4bce65ed8525cda78ba782e4021",
+      "publicationId": "77f65be8-c4f8-4d0e-b8ff-241b5c7a83dc",
+      "changedFields": "Only the two existing testimonial publicationId values",
+      "publicVerification": "PASS",
+      "allOtherContentPreserved": true
+    },
+    {
+      "locale": "en",
+      "id": "215f3a13-b2d3-4d3f-b0a9-cb3bb78eb564",
+      "beforeVersion": 1,
+      "version": 2,
+      "beforeContentHash": "d14f7b01cb17eb5d771fd842c28f8d8e7cdde55745cbc06a72e496d6fd28f5e7",
+      "contentHash": "d7befd810b1255cdd5033f40f275eabf322eba21a59fb92d54ccc523bd4d9f57",
+      "publicationId": "aaee971e-cda3-4dbd-bf64-2a0175872dbb",
+      "changedFields": "Only the two existing testimonial publicationId values",
+      "publicVerification": "PASS",
+      "allOtherContentPreserved": true
+    }
+  ],
+  "limits": "Local CMS refresh and public projection checks for eight testimonial variants and two existing homepage variants. Rendered desktop and mobile checks remain with the coordinator.",
+  "completedCommands": 36,
+  "credentialsPrinted": false
+}

@@ -6,6 +6,6 @@ function Inline({ nodes }: { nodes: RichInline[] }) {
     return <span key={index}>{node.text}</span>;
   });
 }
-export function RichText({ document }: { document: RichTextDocument }) {
-  return <div className="rich-content">{document.blocks.map((block, index) => block.type === "heading" ? <h2 key={index}><Inline nodes={block.children}/></h2> : block.type === "bulletList" ? <ul key={index}>{block.items.map((item, itemIndex) => <li key={itemIndex}><Inline nodes={item}/></li>)}</ul> : <p key={index}><Inline nodes={block.children}/></p>)}</div>;
+export function RichText({ document, headingPrefix }: { document: RichTextDocument; headingPrefix?: string }) {
+  return <div className="rich-content">{document.blocks.map((block, index) => block.type === "heading" ? <h2 id={headingPrefix ? `${headingPrefix}-${index}` : undefined} key={index}><Inline nodes={block.children}/></h2> : block.type === "bulletList" ? <ul key={index}>{block.items.map((item, itemIndex) => <li key={itemIndex}><Inline nodes={item}/></li>)}</ul> : <p key={index}><Inline nodes={block.children}/></p>)}</div>;
 }

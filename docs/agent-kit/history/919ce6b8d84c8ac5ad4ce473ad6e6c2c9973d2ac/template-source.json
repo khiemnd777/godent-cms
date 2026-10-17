@@ -1,0 +1,331 @@
+{
+  "repository": "https://github.com/khiemnd777/agent-kit",
+  "commit": "919ce6b8d84c8ac5ad4ce473ad6e6c2c9973d2ac",
+  "files": {
+    ".agents/ADDY-AGENT-SKILLS-LICENSE": {
+      "git_blob_sha": "d67778ada6b9cda6227e9130da182c13e73c8b2e",
+      "bytes": 1068
+    },
+    ".agents/references/accessibility-checklist.md": {
+      "git_blob_sha": "c8c61e5f3d5a010a0d0ecb918bfaffe6c76fca78",
+      "bytes": 5206
+    },
+    ".agents/references/definition-of-done.md": {
+      "git_blob_sha": "8d4cb8461da02e60c803c999d95860b41e6d2dab",
+      "bytes": 4918
+    },
+    ".agents/references/observability-checklist.md": {
+      "git_blob_sha": "ad40d7aa3fca5d2091fa45be234c14aee22c3588",
+      "bytes": 5129
+    },
+    ".agents/references/orchestration-patterns.md": {
+      "git_blob_sha": "09cddd31d52a95be1d9bca814547d184b9945e44",
+      "bytes": 18201
+    },
+    ".agents/references/performance-checklist.md": {
+      "git_blob_sha": "ba9744fe60dbe4f04f3f907029638d923158d7a2",
+      "bytes": 13139
+    },
+    ".agents/references/security-checklist.md": {
+      "git_blob_sha": "fc5e29b92c183fa69e0952b61a99761dc48b4c0b",
+      "bytes": 14360
+    },
+    ".agents/references/template-application.md": {
+      "git_blob_sha": "814418a0c87005acccd68d7e2471ccff5c25ee0f",
+      "bytes": 4229
+    },
+    ".agents/references/testing-patterns.md": {
+      "git_blob_sha": "bc96e271ad241ca567f06d21c6ecc001455b80f1",
+      "bytes": 7460
+    },
+    ".agents/skills/api-and-interface-design/SKILL.md": {
+      "git_blob_sha": "3e2e37f8f4fba2c66f9f1599eaf01a55ae3f3e33",
+      "bytes": 14886
+    },
+    ".agents/skills/code-review-and-quality/SKILL.md": {
+      "git_blob_sha": "c3b0bf8a8b86656771da16b8b11e2aa7efd4dba1",
+      "bytes": 22200
+    },
+    ".agents/skills/code-simplification/SKILL.md": {
+      "git_blob_sha": "239b2848489511de30d9e63b0bd183adc4b01347",
+      "bytes": 13545
+    },
+    ".agents/skills/context-engineering/SKILL.md": {
+      "git_blob_sha": "fb8bb5f85128302b231d301c1201da1e223f6869",
+      "bytes": 15486
+    },
+    ".agents/skills/debugging-and-error-recovery/SKILL.md": {
+      "git_blob_sha": "356da20365a7cd6825b4ffad14be39280c92cdfc",
+      "bytes": 10913
+    },
+    ".agents/skills/documentation-and-adrs/SKILL.md": {
+      "git_blob_sha": "e37c38f30d76263c77aacdb7dcbacceb1218bc80",
+      "bytes": 9859
+    },
+    ".agents/skills/frontend-ui-engineering/SKILL.md": {
+      "git_blob_sha": "864bea089904a19c42ee15457d0c2392aa4a99fd",
+      "bytes": 13219
+    },
+    ".agents/skills/incremental-implementation/SKILL.md": {
+      "git_blob_sha": "b3a2f2de90bc43affea9b33c491eeb48f62b98b8",
+      "bytes": 11144
+    },
+    ".agents/skills/observability-and-instrumentation/SKILL.md": {
+      "git_blob_sha": "84d9cb373467fe0e15236e190833ecc90f840c38",
+      "bytes": 13948
+    },
+    ".agents/skills/performance-optimization/SKILL.md": {
+      "git_blob_sha": "498735724035f468737bd118f9c60676a013d544",
+      "bytes": 16678
+    },
+    ".agents/skills/performance-optimization/references/optimization-patterns.md": {
+      "git_blob_sha": "63e27bcc7a051c3dc23c164f146f374e119874cc",
+      "bytes": 9692
+    },
+    ".agents/skills/planning-and-task-breakdown/SKILL.md": {
+      "git_blob_sha": "dabefdc7e71c10298e670e48c4a6cd9d01255e7b",
+      "bytes": 13350
+    },
+    ".agents/skills/security-and-hardening/SKILL.md": {
+      "git_blob_sha": "e80e1e9a4f5b2989308c376d4ea0d333fe2c26ef",
+      "bytes": 17559
+    },
+    ".agents/skills/security-and-hardening/references/hardening-patterns.md": {
+      "git_blob_sha": "9af2604409af9a085bad0b14a269a89a74d34084",
+      "bytes": 13036
+    },
+    ".agents/skills/source-driven-development/SKILL.md": {
+      "git_blob_sha": "2704f0e130bc4659951aa552373914b2d63d18c9",
+      "bytes": 10038
+    },
+    ".agents/skills/spec-driven-development/SKILL.md": {
+      "git_blob_sha": "f54426bec00bcda5f700ab3368eed7203306830f",
+      "bytes": 13096
+    },
+    ".agents/skills/technote/SKILL.md": {
+      "git_blob_sha": "da6a44a8379e8f8971430699cde7c8b9843e37e9",
+      "bytes": 1096
+    },
+    ".agents/skills/test-driven-development/SKILL.md": {
+      "git_blob_sha": "8898bcbba4c4f6acca473ece95e82105bd9cfea0",
+      "bytes": 16517
+    },
+    ".agents/skills/using-agent-skills/SKILL.md": {
+      "git_blob_sha": "7b9effcc6a48b12a4d2b7e2baa4eb3a9a00c0c07",
+      "bytes": 11850
+    },
+    ".claude/ADDY-AGENT-SKILLS-LICENSE": {
+      "git_blob_sha": "d67778ada6b9cda6227e9130da182c13e73c8b2e",
+      "bytes": 1068
+    },
+    ".claude/agents/kit-explorer.md": {
+      "git_blob_sha": "7b981060db63dc30325f703b0e10879d7afb2d6f",
+      "bytes": 1575
+    },
+    ".claude/agents/kit-implementer.md": {
+      "git_blob_sha": "53feb922b2873bc0906889395661d76d151fd5d9",
+      "bytes": 1281
+    },
+    ".claude/agents/kit-reviewer.md": {
+      "git_blob_sha": "c458dfb71ae212905e668b5a78cb40517ec1ebb4",
+      "bytes": 1574
+    },
+    ".claude/references/accessibility-checklist.md": {
+      "git_blob_sha": "c8c61e5f3d5a010a0d0ecb918bfaffe6c76fca78",
+      "bytes": 5206
+    },
+    ".claude/references/definition-of-done.md": {
+      "git_blob_sha": "8d4cb8461da02e60c803c999d95860b41e6d2dab",
+      "bytes": 4918
+    },
+    ".claude/references/observability-checklist.md": {
+      "git_blob_sha": "ad40d7aa3fca5d2091fa45be234c14aee22c3588",
+      "bytes": 5129
+    },
+    ".claude/references/orchestration-patterns.md": {
+      "git_blob_sha": "09cddd31d52a95be1d9bca814547d184b9945e44",
+      "bytes": 18201
+    },
+    ".claude/references/performance-checklist.md": {
+      "git_blob_sha": "ba9744fe60dbe4f04f3f907029638d923158d7a2",
+      "bytes": 13139
+    },
+    ".claude/references/security-checklist.md": {
+      "git_blob_sha": "fc5e29b92c183fa69e0952b61a99761dc48b4c0b",
+      "bytes": 14360
+    },
+    ".claude/references/template-application.md": {
+      "git_blob_sha": "814418a0c87005acccd68d7e2471ccff5c25ee0f",
+      "bytes": 4229
+    },
+    ".claude/references/testing-patterns.md": {
+      "git_blob_sha": "bc96e271ad241ca567f06d21c6ecc001455b80f1",
+      "bytes": 7460
+    },
+    ".claude/skills/api-and-interface-design/SKILL.md": {
+      "git_blob_sha": "3e2e37f8f4fba2c66f9f1599eaf01a55ae3f3e33",
+      "bytes": 14886
+    },
+    ".claude/skills/code-review-and-quality/SKILL.md": {
+      "git_blob_sha": "c3b0bf8a8b86656771da16b8b11e2aa7efd4dba1",
+      "bytes": 22200
+    },
+    ".claude/skills/code-simplification/SKILL.md": {
+      "git_blob_sha": "239b2848489511de30d9e63b0bd183adc4b01347",
+      "bytes": 13545
+    },
+    ".claude/skills/context-engineering/SKILL.md": {
+      "git_blob_sha": "fb8bb5f85128302b231d301c1201da1e223f6869",
+      "bytes": 15486
+    },
+    ".claude/skills/debugging-and-error-recovery/SKILL.md": {
+      "git_blob_sha": "356da20365a7cd6825b4ffad14be39280c92cdfc",
+      "bytes": 10913
+    },
+    ".claude/skills/documentation-and-adrs/SKILL.md": {
+      "git_blob_sha": "e37c38f30d76263c77aacdb7dcbacceb1218bc80",
+      "bytes": 9859
+    },
+    ".claude/skills/frontend-ui-engineering/SKILL.md": {
+      "git_blob_sha": "864bea089904a19c42ee15457d0c2392aa4a99fd",
+      "bytes": 13219
+    },
+    ".claude/skills/incremental-implementation/SKILL.md": {
+      "git_blob_sha": "b3a2f2de90bc43affea9b33c491eeb48f62b98b8",
+      "bytes": 11144
+    },
+    ".claude/skills/observability-and-instrumentation/SKILL.md": {
+      "git_blob_sha": "84d9cb373467fe0e15236e190833ecc90f840c38",
+      "bytes": 13948
+    },
+    ".claude/skills/performance-optimization/SKILL.md": {
+      "git_blob_sha": "498735724035f468737bd118f9c60676a013d544",
+      "bytes": 16678
+    },
+    ".claude/skills/performance-optimization/references/optimization-patterns.md": {
+      "git_blob_sha": "63e27bcc7a051c3dc23c164f146f374e119874cc",
+      "bytes": 9692
+    },
+    ".claude/skills/planning-and-task-breakdown/SKILL.md": {
+      "git_blob_sha": "dabefdc7e71c10298e670e48c4a6cd9d01255e7b",
+      "bytes": 13350
+    },
+    ".claude/skills/security-and-hardening/SKILL.md": {
+      "git_blob_sha": "e80e1e9a4f5b2989308c376d4ea0d333fe2c26ef",
+      "bytes": 17559
+    },
+    ".claude/skills/security-and-hardening/references/hardening-patterns.md": {
+      "git_blob_sha": "9af2604409af9a085bad0b14a269a89a74d34084",
+      "bytes": 13036
+    },
+    ".claude/skills/source-driven-development/SKILL.md": {
+      "git_blob_sha": "2704f0e130bc4659951aa552373914b2d63d18c9",
+      "bytes": 10038
+    },
+    ".claude/skills/spec-driven-development/SKILL.md": {
+      "git_blob_sha": "f54426bec00bcda5f700ab3368eed7203306830f",
+      "bytes": 13096
+    },
+    ".claude/skills/technote/SKILL.md": {
+      "git_blob_sha": "da6a44a8379e8f8971430699cde7c8b9843e37e9",
+      "bytes": 1096
+    },
+    ".claude/skills/test-driven-development/SKILL.md": {
+      "git_blob_sha": "8898bcbba4c4f6acca473ece95e82105bd9cfea0",
+      "bytes": 16517
+    },
+    ".claude/skills/using-agent-skills/SKILL.md": {
+      "git_blob_sha": "7b9effcc6a48b12a4d2b7e2baa4eb3a9a00c0c07",
+      "bytes": 11850
+    },
+    ".codex/agents/kit-explorer.toml": {
+      "git_blob_sha": "48c9b4ed684c618b22c96b63c02c87c035a42ddf",
+      "bytes": 1590
+    },
+    ".codex/agents/kit-implementer.toml": {
+      "git_blob_sha": "2e0efdaae009149851d755f6c8d7c289e068c68a",
+      "bytes": 1296
+    },
+    ".codex/agents/kit-reviewer.toml": {
+      "git_blob_sha": "f8d2a2457c0463a7291631aa57d7f92bb31799ff",
+      "bytes": 1589
+    },
+    ".gitignore": {
+      "git_blob_sha": "f8fff6515f392dc04a107f998322a0bfc53ec79c",
+      "bytes": 255
+    },
+    "AGENTS.md": {
+      "git_blob_sha": "c0ca319942614e2141ef87ebdc7a459c797d4038",
+      "bytes": 4524
+    },
+    "CLAUDE.md": {
+      "git_blob_sha": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+      "bytes": 11
+    },
+    "CONTRIBUTING.md": {
+      "git_blob_sha": "aab29642c25d24c0148e3ebc7cfcd261ec0a7897",
+      "bytes": 3246
+    },
+    "LICENSE": {
+      "git_blob_sha": "8dcb6505c15c7b1ae6e51702dcf82174b07fa7fc",
+      "bytes": 1079
+    },
+    "README.md": {
+      "git_blob_sha": "50192e980cf64b8a063f3c620c9a9a7e0b1a89b3",
+      "bytes": 7534
+    },
+    "docs/agent-compatibility.md": {
+      "git_blob_sha": "73205e01c3744fde1a9c913e464ef947ff506880",
+      "bytes": 3949
+    },
+    "docs/agent-coordination-templates.md": {
+      "git_blob_sha": "b4c3f7a6c3cd24be36692ae3bafc5da4862fce3b",
+      "bytes": 9309
+    },
+    "docs/model-routing.md": {
+      "git_blob_sha": "0df223c66abeb436c57ba00af2149b6d6add9b65",
+      "bytes": 4691
+    },
+    "docs/roles/coordinator.md": {
+      "git_blob_sha": "219207c41dfb6d305c4f02346c1fff9a227ef7a1",
+      "bytes": 5335
+    },
+    "docs/roles/explorer.md": {
+      "git_blob_sha": "1cbb932b0fce87275782b589d1d6125d42735bd7",
+      "bytes": 3178
+    },
+    "docs/roles/implementer.md": {
+      "git_blob_sha": "eb61fc342765df4be3de003f7954672c0f745465",
+      "bytes": 4284
+    },
+    "docs/roles/reviewer.md": {
+      "git_blob_sha": "dfc3c234e217555692dc647fa6ff924e046f9b70",
+      "bytes": 4677
+    },
+    "docs/skills-catalog.md": {
+      "git_blob_sha": "efc83600fdbfade45c1b44625e64286a7fa6c5c1",
+      "bytes": 4942
+    },
+    "docs/team-policy.md": {
+      "git_blob_sha": "878e60ea5e83758c2340ca2fc3965b4a478b5642",
+      "bytes": 14105
+    },
+    "docs/team-workflow.md": {
+      "git_blob_sha": "a4659b280bb47c595830da8ccce818dca6edd5dc",
+      "bytes": 12535
+    },
+    "docs/technote.md": {
+      "git_blob_sha": "3d7f8f85f0ed765ba570f83111fb5db5cb10730e",
+      "bytes": 12395
+    },
+    "docs/template-application-acceptance.md": {
+      "git_blob_sha": "11f3cb932aec8cb4d36a0cba71c07480b9bef5a7",
+      "bytes": 4607
+    },
+    "docs/verification-guide.md": {
+      "git_blob_sha": "038f9b28c9905f68fe32b1d0f83f967b4598c19e",
+      "bytes": 26150
+    }
+  },
+  "manifest_git_blob_sha": "77363d6ea1dc77277ae4adfca204ecce928befd0"
+}

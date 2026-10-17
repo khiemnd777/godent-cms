@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "phase": "representative-home-published",
+  "recordedAt": "2026-10-17T02:05:53.851Z",
+  "publishedVersion": 3,
+  "newPublicationVisible": true,
+  "englishOwnPublicationUnchanged": true,
+  "englishEvidence": "Initial catalog EN publication/version/content pin recorded before CMS editing. EN response alternate metadata follows the new VI head.",
+  "englishFullResponseHashChanged": true,
+  "verification": "Read-only API observations. CMS interactions and private preview require separate browser evidence."
+}

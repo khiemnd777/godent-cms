@@ -30,6 +30,7 @@ class BuilderController{
 @Controller('api/public/builder')class PublicBuilderController{
  constructor(@Inject(BUILDER)private readonly s:BuilderService){}
  @Get(':tenant/seo')seo(@Req()r:PrivateRequest,@Param('tenant')t:string,@Query()q:Record<string,unknown>){return this.s.seo(r,t,q);}
+ @Get(':tenant/:locale/search')search(@Req()r:PrivateRequest,@Param('tenant')t:string,@Param('locale')l:string,@Query()q:Record<string,unknown>){return this.s.publicSearch(r,t,l,q);}
  @Get(':tenant/:locale/config')config(@Req()r:PrivateRequest,@Param('tenant')t:string,@Param('locale')l:string){return this.s.publicConfig(r,t,l);}
  @Get(':tenant/:locale/:kind')list(@Req()r:PrivateRequest,@Param('tenant')t:string,@Param('locale')l:string,@Param('kind')k:string,@Query()q:Record<string,unknown>){return this.s.publicList(r,t,l,k,q);}
  @Get(':tenant/:locale/:kind/:slug')read(@Req()r:PrivateRequest,@Param('tenant')t:string,@Param('locale')l:string,@Param('kind')k:string,@Param('slug')s:string){return this.s.publicRead(r,t,l,k,s);}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-17T02:24:40.595Z",
+  "phase": "--check-only",
+  "slice": "template",
+  "priorChecksums": 63,
+  "compiled": [],
+  "sourceChecksums": {
+    "0060_signature_template.sql": "8a6755f5b584c6fcceaefa29e4fd72ef80c33ef03293408c82c235f2a0271fed",
+    "0061_signature_intake_sources.sql": "c45e413f45628ee7ef526bb38f7e89e9725640b8f6c1e2d51bd29ebbe243ed0f",
+    "0062_signature_search.sql": "45ba9b914c15ed1344e514aa41aee7e246cc84f5bf7830ca4c4989e2e2b8413d"
+  },
+  "committed": false,
+  "intentionallyRolledBack": false,
+  "dispatchStarted": false
+}

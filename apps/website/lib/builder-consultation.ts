@@ -1,4 +1,4 @@
-import { M4_ROUTES, type M4FormContext, type M4IntakeInput, type M4Locale } from "../../api/src/contracts/m4";
+import { M4_ROUTES, type M4FormContext, type M4IntakeInput, type M4IntakeSourceKind, type M4Locale } from "../../api/src/contracts/m4";
 import { normalizeM4Intake } from "../../api/src/contracts/m4-validation";
 import { intakeSlug } from "../../api/src/contracts/intake";
 import type { IntakeChallenge, IntakeInput } from "../../api/src/contracts/s04";
@@ -12,7 +12,7 @@ export function createBuilderAttempt(values: BuilderConsultationValues, context:
   const parsed = normalizeM4Intake({ ...contact, requestKey: crypto.randomUUID(), sourcePublicationId: context.sourcePublicationId, sourceConfigPublicationId: context.sourceConfigPublicationId, formLocale: context.formLocale, ...(locationId ? { locationId } : {}), ...(interestServiceSlug ? { interestServiceSlug } : {}), ...(tracking && Object.keys(tracking).length ? { tracking } : {}) });
   if (parsed.tracking) Object.freeze(parsed.tracking); return Object.freeze(parsed);
 }
-function route(tenant: string, locale: M4Locale, kind: "service" | "landing", slug: string, challenge = false) { intakeSlug(tenant); intakeSlug(slug); return challenge ? M4_ROUTES.challenge(tenant, locale, kind, slug) : M4_ROUTES.intake(tenant, locale, kind, slug); }
+function route(tenant: string, locale: M4Locale, kind: M4IntakeSourceKind, slug: string, challenge = false) { intakeSlug(tenant); intakeSlug(slug); return challenge ? M4_ROUTES.challenge(tenant, locale, kind, slug) : M4_ROUTES.intake(tenant, locale, kind, slug); }
 export async function sendBuilderAttempt(tenant: string, slug: string, context: M4FormContext, attempt: BuilderAttempt, challenge?: IntakeInput["challenge"]) {
   const value = await publicRequest(route(tenant, context.formLocale, context.sourceType, slug), challenge ? { ...attempt, challenge } : attempt);
   if (!value || typeof value !== "object" || Object.keys(value).length !== 1 || !("status" in value) || value.status !== "accepted") throw new IntakeFailure(0, undefined, true);

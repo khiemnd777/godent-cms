@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "className": "signature-floating-book",
+      "inside": true,
+      "visible": true
+    },
+    {
+      "className": "signature-floating-contact",
+      "inside": true,
+      "visible": true
+    },
+    {
+      "className": "signature-mobile-contact",
+      "inside": true,
+      "visible": false
+    }
+  ],
+  "enabledSubmit": false,
+  "left": 268,
+  "right": 1244
+}
