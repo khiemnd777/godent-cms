@@ -59,7 +59,9 @@
 .theme-signature .signature-carousel { position:relative; background:var(--sig-pale); }
 .theme-signature .signature-slide { position:relative; isolation:isolate; min-height:500px; display:flex; align-items:center; }
 .theme-signature .signature-slide-image { position:absolute; inset:0; z-index:-2; }
-.theme-signature .signature-slide-image :where(img,.bp-image) { display:block; width:100%; height:100%; max-width:none; max-height:none; object-fit:cover; border-radius:0; }
+/* CMS hero artwork must retain its full composition, including portraits on wide screens. */
+.theme-signature .signature-slide-image :where(img,.bp-image) { display:block; width:100%; height:100%; max-width:none; max-height:none; object-fit:contain; object-position:right center; border-radius:0; }
+.theme-signature .signature-slide-image img { width:auto; max-width:100%; margin-left:auto; mask-image:linear-gradient(90deg,transparent,#000 35%); }
 .theme-signature .signature-slide.has-image:after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,#fff 0%,#fffffff2 17%,#ffffffa6 38%,#ffffff00 70%); }
 .theme-signature .signature-slide-inner { padding-block:60px 84px; }
 .theme-signature .signature-slide-copy { width:49%; max-width:560px; }
@@ -115,6 +117,10 @@
 .theme-signature .signature-card.kind-doctor .signature-card-copy { text-align:center; }
 .theme-signature .signature-card.kind-doctor .signature-card-link { justify-content:center; }
 .theme-signature .section-doctors .signature-cards { grid-template-columns:repeat(4,minmax(0,1fr)); }
+/* A short team should stay centered without stretching portraits across the page. */
+@media(min-width:1025px) {
+  .theme-signature .section-doctors .signature-cards:has(> :nth-child(2):last-child) { grid-template-columns:repeat(2,minmax(0,1fr)); max-width:600px; margin-inline:auto; }
+}
 .theme-signature .section-doctors .signature-card-copy { padding:20px 16px; }
 .theme-signature .section-doctors .signature-card-copy h3 { font-size:18px; }
 .theme-signature .signature-carousel-list-controls { display:flex; justify-content:center; gap:12px; margin-top:24px; }
@@ -419,7 +425,6 @@
   .theme-signature .signature-languages { gap:6px; font-size:11px; }
   .theme-signature .signature-slide { min-height:180px; align-items:center; }
   .theme-signature .signature-slide-image { bottom:0; }
-  .theme-signature .signature-slide-image img { object-position:65% center; }
   .theme-signature .signature-slide.has-image:after { background:linear-gradient(90deg,#fffffff2 0%,#ffffffdf 25%,#ffffff54 62%,#ffffff00 78%); }
   .theme-signature .signature-slide-inner { padding:18px 20px 40px; }
   .theme-signature .signature-slide-copy { width:58%; max-width:none; }

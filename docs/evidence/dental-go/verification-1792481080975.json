@@ -1,0 +1,281 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-20T07:24:40.975Z",
+  "tenantId": "0f5d20b0-51a2-46ef-aebb-c9874c650eb9",
+  "variants": 44,
+  "pages": [
+    {
+      "key": "location",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "052b2fd8-9e64-4afe-ab53-bb0331d35a2a"
+    },
+    {
+      "key": "category",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "5336d2af-5b99-49bd-b2fc-fe6333a207ab"
+    },
+    {
+      "key": "service-general",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "c944d5d3-01af-48fb-8d0d-b9216778c8ea"
+    },
+    {
+      "key": "service-ortho",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "a4dc9f90-286f-43f6-8f9d-be82a6b76f82"
+    },
+    {
+      "key": "service-restorative",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "01ba7ae9-21af-402a-950b-50c7eced3606"
+    },
+    {
+      "key": "doctor-mai-anh",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "ff474549-0fa8-42b6-b3de-7fe393d51f27"
+    },
+    {
+      "key": "doctor-minh-khang",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "7a95704a-2ec9-4422-91ad-025ba0b7cf66"
+    },
+    {
+      "key": "price-general",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "4a7ff57f-5e0a-4d4a-91c1-a0c0c70b9ce7"
+    },
+    {
+      "key": "price-ortho",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "a15229d2-a65b-46f0-b01b-2528991acacc"
+    },
+    {
+      "key": "price-restorative",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "d4ea831b-c994-415c-bd66-0d03e2c8d356"
+    },
+    {
+      "key": "faq-first",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "d5b12d20-698f-4bb2-92a2-83c3a2e7e59f"
+    },
+    {
+      "key": "faq-fees",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "c7073056-c3f1-4fcd-ac98-622e98c4c133"
+    },
+    {
+      "key": "faq-booking",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "65c484dd-734b-4a02-8026-a20b55f64e8d"
+    },
+    {
+      "key": "faq-options",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "11012d7e-25a9-41b5-9b67-712ddbd41322"
+    },
+    {
+      "key": "article-first",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "e62cfc8d-8dfd-4470-b4db-e35dbee9bef3"
+    },
+    {
+      "key": "article-plan",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "9954ab1f-0667-45d6-aa2f-fb02be1c527d"
+    },
+    {
+      "key": "article-ortho",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "e3bd92a5-54b6-4506-a5dc-e72e5133d24d"
+    },
+    {
+      "key": "gallery",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "c97b0308-80ad-44cc-a3ac-5e916429a7da"
+    },
+    {
+      "key": "contact",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "3e223295-56e0-45c0-a78e-3dff66b4d566"
+    },
+    {
+      "key": "about",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "1ca8cf0c-037d-4d7a-ad70-47a4ad49544d"
+    },
+    {
+      "key": "fees",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "11ad1e23-1af6-4e8e-8dc7-1090332f4ab1"
+    },
+    {
+      "key": "home",
+      "locale": "vi",
+      "status": 200,
+      "publicationId": "53b450d6-dbb2-4148-9d33-b027292a0e53"
+    },
+    {
+      "key": "location",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "47d69118-0722-456e-8d8a-93fd447d457c"
+    },
+    {
+      "key": "category",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "0882c77e-61e1-4b1b-a1ab-30796f854cd6"
+    },
+    {
+      "key": "service-general",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "8f55176c-df68-4587-baf2-bb9ac2533113"
+    },
+    {
+      "key": "service-ortho",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "ba90ce0d-a672-47f9-ae89-7510ee4df17d"
+    },
+    {
+      "key": "service-restorative",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "8d920412-c28c-4292-ba1d-a37021726350"
+    },
+    {
+      "key": "doctor-mai-anh",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "d13a536d-9808-4587-b1b6-385a8717c598"
+    },
+    {
+      "key": "doctor-minh-khang",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "e8e3b60d-2191-4413-96e0-dc387a031635"
+    },
+    {
+      "key": "price-general",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "a8ca0e52-a656-4b2a-822a-8459bb769ca3"
+    },
+    {
+      "key": "price-ortho",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "999db406-fb48-4d89-a03b-d8183097f33a"
+    },
+    {
+      "key": "price-restorative",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "a7e0c4c1-b415-412b-b51c-e8c605cc45e2"
+    },
+    {
+      "key": "faq-first",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "2176b3b6-13dd-406f-b7e7-eebea921f592"
+    },
+    {
+      "key": "faq-fees",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "516d645c-c7e0-4ca6-83ae-188ffb01d21b"
+    },
+    {
+      "key": "faq-booking",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "1c213cd7-c6bd-4eda-af2d-3084b2a50198"
+    },
+    {
+      "key": "faq-options",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "9cac37bf-192e-4238-890c-d96db92d0f25"
+    },
+    {
+      "key": "article-first",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "861e0d66-3a81-47b2-b886-409e27ac27c6"
+    },
+    {
+      "key": "article-plan",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "15281be9-b485-44f8-b01c-a95e74bbb303"
+    },
+    {
+      "key": "article-ortho",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "395aebaf-c8f9-4988-ba45-1fcfd1f8d876"
+    },
+    {
+      "key": "gallery",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "d67bc64a-ab40-4bf4-b688-26c15c541123"
+    },
+    {
+      "key": "contact",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "69e0e0e3-09ae-4306-b254-8b28c0241fb4"
+    },
+    {
+      "key": "about",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "ae9dbd10-5165-4aad-89f6-fd015c33d5fc"
+    },
+    {
+      "key": "fees",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "60d4de9a-8d37-4abc-9dbf-cba556d57b7b"
+    },
+    {
+      "key": "home",
+      "locale": "en",
+      "status": 200,
+      "publicationId": "d539c708-cf46-452a-83c2-b6a6bbf398ea"
+    }
+  ],
+  "mediaReady": 10,
+  "eligibleImageUrls": 0,
+  "crossTenantStatus": 403,
+  "completedSeedReplayPreservedCmsChanges": true,
+  "scannedFiles": 1248,
+  "credentialsPrinted": false,
+  "credentialFile": ".local/dental-go-login.txt",
+  "homeContentHash": "90c7fa06988b9905c010df24bfa6e08057a550a83a9c9ae3a263c97ed1bffa25",
+  "review": "Sequential self-review, browser workflow evidence recorded separately"
+}

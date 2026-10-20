@@ -1,0 +1,18 @@
+[
+  {
+    "key": "service-preventive",
+    "prompt": "Use case: photorealistic-natural. Original editorial photo for the fictional Dental GO+ dental website, general care service card. Fictional Vietnamese woman dentist in teal scrubs and gloves having a calm conversation with an adult female visitor seated upright in a clean white dental chair. Both natural and comfortable, dentist holding a small neutral dental model, no procedure happening. Airy mint and warm white clinic with oak detailing, soft daylight, landscape 3:2, medium framing, professional realistic healthcare photography, real skin texture. No text, no logos, no watermark, no medical claims, no treatment results, no real people."
+  },
+  {
+    "key": "service-orthodontic",
+    "prompt": "Use case: photorealistic-natural. Original editorial photo for fictional Dental GO+ website, orthodontic consultation service card. Close medium still life of a gloved hand presenting a clear aligner above a clean small dental model, with a softly blurred fictional adult Vietnamese dentist in a teal scrub top in the background. A calm clean bright clinic, warm ivory and pale mint palette, soft daylight, landscape 3:2. Focus on realistic translucent material and a clear conversation-oriented consultation setting. No medical procedure, no before-after, no claims, no text, no logos, no watermark, no extra fingers or distorted teeth."
+  },
+  {
+    "key": "service-restorative",
+    "prompt": "Use case: photorealistic-natural. Original editorial photo for fictional Dental GO+ website, restorative care consultation service card. Fictional Vietnamese male dentist in teal scrub top at a light oak consultation desk, calmly pointing to a simple white dental model beside a closed notebook, talking to a fictional adult Vietnamese man seen from side. Medium framing, both comfortable and attentive. Light modern pale mint and warm white clinic, natural window light, landscape 3:2, sophisticated real healthcare photography, realistic hands and skin. No screens with readable text, no logos, no watermarks, no surgery, no treatment claims, no before-after."
+  },
+  {
+    "key": "clinic-treatment-room",
+    "prompt": "Use case: photorealistic-natural. Asset type: architectural photograph of an imagined Dental GO+ treatment room matching a warm white, light oak, deep teal and pale mint clinic. One modern white dental chair with subtle teal cushion, clean cabinetry, simple dental lamp and neat instruments stored away, frosted glass and warm natural daylight, a small indoor plant. Refined realistic architectural photography, wide landscape 3:2, quiet clean comfortable composition, no people, no text, no logo, no signage, no watermark, no gold luxury decorations."
+  }
+]

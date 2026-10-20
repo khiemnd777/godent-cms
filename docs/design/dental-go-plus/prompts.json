@@ -1,0 +1,25 @@
+{
+  "tool": "built-in imagegen",
+  "logo": {
+    "primary": "Original horizontal Dental Go Plus logo. Harmoniously combine a tooth silhouette, open G contour and small plus; deep teal #087F82, ink #12383D, mint accent, transparent background, exact wordmark Dental Go Plus. No stock tooth, shadow, mockup or extra text.",
+    "mark": "Extract only the existing emblem from the primary logo, preserve its design and colors, remove wordmark, transparent square with padding."
+  },
+  "photography": [
+    {
+      "key": "hero-smile",
+      "prompt": "Use case: photorealistic-natural. Asset type: wide homepage hero photograph for the original fictional Vietnamese clinic Dental Go Plus. An original fictional Vietnamese woman age 30 in an ivory blouse, relaxed confident natural smile with realistic teeth, near a pale mint wall in a beautiful contemporary dental reception. Contemporary editorial healthcare photography, daylight, warm human skin texture, sophisticated deep teal and warm white palette, genuine friendly feeling, no retouching that erases pores. Wide 3:2 composition; woman occupies the right third, the entire left 55 percent is a softly lit clean ivory/mint wall with ample empty space for HTML headline overlay. Chest-up crop, eye level, subject faces camera slightly turned. No text, no logos, no watermarks, no dental closeups, no before/after, no medical claims. This is an invented person and imagined clinic, not an actual patient."
+    },
+    {
+      "key": "doctor-mai-anh",
+      "prompt": "Use case: photorealistic-natural. Asset type: professional doctor portrait for fictional Dental Go Plus dental clinic website. One completely invented Vietnamese female dentist, age 36, short straight dark bob hair, warm natural smile, white well-tailored dental coat over deep teal scrub top, no jewelry except discreet small ear studs. Waist-up portrait against soft warm white studio background with subtle pale mint tone. Arms relaxed, three-quarter stance, looking at camera. Editorial photographic realism, realistic pores, warm daylight, premium approachable and calm. Centered composition with generous headroom, landscape 4:3 or square-compatible framing for website doctor cards. No text, no logos, no badge, no stethoscope, no tools, no medals, no watermarks, no real person's likeness."
+    },
+    {
+      "key": "doctor-minh-khang",
+      "prompt": "Use case: photorealistic-natural. Asset type: professional doctor portrait for fictional Dental Go Plus dental clinic website. One completely invented Vietnamese male dentist, age 40, neat short black hair, clean-shaven, open natural smile, white well-tailored dental coat over deep teal scrub top. Waist-up portrait against soft warm white studio background with subtle pale mint tone. Arms relaxed, three-quarter stance, looking at camera. Editorial photographic realism, realistic pores, warm daylight, premium approachable and calm. Centered composition with generous headroom, landscape 4:3 or square-compatible framing for website doctor cards. No text, no logos, no badge, no stethoscope, no tools, no medals, no watermarks, no real person's likeness."
+    },
+    {
+      "key": "clinic-reception",
+      "prompt": "Use case: photorealistic-natural. Asset type: wide architectural photograph of an imagined Dental Go Plus dental clinic reception. Quiet elegant contemporary Vietnam urban clinic with curved warm white reception desk, light oak panels, carefully composed dark teal upholstered seating, warm ivory walls, soft sage glass partition, one sculptural indoor plant and sunlight from floor-to-ceiling windows. Realistic architectural photography, refined materials, subtle shadow, no shiny gold luxury cliches, uncluttered, warm and trustworthy. Wide landscape 3:2 composition, no people, no text, no logos, no signage, no watermark. The space is fictional."
+    }
+  ]
+}

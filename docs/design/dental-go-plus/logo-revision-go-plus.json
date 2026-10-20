@@ -1,0 +1,10 @@
+{
+  "task": "GCMS-DENTAL-GO-PLUS-001",
+  "request": "Logo text: Dental GO Plus -> Dental GO+",
+  "text": "Dental GO+",
+  "tool": "built-in imagegen",
+  "prompt": "Use case: precise-object-edit. Edit the supplied Dental Go Plus logo. Change ONLY the wordmark text to exactly 'Dental GO+' (capital D, remaining Dental lowercase, one space, uppercase G and uppercase O, plus sign immediately after O with no space). Remove the spelled-out word Plus entirely. Keep the left tooth/G/mint-plus emblem exactly unchanged in shape, proportions and colors. Preserve the existing rounded humanist typography family and dark ink color; Dental regular weight, GO bold, plus symbol bold and optically balanced at the upper right or full cap height of GO. Wordmark must read Dental GO+, not Dental Go+, not Dental GO Plus. Keep clean optical kerning and align emblem and wordmark harmoniously. Genuine transparent background, wide horizontal canvas, sensible clear padding, crisp edges. No other text, no new symbols, no mockup, no background, no shadows. Do not redesign the emblem.",
+  "input": "assets/logo-primary.png",
+  "output": "assets/logo-primary-go-plus.png",
+  "emblem": "unchanged"
+}

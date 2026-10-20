@@ -1,0 +1,59 @@
+{
+  "task": "GCMS-DENTAL-GO-PLUS-001",
+  "review": "sequential self-review",
+  "source": [
+    {
+      "path": "apps/website/app/signature.css",
+      "sha256": "7d77f645687424f1ac1ff86d54bf72ab4fc9d35edbfef1c6f67382ac6998a31e"
+    },
+    {
+      "path": "scripts/dental-go-content.test.ts",
+      "sha256": "6dc0cdfd6b5ec4f1dfc9a6f9dcc13b089e94f84c35e628eb1767e1d4d3449bdf"
+    },
+    {
+      "path": "scripts/dental-go-content.ts",
+      "sha256": "c536bf43a0ad6201e0b8f3954ff2d02e883a8add3378aa658280669f71455bed"
+    },
+    {
+      "path": "scripts/dental-go-fixtures.ts",
+      "sha256": "11ca8c5a7b10e3b708c2a539b1155a551d0f6e8cceba90765ea5780468517d08"
+    },
+    {
+      "path": "scripts/dental-go-http.ts",
+      "sha256": "4932a9fb239a3b4eea0d0568a4e9e400e52ee6251ed37772af6089a0f96ff5e2"
+    },
+    {
+      "path": "scripts/dental-go-media.ts",
+      "sha256": "24df24bab23fe550e91c0b931e9a9b32a654469005a0e4f23724021cd25ff36e"
+    },
+    {
+      "path": "scripts/dental-go-preservation.ts",
+      "sha256": "90a7e8a69b65f0d0ef44db7a56b82c34433c5e13a9e3d6898a2c771e76f45461"
+    },
+    {
+      "path": "scripts/dental-go-seed.ts",
+      "sha256": "3000d3c9fb2b25d5338ce7faa03ba0f14012294c59b724c21164627d263fb775"
+    },
+    {
+      "path": "scripts/dental-go-verify.ts",
+      "sha256": "91a6b645823f36db2e4572fb03c9e6946539cbc5ba5eea4af7cd0e3e2b07053e"
+    }
+  ],
+  "browser": {
+    "desktopWidth": 1280,
+    "mobileWidth": 390,
+    "additionalWidth": 320,
+    "horizontalOverflow": false,
+    "mobileMenuOpenAndEscapeClose": "PASS",
+    "viEnSwitch": "PASS",
+    "englishServiceDetail": "PASS",
+    "twoDoctorDesktopCenterErrorPx": 0,
+    "lacVanFourColumnLayoutPreserved": true,
+    "draftHiddenFromPublicBeforePublish": true,
+    "privatePreviewShowsSavedDraft": true,
+    "explicitPublishUpdatesWebsite": true,
+    "syntheticIntakeReachedCms": true,
+    "leadNumber": "YC-000001"
+  },
+  "acceptance": "PENDING_USER_REVIEW"
+}

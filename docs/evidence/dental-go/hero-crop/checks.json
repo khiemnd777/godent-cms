@@ -1,0 +1,660 @@
+{
+  "status": "PASS",
+  "observedAt": "2026-10-20T08:18:34.151Z",
+  "browser": "Edge public pages; in-app browser authenticated CMS preview",
+  "review": "Sequential self-review",
+  "before": {
+    "viewport": [
+      1874,
+      991
+    ],
+    "image": [
+      1536,
+      1024
+    ],
+    "box": [
+      1874,
+      500
+    ],
+    "objectFit": "cover",
+    "renderedSize": [
+      1874,
+      1249.3333333333333
+    ],
+    "verticalClipScreenPixels": 749.3333333333333
+  },
+  "assertions": [
+    "image loaded",
+    "contain fit and no source clipping",
+    "image inside hero",
+    "no document horizontal overflow",
+    "CTA inside hero"
+  ],
+  "observations": [
+    {
+      "copy": {
+        "bottom": 490.296875,
+        "height": 285.40625,
+        "left": 345,
+        "right": 905,
+        "top": 204.890625,
+        "width": 560,
+        "x": 345,
+        "y": 204.890625
+      },
+      "cta": {
+        "bottom": 490.296875,
+        "height": 50,
+        "left": 345,
+        "right": 534.171875,
+        "top": 440.296875,
+        "width": 189.171875,
+        "x": 345,
+        "y": 440.296875
+      },
+      "fit": "contain",
+      "horizontalOverflow": false,
+      "image": {
+        "bottom": 609.59375,
+        "height": 500,
+        "left": 1124,
+        "right": 1874,
+        "top": 109.59375,
+        "width": 750,
+        "x": 1124,
+        "y": 109.59375
+      },
+      "loaded": true,
+      "natural": [
+        1536,
+        1024
+      ],
+      "position": "100% 50%",
+      "ratioError": 0,
+      "slide": {
+        "bottom": 609.59375,
+        "height": 500,
+        "left": 0,
+        "right": 1874,
+        "top": 109.59375,
+        "width": 1874,
+        "x": 0,
+        "y": 109.59375
+      },
+      "sourceClipPixels": {
+        "x": 0,
+        "y": 0
+      },
+      "url": "http://localhost:5892/dental-go-plus",
+      "viewport": {
+        "height": 991,
+        "width": 1874
+      }
+    },
+    {
+      "copy": {
+        "bottom": 486.328125,
+        "height": 277.46875,
+        "left": 48,
+        "right": 608,
+        "top": 208.859375,
+        "width": 560,
+        "x": 48,
+        "y": 208.859375
+      },
+      "cta": {
+        "bottom": 486.328125,
+        "height": 50,
+        "left": 48,
+        "right": 237.171875,
+        "top": 436.328125,
+        "width": 189.171875,
+        "x": 48,
+        "y": 436.328125
+      },
+      "fit": "contain",
+      "horizontalOverflow": false,
+      "image": {
+        "bottom": 609.59375,
+        "height": 500,
+        "left": 530,
+        "right": 1280,
+        "top": 109.59375,
+        "width": 750,
+        "x": 530,
+        "y": 109.59375
+      },
+      "loaded": true,
+      "natural": [
+        1536,
+        1024
+      ],
+      "position": "100% 50%",
+      "ratioError": 0,
+      "slide": {
+        "bottom": 609.59375,
+        "height": 500,
+        "left": 0,
+        "right": 1280,
+        "top": 109.59375,
+        "width": 1280,
+        "x": 0,
+        "y": 109.59375
+      },
+      "sourceClipPixels": {
+        "x": 0,
+        "y": 0
+      },
+      "url": "http://localhost:5892/dental-go-plus",
+      "viewport": {
+        "height": 900,
+        "width": 1280
+      }
+    },
+    {
+      "copy": {
+        "bottom": 219.0390625,
+        "height": 120.0859375,
+        "left": 20,
+        "right": 223,
+        "top": 98.953125,
+        "width": 203,
+        "x": 20,
+        "y": 98.953125
+      },
+      "cta": {
+        "bottom": 219.0390625,
+        "height": 32.5,
+        "left": 20,
+        "right": 149.4921875,
+        "top": 186.5390625,
+        "width": 129.4921875,
+        "x": 20,
+        "y": 186.5390625
+      },
+      "fit": "contain",
+      "horizontalOverflow": false,
+      "image": {
+        "bottom": 260,
+        "height": 180,
+        "left": 120,
+        "right": 390,
+        "top": 80,
+        "width": 270,
+        "x": 120,
+        "y": 80
+      },
+      "loaded": true,
+      "natural": [
+        1536,
+        1024
+      ],
+      "position": "100% 50%",
+      "ratioError": 0,
+      "slide": {
+        "bottom": 260,
+        "height": 180,
+        "left": 0,
+        "right": 390,
+        "top": 80,
+        "width": 390,
+        "x": 0,
+        "y": 80
+      },
+      "sourceClipPixels": {
+        "x": 0,
+        "y": 0
+      },
+      "url": "http://localhost:5892/dental-go-plus",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "copy": {
+        "bottom": 219.0390625,
+        "height": 120.0859375,
+        "left": 20,
+        "right": 182.3984375,
+        "top": 98.953125,
+        "width": 162.3984375,
+        "x": 20,
+        "y": 98.953125
+      },
+      "cta": {
+        "bottom": 219.0390625,
+        "height": 32.5,
+        "left": 20,
+        "right": 149.4921875,
+        "top": 186.5390625,
+        "width": 129.4921875,
+        "x": 20,
+        "y": 186.5390625
+      },
+      "fit": "contain",
+      "horizontalOverflow": false,
+      "image": {
+        "bottom": 260,
+        "height": 180,
+        "left": 50,
+        "right": 320,
+        "top": 80,
+        "width": 270,
+        "x": 50,
+        "y": 80
+      },
+      "loaded": true,
+      "natural": [
+        1536,
+        1024
+      ],
+      "position": "100% 50%",
+      "ratioError": 0,
+      "slide": {
+        "bottom": 260,
+        "height": 180,
+        "left": 0,
+        "right": 320,
+        "top": 80,
+        "width": 320,
+        "x": 0,
+        "y": 80
+      },
+      "sourceClipPixels": {
+        "x": 0,
+        "y": 0
+      },
+      "url": "http://localhost:5892/dental-go-plus",
+      "viewport": {
+        "height": 812,
+        "width": 320
+      }
+    },
+    {
+      "copy": {
+        "bottom": 417.4609375,
+        "height": 242.921875,
+        "left": 32,
+        "right": 419.1953125,
+        "top": 174.5390625,
+        "width": 387.1953125,
+        "x": 32,
+        "y": 174.5390625
+      },
+      "cta": {
+        "bottom": 417.4609375,
+        "height": 50,
+        "left": 32,
+        "right": 221.171875,
+        "top": 367.4609375,
+        "width": 189.171875,
+        "x": 32,
+        "y": 367.4609375
+      },
+      "fit": "contain",
+      "horizontalOverflow": false,
+      "image": {
+        "bottom": 538,
+        "height": 460,
+        "left": 78,
+        "right": 768,
+        "top": 78,
+        "width": 690,
+        "x": 78,
+        "y": 78
+      },
+      "loaded": true,
+      "natural": [
+        1536,
+        1024
+      ],
+      "position": "100% 50%",
+      "ratioError": 0,
+      "slide": {
+        "bottom": 538,
+        "height": 460,
+        "left": 0,
+        "right": 768,
+        "top": 78,
+        "width": 768,
+        "x": 0,
+        "y": 78
+      },
+      "sourceClipPixels": {
+        "x": 0,
+        "y": 0
+      },
+      "url": "http://localhost:5892/dental-go-plus",
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      }
+    },
+    {
+      "copy": {
+        "bottom": 490.296875,
+        "height": 285.40625,
+        "left": 368,
+        "right": 928,
+        "top": 204.890625,
+        "width": 560,
+        "x": 368,
+        "y": 204.890625
+      },
+      "cta": {
+        "bottom": 490.296875,
+        "height": 50,
+        "left": 368,
+        "right": 557.171875,
+        "top": 440.296875,
+        "width": 189.171875,
+        "x": 368,
+        "y": 440.296875
+      },
+      "fit": "contain",
+      "horizontalOverflow": false,
+      "image": {
+        "bottom": 609.59375,
+        "height": 500,
+        "left": 1170,
+        "right": 1920,
+        "top": 109.59375,
+        "width": 750,
+        "x": 1170,
+        "y": 109.59375
+      },
+      "loaded": true,
+      "natural": [
+        1536,
+        1024
+      ],
+      "position": "100% 50%",
+      "ratioError": 0,
+      "slide": {
+        "bottom": 609.59375,
+        "height": 500,
+        "left": 0,
+        "right": 1920,
+        "top": 109.59375,
+        "width": 1920,
+        "x": 0,
+        "y": 109.59375
+      },
+      "sourceClipPixels": {
+        "x": 0,
+        "y": 0
+      },
+      "url": "http://localhost:5892/dental-go-plus",
+      "viewport": {
+        "height": 1080,
+        "width": 1920
+      }
+    },
+    {
+      "copy": {
+        "bottom": 520.9765625,
+        "height": 346.765625,
+        "left": 345,
+        "right": 905,
+        "top": 174.2109375,
+        "width": 560,
+        "x": 345,
+        "y": 174.2109375
+      },
+      "cta": {
+        "bottom": 520.9765625,
+        "height": 50,
+        "left": 345,
+        "right": 587.0234375,
+        "top": 470.9765625,
+        "width": 242.0234375,
+        "x": 345,
+        "y": 470.9765625
+      },
+      "fit": "contain",
+      "horizontalOverflow": false,
+      "image": {
+        "bottom": 609.59375,
+        "height": 500,
+        "left": 1124,
+        "right": 1874,
+        "top": 109.59375,
+        "width": 750,
+        "x": 1124,
+        "y": 109.59375
+      },
+      "loaded": true,
+      "natural": [
+        1536,
+        1024
+      ],
+      "position": "100% 50%",
+      "ratioError": 0,
+      "slide": {
+        "bottom": 609.59375,
+        "height": 500,
+        "left": 0,
+        "right": 1874,
+        "top": 109.59375,
+        "width": 1874,
+        "x": 0,
+        "y": 109.59375
+      },
+      "sourceClipPixels": {
+        "x": 0,
+        "y": 0
+      },
+      "url": "http://localhost:5892/dental-go-plus/en",
+      "viewport": {
+        "height": 991,
+        "width": 1874
+      }
+    },
+    {
+      "copy": {
+        "bottom": 219.0390625,
+        "height": 120.0859375,
+        "left": 20,
+        "right": 223,
+        "top": 98.953125,
+        "width": 203,
+        "x": 20,
+        "y": 98.953125
+      },
+      "cta": {
+        "bottom": 219.0390625,
+        "height": 32.5,
+        "left": 20,
+        "right": 191.0234375,
+        "top": 186.5390625,
+        "width": 171.0234375,
+        "x": 20,
+        "y": 186.5390625
+      },
+      "fit": "contain",
+      "horizontalOverflow": false,
+      "image": {
+        "bottom": 260,
+        "height": 180,
+        "left": 120,
+        "right": 390,
+        "top": 80,
+        "width": 270,
+        "x": 120,
+        "y": 80
+      },
+      "loaded": true,
+      "natural": [
+        1536,
+        1024
+      ],
+      "position": "100% 50%",
+      "ratioError": 0,
+      "slide": {
+        "bottom": 260,
+        "height": 180,
+        "left": 0,
+        "right": 390,
+        "top": 80,
+        "width": 390,
+        "x": 0,
+        "y": 80
+      },
+      "sourceClipPixels": {
+        "x": 0,
+        "y": 0
+      },
+      "url": "http://localhost:5892/dental-go-plus/en",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "copy": {
+        "bottom": 490.296875,
+        "height": 285.40625,
+        "left": 345,
+        "right": 905,
+        "top": 204.890625,
+        "width": 560,
+        "x": 345,
+        "y": 204.890625
+      },
+      "cta": {
+        "bottom": 490.296875,
+        "height": 50,
+        "left": 345,
+        "right": 548.140625,
+        "top": 440.296875,
+        "width": 203.140625,
+        "x": 345,
+        "y": 440.296875
+      },
+      "fit": "contain",
+      "horizontalOverflow": false,
+      "image": {
+        "bottom": 609.59375,
+        "height": 500,
+        "left": 985.1171875,
+        "right": 1874,
+        "top": 109.59375,
+        "width": 888.8828125,
+        "x": 985.1171875,
+        "y": 109.59375
+      },
+      "loaded": true,
+      "natural": [
+        1600,
+        900
+      ],
+      "position": "100% 50%",
+      "ratioError": 1.2152777777663104e-05,
+      "slide": {
+        "bottom": 609.59375,
+        "height": 500,
+        "left": 0,
+        "right": 1874,
+        "top": 109.59375,
+        "width": 1874,
+        "x": 0,
+        "y": 109.59375
+      },
+      "sourceClipPixels": {
+        "x": 0,
+        "y": 0
+      },
+      "url": "http://localhost:5892/lac-van",
+      "viewport": {
+        "height": 991,
+        "width": 1874
+      }
+    },
+    {
+      "copy": {
+        "bottom": 566.4140625,
+        "height": 94.890625,
+        "left": 37,
+        "right": 318.296875,
+        "top": 471.5234375,
+        "width": 281.296875,
+        "x": 37,
+        "y": 471.5234375
+      },
+      "cta": {
+        "bottom": 566.4140625,
+        "height": 32.5,
+        "left": 37,
+        "right": 166.4921875,
+        "top": 533.9140625,
+        "width": 129.4921875,
+        "x": 37,
+        "y": 533.9140625
+      },
+      "fit": "contain",
+      "horizontalOverflow": false,
+      "image": {
+        "bottom": 619.96875,
+        "height": 180,
+        "left": 272,
+        "right": 542,
+        "top": 439.96875,
+        "width": 270,
+        "x": 272,
+        "y": 439.96875
+      },
+      "loaded": true,
+      "natural": [
+        1536,
+        1024
+      ],
+      "position": "100% 50%",
+      "ratioError": 0,
+      "slide": {
+        "bottom": 619.96875,
+        "height": 180,
+        "left": 17,
+        "right": 542,
+        "top": 439.96875,
+        "width": 525,
+        "x": 17,
+        "y": 439.96875
+      },
+      "sourceClipPixels": {
+        "x": 0,
+        "y": 0
+      },
+      "url": "http://127.0.0.1:5891/cms/pages/home/2fe840f2-ddac-4cd9-9a35-2fef44bd870e/preview?tenant=0f5d20b0-51a2-46ef-aebb-c9874c650eb9",
+      "viewport": {
+        "height": 853,
+        "width": 559
+      }
+    }
+  ],
+  "limits": [
+    "Visual judgement based on saved desktop/mobile screenshots",
+    "One existing Lạc Vân active slide inspected",
+    "Private preview images retain existing expiry; fresh navigation verified",
+    "No CMS content or publication or media replacement during repair",
+    "Existing private-preview reopen control did not restore an expired mounted image; fresh page navigation restored it. Separate issue not changed by this CSS repair."
+  ],
+  "sourceSha256": {
+    "apps/website/app/signature.css": "e946175731ef80239fb8ff14b54aa9096292b470c293d7b6f16bd6f9f9007b36"
+  },
+  "finalEdgeViewport": {
+    "width": 1874,
+    "height": 991,
+    "overrideReset": true
+  },
+  "checks": {
+    "websiteBuild": "PASS",
+    "adminBuild": "PASS",
+    "focusedComponentTests": {
+      "tests": 11,
+      "assertions": 89,
+      "failures": 0
+    },
+    "scopedWhitespace": "PASS"
+  }
+}

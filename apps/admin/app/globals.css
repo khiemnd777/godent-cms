@@ -834,6 +834,12 @@ small,.small {
   max-width:360px;
   margin:0 auto 18px;
 }
+.state-actions {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+}
 .state-icon {
   display:inline-grid;
   place-items:center;

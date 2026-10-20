@@ -1,0 +1,161 @@
+{
+  "task": "GCMS-DENTAL-GO-PLUS-001",
+  "status": "processed-in-owned-cms",
+  "generator": "built-in imagegen",
+  "promptFile": "prompts.json",
+  "assets": [
+    {
+      "key": "clinic-reception",
+      "path": "assets/clinic-reception.png",
+      "sha256": "fb1a3cf9a1a5178c37057287d5304b67eeb72c24f508741eee11af5083455575",
+      "bytes": 2500277,
+      "width": 1536,
+      "height": 1024,
+      "pngColorType": 2,
+      "withinCmsUploadLimit": true,
+      "fictional": true,
+      "alt": {
+        "vi": "Phối cảnh AI của sảnh đón tiếp Dental Go Plus",
+        "en": "AI-created view of the imagined Dental Go Plus reception"
+      }
+    },
+    {
+      "key": "doctor-mai-anh",
+      "path": "assets/doctor-mai-anh.png",
+      "sha256": "72c7a77ff4c41b1cb760190e4f06ab08363a9d3596368f60faf4afd82168aa71",
+      "bytes": 1630438,
+      "width": 1448,
+      "height": 1086,
+      "pngColorType": 2,
+      "withinCmsUploadLimit": true,
+      "fictional": true,
+      "alt": {
+        "vi": "Chân dung nhân vật bác sĩ Nguyễn Mai Anh được tạo bằng AI",
+        "en": "AI-generated portrait of fictional dentist Nguyen Mai Anh"
+      }
+    },
+    {
+      "key": "doctor-minh-khang",
+      "path": "assets/doctor-minh-khang.png",
+      "sha256": "5cc7ad03c3cf1f60e3c726a18baf13faf28ad1421eac782b9c4ff0ae35205ba4",
+      "bytes": 1651520,
+      "width": 1448,
+      "height": 1086,
+      "pngColorType": 2,
+      "withinCmsUploadLimit": true,
+      "fictional": true,
+      "alt": {
+        "vi": "Chân dung nhân vật bác sĩ Lê Minh Khang được tạo bằng AI",
+        "en": "AI-generated portrait of fictional dentist Le Minh Khang"
+      }
+    },
+    {
+      "key": "hero-smile",
+      "path": "assets/hero-smile.png",
+      "sha256": "fb0384d4d37c442861ed577149a1c63710ebe05e3f2b9a484d3e3ddaead952af",
+      "bytes": 1935705,
+      "width": 1536,
+      "height": 1024,
+      "pngColorType": 2,
+      "withinCmsUploadLimit": true,
+      "fictional": true,
+      "alt": {
+        "vi": "Nhân vật hư cấu với nụ cười tự nhiên trong không gian nha khoa xanh mint",
+        "en": "Fictional character with a natural smile in a mint dental interior"
+      }
+    },
+    {
+      "key": "logo-mark",
+      "path": "assets/logo-mark.png",
+      "sha256": "604233b8bcc327c93244e9a2256b63ae073dad63f84328008f9bf4cff5230bc8",
+      "bytes": 477693,
+      "width": 1254,
+      "height": 1254,
+      "pngColorType": 6,
+      "withinCmsUploadLimit": true,
+      "fictional": false,
+      "alt": {
+        "vi": "Biểu tượng răng Go cộng của Dental Go Plus",
+        "en": "Dental Go Plus tooth, G and plus symbol"
+      }
+    },
+    {
+      "key": "logo-primary",
+      "path": "assets/logo-primary-go-plus.png",
+      "sha256": "355c64709d7604ca4566ece5d0241b7257d66d73696fd6856e1a62b7150802bf",
+      "bytes": 402217,
+      "width": 2172,
+      "height": 724,
+      "pngColorType": 6,
+      "withinCmsUploadLimit": true,
+      "fictional": false,
+      "alt": {
+        "vi": "Logo Dental GO+, biểu tượng răng kết hợp G và dấu cộng",
+        "en": "Dental GO+ logo combining a tooth, G and plus"
+      },
+      "previousAsset": "assets/logo-primary.png"
+    },
+    {
+      "key": "service-preventive",
+      "path": "assets/service-preventive.png",
+      "sha256": "49fa6249e2c88bdc1e2d0d69891532055bb791447e0d5758b38f6d53d589c12a",
+      "bytes": 2018552,
+      "width": 1536,
+      "height": 1024,
+      "pngColorType": 2,
+      "withinCmsUploadLimit": true,
+      "fictional": true,
+      "alt": {
+        "vi": "Buổi trao đổi về chăm sóc tổng quát trong không gian Dental GO+",
+        "en": "A general care conversation in the imagined Dental GO+ clinic"
+      }
+    },
+    {
+      "key": "service-orthodontic",
+      "path": "assets/service-orthodontic.png",
+      "sha256": "e46ac13ec76a7ef4c6a1dc094a9948e19047e5778724c3420e1382ff21b223d3",
+      "bytes": 1670909,
+      "width": 1536,
+      "height": 1024,
+      "pngColorType": 2,
+      "withinCmsUploadLimit": true,
+      "fictional": true,
+      "alt": {
+        "vi": "Hình ảnh AI minh họa tư vấn khay chỉnh nha trong suốt",
+        "en": "AI-created illustration of a clear-aligner consultation"
+      }
+    },
+    {
+      "key": "service-restorative",
+      "path": "assets/service-restorative.png",
+      "sha256": "713dfa5e28de5bdfe123e5ea7ca012bb9c7b1657a3b886a464fffedf69f9a7b4",
+      "bytes": 1820508,
+      "width": 1536,
+      "height": 1024,
+      "pngColorType": 2,
+      "withinCmsUploadLimit": true,
+      "fictional": true,
+      "alt": {
+        "vi": "Hình ảnh AI minh họa trao đổi về kế hoạch phục hồi răng",
+        "en": "AI-created illustration of a restorative care conversation"
+      }
+    },
+    {
+      "key": "clinic-treatment-room",
+      "path": "assets/clinic-treatment-room.png",
+      "sha256": "65ff329c6621e1ce6626be089bc8ba780fb7b21ae85cba2a2b5923d059e4490f",
+      "bytes": 1860292,
+      "width": 1536,
+      "height": 1024,
+      "pngColorType": 2,
+      "withinCmsUploadLimit": true,
+      "fictional": true,
+      "alt": {
+        "vi": "Phối cảnh AI của phòng chăm sóc Dental GO+",
+        "en": "AI-created view of the imagined Dental GO+ care room"
+      }
+    }
+  ],
+  "wordmark": "Dental GO+",
+  "tenantSlug": "dental-go-plus"
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "phase": "clinic-media-ready",
+  "assets": 10,
+  "processed": 10,
+  "otherTenantsClaimed": 0,
+  "recordedAt": "2026-10-20T07:17:11.101Z"
+}

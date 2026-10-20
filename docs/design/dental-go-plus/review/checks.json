@@ -1,0 +1,23 @@
+{
+  "task": "GCMS-DENTAL-GO-PLUS-001",
+  "scope": "design artifact only; not CMS acceptance",
+  "assets": 6,
+  "allPng": true,
+  "allWithin5MiB": true,
+  "browser": {
+    "desktopWidth": 1280,
+    "mobileWidth": 390,
+    "horizontalOverflow": false,
+    "all10ImageElementsLoaded": true,
+    "mobileMenuOpenAndEscapeClose": "PASS",
+    "desktopNavigationTextWhite": "PASS"
+  },
+  "cms": {
+    "tenantCreated": false,
+    "credentialsCreated": false,
+    "mediaUploaded": false,
+    "publicationVerified": false,
+    "reason": "Current runtime-written turn remains High; xHigh required for dependent implementation"
+  },
+  "review": "sequential self-review; no independent reviewer"
+}
