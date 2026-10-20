@@ -68,6 +68,71 @@ services:
       timeout: 3s
       retries: 18
 
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.local
+    image: godent-cms-local-app
+    user: "${GCMS_LOCAL_UID:-1000}:${GCMS_LOCAL_GID:-1000}"
+    env_file: .env
+    environment:
+      GCMS_DOCKER_LOCAL: "1"
+    command: [bun, scripts/start-service.ts, api]
+    volumes:
+      - ./.local:/app/.local:ro
+    ports:
+      - "127.0.0.1:5890:5890"
+      - "127.0.0.1:5891:5891"
+      - "127.0.0.1:5892:5892"
+    networks: [local]
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis: { condition: service_healthy }
+      s3: { condition: service_healthy }
+    healthcheck:
+      test: [CMD, bun, -e, "const r=await fetch('http://127.0.0.1:5890/ready');process.exit(r.ok?0:1)"]
+      interval: 5s
+      timeout: 5s
+      retries: 18
+
+  admin:
+    image: godent-cms-local-app
+    pull_policy: never
+    user: "${GCMS_LOCAL_UID:-1000}:${GCMS_LOCAL_GID:-1000}"
+    env_file: .env
+    environment:
+      GCMS_DOCKER_LOCAL: "1"
+    command: [bun, scripts/start-service.ts, admin]
+    volumes:
+      - ./.local:/app/.local:ro
+    network_mode: "service:api"
+    depends_on:
+      api: { condition: service_healthy }
+    healthcheck:
+      test: [CMD, bun, -e, "const r=await fetch('http://127.0.0.1:5891/login');process.exit(r.ok?0:1)"]
+      interval: 5s
+      timeout: 5s
+      retries: 18
+
+  website:
+    image: godent-cms-local-app
+    pull_policy: never
+    user: "${GCMS_LOCAL_UID:-1000}:${GCMS_LOCAL_GID:-1000}"
+    env_file: .env
+    environment:
+      GCMS_DOCKER_LOCAL: "1"
+    command: [bun, scripts/start-service.ts, website]
+    volumes:
+      - ./.local:/app/.local:ro
+    network_mode: "service:api"
+    depends_on:
+      api: { condition: service_healthy }
+    healthcheck:
+      test: [CMD, bun, -e, "const r=await fetch('http://127.0.0.1:5892/',{headers:{Host:'localhost:5892'}});process.exit(r.ok?0:1)"]
+      interval: 5s
+      timeout: 5s
+      retries: 18
+
 networks:
   local:
     driver: bridge

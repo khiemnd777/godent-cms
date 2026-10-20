@@ -19,7 +19,8 @@ export function readConfig(env: Record<string, string | undefined> = process.env
     const value = required(key);
     try {
       const url = new URL(value);
-      if (!protocols.includes(url.protocol) || url.hostname !== '127.0.0.1' || url.hash ||
+      const approvedHost = env.GCMS_DOCKER_LOCAL === '1' ? ({ DATABASE_URL: 'postgres', REDIS_URL: 'redis', S3_ENDPOINT: 's3' } as Record<string, string>)[key] : '127.0.0.1';
+      if (!protocols.includes(url.protocol) || url.hostname !== approvedHost || url.hash ||
           (endpoint && (url.pathname !== '/' || url.search || url.username || url.password))) throw new Error();
     } catch { throw new Error(`Invalid configuration: ${key}`); }
     return value;

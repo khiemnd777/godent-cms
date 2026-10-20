@@ -5,7 +5,7 @@ import type { Readable } from 'node:stream';
 export interface MediaStorageConfig { endpoint: string; region: string; bucket: string; accessKeyId: string; secretAccessKey: string }
 export function readMediaStorageConfig(env: Record<string,string|undefined>=process.env): MediaStorageConfig {
   const endpoint=new URL(env.S3_ENDPOINT??'');
-  if(endpoint.protocol!=='http:' || endpoint.hostname!=='127.0.0.1' || endpoint.username || endpoint.password || endpoint.pathname!=='/' || endpoint.search || endpoint.hash) throw new Error('Invalid local media storage endpoint');
+  if(endpoint.protocol!=='http:' || endpoint.hostname!==(env.GCMS_DOCKER_LOCAL==='1'?'s3':'127.0.0.1') || endpoint.username || endpoint.password || endpoint.pathname!=='/' || endpoint.search || endpoint.hash) throw new Error('Invalid local media storage endpoint');
   const bucket=env.S07_MEDIA_BUCKET??'';
   if(!/^gcms-m2-media-[a-z0-9-]{8,48}$/.test(bucket)) throw new Error('New scoped media bucket required');
   const accessKeyId=env.S07_STORAGE_ACCESS_KEY_ID,secretAccessKey=env.S07_STORAGE_SECRET_ACCESS_KEY,region=env.S3_REGION;

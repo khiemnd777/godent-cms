@@ -14,6 +14,14 @@ export async function loadRuntimeEnvironment() {
   try {mediaConfig=Object.fromEntries((await readFile(resolve(process.cwd(),'.local/m2.env'),'utf8')).trim().split('\n').map(line=>{const at=line.indexOf('=');return[line.slice(0,at),line.slice(at+1)];}));}
   catch(error) {if(!(error&&typeof error==='object'&&'code'in error&&error.code==='ENOENT')) throw error;}
   const selected = selectRuntimeEnvironment(privateConfig, process.env, intakeConfig,mediaConfig);
+  if (process.env.GCMS_DOCKER_LOCAL === '1') {
+    selected.api.GCMS_DOCKER_LOCAL = '1';
+    for (const key of ['S02_AUTH_DATABASE_URL', 'S02_TENANT_DATABASE_URL', 'S02_PLATFORM_DATABASE_URL', 'S04_INTAKE_DATABASE_URL', 'DATABASE_URL']) {
+      selected.api[key] = selected.api[key].replace('@127.0.0.1:5888/', '@postgres:5432/');
+    }
+    selected.api.REDIS_URL = selected.api.REDIS_URL.replace('@127.0.0.1:5889', '@redis:6379');
+    selected.api.S3_ENDPOINT = 'http://s3:8333';
+  }
   try {
     const path = resolve(process.cwd(), '.local/m5-fixtures.json'), meta = await lstat(path);
     if (!meta.isFile() || meta.isSymbolicLink() || (meta.mode & 0o777) !== 0o600 || meta.uid !== process.getuid?.() || meta.size > 262144) throw new Error('Unsafe M5 local scope');
@@ -42,6 +50,7 @@ export function selectM5LocalDomains(input: unknown) {
 
 export function selectRuntimeEnvironment(privateConfig: Record<string, string>, source: Record<string, string | undefined>,intakeConfig?:Record<string,string>,mediaConfig?:Record<string,string>) {
   const common: Record<string, string> = { NEXT_TELEMETRY_DISABLED: '1' };
+  if (source.GCMS_DOCKER_LOCAL === '1') common.GCMS_DOCKER_LOCAL = '1';
   for (const name of ['PATH', 'HOME', 'TMPDIR', 'NODE_ENV']) if (source[name]) common[name] = source[name]!;
   const api = { ...common };
   for (const role of ['AUTH', 'TENANT', 'PLATFORM']) {

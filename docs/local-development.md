@@ -1,5 +1,17 @@
 # Local development and verification
 
+## One-command local Docker startup
+
+With Docker Desktop running and the retained `.env` and `.local` configuration present, run from the repository root:
+
+```sh
+./node_modules/.bin/bun run local:up
+```
+
+The Bun script builds one shared application image and runs `docker compose up --build -d --wait` for PostgreSQL, Redis, S3, API, CMS and Website. It does not bootstrap credentials, run migrations or create fixtures. The existing Compose project and named data volumes are retained. Browser URLs remain API `http://127.0.0.1:5890/ready`, CMS `http://127.0.0.1:5891/login` and website `http://localhost:5892/`. The API, CMS and Website share the API container's network namespace so their existing local listener-to-listener contracts remain on loopback; the API service publishes all three application ports to the host loopback only. Docker service names are used only for API-to-PostgreSQL/Redis/S3 connections.
+
+To stop all six services without removing volumes, run `./node_modules/.bin/bun run local:stop` from the repository root. For ordinary repeat starts, run `local:up` again; Docker rebuilds only affected layers. Do not run the old host `start:local` concurrently on the same ports.
+
 ## Audit expiry after tenant deletion
 
 [GCMS-AUDIT-EXPIRY-001](tasks/GCMS-AUDIT-EXPIRY-001.md) is the separately approved local repair. Forward0059 preserves existing enabled/disabled audit enrollment, transfers selected tenant-less audit mappings to the independent audit-retention scope and retains them through tenant deletion. Existing business-worker scopes are still removed. No migration dispatch or automatic tombstone-based re-enrollment occurs.
@@ -373,10 +385,10 @@ In the terminal running `start:local`, press Ctrl+C. The launcher stops only its
 Stop this project's infrastructure while retaining data:
 
 ```sh
-docker compose stop
+./node_modules/.bin/bun run local:stop
 ```
 
-Use `infra:up` to resume. Do not use `down -v`, prune volumes or reset existing data as routine cleanup. Only this task's disposable UI fixture server was stopped at handoff; the final three apps and Docker services were left running for local review. Their availability is an observation at handoff, not a persistent service guarantee.
+Use `local:up` to resume all six services, or `infra:up` for the three infrastructure services only. Do not use `down -v`, prune volumes or reset existing data as routine cleanup. The historical S01 handoff left its three host apps and Docker services running; availability at that handoff was an observation, not a persistent service guarantee.
 
 ## Evidence, advisory and limits
 

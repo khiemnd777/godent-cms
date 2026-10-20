@@ -7,7 +7,10 @@ export function validateDatabaseUrl(value: string | undefined, role: string): st
   try {
     if (!value) throw new Error();
     const url = new URL(value);
-    if (!['postgres:', 'postgresql:'].includes(url.protocol) || url.hostname !== '127.0.0.1' || url.port !== '5888' ||
+    const dockerLocal = process.env.GCMS_DOCKER_LOCAL === '1';
+    const localEndpoint = url.hostname === '127.0.0.1' && url.port === '5888';
+    const containerEndpoint = dockerLocal && url.hostname === 'postgres' && url.port === '5432';
+    if (!['postgres:', 'postgresql:'].includes(url.protocol) || (!localEndpoint && !containerEndpoint) ||
         url.pathname !== '/gcms_s01' || decodeURIComponent(url.username) !== role || !url.password || url.hash || url.search) throw new Error();
     return value;
   } catch { throw new Error(`Invalid S02 database configuration for ${role}`); }

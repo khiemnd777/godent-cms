@@ -11,6 +11,21 @@ describe('S02 trust boundaries', () => {
       expect(() => validateDatabaseUrl(url, 'gcms_s02_auth')).toThrow();
     }
   });
+  it('accepts only the retained loopback or Compose database endpoint in local Docker mode', () => {
+    const previous = process.env.GCMS_DOCKER_LOCAL;
+    process.env.GCMS_DOCKER_LOCAL = '1';
+    try {
+      for (const endpoint of ['127.0.0.1:5888', 'postgres:5432']) {
+        expect(validateDatabaseUrl(`postgresql://gcms_s02_auth:synthetic@${endpoint}/gcms_s01`, 'gcms_s02_auth')).toContain(endpoint);
+      }
+      for (const endpoint of ['localhost:5888', 'postgres:5888', 'redis:5432']) {
+        expect(() => validateDatabaseUrl(`postgresql://gcms_s02_auth:synthetic@${endpoint}/gcms_s01`, 'gcms_s02_auth')).toThrow();
+      }
+    } finally {
+      if (previous === undefined) delete process.env.GCMS_DOCKER_LOCAL;
+      else process.env.GCMS_DOCKER_LOCAL = previous;
+    }
+  });
   it('rejects public-host cookie forwarding and all untrusted mutation origins', () => {
     expect(validateAuthRequest(new Request('http://127.0.0.1:5890/api/auth/sign-in/email', { method: 'POST', headers: { origin: 'http://127.0.0.1:5891' } }))).toBe(true);
     expect(validateAuthRequest(new Request('http://localhost:5890/api/auth/get-session'))).toBe(false);
