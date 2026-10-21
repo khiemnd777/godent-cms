@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-21T08:47:02.233Z",
+  "tables": 80,
+  "rows": 238945,
+  "changed": [],
+  "limits": "Exact application-table row multiset hashes. Auth schema excluded; no credential/session changes performed. Migration receipts checked separately."
+}

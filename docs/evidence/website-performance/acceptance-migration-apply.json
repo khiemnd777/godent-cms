@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-21T08:55:13.816Z",
+  "mode": "apply",
+  "migration": "0068_signature_listing_navigation.sql",
+  "checksum": "59d518579ce991c758ec1b218bce575d78e09993e70125185ea8d186a53376ef",
+  "retainedChecksums": 66,
+  "applied": true,
+  "intentionallyRolledBack": false,
+  "dispatchStarted": false
+}

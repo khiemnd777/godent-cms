@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "stage": "comparison.json",
+      "route": "home_vi",
+      "samplesPerPhase": 3,
+      "mediansAndReductionRecomputed": true,
+      "publicJsonEquivalent": null
+    },
+    {
+      "stage": "comparison.json",
+      "route": "home_en",
+      "samplesPerPhase": 3,
+      "mediansAndReductionRecomputed": true,
+      "publicJsonEquivalent": null
+    },
+    {
+      "stage": "comparison.json",
+      "route": "doctors_vi",
+      "samplesPerPhase": 3,
+      "mediansAndReductionRecomputed": true,
+      "publicJsonEquivalent": null
+    },
+    {
+      "stage": "comparison.json",
+      "route": "doctors_en",
+      "samplesPerPhase": 3,
+      "mediansAndReductionRecomputed": true,
+      "publicJsonEquivalent": null
+    },
+    {
+      "stage": "comparison.json",
+      "route": "home_api",
+      "samplesPerPhase": 3,
+      "mediansAndReductionRecomputed": true,
+      "publicJsonEquivalent": true
+    },
+    {
+      "stage": "comparison.json",
+      "route": "doctors_api",
+      "samplesPerPhase": 3,
+      "mediansAndReductionRecomputed": true,
+      "publicJsonEquivalent": true
+    },
+    {
+      "stage": "home-comparison.json",
+      "route": "home_vi",
+      "samplesPerPhase": 5,
+      "mediansAndReductionRecomputed": true,
+      "publicJsonEquivalent": null
+    },
+    {
+      "stage": "home-comparison.json",
+      "route": "home_en",
+      "samplesPerPhase": 5,
+      "mediansAndReductionRecomputed": true,
+      "publicJsonEquivalent": null
+    },
+    {
+      "stage": "home-comparison.json",
+      "route": "doctors_vi",
+      "samplesPerPhase": 5,
+      "mediansAndReductionRecomputed": true,
+      "publicJsonEquivalent": null
+    },
+    {
+      "stage": "home-comparison.json",
+      "route": "doctors_en",
+      "samplesPerPhase": 5,
+      "mediansAndReductionRecomputed": true,
+      "publicJsonEquivalent": null
+    },
+    {
+      "stage": "home-comparison.json",
+      "route": "home_api",
+      "samplesPerPhase": 5,
+      "mediansAndReductionRecomputed": true,
+      "publicJsonEquivalent": true
+    },
+    {
+      "stage": "home-comparison.json",
+      "route": "doctors_api",
+      "samplesPerPhase": 5,
+      "mediansAndReductionRecomputed": true,
+      "publicJsonEquivalent": true
+    }
+  ],
+  "artifactSha256": {
+    "before.json": "e91df118d01c30c9ba382eaea8cdb65d8b123d6cfed57c98b9393b50237b3bbd",
+    "after.json": "937f1719e61e7c1743461dc19e942ffe1934c8209fd97619f9c46cc385b1da1a",
+    "after-idle.json": "3274689dfbddf0c355cdc93c232e861604fa2fcc4fc5b244b29c7302533de5fc",
+    "comparison.json": "17fe2b7bd0f920cc47da90a298ca72cf9495b65732812d1e60e683f50a7b94ad",
+    "home-before.json": "f59adae927f0434723fa2ab7dc4c61b0b15bfc641f8637a81afbbbbeadfa2b17",
+    "home-after.json": "d0bb675f800852dd90d375787d2934ed7fab900f55654a9a3418c645b166e0da",
+    "home-comparison.json": "d2cfa053f1caf76e4bd3dff4f45eb757aab49186e9089b5563af2e57301a7b16"
+  },
+  "limits": "Recomputed from retained raw measurements; historical pre-change state not recreated during acceptance. Initial noisy after.json retained and excluded from first-stage reported comparison."
+}

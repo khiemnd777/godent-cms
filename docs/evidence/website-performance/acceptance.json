@@ -1,0 +1,161 @@
+{
+  "status": "ACCEPTED_UNDER_DELEGATED_AUTHORITY",
+  "recordedAt": "2026-10-21T08:59:35.132468+00:00",
+  "owner": "desktop /root, chat 01a15d87-b03e-7333-8cb9-f92d54109f2c",
+  "authority": "Direct human request recorded in GCMS-WEBSITE-PERF-001.md; coordinator local acceptance, not direct HUMAN_ACCEPTED.",
+  "scope": "Local performance repair 0066-0068 and bounded alternate-language metadata query; no commit/push/deploy.",
+  "effort": {
+    "matrix": "xHigh",
+    "humanRequested": "High",
+    "observed": "High",
+    "override": "Direct human instruction; no global policy change"
+  },
+  "review": {
+    "mode": "Sequential implementation-owner self-review",
+    "independentReviewer": false,
+    "openActionableFindings": 0,
+    "findings": [
+      {
+        "id": "R1",
+        "severity": "P2",
+        "status": "CLOSED",
+        "trigger": "Empty typed listing lost its link under 0067; 0064 registered-listing contract omitted from test oracle.",
+        "repair": "Forward migration 0068 restores exact 0064 listing gate; corrected historical oracle and empty VI/EN collection/config-head regression.",
+        "red": "Expected 2 listing links, observed 0 under 0067.",
+        "green": "Preapply rollback 6 tests/50 assertions; applied final SQL 11 tests/106 assertions."
+      }
+    ]
+  },
+  "checks": {
+    "sql": {
+      "status": "PASS",
+      "tests": 11,
+      "assertions": 106,
+      "command": "PUBLIC_READ_PERFORMANCE_SQL=1 node_modules/.bin/bun --env-file=.local/s02.env test apps/api/test/navigation-availability.test.ts apps/api/test/public-read-performance.test.ts",
+      "log": "acceptance-sql-tests.log"
+    },
+    "frontend": {
+      "status": "PASS",
+      "tests": 26,
+      "assertions": 209,
+      "command": "node_modules/.bin/bun test apps/website/proxy.test.ts apps/website/components/listing-alternates.test.ts apps/website/components/content-route.test.tsx",
+      "log": "acceptance-fe-tests.log"
+    },
+    "static": {
+      "status": "PASS",
+      "commands": [
+        "node_modules/.bin/bun --bun eslint apps/api/test/navigation-availability.test.ts scripts/website-performance-local.ts --max-warnings 0",
+        "node_modules/.bin/bun run --cwd apps/api typecheck",
+        "node_modules/.bin/bun --bun tsc --noEmit --project tsconfig.json"
+      ],
+      "ownedWhitespace": "PASS"
+    },
+    "catalog": {
+      "status": "PASS",
+      "migrationChecksums": 67,
+      "functionBodiesAndSafetyProperties": 17,
+      "helperRuntimeGrantsDenied": 8,
+      "evidence": "acceptance-integrity.json"
+    },
+    "httpDenial": {
+      "status": "PASS",
+      "cases": 6,
+      "evidence": "acceptance-http-boundaries.json"
+    },
+    "applicationData": {
+      "status": "PASS",
+      "tables": 80,
+      "rows": 238945,
+      "changed": 0,
+      "authSchemaExcluded": true,
+      "evidence": "acceptance-preservation.json"
+    },
+    "retainedFiles": {
+      "status": "PASS",
+      "baselineFiles": 49,
+      "expectedTaskEdits": [
+        "docs/tasks/GCMS-WEBSITE-PERF-001.md",
+        "scripts/website-performance-local.ts",
+        "scripts/website-performance-measure.py"
+      ],
+      "unexpectedChanges": []
+    },
+    "historicalMeasurementAudit": {
+      "status": "PASS",
+      "routeComparisons": 12,
+      "evidence": "acceptance-measurement-audit.json"
+    }
+  },
+  "performance": {
+    "unit": "milliseconds, median HTTP response completion",
+    "samplesPerRoute": 5,
+    "before": "Reused audited home-before.json; historical state was not recreated.",
+    "after": "Fresh final source after 0068, acceptance-current.json.",
+    "routes": {
+      "home_vi": {
+        "beforeMs": 980.32,
+        "finalMs": 539.45,
+        "reductionPercent": 45.0
+      },
+      "home_en": {
+        "beforeMs": 685.73,
+        "finalMs": 416.91,
+        "reductionPercent": 39.2
+      },
+      "doctors_vi": {
+        "beforeMs": 691.85,
+        "finalMs": 368.42,
+        "reductionPercent": 46.7
+      },
+      "doctors_en": {
+        "beforeMs": 568.79,
+        "finalMs": 294.26,
+        "reductionPercent": 48.3
+      },
+      "home_api": {
+        "beforeMs": 449.54,
+        "finalMs": 271.98,
+        "reductionPercent": 39.5
+      },
+      "doctors_api": {
+        "beforeMs": 274.36,
+        "finalMs": 139.02,
+        "reductionPercent": 49.3
+      }
+    },
+    "publicApiJsonEquivalent": true
+  },
+  "retainedEvidence": "Earlier build/browser/full-suite results reused within their recorded scope; no fresh browser-render claim.",
+  "correctedAuditInput": "Initial catalog comparison omitted the source-defined 0063 clock transformation. Replayed 0063/0064/0068 transforms from migration source; all 17 definitions match. No runtime function modified to fit the audit.",
+  "limits": [
+    "Local response completion only; browser paint/hydration and field Core Web Vitals NOT_RUN.",
+    "No independent reviewer.",
+    "Auth schema excluded from table hashes; no credential/session/auth operations performed.",
+    "Existing braces advisory remains FAIL/open with prior reassessment boundary and no Production waiver.",
+    "No commit, push, deploy or Production action."
+  ],
+  "sourcePins": {
+    "apps/api/migrations/0066_public_read_performance.sql": "cd3445a951e05d778c98441c946a42ce430a08cb2aa1ab9b5440ab7abe2bfcaf",
+    "apps/website/components/builder-route.tsx": "b61ee4640180f2f116c6b059ca0391df04e9f66b5d31ff9b1eee0d2508b9f5d8",
+    "apps/api/test/public-read-performance.test.ts": "6a14310f4fd0bb84bab6c3a809953120b3bbc4e7e255fe3f49c2705f35404ea5",
+    "apps/website/components/listing-alternates.test.ts": "6d7239c39c400c2f9653a1569815c8fe8cab3f31a20d0b3d2e12e5ac8a0ce968",
+    "scripts/website-performance-local.ts": "499f4f64410119695df72db54564394465b486fad8c8ae7d4b031ca55be69730",
+    "scripts/website-performance-measure.py": "6dbcb8c902bf72efd4fe79a602184bd832db46bda95e7eb4179afe10b7a843ff",
+    "apps/api/migrations/0067_navigation_availability.sql": "fbbfe405710b305e782abe522e7e49626719b038cd12d1e5448f0c1407c3dab8",
+    "apps/api/test/navigation-availability.test.ts": "2302048ff18129b450001f0587e64b33e0fd1dea329efb469e5ccd48fe7290e4",
+    "apps/api/migrations/0068_signature_listing_navigation.sql": "59d518579ce991c758ec1b218bce575d78e09993e70125185ea8d186a53376ef"
+  },
+  "evidenceSha256": {
+    "acceptance-current.json": "2ae4391d87f9a90722c58312761c639920a4e85e3b5aff953eccca0befb5f7ce",
+    "acceptance-effort.json": "ac4ad81dd9eeed5e9f857ea296911154b6ed18612ba7fc6564edd715d898c5bf",
+    "acceptance-fe-tests.log": "10a2f2c75f4579f3f99819b4a4183022a14f5046e68cb3d53b89ecf3921b44df",
+    "acceptance-http-boundaries.json": "fab75a071b319a75ca24f0e8cda963742e71dae6f2df516d2e3e3e3397c3a2d5",
+    "acceptance-initial-source-integrity.json": "ce2690ee86f1848cf1565877b991bae52d015b18bfc6c49ed0728ca3e190955c",
+    "acceptance-integrity.json": "0f539f57a2b90d5ab12dde72808b4155f2004f5139bca2615c2860da1bbc1b6f",
+    "acceptance-measurement-audit.json": "9276ed00607c31f58006a98fe496a0f67849ff50c6abb2d43e786268f2c9f0df",
+    "acceptance-migration-apply.json": "03ee2e3578ec91cc908d885bc3d05745500edae5f76d4ef2155c908bfa9cddc9",
+    "acceptance-migration-compile.json": "6096aef3cebaf4a425054ae605f49a5e0f48492dcfbfcbfbfda4e230e0254d50",
+    "acceptance-preservation.json": "96c826167cb962fad6f0c30b2e94d7fa78ee3b4ebd8d78ceac2de116342aa4bf",
+    "acceptance-sql-tests.log": "08339bdaa84f1501f04fc9cd7f1e31a9d47fb3287ce236de7d9ff9329369d2e1"
+  }
+}

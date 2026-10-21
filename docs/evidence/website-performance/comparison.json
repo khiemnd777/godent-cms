@@ -1,0 +1,45 @@
+{
+  "recordedAt": "2026-10-21T08:30:57Z",
+  "comparison": "Same sequential HTTP probes, three requests per route. after-idle ran without overlapping local checks. Initial after.json overlapped typechecks and is retained as a noisy attempt.",
+  "routes": {
+    "home_vi": {
+      "beforeMedianMs": 1132.17,
+      "afterMedianMs": 1121.91,
+      "reductionPercent": 0.9,
+      "allStatus200": true
+    },
+    "home_en": {
+      "beforeMedianMs": 1103.53,
+      "afterMedianMs": 829.98,
+      "reductionPercent": 24.8,
+      "allStatus200": true
+    },
+    "doctors_vi": {
+      "beforeMedianMs": 6516.27,
+      "afterMedianMs": 796.21,
+      "reductionPercent": 87.8,
+      "allStatus200": true
+    },
+    "doctors_en": {
+      "beforeMedianMs": 6688.27,
+      "afterMedianMs": 685.52,
+      "reductionPercent": 89.8,
+      "allStatus200": true
+    },
+    "home_api": {
+      "beforeMedianMs": 562.91,
+      "afterMedianMs": 520.78,
+      "reductionPercent": 7.5,
+      "allStatus200": true,
+      "allPublicJsonEquivalent": true
+    },
+    "doctors_api": {
+      "beforeMedianMs": 2118.9,
+      "afterMedianMs": 305.87,
+      "reductionPercent": 85.6,
+      "allStatus200": true,
+      "allPublicJsonEquivalent": true
+    }
+  },
+  "limits": "Server response completion, not browser paint/hydration or field Core Web Vitals. VI homepage is effectively unchanged; do not claim a measured improvement there."
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-21T08:26:47.755Z",
+  "mode": "apply",
+  "migration": "0066_public_read_performance.sql",
+  "checksum": "cd3445a951e05d778c98441c946a42ce430a08cb2aa1ab9b5440ab7abe2bfcaf",
+  "retainedChecksums": 64,
+  "applied": true,
+  "intentionallyRolledBack": false,
+  "dispatchStarted": false
+}

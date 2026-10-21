@@ -1,0 +1,38 @@
+bun test v1.4.3 (c6da4a4d3)
+
+apps/website/proxy.test.ts:
+(pass) local public entry and credential boundary > rejects the administration cookie host alias before public rendering [1.00ms]
+(pass) local public entry and credential boundary > removes credentials and untrusted forwarding on the public platform root [0.14ms]
+(pass) local public entry and credential boundary > resolves exact custom hostname and rewrites the site root using server tenant identity [2.63ms]
+(pass) local public entry and credential boundary > does not select another tenant from a custom path prefix [0.17ms]
+(pass) local public entry and credential boundary > rejects unknown bindings and never uses caller forwarded-host as authority [0.07ms]
+(pass) local public entry and credential boundary > pins VI and EN publication and configuration and removes caller pin replacements [0.42ms]
+(pass) local public entry and credential boundary > returns exact301 directly to same-language custom primary for GET and HEAD [0.38ms]
+(pass) local public entry and credential boundary > returns one302 directly to primary VI for missing EN without a301 chain [0.08ms]
+(pass) local public entry and credential boundary > preserves Signature homepage search text and kind across locale fallback, but clears the old locale cursor [0.51ms]
+(pass) local public entry and credential boundary > preserves a same-language listing cursor and resets it for locale fallback [0.40ms]
+(pass) local public entry and credential boundary > keeps backend failure or stale pins as503 without language or host fallback [0.18ms]
+(pass) local public entry and credential boundary > does not redirect or dispatch unsupported page POST [0.05ms]
+(pass) local public entry and credential boundary > returns400 for ambiguous functional query rather than dropping it into a redirect [0.07ms]
+(pass) serves a valid custom binding with Godent canonical after explicit return without a reverse301 [0.14ms]
+(pass) routes exact metadata paths through the real API entry parser [0.30ms]
+(pass) keeps custom robots bound, nonredirecting and excluded from indexing [0.10ms]
+(pass) does not generalize metadata support to dotted nested or encoded tenant paths [0.04ms]
+(pass) keeps real-adapter page and metadata rewrites internal when rawURL uses the loopback listener [18.49ms]
+
+apps/website/components/listing-alternates.test.ts:
+(pass) language metadata uses a current bounded read in the other locale and keeps its canonical URL [0.35ms]
+(pass) a missing other-locale list adds no language link and read errors remain errors [0.08ms]
+
+apps/website/components/content-route.test.tsx:
+(pass) the VI adopted listing forwards pageSize to M4 and renders six doctors, the selected size and its real continuation [8.76ms]
+(pass) VI metadata and body use the same adopted paging, cursor and identity query [0.33ms]
+(pass) adopted M4 rejects an invalid or duplicated pageSize in both body and metadata [0.49ms]
+(pass) invalid M4 pageSize uses a neutral probe instead of replaying a cursor outside its size context [1.53ms]
+(pass) a neutral presentation probe does not remove the original legacy cursor or filters [0.63ms]
+(pass) legacy fallback keeps ignoring unknown pageSize while preserving its existing query validation [1.80ms]
+
+ 26 pass
+ 0 fail
+ 209 expect() calls
+Ran 26 tests across 3 files. [117.00ms]

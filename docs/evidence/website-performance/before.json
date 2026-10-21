@@ -1,0 +1,174 @@
+{
+  "phase": "before",
+  "recordedAt": "2026-10-21T08:24:03Z",
+  "routes": {
+    "home_vi": {
+      "url": "http://localhost:5892/lac-van",
+      "samples": [
+        {
+          "status": 200,
+          "headersMs": 609.37,
+          "totalMs": 1190.16,
+          "bytes": 105999,
+          "cacheControl": "no-store"
+        },
+        {
+          "status": 200,
+          "headersMs": 558.64,
+          "totalMs": 1130.23,
+          "bytes": 105999,
+          "cacheControl": "no-store"
+        },
+        {
+          "status": 200,
+          "headersMs": 559.84,
+          "totalMs": 1132.17,
+          "bytes": 105999,
+          "cacheControl": "no-store"
+        }
+      ],
+      "medianMs": 1132.17
+    },
+    "home_en": {
+      "url": "http://localhost:5892/lac-van/en",
+      "samples": [
+        {
+          "status": 200,
+          "headersMs": 538.3,
+          "totalMs": 1103.52,
+          "bytes": 103394,
+          "cacheControl": "no-store"
+        },
+        {
+          "status": 200,
+          "headersMs": 561.76,
+          "totalMs": 1122.47,
+          "bytes": 103394,
+          "cacheControl": "no-store"
+        },
+        {
+          "status": 200,
+          "headersMs": 561.82,
+          "totalMs": 1103.53,
+          "bytes": 103394,
+          "cacheControl": "no-store"
+        }
+      ],
+      "medianMs": 1103.53
+    },
+    "doctors_vi": {
+      "url": "http://localhost:5892/lac-van/bac-si",
+      "samples": [
+        {
+          "status": 200,
+          "headersMs": 2037.05,
+          "totalMs": 6324.35,
+          "bytes": 57834,
+          "cacheControl": "no-store"
+        },
+        {
+          "status": 200,
+          "headersMs": 2236.62,
+          "totalMs": 6610.06,
+          "bytes": 57834,
+          "cacheControl": "no-store"
+        },
+        {
+          "status": 200,
+          "headersMs": 2108.74,
+          "totalMs": 6516.27,
+          "bytes": 57834,
+          "cacheControl": "no-store"
+        }
+      ],
+      "medianMs": 6516.27
+    },
+    "doctors_en": {
+      "url": "http://localhost:5892/lac-van/en/bac-si",
+      "samples": [
+        {
+          "status": 200,
+          "headersMs": 2206.88,
+          "totalMs": 6867.7,
+          "bytes": 57502,
+          "cacheControl": "no-store"
+        },
+        {
+          "status": 200,
+          "headersMs": 2337.99,
+          "totalMs": 6688.27,
+          "bytes": 57502,
+          "cacheControl": "no-store"
+        },
+        {
+          "status": 200,
+          "headersMs": 2232.75,
+          "totalMs": 6561.96,
+          "bytes": 57502,
+          "cacheControl": "no-store"
+        }
+      ],
+      "medianMs": 6688.27
+    },
+    "home_api": {
+      "url": "http://127.0.0.1:5890/api/public/builder/lac-van/vi/home/home",
+      "samples": [
+        {
+          "status": 200,
+          "headersMs": 555.96,
+          "totalMs": 556.16,
+          "bytes": 191242,
+          "cacheControl": "private, no-store, max-age=0",
+          "jsonSha256": "f202afafc56aa649a8ac91a45a53f890ef15d222be8067bccb2cd7359f75813f"
+        },
+        {
+          "status": 200,
+          "headersMs": 567.18,
+          "totalMs": 567.36,
+          "bytes": 191242,
+          "cacheControl": "private, no-store, max-age=0",
+          "jsonSha256": "f202afafc56aa649a8ac91a45a53f890ef15d222be8067bccb2cd7359f75813f"
+        },
+        {
+          "status": 200,
+          "headersMs": 562.78,
+          "totalMs": 562.91,
+          "bytes": 191242,
+          "cacheControl": "private, no-store, max-age=0",
+          "jsonSha256": "f202afafc56aa649a8ac91a45a53f890ef15d222be8067bccb2cd7359f75813f"
+        }
+      ],
+      "medianMs": 562.91
+    },
+    "doctors_api": {
+      "url": "http://127.0.0.1:5890/api/public/builder/lac-van/vi/doctor",
+      "samples": [
+        {
+          "status": 200,
+          "headersMs": 2122.39,
+          "totalMs": 2122.48,
+          "bytes": 53607,
+          "cacheControl": "private, no-store, max-age=0",
+          "jsonSha256": "f438cc0cb3c60d0705e03ad32d0bb7415cdcde1e78c6726aaa4f843e44c5f878"
+        },
+        {
+          "status": 200,
+          "headersMs": 2118.56,
+          "totalMs": 2118.9,
+          "bytes": 53607,
+          "cacheControl": "private, no-store, max-age=0",
+          "jsonSha256": "f438cc0cb3c60d0705e03ad32d0bb7415cdcde1e78c6726aaa4f843e44c5f878"
+        },
+        {
+          "status": 200,
+          "headersMs": 2090.05,
+          "totalMs": 2090.18,
+          "bytes": 53607,
+          "cacheControl": "private, no-store, max-age=0",
+          "jsonSha256": "f438cc0cb3c60d0705e03ad32d0bb7415cdcde1e78c6726aaa4f843e44c5f878"
+        }
+      ],
+      "medianMs": 2118.9
+    }
+  }
+}

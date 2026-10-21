@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "sourcePins": {
+    "apps/api/migrations/0066_public_read_performance.sql": true,
+    "apps/website/components/builder-route.tsx": true,
+    "apps/api/test/public-read-performance.test.ts": true,
+    "apps/website/components/listing-alternates.test.ts": true,
+    "scripts/website-performance-local.ts": true,
+    "scripts/website-performance-measure.py": true,
+    "apps/api/migrations/0067_navigation_availability.sql": true,
+    "apps/api/test/navigation-availability.test.ts": true
+  },
+  "note": "Candidate before the review-discovered empty-list navigation repair."
+}

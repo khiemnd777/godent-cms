@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-21T08:57:31Z",
+  "checks": [
+    {
+      "case": "anonymous_private_config",
+      "expectedStatus": 401,
+      "actualStatus": 401
+    },
+    {
+      "case": "stale_primary_context",
+      "expectedStatus": 409,
+      "actualStatus": 409
+    },
+    {
+      "case": "missing_public_tenant",
+      "expectedStatus": 404,
+      "actualStatus": 404
+    },
+    {
+      "case": "invalid_locale",
+      "expectedStatus": 400,
+      "actualStatus": 400
+    },
+    {
+      "case": "unsupported_website_host",
+      "path": "/lac-van",
+      "expectedStatus": 421,
+      "actualStatus": 421
+    },
+    {
+      "case": "unsupported_website_host",
+      "path": "/lac-van/bac-si",
+      "expectedStatus": 421,
+      "actualStatus": 421
+    }
+  ],
+  "websiteRuntimeSource": {
+    "file": "apps/website/components/builder-route.tsx",
+    "sha256": "b61ee4640180f2f116c6b059ca0391df04e9f66b5d31ff9b1eee0d2508b9f5d8",
+    "matchesWorkspace": true
+  },
+  "limits": "Anonymous read-only HTTP boundary probes; no credentials/session values or private content read. SQL regression separately verifies publication and media/text revocation."
+}

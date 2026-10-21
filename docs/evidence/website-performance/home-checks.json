@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "scope": "GCMS-WEBSITE-PERF-001 VI homepage follow-up",
+  "effort": "High under renewed direct human override; original matrix mismatch retained in home-effort.json.",
+  "review": "Sequential self-review; no independent reviewer ran.",
+  "migration": {
+    "name": "0067_navigation_availability.sql",
+    "priorChecksumsVerified": 65,
+    "totalAppliedReceipts": 66,
+    "preApplyCompile": "PASS, intentionally rolled back",
+    "preApplyRegression": "5 tests / 40 assertions PASS, all transactions rolled back",
+    "applicationRestart": false,
+    "applicationBuild": "NOT_RUN: SQL-only behavior change; no application/lockfile/dependency changes."
+  },
+  "checks": {
+    "sql": {
+      "command": "PUBLIC_READ_PERFORMANCE_SQL=1 node_modules/.bin/bun --env-file=.local/s02.env test apps/api/test/navigation-availability.test.ts apps/api/test/public-read-performance.test.ts",
+      "result": "PASS",
+      "tests": 10,
+      "assertions": 96,
+      "coverage": [
+        "all clinic variants, locales and depth limits compared to unchanged full projection",
+        "navigation and target JSON identical to historical definitions",
+        "owner-only helper ACL; runtime roles denied",
+        "unpublish and required-reference denial",
+        "pinned and active publication text-permission withdrawal",
+        "pending drafts, media withdrawal, foreign-tenant denial and tenant suspension",
+        "missing locale config and exact fallback"
+      ]
+    },
+    "website": {
+      "command": "node_modules/.bin/bun test apps/website/proxy.test.ts apps/website/components/listing-alternates.test.ts apps/website/components/content-route.test.tsx",
+      "result": "PASS",
+      "tests": 26,
+      "assertions": 209
+    },
+    "static": {
+      "result": "PASS",
+      "commands": [
+        "node_modules/.bin/bun --bun eslint apps/api/test/navigation-availability.test.ts scripts/website-performance-local.ts --max-warnings 0",
+        "node_modules/.bin/bun run --cwd apps/api typecheck",
+        "node_modules/.bin/bun --bun tsc --noEmit --project tsconfig.json"
+      ],
+      "whitespace": "Owned changed/new files PASS"
+    },
+    "browser": {
+      "result": "PASS",
+      "observations": [
+        "VI homepage fully rendered with its hero, content, navigation and language links",
+        "Actual D\u1ecbch v\u1ee5 navigation opened and fully rendered the service overview",
+        "No error/warning console entries observed on the homepage"
+      ],
+      "timing": "NOT_RUN: browser paint/hydration timing unavailable in exposed Performance API scope."
+    },
+    "preservation": {
+      "result": "PASS",
+      "tables": 80,
+      "rows": 238945,
+      "baselineExistingFiles": 49,
+      "expectedOwnedFileEdits": 3,
+      "unrelatedFileEdits": 0,
+      "limits": "Auth schema excluded from row hashing; no auth/session/credential writes. Old migrations, prior performance evidence and hero typography work preserved."
+    }
+  },
+  "retainedFailures": [
+    "Expected red assertion before 0067 installation.",
+    "Pre-apply test passed JSON strings without explicit text cast; corrected to ::text::jsonb.",
+    "Pre-apply text-revocation test selected latest testimonial publication rather than exact older snapshot pinned by homepage. Selector corrected; same denial assertions passed."
+  ],
+  "scopeLimits": [
+    "Local server response timing only, not browser paint/hydration, field Core Web Vitals or Production.",
+    "No cross-request cache or public API shape change.",
+    "Full page/media projections and proxy revalidation retained.",
+    "No commit, push, deployment, restart, credential or global configuration changes.",
+    "Existing advisory FAIL and previous proof limits remain."
+  ],
+  "sourceSha256": {
+    "apps/api/migrations/0067_navigation_availability.sql": "fbbfe405710b305e782abe522e7e49626719b038cd12d1e5448f0c1407c3dab8",
+    "apps/api/test/navigation-availability.test.ts": "8e715eab24445bd46a17895d38476110dec101f34bf2b200378a4dcb45989b2c",
+    "scripts/website-performance-local.ts": "320ccc6ae9cf62497f1bdceb7e8c509a1665f03d0b82d743bac3801aa9d99d47",
+    "scripts/website-performance-measure.py": "6dbcb8c902bf72efd4fe79a602184bd832db46bda95e7eb4179afe10b7a843ff"
+  }
+}

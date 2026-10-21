@@ -1,0 +1,93 @@
+{
+  "recordedAt": "2026-10-21T08:44:51Z",
+  "method": "Five sequential public HTTP requests per route in each phase, no concurrent tests/builds; median server-response completion. Same website/API containers and configuration; SQL migration only.",
+  "routes": {
+    "home_vi": {
+      "beforeMedianMs": 980.32,
+      "afterMedianMs": 527.57,
+      "reductionPercent": 46.2,
+      "beforeRangeMs": [
+        934.11,
+        1053.0
+      ],
+      "afterRangeMs": [
+        519.89,
+        615.2
+      ],
+      "allStatus200": true
+    },
+    "home_en": {
+      "beforeMedianMs": 685.73,
+      "afterMedianMs": 427.38,
+      "reductionPercent": 37.7,
+      "beforeRangeMs": [
+        677.14,
+        735.05
+      ],
+      "afterRangeMs": [
+        414.68,
+        434.67
+      ],
+      "allStatus200": true
+    },
+    "doctors_vi": {
+      "beforeMedianMs": 691.85,
+      "afterMedianMs": 362.92,
+      "reductionPercent": 47.5,
+      "beforeRangeMs": [
+        677.41,
+        723.3
+      ],
+      "afterRangeMs": [
+        352.59,
+        374.41
+      ],
+      "allStatus200": true
+    },
+    "doctors_en": {
+      "beforeMedianMs": 568.79,
+      "afterMedianMs": 318.03,
+      "reductionPercent": 44.1,
+      "beforeRangeMs": [
+        560.66,
+        581.2
+      ],
+      "afterRangeMs": [
+        295.63,
+        384.24
+      ],
+      "allStatus200": true
+    },
+    "home_api": {
+      "beforeMedianMs": 449.54,
+      "afterMedianMs": 269.69,
+      "reductionPercent": 40.0,
+      "beforeRangeMs": [
+        446.89,
+        458.13
+      ],
+      "afterRangeMs": [
+        262.53,
+        271.06
+      ],
+      "allStatus200": true,
+      "allPublicJsonEquivalent": true
+    },
+    "doctors_api": {
+      "beforeMedianMs": 274.36,
+      "afterMedianMs": 147.47,
+      "reductionPercent": 46.2,
+      "beforeRangeMs": [
+        267.59,
+        282.26
+      ],
+      "afterRangeMs": [
+        144.14,
+        149.46
+      ],
+      "allStatus200": true,
+      "allPublicJsonEquivalent": true
+    }
+  },
+  "limits": "Local server response timings; not browser paint/hydration, field Core Web Vitals or Production proof. Earlier 1.12 s observation remains historical; fresh follow-up baseline is reported here."
+}

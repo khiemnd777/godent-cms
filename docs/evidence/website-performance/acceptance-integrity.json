@@ -1,0 +1,184 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-21T08:56:27.996265+00:00",
+  "appliedMigrationChecksums": 67,
+  "sourceSha256": {
+    "apps/api/migrations/0066_public_read_performance.sql": "cd3445a951e05d778c98441c946a42ce430a08cb2aa1ab9b5440ab7abe2bfcaf",
+    "apps/website/components/builder-route.tsx": "b61ee4640180f2f116c6b059ca0391df04e9f66b5d31ff9b1eee0d2508b9f5d8",
+    "apps/api/test/public-read-performance.test.ts": "6a14310f4fd0bb84bab6c3a809953120b3bbc4e7e255fe3f49c2705f35404ea5",
+    "apps/website/components/listing-alternates.test.ts": "6d7239c39c400c2f9653a1569815c8fe8cab3f31a20d0b3d2e12e5ac8a0ce968",
+    "scripts/website-performance-local.ts": "499f4f64410119695df72db54564394465b486fad8c8ae7d4b031ca55be69730",
+    "scripts/website-performance-measure.py": "6dbcb8c902bf72efd4fe79a602184bd832db46bda95e7eb4179afe10b7a843ff",
+    "apps/api/migrations/0067_navigation_availability.sql": "fbbfe405710b305e782abe522e7e49626719b038cd12d1e5448f0c1407c3dab8",
+    "apps/api/test/navigation-availability.test.ts": "2302048ff18129b450001f0587e64b33e0fd1dea329efb469e5ccd48fe7290e4",
+    "apps/api/migrations/0068_signature_listing_navigation.sql": "59d518579ce991c758ec1b218bce575d78e09993e70125185ea8d186a53376ef"
+  },
+  "sourceChangesWithinR1Repair": [
+    "scripts/website-performance-local.ts",
+    "apps/api/test/navigation-availability.test.ts"
+  ],
+  "functionDefinitions": [
+    {
+      "function": "decorate_with_config",
+      "arguments": 5,
+      "source": "0066_public_read_performance.sql",
+      "matchesBodyAndSafetyProperties": true,
+      "bodyMd5": "428131f7442437a60e00bfa6185f3a04"
+    },
+    {
+      "function": "decorate",
+      "arguments": 3,
+      "source": "0066_public_read_performance.sql",
+      "matchesBodyAndSafetyProperties": true,
+      "bodyMd5": "9a871a4d832dc02aca335570a66761c6"
+    },
+    {
+      "function": "public_list",
+      "arguments": 9,
+      "source": "0066_public_read_performance.sql",
+      "matchesBodyAndSafetyProperties": true,
+      "bodyMd5": "1bb67d05b61f0f12722fd99bb2ec028e"
+    },
+    {
+      "function": "navigation_available",
+      "arguments": 6,
+      "source": "0067_navigation_availability.sql",
+      "matchesBodyAndSafetyProperties": true,
+      "bodyMd5": "c6ba5dc83507cff7fee04b49b7bff9f0"
+    },
+    {
+      "function": "target_path",
+      "arguments": 3,
+      "source": "0067_navigation_availability.sql",
+      "matchesBodyAndSafetyProperties": true,
+      "bodyMd5": "a5b24196acc4389a0f79213f399a83bc"
+    },
+    {
+      "function": "signature_navigation",
+      "arguments": 4,
+      "source": "0067_navigation_availability.sql + 0068 listing contract",
+      "matchesBodyAndSafetyProperties": true,
+      "bodyMd5": "27b4c66dbd23c996a1f0eff69ec522f8"
+    },
+    {
+      "function": "private_signature_navigation",
+      "arguments": 4,
+      "source": "0060_signature_template.sql + 0064 listing contract",
+      "matchesBodyAndSafetyProperties": true,
+      "bodyMd5": "d9595c1cd66518b4661af9e711952a12"
+    },
+    {
+      "function": "project_core",
+      "arguments": 7,
+      "source": "0060_signature_template.sql + 0063 clock repair",
+      "matchesBodyAndSafetyProperties": true,
+      "bodyMd5": "d0f382df0e5b2a075b724a937d8c7ff9"
+    },
+    {
+      "function": "project",
+      "arguments": 6,
+      "source": "0039_m4_boundary_repairs.sql",
+      "matchesBodyAndSafetyProperties": true,
+      "bodyMd5": "16b6d46e5e750279c817661447ecea04"
+    },
+    {
+      "function": "read_public",
+      "arguments": 4,
+      "source": "0033_m4_public_reads.sql",
+      "matchesBodyAndSafetyProperties": true,
+      "bodyMd5": "10f56a22c05f948398b8a77c20a03693"
+    },
+    {
+      "function": "media_target",
+      "arguments": 7,
+      "source": "0060_signature_template.sql",
+      "matchesBodyAndSafetyProperties": true,
+      "bodyMd5": "58d559e91c9547b0d2e2287204bef84d"
+    },
+    {
+      "function": "reference_eligible",
+      "arguments": 2,
+      "source": "0033_m4_public_reads.sql",
+      "matchesBodyAndSafetyProperties": true,
+      "bodyMd5": "4794ef2799ddd5c7b5ffa13adb3fb9f4"
+    },
+    {
+      "function": "text_allowed",
+      "arguments": 5,
+      "source": "0032_m4_publication.sql",
+      "matchesBodyAndSafetyProperties": true,
+      "bodyMd5": "8f73b30b6dbd9c32bb3587eb895f648a"
+    },
+    {
+      "function": "asset_allowed",
+      "arguments": 6,
+      "source": "0049_m4_locale_asset_use_withdrawal.sql",
+      "matchesBodyAndSafetyProperties": true,
+      "bodyMd5": "0564fe6941aa1cc57c7d752b39169e91"
+    },
+    {
+      "function": "config",
+      "arguments": 2,
+      "source": "0065_signature_hero_typography.sql",
+      "matchesBodyAndSafetyProperties": true,
+      "bodyMd5": "488713070905b1b678665b30dae65967"
+    },
+    {
+      "function": "config_before_signature",
+      "arguments": 2,
+      "source": "0033_m4_public_reads.sql",
+      "matchesBodyAndSafetyProperties": true,
+      "bodyMd5": "8edd342e8939319ced83cb2509ce45a4"
+    },
+    {
+      "function": "config_before_hero_typography",
+      "arguments": 2,
+      "source": "0060_signature_template.sql",
+      "matchesBodyAndSafetyProperties": true,
+      "bodyMd5": "7e711228953ba4df42d03d48bc661286"
+    }
+  ],
+  "helperRuntimePrivileges": [
+    {
+      "proname": "decorate_with_config",
+      "rolname": "gcms_s02_auth",
+      "allowed": false
+    },
+    {
+      "proname": "decorate_with_config",
+      "rolname": "gcms_s02_tenant",
+      "allowed": false
+    },
+    {
+      "proname": "decorate_with_config",
+      "rolname": "gcms_s02_platform",
+      "allowed": false
+    },
+    {
+      "proname": "decorate_with_config",
+      "rolname": "gcms_s04_intake",
+      "allowed": false
+    },
+    {
+      "proname": "navigation_available",
+      "rolname": "gcms_s02_auth",
+      "allowed": false
+    },
+    {
+      "proname": "navigation_available",
+      "rolname": "gcms_s02_tenant",
+      "allowed": false
+    },
+    {
+      "proname": "navigation_available",
+      "rolname": "gcms_s02_platform",
+      "allowed": false
+    },
+    {
+      "proname": "navigation_available",
+      "rolname": "gcms_s04_intake",
+      "allowed": false
+    }
+  ],
+  "method": "Read-only PostgreSQL catalog. Body hashes compared to applied migration source, including explicit dynamic transforms from 0063/0064/0068; STABLE, SECURITY DEFINER, search_path and owner checked. No DDL or business data change."
+}

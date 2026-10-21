@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-21T08:42:00.109Z",
+  "mode": "compile",
+  "migration": "0067_navigation_availability.sql",
+  "checksum": "fbbfe405710b305e782abe522e7e49626719b038cd12d1e5448f0c1407c3dab8",
+  "retainedChecksums": 65,
+  "applied": false,
+  "intentionallyRolledBack": true,
+  "dispatchStarted": false
+}

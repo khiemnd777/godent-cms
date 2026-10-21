@@ -1,0 +1,21 @@
+bun test v1.4.3 (c6da4a4d3)
+
+apps/api/test/navigation-availability.test.ts:
+(pass) navigation reachability preserves publication eligibility > helper is installed and runtime roles cannot call it [23.81ms]
+(pass) navigation reachability preserves publication eligibility > availability equals the unchanged full projection for all clinic variants, both locales and depth limits [548.63ms]
+(pass) navigation reachability preserves publication eligibility > full navigation trees and every resource target match historical output [792.20ms]
+(pass) navigation reachability preserves publication eligibility > empty registered collections stay linked; EN requires a current Published configuration head [20.77ms]
+(pass) navigation reachability preserves publication eligibility > required-reference revocation removes the homepage and its navigation link immediately [74.39ms]
+(pass) navigation reachability preserves publication eligibility > pinned text permission withdrawal, unpublished locale fallback and tenant isolation remain enforced [53.15ms]
+
+apps/api/test/public-read-performance.test.ts:
+(pass) public read performance preserves current publication boundaries > migration is installed and caller-supplied configuration helper is inaccessible to runtime roles [7.97ms]
+(pass) public read performance preserves current publication boundaries > VI/EN list and detail JSON exactly match original projection, including filters and pagination [33513.67ms]
+(pass) public read performance preserves current publication boundaries > statement-local reuse observes unpublish, tenant suspension and withdrawn text permission without stale results [2245.71ms]
+(pass) public read performance preserves current publication boundaries > public media revocation and foreign-tenant denial remain current after a previously successful read [1585.23ms]
+(pass) public read performance preserves current publication boundaries > missing locale configuration preserves null handling and original fallback behavior [1042.37ms]
+
+ 11 pass
+ 0 fail
+ 106 expect() calls
+Ran 11 tests across 2 files. [39.92s]

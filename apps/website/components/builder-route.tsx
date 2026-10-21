@@ -63,7 +63,8 @@ async function BuilderRelated({ page, tenant }: { page: PublicM4Page; tenant: st
   return <>{lists.map((list, index) => !list?.items.length ? null : <section className="builder-section" key={kinds[index]}><h2>{BUILDER_LABELS[locale][kinds[index]]}</h2><BuilderCards urlBase={publicUrlBase(page)} references={list.items} locale={locale}/><nav className="public-pagination" aria-label={locale === "en" ? "Related pages" : "Danh sách liên quan"}><a href={publicHref(tenant, locale, kinds[index], undefined, publicUrlBase(page)) + search}>{locale === "en" ? "View the full list" : "Xem danh sách đầy đủ"}</a>{list.nextCursor && <a href={publicHref(tenant, locale, kinds[index], undefined, publicUrlBase(page)) + builderListSearch({ ...query, cursor: list.nextCursor })}>{locale === "en" ? "Next page" : "Trang tiếp"}</a>}</nav></section>)}</>;
 }
 export const listingAlternates = cache(async (tenant: string, locale: M4Locale, kind: M4Kind, canonical: string) => {
-  const otherLocale = locale === "en" ? "vi" : "en", other = await loadBuilderList(tenant, otherLocale, kind, "");
+  // Language metadata needs the eligible list identity, not the full first page.
+  const otherLocale = locale === "en" ? "vi" : "en", other = await loadBuilderList(tenant, otherLocale, kind, builderListSearch({ pageSize: 1 }));
   return [{ locale, url: canonical }, ...(other ? [{ locale: otherLocale as M4Locale, url: other.canonicalUrl }] : [])];
 });
 export async function listingPageMetadata(page: M4PublicList, tenant: string, locale: M4Locale, kind: M4Kind): Promise<Metadata> {
