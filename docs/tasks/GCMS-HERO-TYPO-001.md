@@ -136,3 +136,52 @@ Git delivery không mở rộng bằng chứng: browser CMS editor/private previ
 Tiếp tục High theo lựa chọn trực tiếp của Khiêm cho gói. Runtime hiện tại ghi `gpt-6.1-sol/high`; phép so exact với category mechanical `implementation/medium` trả mismatch, không thay đổi policy/settings để khớp. Đây là thao tác Git trên package đã chốt, không có sửa đổi permission/publication. Trình tự được duyệt: stage allowlist, rà staged diff/whitespace và bytes, normal commit/push, rồi xác minh SHA remote/parity và file bị loại còn nguyên. Không deploy.
 
 **Staged verification:** 58/58 paths khớp allowlist; mọi staged blob khớp bytes workspace và source pins đã nghiệm thu. Full `git diff --cached --check` **FAIL** chỉ tại 93 dòng CRLF của `apps/website/app/fonts/DMSerifDisplay-OFL.txt`; 57 files còn lại PASS. Đây là bản giấy phép nguyên bytes/hash `a3e5cdd67d4571dd0a24fcc968de0efde7ae97ef752daf0906e4767619dd7231` đã được giữ trong baseline, không phải source regression hoặc file được chuẩn hóa lại. Giữ FAIL/cảnh báo này trong hồ sơ; không tắt hook/check, không sửa Git configuration. Kết quả `git diff --check` PASS trước đó chỉ áp dụng tracked diff ở checkpoint review, không bao gồm license khi đó còn untracked. Artifact thiết kế bị loại vẫn khớp hash, và không có thay đổi ngoài task record kể từ khi chụp snapshot Git delivery.
+
+## Kiểm chứng CMS editor/private preview có đăng nhập — 2026-10-21
+
+**Quyền hiện tại:** Khiêm: “Dùng High, kiểm chứng phần CMS editor/private preview VI/EN của gói hero typography còn NOT_RUN bằng phiên đăng nhập hợp lệ. Giữ nguyên quyền, publication, revocation; chưa xuất bản thêm nội dung, commit/push hoặc deploy.” Khi CMS hiển thị yêu cầu đăng nhập, Khiêm chỉ định tiếp: **“Tự đăng nhập cho tôi”**. Desktop `/root` trong chat `01a15d87-b03e-7333-8cb9-f92d54109f2c` thực hiện kiểm chứng này. Quyền Git của lần trước đã được thực hiện bằng commit `dafd573b1c705a32a81945fd084e16dd751c290e`; chỉ định hiện tại không cấp Git delivery mới.
+
+**Kết quả: CMS_BROWSER_VERIFIED_LOCAL.** Phần browser editor/private preview trước đây NOT_RUN nay có bằng chứng authenticated UI theo phạm vi dưới đây. Không sửa `acceptance.json` hay bằng chứng lịch sử để biến checkpoint cũ thành PASS. Không thay đổi trạng thái nghiệm thu ủy quyền thành phát biểu HUMAN_ACCEPTED mới.
+
+High là lựa chọn trực tiếp cho lượt này. Runtime ghi `gpt-6.1-sol/high`; matrix thông thường yêu cầu xHigh cho permission/publication, giữ mismatch exact-effort cùng override trực tiếp; không thay settings/policy. Source vẫn là commit `dafd573`; không sửa application source hoặc migration. Source/evidence pins của lần nghiệm thu trước tiếp tục khớp.
+
+### Đăng nhập và phạm vi quyền
+
+Đầu lượt kiểm tra, `/cms` chưa có phiên hợp lệ và hiển thị “Đăng nhập để tiếp tục”. Sau chỉ định tự đăng nhập, dùng **form đăng nhập chuẩn** tại `http://127.0.0.1:5891/login` với hai Owner fixture đã tồn tại, lần lượt cho Lạc Vân và Dental GO+. Chỉ dùng danh tính Owner, không dùng Platform hoặc bypass auth. Trước khi sử dụng, kiểm tra directory/file `.local` thuộc đúng user, không symlink, mode 0700/0600; fixture owner/status/tenant và mẫu email Owner phải khớp. Credentials được dùng trong runtime để điền form sau yêu cầu trực tiếp; không in, xuất vào chat/log/artifact, đọc cookie/token hoặc inject session. Không chạy provision, reset, recovery hoặc đổi credentials/quyền. Đã xóa biến chứa fixture/credential sau submit; hai phiên đều đăng xuất bằng UI sau kiểm tra. Một bước guard đầu dùng `process` không có trong CUA runtime đã dừng trước khi đọc credential; guard được sửa sang UID từ `node:os`, không bỏ kiểm tra ownership.
+
+Membership UI của mỗi Owner chỉ hiển thị đúng tenant của mình. Dùng phiên Dental GO+ để mở URL private preview Lạc Vân đã biết: UI trả **“Không có quyền truy cập nha khoa này”**, không render hero. Sau đăng xuất, URL preview của chính Dental GO+ trả **“Đăng nhập để tiếp tục”**, không render nội dung riêng. Đây là bằng chứng browser boundary thực tế, không phải thay đổi membership hoặc đọc lại token cũ.
+
+### Ca kiểm tra thực tế
+
+[Hồ sơ tổng hợp và hash](../evidence/hero-typography/cms-browser/verification.json), [30 ca được ghi](../evidence/hero-typography/cms-browser/results.json) và screenshots nằm cùng thư mục. Tất cả ca thuộc phạm vi kiểm tra đạt:
+
+- **8 màn hình editor**: home và config của hai tenant, mỗi tenant VI/EN. Home giữ đúng các phrase theo locale; config giữ `rose_editorial` cho Lạc Vân, `warm_editorial` cho Dental GO+, có ba lựa chọn hợp lệ. Ở trạng thái sạch, Lưu bản nháp/Cập nhật website bị khóa và Xem trước được mở.
+- **6 ca thao tác form chưa lưu**: nhập phrase không có trong title làm `aria-invalid=true` và khóa preview; xóa/khôi phục phrase; đổi style rồi khôi phục. Sau khôi phục, form sạch trở lại. Không nhấn Lưu hoặc Cập nhật website, không tạo version mới.
+- **8 viewports home private preview**: hai tenant × VI/EN × desktop 1440×1000 và mobile 390×844. Label, ngôn ngữ yêu cầu/nội dung, draft/config version đúng; đúng hero class và phrases; rose dùng DM Serif đã tải, warm dùng Georgia; ảnh đầu đang hiển thị tải thành công; chiều rộng document bằng viewport. Nút gửi tư vấn bị disabled. Lạc Vân VI/EN dùng home draft 5/3, config 4/4; Dental GO+ VI/EN dùng home draft 3/3, config 3/3.
+- **4 config private previews**: đúng locale yêu cầu/nội dung, bản đã lưu và không có issue alert. Không suy diễn config preview thành một hero publication mới.
+- **2 ca nhấn “Mở lại ảnh và kiểm tra quyền”** trên preview và **2 ca từ chối quyền** nêu trên. Nút refresh được thao tác nhưng không tạo tình huống thu hồi quyền mới hoặc ghi nhận network trace riêng; không gọi thao tác này là ca revocation mới.
+
+Ảnh chính: [Lạc Vân VI desktop](../evidence/hero-typography/cms-browser/lac-van-vi-preview-desktop.png), [Lạc Vân EN mobile](../evidence/hero-typography/cms-browser/lac-van-en-preview-mobile.png), [Dental GO+ EN desktop](../evidence/hero-typography/cms-browser/dental-go-plus-en-preview-desktop.png), [Dental GO+ EN mobile](../evidence/hero-typography/cms-browser/dental-go-plus-en-preview-mobile.png). Viewport đã trả về mặc định và các tab kiểm tra đã đóng sau logout.
+
+### Bảo toàn và giới hạn còn lại
+
+Đối chiếu hash trước/sau **80 bảng / 238945 dòng không đổi**; gồm các variant/draft/publication, permission và withdrawal đang giữ. **67 checksum migration** khớp, không thêm receipt. Publication ID, config publication ID và hash phản hồi công khai của bốn trang VI/EN không đổi. Không có save/publish/restore, permission/withdrawal write, migration, rebuild/restart, commit/push hoặc deploy. Schema auth bị loại khỏi phép hash; đăng nhập/đăng xuất hợp lệ có thể thay đổi session/auth/audit state trong schema này, không tuyên bố auth tables nguyên trạng.
+
+Giới hạn: không kiểm tra browser save/publish/restore persistence vì mục tiêu là kiểm chứng mà không đổi bản đã lưu; chỉ tương tác form rồi khôi phục. Không ép tải tất cả ảnh lazy đang ẩn. Không thực hiện thêm withdrawal/revocation trong browser; bằng chứng SQL thu hồi chữ/ảnh và isolation đã PASS trước đó được giữ với source không đổi. Mobile là Chromium viewport, không phải thiết bị vật lý. Legacy preservation FAIL, advisory `braces` FAIL/open và cảnh báo OFL CRLF giữ nguyên. Không có Production waiver.
+
+Bước tiếp theo:
+
+1. **Khuyến nghị:** xem bằng chứng mới để đối chiếu phần CMS browser đã được kiểm chứng; không cần thay đổi nội dung hay quyền.
+2. Nếu muốn đưa task/bằng chứng bổ sung này lên Git, cần chỉ định commit/push riêng; lượt hiện tại giữ chúng ở local và không deploy.
+
+## Quyền Git delivery hồ sơ CMS browser — 2026-10-21
+
+Chỉ định trực tiếp tiếp theo của Khiêm: “Commit và push riêng hồ sơ và bằng chứng kiểm chứng CMS editor/private preview VI/EN vừa hoàn tất, giữ nguyên các giới hạn đã ghi và file thiết kế thử ngoài phạm vi. Chưa deploy.” Owner: desktop `/root`, chat `01a15d87-b03e-7333-8cb9-f92d54109f2c`. Quyền mới chỉ gồm normal commit/push hồ sơ trên `main`; các câu chưa có quyền Git trong checkpoint kiểm chứng ở trên là lịch sử, không sửa nội dung bằng chứng cũ hoặc thêm quyền deploy.
+
+Allowlist gồm **26 files**: task record này và 25 files trong `docs/evidence/hero-typography/cms-browser/` (22 screenshots, ba JSON). Không đưa application source, migration, credentials hoặc fixture manifests vào commit. Giữ `docs/design/dental-go-plus/hero-typography-review.html` ngoài index và nguyên bytes. `verification.json`, `results.json` và screenshots khớp hash đã chốt; 25 source pins vẫn khớp. 30 ca browser được tái sử dụng đúng phiên kiểm chứng đã ghi; đây là Git-only delivery, không chạy lại login, UI test, SQL perturbation hay publication.
+
+Trước stage: `HEAD`, `origin/main` và đầu nhánh remote thực tế cùng `dafd573b1c705a32a81945fd084e16dd751c290e`; index trống. JSON/coverage/source/evidence pins và literal secret-pattern scan PASS. Đã chụp SHA-256 các files đang thay đổi để đối chiếu bảo toàn sau Git delivery. Tiếp tục High theo lựa chọn trực tiếp cho gói; runtime ghi `gpt-6.1-sol/high`, phép so exact với mechanical `implementation/medium` vẫn mismatch; không đổi settings/policy. Không delegate.
+
+Giữ nguyên giới hạn của `verification.json`: chưa thử save/publish/restore persistence, không ép tải mọi ảnh lazy ẩn, không tạo ca withdrawal mới hay network trace riêng cho refresh, mobile là Chromium viewport, auth schema nằm ngoài hash dữ liệu. Legacy preservation FAIL, advisory `braces` FAIL/open và cảnh báo OFL CRLF lịch sử không đổi. Dòng “No ... commit, push or deploy” trong báo cáo kiểm chứng mô tả chính phiên kiểm chứng trước đó; quyền Git mới này không làm bằng chứng đó thành Production acceptance hoặc quyền deploy.
+
+Trình tự được duyệt: stage đúng 26 files, kiểm tra staged diff/whitespace/bytes, normal commit/push, xác minh SHA remote/parity và file thiết kế bị loại còn nguyên. Bước tiếp theo sau giao Git: xem diff hồ sơ mới để đối chiếu phạm vi; không cần chạy lại kiểm chứng hoặc cấp thêm quyền nội dung. Không deploy.

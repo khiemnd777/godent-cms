@@ -1,0 +1,192 @@
+{
+  "status": "VERIFIED_LOCAL",
+  "recordedAt": "2026-10-21T10:06:01.501642+00:00",
+  "owner": "desktop /root, chat 01a15d87-b03e-7333-8cb9-f92d54109f2c",
+  "head": "dafd573b1c705a32a81945fd084e16dd751c290e",
+  "authority": [
+    "Direct human request for authenticated CMS editor/private preview VI/EN verification without new publication/Git/deploy.",
+    "Human follow-up: Tự đăng nhập cho tôi."
+  ],
+  "effort": {
+    "matrix": "xHigh",
+    "requested": "High",
+    "observed": "gpt-6.1-sol/high",
+    "override": "Direct human instruction; exact matrix mismatch retained; no settings change."
+  },
+  "authentication": {
+    "method": "Ordinary browser login form at http://127.0.0.1:5891/login with existing owned synthetic Owner identity, separately per tenant.",
+    "authorization": "Explicit human instruction to self-login, superseding initial request for human login within this local fixture scope.",
+    "guards": "Existing .local directory/file ownership, non-symlink, 0700/0600 modes, fixture owner/status/tenant and exact Owner email pattern validated in memory.",
+    "credentialsExported": false,
+    "tokensOrCookiesReadOrInjected": false,
+    "accountsOrPermissionsChanged": false,
+    "cleanup": "Both browser sessions signed out normally; sensitive fixture variables cleared. No password reset, recovery, provisioning or credential mutation."
+  },
+  "coverage": {
+    "editorScreens": 8,
+    "homePreviewViewports": 8,
+    "configPreviews": 4,
+    "additionalControlCases": 6,
+    "permissionRefreshButtonCases": 2,
+    "denialCases": 2,
+    "totalRecordedCases": 30,
+    "tenants": [
+      "lac-van",
+      "dental-go-plus"
+    ],
+    "locales": [
+      "vi",
+      "en"
+    ],
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ]
+  },
+  "verified": [
+    "Four home editors expose exact saved locale phrase arrays; four config editors show correct style and all three allowed options.",
+    "Manual highlight edit/clear/restoration; invalid highlight aria-invalid and preview disabled while dirty; style change/restoration. No save clicked.",
+    "Restored forms return save and publish disabled with preview enabled.",
+    "Four current saved home private previews show exact locale, saved draft/config versions, expected rose/warm typography and first visible image loaded.",
+    "Home preview desktop/mobile document widths match viewport; submission buttons disabled.",
+    "Four config private previews load with correct requested/content locale and no issue alerts.",
+    "Dental GO+ Owner cannot open Lac Van private preview; no hero content rendered.",
+    "After normal logout, protected private preview shows login-required state; no hero content rendered."
+  ],
+  "preservation": {
+    "status": "PASS",
+    "tables": 80,
+    "rows": 238945,
+    "changedTables": [],
+    "migrationChecksums": 67,
+    "publicHeadAndResponseHashesUnchanged": true,
+    "publicPages": [
+      {
+        "slug": "lac-van",
+        "locale": "vi",
+        "status": 200,
+        "jsonSha256": "a7ff10355d528c5a2c775b8845b59e653b36655670bbd4f0ff244a63565edfa5",
+        "publicationId": "a5bfdde0-e72e-4752-85bb-b80e9870672d",
+        "configPublicationId": "03743ea0-c73e-45c0-8be6-5fe9774e1de5",
+        "heroTypography": "rose_editorial",
+        "highlights": [
+          "nụ cười",
+          "sự thấu hiểu",
+          "chính bạn"
+        ]
+      },
+      {
+        "slug": "lac-van",
+        "locale": "en",
+        "status": 200,
+        "jsonSha256": "f7dc59068b1a93f16e0608532a89d2697c74cc2d4d0ab9dd6aee99622c96be1f",
+        "publicationId": "05a64be5-2885-4873-b240-5c68aba41a3a",
+        "configPublicationId": "455d74b5-beff-4d9c-b7ba-6ee738c280c3",
+        "heroTypography": "rose_editorial",
+        "highlights": [
+          "every smile",
+          "understanding",
+          "yourself"
+        ]
+      },
+      {
+        "slug": "dental-go-plus",
+        "locale": "vi",
+        "status": 200,
+        "jsonSha256": "23058b77c4df27b0bf7081de7b2334bcbd07ba9a648c659adf6af205e2bef359",
+        "publicationId": "b7ec225b-3452-4f6c-92e0-c4f131371ad7",
+        "configPublicationId": "2fe09f11-3c64-47e9-bb9e-422acf693870",
+        "heroTypography": "warm_editorial",
+        "highlights": [
+          "sự thấu hiểu."
+        ]
+      },
+      {
+        "slug": "dental-go-plus",
+        "locale": "en",
+        "status": 200,
+        "jsonSha256": "0b707ac05d08968be9996f71d85a6c5d294a190bfe7d8c68d2ddeaf3ffd8aa9b",
+        "publicationId": "a0a5b4a8-6f0f-42ee-91cb-a9a1f7187831",
+        "configPublicationId": "521b0368-98b1-41e2-b1ec-c3f73a3845e9",
+        "heroTypography": "warm_editorial",
+        "highlights": [
+          "understanding."
+        ]
+      }
+    ],
+    "authSchemaExcluded": true,
+    "authNote": "Ordinary sign-in/sign-out can change session/auth/audit state in excluded auth schema; no claim that auth session tables stayed identical.",
+    "businessSaves": 0,
+    "publicationWrites": 0,
+    "permissionOrWithdrawalWrites": 0
+  },
+  "supersedes": "Only the prior CMS browser editor/private preview NOT_RUN checkpoint is now covered by this authenticated UI evidence. Original acceptance.json and historical evidence remain immutable.",
+  "retainedLimits": [
+    "Browser save/publish/restore persistence not exercised; only unsaved form interactions restored before navigation.",
+    "No fresh withdrawal or permission mutation in this browser run; prior passing SQL text/media revocation and isolation checks retained with unchanged source.",
+    "Hidden lazy carousel images not all forced to load; visible first image readiness checked.",
+    "Permission-refresh buttons exercised; no forced revocation scenario or separate network-response trace claimed.",
+    "Chromium viewport coverage, not physical mobile devices.",
+    "Legacy preservation overall FAIL, braces advisory FAIL/open and OFL CRLF whitespace warning retained; no Production waiver.",
+    "No application source edits, migration, build/restart, commit, push or deploy."
+  ],
+  "sourceSha256": {
+    "apps/admin/components/builder-hero-typography.test.tsx": "2434baafdef7a1ffd430023c55830ecca6d5bbc217c883491c08b7efd25aa4c8",
+    "apps/api/migrations/0065_signature_hero_typography.sql": "1c43700dcb2fb617f802274e7c729a115ae308e234ccfbf3bcbd261921095972",
+    "apps/website/app/fonts/DMSerifDisplay-OFL.txt": "a3e5cdd67d4571dd0a24fcc968de0efde7ae97ef752daf0906e4767619dd7231",
+    "apps/website/app/fonts/dm-serif-display-italic.ttf": "0ab2fcacedaafc0a7536453d4a763f131ba83a636706d3ec2d685cf04478a920",
+    "apps/website/app/fonts/dm-serif-display-regular.ttf": "c03775f8cc3db88cfea259b231abe13f94e6a3d3cb01c09477a2e42a1f5919e1",
+    "scripts/hero-typography-local.test.ts": "b4f1469ca266effbf2db192c95527448595d979776ca97824ee061c5f3df590d",
+    "scripts/hero-typography-local.ts": "537e9e010d41b064c0c3e628444cd68f04deae6b41d7c939990418bebec4e08e",
+    "apps/admin/components/builder-fields.tsx": "843baecddb56d93f57780bcde889a0c59b7fccf6b961f0604c71368143ceb12b",
+    "apps/admin/components/builder-private-copy.test.tsx": "c0b6932f3c6bef747a756f1a58bbba076fbe4739472caa57d710ed77c503105a",
+    "apps/admin/components/builder-private-copy.tsx": "dd8d62bb2486b702bff4a5247891c017734a9bee82c7ead8f7b34a46f8cce64b",
+    "apps/admin/lib/builder-content.ts": "756faae6248c4071100ad885bfddee11792256e6f8f8fb6abe4170eb497224bf",
+    "apps/admin/lib/builder-state.test.ts": "4c5786a04e46b4ef4d36bfd9efe5ae2805357d258f2c7ed5963fc8e93e1ea880",
+    "apps/api/src/contracts/m4-validation.ts": "90a34dd4127a89bd95c4f2fb523b7279906f855bc884dfc13616efada2b6de19",
+    "apps/api/src/contracts/m4.ts": "30807c8ec73cd189a8aa03ba42016618f7713f44cb076e4b466e65fc12f7c39c",
+    "apps/api/src/contracts/signature-validation.ts": "00f5257daccd4d64ba310e6f8807fd32d00ecd34f1b7e13d047925c031dd5eb4",
+    "apps/api/src/modules/builder.service.ts": "22bb15c329c2b8e6fcb9d88d272781e4dd93a3ef409736ead33a16f5757b91b2",
+    "apps/api/test/lacvan-contract.test.ts": "a2becdb3de265fd4a5a131ba85359e9389f22b7509e34c125d13ffdac1aa3fd0",
+    "apps/api/test/lacvan-sql-integration.test.ts": "2a4e0a6754b53548845a305bdb35863b09a380f99207a71107921e9c7fa70bde",
+    "apps/website/app/signature.css": "be6d50ad0852ccbfcbde6b8734ad8d13fe8f31ba459a24821aec0c6c210ba0aa",
+    "apps/website/components/builder-page.tsx": "8f43250287d23c2b1ba799bda8eecabfdb70d3c0b27841c9a7075a57a532e74e",
+    "apps/website/components/signature-ui.test.tsx": "ab479c45ceca574b3b97f4441c2d08e9255214fb52a57121b3a36e8468848237",
+    "apps/website/components/signature-ui.tsx": "242ee8d113d2831c4d7d225c9f155443363a8ae9c7d757a1394ab9d79d483edd",
+    "apps/website/lib/public-builder-validation.ts": "accaa64cf30f60f3562071c35a800e8a1771f5aff38a991323ebccec8c508b96",
+    "apps/website/lib/signature-validation.test.ts": "9dfc80756b7080550180ac2c0ccae77acafe52d5afa1591ea9622bf6da464683",
+    "scripts/lacvan-migrate.ts": "31f90936840764dcc9b64e4ecf886458073b322c2f05ef2fda4e1d0403ec8815"
+  },
+  "evidenceSha256": {
+    "cross-tenant-denied.png": "7cb4a62cbbb16f42355782b087c69eebda064c50303646a55bfd77f5c0fdf897",
+    "dental-go-plus-en-config-editor.png": "cb6f9d7b9d6d0f7a525c98b6ee3d0f76db4d6c715c71dc093723088c8b9eea2a",
+    "dental-go-plus-en-config-preview.png": "c3b61e20f88f20e0311cbad129bf39e6911c978802382ec914d478b8d493c6e9",
+    "dental-go-plus-en-editor.png": "74b7ffde01a3c3473173f5faf688dfe9fba8ae548b6dc15d605758aff148ab25",
+    "dental-go-plus-en-preview-desktop.png": "9fd9d9ff19f82e69a78cbfee3c7f882584a6e2e63e2fd7388769b3ab1569e87b",
+    "dental-go-plus-en-preview-mobile.png": "bac110439a7670aaaca29264c82604f864ad9fa643b41e13db73d3ba323e0b92",
+    "dental-go-plus-vi-config-editor.png": "e77926ceff63063e0205a71070cb747c6ba9eb97af6016066eaa433d9d966508",
+    "dental-go-plus-vi-config-preview.png": "53426827e3b5b2a913962e6450224b79cef153ee790ed070ff04b26d7175b165",
+    "dental-go-plus-vi-editor.png": "f9a96a8a78873feb09adbfdfd456941533b567516138d9cbafec5ac4b230d612",
+    "dental-go-plus-vi-preview-desktop.png": "c09903801a97e6077b34943435b4d7dca88d4fb4e18bf5c65d4ead59ad50ff2d",
+    "dental-go-plus-vi-preview-mobile.png": "0b96b813d941f6968cbc8b0d4c65938c5633ee5d5a28e671d231aedeb4d77f7f",
+    "lac-van-en-config-editor.png": "931fc290312a4767ea87d3796db20d4793fe08fee132e027e9d50f6e839f1858",
+    "lac-van-en-config-preview.png": "3666448f530e1c53f5ba00dd856032f8f51543d7f83a6f0373b604fe29b5185a",
+    "lac-van-en-editor.png": "45a89a6fe7ac42a68a14fc93d88115393e24c59bfdc5d2fa9efd793fb9dbf128",
+    "lac-van-en-preview-desktop.png": "628ecf648ebb02219def508dbbe6feb487e0bcf846f7ad7905f11b2951c593c6",
+    "lac-van-en-preview-mobile.png": "2a84bf3bb5e3dec453a1ac8bad7a0916849014574f50097f7db606d7e6e47fd0",
+    "lac-van-results.json": "ed3f377b294345448b270d8cbd0409d5820ffd761a834df15fdb729c5c26c499",
+    "lac-van-vi-config-editor.png": "1a89c0f826394cd2dc07940c6bce1642c1d75fb1e61457a077a7d12617fd0f5b",
+    "lac-van-vi-config-preview.png": "98a8a6a79936469a8b698d4c45e4b9ccef49fedaa60087eecedd95bbf60e2042",
+    "lac-van-vi-editor.png": "d5f650798354a738963e9b17940c43228d260745b15345c654bb4525ee6d1ad0",
+    "lac-van-vi-preview-desktop.png": "f012945f42a6f201032fda051b482bc44b0d8166d6df844e776ce2704e8c163d",
+    "lac-van-vi-preview-mobile.png": "b0789dcd68b3794dd845bc2f2cdf79e437232be2f68caa34048bf90af29f8a30",
+    "results.json": "e93927811091a5beb114b68d5287a2917e034586e0c885a5a93e1ba7260fb939",
+    "signed-out-preview-denied.png": "565dd7a3f62d0438640355c13b8df2e94ff147e99e96999777eb103442b26807"
+  }
+}

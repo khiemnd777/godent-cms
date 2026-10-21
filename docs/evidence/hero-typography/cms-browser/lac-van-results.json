@@ -1,0 +1,356 @@
+[
+  {
+    "case": "lac-van-vi-home-editor",
+    "buttons": [
+      {
+        "disabled": true,
+        "text": "Lưu bản nháp"
+      },
+      {
+        "disabled": false,
+        "text": "Xem trước"
+      },
+      {
+        "disabled": true,
+        "text": "Cập nhật website"
+      }
+    ],
+    "language": "Website / Trang chủ / VI",
+    "metadata": [
+      "Nha khoaNha khoa Lạc Vân",
+      "Bản nhápPhiên bản 5",
+      "WebsitePhiên bản 4",
+      "Ngôn ngữTiếng Việt"
+    ],
+    "phrases": [
+      "nụ cười",
+      "sự thấu hiểu",
+      "chính bạn"
+    ],
+    "styles": [],
+    "url": "/cms/pages/home/215f3a13-b2d3-4d3f-b0a9-cb3bb78eb564"
+  },
+  {
+    "case": "lac-van-vi-unsaved-controls",
+    "invalidAria": true,
+    "dirtyPreviewDisabled": true,
+    "clearSupported": true,
+    "restoredClean": true,
+    "saves": 0
+  },
+  {
+    "case": "lac-van-vi-home-preview-desktop",
+    "alerts": [],
+    "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+    "fontLoaded": "loaded",
+    "formInputsDisabled": true,
+    "head": "XEM TRƯỚC RIÊNG · VI · TIẾNG VIỆT\nNha khoa Lạc Vân — Nâng niu từng nụ cười\n\nNha khoa Lạc Vân · Bản đã lưu 5 · Ngôn ngữ yêu cầu VI · Ngôn ngữ nội dung VI\n\nCấu hình đã lưu 4 · Theme 3\n\nMở lại ảnh và kiểm tra quyền\nTiếp tục soạn",
+    "heroClass": "signature-carousel hero-type-rose-editorial",
+    "images": [
+      {
+        "alt": "Gia đình cùng chia sẻ nụ cười trong không gian phòng khám",
+        "complete": true,
+        "width": 1600
+      },
+      {
+        "alt": "Hai người cùng tận hưởng buổi sáng ngoài trời",
+        "complete": false,
+        "width": 0
+      },
+      {
+        "alt": "Nụ cười tự nhiên trong không gian sáng dịu",
+        "complete": false,
+        "width": 0
+      }
+    ],
+    "label": "Xem trước riêng · VI · Tiếng Việt",
+    "notice": [
+      "Bản riêng tư dùng nội dung và cấu hình đã lưu. Biểu mẫu không gửi dữ liệu. Website chỉ thay đổi sau xác nhận xuất bản; xuất bản nội dung không tự xuất bản cấu hình đang nháp."
+    ],
+    "pageWidth": 1440,
+    "path": "/cms/pages/home/215f3a13-b2d3-4d3f-b0a9-cb3bb78eb564/preview",
+    "phrases": [
+      "nụ cười",
+      "sự thấu hiểu",
+      "chính bạn"
+    ],
+    "submitButtons": [
+      {
+        "disabled": true,
+        "label": "Gửi yêu cầu tư vấn"
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1440
+    }
+  },
+  {
+    "case": "lac-van-vi-preview-permission-refresh",
+    "hero": "signature-carousel hero-type-rose-editorial"
+  },
+  {
+    "case": "lac-van-en-home-editor",
+    "buttons": [
+      {
+        "disabled": true,
+        "text": "Lưu bản nháp"
+      },
+      {
+        "disabled": false,
+        "text": "Xem trước"
+      },
+      {
+        "disabled": true,
+        "text": "Cập nhật website"
+      }
+    ],
+    "language": "Website / Trang chủ / EN",
+    "metadata": [
+      "Nha khoaNha khoa Lạc Vân",
+      "Bản nhápPhiên bản 3",
+      "WebsitePhiên bản 3",
+      "Ngôn ngữEnglish"
+    ],
+    "phrases": [
+      "every smile",
+      "understanding",
+      "yourself"
+    ],
+    "styles": [],
+    "url": "/cms/variants/home/215f3a13-b2d3-4d3f-b0a9-cb3bb78eb564/en"
+  },
+  {
+    "case": "lac-van-en-clear-restore",
+    "clean": true,
+    "previewReady": true
+  },
+  {
+    "case": "lac-van-en-home-preview-desktop",
+    "alerts": [],
+    "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+    "fontLoaded": "loaded",
+    "formInputsDisabled": true,
+    "head": "XEM TRƯỚC RIÊNG · EN · ENGLISH\nLac Van Dental — Care for every smile\n\nNha khoa Lạc Vân · Bản đã lưu 3 · Ngôn ngữ yêu cầu EN · Ngôn ngữ nội dung EN\n\nCấu hình đã lưu 4 · Theme 3\n\nMở lại ảnh và kiểm tra quyền\nTiếp tục soạn",
+    "heroClass": "signature-carousel hero-type-rose-editorial",
+    "images": [
+      {
+        "alt": "A family sharing a smile in a welcoming clinic lounge",
+        "complete": true,
+        "width": 1600
+      },
+      {
+        "alt": "A couple enjoying a relaxed morning outdoors",
+        "complete": false,
+        "width": 0
+      },
+      {
+        "alt": "A natural smile in a softly lit lounge",
+        "complete": false,
+        "width": 0
+      }
+    ],
+    "label": "Xem trước riêng · EN · English",
+    "notice": [
+      "Bản riêng tư dùng nội dung và cấu hình đã lưu. Biểu mẫu không gửi dữ liệu. Website chỉ thay đổi sau xác nhận xuất bản; xuất bản nội dung không tự xuất bản cấu hình đang nháp."
+    ],
+    "pageWidth": 1440,
+    "path": "/cms/variants/home/215f3a13-b2d3-4d3f-b0a9-cb3bb78eb564/en/preview",
+    "phrases": [
+      "every smile",
+      "understanding",
+      "yourself"
+    ],
+    "submitButtons": [
+      {
+        "disabled": true,
+        "label": "Send consultation request"
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1440
+    }
+  },
+  {
+    "case": "lac-van-en-home-preview-mobile",
+    "alerts": [],
+    "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+    "fontLoaded": "loaded",
+    "formInputsDisabled": true,
+    "head": "XEM TRƯỚC RIÊNG · EN · ENGLISH\nLac Van Dental — Care for every smile\n\nNha khoa Lạc Vân · Bản đã lưu 3 · Ngôn ngữ yêu cầu EN · Ngôn ngữ nội dung EN\n\nCấu hình đã lưu 4 · Theme 3\n\nMở lại ảnh và kiểm tra quyền\nTiếp tục soạn",
+    "heroClass": "signature-carousel hero-type-rose-editorial",
+    "images": [
+      {
+        "alt": "A family sharing a smile in a welcoming clinic lounge",
+        "complete": true,
+        "width": 1600
+      },
+      {
+        "alt": "A couple enjoying a relaxed morning outdoors",
+        "complete": false,
+        "width": 0
+      },
+      {
+        "alt": "A natural smile in a softly lit lounge",
+        "complete": false,
+        "width": 0
+      }
+    ],
+    "label": "Xem trước riêng · EN · English",
+    "notice": [
+      "Bản riêng tư dùng nội dung và cấu hình đã lưu. Biểu mẫu không gửi dữ liệu. Website chỉ thay đổi sau xác nhận xuất bản; xuất bản nội dung không tự xuất bản cấu hình đang nháp."
+    ],
+    "pageWidth": 390,
+    "path": "/cms/variants/home/215f3a13-b2d3-4d3f-b0a9-cb3bb78eb564/en/preview",
+    "phrases": [
+      "every smile",
+      "understanding",
+      "yourself"
+    ],
+    "submitButtons": [
+      {
+        "disabled": true,
+        "label": "Send consultation request"
+      }
+    ],
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  {
+    "case": "lac-van-vi-home-preview-mobile",
+    "alerts": [],
+    "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+    "fontLoaded": "loaded",
+    "formInputsDisabled": true,
+    "head": "XEM TRƯỚC RIÊNG · VI · TIẾNG VIỆT\nNha khoa Lạc Vân — Nâng niu từng nụ cười\n\nNha khoa Lạc Vân · Bản đã lưu 5 · Ngôn ngữ yêu cầu VI · Ngôn ngữ nội dung VI\n\nCấu hình đã lưu 4 · Theme 3\n\nMở lại ảnh và kiểm tra quyền\nTiếp tục soạn",
+    "heroClass": "signature-carousel hero-type-rose-editorial",
+    "images": [
+      {
+        "alt": "Gia đình cùng chia sẻ nụ cười trong không gian phòng khám",
+        "complete": true,
+        "width": 1600
+      },
+      {
+        "alt": "Hai người cùng tận hưởng buổi sáng ngoài trời",
+        "complete": false,
+        "width": 0
+      },
+      {
+        "alt": "Nụ cười tự nhiên trong không gian sáng dịu",
+        "complete": false,
+        "width": 0
+      }
+    ],
+    "label": "Xem trước riêng · VI · Tiếng Việt",
+    "notice": [
+      "Bản riêng tư dùng nội dung và cấu hình đã lưu. Biểu mẫu không gửi dữ liệu. Website chỉ thay đổi sau xác nhận xuất bản; xuất bản nội dung không tự xuất bản cấu hình đang nháp."
+    ],
+    "pageWidth": 390,
+    "path": "/cms/pages/home/215f3a13-b2d3-4d3f-b0a9-cb3bb78eb564/preview",
+    "phrases": [
+      "nụ cười",
+      "sự thấu hiểu",
+      "chính bạn"
+    ],
+    "submitButtons": [
+      {
+        "disabled": true,
+        "label": "Gửi yêu cầu tư vấn"
+      }
+    ],
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  {
+    "case": "lac-van-vi-config-editor",
+    "buttons": [
+      {
+        "disabled": true,
+        "text": "Lưu bản nháp"
+      },
+      {
+        "disabled": false,
+        "text": "Xem trước"
+      },
+      {
+        "disabled": true,
+        "text": "Cập nhật website"
+      }
+    ],
+    "language": "Website / Cấu hình website / VI",
+    "metadata": [
+      "Nha khoaNha khoa Lạc Vân",
+      "Bản nhápPhiên bản 4",
+      "WebsitePhiên bản 4",
+      "Ngôn ngữTiếng Việt"
+    ],
+    "phrases": [],
+    "styles": [
+      {
+        "options": [
+          "default",
+          "warm_editorial",
+          "rose_editorial"
+        ],
+        "value": "rose_editorial"
+      }
+    ],
+    "url": "/cms/website"
+  },
+  {
+    "case": "lac-van-vi-style-restore",
+    "dirtyPreviewDisabled": true,
+    "clean": true
+  },
+  {
+    "case": "lac-van-vi-config-preview",
+    "head": "XEM TRƯỚC RIÊNG · VI · TIẾNG VIỆT\nNha khoa Lạc Vân\n\nNha khoa Lạc Vân · Bản đã lưu 4 · Ngôn ngữ yêu cầu VI · Ngôn ngữ nội dung VI\n\nCấu hình đã lưu 4 · Theme 3\n\nMở lại ảnh và kiểm tra quyền\nTiếp tục soạn",
+    "alerts": []
+  },
+  {
+    "case": "lac-van-en-config-editor",
+    "buttons": [
+      {
+        "disabled": true,
+        "text": "Lưu bản nháp"
+      },
+      {
+        "disabled": false,
+        "text": "Xem trước"
+      },
+      {
+        "disabled": true,
+        "text": "Cập nhật website"
+      }
+    ],
+    "language": "Website / Cấu hình website / EN",
+    "metadata": [
+      "Nha khoaNha khoa Lạc Vân",
+      "Bản nhápPhiên bản 4",
+      "WebsitePhiên bản 4",
+      "Ngôn ngữEnglish"
+    ],
+    "phrases": [],
+    "styles": [
+      {
+        "options": [
+          "default",
+          "warm_editorial",
+          "rose_editorial"
+        ],
+        "value": "rose_editorial"
+      }
+    ],
+    "url": "/cms/website/en"
+  },
+  {
+    "case": "lac-van-en-config-preview",
+    "head": "XEM TRƯỚC RIÊNG · EN · ENGLISH\nLac Van Dental\n\nNha khoa Lạc Vân · Bản đã lưu 4 · Ngôn ngữ yêu cầu EN · Ngôn ngữ nội dung EN\n\nCấu hình đã lưu 4 · Theme 3\n\nMở lại ảnh và kiểm tra quyền\nTiếp tục soạn",
+    "alerts": []
+  }
+]
