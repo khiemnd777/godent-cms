@@ -1,0 +1,210 @@
+{
+  "status": "ACCEPTED_UNDER_DELEGATED_AUTHORITY",
+  "recordedAt": "2026-10-21T09:49:22.817197+00:00",
+  "reviewOwner": "desktop /root, chat 01a15d87-b03e-7333-8cb9-f92d54109f2c",
+  "originalImplementationOwner": "desktop /root in chat 01a15992-dc26-7622-88f3-2ce18aa61446 and its recorded kit-implementer",
+  "authority": "Direct human review/acceptance request quoted in GCMS-HERO-TYPO-001.md; coordinator decision, not direct HUMAN_ACCEPTED.",
+  "scope": "Uncommitted local hero typography source, 0065 already applied locally, current Lac Van/Dental GO+ VI/EN publications. No new publication, migration, commit, push or deploy.",
+  "revision": {
+    "head": "21804097af04d5f8169176953743266d0babec54",
+    "candidate": "25 local hero app/font/script files pinned below; performance commit retained unchanged."
+  },
+  "findings": {
+    "openBlockers": 0,
+    "openActionableFindings": 0,
+    "applicationEditsDuringReview": 0,
+    "reviewMode": "Sequential source and runtime review by this session; no new independent agent dispatched. Prior independent xHigh reviews retained as historical evidence."
+  },
+  "checks": {
+    "pure": {
+      "status": "PASS",
+      "tests": 50,
+      "assertions": 222,
+      "files": 7,
+      "command": "node_modules/.bin/bun --no-env-file test apps/api/test/lacvan-contract.test.ts apps/admin/components/builder-hero-typography.test.tsx apps/admin/lib/builder-state.test.ts apps/admin/components/builder-private-copy.test.tsx apps/website/components/signature-ui.test.tsx apps/website/lib/signature-validation.test.ts scripts/hero-typography-local.test.ts"
+    },
+    "sql": {
+      "status": "PASS",
+      "tests": 16,
+      "assertions": 140,
+      "files": 3,
+      "command": "LACVAN_SQL_INTEGRATION=1 PUBLIC_READ_PERFORMANCE_SQL=1 node_modules/.bin/bun --env-file=.local/s02.env test apps/api/test/lacvan-sql-integration.test.ts apps/api/test/navigation-availability.test.ts apps/api/test/public-read-performance.test.ts",
+      "covers": [
+        "0065 style/highlight validation",
+        "new locale blank highlight",
+        "owner-only helpers",
+        "cross-tenant denial",
+        "current Published/draft/unpublish/generation",
+        "snapshot revision permission withdrawal",
+        "required references",
+        "media revocation",
+        "tenant suspension",
+        "locale fallback",
+        "empty listing contract"
+      ],
+      "mutationBoundary": "Test fixture changes rolled back; LACVAN suite catalog/validation reads only."
+    },
+    "visual": {
+      "status": "PASS",
+      "cases": 12,
+      "matrix": "2 tenants x VI/EN x 1440x900 and 390x844 = 8; 4 additional 320x740 slide/long-title cases",
+      "evidence": "visual-review.json",
+      "checks": [
+        "correct style and per-locale phrase arrays",
+        "document width equals viewport",
+        "heading/phrase/CTA within width",
+        "supporting sentence visible",
+        "portrait loaded",
+        "one fragment per short selected phrase",
+        "rose bundled serif loaded; warm Georgia",
+        "VI/EN carousel selection and next/previous behavior"
+      ],
+      "limits": "Chromium viewport emulation, not physical mobile-device coverage."
+    },
+    "fontHttp": {
+      "status": "PASS",
+      "assets": 4,
+      "evidence": "http-font-boundaries.json",
+      "apps": [
+        "admin",
+        "website"
+      ],
+      "sourceByteParity": true
+    },
+    "httpDenial": {
+      "status": "PASS",
+      "cases": 5,
+      "evidence": "http-font-boundaries.json"
+    },
+    "runtimeSource": {
+      "status": "PASS",
+      "filesPerContainer": 22,
+      "containers": [
+        "api",
+        "admin",
+        "website"
+      ],
+      "evidence": "runtime-source.json"
+    },
+    "sqlSource": {
+      "status": "PASS",
+      "wrappers": 3,
+      "publicExecuteDenied": 6,
+      "evidence": "sql-source.json"
+    },
+    "typecheck": {
+      "status": "PASS",
+      "command": "node_modules/.bin/bun run typecheck",
+      "scope": "admin,website,API,root"
+    },
+    "eslint": {
+      "status": "PASS",
+      "scope": "20 hero TypeScript/TSX files",
+      "maxWarnings": 0
+    },
+    "whitespace": {
+      "status": "PASS",
+      "command": "git diff --check"
+    },
+    "preservation": {
+      "status": "PASS",
+      "tables": 80,
+      "rows": 238945,
+      "appliedMigrationChecksums": 67,
+      "publicHomeAndConfigHeadsUnchanged": 4,
+      "publicResponseHashesUnchanged": true,
+      "evidence": "preservation.json"
+    },
+    "cmsBrowser": {
+      "status": "NOT_RUN",
+      "reason": "Actual /cms shows Đăng nhập để tiếp tục; no available authenticated CMS browser session. No credentials read/entered or auth bypass.",
+      "retainedEvidence": "Prior eight authenticated private-preview API readbacks in task record remain valid within recorded source and publication scope."
+    },
+    "heroSpecificRevocation": {
+      "status": "PASS",
+      "tenantLocaleCases": 4,
+      "assertions": 44,
+      "rolledBack": true,
+      "evidence": "hero-specific-revocation.json",
+      "source": "hero-specific-revocation-source.txt",
+      "method": "Extra actual hero carousel gateway checks on both existing local tenant publications in VI/EN; no permanent writes."
+    }
+  },
+  "limits": [
+    "Bounded local delegated acceptance; no direct human acceptance quote fabricated.",
+    "Browser admin editing/private preview remains NOT_RUN; existing private API proof reused.",
+    "Auth schema excluded from review data hashes; no auth/session/credential operations performed.",
+    "Historical preservation overall FAIL for 28 baseline-age file mismatches retained; not relabeled PASS.",
+    "Existing braces advisory remains FAIL/open, no Production waiver.",
+    "No new independent reviewer agent, new build/restart, CMS publication, migration, commit, push or deploy."
+  ],
+  "toolingCorrections": [
+    "Initial loopback SQL capture failed inside sandbox; authorized local read reran successfully with normal escalation.",
+    "Initial browser capture helper retained previous tab and viewport update had not settled; discarded its readings and replaced all eight matrix captures with explicit current-tab reads and verified dimensions.",
+    "Control+Home browser action unavailable; no keyboard-journey pass claimed.",
+    "Initial runtime inventory included three local operator scripts absent from image; corrected to all 22 app source/test/font files; all three containers matched."
+  ],
+  "sourceSha256": {
+    "apps/admin/components/builder-hero-typography.test.tsx": "2434baafdef7a1ffd430023c55830ecca6d5bbc217c883491c08b7efd25aa4c8",
+    "apps/api/migrations/0065_signature_hero_typography.sql": "1c43700dcb2fb617f802274e7c729a115ae308e234ccfbf3bcbd261921095972",
+    "apps/website/app/fonts/DMSerifDisplay-OFL.txt": "a3e5cdd67d4571dd0a24fcc968de0efde7ae97ef752daf0906e4767619dd7231",
+    "apps/website/app/fonts/dm-serif-display-italic.ttf": "0ab2fcacedaafc0a7536453d4a763f131ba83a636706d3ec2d685cf04478a920",
+    "apps/website/app/fonts/dm-serif-display-regular.ttf": "c03775f8cc3db88cfea259b231abe13f94e6a3d3cb01c09477a2e42a1f5919e1",
+    "scripts/hero-typography-local.test.ts": "b4f1469ca266effbf2db192c95527448595d979776ca97824ee061c5f3df590d",
+    "scripts/hero-typography-local.ts": "537e9e010d41b064c0c3e628444cd68f04deae6b41d7c939990418bebec4e08e",
+    "apps/admin/components/builder-fields.tsx": "843baecddb56d93f57780bcde889a0c59b7fccf6b961f0604c71368143ceb12b",
+    "apps/admin/components/builder-private-copy.test.tsx": "c0b6932f3c6bef747a756f1a58bbba076fbe4739472caa57d710ed77c503105a",
+    "apps/admin/components/builder-private-copy.tsx": "dd8d62bb2486b702bff4a5247891c017734a9bee82c7ead8f7b34a46f8cce64b",
+    "apps/admin/lib/builder-content.ts": "756faae6248c4071100ad885bfddee11792256e6f8f8fb6abe4170eb497224bf",
+    "apps/admin/lib/builder-state.test.ts": "4c5786a04e46b4ef4d36bfd9efe5ae2805357d258f2c7ed5963fc8e93e1ea880",
+    "apps/api/src/contracts/m4-validation.ts": "90a34dd4127a89bd95c4f2fb523b7279906f855bc884dfc13616efada2b6de19",
+    "apps/api/src/contracts/m4.ts": "30807c8ec73cd189a8aa03ba42016618f7713f44cb076e4b466e65fc12f7c39c",
+    "apps/api/src/contracts/signature-validation.ts": "00f5257daccd4d64ba310e6f8807fd32d00ecd34f1b7e13d047925c031dd5eb4",
+    "apps/api/src/modules/builder.service.ts": "22bb15c329c2b8e6fcb9d88d272781e4dd93a3ef409736ead33a16f5757b91b2",
+    "apps/api/test/lacvan-contract.test.ts": "a2becdb3de265fd4a5a131ba85359e9389f22b7509e34c125d13ffdac1aa3fd0",
+    "apps/api/test/lacvan-sql-integration.test.ts": "2a4e0a6754b53548845a305bdb35863b09a380f99207a71107921e9c7fa70bde",
+    "apps/website/app/signature.css": "be6d50ad0852ccbfcbde6b8734ad8d13fe8f31ba459a24821aec0c6c210ba0aa",
+    "apps/website/components/builder-page.tsx": "8f43250287d23c2b1ba799bda8eecabfdb70d3c0b27841c9a7075a57a532e74e",
+    "apps/website/components/signature-ui.test.tsx": "ab479c45ceca574b3b97f4441c2d08e9255214fb52a57121b3a36e8468848237",
+    "apps/website/components/signature-ui.tsx": "242ee8d113d2831c4d7d225c9f155443363a8ae9c7d757a1394ab9d79d483edd",
+    "apps/website/lib/public-builder-validation.ts": "accaa64cf30f60f3562071c35a800e8a1771f5aff38a991323ebccec8c508b96",
+    "apps/website/lib/signature-validation.test.ts": "9dfc80756b7080550180ac2c0ccae77acafe52d5afa1591ea9622bf6da464683",
+    "scripts/lacvan-migrate.ts": "31f90936840764dcc9b64e4ecf886458073b322c2f05ef2fda4e1d0403ec8815"
+  },
+  "protectedLocalFilesSha256": {
+    "docs/design/dental-go-plus/hero-typography-review.html": "4857c1b6855892420e6e86148ecbcf701b29ba15981091733a4f8b152b9c313c",
+    "docs/evidence/lacvan/migration-1792507987305.json": "3d93990fa2b2345e09571adbcc80f2756cfb7787d3f4efd48aa58f3af044149b",
+    "docs/evidence/lacvan/migration-1792507992797.json": "a0175773eaffc67c086072d459dfbf01e11a51755a457c2fb45d0fddadf2bf20",
+    "docs/evidence/lacvan/migration-1792507997667.json": "53a5dbba57516b9811b89432ea6029345d6248deecf2d87f73b70514c93ae7f2",
+    "docs/evidence/lacvan/migration-1792508037702.json": "128c391402ec6352232c8a71bacbabb00e0987aecdbcf6b9da4faafa389c35c1",
+    "docs/evidence/lacvan/preservation-1792507876289.json": "87a02842e09d62f27b49bbb64dc8fafda9e71ad30ff7eeda0a70ba19a917ebb5",
+    "docs/evidence/lacvan/preservation-1792508046261.json": "084eb9fee82e905afe12cd6f622ce2cc84a47924553c7d557f8c6ae71fd0dd3c"
+  },
+  "evidenceSha256": {
+    "cms-session-required.png": "53070115e8eb5afa083c21543ceb59a0f0dc54c99b6f85bd3d1f939034a8b3e8",
+    "dental-go-plus-en-1440.png": "d774839a17d515ff93cc85f485cd4e2c31c033525525b48fa9fdce2667ad7c48",
+    "dental-go-plus-en-320.png": "b8bffc7cf9521c6d4c3c6957210730858dcf012cfc201dee90c4eb45fb9d0c92",
+    "dental-go-plus-en-390.png": "866b85ea136b60ad02bb36c436f047d929517bac2e7d2d51eaa3b7b2afac8506",
+    "dental-go-plus-vi-1440.png": "68c0f3496f1c635f18687b57d99469aeb885dd7803b54beed755991964fa4a35",
+    "dental-go-plus-vi-390.png": "ad549c04c1b777f0f05f90f77a1f1d46325e7c50dad3eb67cfe2c715e6b4e42d",
+    "effort.json": "1708eba7f8340f582f3e2a9c0fccb2708d04024b188edfba207eeaba103898ec",
+    "eslint-checks.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hero-specific-revocation-source.txt": "b521058e9b933a6cadcd4191c93fa2ace920596434f22c271e80996a8319d6fd",
+    "hero-specific-revocation.json": "d68b653fe9f27114531e3d3198aa6872e07737d48764ebabbbe08be742f30147",
+    "http-font-boundaries.json": "ccfd2998bf30a0847bf7b8201dbfb46a80575a0af35b2246939cc59ab5e9c5f8",
+    "lac-van-en-1440.png": "b385bffb0079b511ed2ec50beb5baa0f8d072b9db65947e7d592f7113d2c5854",
+    "lac-van-en-320-slide2.png": "65cfb2c767b68dd411350c55b889416f1a665e368cb24d91d5de2d78220fe850",
+    "lac-van-en-320-slide3.png": "c5d1ffff0621f177dea4f83b44bef7cdc60b53a11165cb7db44d8c0b1d70ab68",
+    "lac-van-en-390.png": "72a15080d9f4069ee4445d531547cbeb3b7728882073d12e3a90ef1d6761e398",
+    "lac-van-vi-1440.png": "48268e2eafd3ac8037b56890fc3b9fa1de73cf0937a0b549b9cc0b83fd4c7a67",
+    "lac-van-vi-320-slide3.png": "7978eeb6b7def8de77cb27f17a8f9e91d7f5b454561af10519a790496120a60c",
+    "lac-van-vi-390.png": "02379f8a1cc2e85ae1758389cd68e03d45ff2217e6c6c726bb5659ad6d88079e",
+    "preservation.json": "7ee9b024480813eed8f200e5b25e101d95e4e31e4d6cf7b160abe022ad749842",
+    "pure-checks.log": "af3960f9cda6afab78da30ff84c902e2d9b41d13e4b3488af60373839d25f113",
+    "runtime-source.json": "14cc012395b96fa5c0af768e4e95bff254468fd256d1cb8c891788d196adb56d",
+    "sql-checks.log": "9b606248b6c11ca57a98b8aa1fadc5b0644d3b0c3b66e2eef7d8c117cbd7a586",
+    "sql-source.json": "3d87422d53529a561bbd117440b9a396c581ead52d968b8d75812856d44405e7",
+    "typecheck-checks.log": "5b4e245b2468e2c2c8ae753279b6ee1d44a8ba70151027c6b8fe6d3554d34d36",
+    "visual-review.json": "cc7d9c7234ba2b3ef394a378237dc1be8a3c0a775d561d1b0666c40447a0dabc"
+  }
+}

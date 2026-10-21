@@ -28,3 +28,21 @@ test("signature projection rejects cross-tenant navigation/actions and foreign p
   const media = resolution(); media.page.sections[0].slides![0].media!.path = media.page.sections[0].slides![0].media!.path.replace(ids.publication, ids.config);
   expect(() => parsePublicBuilderResolution(media, "clinic-a", "en", "home", "home")).toThrow();
 });
+test("published hero style and title phrase survive sanitization without trusting added slide text", () => {
+  const value = resolution();
+  value.page.config!.content.signature!.heroTypography = "rose_editorial";
+  const section = value.page.content as BuilderContent;
+  if (section.sections[0].type !== "hero_carousel") throw Error();
+  section.sections[0].slides[0].highlight = "care";
+  value.page.sections[0].section = section.sections[0];
+  value.page.sections[0].slides![0].highlight = "care";
+  const parsed = parsePublicBuilderResolution(value, "clinic-a", "en", "home", "home");
+  expect(parsed.resolution === "page" && parsed.page.config?.content.signature?.heroTypography).toBe("rose_editorial");
+  expect(parsed.resolution === "page" && parsed.page.sections[0].slides?.[0].highlight).toBe("care");
+  const forged = resolution(); forged.page.sections[0].slides![0].highlight = "care";
+  expect(() => parsePublicBuilderResolution(forged, "clinic-a", "en", "home", "home")).toThrow();
+  const wrongTitle = resolution();
+  (wrongTitle.page.content as BuilderContent).sections[0] = { ...section.sections[0], slides: [{ ...section.sections[0].slides[0], title: "Changed title" }] };
+  wrongTitle.page.sections[0].section = (wrongTitle.page.content as BuilderContent).sections[0];
+  expect(() => parsePublicBuilderResolution(wrongTitle, "clinic-a", "en", "home", "home")).toThrow();
+});

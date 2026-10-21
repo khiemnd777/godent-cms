@@ -1,0 +1,2083 @@
+{
+  "recordedAt": "2026-10-21T09:43:33.883Z",
+  "cases": [
+    {
+      "controls": [
+        {
+          "label": "Ảnh trước",
+          "rect": {
+            "bottom": 493,
+            "height": 26,
+            "right": 153.5,
+            "width": 26,
+            "x": 127.5,
+            "y": 467
+          },
+          "visible": true
+        },
+        {
+          "label": "Xem ảnh 1",
+          "rect": {
+            "bottom": 484.5,
+            "height": 9,
+            "right": 168.5,
+            "width": 9,
+            "x": 159.5,
+            "y": 475.5
+          },
+          "visible": true
+        },
+        {
+          "label": "Xem ảnh 2",
+          "rect": {
+            "bottom": 484.5,
+            "height": 9,
+            "right": 183.5,
+            "width": 9,
+            "x": 174.5,
+            "y": 475.5
+          },
+          "visible": true
+        },
+        {
+          "label": "Xem ảnh 3",
+          "rect": {
+            "bottom": 484.5,
+            "height": 9,
+            "right": 198.5,
+            "width": 9,
+            "x": 189.5,
+            "y": 475.5
+          },
+          "visible": true
+        },
+        {
+          "label": "Ảnh tiếp",
+          "rect": {
+            "bottom": 493,
+            "height": 26,
+            "right": 230.5,
+            "width": 26,
+            "x": 204.5,
+            "y": 467
+          },
+          "visible": true
+        },
+        {
+          "label": "Tạm dừng ảnh",
+          "rect": {
+            "bottom": 493,
+            "height": 26,
+            "right": 262.5,
+            "width": 26,
+            "x": 236.5,
+            "y": 467
+          },
+          "visible": true
+        }
+      ],
+      "fontStatus": "loaded",
+      "heroClass": "signature-carousel hero-type-rose-editorial",
+      "roseFontLoaded": true,
+      "scrollWidth": 390,
+      "scrollY": 0,
+      "slides": [
+        {
+          "copy": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/lien-he",
+            "label": "Trao đổi cùng Lạc Vân",
+            "rect": {
+              "bottom": 0,
+              "height": 0,
+              "right": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            },
+            "visible": false
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "hidden": true,
+          "highlight": "nụ cười",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [],
+          "text": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "textVisible": false,
+          "title": "An tâm cho từng nụ cười"
+        },
+        {
+          "copy": {
+            "bottom": 259.5703125,
+            "height": 147.5703125,
+            "right": 370,
+            "width": 350,
+            "x": 20,
+            "y": 112
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/tong-quan-dich-vu",
+            "label": "Khám phá dịch vụ",
+            "rect": {
+              "bottom": 259.5703125,
+              "height": 32.5,
+              "right": 164.7421875,
+              "width": 144.7421875,
+              "x": 20,
+              "y": 227.0703125
+            },
+            "visible": true
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 150.0703125,
+            "height": 38.0703125,
+            "right": 370,
+            "width": 350,
+            "x": 20,
+            "y": 112
+          },
+          "hidden": false,
+          "highlight": "sự thấu hiểu",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [
+            {
+              "height": 46.5,
+              "right": 324.8984375,
+              "width": 169.71875,
+              "x": 155.1796875,
+              "y": 107.5
+            }
+          ],
+          "text": {
+            "bottom": 209.0703125,
+            "height": 45,
+            "right": 350,
+            "width": 330,
+            "x": 20,
+            "y": 164.0703125
+          },
+          "textVisible": true,
+          "title": "An tâm từ sự thấu hiểu"
+        },
+        {
+          "copy": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/gioi-thieu",
+            "label": "Tìm hiểu Lạc Vân",
+            "rect": {
+              "bottom": 0,
+              "height": 0,
+              "right": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            },
+            "visible": false
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "hidden": true,
+          "highlight": "chính bạn",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [],
+          "text": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "textVisible": false,
+          "title": "Dành thời gian cho chính bạn"
+        }
+      ],
+      "url": "http://localhost:5892/lac-van",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "case": "lac-van-vi-390"
+    },
+    {
+      "controls": [
+        {
+          "label": "Previous slide",
+          "rect": {
+            "bottom": 493,
+            "height": 26,
+            "right": 153.5,
+            "width": 26,
+            "x": 127.5,
+            "y": 467
+          },
+          "visible": true
+        },
+        {
+          "label": "Show slide 1",
+          "rect": {
+            "bottom": 484.5,
+            "height": 9,
+            "right": 168.5,
+            "width": 9,
+            "x": 159.5,
+            "y": 475.5
+          },
+          "visible": true
+        },
+        {
+          "label": "Show slide 2",
+          "rect": {
+            "bottom": 484.5,
+            "height": 9,
+            "right": 183.5,
+            "width": 9,
+            "x": 174.5,
+            "y": 475.5
+          },
+          "visible": true
+        },
+        {
+          "label": "Show slide 3",
+          "rect": {
+            "bottom": 484.5,
+            "height": 9,
+            "right": 198.5,
+            "width": 9,
+            "x": 189.5,
+            "y": 475.5
+          },
+          "visible": true
+        },
+        {
+          "label": "Next slide",
+          "rect": {
+            "bottom": 493,
+            "height": 26,
+            "right": 230.5,
+            "width": 26,
+            "x": 204.5,
+            "y": 467
+          },
+          "visible": true
+        },
+        {
+          "label": "Pause slides",
+          "rect": {
+            "bottom": 493,
+            "height": 26,
+            "right": 262.5,
+            "width": 26,
+            "x": 236.5,
+            "y": 467
+          },
+          "visible": true
+        }
+      ],
+      "fontStatus": "loaded",
+      "heroClass": "signature-carousel hero-type-rose-editorial",
+      "roseFontLoaded": true,
+      "scrollWidth": 390,
+      "scrollY": 0,
+      "slides": [
+        {
+          "copy": {
+            "bottom": 259.5703125,
+            "height": 147.5703125,
+            "right": 370,
+            "width": 350,
+            "x": 20,
+            "y": 112
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/en/lien-he",
+            "label": "Talk with Lac Van",
+            "rect": {
+              "bottom": 259.5703125,
+              "height": 32.5,
+              "right": 160.8828125,
+              "width": 140.8828125,
+              "x": 20,
+              "y": 227.0703125
+            },
+            "visible": true
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 150.0703125,
+            "height": 38.0703125,
+            "right": 370,
+            "width": 350,
+            "x": 20,
+            "y": 112
+          },
+          "hidden": false,
+          "highlight": "every smile",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [
+            {
+              "height": 46.5,
+              "right": 282.8515625,
+              "width": 152.5859375,
+              "x": 130.265625,
+              "y": 107.5
+            }
+          ],
+          "text": {
+            "bottom": 209.0703125,
+            "height": 45,
+            "right": 350,
+            "width": 330,
+            "x": 20,
+            "y": 164.0703125
+          },
+          "textVisible": true,
+          "title": "Care for every smile"
+        },
+        {
+          "copy": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/en/tong-quan-dich-vu",
+            "label": "Explore our services",
+            "rect": {
+              "bottom": 0,
+              "height": 0,
+              "right": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            },
+            "visible": false
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "hidden": true,
+          "highlight": "understanding",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [],
+          "text": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "textVisible": false,
+          "title": "Confidence begins with understanding"
+        },
+        {
+          "copy": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/en/gioi-thieu",
+            "label": "Meet Lac Van",
+            "rect": {
+              "bottom": 0,
+              "height": 0,
+              "right": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            },
+            "visible": false
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "hidden": true,
+          "highlight": "yourself",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [],
+          "text": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "textVisible": false,
+          "title": "Make time for yourself"
+        }
+      ],
+      "url": "http://localhost:5892/lac-van/en",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "case": "lac-van-en-390"
+    },
+    {
+      "controls": [],
+      "fontStatus": "loaded",
+      "heroClass": "signature-carousel hero-type-warm-editorial",
+      "roseFontLoaded": false,
+      "scrollWidth": 390,
+      "scrollY": 0,
+      "slides": [
+        {
+          "copy": {
+            "bottom": 330.0859375,
+            "height": 218.0859375,
+            "right": 370,
+            "width": 350,
+            "x": 20,
+            "y": 112
+          },
+          "cta": {
+            "href": "http://localhost:5892/dental-go-plus/en/lien-he",
+            "label": "Request a consultation",
+            "rect": {
+              "bottom": 330.0859375,
+              "height": 32.5,
+              "right": 191.0234375,
+              "width": 171.0234375,
+              "x": 20,
+              "y": 297.5859375
+            },
+            "visible": true
+          },
+          "font": "Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 220.5859375,
+            "height": 108.5859375,
+            "right": 370,
+            "width": 350,
+            "x": 20,
+            "y": 112
+          },
+          "hidden": false,
+          "highlight": "understanding.",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1536
+          },
+          "phraseFragments": [
+            {
+              "height": 38.5,
+              "right": 240.03125,
+              "width": 220.03125,
+              "x": 20,
+              "y": 182.015625
+            }
+          ],
+          "text": {
+            "bottom": 279.5859375,
+            "height": 45,
+            "right": 350,
+            "width": 330,
+            "x": 20,
+            "y": 234.5859375
+          },
+          "textVisible": true,
+          "title": "Natural smiles. Care begins with understanding."
+        }
+      ],
+      "url": "http://localhost:5892/dental-go-plus/en",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "case": "dental-go-plus-en-390"
+    },
+    {
+      "controls": [],
+      "fontStatus": "loaded",
+      "heroClass": "signature-carousel hero-type-warm-editorial",
+      "roseFontLoaded": false,
+      "scrollWidth": 390,
+      "scrollY": 0,
+      "slides": [
+        {
+          "copy": {
+            "bottom": 294.828125,
+            "height": 182.828125,
+            "right": 370,
+            "width": 350,
+            "x": 20,
+            "y": 112
+          },
+          "cta": {
+            "href": "http://localhost:5892/dental-go-plus/lien-he",
+            "label": "Đăng ký tư vấn",
+            "rect": {
+              "bottom": 294.828125,
+              "height": 32.5,
+              "right": 149.4921875,
+              "width": 129.4921875,
+              "x": 20,
+              "y": 262.328125
+            },
+            "visible": true
+          },
+          "font": "Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 185.328125,
+            "height": 73.328125,
+            "right": 370,
+            "width": 350,
+            "x": 20,
+            "y": 112
+          },
+          "hidden": false,
+          "highlight": "sự thấu hiểu.",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1536
+          },
+          "phraseFragments": [
+            {
+              "height": 38.5,
+              "right": 294.7109375,
+              "width": 183.8359375,
+              "x": 110.875,
+              "y": 146.7578125
+            }
+          ],
+          "text": {
+            "bottom": 244.328125,
+            "height": 45,
+            "right": 350,
+            "width": 330,
+            "x": 20,
+            "y": 199.328125
+          },
+          "textVisible": true,
+          "title": "Nụ cười tự nhiên. Khởi đầu từ sự thấu hiểu."
+        }
+      ],
+      "url": "http://localhost:5892/dental-go-plus",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "case": "dental-go-plus-vi-390"
+    },
+    {
+      "controls": [],
+      "fontStatus": "loaded",
+      "heroClass": "signature-carousel hero-type-warm-editorial",
+      "roseFontLoaded": false,
+      "scrollWidth": 1440,
+      "scrollY": 0,
+      "slides": [
+        {
+          "copy": {
+            "bottom": 568.9375,
+            "height": 399.34375,
+            "right": 778,
+            "width": 650,
+            "x": 128,
+            "y": 169.59375
+          },
+          "cta": {
+            "href": "http://localhost:5892/dental-go-plus/lien-he",
+            "label": "Đăng ký tư vấn",
+            "rect": {
+              "bottom": 568.9375,
+              "height": 50,
+              "right": 317.171875,
+              "width": 189.171875,
+              "x": 128,
+              "y": 518.9375
+            },
+            "visible": true
+          },
+          "font": "Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 406.25,
+            "height": 236.65625,
+            "right": 778,
+            "width": 650,
+            "x": 128,
+            "y": 169.59375
+          },
+          "hidden": false,
+          "highlight": "sự thấu hiểu.",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1536
+          },
+          "phraseFragments": [
+            {
+              "height": 83.5,
+              "right": 528.6796875,
+              "width": 400.6796875,
+              "x": 128,
+              "y": 322.765625
+            }
+          ],
+          "text": {
+            "bottom": 490.9375,
+            "height": 62.6875,
+            "right": 598,
+            "width": 470,
+            "x": 128,
+            "y": 428.25
+          },
+          "textVisible": true,
+          "title": "Nụ cười tự nhiên. Khởi đầu từ sự thấu hiểu."
+        }
+      ],
+      "url": "http://localhost:5892/dental-go-plus",
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "case": "dental-go-plus-vi-1440"
+    },
+    {
+      "controls": [],
+      "fontStatus": "loaded",
+      "heroClass": "signature-carousel hero-type-warm-editorial",
+      "roseFontLoaded": false,
+      "scrollWidth": 1440,
+      "scrollY": 0,
+      "slides": [
+        {
+          "copy": {
+            "bottom": 568.9375,
+            "height": 399.34375,
+            "right": 778,
+            "width": 650,
+            "x": 128,
+            "y": 169.59375
+          },
+          "cta": {
+            "href": "http://localhost:5892/dental-go-plus/en/lien-he",
+            "label": "Request a consultation",
+            "rect": {
+              "bottom": 568.9375,
+              "height": 50,
+              "right": 370.0234375,
+              "width": 242.0234375,
+              "x": 128,
+              "y": 518.9375
+            },
+            "visible": true
+          },
+          "font": "Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 406.25,
+            "height": 236.65625,
+            "right": 778,
+            "width": 650,
+            "x": 128,
+            "y": 169.59375
+          },
+          "hidden": false,
+          "highlight": "understanding.",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1536
+          },
+          "phraseFragments": [
+            {
+              "height": 83.5,
+              "right": 607.5703125,
+              "width": 479.5703125,
+              "x": 128,
+              "y": 322.765625
+            }
+          ],
+          "text": {
+            "bottom": 490.9375,
+            "height": 62.6875,
+            "right": 598,
+            "width": 470,
+            "x": 128,
+            "y": 428.25
+          },
+          "textVisible": true,
+          "title": "Natural smiles. Care begins with understanding."
+        }
+      ],
+      "url": "http://localhost:5892/dental-go-plus/en",
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "case": "dental-go-plus-en-1440"
+    },
+    {
+      "controls": [
+        {
+          "label": "Previous slide",
+          "rect": {
+            "bottom": 582.59375,
+            "height": 34,
+            "right": 664,
+            "width": 34,
+            "x": 630,
+            "y": 548.59375
+          },
+          "visible": true
+        },
+        {
+          "label": "Show slide 1",
+          "rect": {
+            "bottom": 571.59375,
+            "height": 12,
+            "right": 686,
+            "width": 12,
+            "x": 674,
+            "y": 559.59375
+          },
+          "visible": true
+        },
+        {
+          "label": "Show slide 2",
+          "rect": {
+            "bottom": 571.59375,
+            "height": 12,
+            "right": 704,
+            "width": 12,
+            "x": 692,
+            "y": 559.59375
+          },
+          "visible": true
+        },
+        {
+          "label": "Show slide 3",
+          "rect": {
+            "bottom": 571.59375,
+            "height": 12,
+            "right": 722,
+            "width": 12,
+            "x": 710,
+            "y": 559.59375
+          },
+          "visible": true
+        },
+        {
+          "label": "Next slide",
+          "rect": {
+            "bottom": 582.59375,
+            "height": 34,
+            "right": 766,
+            "width": 34,
+            "x": 732,
+            "y": 548.59375
+          },
+          "visible": true
+        },
+        {
+          "label": "Pause slides",
+          "rect": {
+            "bottom": 582.59375,
+            "height": 34,
+            "right": 810,
+            "width": 34,
+            "x": 776,
+            "y": 548.59375
+          },
+          "visible": true
+        }
+      ],
+      "fontStatus": "loaded",
+      "heroClass": "signature-carousel hero-type-rose-editorial",
+      "roseFontLoaded": true,
+      "scrollWidth": 1440,
+      "scrollY": 0,
+      "slides": [
+        {
+          "copy": {
+            "bottom": 470.4296875,
+            "height": 245.671875,
+            "right": 778,
+            "width": 650,
+            "x": 128,
+            "y": 224.7578125
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/en/lien-he",
+            "label": "Talk with Lac Van",
+            "rect": {
+              "bottom": 470.4296875,
+              "height": 50,
+              "right": 331.6640625,
+              "width": 203.6640625,
+              "x": 128,
+              "y": 420.4296875
+            },
+            "visible": true
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 307.7421875,
+            "height": 82.984375,
+            "right": 778,
+            "width": 650,
+            "x": 128,
+            "y": 224.7578125
+          },
+          "hidden": false,
+          "highlight": "every smile",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [
+            {
+              "height": 100.5,
+              "right": 700.8828125,
+              "width": 332.5703125,
+              "x": 368.3125,
+              "y": 215.7578125
+            }
+          ],
+          "text": {
+            "bottom": 392.4296875,
+            "height": 62.6875,
+            "right": 598,
+            "width": 470,
+            "x": 128,
+            "y": 329.7421875
+          },
+          "textVisible": true,
+          "title": "Care for every smile"
+        },
+        {
+          "copy": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/en/tong-quan-dich-vu",
+            "label": "Explore our services",
+            "rect": {
+              "bottom": 0,
+              "height": 0,
+              "right": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            },
+            "visible": false
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "hidden": true,
+          "highlight": "understanding",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [],
+          "text": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "textVisible": false,
+          "title": "Confidence begins with understanding"
+        },
+        {
+          "copy": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/en/gioi-thieu",
+            "label": "Meet Lac Van",
+            "rect": {
+              "bottom": 0,
+              "height": 0,
+              "right": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            },
+            "visible": false
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "hidden": true,
+          "highlight": "yourself",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [],
+          "text": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "textVisible": false,
+          "title": "Make time for yourself"
+        }
+      ],
+      "url": "http://localhost:5892/lac-van/en",
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "case": "lac-van-en-1440"
+    },
+    {
+      "controls": [
+        {
+          "label": "Ảnh trước",
+          "rect": {
+            "bottom": 582.59375,
+            "height": 34,
+            "right": 664,
+            "width": 34,
+            "x": 630,
+            "y": 548.59375
+          },
+          "visible": true
+        },
+        {
+          "label": "Xem ảnh 1",
+          "rect": {
+            "bottom": 571.59375,
+            "height": 12,
+            "right": 686,
+            "width": 12,
+            "x": 674,
+            "y": 559.59375
+          },
+          "visible": true
+        },
+        {
+          "label": "Xem ảnh 2",
+          "rect": {
+            "bottom": 571.59375,
+            "height": 12,
+            "right": 704,
+            "width": 12,
+            "x": 692,
+            "y": 559.59375
+          },
+          "visible": true
+        },
+        {
+          "label": "Xem ảnh 3",
+          "rect": {
+            "bottom": 571.59375,
+            "height": 12,
+            "right": 722,
+            "width": 12,
+            "x": 710,
+            "y": 559.59375
+          },
+          "visible": true
+        },
+        {
+          "label": "Ảnh tiếp",
+          "rect": {
+            "bottom": 582.59375,
+            "height": 34,
+            "right": 766,
+            "width": 34,
+            "x": 732,
+            "y": 548.59375
+          },
+          "visible": true
+        },
+        {
+          "label": "Tạm dừng ảnh",
+          "rect": {
+            "bottom": 582.59375,
+            "height": 34,
+            "right": 810,
+            "width": 34,
+            "x": 776,
+            "y": 548.59375
+          },
+          "visible": true
+        }
+      ],
+      "fontStatus": "loaded",
+      "heroClass": "signature-carousel hero-type-rose-editorial",
+      "roseFontLoaded": true,
+      "scrollWidth": 1440,
+      "scrollY": 0,
+      "slides": [
+        {
+          "copy": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/lien-he",
+            "label": "Trao đổi cùng Lạc Vân",
+            "rect": {
+              "bottom": 0,
+              "height": 0,
+              "right": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            },
+            "visible": false
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "hidden": true,
+          "highlight": "nụ cười",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [],
+          "text": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "textVisible": false,
+          "title": "An tâm cho từng nụ cười"
+        },
+        {
+          "copy": {
+            "bottom": 508.84375,
+            "height": 322.5078125,
+            "right": 778,
+            "width": 650,
+            "x": 128,
+            "y": 186.3359375
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/tong-quan-dich-vu",
+            "label": "Khám phá dịch vụ",
+            "rect": {
+              "bottom": 508.84375,
+              "height": 50,
+              "right": 336.578125,
+              "width": 208.578125,
+              "x": 128,
+              "y": 458.84375
+            },
+            "visible": true
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 346.15625,
+            "height": 159.8203125,
+            "right": 778,
+            "width": 650,
+            "x": 128,
+            "y": 186.3359375
+          },
+          "hidden": false,
+          "highlight": "sự thấu hiểu",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [
+            {
+              "height": 100.5,
+              "right": 497.90625,
+              "width": 369.90625,
+              "x": 128,
+              "y": 254.171875
+            }
+          ],
+          "text": {
+            "bottom": 430.84375,
+            "height": 62.6875,
+            "right": 598,
+            "width": 470,
+            "x": 128,
+            "y": 368.15625
+          },
+          "textVisible": true,
+          "title": "An tâm từ sự thấu hiểu"
+        },
+        {
+          "copy": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/gioi-thieu",
+            "label": "Tìm hiểu Lạc Vân",
+            "rect": {
+              "bottom": 0,
+              "height": 0,
+              "right": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            },
+            "visible": false
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "hidden": true,
+          "highlight": "chính bạn",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [],
+          "text": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "textVisible": false,
+          "title": "Dành thời gian cho chính bạn"
+        }
+      ],
+      "url": "http://localhost:5892/lac-van",
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "case": "lac-van-vi-1440"
+    },
+    {
+      "controls": [
+        {
+          "label": "Ảnh trước",
+          "rect": {
+            "bottom": 383.0078125,
+            "height": 26,
+            "right": 118.5,
+            "width": 26,
+            "x": 92.5,
+            "y": 357.0078125
+          },
+          "visible": true
+        },
+        {
+          "label": "Xem ảnh 1",
+          "rect": {
+            "bottom": 374.5078125,
+            "height": 9,
+            "right": 133.5,
+            "width": 9,
+            "x": 124.5,
+            "y": 365.5078125
+          },
+          "visible": true
+        },
+        {
+          "label": "Xem ảnh 2",
+          "rect": {
+            "bottom": 374.5078125,
+            "height": 9,
+            "right": 148.5,
+            "width": 9,
+            "x": 139.5,
+            "y": 365.5078125
+          },
+          "visible": true
+        },
+        {
+          "label": "Xem ảnh 3",
+          "rect": {
+            "bottom": 374.5078125,
+            "height": 9,
+            "right": 163.5,
+            "width": 9,
+            "x": 154.5,
+            "y": 365.5078125
+          },
+          "visible": true
+        },
+        {
+          "label": "Ảnh tiếp",
+          "rect": {
+            "bottom": 383.0078125,
+            "height": 26,
+            "right": 195.5,
+            "width": 26,
+            "x": 169.5,
+            "y": 357.0078125
+          },
+          "visible": true
+        },
+        {
+          "label": "Phát ảnh",
+          "rect": {
+            "bottom": 383.0078125,
+            "height": 26,
+            "right": 227.5,
+            "width": 26,
+            "x": 201.5,
+            "y": 357.0078125
+          },
+          "visible": true
+        }
+      ],
+      "fontStatus": "loaded",
+      "heroClass": "signature-carousel hero-type-rose-editorial",
+      "roseFontLoaded": true,
+      "scrollWidth": 320,
+      "scrollY": 112,
+      "slides": [
+        {
+          "copy": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/lien-he",
+            "label": "Trao đổi cùng Lạc Vân",
+            "rect": {
+              "bottom": 0,
+              "height": 0,
+              "right": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            },
+            "visible": false
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "hidden": true,
+          "highlight": "nụ cười",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [],
+          "text": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "textVisible": false,
+          "title": "An tâm cho từng nụ cười"
+        },
+        {
+          "copy": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/tong-quan-dich-vu",
+            "label": "Khám phá dịch vụ",
+            "rect": {
+              "bottom": 0,
+              "height": 0,
+              "right": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            },
+            "visible": false
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "hidden": true,
+          "highlight": "sự thấu hiểu",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [],
+          "text": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "textVisible": false,
+          "title": "An tâm từ sự thấu hiểu"
+        },
+        {
+          "copy": {
+            "bottom": 180.0078125,
+            "height": 180.0078125,
+            "right": 300,
+            "width": 280,
+            "x": 20,
+            "y": 0
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/gioi-thieu",
+            "label": "Tìm hiểu Lạc Vân",
+            "rect": {
+              "bottom": 180.0078125,
+              "height": 32.5,
+              "right": 160.46875,
+              "width": 140.46875,
+              "x": 20,
+              "y": 147.5078125
+            },
+            "visible": true
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 70.5078125,
+            "height": 70.5078125,
+            "right": 300,
+            "width": 280,
+            "x": 20,
+            "y": 0
+          },
+          "hidden": false,
+          "highlight": "chính bạn",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [
+            {
+              "height": 44.5,
+              "right": 148.5625,
+              "width": 128.5625,
+              "x": 20,
+              "y": 29.8984375
+            }
+          ],
+          "text": {
+            "bottom": 129.5078125,
+            "height": 45,
+            "right": 300,
+            "width": 280,
+            "x": 20,
+            "y": 84.5078125
+          },
+          "textVisible": true,
+          "title": "Dành thời gian cho chính bạn"
+        }
+      ],
+      "url": "http://localhost:5892/lac-van",
+      "viewport": {
+        "height": 740,
+        "width": 320
+      },
+      "case": "lac-van-vi-320-slide3"
+    },
+    {
+      "controls": [],
+      "fontStatus": "loaded",
+      "heroClass": "signature-carousel hero-type-warm-editorial",
+      "roseFontLoaded": false,
+      "scrollWidth": 320,
+      "scrollY": 0,
+      "slides": [
+        {
+          "copy": {
+            "bottom": 325.90625,
+            "height": 213.90625,
+            "right": 300,
+            "width": 280,
+            "x": 20,
+            "y": 112
+          },
+          "cta": {
+            "href": "http://localhost:5892/dental-go-plus/en/lien-he",
+            "label": "Request a consultation",
+            "rect": {
+              "bottom": 325.90625,
+              "height": 32.5,
+              "right": 191.0234375,
+              "width": 171.0234375,
+              "x": 20,
+              "y": 293.40625
+            },
+            "visible": true
+          },
+          "font": "Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 216.40625,
+            "height": 104.40625,
+            "right": 300,
+            "width": 280,
+            "x": 20,
+            "y": 112
+          },
+          "hidden": false,
+          "highlight": "understanding.",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1536
+          },
+          "phraseFragments": [
+            {
+              "height": 36.5,
+              "right": 231.578125,
+              "width": 211.578125,
+              "x": 20,
+              "y": 179.796875
+            }
+          ],
+          "text": {
+            "bottom": 275.40625,
+            "height": 45,
+            "right": 300,
+            "width": 280,
+            "x": 20,
+            "y": 230.40625
+          },
+          "textVisible": true,
+          "title": "Natural smiles. Care begins with understanding."
+        }
+      ],
+      "url": "http://localhost:5892/dental-go-plus/en",
+      "viewport": {
+        "height": 740,
+        "width": 320
+      },
+      "case": "dental-go-plus-en-320"
+    },
+    {
+      "controls": [
+        {
+          "label": "Previous slide",
+          "rect": {
+            "bottom": 383.0078125,
+            "height": 26,
+            "right": 118.5,
+            "width": 26,
+            "x": 92.5,
+            "y": 357.0078125
+          },
+          "visible": true
+        },
+        {
+          "label": "Show slide 1",
+          "rect": {
+            "bottom": 374.5078125,
+            "height": 9,
+            "right": 133.5,
+            "width": 9,
+            "x": 124.5,
+            "y": 365.5078125
+          },
+          "visible": true
+        },
+        {
+          "label": "Show slide 2",
+          "rect": {
+            "bottom": 374.5078125,
+            "height": 9,
+            "right": 148.5,
+            "width": 9,
+            "x": 139.5,
+            "y": 365.5078125
+          },
+          "visible": true
+        },
+        {
+          "label": "Show slide 3",
+          "rect": {
+            "bottom": 374.5078125,
+            "height": 9,
+            "right": 163.5,
+            "width": 9,
+            "x": 154.5,
+            "y": 365.5078125
+          },
+          "visible": true
+        },
+        {
+          "label": "Next slide",
+          "rect": {
+            "bottom": 383.0078125,
+            "height": 26,
+            "right": 195.5,
+            "width": 26,
+            "x": 169.5,
+            "y": 357.0078125
+          },
+          "visible": true
+        },
+        {
+          "label": "Play slides",
+          "rect": {
+            "bottom": 383.0078125,
+            "height": 26,
+            "right": 227.5,
+            "width": 26,
+            "x": 201.5,
+            "y": 357.0078125
+          },
+          "visible": true
+        }
+      ],
+      "fontStatus": "loaded",
+      "heroClass": "signature-carousel hero-type-rose-editorial",
+      "roseFontLoaded": true,
+      "scrollWidth": 320,
+      "scrollY": 112,
+      "slides": [
+        {
+          "copy": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/en/lien-he",
+            "label": "Talk with Lac Van",
+            "rect": {
+              "bottom": 0,
+              "height": 0,
+              "right": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            },
+            "visible": false
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "hidden": true,
+          "highlight": "every smile",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [],
+          "text": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "textVisible": false,
+          "title": "Care for every smile"
+        },
+        {
+          "copy": {
+            "bottom": 180.0078125,
+            "height": 180.0078125,
+            "right": 300,
+            "width": 280,
+            "x": 20,
+            "y": 0
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/en/tong-quan-dich-vu",
+            "label": "Explore our services",
+            "rect": {
+              "bottom": 180.0078125,
+              "height": 32.5,
+              "right": 178.2265625,
+              "width": 158.2265625,
+              "x": 20,
+              "y": 147.5078125
+            },
+            "visible": true
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 70.5078125,
+            "height": 70.5078125,
+            "right": 300,
+            "width": 280,
+            "x": 20,
+            "y": 0
+          },
+          "hidden": false,
+          "highlight": "understanding",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [
+            {
+              "height": 44.5,
+              "right": 273.6171875,
+              "width": 191.515625,
+              "x": 82.1015625,
+              "y": 29.8984375
+            }
+          ],
+          "text": {
+            "bottom": 129.5078125,
+            "height": 45,
+            "right": 300,
+            "width": 280,
+            "x": 20,
+            "y": 84.5078125
+          },
+          "textVisible": true,
+          "title": "Confidence begins with understanding"
+        },
+        {
+          "copy": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/en/gioi-thieu",
+            "label": "Meet Lac Van",
+            "rect": {
+              "bottom": 0,
+              "height": 0,
+              "right": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            },
+            "visible": false
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "hidden": true,
+          "highlight": "yourself",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [],
+          "text": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "textVisible": false,
+          "title": "Make time for yourself"
+        }
+      ],
+      "url": "http://localhost:5892/lac-van/en",
+      "viewport": {
+        "height": 740,
+        "width": 320
+      },
+      "case": "lac-van-en-320-slide2"
+    },
+    {
+      "controls": [
+        {
+          "label": "Previous slide",
+          "rect": {
+            "bottom": 383.0078125,
+            "height": 26,
+            "right": 118.5,
+            "width": 26,
+            "x": 92.5,
+            "y": 357.0078125
+          },
+          "visible": true
+        },
+        {
+          "label": "Show slide 1",
+          "rect": {
+            "bottom": 374.5078125,
+            "height": 9,
+            "right": 133.5,
+            "width": 9,
+            "x": 124.5,
+            "y": 365.5078125
+          },
+          "visible": true
+        },
+        {
+          "label": "Show slide 2",
+          "rect": {
+            "bottom": 374.5078125,
+            "height": 9,
+            "right": 148.5,
+            "width": 9,
+            "x": 139.5,
+            "y": 365.5078125
+          },
+          "visible": true
+        },
+        {
+          "label": "Show slide 3",
+          "rect": {
+            "bottom": 374.5078125,
+            "height": 9,
+            "right": 163.5,
+            "width": 9,
+            "x": 154.5,
+            "y": 365.5078125
+          },
+          "visible": true
+        },
+        {
+          "label": "Next slide",
+          "rect": {
+            "bottom": 383.0078125,
+            "height": 26,
+            "right": 195.5,
+            "width": 26,
+            "x": 169.5,
+            "y": 357.0078125
+          },
+          "visible": true
+        },
+        {
+          "label": "Play slides",
+          "rect": {
+            "bottom": 383.0078125,
+            "height": 26,
+            "right": 227.5,
+            "width": 26,
+            "x": 201.5,
+            "y": 357.0078125
+          },
+          "visible": true
+        }
+      ],
+      "fontStatus": "loaded",
+      "heroClass": "signature-carousel hero-type-rose-editorial",
+      "roseFontLoaded": true,
+      "scrollWidth": 320,
+      "scrollY": 112,
+      "slides": [
+        {
+          "copy": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/en/lien-he",
+            "label": "Talk with Lac Van",
+            "rect": {
+              "bottom": 0,
+              "height": 0,
+              "right": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            },
+            "visible": false
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "hidden": true,
+          "highlight": "every smile",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [],
+          "text": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "textVisible": false,
+          "title": "Care for every smile"
+        },
+        {
+          "copy": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/en/tong-quan-dich-vu",
+            "label": "Explore our services",
+            "rect": {
+              "bottom": 0,
+              "height": 0,
+              "right": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            },
+            "visible": false
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "hidden": true,
+          "highlight": "understanding",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [],
+          "text": {
+            "bottom": 0,
+            "height": 0,
+            "right": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "textVisible": false,
+          "title": "Confidence begins with understanding"
+        },
+        {
+          "copy": {
+            "bottom": 180.0078125,
+            "height": 180.0078125,
+            "right": 300,
+            "width": 280,
+            "x": 20,
+            "y": 0
+          },
+          "cta": {
+            "href": "http://localhost:5892/lac-van/en/gioi-thieu",
+            "label": "Meet Lac Van",
+            "rect": {
+              "bottom": 180.0078125,
+              "height": 32.5,
+              "right": 139.6953125,
+              "width": 119.6953125,
+              "x": 20,
+              "y": 147.5078125
+            },
+            "visible": true
+          },
+          "font": "\"Signature DM Serif Display\", Georgia, \"Times New Roman\", serif",
+          "heading": {
+            "bottom": 70.5078125,
+            "height": 70.5078125,
+            "right": 300,
+            "width": 280,
+            "x": 20,
+            "y": 0
+          },
+          "hidden": false,
+          "highlight": "yourself",
+          "image": {
+            "complete": true,
+            "naturalWidth": 1600
+          },
+          "phraseFragments": [
+            {
+              "height": 44.5,
+              "right": 124.2578125,
+              "width": 104.2578125,
+              "x": 20,
+              "y": 29.8984375
+            }
+          ],
+          "text": {
+            "bottom": 129.5078125,
+            "height": 45,
+            "right": 300,
+            "width": 280,
+            "x": 20,
+            "y": 84.5078125
+          },
+          "textVisible": true,
+          "title": "Make time for yourself"
+        }
+      ],
+      "url": "http://localhost:5892/lac-van/en",
+      "viewport": {
+        "height": 740,
+        "width": 320
+      },
+      "case": "lac-van-en-320-slide3"
+    }
+  ],
+  "interactions": [
+    "VI select slide 3; next wraps to slide 1",
+    "EN select slide 2 then 3; previous returns slide 2"
+  ],
+  "consoleWarningsErrors": []
+}

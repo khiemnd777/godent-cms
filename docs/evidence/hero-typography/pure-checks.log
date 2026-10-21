@@ -1,0 +1,70 @@
+bun test v1.4.3 (c6da4a4d3)
+
+scripts/hero-typography-local.test.ts:
+(pass) local Hero publication intent > dental-go-plus vi changes only the selected slide phrases [1.35ms]
+(pass) local Hero publication intent > dental-go-plus vi changes only Signature typography style [0.07ms]
+(pass) local Hero publication intent > dental-go-plus en changes only the selected slide phrases [0.03ms]
+(pass) local Hero publication intent > dental-go-plus en changes only Signature typography style [0.02ms]
+(pass) local Hero publication intent > lac-van vi changes only the selected slide phrases [0.02ms]
+(pass) local Hero publication intent > lac-van vi changes only Signature typography style [0.01ms]
+(pass) local Hero publication intent > lac-van en changes only the selected slide phrases [0.01ms]
+(pass) local Hero publication intent > lac-van en changes only Signature typography style
+(pass) local Hero publication intent > rejects changed slide count, missing phrase and repeated phrase [0.45ms]
+(pass) local Hero publication intent > pins each home publication to the original config head and rejects a concurrent config publication [0.04ms]
+(pass) local Hero publication intent > public readback intent preserves the original projection except one approved phrase [0.56ms]
+(pass) local Hero publication intent > accepts 0060 resolved slide shape without highlight while checking slide identity and copy [0.06ms]
+
+apps/website/components/signature-ui.test.tsx:
+(pass) signature groups are buttons, resource links remain navigable, and search is scoped by its action [4.57ms]
+(pass) carousel has one main heading, explicit selection and pause controls [1.03ms]
+(pass) editorial variants highlight one escaped title phrase while default retains its heading [0.27ms]
+(pass) signature home shows one real compact consultation immediately after its hero and keeps source identity [5.39ms]
+
+apps/website/lib/signature-validation.test.ts:
+(pass) signature projection accepts bounded navigation, current carousel gateway media and true home forms [1.39ms]
+(pass) signature projection rejects cross-tenant navigation/actions and foreign publication media [0.26ms]
+(pass) published hero style and title phrase survive sanitization without trusting added slide text [0.22ms]
+
+apps/admin/components/builder-hero-typography.test.tsx:
+(pass) homepage slide editor offers selection and manual phrase controls [3.50ms]
+(pass) signature config editor offers per-locale style without requiring a new field on old drafts [0.47ms]
+(pass) private and public Signature layouts bundle the same editorial font source [1.19ms]
+
+apps/admin/components/builder-private-copy.test.tsx:
+(pass) private preview renders resolved price and FAQ snapshots rather than reference counts [0.61ms]
+(pass) private forms are inert, use actual locale consent, and keep hidden content out [0.25ms]
+(pass) signature preview shares the website shell and resolves carousel images only through signed private media [2.45ms]
+(pass) signature preview keeps the photo introduction separate from the carousel and describes disabled language switching accurately [0.65ms]
+(pass) signature contact preview shares full consultation fields and keeps submission disabled [0.71ms]
+
+apps/admin/lib/builder-state.test.ts:
+(pass) builder routes keep home identity separate from ordinary page identity [0.25ms]
+(pass) keyboard section moves retain every section and do not mutate the saved baseline [0.44ms]
+(pass) an uncertain save retries the same captured content and operation [0.07ms]
+(pass) home carousel highlight follows its slide into the saved draft and clears without stale data [0.05ms]
+(pass) publish confirmation binds the saved revision and active config publication [0.05ms]
+(pass) rich text authoring remains separate from saved nodes until save [0.15ms]
+(pass) invalid rich text keeps the entered source and cannot become a saved draft [0.07ms]
+(pass) removed section source cannot keep a successfully saved draft dirty [0.02ms]
+(pass) M4 locale routes bind the same resource identity and reject unsupported locales [0.02ms]
+(pass) permission scopes use the current saved material usage and keep patient text explicit [0.10ms]
+(pass) promotion validity uses a closed start and open end with explicit UTC authoring [2.58ms]
+(pass) promotion wall times respect the authored timezone and reject ambiguous DST [1.70ms]
+(pass) every supported reference section uses the canonical builder schema [0.17ms]
+(pass) carousel authoring keeps every saved slide image in its hero permission scope [0.05ms]
+(pass) save captures the observed legacy state and never changes it during retry [0.04ms]
+(pass) does not require version comparison for an explicit quota denial [0.01ms]
+
+apps/api/test/lacvan-contract.test.ts:
+(pass) Signature template contracts > accepts signature configuration and preserves old themes [0.11ms]
+(pass) Signature template contracts > bounds navigation by total nodes, depth, unique ids and typed targets [0.18ms]
+(pass) Signature template contracts > requires pinned location references and bounded contacts [0.03ms]
+(pass) Signature template contracts > validates carousel slides without changing existing hero shape [0.05ms]
+(pass) Signature template contracts > keeps old snapshots on default and validates per-locale hero styles [0.05ms]
+(pass) Signature template contracts > requires one exact plain-text phrase in a home slide title [0.08ms]
+(pass) Signature template contracts > uses true home/page consultation routes [0.04ms]
+
+ 50 pass
+ 0 fail
+ 222 expect() calls
+Ran 50 tests across 7 files. [369.00ms]

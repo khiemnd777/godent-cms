@@ -1,0 +1,35 @@
+{
+  "runtimeCheck": {
+    "status": "FAIL",
+    "required_effort": "xhigh",
+    "observed": {
+      "thread_id": "01a15d87-b03e-7333-8cb9-f92d54109f2c",
+      "cli_version": "0.163.0-alpha.10.2",
+      "cwd": "/Users/khiemnguyen/Works/godent-cms/godent-cms",
+      "role": null,
+      "parent_thread_id": null,
+      "source_kind": "vscode",
+      "turn_id": "01a15dd3-7c15-73d3-a6a0-ceb952506d6b",
+      "timestamp": "2026-10-21T09:38:23.418Z",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "evidence_kind": "runtime_written_turn_context"
+    },
+    "errors": [
+      "Required effort does not equal recorded runtime effort"
+    ],
+    "limit": "Recorded runtime configuration; not an internal reasoning trace or quality guarantee",
+    "route": {
+      "policy_id": "GCMS-EFFORT-001 v1",
+      "task_types": [
+        "tenant-rbac-security-review"
+      ],
+      "risk_signals": [],
+      "routing": "PROJECT_MATRIX",
+      "fallback_reason": null,
+      "role": "coordinator"
+    },
+    "policy_sha256": "a75d33f9599567cd7385b9b35fba9ef4b9c92ff453899b82311261744b6ee6e9"
+  },
+  "humanOverride": "Direct latest request: Dùng High. Applies to this bounded hero review/acceptance; no global policy change."
+}

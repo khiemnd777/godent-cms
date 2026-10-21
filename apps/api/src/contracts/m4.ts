@@ -16,13 +16,15 @@ export interface M4MenuItem {id:string;label:string;target:M4Target;allowViFallb
 export const M4_LISTING_KINDS=['service','specialty','service_group','location','doctor','price','case','gallery','testimonial','article','category','faq','promotion'] as const;
 export type M4ListingKind=typeof M4_LISTING_KINDS[number];
 export type M4NavigationNode=({type:'resource';target:M4Target;allowViFallback:boolean}|{type:'listing';kind:M4ListingKind;locale:M4Locale}|{type:'group'})&{id:string;label:string;children:M4NavigationNode[]};
-export interface M4SignaturePresentation {navigation:M4NavigationNode[];headerLocation:ContentReference|null;footerLocations:ContentReference[]}
+export const SIGNATURE_HERO_TYPOGRAPHY=['default','warm_editorial','rose_editorial'] as const;
+export type SignatureHeroTypography=typeof SIGNATURE_HERO_TYPOGRAPHY[number];
+export interface M4SignaturePresentation {navigation:M4NavigationNode[];headerLocation:ContentReference|null;footerLocations:ContentReference[];heroTypography?:SignatureHeroTypography}
 export interface M4ResolvedNavigationNode {id:string;label:string;type:M4NavigationNode['type'];path:string|null;actualLocale:M4Locale;fallback:boolean;children:M4ResolvedNavigationNode[]}
 export interface M4ResolvedSignature {navigation:M4ResolvedNavigationNode[];headerLocation:M4PublicReference|null;footerLocations:M4PublicReference[]}
 export interface SitePresentation {signature?:M4SignaturePresentation;name:string;logo:ServiceMediaReference|null;theme:typeof M4_THEMES[number];themeVersion:1;palette:'teal'|'blue'|'plum';font:'system'|'serif';layout:'comfortable'|'compact';footer:SiteFooter;menu:M4MenuItem[]}
 export interface SectionBase {id:string;hidden:boolean}
 export interface HeroSection extends SectionBase {type:'hero';title:string;text:string;image:ServiceMediaReference|null;action:{label:string;target:M4Target;allowViFallback:boolean}|null}
-export interface HeroCarouselSlide {id:string;title:string;text:string;image:ServiceMediaReference|null;action:HeroSection['action']}
+export interface HeroCarouselSlide {id:string;title:string;text:string;highlight?:string;image:ServiceMediaReference|null;action:HeroSection['action']}
 export interface HeroCarouselSection extends SectionBase {type:'hero_carousel';slides:HeroCarouselSlide[];autoplay:boolean;intervalMs:5000|7000|10000}
 export interface RichTextSection extends SectionBase {type:'rich_text';body:RichTextDocument}
 export type ReferenceSectionType='services'|'doctors'|'locations'|'prices'|'cases'|'gallery'|'testimonials'|'articles'|'faq';
@@ -43,7 +45,7 @@ export interface M4RestoreInput {operationId:string;expectedVersion:number;sourc
 export interface M4CommandResult {operationId:string;replayed:boolean;draft:M4Variant;permission?:M4Permission}
 export interface M4HistoryItem {id:string;version:number;kind:'created'|'saved'|'restored';createdAt:string;actor:{userId:string;name:string}|null;restoredFrom:string|null;content:M4Content}
 export interface M4PrivateMedia {slot:string;assetId:string;revision:number;alt:string;url:string;expiresAt:string;pairIndex?:number;caption?:string}
-export interface M4ResolvedSlide<T> {id:string;title:string;text:string;media:T|null;action:{label:string;path:string;actualLocale:M4Locale;fallback:boolean}|null}
+export interface M4ResolvedSlide<T> {id:string;title:string;text:string;highlight?:string;media:T|null;action:{label:string;path:string;actualLocale:M4Locale;fallback:boolean}|null}
 export interface M4PrivateSection {slides?:M4ResolvedSlide<M4PrivateMedia>[];section:BuilderSection;references:M4PublicReference[];media:M4PrivateMedia|null;promotion:Omit<M4PromotionBlock,'publishedAt'>|null;action:{label:string;path:string;actualLocale:M4Locale;fallback:boolean}|null;form:'disabled'|null}
 export interface M4PrivatePreview {id:string;kind:M4ResourceKind;locale:M4Locale;draftVersion:number;content:M4Content;config:{draftVersion:number;content:SitePresentation;logoMedia:M4PrivateMedia|null;signature?:M4ResolvedSignature}|null;references:M4PublicReference[];sections:M4PrivateSection[];media:M4PrivateMedia[];issues:string[]}
 export interface M4Preview {draft:M4Variant;config:M4Variant|null;issues:string[];page:PublicM4Page|null;closure:M4PrivatePreview|null}

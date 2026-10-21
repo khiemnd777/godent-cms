@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "functions": [
+    {
+      "name": "valid_content",
+      "bodySha256": "1c2fdfb59e35e8e377a5ed559ccd3a3331fea2a23755395bb225afd7bb7c021e",
+      "matchesSource": true,
+      "securityDefiner": false,
+      "volatility": "i",
+      "owner": "gcms_s02_owner",
+      "searchPath": "pg_catalog"
+    },
+    {
+      "name": "config",
+      "bodySha256": "7ab050a8ca9bd40762fb2a31f0dd7ee87523df3a72d44741380f7bda8e538526",
+      "matchesSource": true,
+      "securityDefiner": true,
+      "volatility": "s",
+      "owner": "gcms_s02_owner",
+      "searchPath": "pg_catalog"
+    },
+    {
+      "name": "blank_content",
+      "bodySha256": "cbe09085aec9b8e1883795f73785352644a782723fec8eb3d55eb392623dc36e",
+      "matchesSource": true,
+      "securityDefiner": false,
+      "volatility": "i",
+      "owner": "gcms_s02_owner",
+      "searchPath": "pg_catalog"
+    }
+  ],
+  "publicExecuteDenied": 6
+}

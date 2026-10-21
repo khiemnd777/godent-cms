@@ -14,6 +14,15 @@ export function newSection(type: Exclude<BuilderSection["type"], "promotion">): 
   if (type === "consultation") return { ...base, type, title: "", promotion: null, serviceOptions: [], locationOptions: [] };
   return { ...base, type, title: "", references: [], required: false };
 }
+export function setCarouselSlideHighlight(section: Extract<BuilderSection, { type: "hero_carousel" }>, index: number, highlight: string) {
+  return { ...section, slides: section.slides.map((slide, at) => {
+    if (at !== index) return slide;
+    if (highlight) return { ...slide, highlight };
+    const withoutHighlight = { ...slide };
+    delete withoutHighlight.highlight;
+    return withoutHighlight;
+  }) };
+}
 export function emptyM4Content(kind: M4Kind): M4Content {
   const base = { slug: "", title: "", summary: "", body: sourceDocument(""), seo: { title: "", description: "" } };
   if (kind === "promotion") return { ...base, kind, startAt: "", endAt: "", authoredTimezone: "Asia/Ho_Chi_Minh", conditions: "", references: [] };

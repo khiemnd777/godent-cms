@@ -1,0 +1,4 @@
+$ bun run --cwd apps/admin typecheck && bun run --cwd apps/website typecheck && bun run --cwd apps/api typecheck && bun --bun tsc --noEmit --project tsconfig.json
+$ bun --bun tsc --noEmit
+$ bun --bun tsc --noEmit
+$ bun --bun tsc --noEmit && bun --bun tsc --noEmit --project tsconfig.test.json

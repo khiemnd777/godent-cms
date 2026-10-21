@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "tables": 80,
+  "rows": 238945,
+  "changedTables": [],
+  "migrationChecksums": 67,
+  "publicPages": [
+    {
+      "slug": "lac-van",
+      "locale": "vi",
+      "status": 200,
+      "jsonSha256": "a7ff10355d528c5a2c775b8845b59e653b36655670bbd4f0ff244a63565edfa5",
+      "publicationId": "a5bfdde0-e72e-4752-85bb-b80e9870672d",
+      "configPublicationId": "03743ea0-c73e-45c0-8be6-5fe9774e1de5",
+      "heroTypography": "rose_editorial",
+      "highlights": [
+        "n\u1ee5 c\u01b0\u1eddi",
+        "s\u1ef1 th\u1ea5u hi\u1ec3u",
+        "ch\u00ednh b\u1ea1n"
+      ]
+    },
+    {
+      "slug": "lac-van",
+      "locale": "en",
+      "status": 200,
+      "jsonSha256": "f7dc59068b1a93f16e0608532a89d2697c74cc2d4d0ab9dd6aee99622c96be1f",
+      "publicationId": "05a64be5-2885-4873-b240-5c68aba41a3a",
+      "configPublicationId": "455d74b5-beff-4d9c-b7ba-6ee738c280c3",
+      "heroTypography": "rose_editorial",
+      "highlights": [
+        "every smile",
+        "understanding",
+        "yourself"
+      ]
+    },
+    {
+      "slug": "dental-go-plus",
+      "locale": "vi",
+      "status": 200,
+      "jsonSha256": "23058b77c4df27b0bf7081de7b2334bcbd07ba9a648c659adf6af205e2bef359",
+      "publicationId": "b7ec225b-3452-4f6c-92e0-c4f131371ad7",
+      "configPublicationId": "2fe09f11-3c64-47e9-bb9e-422acf693870",
+      "heroTypography": "warm_editorial",
+      "highlights": [
+        "s\u1ef1 th\u1ea5u hi\u1ec3u."
+      ]
+    },
+    {
+      "slug": "dental-go-plus",
+      "locale": "en",
+      "status": 200,
+      "jsonSha256": "0b707ac05d08968be9996f71d85a6c5d294a190bfe7d8c68d2ddeaf3ffd8aa9b",
+      "publicationId": "a0a5b4a8-6f0f-42ee-91cb-a9a1f7187831",
+      "configPublicationId": "521b0368-98b1-41e2-b1ec-c3f73a3845e9",
+      "heroTypography": "warm_editorial",
+      "highlights": [
+        "understanding."
+      ]
+    }
+  ],
+  "functionSafetyProperties": [
+    {
+      "proname": "blank_content",
+      "prosecdef": false,
+      "provolatile": "i",
+      "proconfig": [
+        "search_path=pg_catalog"
+      ],
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "proname": "blank_content_before_hero_typography",
+      "prosecdef": false,
+      "provolatile": "i",
+      "proconfig": [
+        "search_path=pg_catalog"
+      ],
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "proname": "config",
+      "prosecdef": true,
+      "provolatile": "s",
+      "proconfig": [
+        "search_path=pg_catalog"
+      ],
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "proname": "config_before_hero_typography",
+      "prosecdef": true,
+      "provolatile": "s",
+      "proconfig": [
+        "search_path=pg_catalog"
+      ],
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "proname": "valid_content",
+      "prosecdef": false,
+      "provolatile": "i",
+      "proconfig": [
+        "search_path=pg_catalog"
+      ],
+      "owner": "gcms_s02_owner"
+    },
+    {
+      "proname": "valid_content_before_hero_typography",
+      "prosecdef": false,
+      "provolatile": "i",
+      "proconfig": [
+        "search_path=pg_catalog"
+      ],
+      "owner": "gcms_s02_owner"
+    }
+  ],
+  "limits": "Auth schema excluded from hashes. No auth/credential/session operations, publication writes, migrations or restarts in this review. Test-only data perturbations rolled back."
+}

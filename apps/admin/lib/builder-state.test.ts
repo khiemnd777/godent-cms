@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import type { M4Variant } from "../../api/src/contracts/m4";
 import { builderRoute, builderPublishCommand, emptyBuilder, moveSection, prepareBuilderSave, builderSaveFailure, builderSources, compileBuilderInput, builderInputDirty } from "./builder-state";
-import { permissionScopes, permissionKey, promotionState, instantForInput, inputForInstant, newSection, sectionKinds } from "./builder-content";
+import { permissionScopes, permissionKey, promotionState, instantForInput, inputForInstant, newSection, sectionKinds, setCarouselSlideHighlight } from "./builder-content";
 import { parseBuilderContent } from "../../api/src/contracts/m4-validation";
 
 const id = "135f1fb4-b121-4628-842c-4bc6bcd82932";
@@ -31,6 +31,18 @@ test("an uncertain save retries the same captured content and operation", () => 
   expect(builderSaveFailure(409, undefined, false, true)).toEqual({ unknown: false, retain: false, conflict: true, denied: false });
   expect(builderSaveFailure(403, undefined, false, true).denied).toBe(true);
   expect(builderSaveFailure(403, "REAUTH_REQUIRED", true, true).denied).toBe(false);
+});
+test("home carousel highlight follows its slide into the saved draft and clears without stale data", () => {
+  const content = emptyBuilder("home");
+  const carousel = newSection("hero_carousel"); if (carousel.type !== "hero_carousel") throw Error();
+  carousel.slides[0].title = "Care begins with listening";
+  content.sections = [setCarouselSlideHighlight(carousel, 0, "listening")];
+  const captured = prepareBuilderSave(null, content, 2, () => id);
+  const saved = captured.content; if (!("sections" in saved) || saved.sections[0].type !== "hero_carousel") throw Error();
+  expect(saved.sections[0].slides[0].highlight).toBe("listening");
+  content.sections = [setCarouselSlideHighlight(saved.sections[0], 0, "")];
+  expect("highlight" in (content.sections[0] as typeof carousel).slides[0]).toBe(false);
+  expect(saved.sections[0].slides[0].highlight).toBe("listening");
 });
 test("publish confirmation binds the saved revision and active config publication", () => {
   const draft = { version: 4, publicationVersion: 2, publicationRevision: 3 } as M4Variant;

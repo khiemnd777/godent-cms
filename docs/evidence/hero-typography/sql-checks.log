@@ -1,0 +1,28 @@
+bun test v1.4.3 (c6da4a4d3)
+
+apps/api/test/lacvan-sql-integration.test.ts:
+(pass) Signature SQL contract boundaries > accepts new signature/home/page and both prior themes; rejects widened shapes [45.46ms]
+(pass) Signature SQL contract boundaries > SQL independently enforces depth, node and media limits [7.22ms]
+(pass) Signature SQL contract boundaries > 0065 accepts only scoped style and exact unique home title phrase [12.02ms]
+(pass) Signature SQL contract boundaries > home/page source constraints retain FK, consent and path contracts [4.29ms]
+(pass) Signature SQL contract boundaries > search rejects invalid scope/limit and unavailable tenant [5.90ms]
+
+apps/api/test/navigation-availability.test.ts:
+(pass) navigation reachability preserves publication eligibility > helper is installed and runtime roles cannot call it [10.40ms]
+(pass) navigation reachability preserves publication eligibility > availability equals the unchanged full projection for all clinic variants, both locales and depth limits [514.92ms]
+(pass) navigation reachability preserves publication eligibility > full navigation trees and every resource target match historical output [667.56ms]
+(pass) navigation reachability preserves publication eligibility > empty registered collections stay linked; EN requires a current Published configuration head [22.28ms]
+(pass) navigation reachability preserves publication eligibility > required-reference revocation removes the homepage and its navigation link immediately [78.39ms]
+(pass) navigation reachability preserves publication eligibility > pinned text permission withdrawal, unpublished locale fallback and tenant isolation remain enforced [54.94ms]
+
+apps/api/test/public-read-performance.test.ts:
+(pass) public read performance preserves current publication boundaries > migration is installed and caller-supplied configuration helper is inaccessible to runtime roles [9.37ms]
+(pass) public read performance preserves current publication boundaries > VI/EN list and detail JSON exactly match original projection, including filters and pagination [28904.29ms]
+(pass) public read performance preserves current publication boundaries > statement-local reuse observes unpublish, tenant suspension and withdrawn text permission without stale results [2063.24ms]
+(pass) public read performance preserves current publication boundaries > public media revocation and foreign-tenant denial remain current after a previously successful read [1493.70ms]
+(pass) public read performance preserves current publication boundaries > missing locale configuration preserves null handling and original fallback behavior [1095.43ms]
+
+ 16 pass
+ 0 fail
+ 140 expect() calls
+Ran 16 tests across 3 files. [35.01s]

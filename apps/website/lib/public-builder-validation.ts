@@ -104,7 +104,7 @@ function config(value: unknown, publicationId: unknown, context: Context): M4Pub
   } else if (v.logoMedia !== null) throw new TypeError("Unpinned logo");
   const signature = v.signature === undefined ? undefined : resolvedSignature(v.signature, context);
   if ((content.signature === undefined) !== (signature === undefined)) throw new TypeError("Missing signature projection");
-  if (content.signature) same(content.signature, { navigation: [], headerLocation: null, footerLocations: [] });
+  if (content.signature) same(content.signature, { navigation: [], headerLocation: null, footerLocations: [], ...(content.signature.heroTypography === undefined ? {} : { heroTypography: content.signature.heroTypography }) });
   return { publicationId: m3Id(v.publicationId), publicationVersion: m3Version(v.publicationVersion), locale: context.locale, content, menu, logoMedia, ...(signature ? { signature } : {}) };
 }
 function pins(content: M4Content): { kind: string; id: string; publicationId: string }[] {
@@ -185,12 +185,12 @@ function sections(value: unknown, content: M4Content, scope: Scope & { configPub
     let image = null, action = null, promotion = null; let slides: M4ResolvedSlide<PublicMediaBlock>[] | undefined;
     if (section.type === "hero_carousel") {
       slides = list(v.slides, M4_LIMITS.carouselSlides).map((raw, at) => {
-        const slide = exactObject(raw, ["id", "title", "text", "media", "action"]), original = section.slides[at];
-        if (!original || original.image !== null || original.action !== null || slide.id !== original.id || slide.title !== original.title || slide.text !== original.text) throw new TypeError("Invalid carousel slide");
+        const slide = exactObject(raw, ["id", "title", "text", "media", "action", "highlight"]), original = section.slides[at];
+        if (!original || original.image !== null || original.action !== null || slide.id !== original.id || slide.title !== original.title || slide.text !== original.text || slide.highlight !== undefined && slide.highlight !== original.highlight) throw new TypeError("Invalid carousel slide");
         let image = null, action = null;
         if (slide.media !== null) { const item = exactObject(slide.media, ["assetId", "revision", "alt", "width", "height", "path", "profile"]); image = media(item, scope, { assetId: m3Id(item.assetId), revision: m3Version(item.revision), alt: boundedText(item.alt, 500, true) }, context); }
         if (slide.action !== null) { const a = exactObject(slide.action, ["label", "path", "actualLocale", "fallback"]), actualLocale = parseM4Locale(a.actualLocale), fallback = flag(a.fallback); if (fallback && !(context.locale === "en" && actualLocale === "vi")) throw new TypeError("Invalid carousel fallback"); action = { label: boundedText(a.label, 80, true), path: signaturePath(a.path, context, actualLocale), actualLocale, fallback }; }
-        return { id: original.id, title: original.title, text: original.text, media: image, action };
+        return { id: original.id, title: original.title, text: original.text, ...(original.highlight === undefined ? {} : { highlight: original.highlight }), media: image, action };
       });
       if (slides.length !== section.slides.length) throw new TypeError("Incomplete carousel");
     } else if (v.slides !== undefined) throw new TypeError("Unexpected carousel");

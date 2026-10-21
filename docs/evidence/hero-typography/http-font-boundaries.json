@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-21T09:45:02.852261+00:00",
+  "httpDenialChecks": [
+    {
+      "case": "anonymous_private_config",
+      "expectedStatus": 401,
+      "actualStatus": 401
+    },
+    {
+      "case": "stale_public_context",
+      "expectedStatus": 409,
+      "actualStatus": 409
+    },
+    {
+      "case": "unknown_tenant",
+      "expectedStatus": 404,
+      "actualStatus": 404
+    },
+    {
+      "case": "invalid_locale",
+      "expectedStatus": 400,
+      "actualStatus": 400
+    },
+    {
+      "case": "unsupported_host",
+      "expectedStatus": 421,
+      "actualStatus": 421
+    }
+  ],
+  "fontAssets": [
+    {
+      "app": "website",
+      "font": "dm-serif-display-regular.ttf",
+      "url": "http://localhost:5892/_next/static/media/dm-serif-display-regular.1cwgd45cshhpi.ttf",
+      "status": 200,
+      "sha256": "c03775f8cc3db88cfea259b231abe13f94e6a3d3cb01c09477a2e42a1f5919e1",
+      "matchesSource": true
+    },
+    {
+      "app": "website",
+      "font": "dm-serif-display-italic.ttf",
+      "url": "http://localhost:5892/_next/static/media/dm-serif-display-italic.2sd_3w-xmjsr5.ttf",
+      "status": 200,
+      "sha256": "0ab2fcacedaafc0a7536453d4a763f131ba83a636706d3ec2d685cf04478a920",
+      "matchesSource": true
+    },
+    {
+      "app": "admin",
+      "font": "dm-serif-display-regular.ttf",
+      "url": "http://127.0.0.1:5891/_next/static/media/dm-serif-display-regular.1cwgd45cshhpi.ttf",
+      "status": 200,
+      "sha256": "c03775f8cc3db88cfea259b231abe13f94e6a3d3cb01c09477a2e42a1f5919e1",
+      "matchesSource": true
+    },
+    {
+      "app": "admin",
+      "font": "dm-serif-display-italic.ttf",
+      "url": "http://127.0.0.1:5891/_next/static/media/dm-serif-display-italic.2sd_3w-xmjsr5.ttf",
+      "status": 200,
+      "sha256": "0ab2fcacedaafc0a7536453d4a763f131ba83a636706d3ec2d685cf04478a920",
+      "matchesSource": true
+    }
+  ],
+  "limits": "Anonymous read-only GETs. No session or credential handling."
+}

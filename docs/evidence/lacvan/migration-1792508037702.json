@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-20T14:53:57.702Z",
+  "phase": "--check-only",
+  "slice": "--hero-typography",
+  "priorChecksums": 64,
+  "compiled": [],
+  "sourceChecksums": {
+    "0065_signature_hero_typography.sql": "1c43700dcb2fb617f802274e7c729a115ae308e234ccfbf3bcbd261921095972"
+  },
+  "committed": false,
+  "intentionallyRolledBack": false,
+  "dispatchStarted": false
+}

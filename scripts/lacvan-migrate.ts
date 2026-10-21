@@ -11,12 +11,13 @@ const frozen: Record<string, string> = {
   '0062_signature_search.sql': '45ba9b914c15ed1344e514aa41aee7e246cc84f5bf7830ca4c4989e2e2b8413d',
   '0063_signature_clock_repair.sql': '9e8a07c25aaac0db8916fe46d8747854d686fa7bc7cf681e5ba1a69a2f45a145',
   '0064_signature_search_budget.sql': 'e20ffb9bf95baaffacdb502ba819599621bdec32dc7e9ba9fe9c15ab6309d775',
+  '0065_signature_hero_typography.sql': '1c43700dcb2fb617f802274e7c729a115ae308e234ccfbf3bcbd261921095972',
 };
 class CompilationRollback extends Error {}
 async function main() {
   const [flag, mode, slice] = process.argv.slice(2);
-  if (Bun.version !== '1.4.3' || process.cwd() !== resolve(import.meta.dir, '..') || ![4, 5].includes(process.argv.length) || flag !== '--local-lacvan' || !['--check-only', '--compile-only', '--apply'].includes(mode ?? '') || (slice !== undefined && !['--clock', '--search'].includes(slice))) throw new Error('Explicit bounded clinic migration required');
-  const selected = slice === '--clock' ? ['0063_signature_clock_repair.sql'] : slice === '--search' ? ['0064_signature_search_budget.sql'] : approved;
+  if (Bun.version !== '1.4.3' || process.cwd() !== resolve(import.meta.dir, '..') || ![4, 5].includes(process.argv.length) || flag !== '--local-lacvan' || !['--check-only', '--compile-only', '--apply'].includes(mode ?? '') || (slice !== undefined && !['--clock', '--search', '--hero-typography'].includes(slice))) throw new Error('Explicit bounded clinic migration required');
+  const selected = slice === '--clock' ? ['0063_signature_clock_repair.sql'] : slice === '--search' ? ['0064_signature_search_budget.sql'] : slice === '--hero-typography' ? ['0065_signature_hero_typography.sql'] : approved;
   const db = new SQL(validateDatabaseUrl(process.env.S02_MIGRATION_DATABASE_URL, 'gcms_s02_migration'), { max: 1, connectionTimeout: 3 });
   let checked = 0; const compiled: string[] = [];
   try {

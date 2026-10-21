@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "containers": [
+    {
+      "app": "api",
+      "sourceFiles": 22,
+      "matchesWorkspace": true
+    },
+    {
+      "app": "admin",
+      "sourceFiles": 22,
+      "matchesWorkspace": true
+    },
+    {
+      "app": "website",
+      "sourceFiles": 22,
+      "matchesWorkspace": true
+    }
+  ],
+  "sourceSha256": {
+    "apps/admin/components/builder-hero-typography.test.tsx": "2434baafdef7a1ffd430023c55830ecca6d5bbc217c883491c08b7efd25aa4c8",
+    "apps/api/migrations/0065_signature_hero_typography.sql": "1c43700dcb2fb617f802274e7c729a115ae308e234ccfbf3bcbd261921095972",
+    "apps/website/app/fonts/DMSerifDisplay-OFL.txt": "a3e5cdd67d4571dd0a24fcc968de0efde7ae97ef752daf0906e4767619dd7231",
+    "apps/website/app/fonts/dm-serif-display-italic.ttf": "0ab2fcacedaafc0a7536453d4a763f131ba83a636706d3ec2d685cf04478a920",
+    "apps/website/app/fonts/dm-serif-display-regular.ttf": "c03775f8cc3db88cfea259b231abe13f94e6a3d3cb01c09477a2e42a1f5919e1",
+    "apps/admin/components/builder-fields.tsx": "843baecddb56d93f57780bcde889a0c59b7fccf6b961f0604c71368143ceb12b",
+    "apps/admin/components/builder-private-copy.test.tsx": "c0b6932f3c6bef747a756f1a58bbba076fbe4739472caa57d710ed77c503105a",
+    "apps/admin/components/builder-private-copy.tsx": "dd8d62bb2486b702bff4a5247891c017734a9bee82c7ead8f7b34a46f8cce64b",
+    "apps/admin/lib/builder-content.ts": "756faae6248c4071100ad885bfddee11792256e6f8f8fb6abe4170eb497224bf",
+    "apps/admin/lib/builder-state.test.ts": "4c5786a04e46b4ef4d36bfd9efe5ae2805357d258f2c7ed5963fc8e93e1ea880",
+    "apps/api/src/contracts/m4-validation.ts": "90a34dd4127a89bd95c4f2fb523b7279906f855bc884dfc13616efada2b6de19",
+    "apps/api/src/contracts/m4.ts": "30807c8ec73cd189a8aa03ba42016618f7713f44cb076e4b466e65fc12f7c39c",
+    "apps/api/src/contracts/signature-validation.ts": "00f5257daccd4d64ba310e6f8807fd32d00ecd34f1b7e13d047925c031dd5eb4",
+    "apps/api/src/modules/builder.service.ts": "22bb15c329c2b8e6fcb9d88d272781e4dd93a3ef409736ead33a16f5757b91b2",
+    "apps/api/test/lacvan-contract.test.ts": "a2becdb3de265fd4a5a131ba85359e9389f22b7509e34c125d13ffdac1aa3fd0",
+    "apps/api/test/lacvan-sql-integration.test.ts": "2a4e0a6754b53548845a305bdb35863b09a380f99207a71107921e9c7fa70bde",
+    "apps/website/app/signature.css": "be6d50ad0852ccbfcbde6b8734ad8d13fe8f31ba459a24821aec0c6c210ba0aa",
+    "apps/website/components/builder-page.tsx": "8f43250287d23c2b1ba799bda8eecabfdb70d3c0b27841c9a7075a57a532e74e",
+    "apps/website/components/signature-ui.test.tsx": "ab479c45ceca574b3b97f4441c2d08e9255214fb52a57121b3a36e8468848237",
+    "apps/website/components/signature-ui.tsx": "242ee8d113d2831c4d7d225c9f155443363a8ae9c7d757a1394ab9d79d483edd",
+    "apps/website/lib/public-builder-validation.ts": "accaa64cf30f60f3562071c35a800e8a1771f5aff38a991323ebccec8c508b96",
+    "apps/website/lib/signature-validation.test.ts": "9dfc80756b7080550180ac2c0ccae77acafe52d5afa1591ea9622bf6da464683"
+  },
+  "method": "Read-only sha256sum inside existing local app containers; no restart/build.",
+  "limits": "Initial inventory included three local operator scripts absent from runtime image; comparison corrected to all 22 app source/test/font files. Local operator scripts pinned separately."
+}

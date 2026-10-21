@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "slug": "lac-van",
+      "locale": "vi",
+      "status": "PASS",
+      "cases": [
+        "current hero media allowed",
+        "foreign tenant media denied",
+        "withdrawn hero asset denied and omitted",
+        "unpublished style draft stays private",
+        "unpublished config returns null",
+        "unpublished home denies media",
+        "savepoint restoration matches exact public projection"
+      ]
+    },
+    {
+      "slug": "lac-van",
+      "locale": "en",
+      "status": "PASS",
+      "cases": [
+        "current hero media allowed",
+        "foreign tenant media denied",
+        "withdrawn hero asset denied and omitted",
+        "unpublished style draft stays private",
+        "unpublished config returns null",
+        "unpublished home denies media",
+        "savepoint restoration matches exact public projection"
+      ]
+    },
+    {
+      "slug": "dental-go-plus",
+      "locale": "vi",
+      "status": "PASS",
+      "cases": [
+        "current hero media allowed",
+        "foreign tenant media denied",
+        "withdrawn hero asset denied and omitted",
+        "unpublished style draft stays private",
+        "unpublished config returns null",
+        "unpublished home denies media",
+        "savepoint restoration matches exact public projection"
+      ]
+    },
+    {
+      "slug": "dental-go-plus",
+      "locale": "en",
+      "status": "PASS",
+      "cases": [
+        "current hero media allowed",
+        "foreign tenant media denied",
+        "withdrawn hero asset denied and omitted",
+        "unpublished style draft stays private",
+        "unpublished config returns null",
+        "unpublished home denies media",
+        "savepoint restoration matches exact public projection"
+      ]
+    }
+  ],
+  "assertions": 44,
+  "rolledBack": true,
+  "limits": "Synthetic local publication/asset perturbations only, transaction rolled back. No CMS publish, credentials or auth operations."
+}

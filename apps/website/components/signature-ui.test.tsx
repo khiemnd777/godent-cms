@@ -23,13 +23,29 @@ test("carousel has one main heading, explicit selection and pause controls", () 
   expect(html).toContain('aria-roledescription="carousel"');
   expect(html).toContain('hidden=""');
 });
+test("editorial variants highlight one escaped title phrase while default retains its heading", () => {
+  const slides = [{ id: "first", title: "Care <starts> here", text: "Plain text", highlight: "<starts>" }];
+  const defaultHtml = renderToStaticMarkup(createElement(SignatureCarousel, { locale: "en", slides }));
+  const warmHtml = renderToStaticMarkup(createElement(SignatureCarousel, { locale: "en", slides, heroTypography: "warm_editorial" }));
+  const roseHtml = renderToStaticMarkup(createElement(SignatureCarousel, { locale: "en", slides, heroTypography: "rose_editorial" }));
+  expect(defaultHtml).toContain("hero-type-default");
+  expect(warmHtml).toContain("hero-type-warm-editorial");
+  expect(roseHtml).toContain("hero-type-rose-editorial");
+  expect(warmHtml).toContain('<span class="signature-hero-highlight">&lt;starts&gt;</span>');
+  expect(warmHtml).toContain('<h2>Care <span class="signature-hero-phrase"><span class="signature-hero-highlight">&lt;starts&gt;</span></span> here</h2>');
+  expect(roseHtml).toContain('<h2>Care <span class="signature-hero-phrase"><span class="signature-hero-highlight">&lt;starts&gt;</span></span> here</h2>');
+  expect(warmHtml).not.toContain("signature-hero-leading");
+  expect(warmHtml).not.toContain("signature-hero-trailing");
+  expect(warmHtml).not.toContain("<starts>");
+  expect((warmHtml.match(/<h1 class="visually-hidden"/g) ?? []).length).toBe(1);
+});
 test("signature home shows one real compact consultation immediately after its hero and keeps source identity", () => {
   const page: PublicM4Page = createHomePage("en", "signature"), form = { ...landingContext("en"), sourceType: "home" as const };
-  page.config!.content.signature = { navigation: [], headerLocation: null, footerLocations: [] };
+  page.config!.content.signature = { navigation: [], headerLocation: null, footerLocations: [], heroTypography: "warm_editorial" };
   page.config!.signature = { navigation: [], headerLocation: null, footerLocations: [] };
-  const carousel = { id: "campaign", type: "hero_carousel" as const, hidden: false, autoplay: false, intervalMs: 7000 as const, slides: [{ id: "first", title: "Personal dental care", text: "Comfortable care", image: null, action: null }] }, consultation = { id: "request", type: "consultation" as const, hidden: false, title: "Talk to our team", promotion: null, serviceOptions: [], locationOptions: [] }, services = { id: "services", type: "services" as const, hidden: false, title: "Dental services", references: [], required: false };
+  const carousel = { id: "campaign", type: "hero_carousel" as const, hidden: false, autoplay: false, intervalMs: 7000 as const, slides: [{ id: "first", title: "Personal dental care", highlight: "dental care", text: "Comfortable care", image: null, action: null }] }, consultation = { id: "request", type: "consultation" as const, hidden: false, title: "Talk to our team", promotion: null, serviceOptions: [], locationOptions: [] }, services = { id: "services", type: "services" as const, hidden: false, title: "Dental services", references: [], required: false };
   (page.content as BuilderContent).sections = [carousel, services, consultation];
-  page.sections = [{ section: carousel, slides: [{ id: "first", title: "Personal dental care", text: "Comfortable care", media: null, action: null }], action: null, media: null, references: [], form: null, promotion: null }, { section: services, action: null, media: null, references: [], form: null, promotion: null }, { section: consultation, action: null, media: null, references: [], form, promotion: null }]; page.form = form;
+  page.sections = [{ section: carousel, slides: [{ id: "first", title: "Personal dental care", highlight: "dental care", text: "Comfortable care", media: null, action: null }], action: null, media: null, references: [], form: null, promotion: null }, { section: services, action: null, media: null, references: [], form: null, promotion: null }, { section: consultation, action: null, media: null, references: [], form, promotion: null }]; page.form = form;
   const html = renderToStaticMarkup(createElement(BuilderPage, { tenant: "clinic-a", page }));
-  expect(html.indexOf("Talk to our team")).toBeLessThan(html.indexOf("Dental services")); expect((html.match(/consultation-compact/g) ?? []).length).toBe(1); expect(html).toContain("Use email or add consultation details"); expect(html).toContain('class="signature-mobile-contact"'); expect(html).toContain('action="/clinic-a/en"'); expect(html).not.toContain("tim-kiem");
+  expect(html.indexOf("Talk to our team")).toBeLessThan(html.indexOf("Dental services")); expect((html.match(/consultation-compact/g) ?? []).length).toBe(1); expect(html).toContain("hero-type-warm-editorial"); expect(html).toContain('class="signature-hero-highlight">dental care</span>'); expect(html).toContain("Use email or add consultation details"); expect(html).toContain('class="signature-mobile-contact"'); expect(html).toContain('action="/clinic-a/en"'); expect(html).not.toContain("tim-kiem");
 });
