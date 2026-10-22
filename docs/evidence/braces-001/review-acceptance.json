@@ -1,0 +1,96 @@
+{
+  "task": "GCMS-BRACES-001",
+  "recordedAtUtc": "2026-10-22T01:22:43.075453+00:00",
+  "decision": "ACCEPTED_UNDER_DELEGATED_AUTHORITY",
+  "technicalStatus": "CODE_INTEGRATED + VERIFIED_LOCAL",
+  "scope": "Local dependency remediation only",
+  "authority": {
+    "quote": "Review và nghiệm thu bản sửa braces, commit, push",
+    "threadId": "01a1612a-81d0-7a11-a3e0-23c1bbbefcb5",
+    "turnId": "01a16132-cc05-7982-95ac-f5efe51eedbb",
+    "authorizedGit": "Normal scoped staging/commit/push to origin/main",
+    "deploymentAuthorized": false,
+    "directHumanAcceptanceClaimed": false
+  },
+  "runtime": {
+    "taskType": "final-architecture-security-audit",
+    "requiredEffort": "xhigh",
+    "observedEffort": "xhigh",
+    "observedModel": "gpt-6.1-sol",
+    "checkStatus": "PASS"
+  },
+  "originalInputPins": {
+    "status": "PASS before acceptance documentation edits",
+    "count": 8,
+    "originalTaskDocumentSha256": "95b397fff7deaa44b7790d21333163c6e53abe23d90dc32bebe578c387ef9317",
+    "originalEvidencePreserved": true
+  },
+  "review": {
+    "method": "Sequential self-review by delivery owner; no independent agent",
+    "scope": [
+      "dependency graph and scoped alias",
+      "Bun patch and actual Next globSync consumer",
+      "regression assertions and Next rule still enabled",
+      "Drizzle tooling import compatibility",
+      "Docker install/build inputs",
+      "changed source/docs/evidence diff"
+    ],
+    "openBlockingFindings": []
+  },
+  "freshChecks": {
+    "audit": {
+      "command": "bun audit --json",
+      "cwd": "/private/tmp/gcms-braces-001-d1pfaijd",
+      "exitCode": 0,
+      "output": {}
+    },
+    "regression": {
+      "command": "bun --no-env-file run test:lint-globs",
+      "exitCode": 0,
+      "tests": 9,
+      "assertions": 15
+    },
+    "whitespace": {
+      "command": "git diff --check",
+      "status": "PASS"
+    }
+  },
+  "reusedChecks": {
+    "reason": "All original source/document pins matched before acceptance edits; six clean-copy build inputs still match",
+    "frozenInstall": "PASS",
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "buildAdminWebsiteApi": "PASS"
+  },
+  "gitPreflight": {
+    "baseHead": "c354cd037fe47f2fa1f29dfd9490468df29be8f1",
+    "branch": "main",
+    "fetchedOrigin": true,
+    "ahead": 0,
+    "behind": 0,
+    "indexInitiallyEmpty": true,
+    "activeHooks": [],
+    "excludedFile": "docs/design/dental-go-plus/hero-typography-review.html",
+    "excludedFileSha256": "4857c1b6855892420e6e86148ecbcf701b29ba15981091733a4f8b152b9c313c",
+    "deliveryStatus": "AUTHORIZED; actual SHA and push result reported in final chat"
+  },
+  "limits": {
+    "dockerImageBuildRuntime": "NOT_RUN",
+    "httpBrowserDatabase": "NOT_RUN",
+    "migrationsFixturesWorkers": "NOT_RUN",
+    "production": "NOT_RUN",
+    "historicalFailures": "Preserved",
+    "maintenanceRequirement": "Keep pinned override and patch together; reassess on Next ESLint upgrades"
+  },
+  "sourceSha256": {
+    "package.json": "40e8cd25008a785e12ae36911a678909030a1063644792820cc8a2dfa89aa277",
+    "bun.lock": "9432ed79ed8f966c395b2c5bff3a5b1362190aec0e041198d03de41ffce53a4c",
+    "Dockerfile.local": "cfe540983c322ab063e282e017d3e318b487e64cff12a2a26a700e583c0fafe8",
+    "scripts/m3-performance.ts": "25217fa89f4511d742080be0bb92349c98763c327011e2ae387b596587c460af",
+    "tests/next-eslint-glob.test.ts": "03308edc8a3cb350d5409ebf549ae1591cabe340b16ba82e22e1fa81cb83aa50",
+    "patches/@next%2Feslint-plugin-next@16.4.1.patch": "76b35da371d05b33becdfa4c755a6c37e3c1ed9d5f960f411838c0caaa227bf8",
+    "docs/local-development.md": "15156b92cda5d52a966b6c4830aad57d7ddc385c876903b6358943f6a59dc8d8",
+    "docs/tasks/GCMS-BRACES-001.md": "d31680ff83d942a9ec98fbf0d3ee36de80eb596551b96329175970049cd388d0",
+    "docs/evidence/braces-001/checks.json": "6f1ea9228ed22ad7a43ef22ecaceb9fb43badf19af677900e877e1bed539c2da"
+  }
+}

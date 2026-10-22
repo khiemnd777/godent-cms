@@ -1,5 +1,7 @@
 # Local development and verification
 
+**Dependency audit — 2026-10-22:** [GCMS-BRACES-001](tasks/GCMS-BRACES-001.md) removes the `braces` dependency chain from the current local lockfile. Fresh frozen/offline installation with scripts disabled, actual npm audit, Next ESLint regression tests, full lint/typecheck and all three application builds pass within that task's recorded limits. Keep the version-scoped Next ESLint override and `patches/` together. Reassess both when changing Next ESLint; `tinyglobby` is compatible with the specific `globSync` consumer after the patch, not every fast-glob API. Earlier FAIL/open audit entries below remain historical evidence. Existing running images are not rebuilt by this source change; no deployment or Production result is claimed.
+
 ## One-command local Docker startup
 
 With Docker Desktop running and the retained `.env` and `.local` configuration present, run from the repository root:

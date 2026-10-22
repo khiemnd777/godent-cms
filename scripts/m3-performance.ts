@@ -1,6 +1,6 @@
 import { SQL as BunSQL } from 'bun';
-// Use the API workspace's exact Drizzle instance for its transaction wrapper.
-import { sql } from '../apps/api/node_modules/drizzle-orm';
+// Root tooling pins the API's Drizzle version without depending on the install layout.
+import { sql } from 'drizzle-orm';
 import { randomUUID } from 'node:crypto';
 import { lstat, readFile, rename, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';

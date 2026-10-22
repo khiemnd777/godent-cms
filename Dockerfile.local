@@ -4,9 +4,11 @@ COPY package.json bun.lock tsconfig.json tsconfig.base.json ./
 COPY apps/admin/package.json ./apps/admin/package.json
 COPY apps/website/package.json ./apps/website/package.json
 COPY apps/api/package.json ./apps/api/package.json
+COPY patches ./patches
 RUN bun install --frozen-lockfile
 COPY apps ./apps
 COPY scripts ./scripts
+COPY tests ./tests
 RUN bun run build
 
 FROM oven/bun:1.4.3
